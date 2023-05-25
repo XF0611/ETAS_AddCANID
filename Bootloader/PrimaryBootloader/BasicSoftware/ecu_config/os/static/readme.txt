@@ -1,0 +1,2 @@
+1. OS configuraiton shall be located in .\BasicSoftware\ecu_config\os\static with configuration and generation from RTA-CAR.
+2. OS tasks for FBL shall use different Task priorities from application tasks to simplify user maintenance.

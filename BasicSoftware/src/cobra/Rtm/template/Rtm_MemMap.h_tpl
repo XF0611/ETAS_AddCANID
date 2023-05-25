@@ -1,0 +1,107 @@
+/*
+ **********************************************************************************************************************
+ *
+ * COPYRIGHT RESERVED, ETAS GmbH, 2021. All rights reserved.
+ * The reproduction, distribution and utilization of this document as well as the communication of its contents to
+ * others without explicit authorization is prohibited. Offenders will be held liable for the payment of damages.
+ * All rights reserved in the event of the grant of a patent, utility model or design.
+ *
+ **********************************************************************************************************************
+ ************************************************************************************************
+ * Component : Rtm_MemMap.h
+ * Date      : May 20, 2021
+ * Version   : 1.0
+ * Description  : This module implements Rtm functions.
+ *                Note: This file contains sample implementation only. It is not part of the
+ *                      production deliverables. 
+ ***********************************************************************************************
+*/
+
+/* MISRA RULE 19.15 VIOLATION: Memmap file must be included multiple times */
+#if defined (START_WITH_IF)
+
+
+/* Rtm code section*/
+#elif defined(RTM_START_SEC_CODE)
+	#define BSW_START_SEC_DEFAULT_CODE
+	#include "Bsw_MemMap.h"
+    #undef RTM_START_SEC_CODE
+#elif defined(RTM_STOP_SEC_CODE)
+	#define BSW_STOP_SEC_DEFAULT_CODE
+	#include "Bsw_MemMap.h"
+    #undef RTM_STOP_SEC_CODE
+
+#elif defined(RTM_START_SEC_CODE_SLOW)
+	#define BSW_START_SEC_DEFAULT_CODE
+	#include "Bsw_MemMap.h"
+    #undef RTM_START_SEC_CODE_SLOW
+#elif defined(RTM_STOP_SEC_CODE_SLOW)
+	#define BSW_STOP_SEC_DEFAULT_CODE
+	#include "Bsw_MemMap.h"
+    #undef RTM_STOP_SEC_CODE_SLOW
+
+#elif defined(RTM_START_SEC_CODE_FAST)
+	#define BSW_START_SEC_DEFAULT_CODE
+	#include "Bsw_MemMap.h"
+    #undef RTM_START_SEC_CODE_FAST
+#elif defined(RTM_STOP_SEC_CODE_FAST)
+	#define BSW_STOP_SEC_DEFAULT_CODE
+	#include "Bsw_MemMap.h"
+    #undef RTM_STOP_SEC_CODE_FAST
+
+#elif defined(RTM_START_SEC_CALLOUT_CODE)
+	#define BSW_START_SEC_DEFAULT_CODE
+	#include "Bsw_MemMap.h"
+	#undef RTM_START_SEC_CALLOUT_CODE
+#elif defined(RTM_STOP_SEC_CALLOUT_CODE)
+	#define BSW_STOP_SEC_DEFAULT_CODE
+	#include "Bsw_MemMap.h"
+	#undef RTM_STOP_SEC_CALLOUT_CODE
+
+/* Rtm variable : unspecified size*/
+#elif defined(RTM_START_SEC_VAR_CLEARED)
+	#define BSW_START_SEC_VAR_CLEARED_UNSPECIFIED
+	#include "Bsw_MemMap.h"
+    #undef RTM_START_SEC_VAR_CLEARED
+#elif defined(RTM_STOP_SEC_VAR_CLEARED)
+	#define BSW_STOP_SEC_VAR_CLEARED_UNSPECIFIED
+	#include "Bsw_MemMap.h"
+    #undef RTM_STOP_SEC_VAR_CLEARED
+
+#elif defined(RTM_START_SEC_VAR_FAST)
+	#define BSW_START_SEC_VAR_CLEARED_UNSPECIFIED
+	#include "Bsw_MemMap.h"
+    #undef RTM_START_SEC_VAR_FAST
+#elif defined(RTM_STOP_SEC_VAR_FAST)
+	#define BSW_STOP_SEC_VAR_CLEARED_UNSPECIFIED
+	#include "Bsw_MemMap.h"
+    #undef RTM_STOP_SEC_VAR_FAST
+
+#elif defined(RTM_START_SEC_VAR_NO_INIT)
+	#define BSW_START_SEC_VAR_CLEARED_UNSPECIFIED
+	#include "Bsw_MemMap.h"
+    #undef RTM_START_SEC_VAR_NO_INIT
+#elif defined(RTM_STOP_SEC_VAR_NO_INIT)
+	#define BSW_STOP_SEC_VAR_CLEARED_UNSPECIFIED
+	#include "Bsw_MemMap.h"
+    #undef RTM_STOP_SEC_VAR_NO_INIT
+
+#elif defined (RTM_START_SEC_CONST)
+	#define BSW_START_SEC_DEFAULT_CONST_UNSPECIFIED
+	#include "Bsw_MemMap.h"
+    #undef RTM_START_SEC_CONST
+#elif defined (RTM_STOP_SEC_CONST)
+	#define BSW_STOP_SEC_DEFAULT_CONST_UNSPECIFIED
+	#include "Bsw_MemMap.h"
+    #undef RTM_STOP_SEC_CONST
+
+#else
+    #error "Rtm: unknown section in memmap include!"
+#endif
+
+
+/*
+ ***********************************************************************************************************************
+ * End of header file
+ ***********************************************************************************************************************
+*/

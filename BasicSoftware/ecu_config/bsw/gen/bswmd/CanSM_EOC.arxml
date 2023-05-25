@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 autosar_4-3-0.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE>
+      <SHORT-NAME>CanSM_EOC</SHORT-NAME>
+      <ELEMENTS>
+        <BSW-MODULE-TIMING>
+          <SHORT-NAME>CanSM</SHORT-NAME>
+          <TIMING-REQUIREMENTS>
+            <EXECUTION-ORDER-CONSTRAINT>
+              <SHORT-NAME>EOC_CanSM_MainFunction</SHORT-NAME>
+              <EXECUTION-ORDER-CONSTRAINT-TYPE>ORDINARY-EOC</EXECUTION-ORDER-CONSTRAINT-TYPE>
+              <IS-EVENT>true</IS-EVENT>
+              <ORDERED-ELEMENTS>
+                <EOC-EVENT-REF>
+                  <SHORT-NAME>EventRef_CanSM_MainFunction</SHORT-NAME>
+                  <BSW-MODULE-INSTANCE-REF DEST="BSW-IMPLEMENTATION">/AUTOSAR_CanSM/BswImplementations/CanSM</BSW-MODULE-INSTANCE-REF>
+                  <EVENT-REF DEST="BSW-TIMING-EVENT">/AUTOSAR_CanSM/BswModuleDescriptions/CanSM/BswInternalBehavior/EV_SE_MainFunction</EVENT-REF>
+                  <SUCCESSOR-REFS>
+                    <SUCCESSOR-REF DEST="EOC-EVENT-REF">/CanSM_EOC/CanSM/EOC_CanSM_MainFunction/EventRef_Com_MainFunctionTx</SUCCESSOR-REF>
+                  </SUCCESSOR-REFS>
+                </EOC-EVENT-REF>
+                <EOC-EVENT-REF>
+                  <SHORT-NAME>EventRef_Com_MainFunctionTx</SHORT-NAME>
+                  <BSW-MODULE-INSTANCE-REF DEST="BSW-IMPLEMENTATION">/AUTOSAR_Com/BswImplementations/Com</BSW-MODULE-INSTANCE-REF>
+                  <EVENT-REF DEST="BSW-TIMING-EVENT">/AUTOSAR_Com/BswModuleDescriptions/Com/BswInternalBehavior/EV_SE_MainFunctionTx</EVENT-REF>
+                </EOC-EVENT-REF>
+              </ORDERED-ELEMENTS>
+              <PERMIT-MULTIPLE-REFERENCES-TO-EE>false</PERMIT-MULTIPLE-REFERENCES-TO-EE>
+            </EXECUTION-ORDER-CONSTRAINT>
+            <EXECUTION-ORDER-CONSTRAINT>
+              <SHORT-NAME>EOC_CanSM_Init</SHORT-NAME>
+              <IS-EVENT>false</IS-EVENT>
+              <ORDERED-ELEMENTS>
+                <EOC-EXECUTABLE-ENTITY-REF>
+                  <SHORT-NAME>EOCExecutableEntityRef_CanTSyn_Init</SHORT-NAME>
+                  <BSW-MODULE-INSTANCE-REF DEST="BSW-IMPLEMENTATION">/AUTOSAR_CanSM/BswImplementations/CanSM</BSW-MODULE-INSTANCE-REF>
+                  <EXECUTABLE-REF DEST="BSW-CALLED-ENTITY">/AUTOSAR_CanSM/BswModuleDescriptions/CanSM/BswInternalBehavior/CE_Init</EXECUTABLE-REF>
+                </EOC-EXECUTABLE-ENTITY-REF>
+              </ORDERED-ELEMENTS>
+              <PERMIT-MULTIPLE-REFERENCES-TO-EE>false</PERMIT-MULTIPLE-REFERENCES-TO-EE>
+            </EXECUTION-ORDER-CONSTRAINT>
+          </TIMING-REQUIREMENTS>
+          <BEHAVIOR-REF DEST="BSW-INTERNAL-BEHAVIOR">/AUTOSAR_CanSM/BswModuleDescriptions/CanSM/BswInternalBehavior</BEHAVIOR-REF>
+        </BSW-MODULE-TIMING>
+      </ELEMENTS>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

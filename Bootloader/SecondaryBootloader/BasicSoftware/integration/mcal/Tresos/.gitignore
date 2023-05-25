@@ -1,0 +1,13 @@
+*.htm
+*.log
+**/html
+**/latex
+*.Doxyfile*
+*.zip
+*.launch
+.vscode
+*.bin
+*.a
+*.dat
+*.bak
+/output

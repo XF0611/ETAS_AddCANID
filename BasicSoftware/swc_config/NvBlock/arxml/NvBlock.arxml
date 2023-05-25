@@ -1,0 +1,915 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-2-2.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE>
+      <SHORT-NAME>ETAS_BIP</SHORT-NAME>
+      <ELEMENTS>
+        <NV-BLOCK-SW-COMPONENT-TYPE>
+          <SHORT-NAME>NvBlock</SHORT-NAME>
+          <ADMIN-DATA>
+            <SDGS>
+              <SDG GID="Master">
+                <SD>true</SD>
+              </SDG>
+            </SDGS>
+          </ADMIN-DATA>
+          <PORTS>
+            <R-PORT-PROTOTYPE>
+              <SHORT-NAME>RP_StoreCyclicBlock</SHORT-NAME>
+              <REQUIRED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/AUTOSAR_NvBlockSwComponentType/PortInterfaces/NvMNotifyJobFinished</REQUIRED-INTERFACE-TREF>
+            </R-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE>
+              <SHORT-NAME>RP_StoreImmediateBlock</SHORT-NAME>
+              <REQUIRED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/AUTOSAR_NvBlockSwComponentType/PortInterfaces/NvMNotifyJobFinished</REQUIRED-INTERFACE-TREF>
+            </R-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE>
+              <SHORT-NAME>RP_StoreAtShutdownBlock</SHORT-NAME>
+              <REQUIRED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/AUTOSAR_NvBlockSwComponentType/PortInterfaces/NvMNotifyJobFinished</REQUIRED-INTERFACE-TREF>
+            </R-PORT-PROTOTYPE>
+            <PR-PORT-PROTOTYPE UUID="32e88d1a-3dd4-4296-98df-6f0ad85dc5a8">
+              <SHORT-NAME>PRP_StoreCyclicBlock</SHORT-NAME>
+              <PROVIDED-REQUIRED-INTERFACE-TREF DEST="NV-DATA-INTERFACE">/PortInterfaces/SRI_CyclicNvBlock_ArrayU8_1024</PROVIDED-REQUIRED-INTERFACE-TREF>
+            </PR-PORT-PROTOTYPE>
+            <PR-PORT-PROTOTYPE UUID="e3db32df-02d2-4306-9215-5330fb7ec511">
+              <SHORT-NAME>PRP_StoreImmediateBlock</SHORT-NAME>
+              <PROVIDED-REQUIRED-INTERFACE-TREF DEST="NV-DATA-INTERFACE">/PortInterfaces/SRI_ImmediateNvBlock_ArrayU32_96</PROVIDED-REQUIRED-INTERFACE-TREF>
+            </PR-PORT-PROTOTYPE>
+            <PR-PORT-PROTOTYPE UUID="93790d56-02e6-4ebe-9ede-ba6115c52c95">
+              <SHORT-NAME>PRP_StoreAtShutdownBlock</SHORT-NAME>
+              <PROVIDED-REQUIRED-INTERFACE-TREF DEST="NV-DATA-INTERFACE">/PortInterfaces/SRI_ShutDownNvBlock_ArrayBoolean_96</PROVIDED-REQUIRED-INTERFACE-TREF>
+            </PR-PORT-PROTOTYPE>
+          </PORTS>
+          <INTERNAL-BEHAVIORS>
+            <SWC-INTERNAL-BEHAVIOR>
+              <SHORT-NAME>IB_NvBlockDirtyFlag</SHORT-NAME>
+              <DATA-TYPE-MAPPING-REFS>
+                <DATA-TYPE-MAPPING-REF DEST="DATA-TYPE-MAPPING-SET">/DataTypeMappingSets/DTMS_NvBlockDirtyFlag</DATA-TYPE-MAPPING-REF>
+              </DATA-TYPE-MAPPING-REFS>
+              <EVENTS>
+                <TIMING-EVENT UUID="82721448-4766-42f2-9d43-513494f047ca">
+                  <SHORT-NAME>TE_StoreCyclic_NvBlock</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ETAS_BIP/NvBlock/IB_NvBlockDirtyFlag/RE_StoreCyclic_NvBlock</START-ON-EVENT-REF>
+                  <PERIOD>0.1</PERIOD>
+                </TIMING-EVENT>
+                <DATA-RECEIVED-EVENT>
+                  <SHORT-NAME>DRE_NvBlock_StoreAtShutdownNvBlock</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ETAS_BIP/NvBlock/IB_NvBlockDirtyFlag/RE_StoreAtShutdown_NvBlock</START-ON-EVENT-REF>
+                  <DATA-IREF>
+                    <CONTEXT-R-PORT-REF DEST="PR-PORT-PROTOTYPE">/ETAS_BIP/NvBlock/PRP_StoreAtShutdownBlock</CONTEXT-R-PORT-REF>
+                    <TARGET-DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/SRI_ShutDownNvBlock_ArrayBoolean_96/ShutDownNvBlock</TARGET-DATA-ELEMENT-REF>
+                  </DATA-IREF>
+                </DATA-RECEIVED-EVENT>
+                <DATA-RECEIVED-EVENT>
+                  <SHORT-NAME>DRE_NvBlock_StoreImmediateNvBlock</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ETAS_BIP/NvBlock/IB_NvBlockDirtyFlag/RE_StoreImmediate_NvBlock</START-ON-EVENT-REF>
+                  <DATA-IREF>
+                    <CONTEXT-R-PORT-REF DEST="PR-PORT-PROTOTYPE">/ETAS_BIP/NvBlock/PRP_StoreImmediateBlock</CONTEXT-R-PORT-REF>
+                    <TARGET-DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/SRI_ImmediateNvBlock_ArrayU32_96/ImmediateNvBlock</TARGET-DATA-ELEMENT-REF>
+                  </DATA-IREF>
+                </DATA-RECEIVED-EVENT>
+              </EVENTS>
+              <RUNNABLES>
+                <RUNNABLE-ENTITY UUID="60b41236-698d-45cc-9977-d1735e058346">
+                  <SHORT-NAME>RE_StoreAtShutdown_NvBlock</SHORT-NAME>
+                  <CAN-BE-INVOKED-CONCURRENTLY>false</CAN-BE-INVOKED-CONCURRENTLY>
+                  <SYMBOL>RE_StoreAtShutdown_NvBlock</SYMBOL>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="cbd8c818-d42a-46dc-b220-86b2492f145e">
+                  <SHORT-NAME>RE_StoreCyclic_NvBlock</SHORT-NAME>
+                  <CAN-BE-INVOKED-CONCURRENTLY>false</CAN-BE-INVOKED-CONCURRENTLY>
+                  <SYMBOL>RE_StoreCyclic_NvBlock</SYMBOL>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="e8af2ea8-83df-4d04-9af2-68b990789106">
+                  <SHORT-NAME>RE_StoreImmediate_NvBlock</SHORT-NAME>
+                  <CAN-BE-INVOKED-CONCURRENTLY>false</CAN-BE-INVOKED-CONCURRENTLY>
+                  <SYMBOL>RE_StoreImmediate_NvBlock</SYMBOL>
+                </RUNNABLE-ENTITY>
+              </RUNNABLES>
+              <SUPPORTS-MULTIPLE-INSTANTIATION>false</SUPPORTS-MULTIPLE-INSTANTIATION>
+            </SWC-INTERNAL-BEHAVIOR>
+          </INTERNAL-BEHAVIORS>
+          <NV-BLOCK-DESCRIPTORS>
+            <NV-BLOCK-DESCRIPTOR>
+              <SHORT-NAME>NvBlockDescriptor_StoreCyclicBlock</SHORT-NAME>
+              <CLIENT-SERVER-PORTS>
+                <ROLE-BASED-PORT-ASSIGNMENT>
+                  <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/ETAS_BIP/NvBlock/RP_StoreCyclicBlock</PORT-PROTOTYPE-REF>
+                  <ROLE>NvMNotifyJobFinished</ROLE>
+                </ROLE-BASED-PORT-ASSIGNMENT>
+              </CLIENT-SERVER-PORTS>
+              <NV-BLOCK-DATA-MAPPINGS>
+                <NV-BLOCK-DATA-MAPPING>
+                  <NV-RAM-BLOCK-ELEMENT>
+                    <LOCAL-VARIABLE-REF DEST="VARIABLE-DATA-PROTOTYPE">/ETAS_BIP/NvBlock/NvBlockDescriptor_StoreCyclicBlock/CyclicRamBlock</LOCAL-VARIABLE-REF>
+                  </NV-RAM-BLOCK-ELEMENT>
+                  <WRITTEN-READ-NV-DATA>
+                    <AUTOSAR-VARIABLE-IREF>
+                      <PORT-PROTOTYPE-REF DEST="PR-PORT-PROTOTYPE">/ETAS_BIP/NvBlock/PRP_StoreCyclicBlock</PORT-PROTOTYPE-REF>
+                      <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/SRI_CyclicNvBlock_ArrayU8_1024/CyclicNvBlock</TARGET-DATA-PROTOTYPE-REF>
+                    </AUTOSAR-VARIABLE-IREF>
+                  </WRITTEN-READ-NV-DATA>
+                </NV-BLOCK-DATA-MAPPING>
+              </NV-BLOCK-DATA-MAPPINGS>
+              <NV-BLOCK-NEEDS>
+                <SHORT-NAME>NvBlockNeeds_StoreCyclicBlock</SHORT-NAME>
+                <CALC-RAM-BLOCK-CRC>true</CALC-RAM-BLOCK-CRC>
+                <CHECK-STATIC-BLOCK-ID>false</CHECK-STATIC-BLOCK-ID>
+                <CYCLIC-WRITING-PERIOD>0.5</CYCLIC-WRITING-PERIOD>
+                <N-ROM-BLOCKS>1</N-ROM-BLOCKS>
+                <READONLY>false</READONLY>
+                <RELIABILITY>NO-PROTECTION</RELIABILITY>
+                <RESISTANT-TO-CHANGED-SW>true</RESISTANT-TO-CHANGED-SW>
+                <RESTORE-AT-START>true</RESTORE-AT-START>
+                <STORE-AT-SHUTDOWN>false</STORE-AT-SHUTDOWN>
+                <STORE-CYCLIC>true</STORE-CYCLIC>
+                <STORE-EMERGENCY>false</STORE-EMERGENCY>
+                <STORE-IMMEDIATE>false</STORE-IMMEDIATE>
+                <USE-AUTO-VALIDATION-AT-SHUT-DOWN>false</USE-AUTO-VALIDATION-AT-SHUT-DOWN>
+                <USE-CRC-COMP-MECHANISM>false</USE-CRC-COMP-MECHANISM>
+                <WRITE-ONLY-ONCE>false</WRITE-ONLY-ONCE>
+                <WRITE-VERIFICATION>false</WRITE-VERIFICATION>
+                <WRITING-FREQUENCY>1</WRITING-FREQUENCY>
+                <WRITING-PRIORITY>MEDIUM</WRITING-PRIORITY>
+              </NV-BLOCK-NEEDS>
+              <RAM-BLOCK>
+                <SHORT-NAME>CyclicRamBlock</SHORT-NAME>
+                <CATEGORY>STRUCTURE</CATEGORY>
+                <SW-DATA-DEF-PROPS>
+                  <SW-DATA-DEF-PROPS-VARIANTS>
+                    <SW-DATA-DEF-PROPS-CONDITIONAL />
+                  </SW-DATA-DEF-PROPS-VARIANTS>
+                </SW-DATA-DEF-PROPS>
+                <TYPE-TREF DEST="APPLICATION-ARRAY-DATA-TYPE">/ApplicationDataTypes/Type_ArrayU8_1024</TYPE-TREF>
+              </RAM-BLOCK>
+              <ROM-BLOCK>
+                <SHORT-NAME>CyclicRomBlock</SHORT-NAME>
+                <CATEGORY>STRUCTURE</CATEGORY>
+                <SW-DATA-DEF-PROPS>
+                  <SW-DATA-DEF-PROPS-VARIANTS>
+                    <SW-DATA-DEF-PROPS-CONDITIONAL />
+                  </SW-DATA-DEF-PROPS-VARIANTS>
+                </SW-DATA-DEF-PROPS>
+                <TYPE-TREF DEST="APPLICATION-ARRAY-DATA-TYPE">/ApplicationDataTypes/Type_ArrayU8_1024</TYPE-TREF>
+                <INIT-VALUE>
+                  <ARRAY-VALUE-SPECIFICATION>
+                    <ELEMENTS>
+                      <APPLICATION-VALUE-SPECIFICATION>
+                        <CATEGORY>VALUE</CATEGORY>
+                        <SW-VALUE-CONT>
+                          <UNIT-REF DEST="UNIT">/ETAS_BIP/Units/NoUnit</UNIT-REF>
+                          <SW-VALUES-PHYS>
+                            <V>66</V>
+                          </SW-VALUES-PHYS>
+                        </SW-VALUE-CONT>
+                      </APPLICATION-VALUE-SPECIFICATION>
+                    </ELEMENTS>
+                  </ARRAY-VALUE-SPECIFICATION>
+                </INIT-VALUE>
+              </ROM-BLOCK>
+              <SUPPORT-DIRTY-FLAG>true</SUPPORT-DIRTY-FLAG>
+              <TIMING-EVENT-REF DEST="TIMING-EVENT">/ETAS_BIP/NvBlock/IB_NvBlockDirtyFlag/TE_StoreCyclic_NvBlock</TIMING-EVENT-REF>
+            </NV-BLOCK-DESCRIPTOR>
+            <NV-BLOCK-DESCRIPTOR>
+              <SHORT-NAME>NvBlockDescriptor_StoreImmediateBlock</SHORT-NAME>
+              <CLIENT-SERVER-PORTS>
+                <ROLE-BASED-PORT-ASSIGNMENT>
+                  <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/ETAS_BIP/NvBlock/RP_StoreImmediateBlock</PORT-PROTOTYPE-REF>
+                  <ROLE>NvMNotifyJobFinished</ROLE>
+                </ROLE-BASED-PORT-ASSIGNMENT>
+              </CLIENT-SERVER-PORTS>
+              <NV-BLOCK-DATA-MAPPINGS>
+                <NV-BLOCK-DATA-MAPPING>
+                  <NV-RAM-BLOCK-ELEMENT>
+                    <LOCAL-VARIABLE-REF DEST="VARIABLE-DATA-PROTOTYPE">/ETAS_BIP/NvBlock/NvBlockDescriptor_StoreImmediateBlock/ImmediateRamBlock</LOCAL-VARIABLE-REF>
+                  </NV-RAM-BLOCK-ELEMENT>
+                  <WRITTEN-READ-NV-DATA>
+                    <AUTOSAR-VARIABLE-IREF>
+                      <PORT-PROTOTYPE-REF DEST="PR-PORT-PROTOTYPE">/ETAS_BIP/NvBlock/PRP_StoreImmediateBlock</PORT-PROTOTYPE-REF>
+                      <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/SRI_ImmediateNvBlock_ArrayU32_96/ImmediateNvBlock</TARGET-DATA-PROTOTYPE-REF>
+                    </AUTOSAR-VARIABLE-IREF>
+                  </WRITTEN-READ-NV-DATA>
+                </NV-BLOCK-DATA-MAPPING>
+              </NV-BLOCK-DATA-MAPPINGS>
+              <NV-BLOCK-NEEDS>
+                <SHORT-NAME>NvBlockNeeds_StoreImmediateBlock</SHORT-NAME>
+                <CALC-RAM-BLOCK-CRC>true</CALC-RAM-BLOCK-CRC>
+                <CHECK-STATIC-BLOCK-ID>false</CHECK-STATIC-BLOCK-ID>
+                <N-ROM-BLOCKS>1</N-ROM-BLOCKS>
+                <READONLY>false</READONLY>
+                <RELIABILITY>NO-PROTECTION</RELIABILITY>
+                <RESISTANT-TO-CHANGED-SW>true</RESISTANT-TO-CHANGED-SW>
+                <RESTORE-AT-START>true</RESTORE-AT-START>
+                <STORE-AT-SHUTDOWN>false</STORE-AT-SHUTDOWN>
+                <STORE-CYCLIC>false</STORE-CYCLIC>
+                <STORE-EMERGENCY>false</STORE-EMERGENCY>
+                <STORE-IMMEDIATE>true</STORE-IMMEDIATE>
+                <USE-AUTO-VALIDATION-AT-SHUT-DOWN>false</USE-AUTO-VALIDATION-AT-SHUT-DOWN>
+                <USE-CRC-COMP-MECHANISM>false</USE-CRC-COMP-MECHANISM>
+                <WRITE-ONLY-ONCE>false</WRITE-ONLY-ONCE>
+                <WRITE-VERIFICATION>false</WRITE-VERIFICATION>
+                <WRITING-PRIORITY>MEDIUM</WRITING-PRIORITY>
+              </NV-BLOCK-NEEDS>
+              <RAM-BLOCK UUID="fcf9c411-cced-4b03-a9b2-5f0490495cfd">
+                <SHORT-NAME>ImmediateRamBlock</SHORT-NAME>
+                <CATEGORY>STRUCTURE</CATEGORY>
+                <SW-DATA-DEF-PROPS>
+                  <SW-DATA-DEF-PROPS-VARIANTS>
+                    <SW-DATA-DEF-PROPS-CONDITIONAL />
+                  </SW-DATA-DEF-PROPS-VARIANTS>
+                </SW-DATA-DEF-PROPS>
+                <TYPE-TREF DEST="APPLICATION-ARRAY-DATA-TYPE">/ApplicationDataTypes/Type_ArrayU32_96</TYPE-TREF>
+              </RAM-BLOCK>
+              <ROM-BLOCK UUID="f3e25d41-7d63-4cb2-a33a-334e2d40c5ff">
+                <SHORT-NAME>ImmediateRomBlock</SHORT-NAME>
+                <CATEGORY>STRUCTURE</CATEGORY>
+                <SW-DATA-DEF-PROPS>
+                  <SW-DATA-DEF-PROPS-VARIANTS>
+                    <SW-DATA-DEF-PROPS-CONDITIONAL />
+                  </SW-DATA-DEF-PROPS-VARIANTS>
+                </SW-DATA-DEF-PROPS>
+                <TYPE-TREF DEST="APPLICATION-ARRAY-DATA-TYPE">/ApplicationDataTypes/Type_ArrayU32_96</TYPE-TREF>
+                <INIT-VALUE>
+                  <ARRAY-VALUE-SPECIFICATION>
+                    <ELEMENTS>
+                      <APPLICATION-VALUE-SPECIFICATION>
+                        <CATEGORY>VALUE</CATEGORY>
+                        <SW-VALUE-CONT>
+                          <UNIT-REF DEST="UNIT">/ETAS_BIP/Units/NoUnit</UNIT-REF>
+                          <SW-VALUES-PHYS>
+                            <V>50</V>
+                          </SW-VALUES-PHYS>
+                        </SW-VALUE-CONT>
+                      </APPLICATION-VALUE-SPECIFICATION>
+                      <APPLICATION-VALUE-SPECIFICATION>
+                        <CATEGORY>VALUE</CATEGORY>
+                        <SW-VALUE-CONT>
+                          <UNIT-REF DEST="UNIT">/Units/No_Unit</UNIT-REF>
+                          <SW-VALUES-PHYS>
+                            <V>60</V>
+                          </SW-VALUES-PHYS>
+                        </SW-VALUE-CONT>
+                      </APPLICATION-VALUE-SPECIFICATION>
+                      <APPLICATION-VALUE-SPECIFICATION>
+                        <CATEGORY>VALUE</CATEGORY>
+                        <SW-VALUE-CONT>
+                          <UNIT-REF DEST="UNIT">/Units/No_Unit</UNIT-REF>
+                          <SW-VALUES-PHYS>
+                            <V>70</V>
+                          </SW-VALUES-PHYS>
+                        </SW-VALUE-CONT>
+                      </APPLICATION-VALUE-SPECIFICATION>
+                      <APPLICATION-VALUE-SPECIFICATION>
+                        <CATEGORY>VALUE</CATEGORY>
+                        <SW-VALUE-CONT>
+                          <UNIT-REF DEST="UNIT">/Units/No_Unit</UNIT-REF>
+                          <SW-VALUES-PHYS>
+                            <V>80</V>
+                          </SW-VALUES-PHYS>
+                        </SW-VALUE-CONT>
+                      </APPLICATION-VALUE-SPECIFICATION>
+                      <APPLICATION-VALUE-SPECIFICATION>
+                        <CATEGORY>VALUE</CATEGORY>
+                        <SW-VALUE-CONT>
+                          <UNIT-REF DEST="UNIT">/Units/No_Unit</UNIT-REF>
+                          <SW-VALUES-PHYS>
+                            <V>90</V>
+                          </SW-VALUES-PHYS>
+                        </SW-VALUE-CONT>
+                      </APPLICATION-VALUE-SPECIFICATION>
+                    </ELEMENTS>
+                  </ARRAY-VALUE-SPECIFICATION>
+                </INIT-VALUE>
+              </ROM-BLOCK>
+              <SUPPORT-DIRTY-FLAG>true</SUPPORT-DIRTY-FLAG>
+            </NV-BLOCK-DESCRIPTOR>
+            <NV-BLOCK-DESCRIPTOR>
+              <SHORT-NAME>NvBlockDescriptor_StoreAtShutdownBlock</SHORT-NAME>
+              <CLIENT-SERVER-PORTS>
+                <ROLE-BASED-PORT-ASSIGNMENT>
+                  <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/ETAS_BIP/NvBlock/RP_StoreAtShutdownBlock</PORT-PROTOTYPE-REF>
+                  <ROLE>NvMNotifyJobFinished</ROLE>
+                </ROLE-BASED-PORT-ASSIGNMENT>
+              </CLIENT-SERVER-PORTS>
+              <NV-BLOCK-DATA-MAPPINGS>
+                <NV-BLOCK-DATA-MAPPING>
+                  <NV-RAM-BLOCK-ELEMENT>
+                    <LOCAL-VARIABLE-REF DEST="VARIABLE-DATA-PROTOTYPE">/ETAS_BIP/NvBlock/NvBlockDescriptor_StoreAtShutdownBlock/ShutdownRamBlock</LOCAL-VARIABLE-REF>
+                  </NV-RAM-BLOCK-ELEMENT>
+                  <WRITTEN-READ-NV-DATA>
+                    <AUTOSAR-VARIABLE-IREF>
+                      <PORT-PROTOTYPE-REF DEST="PR-PORT-PROTOTYPE">/ETAS_BIP/NvBlock/PRP_StoreAtShutdownBlock</PORT-PROTOTYPE-REF>
+                      <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/SRI_ShutDownNvBlock_ArrayBoolean_96/ShutDownNvBlock</TARGET-DATA-PROTOTYPE-REF>
+                    </AUTOSAR-VARIABLE-IREF>
+                  </WRITTEN-READ-NV-DATA>
+                </NV-BLOCK-DATA-MAPPING>
+              </NV-BLOCK-DATA-MAPPINGS>
+              <NV-BLOCK-NEEDS>
+                <SHORT-NAME>NvBlockNeeds_StoreAtShutdownBlock</SHORT-NAME>
+                <CALC-RAM-BLOCK-CRC>true</CALC-RAM-BLOCK-CRC>
+                <CHECK-STATIC-BLOCK-ID>false</CHECK-STATIC-BLOCK-ID>
+                <N-ROM-BLOCKS>1</N-ROM-BLOCKS>
+                <READONLY>false</READONLY>
+                <RELIABILITY>NO-PROTECTION</RELIABILITY>
+                <RESISTANT-TO-CHANGED-SW>true</RESISTANT-TO-CHANGED-SW>
+                <RESTORE-AT-START>true</RESTORE-AT-START>
+                <STORE-AT-SHUTDOWN>true</STORE-AT-SHUTDOWN>
+                <STORE-CYCLIC>false</STORE-CYCLIC>
+                <STORE-EMERGENCY>false</STORE-EMERGENCY>
+                <STORE-IMMEDIATE>false</STORE-IMMEDIATE>
+                <USE-AUTO-VALIDATION-AT-SHUT-DOWN>false</USE-AUTO-VALIDATION-AT-SHUT-DOWN>
+                <USE-CRC-COMP-MECHANISM>false</USE-CRC-COMP-MECHANISM>
+                <WRITE-ONLY-ONCE>false</WRITE-ONLY-ONCE>
+                <WRITE-VERIFICATION>false</WRITE-VERIFICATION>
+                <WRITING-PRIORITY>MEDIUM</WRITING-PRIORITY>
+              </NV-BLOCK-NEEDS>
+              <RAM-BLOCK UUID="75f72fb6-95cf-4f70-a9f0-10d89bf23146">
+                <SHORT-NAME>ShutdownRamBlock</SHORT-NAME>
+                <CATEGORY>STRUCTURE</CATEGORY>
+                <SW-DATA-DEF-PROPS>
+                  <SW-DATA-DEF-PROPS-VARIANTS>
+                    <SW-DATA-DEF-PROPS-CONDITIONAL />
+                  </SW-DATA-DEF-PROPS-VARIANTS>
+                </SW-DATA-DEF-PROPS>
+                <TYPE-TREF DEST="APPLICATION-ARRAY-DATA-TYPE">/ApplicationDataTypes/Type_ArrayBoolean_96</TYPE-TREF>
+              </RAM-BLOCK>
+              <ROM-BLOCK UUID="452f42aa-1c5e-40b8-ae8c-290f82fde415">
+                <SHORT-NAME>ShutdownRomBlock</SHORT-NAME>
+                <CATEGORY>STRUCTURE</CATEGORY>
+                <SW-DATA-DEF-PROPS>
+                  <SW-DATA-DEF-PROPS-VARIANTS>
+                    <SW-DATA-DEF-PROPS-CONDITIONAL />
+                  </SW-DATA-DEF-PROPS-VARIANTS>
+                </SW-DATA-DEF-PROPS>
+                <TYPE-TREF DEST="APPLICATION-ARRAY-DATA-TYPE">/ApplicationDataTypes/Type_ArrayBoolean_96</TYPE-TREF>
+                <INIT-VALUE>
+                  <ARRAY-VALUE-SPECIFICATION>
+                    <ELEMENTS>
+                      <APPLICATION-VALUE-SPECIFICATION>
+                        <CATEGORY>VALUE</CATEGORY>
+                        <SW-VALUE-CONT>
+                          <UNIT-REF DEST="UNIT">/Units/No_Unit</UNIT-REF>
+                          <SW-VALUES-PHYS>
+                            <V>1</V>
+                          </SW-VALUES-PHYS>
+                        </SW-VALUE-CONT>
+                      </APPLICATION-VALUE-SPECIFICATION>
+                      <APPLICATION-VALUE-SPECIFICATION>
+                        <CATEGORY>VALUE</CATEGORY>
+                        <SW-VALUE-CONT>
+                          <UNIT-REF DEST="UNIT">/Units/No_Unit</UNIT-REF>
+                          <SW-VALUES-PHYS>
+                            <V>1</V>
+                          </SW-VALUES-PHYS>
+                        </SW-VALUE-CONT>
+                      </APPLICATION-VALUE-SPECIFICATION>
+                      <APPLICATION-VALUE-SPECIFICATION>
+                        <CATEGORY>VALUE</CATEGORY>
+                        <SW-VALUE-CONT>
+                          <UNIT-REF DEST="UNIT">/Units/No_Unit</UNIT-REF>
+                          <SW-VALUES-PHYS>
+                            <V>1</V>
+                          </SW-VALUES-PHYS>
+                        </SW-VALUE-CONT>
+                      </APPLICATION-VALUE-SPECIFICATION>
+                      <APPLICATION-VALUE-SPECIFICATION>
+                        <CATEGORY>VALUE</CATEGORY>
+                        <SW-VALUE-CONT>
+                          <UNIT-REF DEST="UNIT">/Units/No_Unit</UNIT-REF>
+                          <SW-VALUES-PHYS>
+                            <V>1</V>
+                          </SW-VALUES-PHYS>
+                        </SW-VALUE-CONT>
+                      </APPLICATION-VALUE-SPECIFICATION>
+                      <APPLICATION-VALUE-SPECIFICATION>
+                        <CATEGORY>VALUE</CATEGORY>
+                        <SW-VALUE-CONT>
+                          <UNIT-REF DEST="UNIT">/Units/No_Unit</UNIT-REF>
+                          <SW-VALUES-PHYS>
+                            <V>1</V>
+                          </SW-VALUES-PHYS>
+                        </SW-VALUE-CONT>
+                      </APPLICATION-VALUE-SPECIFICATION>
+                      <APPLICATION-VALUE-SPECIFICATION>
+                        <CATEGORY>VALUE</CATEGORY>
+                        <SW-VALUE-CONT>
+                          <UNIT-REF DEST="UNIT">/Units/No_Unit</UNIT-REF>
+                          <SW-VALUES-PHYS>
+                            <V>1</V>
+                          </SW-VALUES-PHYS>
+                        </SW-VALUE-CONT>
+                      </APPLICATION-VALUE-SPECIFICATION>
+                      <APPLICATION-VALUE-SPECIFICATION>
+                        <CATEGORY>VALUE</CATEGORY>
+                        <SW-VALUE-CONT>
+                          <UNIT-REF DEST="UNIT">/Units/No_Unit</UNIT-REF>
+                          <SW-VALUES-PHYS>
+                            <V>1</V>
+                          </SW-VALUES-PHYS>
+                        </SW-VALUE-CONT>
+                      </APPLICATION-VALUE-SPECIFICATION>
+                      <APPLICATION-VALUE-SPECIFICATION>
+                        <CATEGORY>VALUE</CATEGORY>
+                        <SW-VALUE-CONT>
+                          <UNIT-REF DEST="UNIT">/Units/No_Unit</UNIT-REF>
+                          <SW-VALUES-PHYS>
+                            <V>1</V>
+                          </SW-VALUES-PHYS>
+                        </SW-VALUE-CONT>
+                      </APPLICATION-VALUE-SPECIFICATION>
+                      <APPLICATION-VALUE-SPECIFICATION>
+                        <CATEGORY>VALUE</CATEGORY>
+                        <SW-VALUE-CONT>
+                          <UNIT-REF DEST="UNIT">/Units/No_Unit</UNIT-REF>
+                          <SW-VALUES-PHYS>
+                            <V>1</V>
+                          </SW-VALUES-PHYS>
+                        </SW-VALUE-CONT>
+                      </APPLICATION-VALUE-SPECIFICATION>
+                      <APPLICATION-VALUE-SPECIFICATION>
+                        <CATEGORY>VALUE</CATEGORY>
+                        <SW-VALUE-CONT>
+                          <UNIT-REF DEST="UNIT">/Units/No_Unit</UNIT-REF>
+                          <SW-VALUES-PHYS>
+                            <V>1</V>
+                          </SW-VALUES-PHYS>
+                        </SW-VALUE-CONT>
+                      </APPLICATION-VALUE-SPECIFICATION>
+                    </ELEMENTS>
+                  </ARRAY-VALUE-SPECIFICATION>
+                </INIT-VALUE>
+              </ROM-BLOCK>
+              <SUPPORT-DIRTY-FLAG>true</SUPPORT-DIRTY-FLAG>
+            </NV-BLOCK-DESCRIPTOR>
+          </NV-BLOCK-DESCRIPTORS>
+        </NV-BLOCK-SW-COMPONENT-TYPE>
+      </ELEMENTS>
+    </AR-PACKAGE>
+    <AR-PACKAGE>
+      <SHORT-NAME>SwcImplementations</SHORT-NAME>
+      <ELEMENTS>
+        <SWC-IMPLEMENTATION>
+          <SHORT-NAME>IMPL_rba_NvBlockDirtyFlag</SHORT-NAME>
+          <CODE-DESCRIPTORS>
+            <CODE>
+              <SHORT-NAME>Code</SHORT-NAME>
+              <ARTIFACT-DESCRIPTORS>
+                <AUTOSAR-ENGINEERING-OBJECT>
+                  <SHORT-LABEL>AutosarEngineeringObject</SHORT-LABEL>
+                  <CATEGORY>SWSRC</CATEGORY>
+                </AUTOSAR-ENGINEERING-OBJECT>
+              </ARTIFACT-DESCRIPTORS>
+            </CODE>
+          </CODE-DESCRIPTORS>
+          <PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+          <BEHAVIOR-REF DEST="SWC-INTERNAL-BEHAVIOR">/ETAS_BIP/NvBlock/IB_NvBlockDirtyFlag</BEHAVIOR-REF>
+        </SWC-IMPLEMENTATION>
+      </ELEMENTS>
+    </AR-PACKAGE>
+    <AR-PACKAGE>
+      <SHORT-NAME>Units</SHORT-NAME>
+      <ELEMENTS>
+        <UNIT>
+          <SHORT-NAME>No_Unit</SHORT-NAME>
+        </UNIT>
+      </ELEMENTS>
+    </AR-PACKAGE>
+    <AR-PACKAGE>
+      <SHORT-NAME>ApplicationDataTypes</SHORT-NAME>
+      <ELEMENTS>
+        <APPLICATION-ARRAY-DATA-TYPE>
+          <SHORT-NAME>Type_ArrayU8_1024</SHORT-NAME>
+          <CATEGORY>ARRAY</CATEGORY>
+          <SW-DATA-DEF-PROPS>
+            <SW-DATA-DEF-PROPS-VARIANTS>
+              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
+                <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+              </SW-DATA-DEF-PROPS-CONDITIONAL>
+            </SW-DATA-DEF-PROPS-VARIANTS>
+          </SW-DATA-DEF-PROPS>
+          <ELEMENT>
+            <SHORT-NAME>Element</SHORT-NAME>
+            <CATEGORY>VALUE</CATEGORY>
+            <TYPE-TREF DEST="APPLICATION-PRIMITIVE-DATA-TYPE">/ApplicationDataTypes/Type_U8</TYPE-TREF>
+            <ARRAY-SIZE-SEMANTICS>FIXED-SIZE</ARRAY-SIZE-SEMANTICS>
+            <MAX-NUMBER-OF-ELEMENTS>1024</MAX-NUMBER-OF-ELEMENTS>
+          </ELEMENT>
+        </APPLICATION-ARRAY-DATA-TYPE>
+        <APPLICATION-PRIMITIVE-DATA-TYPE>
+          <SHORT-NAME>Type_U8</SHORT-NAME>
+          <CATEGORY>VALUE</CATEGORY>
+          <SW-DATA-DEF-PROPS>
+            <SW-DATA-DEF-PROPS-VARIANTS>
+              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
+                <COMPU-METHOD-REF DEST="COMPU-METHOD">/RB/RBA/Common/CentralElements/CompuMethods/Identical</COMPU-METHOD-REF>
+                <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+              </SW-DATA-DEF-PROPS-CONDITIONAL>
+            </SW-DATA-DEF-PROPS-VARIANTS>
+          </SW-DATA-DEF-PROPS>
+        </APPLICATION-PRIMITIVE-DATA-TYPE>
+        <APPLICATION-PRIMITIVE-DATA-TYPE>
+          <SHORT-NAME>Type_U16</SHORT-NAME>
+          <CATEGORY>VALUE</CATEGORY>
+          <SW-DATA-DEF-PROPS>
+            <SW-DATA-DEF-PROPS-VARIANTS>
+              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
+                <COMPU-METHOD-REF DEST="COMPU-METHOD">/RB/RBA/Common/CentralElements/CompuMethods/Identical</COMPU-METHOD-REF>
+                <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+              </SW-DATA-DEF-PROPS-CONDITIONAL>
+            </SW-DATA-DEF-PROPS-VARIANTS>
+          </SW-DATA-DEF-PROPS>
+        </APPLICATION-PRIMITIVE-DATA-TYPE>
+        <APPLICATION-ARRAY-DATA-TYPE>
+          <SHORT-NAME>Type_ArrayU32_96</SHORT-NAME>
+          <CATEGORY>ARRAY</CATEGORY>
+          <SW-DATA-DEF-PROPS>
+            <SW-DATA-DEF-PROPS-VARIANTS>
+              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
+                <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+              </SW-DATA-DEF-PROPS-CONDITIONAL>
+            </SW-DATA-DEF-PROPS-VARIANTS>
+          </SW-DATA-DEF-PROPS>
+          <ELEMENT>
+            <SHORT-NAME>Element</SHORT-NAME>
+            <CATEGORY>VALUE</CATEGORY>
+            <TYPE-TREF DEST="APPLICATION-PRIMITIVE-DATA-TYPE">/ApplicationDataTypes/Type_U32</TYPE-TREF>
+            <ARRAY-SIZE-SEMANTICS>FIXED-SIZE</ARRAY-SIZE-SEMANTICS>
+            <MAX-NUMBER-OF-ELEMENTS>96</MAX-NUMBER-OF-ELEMENTS>
+          </ELEMENT>
+        </APPLICATION-ARRAY-DATA-TYPE>
+        <APPLICATION-PRIMITIVE-DATA-TYPE>
+          <SHORT-NAME>Type_U32</SHORT-NAME>
+          <CATEGORY>VALUE</CATEGORY>
+          <SW-DATA-DEF-PROPS>
+            <SW-DATA-DEF-PROPS-VARIANTS>
+              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
+                <COMPU-METHOD-REF DEST="COMPU-METHOD">/RB/RBA/Common/CentralElements/CompuMethods/Identical</COMPU-METHOD-REF>
+                <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+              </SW-DATA-DEF-PROPS-CONDITIONAL>
+            </SW-DATA-DEF-PROPS-VARIANTS>
+          </SW-DATA-DEF-PROPS>
+        </APPLICATION-PRIMITIVE-DATA-TYPE>
+        <APPLICATION-RECORD-DATA-TYPE>
+          <SHORT-NAME>Type_Struct_U8U16U32</SHORT-NAME>
+          <CATEGORY>STRUCTURE</CATEGORY>
+          <SW-DATA-DEF-PROPS>
+            <SW-DATA-DEF-PROPS-VARIANTS>
+              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
+              </SW-DATA-DEF-PROPS-CONDITIONAL>
+            </SW-DATA-DEF-PROPS-VARIANTS>
+          </SW-DATA-DEF-PROPS>
+          <ELEMENTS>
+            <APPLICATION-RECORD-ELEMENT>
+              <SHORT-NAME>U8</SHORT-NAME>
+              <CATEGORY>VALUE</CATEGORY>
+              <TYPE-TREF DEST="APPLICATION-PRIMITIVE-DATA-TYPE">/ApplicationDataTypes/Type_U8</TYPE-TREF>
+            </APPLICATION-RECORD-ELEMENT>
+            <APPLICATION-RECORD-ELEMENT>
+              <SHORT-NAME>U16</SHORT-NAME>
+              <CATEGORY>VALUE</CATEGORY>
+              <TYPE-TREF DEST="APPLICATION-PRIMITIVE-DATA-TYPE">/ApplicationDataTypes/Type_U16</TYPE-TREF>
+            </APPLICATION-RECORD-ELEMENT>
+            <APPLICATION-RECORD-ELEMENT>
+              <SHORT-NAME>U32</SHORT-NAME>
+              <CATEGORY>VALUE</CATEGORY>
+              <TYPE-TREF DEST="APPLICATION-PRIMITIVE-DATA-TYPE">/ApplicationDataTypes/Type_U32</TYPE-TREF>
+            </APPLICATION-RECORD-ELEMENT>
+          </ELEMENTS>
+        </APPLICATION-RECORD-DATA-TYPE>
+        <APPLICATION-PRIMITIVE-DATA-TYPE>
+          <SHORT-NAME>Type_float</SHORT-NAME>
+          <CATEGORY>VALUE</CATEGORY>
+          <SW-DATA-DEF-PROPS>
+            <SW-DATA-DEF-PROPS-VARIANTS>
+              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
+                <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+              </SW-DATA-DEF-PROPS-CONDITIONAL>
+            </SW-DATA-DEF-PROPS-VARIANTS>
+          </SW-DATA-DEF-PROPS>
+        </APPLICATION-PRIMITIVE-DATA-TYPE>
+        <APPLICATION-PRIMITIVE-DATA-TYPE>
+          <SHORT-NAME>Type_boolean</SHORT-NAME>
+          <CATEGORY>VALUE</CATEGORY>
+          <SW-DATA-DEF-PROPS>
+            <SW-DATA-DEF-PROPS-VARIANTS>
+              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
+                <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+              </SW-DATA-DEF-PROPS-CONDITIONAL>
+            </SW-DATA-DEF-PROPS-VARIANTS>
+          </SW-DATA-DEF-PROPS>
+        </APPLICATION-PRIMITIVE-DATA-TYPE>
+        <APPLICATION-ARRAY-DATA-TYPE>
+          <SHORT-NAME>Type_ArrayBoolean_96</SHORT-NAME>
+          <CATEGORY>ARRAY</CATEGORY>
+          <SW-DATA-DEF-PROPS>
+            <SW-DATA-DEF-PROPS-VARIANTS>
+              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
+                <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+              </SW-DATA-DEF-PROPS-CONDITIONAL>
+            </SW-DATA-DEF-PROPS-VARIANTS>
+          </SW-DATA-DEF-PROPS>
+          <ELEMENT>
+            <SHORT-NAME>Element</SHORT-NAME>
+            <CATEGORY>VALUE</CATEGORY>
+            <TYPE-TREF DEST="APPLICATION-PRIMITIVE-DATA-TYPE">/ApplicationDataTypes/Type_boolean</TYPE-TREF>
+            <ARRAY-SIZE-SEMANTICS>FIXED-SIZE</ARRAY-SIZE-SEMANTICS>
+            <MAX-NUMBER-OF-ELEMENTS>96</MAX-NUMBER-OF-ELEMENTS>
+          </ELEMENT>
+        </APPLICATION-ARRAY-DATA-TYPE>
+        <APPLICATION-RECORD-DATA-TYPE UUID="a3383a85-ff47-41ab-b560-8ef026612a5d">
+          <SHORT-NAME>ImmediateRomBlock_VariableDataPrototype</SHORT-NAME>
+          <CATEGORY>STRUCTURE</CATEGORY>
+          <ELEMENTS>
+            <APPLICATION-RECORD-ELEMENT UUID="6e0a5e6a-1964-4b2d-ba7a-f499093de715">
+              <SHORT-NAME>Type_ArrayU32_96</SHORT-NAME>
+              <CATEGORY>ARRAY</CATEGORY>
+              <TYPE-TREF DEST="APPLICATION-ARRAY-DATA-TYPE">/ApplicationDataTypes/Type_ArrayU32_96</TYPE-TREF>
+            </APPLICATION-RECORD-ELEMENT>
+          </ELEMENTS>
+        </APPLICATION-RECORD-DATA-TYPE>
+        <APPLICATION-RECORD-DATA-TYPE UUID="8fd4316b-7172-418a-9487-94052b6c46a1">
+          <SHORT-NAME>ShutdownRomBlock_VariableDataPrototype</SHORT-NAME>
+          <CATEGORY>STRUCTURE</CATEGORY>
+          <ELEMENTS>
+            <APPLICATION-RECORD-ELEMENT UUID="def3285f-457c-429e-abac-527d6a010f63">
+              <SHORT-NAME>Type_ArrayBoolean_96</SHORT-NAME>
+              <CATEGORY>ARRAY</CATEGORY>
+              <TYPE-TREF DEST="APPLICATION-ARRAY-DATA-TYPE">/ApplicationDataTypes/Type_ArrayBoolean_96</TYPE-TREF>
+            </APPLICATION-RECORD-ELEMENT>
+          </ELEMENTS>
+        </APPLICATION-RECORD-DATA-TYPE>
+        <APPLICATION-RECORD-DATA-TYPE UUID="a3383a85-ff47-41ab-b560-8ef026612a5d">
+          <SHORT-NAME>CyclicRomBlock_VariableDataPrototype</SHORT-NAME>
+          <CATEGORY>STRUCTURE</CATEGORY>
+          <ELEMENTS>
+            <APPLICATION-RECORD-ELEMENT UUID="6e0a5e6a-1964-4b2d-ba7a-f499093de715">
+              <SHORT-NAME>Type_ArrayU8_1024</SHORT-NAME>
+              <CATEGORY>ARRAY</CATEGORY>
+              <TYPE-TREF DEST="APPLICATION-ARRAY-DATA-TYPE">/ApplicationDataTypes/Type_ArrayU8_1024</TYPE-TREF>
+            </APPLICATION-RECORD-ELEMENT>
+          </ELEMENTS>
+        </APPLICATION-RECORD-DATA-TYPE>
+      </ELEMENTS>
+    </AR-PACKAGE>
+    <AR-PACKAGE>
+      <SHORT-NAME>DataTypeMappingSets</SHORT-NAME>
+      <ELEMENTS>
+        <DATA-TYPE-MAPPING-SET>
+          <SHORT-NAME>DTMS_NvBlockDirtyFlag</SHORT-NAME>
+          <DATA-TYPE-MAPS>
+            <DATA-TYPE-MAP>
+              <APPLICATION-DATA-TYPE-REF DEST="APPLICATION-PRIMITIVE-DATA-TYPE">/ApplicationDataTypes/Type_U8</APPLICATION-DATA-TYPE-REF>
+              <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_PlatformTypes/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+            </DATA-TYPE-MAP>
+            <DATA-TYPE-MAP>
+              <APPLICATION-DATA-TYPE-REF DEST="APPLICATION-ARRAY-DATA-TYPE">/ApplicationDataTypes/Type_ArrayU8_1024</APPLICATION-DATA-TYPE-REF>
+              <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/ImplementationDataTypes/Type_ArrayU8_1024</IMPLEMENTATION-DATA-TYPE-REF>
+            </DATA-TYPE-MAP>
+            <DATA-TYPE-MAP>
+              <APPLICATION-DATA-TYPE-REF DEST="APPLICATION-PRIMITIVE-DATA-TYPE">/ApplicationDataTypes/Type_U16</APPLICATION-DATA-TYPE-REF>
+              <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_PlatformTypes/ImplementationDataTypes/uint16</IMPLEMENTATION-DATA-TYPE-REF>
+            </DATA-TYPE-MAP>
+            <DATA-TYPE-MAP>
+              <APPLICATION-DATA-TYPE-REF DEST="APPLICATION-ARRAY-DATA-TYPE">/ApplicationDataTypes/Type_ArrayU32_96</APPLICATION-DATA-TYPE-REF>
+              <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/ImplementationDataTypes/Type_ArrayU32_96</IMPLEMENTATION-DATA-TYPE-REF>
+            </DATA-TYPE-MAP>
+            <DATA-TYPE-MAP>
+              <APPLICATION-DATA-TYPE-REF DEST="APPLICATION-ARRAY-DATA-TYPE">/ApplicationDataTypes/Type_ArrayBoolean_96</APPLICATION-DATA-TYPE-REF>
+              <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/ImplementationDataTypes/Type_ArrayBoolean_96</IMPLEMENTATION-DATA-TYPE-REF>
+            </DATA-TYPE-MAP>
+            <DATA-TYPE-MAP>
+              <APPLICATION-DATA-TYPE-REF DEST="APPLICATION-PRIMITIVE-DATA-TYPE">/ApplicationDataTypes/Type_U32</APPLICATION-DATA-TYPE-REF>
+              <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint32</IMPLEMENTATION-DATA-TYPE-REF>
+            </DATA-TYPE-MAP>
+            <DATA-TYPE-MAP>
+              <APPLICATION-DATA-TYPE-REF DEST="APPLICATION-RECORD-DATA-TYPE">/ApplicationDataTypes/Type_Struct_U8U16U32</APPLICATION-DATA-TYPE-REF>
+              <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/ImplementationDataTypes/Type_Struct_U8U16U32</IMPLEMENTATION-DATA-TYPE-REF>
+            </DATA-TYPE-MAP>
+            <DATA-TYPE-MAP>
+              <APPLICATION-DATA-TYPE-REF DEST="APPLICATION-PRIMITIVE-DATA-TYPE">/ApplicationDataTypes/Type_float</APPLICATION-DATA-TYPE-REF>
+              <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/ImplementationDataTypes/Type_float</IMPLEMENTATION-DATA-TYPE-REF>
+            </DATA-TYPE-MAP>
+            <DATA-TYPE-MAP>
+              <APPLICATION-DATA-TYPE-REF DEST="APPLICATION-PRIMITIVE-DATA-TYPE">/ApplicationDataTypes/Type_boolean</APPLICATION-DATA-TYPE-REF>
+              <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/ImplementationDataTypes/Type_boolean</IMPLEMENTATION-DATA-TYPE-REF>
+            </DATA-TYPE-MAP>
+          </DATA-TYPE-MAPS>
+        </DATA-TYPE-MAPPING-SET>
+      </ELEMENTS>
+    </AR-PACKAGE>
+    <AR-PACKAGE>
+      <SHORT-NAME>ImplementationDataTypes</SHORT-NAME>
+      <ELEMENTS>
+        <IMPLEMENTATION-DATA-TYPE>
+          <SHORT-NAME>Type_ArrayU8_1024</SHORT-NAME>
+          <CATEGORY>ARRAY</CATEGORY>
+          <SUB-ELEMENTS>
+            <IMPLEMENTATION-DATA-TYPE-ELEMENT>
+              <SHORT-NAME>Element</SHORT-NAME>
+              <CATEGORY>TYPE_REFERENCE</CATEGORY>
+              <ARRAY-SIZE>1024</ARRAY-SIZE>
+              <ARRAY-SIZE-SEMANTICS>FIXED-SIZE</ARRAY-SIZE-SEMANTICS>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/ImplementationDataTypes/Type_U8</IMPLEMENTATION-DATA-TYPE-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+          </SUB-ELEMENTS>
+        </IMPLEMENTATION-DATA-TYPE>
+        <IMPLEMENTATION-DATA-TYPE>
+          <SHORT-NAME>Type_U8</SHORT-NAME>
+          <CATEGORY>TYPE_REFERENCE</CATEGORY>
+          <SW-DATA-DEF-PROPS>
+            <SW-DATA-DEF-PROPS-VARIANTS>
+              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+              </SW-DATA-DEF-PROPS-CONDITIONAL>
+            </SW-DATA-DEF-PROPS-VARIANTS>
+          </SW-DATA-DEF-PROPS>
+        </IMPLEMENTATION-DATA-TYPE>
+        <IMPLEMENTATION-DATA-TYPE>
+          <SHORT-NAME>Type_U16</SHORT-NAME>
+          <CATEGORY>TYPE_REFERENCE</CATEGORY>
+          <SW-DATA-DEF-PROPS>
+            <SW-DATA-DEF-PROPS-VARIANTS>
+              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint16</IMPLEMENTATION-DATA-TYPE-REF>
+              </SW-DATA-DEF-PROPS-CONDITIONAL>
+            </SW-DATA-DEF-PROPS-VARIANTS>
+          </SW-DATA-DEF-PROPS>
+        </IMPLEMENTATION-DATA-TYPE>
+        <IMPLEMENTATION-DATA-TYPE>
+          <SHORT-NAME>Type_Struct_U8U16U32</SHORT-NAME>
+          <CATEGORY>STRUCTURE</CATEGORY>
+          <SUB-ELEMENTS>
+            <IMPLEMENTATION-DATA-TYPE-ELEMENT>
+              <SHORT-NAME>U8</SHORT-NAME>
+              <CATEGORY>TYPE_REFERENCE</CATEGORY>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_PlatformTypes/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+            <IMPLEMENTATION-DATA-TYPE-ELEMENT>
+              <SHORT-NAME>U16</SHORT-NAME>
+              <CATEGORY>TYPE_REFERENCE</CATEGORY>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_PlatformTypes/ImplementationDataTypes/uint16</IMPLEMENTATION-DATA-TYPE-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+            <IMPLEMENTATION-DATA-TYPE-ELEMENT>
+              <SHORT-NAME>U32</SHORT-NAME>
+              <CATEGORY>TYPE_REFERENCE</CATEGORY>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_PlatformTypes/ImplementationDataTypes/uint32</IMPLEMENTATION-DATA-TYPE-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+          </SUB-ELEMENTS>
+        </IMPLEMENTATION-DATA-TYPE>
+        <IMPLEMENTATION-DATA-TYPE>
+          <SHORT-NAME>Type_U32</SHORT-NAME>
+          <CATEGORY>TYPE_REFERENCE</CATEGORY>
+          <SW-DATA-DEF-PROPS>
+            <SW-DATA-DEF-PROPS-VARIANTS>
+              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint32</IMPLEMENTATION-DATA-TYPE-REF>
+              </SW-DATA-DEF-PROPS-CONDITIONAL>
+            </SW-DATA-DEF-PROPS-VARIANTS>
+          </SW-DATA-DEF-PROPS>
+        </IMPLEMENTATION-DATA-TYPE>
+        <IMPLEMENTATION-DATA-TYPE>
+          <SHORT-NAME>Type_ArrayU32_96</SHORT-NAME>
+          <CATEGORY>ARRAY</CATEGORY>
+          <SUB-ELEMENTS>
+            <IMPLEMENTATION-DATA-TYPE-ELEMENT>
+              <SHORT-NAME>Element</SHORT-NAME>
+              <CATEGORY>TYPE_REFERENCE</CATEGORY>
+              <ARRAY-SIZE>96</ARRAY-SIZE>
+              <ARRAY-SIZE-SEMANTICS>FIXED-SIZE</ARRAY-SIZE-SEMANTICS>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_PlatformTypes/ImplementationDataTypes/uint32</IMPLEMENTATION-DATA-TYPE-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+          </SUB-ELEMENTS>
+        </IMPLEMENTATION-DATA-TYPE>
+        <IMPLEMENTATION-DATA-TYPE>
+          <SHORT-NAME>Type_float</SHORT-NAME>
+          <CATEGORY>TYPE_REFERENCE</CATEGORY>
+          <SW-DATA-DEF-PROPS>
+            <SW-DATA-DEF-PROPS-VARIANTS>
+              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/float32</IMPLEMENTATION-DATA-TYPE-REF>
+              </SW-DATA-DEF-PROPS-CONDITIONAL>
+            </SW-DATA-DEF-PROPS-VARIANTS>
+          </SW-DATA-DEF-PROPS>
+        </IMPLEMENTATION-DATA-TYPE>
+        <IMPLEMENTATION-DATA-TYPE>
+          <SHORT-NAME>Type_boolean</SHORT-NAME>
+          <CATEGORY>TYPE_REFERENCE</CATEGORY>
+          <SW-DATA-DEF-PROPS>
+            <SW-DATA-DEF-PROPS-VARIANTS>
+              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/boolean</IMPLEMENTATION-DATA-TYPE-REF>
+              </SW-DATA-DEF-PROPS-CONDITIONAL>
+            </SW-DATA-DEF-PROPS-VARIANTS>
+          </SW-DATA-DEF-PROPS>
+        </IMPLEMENTATION-DATA-TYPE>
+        <IMPLEMENTATION-DATA-TYPE>
+          <SHORT-NAME>Type_ArrayBoolean_96</SHORT-NAME>
+          <CATEGORY>ARRAY</CATEGORY>
+          <SUB-ELEMENTS>
+            <IMPLEMENTATION-DATA-TYPE-ELEMENT>
+              <SHORT-NAME>Element</SHORT-NAME>
+              <CATEGORY>TYPE_REFERENCE</CATEGORY>
+              <ARRAY-SIZE>96</ARRAY-SIZE>
+              <ARRAY-SIZE-SEMANTICS>FIXED-SIZE</ARRAY-SIZE-SEMANTICS>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_PlatformTypes/ImplementationDataTypes/boolean</IMPLEMENTATION-DATA-TYPE-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+          </SUB-ELEMENTS>
+        </IMPLEMENTATION-DATA-TYPE>
+      </ELEMENTS>
+    </AR-PACKAGE>
+    <AR-PACKAGE>
+      <SHORT-NAME>PortInterfaces</SHORT-NAME>
+      <ELEMENTS>
+        <NV-DATA-INTERFACE>
+          <SHORT-NAME>SRI_CyclicNvBlock_ArrayU8_1024</SHORT-NAME>
+          <IS-SERVICE>false</IS-SERVICE>
+          <NV-DATAS>
+            <VARIABLE-DATA-PROTOTYPE>
+              <SHORT-NAME>CyclicNvBlock</SHORT-NAME>
+              <TYPE-TREF DEST="APPLICATION-ARRAY-DATA-TYPE">/ApplicationDataTypes/Type_ArrayU8_1024</TYPE-TREF>
+            </VARIABLE-DATA-PROTOTYPE>
+          </NV-DATAS>
+        </NV-DATA-INTERFACE>
+        <NV-DATA-INTERFACE>
+          <SHORT-NAME>SRI_ImmediateNvBlock_ArrayU32_96</SHORT-NAME>
+          <IS-SERVICE>false</IS-SERVICE>
+          <NV-DATAS>
+            <VARIABLE-DATA-PROTOTYPE>
+              <SHORT-NAME>ImmediateNvBlock</SHORT-NAME>
+              <TYPE-TREF DEST="APPLICATION-ARRAY-DATA-TYPE">/ApplicationDataTypes/Type_ArrayU32_96</TYPE-TREF>
+            </VARIABLE-DATA-PROTOTYPE>
+          </NV-DATAS>
+        </NV-DATA-INTERFACE>
+        <NV-DATA-INTERFACE>
+          <SHORT-NAME>SRI_ShutDownNvBlock_ArrayBoolean_96</SHORT-NAME>
+          <IS-SERVICE>false</IS-SERVICE>
+          <NV-DATAS>
+            <VARIABLE-DATA-PROTOTYPE>
+              <SHORT-NAME>ShutDownNvBlock</SHORT-NAME>
+              <TYPE-TREF DEST="APPLICATION-ARRAY-DATA-TYPE">/ApplicationDataTypes/Type_ArrayBoolean_96</TYPE-TREF>
+            </VARIABLE-DATA-PROTOTYPE>
+          </NV-DATAS>
+        </NV-DATA-INTERFACE>
+      </ELEMENTS>
+    </AR-PACKAGE>
+    <AR-PACKAGE>
+      <SHORT-NAME>NvM_Proxy_Interfaces</SHORT-NAME>
+      <ELEMENTS>
+        <CLIENT-SERVER-INTERFACE>
+          <SHORT-NAME>CSI_NvBlock_SetRamBlockStatus</SHORT-NAME>
+          <IS-SERVICE>false</IS-SERVICE>
+          <OPERATIONS>
+            <CLIENT-SERVER-OPERATION>
+              <SHORT-NAME>NvBlock_SetRamBlockStatus</SHORT-NAME>
+            </CLIENT-SERVER-OPERATION>
+          </OPERATIONS>
+        </CLIENT-SERVER-INTERFACE>
+      </ELEMENTS>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>
+

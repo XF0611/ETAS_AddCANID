@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-2-2.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="1e6b28d6-2719-4090-99fa-3cbac2488a08">
+      <SHORT-NAME>ETAS_BIP</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE UUID="c9512d0c-fc68-4801-9d84-b587b66bc655">
+          <SHORT-NAME>BswModuleImplementation</SHORT-NAME>
+          <ELEMENTS>
+            <BSW-IMPLEMENTATION S="" UUID="bb0388a8-4c15-427c-a77b-6edf790cb8ad">
+              <SHORT-NAME>Mcu_Implementation</SHORT-NAME>
+              <CODE-DESCRIPTORS>
+                <CODE UUID="361606d2-2a44-45d3-83e9-b97f6bda54e9">
+                  <SHORT-NAME>Code_Files</SHORT-NAME>
+                  <ARTIFACT-DESCRIPTORS>
+                    <AUTOSAR-ENGINEERING-OBJECT>
+                      <SHORT-LABEL>Autosar::include::Mcu.h</SHORT-LABEL>
+                      <CATEGORY>SWHDR</CATEGORY>
+                    </AUTOSAR-ENGINEERING-OBJECT>
+                    <AUTOSAR-ENGINEERING-OBJECT>
+                      <SHORT-LABEL>Autosar::include::Mcu_Debug.h</SHORT-LABEL>
+                      <CATEGORY>SWHDR</CATEGORY>
+                    </AUTOSAR-ENGINEERING-OBJECT>
+                    <AUTOSAR-ENGINEERING-OBJECT>
+                      <SHORT-LABEL>Autosar::include::Mcu_Irq.h</SHORT-LABEL>
+                      <CATEGORY>SWHDR</CATEGORY>
+                    </AUTOSAR-ENGINEERING-OBJECT>
+                    <AUTOSAR-ENGINEERING-OBJECT>
+                      <SHORT-LABEL>Autosar::include::Mcu_PBTypes.h</SHORT-LABEL>
+                      <CATEGORY>SWHDR</CATEGORY>
+                    </AUTOSAR-ENGINEERING-OBJECT>
+                    <AUTOSAR-ENGINEERING-OBJECT>
+                      <SHORT-LABEL>Autosar::include::Mcu_Ram.h</SHORT-LABEL>
+                      <CATEGORY>SWHDR</CATEGORY>
+                    </AUTOSAR-ENGINEERING-OBJECT>
+                    <AUTOSAR-ENGINEERING-OBJECT>
+                      <SHORT-LABEL>Autosar::include::Mcu_Type.h</SHORT-LABEL>
+                      <CATEGORY>SWHDR</CATEGORY>
+                    </AUTOSAR-ENGINEERING-OBJECT>
+                    <AUTOSAR-ENGINEERING-OBJECT>
+                      <SHORT-LABEL>Autosar::include::Mcu_Version.h</SHORT-LABEL>
+                      <CATEGORY>SWHDR</CATEGORY>
+                    </AUTOSAR-ENGINEERING-OBJECT>
+                    <AUTOSAR-ENGINEERING-OBJECT>
+                      <SHORT-LABEL>Autosar::src::Mcu.c</SHORT-LABEL>
+                      <CATEGORY>SWSRC</CATEGORY>
+                    </AUTOSAR-ENGINEERING-OBJECT>
+                    <AUTOSAR-ENGINEERING-OBJECT>
+                      <SHORT-LABEL>Autosar::src::Mcu_Ram.c</SHORT-LABEL>
+                      <CATEGORY>SWSRC</CATEGORY>
+                    </AUTOSAR-ENGINEERING-OBJECT>
+                    <AUTOSAR-ENGINEERING-OBJECT>
+                      <SHORT-LABEL>Autosar::src::Mcu_Irq.c</SHORT-LABEL>
+                      <CATEGORY>SWSRC</CATEGORY>
+                    </AUTOSAR-ENGINEERING-OBJECT>
+                    <AUTOSAR-ENGINEERING-OBJECT>
+                      <SHORT-LABEL>Autosar::src::Mcu_Version.c</SHORT-LABEL>
+                      <CATEGORY>SWSRC</CATEGORY>
+                    </AUTOSAR-ENGINEERING-OBJECT>
+                  </ARTIFACT-DESCRIPTORS>
+                </CODE>
+              </CODE-DESCRIPTORS>
+              <COMPILERS>
+                <COMPILER UUID="d609d47d-7453-450c-bb53-7ded93759944">
+                  <SHORT-NAME>ARM_Assembler</SHORT-NAME>
+                  <NAME>ARM Assembler</NAME>
+                  <OPTIONS>-g --cpu=cortex-r7 --fpu=VFPv3_D16 --no_unaligned_access</OPTIONS>
+                  <VENDOR>ARM</VENDOR>
+                  <VERSION>ARM compiler version 6.6.3</VERSION>
+                </COMPILER>
+                <COMPILER UUID="b6909263-ce6b-4081-8e83-b1a4f75a0c09">
+                  <SHORT-NAME>ARM_Compiler</SHORT-NAME>
+                  <NAME>ARM Compiler</NAME>
+                  <OPTIONS>-c -O3 --target=arm-arm-none-eabi -mcpu=cortex-r7 -mfpu=vfpv3-d16 -g -gdwarf-2 -fshort-enums -mfloat-abi=hard -nostdlib -nostdlibinc -mno-unaligned-access -MD -MP -Wundef -std=c99 -pedantic-errors -Werror -Wall -Wextra -Wconversion -Wunused -Wuninitialized -DNDEBUG</OPTIONS>
+                  <VENDOR>ARM</VENDOR>
+                  <VERSION>ARM compiler version 6.6.3</VERSION>
+                </COMPILER>
+              </COMPILERS>
+              <LINKERS>
+                <LINKER UUID="6676e5f1-db32-43b3-b56f-412850de941a">
+                  <SHORT-NAME>ARM_Linker</SHORT-NAME>
+                  <NAME>ARM Linker</NAME>
+                  <OPTIONS>--cpu=cortex-r7 --datacompressor off --entry=Start --callgraph --map --info=sizes --info=totals --info=unused --info=compression --info=stack --info=inline --diag_error=warning</OPTIONS>
+                  <VENDOR>ARM</VENDOR>
+                  <VERSION>ARM compiler version 6.6.3</VERSION>
+                </LINKER>
+              </LINKERS>
+              <PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+              <SW-VERSION>1.2.7</SW-VERSION>
+              <USED-CODE-GENERATOR />
+              <VENDOR-ID>59</VENDOR-ID>
+              <AR-RELEASE-VERSION>4.2.2</AR-RELEASE-VERSION>
+              <VENDOR-API-INFIX>ETAS</VENDOR-API-INFIX>
+              <VENDOR-SPECIFIC-MODULE-DEF-REFS>
+                <VENDOR-SPECIFIC-MODULE-DEF-REF DEST="ECUC-MODULE-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu</VENDOR-SPECIFIC-MODULE-DEF-REF>
+              </VENDOR-SPECIFIC-MODULE-DEF-REFS>
+            </BSW-IMPLEMENTATION>
+          </ELEMENTS>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

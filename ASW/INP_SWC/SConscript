@@ -1,0 +1,52 @@
+Import('*')
+import re
+import sys, os, glob, fnmatch
+import prebuild
+sys.path.append(Dir('#').abspath + "\\site_scons\\site_tools")
+
+cwd = re.sub( r'output\\objs\\','''''' , Dir(".").abspath)
+objects     = []
+sources     = []
+assemblys   = []
+includes    = []
+
+lst = os.listdir(cwd)
+
+for d in lst:
+    path = os.path.join(cwd, d)
+    if (os.path.isfile(os.path.join(path, 'SConscript'))):
+        objects = objects + SConscript(os.path.join(d, 'SConscript'), exports='env')
+    if (glob.glob(os.path.join(path, '*.h'))):
+        includes.append(str(d))
+    if (glob.glob(os.path.join(path, '*.c')) or glob.glob(os.path.join(path, '*.S'))):
+        for f in os.listdir(os.path.join(cwd,str(d))):
+            src = os.path.join(str(d), str(f))
+            if f.endswith('.c'):
+                sources.append(str(src))
+            elif f.endswith('.S'):
+                assemblys.append(str(src))
+# ADD INCLUDE DIRECTORIES
+includes = list( set(includes) )
+
+if includes != '':
+    for include in includes:
+        env.Append(CPPPATH=[Dir(include).abspath])
+        string = re.sub( r'output\\objs\\','''''' ,Dir(include).abspath)
+        prebuild.createSymlinkHeader( os.path.join(Dir('#').abspath,env['CEN_HEADER_DIR']),string )
+
+# COMPILE SOURCE FILES
+if sources != '':
+    for source in sources:
+        m = re.match(r'(.+\/|.+\\)(.*)(\.c$)', source)
+        target = m.group(2) + ".o"
+        objects += env.Object(target, source)
+
+if assemblys != '':
+    for assembly in assemblys:
+        m = re.match(r'(.+\/|.+\\)(.*)(.S$)', assembly)
+        target = m.group(2) + ".o"
+        objects += env.Object_s(target, assembly)
+
+
+# RETURN
+Return('objects')

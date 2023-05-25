@@ -1,0 +1,210 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>CanTp Configuration Report</title>
+<style type="text/css">
+#td_top {
+  border-top:1px solid black;
+}
+#td_bottom {
+  border-bottom:1px solid black;
+}
+#td_topbottom {
+  border-top:1px solid black;
+  border-bottom:1px solid black;
+}
+#th {
+  border-bottom:1px solid black;
+}
+a:link{
+	text-decoration:none;
+}
+</style>
+</head>
+<body>
+<!--<pre>
+<span style="font-family:Courier New,Courier">-->
+<H1><font color='#141c83'>CanTp Configuration Report</H1>
+CanTp software verion: AR4.2.2.9.0.0
+<hr>
+<hr>
+<h2><font color='#141c83'><b>1. Build Environment</b></font></h2>
+<table border="1" cellpadding="5" width="800" bgcolor="#e3e8e8">
+  <tr bgcolor="#141c83">
+    <th align="left"><font color='#ffffff'>Build Environment Item</th>
+    <th width="100" align="left"><font color='#ffffff'>Remark</th>
+  </tr>
+  <tr>
+    <td>Is Configuration validated using CanTp_Validate Action?</td>
+    <td>
+    Yes</td>
+  </tr>
+  <tr>
+    <td>Supported Config Variants</td>
+    <td>[VARIANT-POST-BUILD, VARIANT-PRE-COMPILE]</td>
+  </tr>
+  <tr>
+    <td>Code generated for Config Variant</td>
+    <td>
+    VARIANT-PRE-COMPILE</td>
+  </tr>
+  <tr>
+    <td>Predefined Variants</td>
+    <td>
+    [__KW_COMMON]</td>
+  </tr>
+  <tr>
+    <td>Code Generation done using Build Option<br>[Available options: PBL, PBS, PC]</td>
+    <td>
+    [PC]</td>
+  </tr>
+  <tr>
+    <td>Is Rte enabled?</td>
+    <td>
+    Yes</td>
+  </tr>
+</table>
+<hr>
+
+<h2><font color='#141c83'><b>2. General Configuration</b></font></h2>
+<table border="1" cellpadding="5" width="600" bgcolor="#e3e8e8">  
+  <tr bgcolor="#141c83">
+    <th align="left"><font color='#ffffff'>Feature</th><th width="200" align="left"><font color='#ffffff'>Remark</th>
+  </tr>
+  <tr>
+    <td>Is Development Error Detect enabled?</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td>Is Change Parameter Api enabled?</td>
+    <td>No</td>
+  </tr>
+    <tr>
+    <td>Is Flexible Data Rate support enabled?</td>
+    <td>Yes</td>
+    </tr>
+  <tr>
+    <td>Is Fd Support Callback enabled?</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>Is BurstMode enabled?</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>Is Dynamic Flow Control Attribute possible?</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>Based on which timer is the TimeOut calculation done?</td>
+    <td>CanTp_MainFunction Period</td>
+  </tr>
+  <tr>
+    <td>Is Sharing of NPdu for FC in Standard Addressing enabled?</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>Is CanTpLite support enabled?</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>Can FlowControl be disabled for a connection?</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>Is Strict BS CR time out check enabled?</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>Is Strict Dlc check enabled?</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>Is ReadParameter Api enabled?</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>Is Version Info Api enabled?</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td>Is TriggerTransmit Api enabled?</td>
+    <td>No</td>
+  </tr>
+</table>
+<hr>
+
+<h2><font color='#141c83'><b>3. Channel Settings</b></font></h2>
+Configuration Channel To RAM Channel Mapping:
+
+<table border="1" cellpadding="5" bgcolor="#e3e8e8">
+  <tr bgcolor="#141c83" align="left">
+    <th><font color='#ffffff'>Channel</th>
+    <th><font color='#ffffff'>Rx RAM Channel</th>
+    <th><font color='#ffffff'>Tx RAM Channel</th>
+    <th><font color='#ffffff'>FullDuplex:F<br>HalfDuplex:H</th>
+  </tr>
+<tr>
+    <td>CanTpChannel</td> 
+    <td>0</td>
+    
+    <td>1</td>
+    <td> F</td>
+</tr>
+</table>
+Total RAM Channels required: [2]<br>
+
+Maximum possible RAM Channels: 255<br>
+Maximum possible RxConnections or TxConnections: 255<br>
+<br>
+<hr>
+
+
+<h2><font color='#141c83'><b>4. CanTp Pdu View</b></font></h2>
+
+
+RxNPdu usage in TxNSdu and RxNSdu:
+<table border="1" cellpadding="5" bgcolor="#e3e8e8">
+  <tr bgcolor="#141c83" align="left">
+    <th><font color='#ffffff'>RxNPdu</th>
+    <th><font color='#ffffff'>TxNSdu</th>
+    <th><font color='#ffffff'>RxNSdu</th>
+  </tr>
+
+
+<tr>
+    <td>NPdu_UdsRxFnc_CanIf2CanTp_Can_Network_ETAS_Channel_CAN</td>
+    <td></td>
+    <td>RX_UdsRxFnc</td>
+</tr>
+
+<tr>
+    <td>NPdu_UdsRxPhy_CanIf2CanTp_Can_Network_ETAS_Channel_CAN</td>
+    <td>TX_UdsTxPhy</td>
+    <td>RX_UdsRxPhy</td>
+</tr>
+
+</table>
+<br>
+<br>
+TxNPdu usage in RxNSdu and TxNSdu:
+<table border="1" cellpadding="5" bgcolor="#e3e8e8">
+  <tr bgcolor="#141c83" align="left">
+    <th><font color='#ffffff'>TxNPdu</th>
+    <th><font color='#ffffff'>RxNSdu</th>
+    <th><font color='#ffffff'>TxNSdu</th>
+  </tr>
+  
+
+<tr>
+    <td>NPdu_UdsTxPhy_CanTp2CanIf_Can_Network_ETAS_Channel_CAN</td>
+    <td>RX_UdsRxPhy</td>
+    <td>TX_UdsTxPhy</td>
+</tr>
+
+</table>
+

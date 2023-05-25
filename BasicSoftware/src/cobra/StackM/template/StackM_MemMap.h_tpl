@@ -1,0 +1,69 @@
+/*
+**********************************************************************************************************************
+*
+* COPYRIGHT RESERVED, ETAS GmbH, 2021. All rights reserved.
+* The reproduction, distribution and utilization of this document as well as the communication of its contents to
+* others without explicit authorization is prohibited. Offenders will be held liable for the payment of damages.
+* All rights reserved in the event of the grant of a patent, utility model or design.
+*
+**********************************************************************************************************************
+ ************************************************************************************************
+ * Component : StackM_MemMap.h
+ * Date      : May 20, 2021
+ * Version   : 1.0
+ * Description  : This module implements Stack monitor functions.
+ *                Note: This file contains sample implementation only. It is not part of the
+ *                      production deliverables. 
+ ***********************************************************************************************
+*/
+
+/* MISRA RULE 19.15 VIOLATION: MemMap file must be included multiple times */
+#define STACKM_MEMMAP_ERROR 
+
+
+#if defined StackM_START_SEC_VAR_CLEARED
+	#define BSW_START_SEC_VAR_CLEARED_UNSPECIFIED
+	#include "Bsw_MemMap.h"
+    #undef StackM_START_SEC_VAR_CLEARED
+    #undef STACKM_MEMMAP_ERROR
+#elif defined StackM_STOP_SEC_VAR_CLEARED
+	#define BSW_STOP_SEC_VAR_CLEARED_UNSPECIFIED
+	#include "Bsw_MemMap.h"
+    #undef StackM_STOP_SEC_VAR_CLEARED
+    #undef STACKM_MEMMAP_ERROR
+
+
+#elif defined StackM_START_SEC_CONST
+	#define BSW_START_SEC_DEFAULT_CONST_UNSPECIFIED
+	#include "Bsw_MemMap.h"
+    #undef StackM_START_SEC_CONST
+    #undef STACKM_MEMMAP_ERROR
+#elif defined StackM_STOP_SEC_CONST
+	#define BSW_STOP_SEC_DEFAULT_CONST_UNSPECIFIED
+	#include "Bsw_MemMap.h"
+    #undef StackM_STOP_SEC_CONST
+    #undef STACKM_MEMMAP_ERROR
+
+
+#elif defined StackM_START_SEC_CODE
+	#define BSW_START_SEC_DEFAULT_CODE
+	#include "Bsw_MemMap.h"
+    #undef StackM_START_SEC_CODE
+    #undef STACKM_MEMMAP_ERROR
+#elif defined StackM_STOP_SEC_CODE
+	#define BSW_STOP_SEC_DEFAULT_CODE
+	#include "Bsw_MemMap.h"
+    #undef StackM_STOP_SEC_CODE
+    #undef STACKM_MEMMAP_ERROR
+
+
+#elif defined STACKM_MEMMAP_ERROR 
+  #error "StackM: unknown section in memmap include!"
+#endif 
+
+
+/*
+ ***********************************************************************************************************************
+ * End of header file
+ ***********************************************************************************************************************
+*/

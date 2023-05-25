@@ -1,0 +1,39 @@
+============================================================================
+EcuM - Ecu State Manager - Warning Report
+============================================================================
+
+-> All the Boolean Parameters if not configured is assumed to be false.
+   If the parameter has to have the value "true", then that particular
+   parameter must be explictly configured as true.
+
+-> Communication Channel if configured will be ignored for all the Basic
+   WakeupSource and it will be assumed as 255.
+
+
+
+
+	
+-> For the Wakeup Source "ECUM_WKSOURCE_POWER" EcuMComMChannel parameter
+   is not configured. So, It is assumed as 255.
+-> For the Wakeup Source "ECUM_WKSOURCE_RESET" EcuMComMChannel parameter
+   is not configured. So, It is assumed as 255.
+-> For the Wakeup Source "ECUM_WKSOURCE_INTERNAL_RESET" EcuMComMChannel parameter
+   is not configured. So, It is assumed as 255.
+-> For the Wakeup Source "ECUM_WKSOURCE_INTERNAL_WDG" EcuMComMChannel parameter
+   is not configured. So, It is assumed as 255.
+-> For the Wakeup Source "ECUM_WKSOURCE_EXTERNAL_WDG" EcuMComMChannel parameter
+   is not configured. So, It is assumed as 255.
+-> For the Wakeup Source "ECUM_WKSOURCE_INTERNAL_GPT" EcuMComMChannel parameter
+   is not configured. So, It is assumed as 255.
+	
+
+-> EcuMValidationTimeout value for the Following wakeupsources are rounded off to the nearest integer as a count of
+   EcuMMainFunctionPeriod []
+
+
+
+
+   
+ 
+ 
+

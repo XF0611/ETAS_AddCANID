@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-0-2.xsd">
+  <ADMIN-DATA>
+    <USED-LANGUAGES>
+      <L-10 L="EN" xml:space="preserve">EN</L-10>
+    </USED-LANGUAGES>
+  </ADMIN-DATA>
+  <AR-PACKAGES>
+    <AR-PACKAGE>
+      <SHORT-NAME>ETAS_Options</SHORT-NAME>
+      <ELEMENTS>
+        <ECUC-MODULE-DEF>
+          <SHORT-NAME>ETAS</SHORT-NAME>
+          <LONG-NAME>
+            <L-4 L="EN">ETAS</L-4>
+          </LONG-NAME>
+          <DESC>
+            <L-2 L="EN">ETAS</L-2>
+          </DESC>
+          <CATEGORY>VENDOR_SPECIFIC_MODULE_DEFINITION</CATEGORY>
+          <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+          <SUPPORTED-CONFIG-VARIANTS>
+            <SUPPORTED-CONFIG-VARIANT>VARIANT-PRE-COMPILE</SUPPORTED-CONFIG-VARIANT>
+          </SUPPORTED-CONFIG-VARIANTS>
+          <CONTAINERS>
+            <ECUC-PARAM-CONF-CONTAINER-DEF>
+              <SHORT-NAME>Options</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">Options</L-4>
+              </LONG-NAME>
+              <DESC>
+                 <L-2 L="EN">Options</L-2>
+              </DESC>
+              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+              <POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+              <MULTIPLE-CONFIGURATION-CONTAINER>false</MULTIPLE-CONFIGURATION-CONTAINER>
+              <PARAMETERS>
+              <ECUC-STRING-PARAM-DEF>
+                <SHORT-NAME>CanIfFormat</SHORT-NAME>
+                <DESC>
+                  <L-2 L="EN">
+                    <P>The naming format used for compatibility with the chosen MCAL generator. Available shortcuts are:</P>
+                    <TABLE>
+                      <TGROUP COLS="2">
+                        <THEAD>
+                          <ROW>
+                            <ENTRY>
+                              <P>Wildcard</P>
+                            </ENTRY>
+                            <ENTRY>
+                              <P>Meaning</P>
+                            </ENTRY>
+                          </ROW>
+                        </THEAD>
+                        <TBODY>
+                          <ROW>
+                            <ENTRY>
+                              <P>%MailboxId</P>
+                            </ENTRY>
+                            <ENTRY>
+                              <P>The current mailbox identifier to be created for the CanIf</P>
+                            </ENTRY>
+                          </ROW>
+                        </TBODY>
+                      </TGROUP>
+                    </TABLE>
+                    <P>For instance (taking $MailboxId as an example CANNODE_0_Mailbox_0):</P>
+                    <TABLE>
+                       <TGROUP COLS="2">
+                        <THEAD>
+                          <ROW>
+                            <ENTRY>
+                              <P>CanIfFormat</P>
+                            </ENTRY>
+                            <ENTRY>
+                              <P>Output</P>
+                            </ENTRY>
+                          </ROW>
+                        </THEAD>
+                        <TBODY>
+                          <ROW>
+                            <ENTRY>
+                              <P>Can_CanHardwareObject_%MailboxId</P>
+                            </ENTRY>
+                            <ENTRY>
+                              <P>Can_CanHardwareObject_CANNODE_0_Mailbox_0</P>
+                            </ENTRY>
+                          </ROW>
+                          <ROW>
+                            <ENTRY>
+                              <P>%MailboxId_Can_CanHardwareObject</P>
+                            </ENTRY>
+                            <ENTRY>
+                              <P>CANNODE_0_Mailbox_0_Can_CanHardwareObject</P>
+                            </ENTRY>
+                          </ROW>
+                        </TBODY>
+                      </TGROUP>
+                     </TABLE>
+                     <P></P>
+                     <P>Default value (empty) = Can_CanHardwareObject_%MailboxId</P>
+                     <P><B>Note:</B> If not using default value, <B>%MailboxId</B> has to be defined on the expression. Otherwise, the same identifier will be created on the generated code.</P>
+                    </L-2>
+                  </DESC>
+                  <VALUE>Can_CanHardwareObject_%MailboxId</VALUE>
+                  <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                  <IMPLEMENTATION-CONFIG-CLASSES>
+                    <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                       <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                    </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                  </IMPLEMENTATION-CONFIG-CLASSES>
+                  <ORIGIN>ETAS</ORIGIN>
+                  <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                  <ECUC-STRING-PARAM-DEF-VARIANTS>
+                    <ECUC-STRING-PARAM-DEF-CONDITIONAL/>
+                  </ECUC-STRING-PARAM-DEF-VARIANTS>
+				  </ECUC-STRING-PARAM-DEF>
+				  <ECUC-ENUMERATION-PARAM-DEF>
+                  <SHORT-NAME>FlsEraseValue</SHORT-NAME>
+                  <DESC>
+                    <L-2 L="EN">The value set by the Fls when a call to erase occurs</L-2>
+                  </DESC>
+                  <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                  <LITERALS>
+                    <ECUC-ENUMERATION-LITERAL-DEF>
+                      <SHORT-NAME>0x00</SHORT-NAME>
+                    </ECUC-ENUMERATION-LITERAL-DEF>
+                    <ECUC-ENUMERATION-LITERAL-DEF>
+                      <SHORT-NAME>0xFF</SHORT-NAME>
+                    </ECUC-ENUMERATION-LITERAL-DEF>
+                  </LITERALS>
+                </ECUC-ENUMERATION-PARAM-DEF>
+              </PARAMETERS>
+            </ECUC-PARAM-CONF-CONTAINER-DEF>
+          </CONTAINERS>
+        </ECUC-MODULE-DEF>
+      </ELEMENTS>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>
+

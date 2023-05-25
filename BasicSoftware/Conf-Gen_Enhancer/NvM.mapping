@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="ASCII"?>
+<MappingMetaModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns="http://www.bosch.com/autosartool/m2m/model" transformationName="Conf-Gen Enhancer">
+  <mappingStructures name="NvM">
+    <order orderId="NvM_1" name="NvM">
+      <order orderId="NvM_2" name="NvMCommon"/>
+      <order orderId="NvM_3" name="NvMBlockDescriptor"/>
+    </order>
+  </mappingStructures>
+  <mappings mappingId="Mapping_NvM_1" mappingType="PRIMITIVE_ATTRIBUTE" defaultValue="true">
+    <targetItem identifier="NvMDevErrorDetect"/>
+    <orderDetails orderId="NvM_2" order="1"/>
+  </mappings>
+  <mappings mappingId="Mapping_NvM_2" mappingType="PRIMITIVE_ATTRIBUTE" defaultValue="255">
+    <targetItem identifier="NvMSizeStandardJobQueue"/>
+    <orderDetails orderId="NvM_2" order="2"/>
+  </mappings>
+  <mappings mappingId="Mapping_NvM_3" mappingType="PRIMITIVE_ATTRIBUTE" defaultValue="0.01">
+    <targetItem identifier="NvMMainFunctionPeriod"/>
+    <orderDetails orderId="NvM_2" order="3"/>
+  </mappings>
+  <mappings mappingId="Mapping_NvM_5" mappingType="PRIMITIVE_ATTRIBUTE" defaultValue="false" condition="ref($this.shortName).contains('NvBlock')">
+    <targetItem identifier="NvMRbGenRteServicePort"/>
+    <orderDetails orderId="NvM_3" order="1"/>
+  </mappings>
+  <mappings mappingId="Mapping_NvM_6" mappingType="PRIMITIVE_ATTRIBUTE" condition="ref($this.shortName).contains('NvBlock')">
+    <targetItem identifier="NvMSingleBlockCallback" expression="ref('Rte_NvMNotifyJobFinished_CPT_')+ref($this.shortName)"/>
+    <orderDetails orderId="NvM_3" order="2"/>
+  </mappings>
+  <mappings mappingId="Mapping_NvM_4" mappingType="PRIMITIVE_ATTRIBUTE" defaultValue="65535">
+    <targetItem identifier="NvMCrcNumOfBytes"/>
+    <orderDetails orderId="NvM_2" order="4"/>
+  </mappings>
+</MappingMetaModel>

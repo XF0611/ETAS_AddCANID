@@ -1,0 +1,1568 @@
+<?xml version='1.0'?>
+<datamodel version="7.0" 
+           xmlns="http://www.tresos.de/_projects/DataModel2/16/root.xsd" 
+           xmlns:a="http://www.tresos.de/_projects/DataModel2/16/attribute.xsd" 
+           xmlns:v="http://www.tresos.de/_projects/DataModel2/06/schema.xsd" 
+           xmlns:d="http://www.tresos.de/_projects/DataModel2/06/data.xsd">
+
+  <d:ctr type="AUTOSAR" factory="autosar" 
+         xmlns:ad="http://www.tresos.de/_projects/DataModel2/08/admindata.xsd" 
+         xmlns:cd="http://www.tresos.de/_projects/DataModel2/08/customdata.xsd" 
+         xmlns:f="http://www.tresos.de/_projects/DataModel2/14/formulaexpr.xsd" 
+         xmlns:icc="http://www.tresos.de/_projects/DataModel2/08/implconfigclass.xsd" 
+         xmlns:mt="http://www.tresos.de/_projects/DataModel2/11/multitest.xsd"  
+         xmlns:variant="http://www.tresos.de/_projects/DataModel2/11/variant.xsd">
+    <d:lst type="TOP-LEVEL-PACKAGES">
+      <d:ctr name="BaseBand" type="AR-PACKAGE">
+        <d:lst type="ELEMENTS">
+          <d:chc name="BaseBand" type="AR-ELEMENT" value="MODULE-CONFIGURATION">
+            <d:ctr type="MODULE-CONFIGURATION">
+              <a:a name="DEF" value="ASPath:/BaseBandPackage/BaseBand"/>
+              <d:var name="IMPLEMENTATION_CONFIG_VARIANT" type="ENUMERATION" 
+                     value="VariantPreCompile">
+                <a:a name="IMPORTER_INFO" value="@DEF"/>
+              </d:var>
+              <d:lst name="BaseBandConfigSet" type="MAP">
+                <d:ctr name="BaseBandConfigSet_0" type="IDENTIFIABLE">
+                  <d:ctr name="ADC_CONFIG_PARAMS" type="IDENTIFIABLE">
+                    <d:var name="dec_factor" type="INTEGER" value="1">
+                      <a:a name="IMPORTER_INFO" value="@DEF"/>
+                    </d:var>
+                    <d:var name="adc_sample_start" type="FLOAT" value="2.0">
+                      <a:a name="IMPORTER_INFO" value="@DEF"/>
+                    </d:var>
+                    <d:var name="adc_sample_end" type="FLOAT" value="27.6"/>
+                    <d:var name="adc_comp_en" type="BOOLEAN" value="false">
+                      <a:a name="IMPORTER_INFO" value="@DEF"/>
+                    </d:var>
+                  </d:ctr>
+                  <d:ctr name="FFT_CONFIG_PARAMS" type="IDENTIFIABLE">
+                    <d:var name="rng_win" type="STRING" value="hanning"/>
+                    <d:var name="vel_win" type="STRING" value="cheb">
+                      <a:a name="IMPORTER_INFO" value="@DEF"/>
+                    </d:var>
+                    <d:ctr name="rng_win_params" type="IDENTIFIABLE">
+                      <d:var name="rng_win_params0" type="FLOAT" value="80.0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="rng_win_params1" type="FLOAT" value="0.0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="rng_win_params2" type="FLOAT" value="0.0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                    </d:ctr>
+                    <d:ctr name="vel_win_params" type="IDENTIFIABLE">
+                      <d:var name="vel_win_params0" type="FLOAT" value="80.0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="vel_win_params1" type="FLOAT" value="0.0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="vel_win_params2" type="FLOAT" value="0.0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                    </d:ctr>
+                    <d:var name="rng_nfft" type="INTEGER" value="512">
+                      <a:a name="IMPORTER_INFO" value="@DEF"/>
+                    </d:var>
+                    <d:var name="vel_nfft" type="INTEGER" value="64"/>
+                    <d:var name="rng_fft_scalar" type="INTEGER" value="255">
+                      <a:a name="IMPORTER_INFO" value="@DEF"/>
+                    </d:var>
+                    <d:var name="vel_fft_scalar" type="INTEGER" value="31"/>
+                    <d:var name="fft_nve_bypass" type="BOOLEAN" value="false">
+                      <a:a name="IMPORTER_INFO" value="@DEF"/>
+                    </d:var>
+                    <d:var name="fft_nve_shift" type="INTEGER" value="0">
+                      <a:a name="IMPORTER_INFO" value="@DEF"/>
+                    </d:var>
+                    <d:var name="fft_nve_ch_mask" type="INTEGER" value="65535">
+                      <a:a name="IMPORTER_INFO" value="@DEF"/>
+                    </d:var>
+                    <d:var name="fft_nve_default_value" type="FLOAT" 
+                           value="1.0E-4">
+                      <a:a name="IMPORTER_INFO" value="@DEF"/>
+                    </d:var>
+                    <d:var name="fft_nve_without_interference" type="FLOAT" 
+                           value="1.0E-4">
+                      <a:a name="IMPORTER_INFO" value="@DEF"/>
+                    </d:var>
+                    <d:var name="fft_nve_threash" type="FLOAT" value="50.0">
+                      <a:a name="IMPORTER_INFO" value="@DEF"/>
+                    </d:var>
+                    <d:var name="fft_nve_rangeindex_start" type="INTEGER" 
+                           value="50">
+                      <a:a name="IMPORTER_INFO" value="@DEF"/>
+                    </d:var>
+                    <d:var name="fft_nve_rangeindex_end" type="INTEGER" 
+                           value="70">
+                      <a:a name="IMPORTER_INFO" value="@DEF"/>
+                    </d:var>
+                  </d:ctr>
+                  <d:ctr name="CFAR_CONFIG_PARAMS" type="IDENTIFIABLE">
+                    <d:var name="cfar_pk_en" type="INTEGER" value="255">
+                      <a:a name="IMPORTER_INFO" value="@DEF"/>
+                    </d:var>
+                    <d:ctr name="cfar_pk_win_size1" type="IDENTIFIABLE">
+                      <d:var name="cfar_pk_win_size1-0" type="INTEGER" value="3">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_pk_win_size1-1" type="INTEGER" value="3">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_pk_win_size1-2" type="INTEGER" value="3">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_pk_win_size1-3" type="INTEGER" value="3">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_pk_win_size1-4" type="INTEGER" value="3">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_pk_win_size1-5" type="INTEGER" value="3">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_pk_win_size1-6" type="INTEGER" value="3">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_pk_win_size1-7" type="INTEGER" value="3">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                    </d:ctr>
+                    <d:ctr name="cfar_pk_win_size2" type="IDENTIFIABLE">
+                      <d:var name="cfar_pk_win_size2-0" type="INTEGER" value="3">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_pk_win_size2-1" type="INTEGER" value="3">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_pk_win_size2-2" type="INTEGER" value="3">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_pk_win_size2-3" type="INTEGER" value="3">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_pk_win_size2-4" type="INTEGER" value="3">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_pk_win_size2-5" type="INTEGER" value="3">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_pk_win_size2-6" type="INTEGER" value="3">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_pk_win_size2-7" type="INTEGER" value="3">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                    </d:ctr>
+                    <d:ctr name="cfar_pk_threshold" type="IDENTIFIABLE">
+                      <d:var name="cfar_pk_threshold0" type="INTEGER" value="31">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_pk_threshold1" type="INTEGER" value="31">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_pk_threshold2" type="INTEGER" value="31">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_pk_threshold3" type="INTEGER" value="31">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_pk_threshold4" type="INTEGER" value="31">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_pk_threshold5" type="INTEGER" value="31">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_pk_threshold6" type="INTEGER" value="31">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_pk_threshold7" type="INTEGER" value="31">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                    </d:ctr>
+                    <d:var name="cfar_sliding_win" type="INTEGER" value="0">
+                      <a:a name="IMPORTER_INFO" value="@DEF"/>
+                    </d:var>
+                    <d:var name="cfar_recwin_decimate" type="INTEGER" value="0">
+                      <a:a name="IMPORTER_INFO" value="@DEF"/>
+                    </d:var>
+                    <d:ctr name="cfar_recwin_msk" type="IDENTIFIABLE">
+                      <d:var name="cfar_recwin_msk0" type="INTEGER" value="2047">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_recwin_msk1" type="INTEGER" value="1025">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_recwin_msk2" type="INTEGER" value="1025">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_recwin_msk3" type="INTEGER" value="1025">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_recwin_msk4" type="INTEGER" value="1025">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_recwin_msk5" type="INTEGER" value="1025">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_recwin_msk6" type="INTEGER" value="1025">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_recwin_msk7" type="INTEGER" value="1025">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_recwin_msk8" type="INTEGER" value="1025">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_recwin_msk9" type="INTEGER" value="1025">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_recwin_msk10" type="INTEGER" 
+                             value="2047">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_recwin_msk11" type="INTEGER" 
+                             value="2047">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_recwin_msk12" type="INTEGER" 
+                             value="2047">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_recwin_msk13" type="INTEGER" 
+                             value="2047">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_recwin_msk14" type="INTEGER" 
+                             value="2047">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_recwin_msk15" type="INTEGER" 
+                             value="2047">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_recwin_msk16" type="INTEGER" 
+                             value="2047">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_recwin_msk17" type="INTEGER" 
+                             value="2047">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_recwin_msk18" type="INTEGER" 
+                             value="2047">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_recwin_msk19" type="INTEGER" 
+                             value="2047">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_recwin_msk20" type="INTEGER" 
+                             value="2047">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_recwin_msk21" type="INTEGER" 
+                             value="2047">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_recwin_msk22" type="INTEGER" 
+                             value="1022">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_recwin_msk23" type="INTEGER" value="514">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_recwin_msk24" type="INTEGER" value="514">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_recwin_msk25" type="INTEGER" value="514">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_recwin_msk26" type="INTEGER" value="514">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_recwin_msk27" type="INTEGER" value="514">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_recwin_msk28" type="INTEGER" value="514">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_recwin_msk29" type="INTEGER" value="514">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_recwin_msk30" type="INTEGER" value="514">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_recwin_msk31" type="INTEGER" value="514">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_recwin_msk32" type="INTEGER" 
+                             value="1022">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_recwin_msk33" type="INTEGER" 
+                             value="1022">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_recwin_msk34" type="INTEGER" 
+                             value="1022">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_recwin_msk35" type="INTEGER" 
+                             value="1022">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_recwin_msk36" type="INTEGER" 
+                             value="1022">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_recwin_msk37" type="INTEGER" 
+                             value="1022">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_recwin_msk38" type="INTEGER" 
+                             value="1022">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_recwin_msk39" type="INTEGER" 
+                             value="1022">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_recwin_msk40" type="INTEGER" 
+                             value="1022">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_recwin_msk41" type="INTEGER" 
+                             value="1022">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_recwin_msk42" type="INTEGER" 
+                             value="1022">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_recwin_msk43" type="INTEGER" 
+                             value="1022">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_recwin_msk44" type="INTEGER" value="508">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_recwin_msk45" type="INTEGER" value="260">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_recwin_msk46" type="INTEGER" value="260">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_recwin_msk47" type="INTEGER" value="260">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_recwin_msk48" type="INTEGER" value="260">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_recwin_msk49" type="INTEGER" value="260">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_recwin_msk50" type="INTEGER" value="260">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_recwin_msk51" type="INTEGER" value="260">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_recwin_msk52" type="INTEGER" value="260">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_recwin_msk53" type="INTEGER" value="260">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_recwin_msk54" type="INTEGER" value="260">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_recwin_msk55" type="INTEGER" value="508">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_recwin_msk56" type="INTEGER" value="508">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_recwin_msk57" type="INTEGER" value="508">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_recwin_msk58" type="INTEGER" value="508">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_recwin_msk59" type="INTEGER" value="508">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_recwin_msk60" type="INTEGER" value="508">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_recwin_msk61" type="INTEGER" value="508">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_recwin_msk62" type="INTEGER" value="508">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_recwin_msk63" type="INTEGER" value="508">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_recwin_msk64" type="INTEGER" value="508">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_recwin_msk65" type="INTEGER" value="508">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_recwin_msk66" type="INTEGER" 
+                             value="2047">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_recwin_msk67" type="INTEGER" value="514">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_recwin_msk68" type="INTEGER" value="514">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_recwin_msk69" type="INTEGER" value="514">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_recwin_msk70" type="INTEGER" value="514">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_recwin_msk71" type="INTEGER" value="514">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_recwin_msk72" type="INTEGER" value="514">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_recwin_msk73" type="INTEGER" value="514">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_recwin_msk74" type="INTEGER" value="514">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_recwin_msk75" type="INTEGER" value="514">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_recwin_msk76" type="INTEGER" 
+                             value="2047">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_recwin_msk77" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_recwin_msk78" type="INTEGER" 
+                             value="1022">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_recwin_msk79" type="INTEGER" value="514">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_recwin_msk80" type="INTEGER" value="514">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_recwin_msk81" type="INTEGER" value="514">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_recwin_msk82" type="INTEGER" value="514">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_recwin_msk83" type="INTEGER" value="514">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_recwin_msk84" type="INTEGER" value="514">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_recwin_msk85" type="INTEGER" value="514">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_recwin_msk86" type="INTEGER" 
+                             value="1022">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_recwin_msk87" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                    </d:ctr>
+                    <d:var name="cfar_region_algo_type" type="INTEGER" value="0">
+                      <a:a name="IMPORTER_INFO" value="@DEF"/>
+                    </d:var>
+                    <d:ctr name="cfar_os_rnk_ratio" type="IDENTIFIABLE">
+                      <d:var name="cfar_os_rnk_ratio0" type="FLOAT" 
+                             value="0.4444">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_os_rnk_ratio1" type="FLOAT" 
+                             value="0.4444">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_os_rnk_ratio2" type="FLOAT" 
+                             value="0.4444">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_os_rnk_ratio3" type="FLOAT" 
+                             value="0.4444">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_os_rnk_ratio4" type="FLOAT" 
+                             value="0.4444">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_os_rnk_ratio5" type="FLOAT" 
+                             value="0.4444">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_os_rnk_ratio6" type="FLOAT" 
+                             value="0.4444">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_os_rnk_ratio7" type="FLOAT" 
+                             value="0.4444">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                    </d:ctr>
+                    <d:ctr name="cfar_os_rnk_sel" type="IDENTIFIABLE">
+                      <d:var name="cfar_os_rnk_sel0" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_os_rnk_sel1" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_os_rnk_sel2" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_os_rnk_sel3" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_os_rnk_sel4" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_os_rnk_sel5" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_os_rnk_sel6" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_os_rnk_sel7" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                    </d:ctr>
+                    <d:ctr name="cfar_os_tdec" type="IDENTIFIABLE">
+                      <d:var name="cfar_os_tdec0" type="INTEGER" value="4">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_os_tdec1" type="INTEGER" value="4">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_os_tdec2" type="INTEGER" value="4">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_os_tdec3" type="INTEGER" value="4">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_os_tdec4" type="INTEGER" value="4">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_os_tdec5" type="INTEGER" value="4">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_os_tdec6" type="INTEGER" value="4">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_os_tdec7" type="INTEGER" value="4">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                    </d:ctr>
+                    <d:ctr name="cfar_os_alpha" type="IDENTIFIABLE">
+                      <d:var name="cfar_os_alpha0" type="FLOAT" value="4.22">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_os_alpha1" type="FLOAT" value="4.22">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_os_alpha2" type="FLOAT" value="4.22">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_os_alpha3" type="FLOAT" value="4.22">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_os_alpha4" type="FLOAT" value="4.22">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_os_alpha5" type="FLOAT" value="4.22">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_os_alpha6" type="FLOAT" value="4.22">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_os_alpha7" type="FLOAT" value="4.22">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                    </d:ctr>
+                    <d:var name="cfar_combine_dirs" type="INTEGER" value="0">
+                      <a:a name="IMPORTER_INFO" value="@DEF"/>
+                    </d:var>
+                    <d:ctr name="cfar_combine_thetas" type="IDENTIFIABLE">
+                      <d:var name="cfar_combine_thetas0" type="FLOAT" 
+                             value="0.0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_combine_thetas1" type="FLOAT" 
+                             value="5.0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_combine_thetas2" type="FLOAT" 
+                             value="-5.0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_combine_thetas3" type="FLOAT" 
+                             value="10.0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_combine_thetas4" type="FLOAT" 
+                             value="-10.0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_combine_thetas5" type="FLOAT" 
+                             value="15.0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_combine_thetas6" type="FLOAT" 
+                             value="-15.0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_combine_thetas7" type="FLOAT" 
+                             value="20.0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_combine_thetas8" type="FLOAT" 
+                             value="-20.0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_combine_thetas9" type="FLOAT" 
+                             value="25.0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_combine_thetas10" type="FLOAT" 
+                             value="-25.0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_combine_thetas11" type="FLOAT" 
+                             value="40.0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_combine_thetas12" type="FLOAT" 
+                             value="-40.0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_combine_thetas13" type="FLOAT" 
+                             value="0.0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_combine_thetas14" type="FLOAT" 
+                             value="0.0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_combine_thetas15" type="FLOAT" 
+                             value="0.0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                    </d:ctr>
+                    <d:ctr name="cfar_combine_phis" type="IDENTIFIABLE">
+                      <d:var name="cfar_combine_phis0" type="FLOAT" value="0.0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_combine_phis1" type="FLOAT" value="0.0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_combine_phis2" type="FLOAT" value="0.0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_combine_phis3" type="FLOAT" value="0.0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_combine_phis4" type="FLOAT" value="0.0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_combine_phis5" type="FLOAT" value="0.0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_combine_phis6" type="FLOAT" value="0.0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_combine_phis7" type="FLOAT" value="0.0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_combine_phis8" type="FLOAT" value="0.0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_combine_phis9" type="FLOAT" value="0.0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_combine_phis10" type="FLOAT" value="0.0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_combine_phis11" type="FLOAT" value="0.0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_combine_phis12" type="FLOAT" value="0.0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_combine_phis13" type="FLOAT" value="0.0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_combine_phis14" type="FLOAT" value="0.0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_combine_phis15" type="FLOAT" value="0.0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                    </d:ctr>
+                    <d:var name="cfar_crswin_rng_size" type="INTEGER" value="5">
+                      <a:a name="IMPORTER_INFO" value="@DEF"/>
+                    </d:var>
+                    <d:var name="cfar_crswin_rng_skip" type="INTEGER" value="1">
+                      <a:a name="IMPORTER_INFO" value="@DEF"/>
+                    </d:var>
+                    <d:var name="cfar_crswin_vel_size" type="INTEGER" value="5">
+                      <a:a name="IMPORTER_INFO" value="@DEF"/>
+                    </d:var>
+                    <d:var name="cfar_crswin_vel_skip" type="INTEGER" value="1">
+                      <a:a name="IMPORTER_INFO" value="@DEF"/>
+                    </d:var>
+                    <d:var name="cfar_mimo_win" type="STRING" value="cheb">
+                      <a:a name="IMPORTER_INFO" value="@DEF"/>
+                    </d:var>
+                    <d:ctr name="cfar_mimo_win_params" type="IDENTIFIABLE">
+                      <d:var name="cfar_mimo_win_params0" type="FLOAT" 
+                             value="30.0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_mimo_win_params1" type="FLOAT" 
+                             value="0.0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_mimo_win_params2" type="FLOAT" 
+                             value="0.0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                    </d:ctr>
+                    <d:var name="cfar_noise_type" type="INTEGER" value="255">
+                      <a:a name="IMPORTER_INFO" value="@DEF"/>
+                    </d:var>
+                    <d:ctr name="cfar_nr_alpha" type="IDENTIFIABLE">
+                      <d:var name="cfar_nr_alpha0" type="FLOAT" value="10.0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_nr_alpha1" type="FLOAT" value="10.0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_nr_alpha2" type="FLOAT" value="10.0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_nr_alpha3" type="FLOAT" value="10.0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_nr_alpha4" type="FLOAT" value="10.0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_nr_alpha5" type="FLOAT" value="10.0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_nr_alpha6" type="FLOAT" value="10.0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_nr_alpha7" type="FLOAT" value="10.0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                    </d:ctr>
+                    <d:ctr name="cfar_nr_beta1" type="IDENTIFIABLE">
+                      <d:var name="cfar_nr_beta1-0" type="FLOAT" value="0.25">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_nr_beta1-1" type="FLOAT" value="0.25">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_nr_beta1-2" type="FLOAT" value="0.25">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_nr_beta1-3" type="FLOAT" value="0.25">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_nr_beta1-4" type="FLOAT" value="0.25">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_nr_beta1-5" type="FLOAT" value="0.25">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_nr_beta1-6" type="FLOAT" value="0.25">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_nr_beta1-7" type="FLOAT" value="0.25">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                    </d:ctr>
+                    <d:ctr name="cfar_nr_beta2" type="IDENTIFIABLE">
+                      <d:var name="cfar_nr_beta2-0" type="FLOAT" value="4.0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_nr_beta2-1" type="FLOAT" value="4.0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_nr_beta2-2" type="FLOAT" value="4.0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_nr_beta2-3" type="FLOAT" value="4.0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_nr_beta2-4" type="FLOAT" value="4.0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_nr_beta2-5" type="FLOAT" value="4.0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_nr_beta2-6" type="FLOAT" value="4.0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_nr_beta2-7" type="FLOAT" value="4.0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                    </d:ctr>
+                    <d:ctr name="cfar_nr_rnk_ratio" type="IDENTIFIABLE">
+                      <d:var name="cfar_nr_rnk_ratio0" type="FLOAT" value="0.25">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_nr_rnk_ratio1" type="FLOAT" value="0.25">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_nr_rnk_ratio2" type="FLOAT" value="0.25">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_nr_rnk_ratio3" type="FLOAT" value="0.25">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_nr_rnk_ratio4" type="FLOAT" value="0.25">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_nr_rnk_ratio5" type="FLOAT" value="0.25">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_nr_rnk_ratio6" type="FLOAT" value="0.25">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_nr_rnk_ratio7" type="FLOAT" value="0.25">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                    </d:ctr>
+                    <d:ctr name="cfar_nr_rnk_sel" type="IDENTIFIABLE">
+                      <d:var name="cfar_nr_rnk_sel0" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_nr_rnk_sel1" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_nr_rnk_sel2" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_nr_rnk_sel3" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_nr_rnk_sel4" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_nr_rnk_sel5" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_nr_rnk_sel6" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_nr_rnk_sel7" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                    </d:ctr>
+                    <d:ctr name="cfar_nr_scheme_sel" type="IDENTIFIABLE">
+                      <d:var name="cfar_nr_scheme_sel0" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_nr_scheme_sel1" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_nr_scheme_sel2" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_nr_scheme_sel3" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_nr_scheme_sel4" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_nr_scheme_sel5" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_nr_scheme_sel6" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_nr_scheme_sel7" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                    </d:ctr>
+                    <d:ctr name="cfar_nr_tdec" type="IDENTIFIABLE">
+                      <d:var name="cfar_nr_tdec0" type="INTEGER" value="4">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_nr_tdec1" type="INTEGER" value="4">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_nr_tdec2" type="INTEGER" value="4">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_nr_tdec3" type="INTEGER" value="4">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_nr_tdec4" type="INTEGER" value="4">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_nr_tdec5" type="INTEGER" value="4">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_nr_tdec6" type="INTEGER" value="4">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_nr_tdec7" type="INTEGER" value="4">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                    </d:ctr>
+                    <d:ctr name="cfar_region_sep_rng" type="IDENTIFIABLE">
+                      <d:var name="cfar_region_sep_rng0" type="INTEGER" 
+                             value="1023">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_region_sep_rng1" type="INTEGER" 
+                             value="1023">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_region_sep_rng2" type="INTEGER" 
+                             value="1023">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                    </d:ctr>
+                    <d:ctr name="cfar_region_sep_vel" type="IDENTIFIABLE">
+                      <d:var name="cfar_region_sep_vel0" type="INTEGER" 
+                             value="1023">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_region_sep_vel1" type="INTEGER" 
+                             value="1023">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_region_sep_vel2" type="INTEGER" 
+                             value="1023">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_region_sep_vel3" type="INTEGER" 
+                             value="1023">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_region_sep_vel4" type="INTEGER" 
+                             value="1023">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_region_sep_vel5" type="INTEGER" 
+                             value="1023">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_region_sep_vel6" type="INTEGER" 
+                             value="1023">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_region_sep_vel7" type="INTEGER" 
+                             value="1023">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                    </d:ctr>
+                    <d:ctr name="cfar_sogo_alpha" type="IDENTIFIABLE">
+                      <d:var name="cfar_sogo_alpha0" type="FLOAT" value="15.0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_sogo_alpha1" type="FLOAT" value="15.0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_sogo_alpha2" type="FLOAT" value="15.0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_sogo_alpha3" type="FLOAT" value="15.0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_sogo_alpha4" type="FLOAT" value="15.0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_sogo_alpha5" type="FLOAT" value="15.0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_sogo_alpha6" type="FLOAT" value="15.0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_sogo_alpha7" type="FLOAT" value="15.0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                    </d:ctr>
+                    <d:ctr name="cfar_sogo_i" type="IDENTIFIABLE">
+                      <d:var name="cfar_sogo_i0" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_sogo_i1" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_sogo_i2" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_sogo_i3" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_sogo_i4" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_sogo_i5" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_sogo_i6" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_sogo_i7" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                    </d:ctr>
+                    <d:ctr name="cfar_sogo_mask" type="IDENTIFIABLE">
+                      <d:var name="cfar_sogo_mask0" type="INTEGER" value="15">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_sogo_mask1" type="INTEGER" value="15">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_sogo_mask2" type="INTEGER" value="15">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_sogo_mask3" type="INTEGER" value="15">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_sogo_mask4" type="INTEGER" value="15">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_sogo_mask5" type="INTEGER" value="15">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_sogo_mask6" type="INTEGER" value="15">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_sogo_mask7" type="INTEGER" value="15">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                    </d:ctr>
+                    <d:ctr name="cfar_ca_alpha" type="IDENTIFIABLE">
+                      <d:var name="cfar_ca_alpha0" type="FLOAT" value="15.0"/>
+                      <d:var name="cfar_ca_alpha1" type="FLOAT" value="15.0"/>
+                      <d:var name="cfar_ca_alpha2" type="FLOAT" value="15.0"/>
+                      <d:var name="cfar_ca_alpha3" type="FLOAT" value="15.0"/>
+                      <d:var name="cfar_ca_alpha4" type="FLOAT" value="15.0"/>
+                      <d:var name="cfar_ca_alpha5" type="FLOAT" value="15.0"/>
+                      <d:var name="cfar_ca_alpha6" type="FLOAT" value="15.0"/>
+                      <d:var name="cfar_ca_alpha7" type="FLOAT" value="15.0"/>
+                    </d:ctr>
+                    <d:ctr name="cfar_ca_n" type="IDENTIFIABLE">
+                      <d:var name="cfar_ca_n0" type="INTEGER" value="2">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_ca_n1" type="INTEGER" value="2">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_ca_n2" type="INTEGER" value="2">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_ca_n3" type="INTEGER" value="2">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_ca_n4" type="INTEGER" value="2">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_ca_n5" type="INTEGER" value="2">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_ca_n6" type="INTEGER" value="2">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="cfar_ca_n7" type="INTEGER" value="2">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                    </d:ctr>
+                  </d:ctr>
+                  <d:ctr name="DoA_CONFIG_PARAMS" type="IDENTIFIABLE">
+                    <d:var name="doa_mode" type="INTEGER" value="0">
+                      <a:a name="IMPORTER_INFO" value="@DEF"/>
+                    </d:var>
+                    <d:var name="doa_num_groups" type="INTEGER" value="2"/>
+                    <d:ctr name="doa_fft_mux" type="IDENTIFIABLE">
+                      <d:var name="doa_fft_mux0" type="INTEGER" value="61455"/>
+                      <d:var name="doa_fft_mux1" type="INTEGER" value="4672"/>
+                      <d:var name="doa_fft_mux2" type="INTEGER" value="33825">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                    </d:ctr>
+                    <d:ctr name="combined_doa_fft_mux" type="IDENTIFIABLE">
+                      <d:var name="combined_doa_fft_mux0" type="INTEGER" 
+                             value="15">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="combined_doa_fft_mux1" type="INTEGER" 
+                             value="240">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="combined_doa_fft_mux2" type="INTEGER" 
+                             value="3840">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="combined_doa_fft_mux3" type="INTEGER" 
+                             value="61440">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                    </d:ctr>
+                    <d:var name="doa_method" type="INTEGER" value="0">
+                      <a:a name="IMPORTER_INFO" value="@DEF"/>
+                    </d:var>
+                    <d:ctr name="doa_npoint" type="IDENTIFIABLE">
+                      <d:var name="doa_npoint0" type="INTEGER" value="360">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="doa_npoint1" type="INTEGER" value="360">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="doa_npoint2" type="INTEGER" value="360">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                    </d:ctr>
+                    <d:var name="doa_samp_space" type="STRING" value="\t">
+                      <a:a name="IMPORTER_INFO" value="@DEF"/>
+                    </d:var>
+                    <d:ctr name="doa_max_obj_per_bin" type="IDENTIFIABLE">
+                      <d:var name="doa_max_obj_per_bin0" type="INTEGER" 
+                             value="3"/>
+                      <d:var name="doa_max_obj_per_bin1" type="INTEGER" 
+                             value="1">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="doa_max_obj_per_bin2" type="INTEGER" 
+                             value="1">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                    </d:ctr>
+                    <d:ctr name="bfm_peak_scalar" type="IDENTIFIABLE">
+                      <d:var name="bfm_peak_scalar0" type="FLOAT" value="0.5"/>
+                      <d:var name="bfm_peak_scalar1" type="FLOAT" value="0.1">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="bfm_peak_scalar2" type="FLOAT" value="0.1">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                    </d:ctr>
+                    <d:ctr name="bfm_noise_level_scalar" type="IDENTIFIABLE">
+                      <d:var name="bfm_noise_level_scalar0" type="INTEGER" 
+                             value="30">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="bfm_noise_level_scalar1" type="INTEGER" 
+                             value="30">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="bfm_noise_level_scalar2" type="INTEGER" 
+                             value="30">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                    </d:ctr>
+                    <d:ctr name="bfm_snr_thres" type="IDENTIFIABLE">
+                      <d:var name="bfm_snr_thres0" type="INTEGER" value="15">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="bfm_snr_thres1" type="INTEGER" value="30">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                    </d:ctr>
+                    <d:var name="bfm_az_left" type="FLOAT" value="-60.0">
+                      <a:a name="IMPORTER_INFO" value="@DEF"/>
+                    </d:var>
+                    <d:var name="bfm_az_right" type="FLOAT" value="60.0">
+                      <a:a name="IMPORTER_INFO" value="@DEF"/>
+                    </d:var>
+                    <d:var name="bfm_ev_up" type="FLOAT" value="10.0">
+                      <a:a name="IMPORTER_INFO" value="@DEF"/>
+                    </d:var>
+                    <d:var name="bfm_ev_down" type="FLOAT" value="-10.0">
+                      <a:a name="IMPORTER_INFO" value="@DEF"/>
+                    </d:var>
+                    <d:var name="doa_win" type="STRING" value="cheb">
+                      <a:a name="IMPORTER_INFO" value="@DEF"/>
+                    </d:var>
+                    <d:ctr name="doa_win_params" type="IDENTIFIABLE">
+                      <d:var name="doa_win_params0" type="FLOAT" value="30.0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="doa_win_params1" type="FLOAT" value="0.0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="doa_win_params2" type="FLOAT" value="0.0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                    </d:ctr>
+                    <d:var name="bfm_raw_search_step" type="INTEGER" value="1">
+                      <a:a name="IMPORTER_INFO" value="@DEF"/>
+                    </d:var>
+                    <d:var name="bfm_fine_search_range" type="INTEGER" 
+                           value="20">
+                      <a:a name="IMPORTER_INFO" value="@DEF"/>
+                    </d:var>
+                    <d:var name="bfm_iter_search" type="BOOLEAN" value="false">
+                      <a:a name="IMPORTER_INFO" value="@DEF"/>
+                    </d:var>
+                    <d:var name="bfm_mode" type="INTEGER" value="0">
+                      <a:a name="IMPORTER_INFO" value="@DEF"/>
+                    </d:var>
+                    <d:var name="bfm_group_idx" type="INTEGER" value="0">
+                      <a:a name="IMPORTER_INFO" value="@DEF"/>
+                    </d:var>
+                    <d:ctr name="dml_2dsch_start" type="IDENTIFIABLE">
+                      <d:var name="dml_2dsch_start0" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="dml_2dsch_start1" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                    </d:ctr>
+                    <d:ctr name="dml_2dsch_step" type="IDENTIFIABLE">
+                      <d:var name="dml_2dsch_step0" type="INTEGER" value="16">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="dml_2dsch_step1" type="INTEGER" value="8">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                    </d:ctr>
+                    <d:ctr name="dml_2dsch_end" type="IDENTIFIABLE">
+                      <d:var name="dml_2dsch_end0" type="INTEGER" value="359">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="dml_2dsch_end1" type="INTEGER" value="359">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                    </d:ctr>
+                    <d:ctr name="dml_extra_1d_en" type="IDENTIFIABLE">
+                      <d:var name="dml_extra_1d_en0" type="BOOLEAN" value="true">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="dml_extra_1d_en1" type="BOOLEAN" value="true">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                    </d:ctr>
+                    <d:ctr name="dml_p1p2_en" type="IDENTIFIABLE">
+                      <d:var name="dml_p1p2_en0" type="BOOLEAN" value="true">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="dml_p1p2_en1" type="BOOLEAN" value="true">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                    </d:ctr>
+                    <d:ctr name="dml_respwr_coef" type="IDENTIFIABLE">
+                      <d:var name="dml_respwr_coef0" type="FLOAT" value="0.0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="dml_respwr_coef1" type="FLOAT" value="0.0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="dml_respwr_coef2" type="FLOAT" value="0.1">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="dml_respwr_coef3" type="FLOAT" value="-1.0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="dml_respwr_coef4" type="FLOAT" value="0.0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="dml_respwr_coef5" type="FLOAT" value="0.0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="dml_respwr_coef6" type="FLOAT" value="0.0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="dml_respwr_coef7" type="FLOAT" value="0.1">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="dml_respwr_coef8" type="FLOAT" value="-1.0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="dml_respwr_coef9" type="FLOAT" value="0.0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                    </d:ctr>
+                    <d:var name="sv_read_from_flash" type="BOOLEAN" 
+                           value="false">
+                      <a:a name="IMPORTER_INFO" value="@DEF"/>
+                    </d:var>
+                  </d:ctr>
+                  <d:ctr name="ANT_CONFIG_PARAMS" type="IDENTIFIABLE">
+                    <d:var name="ant_info_from_flash" type="BOOLEAN" 
+                           value="true">
+                      <a:a name="IMPORTER_INFO" value="@DEF"/>
+                    </d:var>
+                    <d:var name="ant_info_flash_addr" type="INTEGER" 
+                           value="65536">
+                      <a:a name="IMPORTER_INFO" value="@DEF"/>
+                    </d:var>
+                    <d:ctr name="ant_pos" type="IDENTIFIABLE">
+                      <d:ctr name="ant_pos0" type="IDENTIFIABLE">
+                        <d:var name="ant_pos_x" type="FLOAT" value="0.0">
+                          <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:var>
+                        <d:var name="ant_pos_y" type="FLOAT" value="0.0">
+                          <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:var>
+                      </d:ctr>
+                      <d:ctr name="ant_pos1" type="IDENTIFIABLE">
+                        <d:var name="ant_pos_x" type="FLOAT" value="0.612"/>
+                        <d:var name="ant_pos_y" type="FLOAT" value="0.0">
+                          <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:var>
+                      </d:ctr>
+                      <d:ctr name="ant_pos2" type="IDENTIFIABLE">
+                        <d:var name="ant_pos_x" type="FLOAT" value="1.224"/>
+                        <d:var name="ant_pos_y" type="FLOAT" value="0.0">
+                          <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:var>
+                      </d:ctr>
+                      <d:ctr name="ant_pos3" type="IDENTIFIABLE">
+                        <d:var name="ant_pos_x" type="FLOAT" value="1.836"/>
+                        <d:var name="ant_pos_y" type="FLOAT" value="0.0">
+                          <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:var>
+                      </d:ctr>
+                      <d:ctr name="ant_pos4" type="IDENTIFIABLE">
+                        <d:var name="ant_pos_x" type="FLOAT" value="1.224"/>
+                        <d:var name="ant_pos_y" type="FLOAT" value="2.142"/>
+                      </d:ctr>
+                      <d:ctr name="ant_pos5" type="IDENTIFIABLE">
+                        <d:var name="ant_pos_x" type="FLOAT" value="1.836"/>
+                        <d:var name="ant_pos_y" type="FLOAT" value="2.142"/>
+                      </d:ctr>
+                      <d:ctr name="ant_pos6" type="IDENTIFIABLE">
+                        <d:var name="ant_pos_x" type="FLOAT" value="2.448"/>
+                        <d:var name="ant_pos_y" type="FLOAT" value="2.142"/>
+                      </d:ctr>
+                      <d:ctr name="ant_pos7" type="IDENTIFIABLE">
+                        <d:var name="ant_pos_x" type="FLOAT" value="3.06"/>
+                        <d:var name="ant_pos_y" type="FLOAT" value="2.142"/>
+                      </d:ctr>
+                      <d:ctr name="ant_pos8" type="IDENTIFIABLE">
+                        <d:var name="ant_pos_x" type="FLOAT" value="2.448"/>
+                        <d:var name="ant_pos_y" type="FLOAT" value="0.0">
+                          <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:var>
+                      </d:ctr>
+                      <d:ctr name="ant_pos9" type="IDENTIFIABLE">
+                        <d:var name="ant_pos_x" type="FLOAT" value="3.06"/>
+                        <d:var name="ant_pos_y" type="FLOAT" value="0.0">
+                          <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:var>
+                      </d:ctr>
+                      <d:ctr name="ant_pos10" type="IDENTIFIABLE">
+                        <d:var name="ant_pos_x" type="FLOAT" value="3.672"/>
+                        <d:var name="ant_pos_y" type="FLOAT" value="0.0">
+                          <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:var>
+                      </d:ctr>
+                      <d:ctr name="ant_pos11" type="IDENTIFIABLE">
+                        <d:var name="ant_pos_x" type="FLOAT" value="4.284"/>
+                        <d:var name="ant_pos_y" type="FLOAT" value="0.0">
+                          <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:var>
+                      </d:ctr>
+                      <d:ctr name="ant_pos12" type="IDENTIFIABLE">
+                        <d:var name="ant_pos_x" type="FLOAT" value="4.896"/>
+                        <d:var name="ant_pos_y" type="FLOAT" value="0.0">
+                          <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:var>
+                      </d:ctr>
+                      <d:ctr name="ant_pos13" type="IDENTIFIABLE">
+                        <d:var name="ant_pos_x" type="FLOAT" value="5.508"/>
+                        <d:var name="ant_pos_y" type="FLOAT" value="0.0">
+                          <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:var>
+                      </d:ctr>
+                      <d:ctr name="ant_pos14" type="IDENTIFIABLE">
+                        <d:var name="ant_pos_x" type="FLOAT" value="6.12"/>
+                        <d:var name="ant_pos_y" type="FLOAT" value="0.0">
+                          <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:var>
+                      </d:ctr>
+                      <d:ctr name="ant_pos15" type="IDENTIFIABLE">
+                        <d:var name="ant_pos_x" type="FLOAT" value="6.732"/>
+                        <d:var name="ant_pos_y" type="FLOAT" value="0.0">
+                          <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:var>
+                      </d:ctr>
+                    </d:ctr>
+                    <d:ctr name="ant_comps" type="IDENTIFIABLE">
+                      <d:var name="ant_comps0" type="FLOAT" value="0.0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="ant_comps1" type="FLOAT" value="0.0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="ant_comps2" type="FLOAT" value="0.0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="ant_comps3" type="FLOAT" value="0.0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="ant_comps4" type="FLOAT" value="0.0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="ant_comps5" type="FLOAT" value="0.0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="ant_comps6" type="FLOAT" value="0.0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="ant_comps7" type="FLOAT" value="0.0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="ant_comps8" type="FLOAT" value="0.0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="ant_comps9" type="FLOAT" value="0.0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="ant_comps10" type="FLOAT" value="0.0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="ant_comps11" type="FLOAT" value="0.0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="ant_comps12" type="FLOAT" value="0.0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="ant_comps13" type="FLOAT" value="0.0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="ant_comps14" type="FLOAT" value="0.0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="ant_comps15" type="FLOAT" value="0.0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                    </d:ctr>
+                  </d:ctr>
+                  <d:ctr name="AGC_CONFIG_PARAMS" type="IDENTIFIABLE">
+                    <d:ctr name="agc_code" type="IDENTIFIABLE">
+                      <d:var name="agc_code0" type="INTEGER" value="211"/>
+                      <d:var name="agc_code1" type="INTEGER" value="211"/>
+                      <d:var name="agc_code2" type="INTEGER" value="211"/>
+                      <d:var name="agc_code3" type="INTEGER" value="211"/>
+                      <d:var name="agc_code4" type="INTEGER" value="211"/>
+                      <d:var name="agc_code5" type="INTEGER" value="211"/>
+                      <d:var name="agc_code6" type="INTEGER" value="211"/>
+                      <d:var name="agc_code7" type="INTEGER" value="211"/>
+                      <d:var name="agc_code8" type="INTEGER" value="211"/>
+                      <d:var name="agc_code9" type="INTEGER" value="211"/>
+                      <d:var name="agc_code10" type="INTEGER" value="211"/>
+                      <d:var name="agc_code11" type="INTEGER" value="211"/>
+                      <d:var name="agc_code12" type="INTEGER" value="211"/>
+                    </d:ctr>
+                    <d:var name="agc_align_en" type="BOOLEAN" value="false">
+                      <a:a name="IMPORTER_INFO" value="@DEF"/>
+                    </d:var>
+                  </d:ctr>
+                  <d:ctr name="VEL_CONFIG_PARAMS" type="IDENTIFIABLE">
+                    <d:var name="de_vel_amb" type="BOOLEAN" value="false">
+                      <a:a name="IMPORTER_INFO" value="@DEF"/>
+                    </d:var>
+                    <d:var name="anti_velamb_qmin" type="INTEGER" value="-3"/>
+                    <d:var name="high_vel_comp_en" type="BOOLEAN" value="true">
+                      <a:a name="IMPORTER_INFO" value="@DEF"/>
+                    </d:var>
+                    <d:var name="high_vel_comp_method" type="INTEGER" value="0">
+                      <a:a name="IMPORTER_INFO" value="@DEF"/>
+                    </d:var>
+                    <d:var name="vel_comp_usr" type="FLOAT" value="0.0">
+                      <a:a name="IMPORTER_INFO" value="@DEF"/>
+                    </d:var>
+                    <d:var name="rng_comp_usr" type="FLOAT" value="0.0">
+                      <a:a name="IMPORTER_INFO" value="@DEF"/>
+                    </d:var>
+                  </d:ctr>
+                  <d:ctr name="TRACK_CONFIG_PARAMS" type="IDENTIFIABLE">
+                    <d:var name="track_fps" type="INTEGER" value="20">
+                      <a:a name="IMPORTER_INFO" value="@DEF"/>
+                    </d:var>
+                    <d:var name="track_fov_az_left" type="FLOAT" value="-80.0"/>
+                    <d:var name="track_fov_az_right" type="FLOAT" value="80.0"/>
+                    <d:var name="track_fov_ev_down" type="FLOAT" value="-80.0"/>
+                    <d:var name="track_fov_ev_up" type="FLOAT" value="80.0"/>
+                    <d:var name="track_near_field_thres" type="FLOAT" 
+                           value="10.0">
+                      <a:a name="IMPORTER_INFO" value="@DEF"/>
+                    </d:var>
+                    <d:var name="track_capture_delay" type="FLOAT" value="0.15">
+                      <a:a name="IMPORTER_INFO" value="@DEF"/>
+                    </d:var>
+                    <d:var name="track_drop_delay" type="FLOAT" value="0.5">
+                      <a:a name="IMPORTER_INFO" value="@DEF"/>
+                    </d:var>
+                    <d:var name="track_vel_pos_ind_portion" type="FLOAT" 
+                           value="0.5">
+                      <a:a name="IMPORTER_INFO" value="@DEF"/>
+                    </d:var>
+                    <d:var name="track_obj_snr_sel" type="INTEGER" value="0">
+                      <a:a name="IMPORTER_INFO" value="@DEF"/>
+                    </d:var>
+                  </d:ctr>
+                  <d:ctr name="SPK_CONFIG_PARAMS" type="IDENTIFIABLE">
+                    <d:var name="spk_en" type="BOOLEAN" value="false">
+                      <a:a name="IMPORTER_INFO" value="@DEF"/>
+                    </d:var>
+                    <d:var name="spk_buf_len" type="INTEGER" value="4">
+                      <a:a name="IMPORTER_INFO" value="@DEF"/>
+                    </d:var>
+                    <d:var name="spk_set_zero" type="BOOLEAN" value="false">
+                      <a:a name="IMPORTER_INFO" value="@DEF"/>
+                    </d:var>
+                    <d:var name="spk_ovr_num" type="INTEGER" value="0">
+                      <a:a name="IMPORTER_INFO" value="@DEF"/>
+                    </d:var>
+                    <d:var name="spk_thres_dbl" type="BOOLEAN" value="false">
+                      <a:a name="IMPORTER_INFO" value="@DEF"/>
+                    </d:var>
+                    <d:var name="spk_min_max_sel" type="BOOLEAN" value="false">
+                      <a:a name="IMPORTER_INFO" value="@DEF"/>
+                    </d:var>
+                  </d:ctr>
+                  <d:ctr name="OTHER_CONFIG_PARAMS" type="IDENTIFIABLE">
+                    <d:var name="fsm_on" type="BOOLEAN" value="false">
+                      <a:a name="IMPORTER_INFO" value="@DEF"/>
+                    </d:var>
+                    <d:var name="zero_doppler_cancel" type="BOOLEAN" 
+                           value="false">
+                      <a:a name="IMPORTER_INFO" value="@DEF"/>
+                    </d:var>
+                    <d:var name="acc_rng_hw" type="BOOLEAN" value="false"/>
+                    <d:var name="acc_vel_hw" type="BOOLEAN" value="false"/>
+                    <d:var name="acc_angle_hw" type="BOOLEAN" value="false">
+                      <a:a name="IMPORTER_INFO" value="@DEF"/>
+                    </d:var>
+                    <d:var name="cas_obj_merg_typ" type="INTEGER" value="2">
+                      <a:a name="IMPORTER_INFO" value="@DEF"/>
+                    </d:var>
+                  </d:ctr>
+                </d:ctr>
+              </d:lst>
+            </d:ctr>
+          </d:chc>
+        </d:lst>
+      </d:ctr>
+    </d:lst>
+  </d:ctr>
+
+</datamodel>

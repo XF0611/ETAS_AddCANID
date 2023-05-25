@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-2-2.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE>
+      <SHORT-NAME>ETAS_EIP</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE>
+          <SHORT-NAME>EcucModuleConfigurationValuess</SHORT-NAME>
+          <ELEMENTS>
+            <ECUC-MODULE-CONFIGURATION-VALUES>
+              <SHORT-NAME>StackM</SHORT-NAME>
+              <DEFINITION-REF DEST="ECUC-MODULE-DEF">/ETAS_EIP/EcucModuleDefs/StackM</DEFINITION-REF>
+              <CONTAINERS>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>StackMGeneral</SHORT-NAME>
+                  <LONG-NAME>
+                    <L-4 L="FOR-ALL" />
+                  </LONG-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ETAS_EIP/EcucModuleDefs/StackM/StackMGeneral</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ETAS_EIP/EcucModuleDefs/StackM/StackMGeneral/StackMEnable</DEFINITION-REF>
+                      <VALUE>true</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ETAS_EIP/EcucModuleDefs/StackM/StackMGeneral/StackMTraceEnable</DEFINITION-REF>
+                      <VALUE>true</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ETAS_EIP/EcucModuleDefs/StackM/StackMGeneral/StackMPatternEnable</DEFINITION-REF>
+                      <VALUE>true</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ETAS_EIP/EcucModuleDefs/StackM/StackMGeneral/StackMDevErrorDetect</DEFINITION-REF>
+                      <VALUE>true</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/ETAS_EIP/EcucModuleDefs/StackM/StackMGeneral/StackMPattern</DEFINITION-REF>
+                      <VALUE>1280067910</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/ETAS_EIP/EcucModuleDefs/StackM/StackMGeneral/StackMLimitHigh</DEFINITION-REF>
+                      <VALUE>830039403</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/ETAS_EIP/EcucModuleDefs/StackM/StackMGeneral/StackMLimitLow</DEFINITION-REF>
+                      <VALUE>846816619</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>StackMConfigSet</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ETAS_EIP/EcucModuleDefs/StackM/StackMConfigSet</DEFINITION-REF>
+                  <SUB-CONTAINERS>
+                    <ECUC-CONTAINER-VALUE>
+                      <SHORT-NAME>StackMTarget</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ETAS_EIP/EcucModuleDefs/StackM/StackMConfigSet/StackMTarget</DEFINITION-REF>
+                      <SUB-CONTAINERS>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>StackMStackConfigSet_0</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ETAS_EIP/EcucModuleDefs/StackM/StackMConfigSet/StackMTarget/StackMStackConfigSet</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/ETAS_EIP/EcucModuleDefs/StackM/StackMConfigSet/StackMTarget/StackMStackConfigSet/StackMStackID</DEFINITION-REF>
+                              <VALUE>0</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-TEXTUAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ETAS_EIP/EcucModuleDefs/StackM/StackMConfigSet/StackMTarget/StackMStackConfigSet/StackMStackLimit1</DEFINITION-REF>
+                              <VALUE>STACKM_LIMIT_PERCENT_12p5</VALUE>
+                            </ECUC-TEXTUAL-PARAM-VALUE>
+                            <ECUC-TEXTUAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ETAS_EIP/EcucModuleDefs/StackM/StackMConfigSet/StackMTarget/StackMStackConfigSet/StackMStackLimit2</DEFINITION-REF>
+                              <VALUE>STACKM_LIMIT_PERCENT_25</VALUE>
+                            </ECUC-TEXTUAL-PARAM-VALUE>
+                            <ECUC-TEXTUAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ETAS_EIP/EcucModuleDefs/StackM/StackMConfigSet/StackMTarget/StackMStackConfigSet/StackMStackLimit3</DEFINITION-REF>
+                              <VALUE>STACKM_LIMIT_PERCENT_50</VALUE>
+                            </ECUC-TEXTUAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                          <REFERENCE-VALUES>
+                            <ECUC-REFERENCE-VALUE>
+                              <DEFINITION-REF DEST="ECUC-SYMBOLIC-NAME-REFERENCE-DEF">/ETAS_EIP/EcucModuleDefs/StackM/StackMConfigSet/StackMTarget/StackMStackConfigSet/StackMStackCoreID</DEFINITION-REF>
+                              <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ETAS_EIP/EcucModuleConfigurationValuess/EcuC/EcucHardware/EcucCore_SysCore</VALUE-REF>
+                            </ECUC-REFERENCE-VALUE>
+                            <ECUC-REFERENCE-VALUE>
+                              <DEFINITION-REF DEST="ECUC-SYMBOLIC-NAME-REFERENCE-DEF">/ETAS_EIP/EcucModuleDefs/StackM/StackMConfigSet/StackMTarget/StackMStackConfigSet/StackMStackName</DEFINITION-REF>
+                              <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ETAS_EIP/EcucModuleConfigurationValuess/Linker/LinkerConfigSet/TargetStack/SYSCORE_STACK</VALUE-REF>
+                            </ECUC-REFERENCE-VALUE>
+                          </REFERENCE-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>StackMStackConfigSet_1</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ETAS_EIP/EcucModuleDefs/StackM/StackMConfigSet/StackMTarget/StackMStackConfigSet</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/ETAS_EIP/EcucModuleDefs/StackM/StackMConfigSet/StackMTarget/StackMStackConfigSet/StackMStackID</DEFINITION-REF>
+                              <VALUE>1</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-TEXTUAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ETAS_EIP/EcucModuleDefs/StackM/StackMConfigSet/StackMTarget/StackMStackConfigSet/StackMStackLimit1</DEFINITION-REF>
+                              <VALUE>STACKM_LIMIT_PERCENT_12p5</VALUE>
+                            </ECUC-TEXTUAL-PARAM-VALUE>
+                            <ECUC-TEXTUAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ETAS_EIP/EcucModuleDefs/StackM/StackMConfigSet/StackMTarget/StackMStackConfigSet/StackMStackLimit2</DEFINITION-REF>
+                              <VALUE>STACKM_LIMIT_PERCENT_25</VALUE>
+                            </ECUC-TEXTUAL-PARAM-VALUE>
+                            <ECUC-TEXTUAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ETAS_EIP/EcucModuleDefs/StackM/StackMConfigSet/StackMTarget/StackMStackConfigSet/StackMStackLimit3</DEFINITION-REF>
+                              <VALUE>STACKM_LIMIT_PERCENT_50</VALUE>
+                            </ECUC-TEXTUAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                          <REFERENCE-VALUES>
+                            <ECUC-REFERENCE-VALUE>
+                              <DEFINITION-REF DEST="ECUC-SYMBOLIC-NAME-REFERENCE-DEF">/ETAS_EIP/EcucModuleDefs/StackM/StackMConfigSet/StackMTarget/StackMStackConfigSet/StackMStackCoreID</DEFINITION-REF>
+                              <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ETAS_EIP/EcucModuleConfigurationValuess/EcuC/EcucHardware/EcucCore_SysCore</VALUE-REF>
+                            </ECUC-REFERENCE-VALUE>
+                            <ECUC-REFERENCE-VALUE>
+                              <DEFINITION-REF DEST="ECUC-SYMBOLIC-NAME-REFERENCE-DEF">/ETAS_EIP/EcucModuleDefs/StackM/StackMConfigSet/StackMTarget/StackMStackConfigSet/StackMStackName</DEFINITION-REF>
+                              <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ETAS_EIP/EcucModuleConfigurationValuess/Linker/LinkerConfigSet/TargetStack/COMCORE_STACK</VALUE-REF>
+                            </ECUC-REFERENCE-VALUE>
+                          </REFERENCE-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>StackMStackConfigSet_2</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ETAS_EIP/EcucModuleDefs/StackM/StackMConfigSet/StackMTarget/StackMStackConfigSet</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/ETAS_EIP/EcucModuleDefs/StackM/StackMConfigSet/StackMTarget/StackMStackConfigSet/StackMStackID</DEFINITION-REF>
+                              <VALUE>2</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-TEXTUAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ETAS_EIP/EcucModuleDefs/StackM/StackMConfigSet/StackMTarget/StackMStackConfigSet/StackMStackLimit1</DEFINITION-REF>
+                              <VALUE>STACKM_LIMIT_PERCENT_12p5</VALUE>
+                            </ECUC-TEXTUAL-PARAM-VALUE>
+                            <ECUC-TEXTUAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ETAS_EIP/EcucModuleDefs/StackM/StackMConfigSet/StackMTarget/StackMStackConfigSet/StackMStackLimit2</DEFINITION-REF>
+                              <VALUE>STACKM_LIMIT_PERCENT_25</VALUE>
+                            </ECUC-TEXTUAL-PARAM-VALUE>
+                            <ECUC-TEXTUAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ETAS_EIP/EcucModuleDefs/StackM/StackMConfigSet/StackMTarget/StackMStackConfigSet/StackMStackLimit3</DEFINITION-REF>
+                              <VALUE>STACKM_LIMIT_PERCENT_50</VALUE>
+                            </ECUC-TEXTUAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                          <REFERENCE-VALUES>
+                            <ECUC-REFERENCE-VALUE>
+                              <DEFINITION-REF DEST="ECUC-SYMBOLIC-NAME-REFERENCE-DEF">/ETAS_EIP/EcucModuleDefs/StackM/StackMConfigSet/StackMTarget/StackMStackConfigSet/StackMStackCoreID</DEFINITION-REF>
+                              <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ETAS_EIP/EcucModuleConfigurationValuess/EcuC/EcucHardware/EcucCore_SysCore</VALUE-REF>
+                            </ECUC-REFERENCE-VALUE>
+                            <ECUC-REFERENCE-VALUE>
+                              <DEFINITION-REF DEST="ECUC-SYMBOLIC-NAME-REFERENCE-DEF">/ETAS_EIP/EcucModuleDefs/StackM/StackMConfigSet/StackMTarget/StackMStackConfigSet/StackMStackName</DEFINITION-REF>
+                              <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ETAS_EIP/EcucModuleConfigurationValuess/Linker/LinkerConfigSet/TargetStack/APPCORE_STACK</VALUE-REF>
+                            </ECUC-REFERENCE-VALUE>
+                          </REFERENCE-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>StackMStackConfigSet_3</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ETAS_EIP/EcucModuleDefs/StackM/StackMConfigSet/StackMTarget/StackMStackConfigSet</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/ETAS_EIP/EcucModuleDefs/StackM/StackMConfigSet/StackMTarget/StackMStackConfigSet/StackMStackID</DEFINITION-REF>
+                              <VALUE>3</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-TEXTUAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ETAS_EIP/EcucModuleDefs/StackM/StackMConfigSet/StackMTarget/StackMStackConfigSet/StackMStackLimit1</DEFINITION-REF>
+                              <VALUE>STACKM_LIMIT_PERCENT_12p5</VALUE>
+                            </ECUC-TEXTUAL-PARAM-VALUE>
+                            <ECUC-TEXTUAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ETAS_EIP/EcucModuleDefs/StackM/StackMConfigSet/StackMTarget/StackMStackConfigSet/StackMStackLimit2</DEFINITION-REF>
+                              <VALUE>STACKM_LIMIT_PERCENT_25</VALUE>
+                            </ECUC-TEXTUAL-PARAM-VALUE>
+                            <ECUC-TEXTUAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ETAS_EIP/EcucModuleDefs/StackM/StackMConfigSet/StackMTarget/StackMStackConfigSet/StackMStackLimit3</DEFINITION-REF>
+                              <VALUE>STACKM_LIMIT_PERCENT_50</VALUE>
+                            </ECUC-TEXTUAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                          <REFERENCE-VALUES>
+                            <ECUC-REFERENCE-VALUE>
+                              <DEFINITION-REF DEST="ECUC-SYMBOLIC-NAME-REFERENCE-DEF">/ETAS_EIP/EcucModuleDefs/StackM/StackMConfigSet/StackMTarget/StackMStackConfigSet/StackMStackCoreID</DEFINITION-REF>
+                              <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ETAS_EIP/EcucModuleConfigurationValuess/EcuC/EcucHardware/EcucCore_SysCore</VALUE-REF>
+                            </ECUC-REFERENCE-VALUE>
+                            <ECUC-REFERENCE-VALUE>
+                              <DEFINITION-REF DEST="ECUC-SYMBOLIC-NAME-REFERENCE-DEF">/ETAS_EIP/EcucModuleDefs/StackM/StackMConfigSet/StackMTarget/StackMStackConfigSet/StackMStackName</DEFINITION-REF>
+                              <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ETAS_EIP/EcucModuleConfigurationValuess/Linker/LinkerConfigSet/TargetStack/ABT_STACK</VALUE-REF>
+                            </ECUC-REFERENCE-VALUE>
+                          </REFERENCE-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>StackMStackConfigSet_4</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ETAS_EIP/EcucModuleDefs/StackM/StackMConfigSet/StackMTarget/StackMStackConfigSet</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/ETAS_EIP/EcucModuleDefs/StackM/StackMConfigSet/StackMTarget/StackMStackConfigSet/StackMStackID</DEFINITION-REF>
+                              <VALUE>4</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-TEXTUAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ETAS_EIP/EcucModuleDefs/StackM/StackMConfigSet/StackMTarget/StackMStackConfigSet/StackMStackLimit1</DEFINITION-REF>
+                              <VALUE>STACKM_LIMIT_PERCENT_12p5</VALUE>
+                            </ECUC-TEXTUAL-PARAM-VALUE>
+                            <ECUC-TEXTUAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ETAS_EIP/EcucModuleDefs/StackM/StackMConfigSet/StackMTarget/StackMStackConfigSet/StackMStackLimit2</DEFINITION-REF>
+                              <VALUE>STACKM_LIMIT_PERCENT_25</VALUE>
+                            </ECUC-TEXTUAL-PARAM-VALUE>
+                            <ECUC-TEXTUAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ETAS_EIP/EcucModuleDefs/StackM/StackMConfigSet/StackMTarget/StackMStackConfigSet/StackMStackLimit3</DEFINITION-REF>
+                              <VALUE>STACKM_LIMIT_PERCENT_50</VALUE>
+                            </ECUC-TEXTUAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                          <REFERENCE-VALUES>
+                            <ECUC-REFERENCE-VALUE>
+                              <DEFINITION-REF DEST="ECUC-SYMBOLIC-NAME-REFERENCE-DEF">/ETAS_EIP/EcucModuleDefs/StackM/StackMConfigSet/StackMTarget/StackMStackConfigSet/StackMStackCoreID</DEFINITION-REF>
+                              <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ETAS_EIP/EcucModuleConfigurationValuess/EcuC/EcucHardware/EcucCore_SysCore</VALUE-REF>
+                            </ECUC-REFERENCE-VALUE>
+                            <ECUC-REFERENCE-VALUE>
+                              <DEFINITION-REF DEST="ECUC-SYMBOLIC-NAME-REFERENCE-DEF">/ETAS_EIP/EcucModuleDefs/StackM/StackMConfigSet/StackMTarget/StackMStackConfigSet/StackMStackName</DEFINITION-REF>
+                              <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ETAS_EIP/EcucModuleConfigurationValuess/Linker/LinkerConfigSet/TargetStack/UND_STACK</VALUE-REF>
+                            </ECUC-REFERENCE-VALUE>
+                          </REFERENCE-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>StackMStackConfigSet_5</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ETAS_EIP/EcucModuleDefs/StackM/StackMConfigSet/StackMTarget/StackMStackConfigSet</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/ETAS_EIP/EcucModuleDefs/StackM/StackMConfigSet/StackMTarget/StackMStackConfigSet/StackMStackID</DEFINITION-REF>
+                              <VALUE>5</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-TEXTUAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ETAS_EIP/EcucModuleDefs/StackM/StackMConfigSet/StackMTarget/StackMStackConfigSet/StackMStackLimit1</DEFINITION-REF>
+                              <VALUE>STACKM_LIMIT_PERCENT_12p5</VALUE>
+                            </ECUC-TEXTUAL-PARAM-VALUE>
+                            <ECUC-TEXTUAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ETAS_EIP/EcucModuleDefs/StackM/StackMConfigSet/StackMTarget/StackMStackConfigSet/StackMStackLimit2</DEFINITION-REF>
+                              <VALUE>STACKM_LIMIT_PERCENT_25</VALUE>
+                            </ECUC-TEXTUAL-PARAM-VALUE>
+                            <ECUC-TEXTUAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ETAS_EIP/EcucModuleDefs/StackM/StackMConfigSet/StackMTarget/StackMStackConfigSet/StackMStackLimit3</DEFINITION-REF>
+                              <VALUE>STACKM_LIMIT_PERCENT_50</VALUE>
+                            </ECUC-TEXTUAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                          <REFERENCE-VALUES>
+                            <ECUC-REFERENCE-VALUE>
+                              <DEFINITION-REF DEST="ECUC-SYMBOLIC-NAME-REFERENCE-DEF">/ETAS_EIP/EcucModuleDefs/StackM/StackMConfigSet/StackMTarget/StackMStackConfigSet/StackMStackCoreID</DEFINITION-REF>
+                              <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ETAS_EIP/EcucModuleConfigurationValuess/EcuC/EcucHardware/EcucCore_SysCore</VALUE-REF>
+                            </ECUC-REFERENCE-VALUE>
+                            <ECUC-REFERENCE-VALUE>
+                              <DEFINITION-REF DEST="ECUC-SYMBOLIC-NAME-REFERENCE-DEF">/ETAS_EIP/EcucModuleDefs/StackM/StackMConfigSet/StackMTarget/StackMStackConfigSet/StackMStackName</DEFINITION-REF>
+                              <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ETAS_EIP/EcucModuleConfigurationValuess/Linker/LinkerConfigSet/TargetStack/MON_STACK</VALUE-REF>
+                            </ECUC-REFERENCE-VALUE>
+                          </REFERENCE-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>StackMStackConfigSet_6</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ETAS_EIP/EcucModuleDefs/StackM/StackMConfigSet/StackMTarget/StackMStackConfigSet</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/ETAS_EIP/EcucModuleDefs/StackM/StackMConfigSet/StackMTarget/StackMStackConfigSet/StackMStackID</DEFINITION-REF>
+                              <VALUE>6</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-TEXTUAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ETAS_EIP/EcucModuleDefs/StackM/StackMConfigSet/StackMTarget/StackMStackConfigSet/StackMStackLimit1</DEFINITION-REF>
+                              <VALUE>STACKM_LIMIT_PERCENT_12p5</VALUE>
+                            </ECUC-TEXTUAL-PARAM-VALUE>
+                            <ECUC-TEXTUAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ETAS_EIP/EcucModuleDefs/StackM/StackMConfigSet/StackMTarget/StackMStackConfigSet/StackMStackLimit2</DEFINITION-REF>
+                              <VALUE>STACKM_LIMIT_PERCENT_25</VALUE>
+                            </ECUC-TEXTUAL-PARAM-VALUE>
+                            <ECUC-TEXTUAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ETAS_EIP/EcucModuleDefs/StackM/StackMConfigSet/StackMTarget/StackMStackConfigSet/StackMStackLimit3</DEFINITION-REF>
+                              <VALUE>STACKM_LIMIT_PERCENT_50</VALUE>
+                            </ECUC-TEXTUAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                          <REFERENCE-VALUES>
+                            <ECUC-REFERENCE-VALUE>
+                              <DEFINITION-REF DEST="ECUC-SYMBOLIC-NAME-REFERENCE-DEF">/ETAS_EIP/EcucModuleDefs/StackM/StackMConfigSet/StackMTarget/StackMStackConfigSet/StackMStackCoreID</DEFINITION-REF>
+                              <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ETAS_EIP/EcucModuleConfigurationValuess/EcuC/EcucHardware/EcucCore_SysCore</VALUE-REF>
+                            </ECUC-REFERENCE-VALUE>
+                            <ECUC-REFERENCE-VALUE>
+                              <DEFINITION-REF DEST="ECUC-SYMBOLIC-NAME-REFERENCE-DEF">/ETAS_EIP/EcucModuleDefs/StackM/StackMConfigSet/StackMTarget/StackMStackConfigSet/StackMStackName</DEFINITION-REF>
+                              <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ETAS_EIP/EcucModuleConfigurationValuess/Linker/LinkerConfigSet/TargetStack/SVC_STACK</VALUE-REF>
+                            </ECUC-REFERENCE-VALUE>
+                          </REFERENCE-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                      </SUB-CONTAINERS>
+                    </ECUC-CONTAINER-VALUE>
+                  </SUB-CONTAINERS>
+                </ECUC-CONTAINER-VALUE>
+              </CONTAINERS>
+            </ECUC-MODULE-CONFIGURATION-VALUES>
+          </ELEMENTS>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>
+

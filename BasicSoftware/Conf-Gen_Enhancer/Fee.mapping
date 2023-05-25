@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="ASCII"?>
+<MappingMetaModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns="http://www.bosch.com/autosartool/m2m/model" transformationName="Conf-Gen Enhancer">
+  <mappingStructures name="Fee">
+    <order orderId="Fee_1" name="Fee">
+      <order orderId="Fee_2" name="FeeGeneral">
+        <order orderId="Fee_3" name="FeeRbSectorTable"/>
+      </order>
+    </order>
+  </mappingStructures>
+  <mappings mappingId="Mapping_Fee_1" mappingType="PRIMITIVE_ATTRIBUTE" defaultValue="true">
+    <targetItem identifier="FeeDevErrorDetect"/>
+    <orderDetails orderId="Fee_2" order="1"/>
+  </mappings>
+  <mappings mappingId="Mapping_Fee_2" mappingType="PRIMITIVE_ATTRIBUTE" defaultValue="8">
+    <targetItem identifier="FlsRbPageSize"/>
+    <orderDetails orderId="Fee_3" order="1"/>
+  </mappings>
+  <mappings mappingId="Mapping_Fee_4" mappingType="PRIMITIVE_ATTRIBUTE" defaultValue="255">
+    <targetItem identifier="FlsRbErasedValue"/>
+    <orderDetails orderId="Fee_3" order="3"/>
+  </mappings>
+  <mappings mappingId="Mapping_Fee_4" mappingType="PRIMITIVE_ATTRIBUTE" defaultValue="MCU_RB_MANUAL_CFG">
+    <targetItem identifier="FeeRbMachineType"/>
+    <orderDetails orderId="Fee_2" order="2"/>
+  </mappings>
+  <mappings mappingId="Mapping_Fee_5" mappingType="PRIMITIVE_ATTRIBUTE" defaultValue="true">
+    <targetItem identifier="FeeRbFastCacheInitActive"/>
+    <orderDetails orderId="Fee_3" order="3"/>
+  </mappings>
+  <mappings mappingId="Mapping_Fee_6" mappingType="PRIMITIVE_ATTRIBUTE" defaultValue="false">
+    <targetItem identifier="FeeRbHeaderRecheckActive"/>
+    <orderDetails orderId="Fee_3" order="4"/>
+  </mappings>
+</MappingMetaModel>

@@ -1,0 +1,217 @@
+<?xml version='1.0'?>
+<datamodel version="7.0" 
+           xmlns="http://www.tresos.de/_projects/DataModel2/16/root.xsd" 
+           xmlns:a="http://www.tresos.de/_projects/DataModel2/16/attribute.xsd" 
+           xmlns:v="http://www.tresos.de/_projects/DataModel2/06/schema.xsd" 
+           xmlns:d="http://www.tresos.de/_projects/DataModel2/06/data.xsd">
+
+  <d:ctr type="AUTOSAR" factory="autosar" 
+         xmlns:ad="http://www.tresos.de/_projects/DataModel2/08/admindata.xsd" 
+         xmlns:cd="http://www.tresos.de/_projects/DataModel2/08/customdata.xsd" 
+         xmlns:f="http://www.tresos.de/_projects/DataModel2/14/formulaexpr.xsd" 
+         xmlns:icc="http://www.tresos.de/_projects/DataModel2/08/implconfigclass.xsd" 
+         xmlns:mt="http://www.tresos.de/_projects/DataModel2/11/multitest.xsd"  
+         xmlns:variant="http://www.tresos.de/_projects/DataModel2/11/variant.xsd">
+    <d:lst type="TOP-LEVEL-PACKAGES">
+      <d:ctr name="Radio" type="AR-PACKAGE">
+        <d:lst type="ELEMENTS">
+          <d:chc name="Radio" type="AR-ELEMENT" value="MODULE-CONFIGURATION">
+            <d:ctr type="MODULE-CONFIGURATION">
+              <a:a name="DEF" value="ASPath:/RadioPackage/Radio"/>
+              <d:var name="IMPLEMENTATION_CONFIG_VARIANT" type="ENUMERATION" 
+                     value="VariantPreCompile">
+                <a:a name="IMPORTER_INFO" value="@DEF"/>
+              </d:var>
+              <d:lst name="RadioConfigSet" type="MAP">
+                <d:ctr name="RadioConfigSet_0" type="IDENTIFIABLE">
+                  <d:ctr name="FMCW_CONFIG_PARAMS" type="IDENTIFIABLE">
+                    <d:var name="fmcw_startfreq" type="FLOAT" value="76.0"/>
+                    <d:var name="fmcw_bandwidth" type="FLOAT" value="200.0">
+                      <a:a name="IMPORTER_INFO" value="@DEF"/>
+                    </d:var>
+                    <d:var name="fmcw_chirp_rampup" type="FLOAT" value="25.0">
+                      <a:a name="IMPORTER_INFO" value="@DEF"/>
+                    </d:var>
+                    <d:var name="fmcw_chirp_down" type="FLOAT" value="3.0">
+                      <a:a name="IMPORTER_INFO" value="@DEF"/>
+                    </d:var>
+                    <d:var name="fmcw_chirp_period" type="FLOAT" value="30.0">
+                      <a:a name="IMPORTER_INFO" value="@DEF"/>
+                    </d:var>
+                    <d:var name="nchirp" type="INTEGER" value="256">
+                      <a:a name="IMPORTER_INFO" value="@DEF"/>
+                    </d:var>
+                  </d:ctr>
+                  <d:ctr name="PS_CONFIG_PARAMS" type="IDENTIFIABLE">
+                    <d:var name="phase_scramble_on" type="INTEGER" value="0">
+                      <a:a name="IMPORTER_INFO" value="@DEF"/>
+                    </d:var>
+                    <d:var name="phase_scramble_init_state" type="INTEGER" 
+                           value="3735928495">
+                      <a:a name="IMPORTER_INFO" value="@DEF"/>
+                    </d:var>
+                    <d:var name="phase_scramble_tap" type="INTEGER" 
+                           value="3221226497">
+                      <a:a name="IMPORTER_INFO" value="@DEF"/>
+                    </d:var>
+                    <d:ctr name="phase_scramble_comp" type="IDENTIFIABLE">
+                      <d:var name="phase_scramble_comp0" type="FLOAT" 
+                             value="180.0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="phase_scramble_comp1" type="FLOAT" 
+                             value="180.0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="phase_scramble_comp2" type="FLOAT" 
+                             value="180.0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="phase_scramble_comp3" type="FLOAT" 
+                             value="180.0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                    </d:ctr>
+                    <d:ctr name="phase_scramble_comp_amplitude" 
+                           type="IDENTIFIABLE">
+                      <d:var name="phase_scramble_comp_amplitude0" type="FLOAT" 
+                             value="1.0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="phase_scramble_comp_amplitude1" type="FLOAT" 
+                             value="1.0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="phase_scramble_comp_amplitude2" type="FLOAT" 
+                             value="1.0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="phase_scramble_comp_amplitude3" type="FLOAT" 
+                             value="1.0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                    </d:ctr>
+                  </d:ctr>
+                  <d:ctr name="FH_CONFIG_PARAMS" type="IDENTIFIABLE">
+                    <d:var name="freq_hopping_on" type="INTEGER" value="0">
+                      <a:a name="IMPORTER_INFO" value="@DEF"/>
+                    </d:var>
+                    <d:var name="freq_hopping_init_state" type="INTEGER" 
+                           value="3133071021">
+                      <a:a name="IMPORTER_INFO" value="@DEF"/>
+                    </d:var>
+                    <d:var name="freq_hopping_tap" type="INTEGER" 
+                           value="3221226497">
+                      <a:a name="IMPORTER_INFO" value="@DEF"/>
+                    </d:var>
+                    <d:var name="freq_hopping_deltaf" type="FLOAT" value="6.0">
+                      <a:a name="IMPORTER_INFO" value="@DEF"/>
+                    </d:var>
+                  </d:ctr>
+                  <d:ctr name="CS_CONFIG_PARAMS" type="IDENTIFIABLE">
+                    <d:var name="chirp_shifting_on" type="INTEGER" value="0">
+                      <a:a name="IMPORTER_INFO" value="@DEF"/>
+                    </d:var>
+                    <d:var name="chirp_shifting_init_state" type="INTEGER" 
+                           value="2271560481">
+                      <a:a name="IMPORTER_INFO" value="@DEF"/>
+                    </d:var>
+                    <d:var name="chirp_shifting_init_tap" type="INTEGER" 
+                           value="3221226497">
+                      <a:a name="IMPORTER_INFO" value="@DEF"/>
+                    </d:var>
+                    <d:var name="chirp_shifting_delay" type="FLOAT" value="1.0">
+                      <a:a name="IMPORTER_INFO" value="@DEF"/>
+                    </d:var>
+                  </d:ctr>
+                  <d:ctr name="AGC_CONFIG_PARAMS" type="IDENTIFIABLE">
+                    <d:var name="agc_mode" type="INTEGER" value="0">
+                      <a:a name="IMPORTER_INFO" value="@DEF"/>
+                    </d:var>
+                    <d:var name="agc_tia_thres" type="FLOAT" value="0.5">
+                      <a:a name="IMPORTER_INFO" value="@DEF"/>
+                    </d:var>
+                    <d:var name="agc_vga1_thres" type="FLOAT" value="0.8">
+                      <a:a name="IMPORTER_INFO" value="@DEF"/>
+                    </d:var>
+                    <d:var name="agc_vga2_thres" type="FLOAT" value="0.8">
+                      <a:a name="IMPORTER_INFO" value="@DEF"/>
+                    </d:var>
+                  </d:ctr>
+                  <d:ctr name="RF_CONFIG_PARAMS" type="IDENTIFIABLE">
+                    <d:var name="rf_tia_gain" type="INTEGER" value="2">
+                      <a:a name="IMPORTER_INFO" value="@DEF"/>
+                    </d:var>
+                    <d:var name="rf_vga1_gain" type="INTEGER" value="5">
+                      <a:a name="IMPORTER_INFO" value="@DEF"/>
+                    </d:var>
+                    <d:var name="rf_vga2_gain" type="INTEGER" value="3">
+                      <a:a name="IMPORTER_INFO" value="@DEF"/>
+                    </d:var>
+                    <d:var name="rf_hpf1" type="INTEGER" value="2">
+                      <a:a name="IMPORTER_INFO" value="@DEF"/>
+                    </d:var>
+                    <d:var name="rf_hpf2" type="INTEGER" value="1">
+                      <a:a name="IMPORTER_INFO" value="@DEF"/>
+                    </d:var>
+                  </d:ctr>
+                  <d:ctr name="VELAMB_CONFIG_PARAMS" type="IDENTIFIABLE">
+                    <d:var name="anti_velamb_en" type="BOOLEAN" value="false">
+                      <a:a name="IMPORTER_INFO" value="@DEF"/>
+                    </d:var>
+                    <d:var name="anti_velamb_delay" type="INTEGER" value="10">
+                      <a:a name="IMPORTER_INFO" value="@DEF"/>
+                    </d:var>
+                  </d:ctr>
+                  <d:ctr name="OTHER_CONFIG_PARAMS" type="IDENTIFIABLE">
+                    <d:var name="ddm_en" type="BOOLEAN" value="false">
+                      <a:a name="IMPORTER_INFO" value="@DEF"/>
+                    </d:var>
+                    <d:var name="adc_freq" type="STRING" value="20">
+                      <a:a name="IMPORTER_INFO" value="@DEF"/>
+                    </d:var>
+                    <d:ctr name="tx_groups" type="IDENTIFIABLE">
+                      <d:var name="tx_groups0" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="tx_groups1" type="INTEGER" value="1">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="tx_groups2" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="tx_groups3" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                    </d:ctr>
+                    <d:ctr name="tx_phase_value" type="IDENTIFIABLE">
+                      <d:var name="tx_phase_value0" type="INTEGER" value="45">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="tx_phase_value1" type="INTEGER" value="45">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="tx_phase_value2" type="INTEGER" value="45">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="tx_phase_value3" type="INTEGER" value="45">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                    </d:ctr>
+                    <d:var name="bpm_mode" type="BOOLEAN" value="false">
+                      <a:a name="IMPORTER_INFO" value="@DEF"/>
+                    </d:var>
+                    <d:var name="nvarray" type="INTEGER" value="1">
+                      <a:a name="IMPORTER_INFO" value="@DEF"/>
+                    </d:var>
+                  </d:ctr>
+                </d:ctr>
+              </d:lst>
+            </d:ctr>
+          </d:chc>
+        </d:lst>
+      </d:ctr>
+    </d:lst>
+  </d:ctr>
+
+</datamodel>

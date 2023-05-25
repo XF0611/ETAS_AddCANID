@@ -1,0 +1,794 @@
+;-------------------------------------------------------------------------------------------
+; FBL: OIP_FBL_ON_CAN
+;-------------------------------------------------------------------------------------------
+
+;-------------------------------------------------------------------------------------------
+; GENERAL
+;-------------------------------------------------------------------------------------------
+#define ECU_ADDRESS                                     $E4
+#define EXT                                             "BIN"
+
+;-------------------------------------------------------------------------------------------
+; PATHS
+;-------------------------------------------------------------------------------------------
+#define CONFIG                                          "DUMMYPATH\OIP_FBL_ON_CAN.cnf"
+#define SEED_PROG                                       "DUMMYPATH\SeedAndKey.dll"
+#define SEED                                            $00
+
+#define APPLICATION_DATAFINGERPRINT                     "DUMMYPATH\Application_datafingerprint.bin"
+#define APPLICATION_SOFTWAREFINGERPRINT					"DUMMYPATH\Application_softwarefingerprint.bin"
+
+#define APPLICATION_BIN                                 "DUMMYPATH\App_Pf0.bin"
+#define APPLICATION_PF1_BIN								"DUMMYPATH\app_Pf1.bin"
+#define APPLICATION_PF2_BIN								"DUMMYPATH\app_Pf2.bin"
+#define APPLICATION_PF3_BIN								"DUMMYPATH\app_Pf3.bin"
+
+#define CALIBRATION_BIN                                 "DUMMYPATH\Cal.bin"
+;-------------------------------------------------------------------------------------------
+; CONVERSIONS
+;------------------------------------------------------------------------------------------- 0x802c0000
+
+#define SBL_CONV                                        -h,-i,-b,-q,-f00,-s0x007B0000,-e0x007B7FFF,-x0x007B0000,-y0x007B7FFF,%2
+#define PROG_CONV                                       -h,-i,-b,-q,-f00,-s0x00380000,-e0x003E5FFF,-x0x00380000,-y0x003E5FFF,%1
+#define CAL_CONV                                        -h,-i,-b,-q,-f00,-s0x0030C000,-e0x0030FFFF,-x0x0030C000,-y0x0030FFFF,%1
+
+;#define PROG1_CONV                                      -h,-i,-b,-q,-f00,-s0x00100000,-e0x001FFFFF,-x0x00100000,-y0x001FFFFF,%1
+;#define PROG2_CONV                                      -h,-i,-b,-q,-f00,-s0x00200000,-e0x002FFFFF,-x0x00200000,-y0x002FFFFF,%1
+;#define PROG3_CONV                                      -h,-i,-b,-q,-f00,-s0x00300000,-e0x003FFFFF,-x0x00300000,-y0x003FFFFF,%1
+;-------------------------------------------------------------------------------------------
+; TIMEOUTS
+;-------------------------------------------------------------------------------------------
+#define TIMEOUT_MSEC_DEL                                600000
+#define TIMEOUT_MSEC                                    600000
+
+;-------------------------------------------------------------------------------------------
+; CRC
+;-------------------------------------------------------------------------------------------
+#define M_32_BIT_BY_CRC32                               $020404
+
+;-------------------------------------------------------------------------------------------
+; GENERAL
+;-------------------------------------------------------------------------------------------
+#define VAR_ACTION                                      1  ; variable for action
+#define PAR_ACTION                                      %4 ; parameter for action
+#define SIB_VAR_ACTION                                  2
+#define SIB_PAR_ACTION                                  %3
+#define FALSE                                           0
+#define TRUE                                            1
+#define POPUP_FALSE                                     $0100 ; write text into buffer
+#define POPUP_TRUE                                      $0101 ; open PopUp window and display buffered text
+#define POPUP_WINDOW                                    $0100
+#define NO_NEW_LINE                                     $0002
+#define ESCAPE                                          27
+#define WARNING                                         11
+#define TRY2_COUNTER                                    3 ; variable for check second attempt
+
+;Format values (UDSX_ERASE_FORMAT, UDSX_VERIFY_FORMAT)
+#define FMT_VOID                                        00 ; none
+#define FMT_AALFI                                       01 ; aalfi
+#define FMT_START_ADDR                                  02 ; start address
+#define FMT_END_ADDR                                    03 ; end address
+#define FMT_MEM_LEN                                     04 ; memory length
+#define FMT_CHKSUM                                      05 ; checksum
+#define FMT_CHKSUM_LEN                                  06 ; checksum length
+#define FMT_CHKSUM_ALG                                  07 ; checksum algorithm
+
+;Return values
+#define FPA_ACK                                         $00000000
+#define FPA_NACK                                        $80000001
+#define FPA_ABORT                                       $80000002
+#define FPA_RETRY                                       $80000003
+#define FPA_PARAM_OUT_OF_RANGE                          $80000012
+
+;Sessions
+#define DSC_DEFAULT_SESSION                             01
+#define DSC_PROGRAMMING_SESSION                         02
+#define DSC_EXTENDED_SESSION                            03
+
+;Sessions with pos. resp. suppression
+#define DSC_PROGRAMMING_SESSION_POS_RES_SUP             $82
+#define DSC_EXTENDED_SESSION_POS_RES_SUP                $83
+
+;Reset Type
+#define ECU_RESET_TYPE_HARD                             01
+#define ECU_RESET_TYPE_KEYOFFON                         02
+#define ECU_RESET_TYPE_SOFT                             03
+
+
+;-------------------------------------------------------------------------------------------
+; DIDs And Port-Specific Services Parameters
+;-------------------------------------------------------------------------------------------
+
+;Services
+#define CDTCS_DTC_OFF                                   $02 ; Switch off DiagnosticTroubleCodes
+#define CDTCS_DTC_ON                                    $01 ; Switch on DiagnosticTroubleCodes
+
+;----------------------------------------------------------------------------
+; Macro: UDS_COMMUNICATION_CONTROL
+;----------------------------------------------------------------------------
+#define EN_RX_TX                                        $00 ; enableRxAndTx
+#define DIS_RX_TX                                       $03 ; disableRxAndTx
+#define CC_COMMUNICATION_TYPE                           $01
+
+;----------------------------------------------------------------------------
+; Macro: UDS_READ_DATA_BY_IDENTIFIER
+;----------------------------------------------------------------------------
+#define CC_WRITE_BOOTSOFTWAREFINGERPRINT_F183			$F183
+#define CC_WRITE_APPLICATIONSOFTWAREFINGERPRINT_F184	$F184
+#define	CC_WRITE_APPLICATIONDATAFINGERPRINT_F185		$F185
+
+#define CC_READ_BOOTSOFTWAREFINGERPRINT_F183			$F183
+#define CC_READ_APPLICATIONSOFTWAREFINGERPRINT_F184		$F184
+#define CC_READ_APPLICATIONDATAFINGERPRINT_F185			$F185
+
+;----------------------------------------------------------------------------
+; Macro: UDS_ROUTINE_CONTROL
+;----------------------------------------------------------------------------
+#define CHECK_PROGRAMMING_DEPENDENCIES                  $FF01
+#define START_STAY_IN_BOOT                              $F518
+#define CC_CHECK_PROGRAMMING_PRECONDITION               $0203
+
+;-------------------------------------------------------------------------------------------
+;-  MAIN PROGRAM
+;-------------------------------------------------------------------------------------------
+; initialization
+[START]
+    DEFAULT_SCREEN_LAYOUT(0)
+    EXTENDED_MESSAGE(FALSE)
+    SET_VARIABLE(VAR_ACTION,PAR_ACTION)
+    SET_VARIABLE(SIB_VAR_ACTION, SIB_PAR_ACTION)
+        case TRUE : INIT
+        default: ERROR_MSG
+[START_END]
+
+[INIT]
+    DISPLAY_MESSAGE("---------------------------------------------------------------------",FALSE)
+    DISPLAY_MESSAGE("--------------->Welcome to use ETAS FBL Flashing Tool<---------------",FALSE)
+    DISPLAY_MESSAGE("---------------------------------------------------------------------",FALSE)
+    DISPLAY_MESSAGE("->P1B. Init Prof", FALSE)
+    DISPLAY_MESSAGE("->Initializing System...", FALSE)
+    INIT_FLASH_PROGRAMMING(ECU_ADDRESS,1,CONFIG)
+        case TRUE : INIT_COM
+        default: INIT_ERROR
+[INIT_END]
+
+[INIT_COM]
+    ; Initializes the communication on the CAN bus using the entries in the cnf-File.
+    ; This command must be executed before any commands sending UDS messages. Success
+    ; of the command ensures that the CAN communication is initialized. As it requires
+    ; the cnf-File it must be executed after INIT_FLASH_PROGRAMMING.
+    DISPLAY_MESSAGE("->P1E. Init Prof - OK", FALSE)
+    DISPLAY_MESSAGE("->P2B. Init communication", FALSE)
+    UDSB_INIT_COMMUNICATION
+        case FPA_ACK : CHECK_STAY_IN_BOOT
+        default : INIT_ERROR
+[INIT_COM_END]
+
+[CHECK_STAY_IN_BOOT]
+    ;check stay in boot
+    GET_VARIABLE(SIB_VAR_ACTION)
+        case 1: CHECK_CONVERT_ACTION
+        case 2: CHECK_CONVERT_ACTION
+        default : FINISH_SEQ
+[CHECK_STAY_IN_BOOT_END]
+
+
+[CHECK_CONVERT_ACTION]
+    ; Get action variable and perform requested procedure
+    GET_VARIABLE(VAR_ACTION)
+        case 1  : CONVERT_APP_AND_CAL
+        case 2  : CONVERT_CALIB_ONLY
+        case 3  : CONVERT_APP_ONLY
+        default : FINISH_SEQ
+[CHECK_CONVERT_ACTION_END]
+
+[CONVERT_APP_AND_CAL]
+    CALL(convert_application_calibration)
+        case TRUE : START_BOOT_SEQ
+        default : ERROR_MSG
+[CONVERT_APP_AND_CAL_END]
+
+[CONVERT_CALIB_ONLY]
+    CALL(convert_calibration)
+        case TRUE : START_BOOT_SEQ
+        default : ERROR_MSG
+[CONVERT_CALIB_ONLY_END]
+
+[CONVERT_APP_ONLY]
+    CALL(convert_Application)
+        case TRUE : START_BOOT_SEQ
+        default : ERROR_MSG
+[CONVERT_APP_ONLY_END]
+
+;-------------------------------------------------------------------------------------------
+;- Reprogramming sequence
+;-------------------------------------------------------------------------------------------
+
+[START_BOOT_SEQ]
+    DISPLAY_MESSAGE("->Initialization completed, starting boot sequence", FALSE)
+        default: PRE_PROGRAMMING
+[START_BOOT_SEQ_END]
+
+[PRE_PROGRAMMING]
+    CALL(pre_programming_seq)
+        case TRUE : PROGRAMMING
+        default : ERROR_MSG
+[PRE_PROGRAMMING_END]
+
+[PROGRAMMING]
+    CALL(programming_seq)
+        case TRUE : POST_PROGRAMMING
+        default : ERROR_MSG
+[PROGRAMMING_END]
+
+[POST_PROGRAMMING]
+    CALL(post_programming_seq)
+        case TRUE : FINISH_SEQ
+        default : ERROR_MSG
+[POST_PROGRAMMING_END]
+
+;-------------------------------------------------------------------------------------------
+;-  Handlers
+;-------------------------------------------------------------------------------------------
+[FINISH_SEQ]
+    DISPLAY_MESSAGE ("FBL Downloading Action finished Successfully!"   ,FALSE)
+    DISPLAY_MESSAGE ("Please Disconnect your client side PC or tester,",FALSE)
+    DISPLAY_MESSAGE ("If Application Software is not running,"         ,FALSE)
+    DISPLAY_MESSAGE ("please do a power on reset manually again."      ,FALSE)
+    DISPLAY_MESSAGE ("Thank you for using ETAS products. "             ,FALSE)
+    DISPLAY_TIMER
+        default : EXIT
+[FINISH_SEQ_END]
+
+[ERROR_MSG]
+    DISPLAY_MESSAGE ("Please check the prof file for ERROR.", POPUP_TRUE)
+    DISPLAY_ERROR_MESSAGE (TRUE)
+        default : EXIT
+[ERROR_MSG_END]
+
+[INIT_ERROR]
+    DISPLAY_MESSAGE("->Initializing System: Error, Finished", POPUP_FALSE)
+        default: ERROR_MSG
+[INIT_ERROR_END]
+
+;-------------------------------------------------------------------------------------------
+;-  PROG_FLASH Download procedure
+;-------------------------------------------------------------------------------------------
+procedure download_app_cal
+{
+    [PROG_CAL_ZONE]
+        CALL(download_cal_only)
+        case TRUE: PROG_APP_ZONE
+        default : PROG_CAL_ERROR_MSG
+    [PROG_CAL_ZONE_END]
+
+    [PROG_CAL_ERROR_MSG]
+        DISPLAY_MESSAGE ("=>Download calibration failed", POPUP_FALSE)
+        default : $return FALSE
+    [PROG_CAL_ERROR_MSG_END]
+
+    [PROG_APP_ZONE]
+        CALL(download_app_only)
+        case TRUE: $return TRUE
+        default : PROG_APP_ERROR_MSG
+    [PROG_APP_ZONE_END]
+
+    [PROG_APP_ERROR_MSG]
+        DISPLAY_MESSAGE ("=>Download Application failed", POPUP_FALSE)
+        default : $return FALSE
+    [PROG_APP_ERROR_MSG_END]
+}
+
+procedure download_app_only
+{
+
+    [DOWNLOAD_FLASH_DRIVER]
+        DISPLAY_MESSAGE("->Start Writing Application Software Finger Print", FALSE)
+		UDS_WRITE_DATA_BY_IDENTIFIER_FILE(CC_WRITE_APPLICATIONSOFTWAREFINGERPRINT_F184, APPLICATION_SOFTWAREFINGERPRINT)
+        CALL(download_sbl_only)
+        case TRUE: ERASE_FLASH_APP_AREA
+        default : $return FALSE
+    [DOWNLOAD_FLASH_DRIVER_END]
+
+    [ERASE_FLASH_APP_AREA]
+        WAIT(500)
+        DISPLAY_MESSAGE("->Erasing Application 0 flash area, begin, Please wait ", FALSE)
+        DISPLAY_MESSAGE("->Erasing... ", FALSE)
+        UDSX_ERASE_MEMORY_FORMAT(2, FMT_AALFI, FMT_START_ADDR, FMT_MEM_LEN, TIMEOUT_MSEC_DEL)
+            case FPA_ACK : PROG_APP_ZONE ;ERASE_FLASH_APP1_AREA
+            case FPA_NACK : E_ERASE
+            default : $return FALSE
+    [ERASE_FLASH_APP_AREA_END]
+	
+	;[ERASE_FLASH_APP1_AREA]
+        ;WAIT(500)
+				;DISPLAY_MESSAGE("->Erasing Application 1 flash area, begin, Please wait ", FALSE)
+				;DISPLAY_MESSAGE("->Erasing... ", FALSE)
+				;UDSX_ERASE_MEMORY_FORMAT(3, FMT_AALFI, FMT_START_ADDR, FMT_MEM_LEN, TIMEOUT_MSEC_DEL)
+            ;case FPA_ACK : ERASE_FLASH_APP2_AREA
+            ;case FPA_NACK : E_ERASE
+            ;default : $return FALSE
+	;[ERASE_FLASH_APP1_AREA_END]
+
+	;[ERASE_FLASH_APP2_AREA]
+        ;WAIT(500)
+				;DISPLAY_MESSAGE("->Erasing Application 2 flash area, begin, Please wait ", FALSE)
+				;DISPLAY_MESSAGE("->Erasing... ", FALSE)
+				;UDSX_ERASE_MEMORY_FORMAT(4, FMT_AALFI, FMT_START_ADDR, FMT_MEM_LEN, TIMEOUT_MSEC_DEL)
+            ;case FPA_ACK : ERASE_FLASH_APP3_AREA
+            ;case FPA_NACK : E_ERASE
+            ;default : $return FALSE
+	;[ERASE_FLASH_APP2_AREA_END]
+
+    ;[ERASE_FLASH_APP3_AREA]
+        ;WAIT(500)
+				;DISPLAY_MESSAGE("->Erasing Application 3 flash area, begin, Please wait ", FALSE)
+				;DISPLAY_MESSAGE("->Erasing... ", FALSE)
+				;UDSX_ERASE_MEMORY_FORMAT(5, FMT_AALFI, FMT_START_ADDR, FMT_MEM_LEN, TIMEOUT_MSEC_DEL)
+            ;case FPA_ACK : PROG_APP_ZONE
+            ;case FPA_NACK : E_ERASE
+            ;default : $return FALSE
+	;[ERASE_FLASH_APP3_AREA_END]
+		
+    [E_ERASE]
+        DISPLAY_MESSAGE("=>Flash Erasing Operation NACK", POPUP_FALSE)
+            default : $return FALSE
+    [E_ERASE_END]
+
+    [PROG_APP_ZONE]
+        WAIT(1000)
+        DISPLAY_MESSAGE("->Programing Flash Application Sectors ", FALSE)
+        UDSX_DOWNLOAD_MEMORY(APPLICATION_BIN, 2, 2, 0, "")
+            case FPA_ACK : VERIFY_APP_ZONE
+            default : PROG_NOK
+    [PROG_APP_ZONE_END]
+
+    [VERIFY_APP_ZONE]
+        DISPLAY_MESSAGE("->Verifying Application Area... ", FALSE)
+        UDSX_VERIFY_MEMORY_FORMAT(APPLICATION_BIN, 2, 2, $FFFFFFFF, M_32_BIT_BY_CRC32, 00, 00, 05, 00, 00, TIMEOUT_MSEC)
+            case FPA_ACK : $return TRUE ;PROG_APP1_ZONE
+            case FPA_NACK: CRC_NOK
+            default : $return FALSE
+    [VERIFY_APP_ZONE_END]
+
+
+
+    ;[PROG_APP1_ZONE]
+        ;WAIT(1000)
+        ;DISPLAY_MESSAGE("->Programing Flash Application 1 Sectors ", FALSE)
+        ;UDSX_DOWNLOAD_MEMORY(APPLICATION_PF1_BIN, 4, 4, 0, "")
+            ;case FPA_ACK : VERIFY_APP1_ZONE
+            ;default : PROG_NOK
+    ;[PROG_APP1_ZONE_END]
+
+    ;[VERIFY_APP1_ZONE]
+        ;DISPLAY_MESSAGE("->Verifying Application 1 Area... ", FALSE)
+        ;UDSX_VERIFY_MEMORY_FORMAT(APPLICATION_PF1_BIN, 4, 4, $FFFFFFFF, M_32_BIT_BY_CRC32, 00, 00, 05, 00, 00, TIMEOUT_MSEC)
+            ;case FPA_ACK : PROG_APP2_ZONE
+            ;case FPA_NACK: CRC_NOK
+            ;default : $return FALSE
+    ;[VERIFY_APP1_ZONE_END]
+
+
+    ;[PROG_APP2_ZONE]
+        ;WAIT(1000)
+        ;DISPLAY_MESSAGE("->Programing Flash Application 2 Sectors ", FALSE)
+        ;UDSX_DOWNLOAD_MEMORY(APPLICATION_PF2_BIN, 5, 5, 0, "")
+            ;case FPA_ACK : VERIFY_APP2_ZONE
+            ;default : PROG_NOK
+    ;[PROG_APP2_ZONE_END]
+
+    ;[VERIFY_APP2_ZONE]
+        ;DISPLAY_MESSAGE("->Verifying Application 2 Area... ", FALSE)
+        ;UDSX_VERIFY_MEMORY_FORMAT(APPLICATION_PF2_BIN, 5, 5, $FFFFFFFF, M_32_BIT_BY_CRC32, 00, 00, 05, 00, 00, TIMEOUT_MSEC)
+            ;case FPA_ACK : PROG_APP3_ZONE
+            ;case FPA_NACK: CRC_NOK
+            ;default : $return FALSE
+    ;[VERIFY_APP2_ZONE_END]
+
+    ;[PROG_APP3_ZONE]
+        ;WAIT(1000)
+        ;DISPLAY_MESSAGE("->Programing Flash Application 3 Sectors ", FALSE)
+        ;UDSX_DOWNLOAD_MEMORY(APPLICATION_PF3_BIN, 6, 6, 0, "")
+            ;case FPA_ACK : VERIFY_APP3_ZONE
+            ;default : PROG_NOK
+    ;[PROG_APP3_ZONE_END]
+
+    ;[VERIFY_APP3_ZONE]
+        ;DISPLAY_MESSAGE("->Verifying Application 3 Area... ", FALSE)
+        ;UDSX_VERIFY_MEMORY_FORMAT(APPLICATION_PF3_BIN, 6, 6, $FFFFFFFF, M_32_BIT_BY_CRC32, 00, 00, 05, 00, 00, TIMEOUT_MSEC)
+            ;case FPA_ACK : $return TRUE
+            ;case FPA_NACK: CRC_NOK
+            ;default : $return FALSE
+    ;[VERIFY_APP3_ZONE_END]
+
+	
+    [CRC_NOK]
+        DISPLAY_MESSAGE("=>CRC Check failed", POPUP_FALSE)
+            default : $return FALSE
+    [CRC_NOK_END]
+
+    [PROG_NOK]
+        DISPLAY_MESSAGE("=>Download failed", POPUP_FALSE)
+            default : $return FALSE
+    [PROG_NOK_END]
+}
+;-------------------------------------------------------------------------------------------
+;-  DATA_FLASH Download procedure
+;-------------------------------------------------------------------------------------------
+procedure download_cal_only
+{
+			
+    [DOWNLOAD_FLASH_DRIVER]
+    	DISPLAY_MESSAGE("->Start Writing Application Data Finger Print", FALSE)
+		UDS_WRITE_DATA_BY_IDENTIFIER_FILE(CC_WRITE_APPLICATIONDATAFINGERPRINT_F185, APPLICATION_DATAFINGERPRINT)
+        CALL(download_sbl_only)
+        case TRUE: ERASE_FLASH_CAL_AREA
+        default : $return FALSE
+    [DOWNLOAD_FLASH_DRIVER_END]
+
+    [ERASE_FLASH_CAL_AREA]
+        DISPLAY_MESSAGE("->Erasing Calibration flash area, begin, Please wait ", FALSE)
+        DISPLAY_MESSAGE("->Erasing... ", FALSE)
+        UDSX_ERASE_MEMORY_FORMAT(1, FMT_AALFI, FMT_START_ADDR, FMT_MEM_LEN, TIMEOUT_MSEC_DEL)
+            case FPA_ACK : PROG_CAL_ZONE
+            case FPA_NACK : E_ERASE
+            default : $return FALSE
+    [ERASE_FLASH_CAL_AREA_END]
+
+    [E_ERASE]
+        DISPLAY_MESSAGE("=>Flash Erasing Operation NACK", POPUP_FALSE)
+            default : $return FALSE
+    [E_ERASE_END]
+
+    [PROG_CAL_ZONE]
+        WAIT(1000);
+        DISPLAY_MESSAGE("->Programing Flash Calibration Data Sectors ", FALSE)
+        UDSX_DOWNLOAD_MEMORY(CALIBRATION_BIN, 3, 3, 0, "")
+            case FPA_ACK : APPL_VERIFY
+            default : $return FALSE
+    [PROG_CAL_ZONE_END]
+
+    [APPL_VERIFY]
+        DISPLAY_MESSAGE("->Verifying Calibration Area... ", FALSE)
+        UDSX_VERIFY_MEMORY_FORMAT(CALIBRATION_BIN, 3, 3, $FFFFFFFF, M_32_BIT_BY_CRC32, 00, 00, 05, 00, 00, TIMEOUT_MSEC)
+            case FPA_ACK : $return TRUE
+            case FPA_NACK: CRC_NOK
+            default : $return FALSE
+    [APPL_VERIFY_END]
+
+    [CRC_NOK]
+        DISPLAY_MESSAGE("=>CRC Check failed", POPUP_FALSE)
+            default : $return FALSE
+    [CRC_NOK_END]
+}
+
+;-------------------------------------------------------------------------------------------
+;-  SBL Download procedure
+;-------------------------------------------------------------------------------------------
+procedure download_sbl_only
+{
+    [DOWNLOAD_SBL]
+        DISPLAY_MESSAGE ("->Convert His Flash Loader (SBL) hex file --> binary file ",FALSE)
+        DISPLAY_MESSAGE ("->Please Wait... ",FALSE)
+        RUN_DLL ("CONVERT.DLL",convert,SBL_CONV)
+        DISPLAY_MESSAGE("Done...", FALSE)
+        WAIT(1000);
+        DISPLAY_MESSAGE("->Downloading SBL...", FALSE)
+        ;UDSX_DOWNLOAD_MEMORY("%2.bin", 1, 1, 0, "")
+		DISPLAY_MESSAGE("->UDSX Download check ", FALSE)
+        case FPA_ACK : $return TRUE ;VERIFY_SBL_ZONE
+        case FPA_NACK : $return TRUE
+        default : $return TRUE ;FALSE
+    [DOWNLOAD_SBL_END]
+
+    ;[VERIFY_SBL_ZONE]
+        ;DISPLAY_MESSAGE("->Downloading SBL - Finish", FALSE)
+        ;DISPLAY_MESSAGE("Verifying SBL...", FALSE)
+      ;UDSX_VERIFY_MEMORY_FORMAT("%2.bin", 1, 1, $FFFFFFFF, M_32_BIT_BY_CRC32, 00, 00, 05, 00, 00, TIMEOUT_MSEC)
+            ;case FPA_ACK : $return TRUE
+            ;case FPA_NACK: $return FALSE
+            ;default : $return FALSE
+    ;[VERIFY_SBL_ZONE_END]
+}
+
+;-------------------------------------------------------------------------------------------
+;- Convert the hex file
+;-------------------------------------------------------------------------------------------
+procedure convert_application_calibration
+{
+    [CONVERT_APP_ZONE]
+        CALL(convert_Application)
+            case TRUE : CONVERT_CAL_ZONE
+            default : CONVERT_ERROR_MSG
+    [CONVERT_APP_ZONE_END]
+
+    [CONVERT_CAL_ZONE]
+        WAIT(1000)
+        CALL(convert_calibration)
+            case TRUE: $return TRUE
+            default : CONVERT_ERROR_MSG
+    [CONVERT_CAL_ZONE_END]
+
+    [CONVERT_ERROR_MSG]
+        DISPLAY_MESSAGE("=>Convert the Application & Calibration File has Failed!", POPUP_FALSE)
+            default : $return FALSE
+    [CONVERT_ERROR_MSG_END]
+}
+
+procedure convert_Application
+{
+    [APPLICATION_FILE_ZONE_APP0]
+        DISPLAY_MESSAGE ("->Convert hex file --> Application binary file ",FALSE)
+        DISPLAY_MESSAGE ("->Please Wait... ",FALSE)'
+		CALL(convert_Application0)
+        case TRUE : $return TRUE ;APPLICATION_FILE_ZONE_APP1
+        default : $return FALSE
+    [APPLICATION_FILE_ZONE_APP0_END]
+	
+    ;[APPLICATION_FILE_ZONE_APP1]
+		;CALL(convert_Application1)
+        ;case TRUE : APPLICATION_FILE_ZONE_APP2
+        ;default : $return FALSE
+    ;[APPLICATION_FILE_ZONE_APP1_END]
+
+    ;[APPLICATION_FILE_ZONE_APP2]
+		;CALL(convert_Application2)
+        ;case TRUE : APPLICATION_FILE_ZONE_APP3
+        ;default : $return FALSE
+    ;[APPLICATION_FILE_ZONE_APP2_END]
+
+    ;[APPLICATION_FILE_ZONE_APP3]
+		;CALL(convert_Application3)
+        ;case TRUE : $return TRUE
+        ;default : $return FALSE
+    ;[APPLICATION_FILE_ZONE_APP3_END]
+
+}
+
+procedure convert_Application0
+{
+    [APPLICATION0_FILE_ZONE]
+        DISPLAY_MESSAGE ("->Convert Application 0 hex file --> Application 0 binary file ",FALSE)
+        DISPLAY_MESSAGE ("->Please Wait... ",FALSE)
+        RUN_DLL ("CONVERT.DLL",convert,PROG_CONV, APPLICATION_BIN)
+        case TRUE : $return TRUE
+        default : CONVERT_ERROR_MSG
+    [APPLICATION0_FILE_ZONE_END]
+	
+    [CONVERT_ERROR_MSG]
+        DISPLAY_MESSAGE("=>Convert the Application 0 File has Failed!", POPUP_FALSE)
+            default : $return FALSE
+    [CONVERT_ERROR_MSG_END]
+}
+
+procedure convert_Application1
+{
+    [APPLICATION1_FILE_ZONE]
+        DISPLAY_MESSAGE ("->Convert Application 1 hex file --> Application 1 binary file ",FALSE)
+        DISPLAY_MESSAGE ("->Please Wait... ",FALSE)
+        RUN_DLL ("CONVERT.DLL",convert,PROG1_CONV, APPLICATION_PF1_BIN)
+        case TRUE : $return TRUE
+        default : CONVERT_ERROR_MSG
+    [APPLICATION1_FILE_ZONE_END]
+	
+    [CONVERT_ERROR_MSG]
+        DISPLAY_MESSAGE("=>Convert the Application 1 File has Failed!", POPUP_FALSE)
+            default : $return FALSE
+    [CONVERT_ERROR_MSG_END]
+}
+
+procedure convert_Application2
+{
+    [APPLICATION2_FILE_ZONE]
+        DISPLAY_MESSAGE ("->Convert Application 2 hex file --> Application 2 binary file ",FALSE)
+        DISPLAY_MESSAGE ("->Please Wait... ",FALSE)
+        RUN_DLL ("CONVERT.DLL",convert,PROG2_CONV, APPLICATION_PF2_BIN)
+        case TRUE : $return TRUE
+        default : CONVERT_ERROR_MSG
+    [APPLICATION2_FILE_ZONE_END]
+	
+    [CONVERT_ERROR_MSG]
+        DISPLAY_MESSAGE("=>Convert the Application 2 File has Failed!", POPUP_FALSE)
+            default : $return FALSE
+    [CONVERT_ERROR_MSG_END]
+}
+
+procedure convert_Application3
+{
+    [APPLICATION3_FILE_ZONE]
+        DISPLAY_MESSAGE ("->Convert Application 3 hex file --> Application 3 binary file ",FALSE)
+        DISPLAY_MESSAGE ("->Please Wait... ",FALSE)
+        RUN_DLL ("CONVERT.DLL",convert,PROG3_CONV, APPLICATION_PF3_BIN)
+        case TRUE : $return TRUE
+        default : CONVERT_ERROR_MSG
+    [APPLICATION3_FILE_ZONE_END]
+	
+    [CONVERT_ERROR_MSG]
+        DISPLAY_MESSAGE("=>Convert the Application 3 File has Failed!", POPUP_FALSE)
+            default : $return FALSE
+    [CONVERT_ERROR_MSG_END]
+}
+
+
+procedure convert_calibration
+{
+    [CALIBRATION_FILE_ZONE]
+        DISPLAY_MESSAGE ("->Convert hex file --> Calibration binary file ",FALSE)
+        DISPLAY_MESSAGE ("->Please Wait... ",FALSE)
+        RUN_DLL ("CONVERT.DLL",convert,CAL_CONV, CALIBRATION_BIN)
+        case TRUE : $return TRUE
+        default : CONVERT_ERROR_MSG
+    [APPLICATION_FILE_ZONE_END]
+
+    [CONVERT_ERROR_MSG]
+        DISPLAY_MESSAGE("=>Convert the Calibration File has Failed!", POPUP_FALSE)
+            default : $return FALSE
+    [CONVERT_ERROR_MSG_END]
+}
+
+;-------------------------------------------------------------------------------------------
+;- Reprogramming procedure
+;-------------------------------------------------------------------------------------------
+
+procedure pre_programming_seq
+{
+    [APPL_START_EXT_SESSION]
+        DISPLAY_MESSAGE("->Switching diagnostic session: Extended session", FALSE)
+        UDS_DIAGNOSTIC_SESSION_CONTROL(DSC_EXTENDED_SESSION)
+            case FPA_ACK : CNT_DTC_SETTING_OFF
+            default : PRE_PROG_ERROR_MSG
+    [APPL_START_EXT_SESSION_END]
+	
+	[CNT_DTC_SETTING_OFF]
+        DISPLAY_MESSAGE("->Control DTC Setting: OFF", FALSE)
+        UDS_CONTROL_DTC_SETTING(CDTCS_DTC_OFF, "")
+            default : COMM_CNTR_OFF
+    [CNT_DTC_SETTING_OFF_END]
+	
+	[COMM_CNTR_OFF]
+        DISPLAY_MESSAGE("->Communication Control: Disable Rx And Tx", FALSE)
+        UDS_COMMUNICATION_CONTROL(DIS_RX_TX, CC_COMMUNICATION_TYPE)
+            case FPA_ACK : $return TRUE
+            default : PRE_PROG_ERROR_MSG
+    [COMM_CNTR_OFF_END]
+	
+
+    [PRE_PROG_ERROR_MSG]
+        DISPLAY_MESSAGE ("ERROR at Pre-programming sequence.", POPUP_TRUE)
+        DISPLAY_MESSAGE ("Please check the prof file for ERROR.", POPUP_TRUE)
+        DISPLAY_ERROR_MESSAGE (TRUE)
+            default : EXIT
+    [PRE_PROG_ERROR_MSG_END]
+}
+
+procedure programming_seq
+{
+    [APPL_START_PROG_SESSION]
+        DISPLAY_MESSAGE("->Switching diagnostic session: Programming session", FALSE)
+        UDS_DIAGNOSTIC_SESSION_CONTROL(DSC_PROGRAMMING_SESSION)
+            case FPA_ACK : JUMP_DELAY
+            default : PROG_ERROR_MSG
+    [APPL_START_PROG_SESSION_END]
+
+    [JUMP_DELAY]
+        DISPLAY_MESSAGE("->Activating BOOTLOADER...", FALSE)
+        WAIT(1000)
+            default : SEED_KEY_PROCEDURE
+    [JUMP_DELAY_END]
+
+    [SEED_KEY_PROCEDURE]
+        DISPLAY_MESSAGE("->Start 0x27 SecurityAccess Service Seed&Key Procedure", FALSE)
+        DISPLAY_MESSAGE("->SecurityAccess ", FALSE)
+        UDSX_SECURITY_ACCESS(1, 0, SEED_PROG)
+            case FPA_ACK : CHECK_ACTION
+            default : SEED_KEY_ERROR_MSG
+    [SEED_KEY_PROCEDURE_END]
+	
+    [SEED_KEY_ERROR_MSG]
+        DISPLAY_MESSAGE("=>Security access failed", POPUP_FALSE)
+            default : PROG_ERROR_MSG
+    [SEED_KEY_ERROR_MSG_END]
+
+    [CHECK_ACTION]
+        WAIT(500)
+        GET_VARIABLE(VAR_ACTION)
+            case 1  : DOWNLOAD_APP_AND_CAL
+            case 2  : DOWNLOAD_CALIB_ONLY
+            case 3  : DOWNLOAD_APP_ONLY
+            default : PROG_ERROR_MSG
+    [CHECK_ACTION_END]
+
+    [DOWNLOAD_APP_AND_CAL]
+        WAIT(2000)
+        CALL(download_app_cal)
+            case TRUE: ROUTINE_CHECK_PROGRAMMING_DEPENDENCIES
+            default: PROG_ERROR_MSG
+    [DOWNLOAD_APP_AND_CAL_END]
+
+    [DOWNLOAD_CALIB_ONLY]
+        WAIT(2000)
+        CALL(download_cal_only)
+            case TRUE: ROUTINE_CHECK_PROGRAMMING_DEPENDENCIES
+            default: PROG_ERROR_MSG
+    [DOWNLOAD_CALIB_ONLY_END]
+
+    [DOWNLOAD_APP_ONLY]
+        DISPLAY_MESSAGE("->Download application only", FALSE)
+        CALL(download_app_only)
+            case TRUE: ROUTINE_CHECK_PROGRAMMING_DEPENDENCIES
+            default: PROG_ERROR_MSG
+    [DOWNLOAD_APP_ONLY_END]
+
+    [ROUTINE_CHECK_PROGRAMMING_DEPENDENCIES]
+        DISPLAY_MESSAGE("->Routine Check Dependencies and Backup the downloaded files", FALSE)
+        UDS_ROUTINE_CONTROL(01, CHECK_PROGRAMMING_DEPENDENCIES, "")
+            case FPA_ACK: $return TRUE
+            default : PROG_ERROR_MSG
+    [ROUTINE_CHECK_PROGRAMMING_DEPENDENCIES_END]
+
+    [PROG_ERROR_MSG]
+        DISPLAY_MESSAGE ("ERROR at programming sequence. Perform ECU hard reset", POPUP_FALSE)
+        DISPLAY_MESSAGE ("Please check the prof file for ERROR.", POPUP_FALSE)
+        WAIT(1000)
+        UDS_ECU_RESET(ECU_RESET_TYPE_HARD)
+        DISPLAY_ERROR_MESSAGE (TRUE)
+            default : EXIT
+    [PROG_ERROR_MSG_END]
+
+}
+
+procedure post_programming_seq
+{
+    [ECU_HARD_RESET]
+        DISPLAY_MESSAGE("->Perform ECU hard reset", FALSE)
+        WAIT(1000)
+        UDS_ECU_RESET(ECU_RESET_TYPE_HARD)
+            case FPA_ACK : RESET_OK
+            default : POST_PROG_ERROR_MSG
+    [ECU_HARD_RESET_END]
+
+    [RESET_OK]
+        DISPLAY_MESSAGE("->Reset...OK!", FALSE)
+        WAIT(10000)
+            default : PD_START_EXTENDED_SESSION
+    [RESET_OK_END]
+
+    [PD_START_EXTENDED_SESSION]
+        DISPLAY_MESSAGE("->Switching diagnostic session: Extended session", FALSE)
+        UDS_DIAGNOSTIC_SESSION_CONTROL(DSC_EXTENDED_SESSION)
+            case FPA_ACK : COMM_CNTR_ON
+            default : POST_PROG_ERROR_MSG
+    [PD_START_EXTENDED_SESSION_END]
+
+    [COMM_CNTR_ON]
+        DISPLAY_MESSAGE("->Communication Control: Enable Rx And Tx", FALSE)
+        UDS_COMMUNICATION_CONTROL(EN_RX_TX, CC_COMMUNICATION_TYPE)
+            default : END_BOOT_SEQ
+    [COMM_CNTR_ON_END]
+
+    [END_BOOT_SEQ]
+        DISPLAY_MESSAGE("->Enable Rx And Tx...OK!", FALSE)
+            default: CNT_DTC_SETTING_ON
+    [END_BOOT_SEQ_END]
+
+    [CNT_DTC_SETTING_ON]
+        DISPLAY_MESSAGE("->Control DTC Setting: ON", FALSE)
+        UDS_CONTROL_DTC_SETTING(CDTCS_DTC_ON, "")
+            default : PD_START_DEFAULT_SESSION
+    [CNT_DTC_SETTING_ON_END]
+
+    [PD_START_DEFAULT_SESSION]
+    	DISPLAY_MESSAGE("->Download SW completed successfully...", FALSE)
+        DISPLAY_MESSAGE("->Switching diagnostic session: Default session", FALSE)
+        UDS_DIAGNOSTIC_SESSION_CONTROL(DSC_DEFAULT_SESSION)
+            default : $return TRUE
+    [PD_START_DEFAULT_SESSION_END]
+
+    [POST_PROG_ERROR_MSG]
+        DISPLAY_MESSAGE ("ERROR at Post-programming sequence.", POPUP_FALSE)
+        DISPLAY_MESSAGE ("Please check the prof file for ERROR.", POPUP_FALSE)
+        DISPLAY_ERROR_MESSAGE (TRUE)
+            default : EXIT
+    [POST_PROG_ERROR_MSG_END]
+}

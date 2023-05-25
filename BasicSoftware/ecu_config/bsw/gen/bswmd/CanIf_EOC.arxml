@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 autosar_4-3-0.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE>
+      <SHORT-NAME>CanIf_EOC</SHORT-NAME>
+      <ELEMENTS>
+        <BSW-MODULE-TIMING>
+          <SHORT-NAME>CanIf</SHORT-NAME>
+          <TIMING-REQUIREMENTS>
+            <EXECUTION-ORDER-CONSTRAINT>
+              <SHORT-NAME>EOC_CanIf_Init</SHORT-NAME>
+              <EXECUTION-ORDER-CONSTRAINT-TYPE>ORDINARY-EOC</EXECUTION-ORDER-CONSTRAINT-TYPE>
+              <IS-EVENT>false</IS-EVENT>
+              <ORDERED-ELEMENTS>
+                <EOC-EXECUTABLE-ENTITY-REF>
+                  <SHORT-NAME>EOCExecutableEntityRef_CanIf_Init</SHORT-NAME>
+                  <BSW-MODULE-INSTANCE-REF DEST="BSW-IMPLEMENTATION">/AUTOSAR_CanIf/BswImplementations/CanIf</BSW-MODULE-INSTANCE-REF>
+                  <EXECUTABLE-REF DEST="BSW-CALLED-ENTITY">/AUTOSAR_CanIf/BswModuleDescriptions/CanIf/BswInternalBehavior/CE_Init</EXECUTABLE-REF>
+                </EOC-EXECUTABLE-ENTITY-REF>
+              </ORDERED-ELEMENTS>
+              <PERMIT-MULTIPLE-REFERENCES-TO-EE>false</PERMIT-MULTIPLE-REFERENCES-TO-EE>
+            </EXECUTION-ORDER-CONSTRAINT>
+          </TIMING-REQUIREMENTS>
+          <BEHAVIOR-REF DEST="BSW-INTERNAL-BEHAVIOR">/AUTOSAR_CanIf/BswModuleDescriptions/CanIf/BswInternalBehavior</BEHAVIOR-REF>
+        </BSW-MODULE-TIMING>
+      </ELEMENTS>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

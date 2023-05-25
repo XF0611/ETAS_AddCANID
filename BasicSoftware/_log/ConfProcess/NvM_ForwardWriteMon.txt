@@ -1,0 +1,5 @@
+ForwardWriteMon phase for module NvM
+
+Starting action "ForwardWriteMon".
+Action "ForwardWriteMon" finished.
+

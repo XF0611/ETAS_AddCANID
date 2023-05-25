@@ -1,0 +1,978 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-2-2.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE>
+      <SHORT-NAME>ETAS_BIP</SHORT-NAME>
+      <ELEMENTS>
+        <APPLICATION-SW-COMPONENT-TYPE>
+          <SHORT-NAME>CalUT</SHORT-NAME>
+          <ADMIN-DATA>
+            <SDGS>
+              <SDG GID="Master">
+                <SD>true</SD>
+              </SDG>
+            </SDGS>
+          </ADMIN-DATA>
+          <PORTS>
+            <R-PORT-PROTOTYPE UUID="e2bcd9ff-4afd-46bc-894c-818f762f0ef8">
+              <SHORT-NAME>RP_SpeedLimit</SHORT-NAME>
+              <REQUIRED-INTERFACE-TREF DEST="PARAMETER-INTERFACE">/ETAS_BIP/Pkg_ParameterInterface/Param_Interface_SpeedLimit</REQUIRED-INTERFACE-TREF>
+            </R-PORT-PROTOTYPE>
+          </PORTS>
+          <INTERNAL-BEHAVIORS>
+            <SWC-INTERNAL-BEHAVIOR UUID="daa4b6b3-5905-471b-a109-295ca58cb5f3">
+              <SHORT-NAME>IB_CalUT</SHORT-NAME>
+              <CONSTANT-MEMORYS>
+                <PARAMETER-DATA-PROTOTYPE>
+                  <SHORT-NAME>constParam</SHORT-NAME>
+                  <TYPE-TREF DEST="APPLICATION-PRIMITIVE-DATA-TYPE">/ETAS_BIP/MeasurementCallibration/ADT_N1</TYPE-TREF>
+                  <INIT-VALUE>
+                    <CONSTANT-REFERENCE>
+                      <SHORT-LABEL>ConstantReference_0</SHORT-LABEL>
+                      <CONSTANT-REF DEST="CONSTANT-SPECIFICATION">/ETAS_BIP/MeasurementCallibration/Constant_Param_c1</CONSTANT-REF>
+                    </CONSTANT-REFERENCE>
+                  </INIT-VALUE>
+                </PARAMETER-DATA-PROTOTYPE>
+              </CONSTANT-MEMORYS>
+              <DATA-TYPE-MAPPING-REFS>
+                <DATA-TYPE-MAPPING-REF DEST="DATA-TYPE-MAPPING-SET">/ETAS_BIP/DTS_MeasurementCalibration</DATA-TYPE-MAPPING-REF>
+              </DATA-TYPE-MAPPING-REFS>
+              <STATIC-MEMORYS>
+                <VARIABLE-DATA-PROTOTYPE>
+                  <SHORT-NAME>curveAxisInputVar</SHORT-NAME>
+                  <TYPE-TREF DEST="APPLICATION-PRIMITIVE-DATA-TYPE">/ETAS_BIP/ApplicationDataTypes/ADT_CurveAxis</TYPE-TREF>
+                </VARIABLE-DATA-PROTOTYPE>
+                <VARIABLE-DATA-PROTOTYPE>
+                  <SHORT-NAME>mapAxisXInputVar</SHORT-NAME>
+                  <TYPE-TREF DEST="APPLICATION-PRIMITIVE-DATA-TYPE">/ETAS_BIP/ApplicationDataTypes/ADT_MapAxisX</TYPE-TREF>
+                </VARIABLE-DATA-PROTOTYPE>
+                <VARIABLE-DATA-PROTOTYPE>
+                  <SHORT-NAME>mapAxisYInputVar</SHORT-NAME>
+                  <TYPE-TREF DEST="APPLICATION-PRIMITIVE-DATA-TYPE">/ETAS_BIP/ApplicationDataTypes/ADT_MapAxisY</TYPE-TREF>
+                </VARIABLE-DATA-PROTOTYPE>
+              </STATIC-MEMORYS>
+              <AR-TYPED-PER-INSTANCE-MEMORYS>
+                <VARIABLE-DATA-PROTOTYPE>
+                  <SHORT-NAME>ArTypedPIM_1</SHORT-NAME>
+                  <LONG-NAME>
+                    <L-4 L="FOR-ALL">This is ETAS BIP AUTOSAR Typed PerInstance Memory Variable example</L-4>
+                  </LONG-NAME>
+                  <TYPE-TREF DEST="APPLICATION-PRIMITIVE-DATA-TYPE">/ETAS_BIP/MeasurementCallibration/ADT_N1</TYPE-TREF>
+                </VARIABLE-DATA-PROTOTYPE>
+              </AR-TYPED-PER-INSTANCE-MEMORYS>
+              <EVENTS>
+                <TIMING-EVENT UUID="e2369974-e8c6-4447-815f-7a239121a2f2">
+                  <SHORT-NAME>TE_CalUT</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ETAS_BIP/CalUT/IB_CalUT/RE_CalUT</START-ON-EVENT-REF>
+                  <PERIOD>0.01</PERIOD>
+                </TIMING-EVENT>
+              </EVENTS>
+              <PER-INSTANCE-PARAMETERS>
+                <PARAMETER-DATA-PROTOTYPE>
+                  <SHORT-NAME>SpeedLimitUpper</SHORT-NAME>
+                  <LONG-NAME>
+                    <L-4 S="" L="FOR-ALL">This is ETAS BIP AUTOSAR PerInstanceParameter Scalar example 2</L-4>
+                  </LONG-NAME>
+                  <CATEGORY>VALUE</CATEGORY>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <SW-CALIBRATION-ACCESS>READ-WRITE</SW-CALIBRATION-ACCESS>
+                        <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                  <TYPE-TREF DEST="APPLICATION-PRIMITIVE-DATA-TYPE">/ETAS_BIP/MeasurementCallibration/ADT_N1</TYPE-TREF>
+                  <INIT-VALUE>
+                    <APPLICATION-VALUE-SPECIFICATION>
+                      <SHORT-LABEL>ApplicationValueSpecification</SHORT-LABEL>
+                      <CATEGORY>VALUE</CATEGORY>
+                      <SW-VALUE-CONT>
+                        <UNIT-REF DEST="UNIT">/ETAS_BIP/Units/Rpm</UNIT-REF>
+                        <SW-VALUES-PHYS>
+                          <V>4500</V>
+                        </SW-VALUES-PHYS>
+                      </SW-VALUE-CONT>
+                    </APPLICATION-VALUE-SPECIFICATION>
+                  </INIT-VALUE>
+                </PARAMETER-DATA-PROTOTYPE>
+              </PER-INSTANCE-PARAMETERS>
+              <RUNNABLES>
+                <RUNNABLE-ENTITY UUID="d9ec24c6-37f6-403c-9ca6-738c5a917dec">
+                  <SHORT-NAME>RE_CalUT</SHORT-NAME>
+                  <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                  <PARAMETER-ACCESSS>
+                    <PARAMETER-ACCESS UUID="21edb22f-56c1-4c05-9d05-6831c2d70cbf">
+                      <SHORT-NAME>PA_SpeedLimitUpper</SHORT-NAME>
+                      <ACCESSED-PARAMETER>
+                        <LOCAL-PARAMETER-REF DEST="PARAMETER-DATA-PROTOTYPE">/ETAS_BIP/CalUT/IB_CalUT/SpeedLimitUpper</LOCAL-PARAMETER-REF>
+                      </ACCESSED-PARAMETER>
+                    </PARAMETER-ACCESS>
+                    <PARAMETER-ACCESS UUID="91ea2520-4194-45b0-8f0a-ef32e3371041">
+                      <SHORT-NAME>PA_SpeedLimitLower</SHORT-NAME>
+                      <ACCESSED-PARAMETER>
+                        <LOCAL-PARAMETER-REF DEST="PARAMETER-DATA-PROTOTYPE">/ETAS_BIP/CalUT/IB_CalUT/SpeedLimitLower</LOCAL-PARAMETER-REF>
+                      </ACCESSED-PARAMETER>
+                    </PARAMETER-ACCESS>
+                    <PARAMETER-ACCESS UUID="944c2175-f145-4f1f-bca0-8a098cec3170">
+                      <SHORT-NAME>PA_SpeedMin</SHORT-NAME>
+                      <ACCESSED-PARAMETER>
+                        <AUTOSAR-PARAMETER-IREF>
+                          <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/ETAS_BIP/CalUT/RP_SpeedLimit</PORT-PROTOTYPE-REF>
+                          <TARGET-DATA-PROTOTYPE-REF DEST="PARAMETER-DATA-PROTOTYPE">/ETAS_BIP/Pkg_ParameterInterface/Param_Interface_SpeedLimit/speedMin</TARGET-DATA-PROTOTYPE-REF>
+                        </AUTOSAR-PARAMETER-IREF>
+                      </ACCESSED-PARAMETER>
+                    </PARAMETER-ACCESS>
+                    <PARAMETER-ACCESS UUID="dc211ec1-c800-4d67-94bd-00e53121eb8a">
+                      <SHORT-NAME>PA_SpeedMax</SHORT-NAME>
+                      <ACCESSED-PARAMETER>
+                        <AUTOSAR-PARAMETER-IREF>
+                          <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/ETAS_BIP/CalUT/RP_SpeedLimit</PORT-PROTOTYPE-REF>
+                          <TARGET-DATA-PROTOTYPE-REF DEST="PARAMETER-DATA-PROTOTYPE">/ETAS_BIP/Pkg_ParameterInterface/Param_Interface_SpeedLimit/speedMax</TARGET-DATA-PROTOTYPE-REF>
+                        </AUTOSAR-PARAMETER-IREF>
+                      </ACCESSED-PARAMETER>
+                    </PARAMETER-ACCESS>
+                    <PARAMETER-ACCESS UUID="365411b4-7c74-4686-a5df-1f4c9d338839">
+                      <SHORT-NAME>PA_sharedCURVE</SHORT-NAME>
+                      <ACCESSED-PARAMETER>
+                        <LOCAL-PARAMETER-REF DEST="PARAMETER-DATA-PROTOTYPE">/ETAS_BIP/CalUT/IB_CalUT/sharedCURVE</LOCAL-PARAMETER-REF>
+                      </ACCESSED-PARAMETER>
+                      <SW-DATA-DEF-PROPS>
+                        <SW-DATA-DEF-PROPS-VARIANTS>
+                          <SW-DATA-DEF-PROPS-CONDITIONAL>
+                            <SW-CALPRM-AXIS-SET>
+                              <SW-CALPRM-AXIS>
+                                <SW-AXIS-INDEX>1</SW-AXIS-INDEX>
+                                <SW-AXIS-INDIVIDUAL>
+                                  <SW-VARIABLE-REFS>
+                                    <AUTOSAR-VARIABLE>
+                                      <LOCAL-VARIABLE-REF DEST="VARIABLE-DATA-PROTOTYPE">/ETAS_BIP/CalUT/IB_CalUT/curveAxisInputVar</LOCAL-VARIABLE-REF>
+                                    </AUTOSAR-VARIABLE>
+                                  </SW-VARIABLE-REFS>
+                                </SW-AXIS-INDIVIDUAL>
+                              </SW-CALPRM-AXIS>
+                            </SW-CALPRM-AXIS-SET>
+                          </SW-DATA-DEF-PROPS-CONDITIONAL>
+                        </SW-DATA-DEF-PROPS-VARIANTS>
+                      </SW-DATA-DEF-PROPS>
+                    </PARAMETER-ACCESS>
+                    <PARAMETER-ACCESS UUID="8e5b65a4-cf34-4acb-8d16-805642c7b6aa">
+                      <SHORT-NAME>PA_sharedMAP</SHORT-NAME>
+                      <ACCESSED-PARAMETER>
+                        <LOCAL-PARAMETER-REF DEST="PARAMETER-DATA-PROTOTYPE">/ETAS_BIP/CalUT/IB_CalUT/sharedMAP</LOCAL-PARAMETER-REF>
+                      </ACCESSED-PARAMETER>
+                      <SW-DATA-DEF-PROPS>
+                        <SW-DATA-DEF-PROPS-VARIANTS>
+                          <SW-DATA-DEF-PROPS-CONDITIONAL>
+                            <SW-CALPRM-AXIS-SET>
+                              <SW-CALPRM-AXIS>
+                                <SW-AXIS-INDEX>1</SW-AXIS-INDEX>
+                                <SW-AXIS-INDIVIDUAL>
+                                  <SW-VARIABLE-REFS>
+                                    <AUTOSAR-VARIABLE>
+                                      <LOCAL-VARIABLE-REF DEST="VARIABLE-DATA-PROTOTYPE">/ETAS_BIP/CalUT/IB_CalUT/mapAxisXInputVar</LOCAL-VARIABLE-REF>
+                                    </AUTOSAR-VARIABLE>
+                                  </SW-VARIABLE-REFS>
+                                </SW-AXIS-INDIVIDUAL>
+                              </SW-CALPRM-AXIS>
+                              <SW-CALPRM-AXIS>
+                                <SW-AXIS-INDEX>2</SW-AXIS-INDEX>
+                                <SW-AXIS-INDIVIDUAL>
+                                  <SW-VARIABLE-REFS>
+                                    <AUTOSAR-VARIABLE>
+                                      <LOCAL-VARIABLE-REF DEST="VARIABLE-DATA-PROTOTYPE">/ETAS_BIP/CalUT/IB_CalUT/mapAxisYInputVar</LOCAL-VARIABLE-REF>
+                                    </AUTOSAR-VARIABLE>
+                                  </SW-VARIABLE-REFS>
+                                </SW-AXIS-INDIVIDUAL>
+                              </SW-CALPRM-AXIS>
+                            </SW-CALPRM-AXIS-SET>
+                          </SW-DATA-DEF-PROPS-CONDITIONAL>
+                        </SW-DATA-DEF-PROPS-VARIANTS>
+                      </SW-DATA-DEF-PROPS>
+                    </PARAMETER-ACCESS>
+                  </PARAMETER-ACCESSS>
+                  <SYMBOL>RE_CalUT</SYMBOL>
+                </RUNNABLE-ENTITY>
+              </RUNNABLES>
+              <SHARED-PARAMETERS>
+                <PARAMETER-DATA-PROTOTYPE>
+                  <SHORT-NAME>SpeedLimitLower</SHORT-NAME>
+                  <LONG-NAME>
+                    <L-4 L="FOR-ALL">This is ETAS BIP AUTOSAR PerInstanceParameter Scalar example 1</L-4>
+                  </LONG-NAME>
+                  <CATEGORY>VALUE</CATEGORY>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <SW-CALIBRATION-ACCESS>READ-WRITE</SW-CALIBRATION-ACCESS>
+                        <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                  <TYPE-TREF DEST="APPLICATION-PRIMITIVE-DATA-TYPE">/ETAS_BIP/MeasurementCallibration/ADT_N1</TYPE-TREF>
+                  <INIT-VALUE>
+                    <APPLICATION-VALUE-SPECIFICATION>
+                      <SHORT-LABEL>ApplicationValueSpecification</SHORT-LABEL>
+                      <CATEGORY>VALUE</CATEGORY>
+                      <SW-VALUE-CONT>
+                        <UNIT-REF DEST="UNIT">/ETAS_BIP/Units/Rpm</UNIT-REF>
+                        <SW-VALUES-PHYS>
+                          <V>3000</V>
+                        </SW-VALUES-PHYS>
+                      </SW-VALUE-CONT>
+                    </APPLICATION-VALUE-SPECIFICATION>
+                  </INIT-VALUE>
+                </PARAMETER-DATA-PROTOTYPE>
+                <PARAMETER-DATA-PROTOTYPE>
+                  <SHORT-NAME>sharedCURVE</SHORT-NAME>
+                  <LONG-NAME>
+                    <L-4 L="FOR-ALL">This is ETAS BIP AUTOSAR SharedParameter CURVE example</L-4>
+                  </LONG-NAME>
+                  <CATEGORY>VALUE</CATEGORY>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <SW-CALIBRATION-ACCESS>READ-WRITE</SW-CALIBRATION-ACCESS>
+                        <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                  <TYPE-TREF DEST="APPLICATION-PRIMITIVE-DATA-TYPE">/ETAS_BIP/ApplicationDataTypes/ADT_CURVE</TYPE-TREF>
+                  <INIT-VALUE>
+                    <APPLICATION-VALUE-SPECIFICATION>
+                      <SHORT-LABEL>ApplicationValueSpecification</SHORT-LABEL>
+                      <CATEGORY>CURVE</CATEGORY>
+                      <SW-VALUE-CONT>
+                        <UNIT-REF DEST="UNIT">/ETAS_BIP/Units/Perc</UNIT-REF>
+                        <SW-ARRAYSIZE>
+                          <VF>5</VF>
+                        </SW-ARRAYSIZE>
+                        <SW-VALUES-PHYS>
+                          <VF>-2.13</VF>
+                          <VF>-1.5</VF>
+                          <VF>0.34</VF>
+                          <VF>5.2</VF>
+                          <VF>7.8</VF>
+                        </SW-VALUES-PHYS>
+                      </SW-VALUE-CONT>
+                    </APPLICATION-VALUE-SPECIFICATION>
+                  </INIT-VALUE>
+                </PARAMETER-DATA-PROTOTYPE>
+                <PARAMETER-DATA-PROTOTYPE>
+                  <SHORT-NAME>sharedMAP</SHORT-NAME>
+                  <LONG-NAME>
+                    <L-4 L="FOR-ALL">This is ETAS BIP AUTOSAR SharedParameter MAP example</L-4>
+                  </LONG-NAME>
+                  <CATEGORY>VALUE</CATEGORY>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <SW-CALIBRATION-ACCESS>READ-WRITE</SW-CALIBRATION-ACCESS>
+                        <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                  <TYPE-TREF DEST="APPLICATION-PRIMITIVE-DATA-TYPE">/ETAS_BIP/ApplicationDataTypes/ADT_MAP</TYPE-TREF>
+                  <INIT-VALUE>
+                    <APPLICATION-VALUE-SPECIFICATION>
+                      <SHORT-LABEL>ApplicationValueSpecification</SHORT-LABEL>
+                      <CATEGORY>MAP</CATEGORY>
+                      <SW-VALUE-CONT>
+                        <UNIT-REF DEST="UNIT">/ETAS_BIP/Units/Ampr</UNIT-REF>
+                        <SW-ARRAYSIZE>
+                          <V>20</V>
+                        </SW-ARRAYSIZE>
+                        <SW-VALUES-PHYS>
+                          <V>-3</V>
+                          <V>-1</V>
+                          <V>-7</V>
+                          <V>2</V>
+                          <V>5</V>
+                          <V>7</V>
+                          <V>10</V>
+                          <V>12</V>
+                          <V>15</V>
+                          <V>22</V>
+                          <V>-6</V>
+                          <V>-8</V>
+                          <V>-2</V>
+                          <V>4</V>
+                          <V>5</V>
+                          <V>7</V>
+                          <V>12</V>
+                          <V>13</V>
+                          <V>15</V>
+                          <V>22</V>
+                        </SW-VALUES-PHYS>
+                      </SW-VALUE-CONT>
+                    </APPLICATION-VALUE-SPECIFICATION>
+                  </INIT-VALUE>
+                </PARAMETER-DATA-PROTOTYPE>
+              </SHARED-PARAMETERS>
+              <SUPPORTS-MULTIPLE-INSTANTIATION>false</SUPPORTS-MULTIPLE-INSTANTIATION>
+            </SWC-INTERNAL-BEHAVIOR>
+          </INTERNAL-BEHAVIORS>
+        </APPLICATION-SW-COMPONENT-TYPE>
+        <DATA-TYPE-MAPPING-SET>
+          <SHORT-NAME>DTS_MeasurementCalibration</SHORT-NAME>
+          <DATA-TYPE-MAPS>
+            <DATA-TYPE-MAP>
+              <APPLICATION-DATA-TYPE-REF DEST="APPLICATION-PRIMITIVE-DATA-TYPE">/ETAS_BIP/MeasurementCallibration/ADT_N1</APPLICATION-DATA-TYPE-REF>
+              <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint32</IMPLEMENTATION-DATA-TYPE-REF>
+            </DATA-TYPE-MAP>
+            <DATA-TYPE-MAP>
+              <APPLICATION-DATA-TYPE-REF DEST="APPLICATION-PRIMITIVE-DATA-TYPE">/ETAS_BIP/ApplicationDataTypes/ADT_CURVE</APPLICATION-DATA-TYPE-REF>
+              <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/ETAS_BIP/ImplementationDataTypes/IDT_CURVE</IMPLEMENTATION-DATA-TYPE-REF>
+            </DATA-TYPE-MAP>
+            <DATA-TYPE-MAP>
+              <APPLICATION-DATA-TYPE-REF DEST="APPLICATION-PRIMITIVE-DATA-TYPE">/ETAS_BIP/ApplicationDataTypes/ADT_MAP</APPLICATION-DATA-TYPE-REF>
+              <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/ETAS_BIP/ImplementationDataTypes/IDT_MAP</IMPLEMENTATION-DATA-TYPE-REF>
+            </DATA-TYPE-MAP>
+            <DATA-TYPE-MAP>
+              <APPLICATION-DATA-TYPE-REF DEST="APPLICATION-PRIMITIVE-DATA-TYPE">/ETAS_BIP/ApplicationDataTypes/ADT_CurveAxis</APPLICATION-DATA-TYPE-REF>
+              <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/sint8</IMPLEMENTATION-DATA-TYPE-REF>
+            </DATA-TYPE-MAP>
+            <DATA-TYPE-MAP>
+              <APPLICATION-DATA-TYPE-REF DEST="APPLICATION-PRIMITIVE-DATA-TYPE">/ETAS_BIP/ApplicationDataTypes/ADT_MapAxisX</APPLICATION-DATA-TYPE-REF>
+              <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint16</IMPLEMENTATION-DATA-TYPE-REF>
+            </DATA-TYPE-MAP>
+            <DATA-TYPE-MAP>
+              <APPLICATION-DATA-TYPE-REF DEST="APPLICATION-PRIMITIVE-DATA-TYPE">/ETAS_BIP/ApplicationDataTypes/ADT_MapAxisY</APPLICATION-DATA-TYPE-REF>
+              <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/sint16</IMPLEMENTATION-DATA-TYPE-REF>
+            </DATA-TYPE-MAP>
+          </DATA-TYPE-MAPS>
+        </DATA-TYPE-MAPPING-SET>
+        <PARAMETER-SW-COMPONENT-TYPE>
+          <SHORT-NAME>ParameterSWC</SHORT-NAME>
+          <ADMIN-DATA>
+            <SDGS>
+              <SDG GID="Master">
+                <SD>true</SD>
+              </SDG>
+            </SDGS>
+          </ADMIN-DATA>
+          <PORTS>
+            <P-PORT-PROTOTYPE UUID="47aa460f-c9e2-42a6-a00b-b8e98546f8ef">
+              <SHORT-NAME>PP_SpeedLimit</SHORT-NAME>
+              <PROVIDED-COM-SPECS>
+                <PARAMETER-PROVIDE-COM-SPEC>
+                  <INIT-VALUE>
+                    <APPLICATION-VALUE-SPECIFICATION>
+                      <SHORT-LABEL>ApplicationValueSpecification</SHORT-LABEL>
+                      <CATEGORY>VALUE</CATEGORY>
+                      <SW-VALUE-CONT>
+                        <UNIT-REF DEST="UNIT">/ETAS_BIP/Units/Rpm</UNIT-REF>
+                        <SW-VALUES-PHYS>
+                          <V>1000</V>
+                        </SW-VALUES-PHYS>
+                      </SW-VALUE-CONT>
+                    </APPLICATION-VALUE-SPECIFICATION>
+                  </INIT-VALUE>
+                  <PARAMETER-REF DEST="PARAMETER-DATA-PROTOTYPE">/ETAS_BIP/Pkg_ParameterInterface/Param_Interface_SpeedLimit/speedMin</PARAMETER-REF>
+                </PARAMETER-PROVIDE-COM-SPEC>
+                <PARAMETER-PROVIDE-COM-SPEC>
+                  <INIT-VALUE>
+                    <APPLICATION-VALUE-SPECIFICATION>
+                      <SHORT-LABEL>ApplicationValueSpecification</SHORT-LABEL>
+                      <CATEGORY>VALUE</CATEGORY>
+                      <SW-VALUE-CONT>
+                        <UNIT-REF DEST="UNIT">/ETAS_BIP/Units/Rpm</UNIT-REF>
+                        <SW-VALUES-PHYS>
+                          <V>6000</V>
+                        </SW-VALUES-PHYS>
+                      </SW-VALUE-CONT>
+                    </APPLICATION-VALUE-SPECIFICATION>
+                  </INIT-VALUE>
+                  <PARAMETER-REF DEST="PARAMETER-DATA-PROTOTYPE">/ETAS_BIP/Pkg_ParameterInterface/Param_Interface_SpeedLimit/speedMax</PARAMETER-REF>
+                </PARAMETER-PROVIDE-COM-SPEC>
+              </PROVIDED-COM-SPECS>
+              <PROVIDED-INTERFACE-TREF DEST="PARAMETER-INTERFACE">/ETAS_BIP/Pkg_ParameterInterface/Param_Interface_SpeedLimit</PROVIDED-INTERFACE-TREF>
+            </P-PORT-PROTOTYPE>
+          </PORTS>
+          <DATA-TYPE-MAPPING-REFS>
+            <DATA-TYPE-MAPPING-REF DEST="DATA-TYPE-MAPPING-SET">/ETAS_BIP/DTS_MeasurementCalibration</DATA-TYPE-MAPPING-REF>
+          </DATA-TYPE-MAPPING-REFS>
+        </PARAMETER-SW-COMPONENT-TYPE>
+      </ELEMENTS>
+      <AR-PACKAGES>
+        <AR-PACKAGE>
+          <SHORT-NAME>Pkg_ParameterInterface</SHORT-NAME>
+          <ELEMENTS>
+            <PARAMETER-INTERFACE>
+              <SHORT-NAME>Param_Interface_SpeedLimit</SHORT-NAME>
+              <IS-SERVICE>false</IS-SERVICE>
+              <PARAMETERS>
+                <PARAMETER-DATA-PROTOTYPE>
+                  <SHORT-NAME>speedMin</SHORT-NAME>
+                  <LONG-NAME>
+                    <L-4 L="FOR-ALL">This is ETAS BIP AUTOSAR Interface Scalar example 1</L-4>
+                  </LONG-NAME>
+                  <CATEGORY>VALUE</CATEGORY>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <SW-CALIBRATION-ACCESS>READ-WRITE</SW-CALIBRATION-ACCESS>
+                        <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                  <TYPE-TREF DEST="APPLICATION-PRIMITIVE-DATA-TYPE">/ETAS_BIP/MeasurementCallibration/ADT_N1</TYPE-TREF>
+                </PARAMETER-DATA-PROTOTYPE>
+                <PARAMETER-DATA-PROTOTYPE>
+                  <SHORT-NAME>speedMax</SHORT-NAME>
+                  <LONG-NAME>
+                    <L-4 L="FOR-ALL">This is ETAS BIP AUTOSAR Interface Scalar example 2</L-4>
+                  </LONG-NAME>
+                  <CATEGORY>VALUE</CATEGORY>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <SW-CALIBRATION-ACCESS>READ-WRITE</SW-CALIBRATION-ACCESS>
+                        <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                  <TYPE-TREF DEST="APPLICATION-PRIMITIVE-DATA-TYPE">/ETAS_BIP/MeasurementCallibration/ADT_N1</TYPE-TREF>
+                </PARAMETER-DATA-PROTOTYPE>
+              </PARAMETERS>
+            </PARAMETER-INTERFACE>
+          </ELEMENTS>
+        </AR-PACKAGE>
+        <AR-PACKAGE>
+          <SHORT-NAME>MeasurementCallibration</SHORT-NAME>
+          <ELEMENTS>
+            <APPLICATION-PRIMITIVE-DATA-TYPE>
+              <SHORT-NAME>ADT_N1</SHORT-NAME>
+              <CATEGORY>VALUE</CATEGORY>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
+                    <COMPU-METHOD-REF DEST="COMPU-METHOD">/ETAS_BIP/CompuMethods/N1</COMPU-METHOD-REF>
+                    <DATA-CONSTR-REF DEST="DATA-CONSTR">/ETAS_BIP/DataConstrs/N1</DATA-CONSTR-REF>
+                    <SW-INTENDED-RESOLUTION>0.5</SW-INTENDED-RESOLUTION>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </APPLICATION-PRIMITIVE-DATA-TYPE>
+            <CONSTANT-SPECIFICATION>
+              <SHORT-NAME>Constant_Param_c1</SHORT-NAME>
+              <VALUE-SPEC>
+                <NUMERICAL-VALUE-SPECIFICATION>
+                  <SHORT-LABEL>NumericalValueSpecification_0</SHORT-LABEL>
+                  <VALUE>120</VALUE>
+                </NUMERICAL-VALUE-SPECIFICATION>
+              </VALUE-SPEC>
+            </CONSTANT-SPECIFICATION>
+          </ELEMENTS>
+        </AR-PACKAGE>
+        <AR-PACKAGE>
+          <SHORT-NAME>ApplicationDataTypes</SHORT-NAME>
+          <ELEMENTS>
+            <APPLICATION-PRIMITIVE-DATA-TYPE>
+              <SHORT-NAME>ADT_CURVE</SHORT-NAME>
+              <CATEGORY>CURVE</CATEGORY>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
+                    <SW-CALPRM-AXIS-SET>
+                      <SW-CALPRM-AXIS>
+                        <SW-AXIS-INDEX>1</SW-AXIS-INDEX>
+                        <CATEGORY>STD-AXIS</CATEGORY>
+                        <SW-AXIS-INDIVIDUAL>
+                          <INPUT-VARIABLE-TYPE-REF DEST="APPLICATION-PRIMITIVE-DATA-TYPE">/ETAS_BIP/ApplicationDataTypes/ADT_CurveAxis</INPUT-VARIABLE-TYPE-REF>
+                          <COMPU-METHOD-REF DEST="COMPU-METHOD">/ETAS_BIP/CompuMethods/OneToOne</COMPU-METHOD-REF>
+                          <UNIT-REF DEST="UNIT">/ETAS_BIP/Units/DegCgrd</UNIT-REF>
+                          <SW-MAX-AXIS-POINTS>10</SW-MAX-AXIS-POINTS>
+                          <DATA-CONSTR-REF DEST="DATA-CONSTR">/ETAS_BIP/DataConstrs/DataConstrC_m300p0_300p0</DATA-CONSTR-REF>
+                        </SW-AXIS-INDIVIDUAL>
+                        <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
+                        <DISPLAY-FORMAT>%2.1f</DISPLAY-FORMAT>
+                      </SW-CALPRM-AXIS>
+                    </SW-CALPRM-AXIS-SET>
+                    <COMPU-METHOD-REF DEST="COMPU-METHOD">/ETAS_BIP/CompuMethods/OneToOne_Curr_A</COMPU-METHOD-REF>
+                    <DATA-CONSTR-REF DEST="DATA-CONSTR">/ETAS_BIP/DataConstrs/DataConstrC_m300p0_300p0</DATA-CONSTR-REF>
+                    <DISPLAY-FORMAT>%1.1f</DISPLAY-FORMAT>
+                    <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                    <SW-RECORD-LAYOUT-REF DEST="SW-RECORD-LAYOUT">/ETAS_BIP/SwRecordLayouts/IntCurve_f32_f32</SW-RECORD-LAYOUT-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </APPLICATION-PRIMITIVE-DATA-TYPE>
+            <APPLICATION-PRIMITIVE-DATA-TYPE>
+              <SHORT-NAME>ADT_MAP</SHORT-NAME>
+              <CATEGORY>MAP</CATEGORY>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <SW-CALIBRATION-ACCESS>READ-WRITE</SW-CALIBRATION-ACCESS>
+                    <SW-CALPRM-AXIS-SET>
+                      <SW-CALPRM-AXIS>
+                        <SW-AXIS-INDEX>1</SW-AXIS-INDEX>
+                        <CATEGORY>STD-AXIS</CATEGORY>
+                        <SW-AXIS-INDIVIDUAL>
+                          <INPUT-VARIABLE-TYPE-REF DEST="APPLICATION-PRIMITIVE-DATA-TYPE">/ETAS_BIP/ApplicationDataTypes/ADT_MapAxisX</INPUT-VARIABLE-TYPE-REF>
+                          <COMPU-METHOD-REF DEST="COMPU-METHOD">/ETAS_BIP/CompuMethods/OneToOne_Volt</COMPU-METHOD-REF>
+                          <UNIT-REF DEST="UNIT">/ETAS_BIP/Units/Volt</UNIT-REF>
+                          <SW-MAX-AXIS-POINTS>10</SW-MAX-AXIS-POINTS>
+                          <DATA-CONSTR-REF DEST="DATA-CONSTR">/ETAS_BIP/DataConstrs/DataConstrC_m300p0_300p0</DATA-CONSTR-REF>
+                        </SW-AXIS-INDIVIDUAL>
+                        <SW-CALIBRATION-ACCESS>READ-WRITE</SW-CALIBRATION-ACCESS>
+                        <DISPLAY-FORMAT>%5.1f</DISPLAY-FORMAT>
+                      </SW-CALPRM-AXIS>
+                      <SW-CALPRM-AXIS>
+                        <SW-AXIS-INDEX>2</SW-AXIS-INDEX>
+                        <CATEGORY>STD-AXIS</CATEGORY>
+                        <SW-AXIS-INDIVIDUAL>
+                          <INPUT-VARIABLE-TYPE-REF DEST="APPLICATION-PRIMITIVE-DATA-TYPE">/ETAS_BIP/ApplicationDataTypes/ADT_MapAxisY</INPUT-VARIABLE-TYPE-REF>
+                          <COMPU-METHOD-REF DEST="COMPU-METHOD">/ETAS_BIP/CompuMethods/OneToOne_Perc</COMPU-METHOD-REF>
+                          <UNIT-REF DEST="UNIT">/ETAS_BIP/Units/Perc</UNIT-REF>
+                          <SW-MAX-AXIS-POINTS>10</SW-MAX-AXIS-POINTS>
+                          <DATA-CONSTR-REF DEST="DATA-CONSTR">/ETAS_BIP/DataConstrs/DataConstrC_m400p0_390p0</DATA-CONSTR-REF>
+                        </SW-AXIS-INDIVIDUAL>
+                        <SW-CALIBRATION-ACCESS>READ-WRITE</SW-CALIBRATION-ACCESS>
+                        <DISPLAY-FORMAT>%6.1f</DISPLAY-FORMAT>
+                      </SW-CALPRM-AXIS>
+                    </SW-CALPRM-AXIS-SET>
+                    <COMPU-METHOD-REF DEST="COMPU-METHOD">/ETAS_BIP/CompuMethods/OneToOne_Curr_A</COMPU-METHOD-REF>
+                    <DATA-CONSTR-REF DEST="DATA-CONSTR">/ETAS_BIP/DataConstrs/DataConstrC_m3p4E38_3p4E38</DATA-CONSTR-REF>
+                    <DISPLAY-FORMAT>%4.1f</DISPLAY-FORMAT>
+                    <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                    <SW-RECORD-LAYOUT-REF DEST="SW-RECORD-LAYOUT">/ETAS_BIP/SwRecordLayouts/IntMap_f32f32_f32</SW-RECORD-LAYOUT-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </APPLICATION-PRIMITIVE-DATA-TYPE>
+            <APPLICATION-PRIMITIVE-DATA-TYPE>
+              <SHORT-NAME>ADT_CurveAxis</SHORT-NAME>
+              <CATEGORY>VALUE</CATEGORY>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <SW-CALIBRATION-ACCESS>READ-WRITE</SW-CALIBRATION-ACCESS>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </APPLICATION-PRIMITIVE-DATA-TYPE>
+            <APPLICATION-PRIMITIVE-DATA-TYPE>
+              <SHORT-NAME>ADT_MapAxisX</SHORT-NAME>
+              <CATEGORY>VALUE</CATEGORY>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </APPLICATION-PRIMITIVE-DATA-TYPE>
+            <APPLICATION-PRIMITIVE-DATA-TYPE>
+              <SHORT-NAME>ADT_MapAxisY</SHORT-NAME>
+              <CATEGORY>VALUE</CATEGORY>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </APPLICATION-PRIMITIVE-DATA-TYPE>
+          </ELEMENTS>
+        </AR-PACKAGE>
+        <AR-PACKAGE>
+          <SHORT-NAME>ImplementationDataTypes</SHORT-NAME>
+          <ELEMENTS>
+            <IMPLEMENTATION-DATA-TYPE>
+              <SHORT-NAME>IDT_CURVE</SHORT-NAME>
+              <CATEGORY>ARRAY</CATEGORY>
+              <SUB-ELEMENTS>
+                <IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                  <SHORT-NAME>IDT_CURVE_Type</SHORT-NAME>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <ARRAY-SIZE>5</ARRAY-SIZE>
+                  <ARRAY-SIZE-SEMANTICS>FIXED-SIZE</ARRAY-SIZE-SEMANTICS>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/float32</IMPLEMENTATION-DATA-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+              </SUB-ELEMENTS>
+            </IMPLEMENTATION-DATA-TYPE>
+            <IMPLEMENTATION-DATA-TYPE>
+              <SHORT-NAME>IDT_MAP</SHORT-NAME>
+              <CATEGORY>ARRAY</CATEGORY>
+              <SUB-ELEMENTS>
+                <IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                  <SHORT-NAME>IDT_MAP_Type</SHORT-NAME>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <ARRAY-SIZE>122</ARRAY-SIZE>
+                  <ARRAY-SIZE-SEMANTICS>FIXED-SIZE</ARRAY-SIZE-SEMANTICS>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_PlatformTypes/ImplementationDataTypes/float32</IMPLEMENTATION-DATA-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+              </SUB-ELEMENTS>
+            </IMPLEMENTATION-DATA-TYPE>
+          </ELEMENTS>
+        </AR-PACKAGE>
+        <AR-PACKAGE>
+          <SHORT-NAME>CompuMethods</SHORT-NAME>
+          <ELEMENTS>
+            <COMPU-METHOD>
+              <SHORT-NAME>N1</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="FOR-ALL">LongName of N1</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="FOR-ALL">Descr of N1 - Generic rotational speed data type 1</L-2>
+              </DESC>
+              <CATEGORY>LINEAR</CATEGORY>
+              <UNIT-REF DEST="UNIT">/ETAS_BIP/Units/Rpm</UNIT-REF>
+              <COMPU-PHYS-TO-INTERNAL>
+                <COMPU-SCALES>
+                  <COMPU-SCALE>
+                    <COMPU-RATIONAL-COEFFS>
+                      <COMPU-NUMERATOR>
+                        <V>0</V>
+                        <V>0.5</V>
+                      </COMPU-NUMERATOR>
+                      <COMPU-DENOMINATOR>
+                        <V>1</V>
+                      </COMPU-DENOMINATOR>
+                    </COMPU-RATIONAL-COEFFS>
+                  </COMPU-SCALE>
+                </COMPU-SCALES>
+              </COMPU-PHYS-TO-INTERNAL>
+            </COMPU-METHOD>
+            <COMPU-METHOD>
+              <SHORT-NAME>OneToOne</SHORT-NAME>
+              <DESC>
+                <L-2 L="FOR-ALL">The imported MSR Element did not contain any description. Therefore this information was inserted while generating the corresponding ARElement</L-2>
+              </DESC>
+              <CATEGORY>LINEAR</CATEGORY>
+              <UNIT-REF DEST="UNIT">/ETAS_BIP/Units/NoUnit</UNIT-REF>
+              <COMPU-INTERNAL-TO-PHYS>
+                <COMPU-SCALES>
+                  <COMPU-SCALE>
+                    <COMPU-RATIONAL-COEFFS>
+                      <COMPU-NUMERATOR>
+                        <V>0</V>
+                        <V>1</V>
+                      </COMPU-NUMERATOR>
+                      <COMPU-DENOMINATOR>
+                        <V>1</V>
+                      </COMPU-DENOMINATOR>
+                    </COMPU-RATIONAL-COEFFS>
+                  </COMPU-SCALE>
+                </COMPU-SCALES>
+              </COMPU-INTERNAL-TO-PHYS>
+            </COMPU-METHOD>
+            <COMPU-METHOD>
+              <SHORT-NAME>OneToOne_Curr_A</SHORT-NAME>
+              <DESC>
+                <L-2 L="FOR-ALL">The imported MSR Element did not contain any description. Therefore this information was inserted while generating the corresponding ARElement</L-2>
+              </DESC>
+              <CATEGORY>LINEAR</CATEGORY>
+              <UNIT-REF DEST="UNIT">/ETAS_BIP/Units/Ampr</UNIT-REF>
+              <COMPU-INTERNAL-TO-PHYS>
+                <COMPU-SCALES>
+                  <COMPU-SCALE>
+                    <COMPU-RATIONAL-COEFFS>
+                      <COMPU-NUMERATOR>
+                        <V>0</V>
+                        <V>1</V>
+                      </COMPU-NUMERATOR>
+                      <COMPU-DENOMINATOR>
+                        <V>1</V>
+                      </COMPU-DENOMINATOR>
+                    </COMPU-RATIONAL-COEFFS>
+                  </COMPU-SCALE>
+                </COMPU-SCALES>
+              </COMPU-INTERNAL-TO-PHYS>
+            </COMPU-METHOD>
+            <COMPU-METHOD>
+              <SHORT-NAME>OneToOne_Volt</SHORT-NAME>
+              <DESC>
+                <L-2 L="FOR-ALL">The imported MSR Element did not contain any description. Therefore this information was inserted while generating the corresponding ARElement</L-2>
+              </DESC>
+              <CATEGORY>LINEAR</CATEGORY>
+              <UNIT-REF DEST="UNIT">/ETAS_BIP/Units/Volt</UNIT-REF>
+              <COMPU-INTERNAL-TO-PHYS>
+                <COMPU-SCALES>
+                  <COMPU-SCALE>
+                    <COMPU-RATIONAL-COEFFS>
+                      <COMPU-NUMERATOR>
+                        <V>0</V>
+                        <V>1</V>
+                      </COMPU-NUMERATOR>
+                      <COMPU-DENOMINATOR>
+                        <V>1</V>
+                      </COMPU-DENOMINATOR>
+                    </COMPU-RATIONAL-COEFFS>
+                  </COMPU-SCALE>
+                </COMPU-SCALES>
+              </COMPU-INTERNAL-TO-PHYS>
+            </COMPU-METHOD>
+            <COMPU-METHOD>
+              <SHORT-NAME>OneToOne_Perc</SHORT-NAME>
+              <DESC>
+                <L-2 L="FOR-ALL">The imported MSR Element did not contain any description. Therefore this information was inserted while generating the corresponding ARElement</L-2>
+              </DESC>
+              <CATEGORY>LINEAR</CATEGORY>
+              <UNIT-REF DEST="UNIT">/ETAS_BIP/Units/Perc</UNIT-REF>
+              <COMPU-INTERNAL-TO-PHYS>
+                <COMPU-SCALES>
+                  <COMPU-SCALE>
+                    <COMPU-RATIONAL-COEFFS>
+                      <COMPU-NUMERATOR>
+                        <V>0</V>
+                        <V>1</V>
+                      </COMPU-NUMERATOR>
+                      <COMPU-DENOMINATOR>
+                        <V>1</V>
+                      </COMPU-DENOMINATOR>
+                    </COMPU-RATIONAL-COEFFS>
+                  </COMPU-SCALE>
+                </COMPU-SCALES>
+              </COMPU-INTERNAL-TO-PHYS>
+            </COMPU-METHOD>
+          </ELEMENTS>
+        </AR-PACKAGE>
+        <AR-PACKAGE>
+          <SHORT-NAME>Units</SHORT-NAME>
+          <ELEMENTS>
+            <UNIT>
+              <SHORT-NAME>Rpm</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="FOR-ALL">LongName of Rpm</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="FOR-ALL">Desc of Rpm</L-2>
+              </DESC>
+              <DISPLAY-NAME>rpm</DISPLAY-NAME>
+            </UNIT>
+            <UNIT>
+              <SHORT-NAME>NoUnit</SHORT-NAME>
+              <DESC>
+                <L-2 L="FOR-ALL">The imported MSR Element did not contain any description. Therefore this information was inserted while generating the corresponding ARElement</L-2>
+              </DESC>
+              <DISPLAY-NAME>-</DISPLAY-NAME>
+            </UNIT>
+            <UNIT>
+              <SHORT-NAME>Ampr</SHORT-NAME>
+              <DESC>
+                <L-2 L="FOR-ALL">The imported MSR Element did not contain any description. Therefore this information was inserted while generating the corresponding ARElement</L-2>
+              </DESC>
+              <DISPLAY-NAME>A</DISPLAY-NAME>
+            </UNIT>
+            <UNIT>
+              <SHORT-NAME>Perc</SHORT-NAME>
+              <DESC>
+                <L-2 L="FOR-ALL">The imported MSR Element did not contain any description. Therefore this information was inserted while generating the corresponding ARElement</L-2>
+              </DESC>
+              <DISPLAY-NAME>%</DISPLAY-NAME>
+            </UNIT>
+            <UNIT>
+              <SHORT-NAME>DegCgrd</SHORT-NAME>
+              <DESC>
+                <L-2 L="FOR-ALL">The imported MSR Element did not contain any description. Therefore this information was inserted while generating the corresponding ARElement</L-2>
+              </DESC>
+              <DISPLAY-NAME>degC</DISPLAY-NAME>
+            </UNIT>
+            <UNIT>
+              <SHORT-NAME>Volt</SHORT-NAME>
+              <DESC>
+                <L-2 L="FOR-ALL">The imported MSR Element did not contain any description. Therefore this information was inserted while generating the corresponding ARElement</L-2>
+              </DESC>
+              <DISPLAY-NAME>V</DISPLAY-NAME>
+            </UNIT>
+          </ELEMENTS>
+        </AR-PACKAGE>
+        <AR-PACKAGE>
+          <SHORT-NAME>DataConstrs</SHORT-NAME>
+          <ELEMENTS>
+            <DATA-CONSTR>
+              <SHORT-NAME>N1</SHORT-NAME>
+              <DATA-CONSTR-RULES>
+                <DATA-CONSTR-RULE>
+                  <PHYS-CONSTRS>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">16383.5</UPPER-LIMIT>
+                  </PHYS-CONSTRS>
+                </DATA-CONSTR-RULE>
+              </DATA-CONSTR-RULES>
+            </DATA-CONSTR>
+            <DATA-CONSTR>
+              <SHORT-NAME>DataConstrC_m300p0_300p0</SHORT-NAME>
+              <DESC>
+                <L-2 L="FOR-ALL">The imported MSR Element did not contain any description. Therefore this information was inserted while generating the corresponding ARElement</L-2>
+              </DESC>
+              <DATA-CONSTR-RULES>
+                <DATA-CONSTR-RULE>
+                  <PHYS-CONSTRS>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">-300.0</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">300.0</UPPER-LIMIT>
+                  </PHYS-CONSTRS>
+                  <INTERNAL-CONSTRS>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">-300.0</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">300.0</UPPER-LIMIT>
+                  </INTERNAL-CONSTRS>
+                </DATA-CONSTR-RULE>
+              </DATA-CONSTR-RULES>
+            </DATA-CONSTR>
+            <DATA-CONSTR>
+              <SHORT-NAME>DataConstrC_m400p0_390p0</SHORT-NAME>
+              <DESC>
+                <L-2 L="FOR-ALL">The imported MSR Element did not contain any description. Therefore this information was inserted while generating the corresponding ARElement</L-2>
+              </DESC>
+              <DATA-CONSTR-RULES>
+                <DATA-CONSTR-RULE>
+                  <PHYS-CONSTRS>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">-400.0</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">390.0</UPPER-LIMIT>
+                  </PHYS-CONSTRS>
+                  <INTERNAL-CONSTRS>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">-400.0</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">390.0</UPPER-LIMIT>
+                  </INTERNAL-CONSTRS>
+                </DATA-CONSTR-RULE>
+              </DATA-CONSTR-RULES>
+            </DATA-CONSTR>
+            <DATA-CONSTR>
+              <SHORT-NAME>DataConstrC_m3p4E38_3p4E38</SHORT-NAME>
+              <DESC>
+                <L-2 L="FOR-ALL">The imported MSR Element did not contain any description. Therefore this information was inserted while generating the corresponding ARElement</L-2>
+              </DESC>
+              <DATA-CONSTR-RULES>
+                <DATA-CONSTR-RULE>
+                  <PHYS-CONSTRS>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">-3.4E+38</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">3.4E+38</UPPER-LIMIT>
+                  </PHYS-CONSTRS>
+                  <INTERNAL-CONSTRS>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">-3.4E+38</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">3.4E+38</UPPER-LIMIT>
+                  </INTERNAL-CONSTRS>
+                </DATA-CONSTR-RULE>
+              </DATA-CONSTR-RULES>
+            </DATA-CONSTR>
+          </ELEMENTS>
+        </AR-PACKAGE>
+        <AR-PACKAGE>
+          <SHORT-NAME>SwRecordLayouts</SHORT-NAME>
+          <ELEMENTS>
+            <SW-RECORD-LAYOUT>
+              <SHORT-NAME>IntCurve_f32_f32</SHORT-NAME>
+              <SW-RECORD-LAYOUT-GROUP>
+                <SW-RECORD-LAYOUT-V>
+                  <SHORT-LABEL>N</SHORT-LABEL>
+                  <BASE-TYPE-REF DEST="SW-BASE-TYPE">/AUTOSAR_Platform/SwBaseTypes/uint32</BASE-TYPE-REF>
+                  <SW-RECORD-LAYOUT-V-AXIS>1</SW-RECORD-LAYOUT-V-AXIS>
+                  <SW-RECORD-LAYOUT-V-PROP>COUNT</SW-RECORD-LAYOUT-V-PROP>
+                </SW-RECORD-LAYOUT-V>
+                <SW-RECORD-LAYOUT-GROUP>
+                  <SHORT-LABEL>X</SHORT-LABEL>
+                  <CATEGORY>INDEX_INCR</CATEGORY>
+                  <SW-RECORD-LAYOUT-GROUP-AXIS>1</SW-RECORD-LAYOUT-GROUP-AXIS>
+                  <SW-RECORD-LAYOUT-GROUP-INDEX>X</SW-RECORD-LAYOUT-GROUP-INDEX>
+                  <SW-RECORD-LAYOUT-GROUP-FROM>1</SW-RECORD-LAYOUT-GROUP-FROM>
+                  <SW-RECORD-LAYOUT-GROUP-TO>-1</SW-RECORD-LAYOUT-GROUP-TO>
+                  <SW-RECORD-LAYOUT-V>
+                    <BASE-TYPE-REF DEST="SW-BASE-TYPE">/AUTOSAR_Platform/SwBaseTypes/float32</BASE-TYPE-REF>
+                    <SW-RECORD-LAYOUT-V-AXIS>1</SW-RECORD-LAYOUT-V-AXIS>
+                    <SW-RECORD-LAYOUT-V-PROP>VALUE</SW-RECORD-LAYOUT-V-PROP>
+                  </SW-RECORD-LAYOUT-V>
+                </SW-RECORD-LAYOUT-GROUP>
+                <SW-RECORD-LAYOUT-GROUP>
+                  <SHORT-LABEL>Val</SHORT-LABEL>
+                  <CATEGORY>COLUMN_DIR</CATEGORY>
+                  <SW-RECORD-LAYOUT-GROUP-AXIS>0</SW-RECORD-LAYOUT-GROUP-AXIS>
+                  <SW-RECORD-LAYOUT-GROUP-FROM>1</SW-RECORD-LAYOUT-GROUP-FROM>
+                  <SW-RECORD-LAYOUT-GROUP-TO>-1</SW-RECORD-LAYOUT-GROUP-TO>
+                  <SW-RECORD-LAYOUT-V>
+                    <BASE-TYPE-REF DEST="SW-BASE-TYPE">/AUTOSAR_Platform/SwBaseTypes/float32</BASE-TYPE-REF>
+                    <SW-RECORD-LAYOUT-V-AXIS>0</SW-RECORD-LAYOUT-V-AXIS>
+                    <SW-RECORD-LAYOUT-V-PROP>VALUE</SW-RECORD-LAYOUT-V-PROP>
+                    <SW-RECORD-LAYOUT-V-INDEX>X</SW-RECORD-LAYOUT-V-INDEX>
+                  </SW-RECORD-LAYOUT-V>
+                </SW-RECORD-LAYOUT-GROUP>
+              </SW-RECORD-LAYOUT-GROUP>
+            </SW-RECORD-LAYOUT>
+            <SW-RECORD-LAYOUT>
+              <SHORT-NAME>IntMap_f32f32_f32</SHORT-NAME>
+              <SW-RECORD-LAYOUT-GROUP>
+                <SW-RECORD-LAYOUT-V>
+                  <SHORT-LABEL>Nx</SHORT-LABEL>
+                  <BASE-TYPE-REF DEST="SW-BASE-TYPE">/AUTOSAR_Platform/SwBaseTypes/uint32</BASE-TYPE-REF>
+                  <SW-RECORD-LAYOUT-V-AXIS>1</SW-RECORD-LAYOUT-V-AXIS>
+                  <SW-RECORD-LAYOUT-V-PROP>COUNT</SW-RECORD-LAYOUT-V-PROP>
+                </SW-RECORD-LAYOUT-V>
+                <SW-RECORD-LAYOUT-V>
+                  <SHORT-LABEL>Ny</SHORT-LABEL>
+                  <BASE-TYPE-REF DEST="SW-BASE-TYPE">/AUTOSAR_Platform/SwBaseTypes/uint32</BASE-TYPE-REF>
+                  <SW-RECORD-LAYOUT-V-AXIS>2</SW-RECORD-LAYOUT-V-AXIS>
+                  <SW-RECORD-LAYOUT-V-PROP>COUNT</SW-RECORD-LAYOUT-V-PROP>
+                </SW-RECORD-LAYOUT-V>
+                <SW-RECORD-LAYOUT-GROUP>
+                  <SHORT-LABEL>X</SHORT-LABEL>
+                  <CATEGORY>INDEX_INCR</CATEGORY>
+                  <SW-RECORD-LAYOUT-GROUP-AXIS>1</SW-RECORD-LAYOUT-GROUP-AXIS>
+                  <SW-RECORD-LAYOUT-GROUP-INDEX>X</SW-RECORD-LAYOUT-GROUP-INDEX>
+                  <SW-RECORD-LAYOUT-GROUP-FROM>1</SW-RECORD-LAYOUT-GROUP-FROM>
+                  <SW-RECORD-LAYOUT-GROUP-TO>-1</SW-RECORD-LAYOUT-GROUP-TO>
+                  <SW-RECORD-LAYOUT-V>
+                    <BASE-TYPE-REF DEST="SW-BASE-TYPE">/AUTOSAR_Platform/SwBaseTypes/float32</BASE-TYPE-REF>
+                    <SW-RECORD-LAYOUT-V-AXIS>1</SW-RECORD-LAYOUT-V-AXIS>
+                    <SW-RECORD-LAYOUT-V-PROP>VALUE</SW-RECORD-LAYOUT-V-PROP>
+                  </SW-RECORD-LAYOUT-V>
+                </SW-RECORD-LAYOUT-GROUP>
+                <SW-RECORD-LAYOUT-GROUP>
+                  <SHORT-LABEL>Y</SHORT-LABEL>
+                  <CATEGORY>INDEX_INCR</CATEGORY>
+                  <SW-RECORD-LAYOUT-GROUP-AXIS>2</SW-RECORD-LAYOUT-GROUP-AXIS>
+                  <SW-RECORD-LAYOUT-GROUP-INDEX>Y</SW-RECORD-LAYOUT-GROUP-INDEX>
+                  <SW-RECORD-LAYOUT-GROUP-FROM>1</SW-RECORD-LAYOUT-GROUP-FROM>
+                  <SW-RECORD-LAYOUT-GROUP-TO>-1</SW-RECORD-LAYOUT-GROUP-TO>
+                  <SW-RECORD-LAYOUT-V>
+                    <BASE-TYPE-REF DEST="SW-BASE-TYPE">/AUTOSAR_Platform/SwBaseTypes/float32</BASE-TYPE-REF>
+                    <SW-RECORD-LAYOUT-V-AXIS>2</SW-RECORD-LAYOUT-V-AXIS>
+                    <SW-RECORD-LAYOUT-V-PROP>VALUE</SW-RECORD-LAYOUT-V-PROP>
+                  </SW-RECORD-LAYOUT-V>
+                </SW-RECORD-LAYOUT-GROUP>
+                <SW-RECORD-LAYOUT-GROUP>
+                  <SHORT-LABEL>Val</SHORT-LABEL>
+                  <CATEGORY>COLUMN_DIR</CATEGORY>
+                  <SW-RECORD-LAYOUT-GROUP-AXIS>1</SW-RECORD-LAYOUT-GROUP-AXIS>
+                  <SW-RECORD-LAYOUT-GROUP-INDEX>X</SW-RECORD-LAYOUT-GROUP-INDEX>
+                  <SW-RECORD-LAYOUT-GROUP-FROM>1</SW-RECORD-LAYOUT-GROUP-FROM>
+                  <SW-RECORD-LAYOUT-GROUP-TO>-1</SW-RECORD-LAYOUT-GROUP-TO>
+                  <SW-RECORD-LAYOUT-GROUP>
+                    <SW-RECORD-LAYOUT-GROUP-AXIS>2</SW-RECORD-LAYOUT-GROUP-AXIS>
+                    <SW-RECORD-LAYOUT-GROUP-INDEX>Y</SW-RECORD-LAYOUT-GROUP-INDEX>
+                    <SW-RECORD-LAYOUT-GROUP-FROM>1</SW-RECORD-LAYOUT-GROUP-FROM>
+                    <SW-RECORD-LAYOUT-GROUP-TO>-1</SW-RECORD-LAYOUT-GROUP-TO>
+                    <SW-RECORD-LAYOUT-V>
+                      <BASE-TYPE-REF DEST="SW-BASE-TYPE">/AUTOSAR_Platform/SwBaseTypes/float32</BASE-TYPE-REF>
+                      <SW-RECORD-LAYOUT-V-AXIS>0</SW-RECORD-LAYOUT-V-AXIS>
+                      <SW-RECORD-LAYOUT-V-PROP>VALUE</SW-RECORD-LAYOUT-V-PROP>
+                      <SW-RECORD-LAYOUT-V-INDEX>X Y</SW-RECORD-LAYOUT-V-INDEX>
+                    </SW-RECORD-LAYOUT-V>
+                  </SW-RECORD-LAYOUT-GROUP>
+                </SW-RECORD-LAYOUT-GROUP>
+                <SW-RECORD-LAYOUT-V />
+              </SW-RECORD-LAYOUT-GROUP>
+            </SW-RECORD-LAYOUT>
+          </ELEMENTS>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>
+

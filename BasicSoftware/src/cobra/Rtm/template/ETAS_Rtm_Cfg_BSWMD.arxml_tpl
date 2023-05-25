@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-2-2.xsd">
+  <ADMIN-DATA>
+    <LANGUAGE>EN</LANGUAGE>
+    <USED-LANGUAGES>
+      <L-10 L="EN" xml:space="default">English</L-10>
+    </USED-LANGUAGES>
+  </ADMIN-DATA>
+  <AR-PACKAGES>
+    <AR-PACKAGE>
+      <SHORT-NAME>ETAS_BIP</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE>
+          <SHORT-NAME>BswModuleDescriptions</SHORT-NAME>
+          <ELEMENTS>
+            <BSW-MODULE-DESCRIPTION>
+              <SHORT-NAME>Rtm</SHORT-NAME>
+              <CATEGORY>BSW_MODULE</CATEGORY>
+              <MODULE-ID>255</MODULE-ID>
+              <INTERNAL-BEHAVIORS>
+                <BSW-INTERNAL-BEHAVIOR>
+                  <SHORT-NAME>BswInternalBehavior</SHORT-NAME>
+                  <ENTITYS>
+                    <BSW-SCHEDULABLE-ENTITY>
+                      <SHORT-NAME>Rtm_MainFunction</SHORT-NAME>
+                      <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/ETAS_BIP/BswModuleDescriptions/Rtm_MainFunction</IMPLEMENTED-ENTRY-REF>
+                    </BSW-SCHEDULABLE-ENTITY>
+                  </ENTITYS>
+                  <EVENTS>
+                    <BSW-TIMING-EVENT>
+                      <SHORT-NAME>TE_Rtm_MainFunction</SHORT-NAME>
+                      <STARTS-ON-EVENT-REF DEST="BSW-SCHEDULABLE-ENTITY">/ETAS_BIP/BswModuleDescriptions/Rtm/BswInternalBehavior/Rtm_MainFunction</STARTS-ON-EVENT-REF>
+                      <PERIOD>0.1</PERIOD>
+                    </BSW-TIMING-EVENT>
+                  </EVENTS>
+                </BSW-INTERNAL-BEHAVIOR>
+              </INTERNAL-BEHAVIORS>
+            </BSW-MODULE-DESCRIPTION>
+            <BSW-MODULE-ENTRY>
+              <SHORT-NAME>Rtm_MainFunction</SHORT-NAME>
+              <IS-REENTRANT>false</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>SCHEDULED</CALL-TYPE>
+              <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+            </BSW-MODULE-ENTRY>
+          </ELEMENTS>
+          <AR-PACKAGES>
+            <AR-PACKAGE>
+              <SHORT-NAME>Units</SHORT-NAME>
+              <ELEMENTS>
+                <UNIT>
+                  <SHORT-NAME>Microseconds</SHORT-NAME>
+                  <LONG-NAME>
+                    <L-4 L="EN">Microseconds</L-4>
+                  </LONG-NAME>
+                </UNIT>
+                <UNIT>
+                  <SHORT-NAME>PerCent</SHORT-NAME>
+                  <LONG-NAME>
+                    <L-4 L="EN">Percent</L-4>
+                  </LONG-NAME>
+                </UNIT>
+              </ELEMENTS>
+            </AR-PACKAGE>
+            <AR-PACKAGE>
+              <SHORT-NAME>CompuMethods</SHORT-NAME>
+              <ELEMENTS>
+                <COMPU-METHOD>
+                  <SHORT-NAME>Ticks_Microseconds</SHORT-NAME>
+                  <LONG-NAME>
+                    <L-4 L="EN">Converts ticks to microseconds</L-4>
+                  </LONG-NAME>
+                  <CATEGORY>LINEAR</CATEGORY>
+                  <UNIT-REF DEST="UNIT">/ETAS_BIP/BswModuleDescriptions/Units/Microseconds</UNIT-REF>
+                  <COMPU-PHYS-TO-INTERNAL>
+                    <COMPU-SCALES>
+                      <COMPU-SCALE>
+                        <COMPU-RATIONAL-COEFFS>
+                          <COMPU-NUMERATOR>
+                            <V>0</V>
+                            <V>�
+    FOREACH this.mcu.mcuModuleConfiguration.mcuClockSettingConfig AS ClockSetting-�
+    �  FOREACH ClockSetting.mcuClockReferencePoint AS RefPoint-�
+    �    IF RefPoint.mcuClockReferencePoint__KEY.toString() == 'F_MCU_SYSTIMER'-�
+    �      RefPoint.mcuClockReferencePointFrequency.toInteger()-�
+    �    ENDIF-�
+    �  ENDFOREACH-�
+    �ENDFOREACH-�</V>
+                          </COMPU-NUMERATOR>
+                          <COMPU-DENOMINATOR>
+                            <V>1</V>
+                          </COMPU-DENOMINATOR>
+                        </COMPU-RATIONAL-COEFFS>
+                      </COMPU-SCALE>
+                    </COMPU-SCALES>
+                  </COMPU-PHYS-TO-INTERNAL>
+                </COMPU-METHOD>
+                <COMPU-METHOD>
+                  <SHORT-NAME>LoadPer64k_PerCent</SHORT-NAME>
+                  <LONG-NAME>
+                    <L-4 L="EN">Converts a value from 0 to 65535 to per cent (with 65536 = 100%)</L-4>
+                  </LONG-NAME>
+                  <CATEGORY>LINEAR</CATEGORY>
+                  <UNIT-REF DEST="UNIT">/ETAS_BIP/BswModuleDescriptions/Units/PerCent</UNIT-REF>
+                  <COMPU-PHYS-TO-INTERNAL>
+                    <COMPU-SCALES>
+                      <COMPU-SCALE>
+                        <COMPU-RATIONAL-COEFFS>
+                          <COMPU-NUMERATOR>
+                            <V>0</V>
+                            <V>65536</V>
+                          </COMPU-NUMERATOR>
+                          <COMPU-DENOMINATOR>
+                            <V>100</V>
+                          </COMPU-DENOMINATOR>
+                        </COMPU-RATIONAL-COEFFS>
+                      </COMPU-SCALE>
+                    </COMPU-SCALES>
+                  </COMPU-PHYS-TO-INTERNAL>
+                </COMPU-METHOD>
+              </ELEMENTS>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>
+

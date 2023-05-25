@@ -1,0 +1,131 @@
+// T32 Tue Dec 13 15:05:19 2022
+
+B::
+
+Break.RESet
+Break.CONFIG.VarConvert OFF
+Break.CONFIG.InexactData ON
+Break.CONFIG.InexactTrigger OFF
+Break.CONFIG.InexactResume ON
+Break.CONFIG.InexactAddress ON
+Break.Set     _arc_reset /Program /DISable
+Break.Set     RE_NvMUT_100ms /Program /DISable
+Break.Set     Os_Cbk_Idle /Program /DISable
+Break.Set     Fls_Erase /Program
+Break.Set     Fls_Write /Program
+Break.Set     Fls_Read /Program
+Break.Set     Fls_BlankCheck /Program
+Break.Set     Fls_Compare /Program
+Break.Set     Fls_Hal_MainFunction_Handling_Compare
+Break.Set     Fls_Hal_MainFunction_Handling_BlankCheck
+Break.Set     Fls_Hal_MainFunction_Handling_Read
+Break.Set     Fls_Hal_MainFunction_Handling_Write
+Break.Set     Fls_Hal_MainFunction_Handling_Erase
+
+BookMark.RESet
+
+sYmbol.SourcePATH.RESet
+
+FLASH.RESet
+
+TOOLBAR   ON
+STATUSBAR ON
+FramePOS -227.0,9.1429,,,Maximized
+WinPAGE.RESet
+
+WinPAGE.Create P000
+WinCLEAR
+
+WinPOS 9.375 5.3571 80. 24. 0. 0. W005
+TERM.GATE
+
+WinPOS 0.875 22.571 69. 19. 0. 0. W008
+PER
+
+WinPOS 46.0 56.071 93. 9. 17. 1. W009
+Data.dump (0x007b45b8) /DIALOG
+
+WinPOS 74.625 56.071 63. 11. 0. 0. W002
+Var.Ref %Hex %Decimal
+
+WinPOS 179.0 1.2143 55. 64. 17. 1. W007
+Data.dump (0x7d9be8) /DIALOG
+
+WinPOS 0.375 0.14286 69. 47. 5. 0. W003
+Frame.view /Args /Locals
+
+WinPOS 0.625 47.857 69. 17. 0. 0. W004
+Var.Watch
+
+VAR.ADDWATCH NvM_Test
+VAR.ADDWATCH Fls_Erase_Job
+VAR.ADDWATCH Fls_Write_Job
+VAR.ADDWATCH Fls_Read_Job
+VAR.ADDWATCH Fls_Compare_Job
+VAR.ADDWATCH Fls_BlankCheck_Job
+VAR.ADDWATCH FlsModuleState
+VAR.ADDWATCH Fls_JobResult
+VAR.ADDWATCH Fee_stMain
+VAR.ADDWATCH Fee_RdWrOrder_st.Fee_LLRdState_en
+VAR.ADDWATCH SpiConfigData.SpiJobConfig[6]
+VAR.ADDWATCH tyFlg
+VAR.ADDWATCH tyI
+VAR.ADDWATCH tyRead
+
+WinPOS 97.875 55.071 73. 10. 27. 1. W006
+WinTABS 13. 0. 0. 0. 0. 0. 0. 0. 0. 18.
+Break.List
+
+WinPOS 74.875 0.071429 99. 49. 17. 1. W001
+WinTABS 18. 10. 30.
+List.auto
+
+WinPAGE.select P000
+
+// STOre/ClipSTOre initial settings
+SETUP.STOre.RESet
+SETUP.STOre.SYMBOLIC ON
+SETUP.STOre.INDENTation 4.
+
+SETUP.EDITOR.TYPE PowerView
+SETUP.EDITOR.SaveChangesPrompt OnT32Quit
+SETUP.EDITOR.BAKfile ON
+SETUP.EDITOR.HighLight.Block ON
+SETUP.EDITOR.HighLight.BraceMatching ON
+SETUP.EDITOR.HighLight.CursorLine ON
+SETUP.EDITOR.HighLight.Keywords ON
+SETUP.EDITOR.HighLight.Selection ON
+SETUP.EDITOR.SmartCursor OFF
+SETUP.EDITOR.SmartBackspace OFF
+SETUP.EDITOR.AutoSuggest OFF
+SETUP.EDITOR.TrailingWhitespace StripChangedLine
+SETUP.EDITOR.Mode Normal
+SETUP.EDITOR.Indentation    PRACTICE Auto
+SETUP.EDITOR.IndentWithTabs PRACTICE OFF
+SETUP.EDITOR.IndentSize     PRACTICE 2.
+SETUP.EDITOR.TabSize        PRACTICE DEFault
+SETUP.EDITOR.Indentation    C Auto
+SETUP.EDITOR.IndentWithTabs C ON
+SETUP.EDITOR.IndentSize     C DEFault
+SETUP.EDITOR.TabSize        C DEFault
+SETUP.EDITOR.Indentation    PYTHON Auto
+SETUP.EDITOR.IndentWithTabs PYTHON OFF
+SETUP.EDITOR.IndentSize     PYTHON 4.
+SETUP.EDITOR.TabSize        PYTHON DEFault
+SETUP.EDITOR.Indentation    ASM Auto
+SETUP.EDITOR.IndentWithTabs ASM ON
+SETUP.EDITOR.IndentSize     ASM DEFault
+SETUP.EDITOR.TabSize        ASM DEFault
+SETUP.EDITOR.Indentation    TRIG Auto
+SETUP.EDITOR.IndentWithTabs TRIG ON
+SETUP.EDITOR.IndentSize     TRIG DEFault
+SETUP.EDITOR.TabSize        TRIG DEFault
+SETUP.EDITOR.Indentation    TEXT Keep
+SETUP.EDITOR.IndentWithTabs TEXT ON
+SETUP.EDITOR.IndentSize     TEXT DEFault
+SETUP.EDITOR.TabSize        TEXT DEFault
+
+// PRACTICE Breakpoints
+PBREAK.RESet
+
+ENDDO

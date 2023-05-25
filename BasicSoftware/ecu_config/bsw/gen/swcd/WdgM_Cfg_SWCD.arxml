@@ -1,0 +1,878 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+-->
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-2-2.xsd"><ADMIN-DATA><USED-LANGUAGES></USED-LANGUAGES></ADMIN-DATA>
+    <AR-PACKAGES>
+
+                    <AR-PACKAGE>
+                        <SHORT-NAME>AUTOSAR_WdgM</SHORT-NAME>
+                        <CATEGORY>SWCD</CATEGORY>
+
+                        <!--##################################################
+                            #                 References                     #
+                            ##################################################-->
+                        <REFERENCE-BASES>
+
+                        <!-- Base reference to this package - serving as base for all the other file internal references -->
+                             <REFERENCE-BASE>
+                               <SHORT-LABEL>WdgM_SWCD_ReferenceBase_default</SHORT-LABEL>
+                               <IS-DEFAULT>true</IS-DEFAULT>
+                               <PACKAGE-REF DEST="AR-PACKAGE">/AUTOSAR_WdgM</PACKAGE-REF>
+                             </REFERENCE-BASE>
+
+
+                             
+                            <REFERENCE-BASE>
+                              <SHORT-LABEL>RBA_CUCEL_CompuMethods</SHORT-LABEL>
+                              <PACKAGE-REF DEST="AR-PACKAGE">/RB/RBA/Common/CentralElements/CompuMethods</PACKAGE-REF>
+                            </REFERENCE-BASE>
+                            <!-- References to AUTOSAR definitions -->
+                            <REFERENCE-BASE>
+                              <SHORT-LABEL>AR_ImplementationDataTypes</SHORT-LABEL>
+                              <PACKAGE-REF DEST="AR-PACKAGE">/AUTOSAR_Platform/ImplementationDataTypes</PACKAGE-REF>
+                            </REFERENCE-BASE>
+
+                         </REFERENCE-BASES>
+
+                        <ELEMENTS>
+
+                        <!--##################################################
+                            #              DataTypeMappingSets               #
+                            ##################################################-->
+
+                            <DATA-TYPE-MAPPING-SET>
+                              <SHORT-NAME>WdgM_Type_Map</SHORT-NAME>
+                              <MODE-REQUEST-TYPE-MAPS>
+                                <MODE-REQUEST-TYPE-MAP>
+                                    <IMPLEMENTATION-DATA-TYPE-REF  BASE="AR_ImplementationDataTypes" DEST="IMPLEMENTATION-DATA-TYPE">uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                                    <MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP">WdgM_Mode</MODE-GROUP-REF>
+                                </MODE-REQUEST-TYPE-MAP>
+
+                              </MODE-REQUEST-TYPE-MAPS>
+                            </DATA-TYPE-MAPPING-SET>
+
+
+                        <!--##################################################
+                            #                 Mode declaration               #
+                            ##################################################-->
+
+                        <MODE-DECLARATION-GROUP>
+                            <SHORT-NAME>WdgM_Mode</SHORT-NAME>
+                            <CATEGORY>EXPLICIT_ORDER</CATEGORY>
+                            <INITIAL-MODE-REF DEST="MODE-DECLARATION">WdgM_Mode/SUPERVISION_OK</INITIAL-MODE-REF>
+                            <MODE-DECLARATIONS>
+                                <MODE-DECLARATION>
+                                    <SHORT-NAME>SUPERVISION_OK</SHORT-NAME>
+                                    <VALUE>0</VALUE>
+                                </MODE-DECLARATION>
+                                <MODE-DECLARATION>
+                                    <SHORT-NAME>SUPERVISION_FAILED</SHORT-NAME>
+                                    <VALUE>1</VALUE>
+                                </MODE-DECLARATION>
+                                <MODE-DECLARATION>
+                                    <SHORT-NAME>SUPERVISION_EXPIRED</SHORT-NAME>
+                                    <VALUE>2</VALUE>
+                                </MODE-DECLARATION>
+                                <MODE-DECLARATION>
+                                    <SHORT-NAME>SUPERVISION_STOPPED</SHORT-NAME>
+                                    <VALUE>3</VALUE>
+                                </MODE-DECLARATION>
+                                <MODE-DECLARATION>
+                                    <SHORT-NAME>SUPERVISION_DEACTIVATED</SHORT-NAME>
+                                    <VALUE>4</VALUE>
+                                </MODE-DECLARATION>
+                            </MODE-DECLARATIONS>
+                            <ON-TRANSITION-VALUE>255</ON-TRANSITION-VALUE>
+                        </MODE-DECLARATION-GROUP>
+
+
+                        <!--##################################################
+                            #                  PortInterfaces                #
+                            ##################################################-->
+                            <CLIENT-SERVER-INTERFACE>
+                                <SHORT-NAME>WdgM_LocalSupervision</SHORT-NAME>
+                                <IS-SERVICE>true</IS-SERVICE>
+                                <OPERATIONS>
+                                    <CLIENT-SERVER-OPERATION>
+                                        <SHORT-NAME>CheckpointReached</SHORT-NAME>
+                                        <POSSIBLE-ERROR-REFS>
+                                            <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">WdgM_LocalSupervision/E_NOT_OK</POSSIBLE-ERROR-REF>
+                                            <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">WdgM_LocalSupervision/E_OK</POSSIBLE-ERROR-REF>
+                                        </POSSIBLE-ERROR-REFS>
+                                    </CLIENT-SERVER-OPERATION>
+                                </OPERATIONS>
+
+                                <POSSIBLE-ERRORS>                                    
+                                    <APPLICATION-ERROR>
+                                        <SHORT-NAME>E_OK</SHORT-NAME>
+                                        <ERROR-CODE>0</ERROR-CODE>
+                                    </APPLICATION-ERROR>
+                                    <APPLICATION-ERROR>
+                                        <SHORT-NAME>E_NOT_OK</SHORT-NAME>
+                                        <ERROR-CODE>1</ERROR-CODE>
+                                    </APPLICATION-ERROR>
+                                </POSSIBLE-ERRORS>
+                            </CLIENT-SERVER-INTERFACE>
+
+                            <CLIENT-SERVER-INTERFACE>
+                                <SHORT-NAME>WdgM_LocalSupervisionStatus</SHORT-NAME>
+                                <IS-SERVICE>true</IS-SERVICE>
+                                <OPERATIONS>
+                                    <CLIENT-SERVER-OPERATION>
+                                        <SHORT-NAME>GetLocalStatus</SHORT-NAME>
+                                        <ARGUMENTS>
+                                            <ARGUMENT-DATA-PROTOTYPE>
+                                                <SHORT-NAME>Status</SHORT-NAME>
+                                                <SW-DATA-DEF-PROPS>
+                                                    <SW-DATA-DEF-PROPS-VARIANTS>
+                                                        <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                            <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                                                        </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                    </SW-DATA-DEF-PROPS-VARIANTS>
+                                                </SW-DATA-DEF-PROPS>
+                                                <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_WdgM/ImplementationDataTypes/WdgM_LocalStatusType</TYPE-TREF>
+                                                <DIRECTION>OUT</DIRECTION>
+                                            </ARGUMENT-DATA-PROTOTYPE>
+                                        </ARGUMENTS>
+                                        <POSSIBLE-ERROR-REFS>
+                                            <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">WdgM_LocalSupervisionStatus/E_NOT_OK</POSSIBLE-ERROR-REF>
+                                            <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">WdgM_LocalSupervisionStatus/E_OK</POSSIBLE-ERROR-REF>
+                                        </POSSIBLE-ERROR-REFS>
+                                    </CLIENT-SERVER-OPERATION>
+                                </OPERATIONS>
+
+                                <POSSIBLE-ERRORS>                                    
+                                    <APPLICATION-ERROR>
+                                        <SHORT-NAME>E_OK</SHORT-NAME>
+                                        <ERROR-CODE>0</ERROR-CODE>
+                                    </APPLICATION-ERROR>
+                                    <APPLICATION-ERROR>
+                                        <SHORT-NAME>E_NOT_OK</SHORT-NAME>
+                                        <ERROR-CODE>1</ERROR-CODE>
+                                    </APPLICATION-ERROR>
+                                </POSSIBLE-ERRORS>
+                            </CLIENT-SERVER-INTERFACE>
+                            
+                            <CLIENT-SERVER-INTERFACE>
+                                <SHORT-NAME>WdgM_GlobalSupervision</SHORT-NAME>
+                                <IS-SERVICE>true</IS-SERVICE>
+                                <OPERATIONS>
+                                    <CLIENT-SERVER-OPERATION>
+                                        <SHORT-NAME>GetFirstExpiredSEID</SHORT-NAME>
+                                        <ARGUMENTS>
+                                            <ARGUMENT-DATA-PROTOTYPE>
+                                                <SHORT-NAME>SEID</SHORT-NAME>
+                                                <SW-DATA-DEF-PROPS>
+                                                    <SW-DATA-DEF-PROPS-VARIANTS>
+                                                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                        <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                                                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                    </SW-DATA-DEF-PROPS-VARIANTS>
+                                                </SW-DATA-DEF-PROPS>
+                                                <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_WdgM/ImplementationDataTypes/WdgM_SupervisedEntityIdType</TYPE-TREF>
+                                                <DIRECTION>OUT</DIRECTION>
+                                            </ARGUMENT-DATA-PROTOTYPE>
+                                        </ARGUMENTS>
+                                        <POSSIBLE-ERROR-REFS>
+                                            <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">WdgM_GlobalSupervision/E_NOT_OK</POSSIBLE-ERROR-REF>
+                                            <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">WdgM_GlobalSupervision/E_OK</POSSIBLE-ERROR-REF>
+                                        </POSSIBLE-ERROR-REFS>
+                                    </CLIENT-SERVER-OPERATION>
+
+                                    <CLIENT-SERVER-OPERATION>
+                                        <SHORT-NAME>GetGlobalStatus</SHORT-NAME>
+                                        <ARGUMENTS>
+                                            <ARGUMENT-DATA-PROTOTYPE>
+                                                <SHORT-NAME>Status</SHORT-NAME>
+                                                <SW-DATA-DEF-PROPS>
+                                                    <SW-DATA-DEF-PROPS-VARIANTS>
+                                                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                        <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                                                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                    </SW-DATA-DEF-PROPS-VARIANTS>
+                                                </SW-DATA-DEF-PROPS>
+                                                <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_WdgM/ImplementationDataTypes/WdgM_GlobalStatusType</TYPE-TREF>
+                                                <DIRECTION>OUT</DIRECTION>
+                                            </ARGUMENT-DATA-PROTOTYPE>
+                                        </ARGUMENTS>
+                                        <POSSIBLE-ERROR-REFS>
+                                            <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">WdgM_GlobalSupervision/E_NOT_OK</POSSIBLE-ERROR-REF>
+                                            <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">WdgM_GlobalSupervision/E_OK</POSSIBLE-ERROR-REF>
+                                        </POSSIBLE-ERROR-REFS>
+                                    </CLIENT-SERVER-OPERATION>
+                                    
+                                    <CLIENT-SERVER-OPERATION>
+                                        <SHORT-NAME>GetMode</SHORT-NAME>
+                                        <ARGUMENTS>
+                                            <ARGUMENT-DATA-PROTOTYPE>
+                                                <SHORT-NAME>Mode</SHORT-NAME>
+                                                <SW-DATA-DEF-PROPS>
+                                                    <SW-DATA-DEF-PROPS-VARIANTS>
+                                                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                        <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                                                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                    </SW-DATA-DEF-PROPS-VARIANTS>
+                                                </SW-DATA-DEF-PROPS>
+                                                <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_WdgM/ImplementationDataTypes/WdgM_ModeType</TYPE-TREF>
+                                                <DIRECTION>OUT</DIRECTION>
+                                            </ARGUMENT-DATA-PROTOTYPE>
+                                        </ARGUMENTS>
+                                        <POSSIBLE-ERROR-REFS>
+                                            <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">WdgM_GlobalSupervision/E_NOT_OK</POSSIBLE-ERROR-REF>
+                                            <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">WdgM_GlobalSupervision/E_OK</POSSIBLE-ERROR-REF>
+                                        </POSSIBLE-ERROR-REFS>
+                                    </CLIENT-SERVER-OPERATION>
+                                    
+                                    <CLIENT-SERVER-OPERATION>
+                                        <SHORT-NAME>PerformReset</SHORT-NAME>
+                                    </CLIENT-SERVER-OPERATION>
+                                    
+                                    <CLIENT-SERVER-OPERATION>
+                                        <SHORT-NAME>SetMode</SHORT-NAME>
+                                        <ARGUMENTS>
+                                            <ARGUMENT-DATA-PROTOTYPE>
+                                                <SHORT-NAME>Mode</SHORT-NAME>
+                                                <SW-DATA-DEF-PROPS>
+                                                    <SW-DATA-DEF-PROPS-VARIANTS>
+                                                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                        <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                                                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                    </SW-DATA-DEF-PROPS-VARIANTS>
+                                                </SW-DATA-DEF-PROPS>
+                                                <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_WdgM/ImplementationDataTypes/WdgM_ModeType</TYPE-TREF>
+                                                <DIRECTION>IN</DIRECTION>
+                                            </ARGUMENT-DATA-PROTOTYPE>
+                                        </ARGUMENTS>
+                                        <POSSIBLE-ERROR-REFS>
+                                            <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">WdgM_GlobalSupervision/E_NOT_OK</POSSIBLE-ERROR-REF>
+                                            <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">WdgM_GlobalSupervision/E_OK</POSSIBLE-ERROR-REF>
+                                        </POSSIBLE-ERROR-REFS>
+                                    </CLIENT-SERVER-OPERATION>                                                                  
+                                                                        
+                                </OPERATIONS>
+
+                                <POSSIBLE-ERRORS>                                    
+                                    <APPLICATION-ERROR>
+                                        <SHORT-NAME>E_OK</SHORT-NAME>
+                                        <ERROR-CODE>0</ERROR-CODE>
+                                    </APPLICATION-ERROR>
+                                    <APPLICATION-ERROR>
+                                        <SHORT-NAME>E_NOT_OK</SHORT-NAME>
+                                        <ERROR-CODE>1</ERROR-CODE>
+                                    </APPLICATION-ERROR>
+                                </POSSIBLE-ERRORS>
+                            </CLIENT-SERVER-INTERFACE>
+                            
+                            <MODE-SWITCH-INTERFACE>
+                                <SHORT-NAME>WdgM_LocalMode</SHORT-NAME>
+                                <IS-SERVICE>true</IS-SERVICE>
+                                <MODE-GROUP>
+                                    <SHORT-NAME>currentMode</SHORT-NAME>
+                                    <TYPE-TREF DEST="MODE-DECLARATION-GROUP">WdgM_Mode</TYPE-TREF>
+                                </MODE-GROUP>
+                            </MODE-SWITCH-INTERFACE>
+                            
+                            <MODE-SWITCH-INTERFACE>
+                                <SHORT-NAME>WdgM_GlobalMode</SHORT-NAME>
+                                <IS-SERVICE>true</IS-SERVICE>
+                                <MODE-GROUP>
+                                    <SHORT-NAME>currentMode</SHORT-NAME>
+                                    <TYPE-TREF DEST="MODE-DECLARATION-GROUP">WdgM_Mode</TYPE-TREF>
+                                </MODE-GROUP>
+                            </MODE-SWITCH-INTERFACE>
+
+
+                        <!--##################################################
+                            #                 SwComponentTypes               #
+                            ##################################################-->
+                            <SERVICE-SW-COMPONENT-TYPE>
+                              <!-- RTE generator will generate files with this name -->
+                              <SHORT-NAME>WdgM</SHORT-NAME>
+
+                              <PORTS>
+
+                                <!-- Port: localSupervision_WdgM_SE1_WdgM_SE1_Alive_CP -->
+                                <P-PORT-PROTOTYPE>
+                                  <SHORT-NAME>localSupervision_WdgM_SE1_WdgM_SE1_Alive_CP</SHORT-NAME>
+                                  <PROVIDED-COM-SPECS>
+                                      <SERVER-COM-SPEC>
+                                          <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">WdgM_LocalSupervision/CheckpointReached</OPERATION-REF>
+                                          
+                                          <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                                          
+                                      </SERVER-COM-SPEC>
+                                  </PROVIDED-COM-SPECS>
+                                  <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">WdgM_LocalSupervision</PROVIDED-INTERFACE-TREF>
+                                </P-PORT-PROTOTYPE>
+                                <!-- Port: localSupervision_WdgM_SE1_WdgM_SE1_Deadline_CP_0 -->
+                                <P-PORT-PROTOTYPE>
+                                  <SHORT-NAME>localSupervision_WdgM_SE1_WdgM_SE1_Deadline_CP_0</SHORT-NAME>
+                                  <PROVIDED-COM-SPECS>
+                                      <SERVER-COM-SPEC>
+                                          <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">WdgM_LocalSupervision/CheckpointReached</OPERATION-REF>
+                                          
+                                          <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                                          
+                                      </SERVER-COM-SPEC>
+                                  </PROVIDED-COM-SPECS>
+                                  <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">WdgM_LocalSupervision</PROVIDED-INTERFACE-TREF>
+                                </P-PORT-PROTOTYPE>
+                                <!-- Port: localSupervision_WdgM_SE1_WdgM_SE1_Deadline_CP_1 -->
+                                <P-PORT-PROTOTYPE>
+                                  <SHORT-NAME>localSupervision_WdgM_SE1_WdgM_SE1_Deadline_CP_1</SHORT-NAME>
+                                  <PROVIDED-COM-SPECS>
+                                      <SERVER-COM-SPEC>
+                                          <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">WdgM_LocalSupervision/CheckpointReached</OPERATION-REF>
+                                          
+                                          <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                                          
+                                      </SERVER-COM-SPEC>
+                                  </PROVIDED-COM-SPECS>
+                                  <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">WdgM_LocalSupervision</PROVIDED-INTERFACE-TREF>
+                                </P-PORT-PROTOTYPE>
+                                <!-- Port: localSupervision_WdgM_SE1_WdgM_SE1_PFM_CP_0 -->
+                                <P-PORT-PROTOTYPE>
+                                  <SHORT-NAME>localSupervision_WdgM_SE1_WdgM_SE1_PFM_CP_0</SHORT-NAME>
+                                  <PROVIDED-COM-SPECS>
+                                      <SERVER-COM-SPEC>
+                                          <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">WdgM_LocalSupervision/CheckpointReached</OPERATION-REF>
+                                          
+                                          <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                                          
+                                      </SERVER-COM-SPEC>
+                                  </PROVIDED-COM-SPECS>
+                                  <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">WdgM_LocalSupervision</PROVIDED-INTERFACE-TREF>
+                                </P-PORT-PROTOTYPE>
+                                <!-- Port: localSupervision_WdgM_SE1_WdgM_SE1_PFM_CP_1 -->
+                                <P-PORT-PROTOTYPE>
+                                  <SHORT-NAME>localSupervision_WdgM_SE1_WdgM_SE1_PFM_CP_1</SHORT-NAME>
+                                  <PROVIDED-COM-SPECS>
+                                      <SERVER-COM-SPEC>
+                                          <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">WdgM_LocalSupervision/CheckpointReached</OPERATION-REF>
+                                          
+                                          <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                                          
+                                      </SERVER-COM-SPEC>
+                                  </PROVIDED-COM-SPECS>
+                                  <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">WdgM_LocalSupervision</PROVIDED-INTERFACE-TREF>
+                                </P-PORT-PROTOTYPE>
+
+
+
+
+                                <!-- Port: localSupervisionStatus_WdgM_SE1 -->
+                                <P-PORT-PROTOTYPE>
+                                  <SHORT-NAME>localSupervisionStatus_WdgM_SE1</SHORT-NAME>
+                                  <PROVIDED-COM-SPECS>
+                                      <SERVER-COM-SPEC>
+                                          <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">WdgM_LocalSupervisionStatus/GetLocalStatus</OPERATION-REF>
+                                          
+                                          <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                                          
+                                      </SERVER-COM-SPEC>
+                                  </PROVIDED-COM-SPECS>
+                                  <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">WdgM_LocalSupervisionStatus</PROVIDED-INTERFACE-TREF>
+                                </P-PORT-PROTOTYPE>
+
+
+
+                                <!-- Port: globalSupervision -->
+                                <P-PORT-PROTOTYPE>
+                                  <SHORT-NAME>globalSupervision</SHORT-NAME>
+                                  <PROVIDED-COM-SPECS>
+                                      <SERVER-COM-SPEC>
+                                          <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">WdgM_GlobalSupervision/GetFirstExpiredSEID</OPERATION-REF>
+                                          
+                                          <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                                          
+                                      </SERVER-COM-SPEC>
+                                      <SERVER-COM-SPEC>
+                                          <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">WdgM_GlobalSupervision/GetGlobalStatus</OPERATION-REF>
+                                          
+                                          <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                                          
+                                      </SERVER-COM-SPEC>
+                                      <SERVER-COM-SPEC>
+                                          <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">WdgM_GlobalSupervision/GetMode</OPERATION-REF>
+                                          
+                                          <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                                          
+                                      </SERVER-COM-SPEC>
+                                      <SERVER-COM-SPEC>
+                                          <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">WdgM_GlobalSupervision/PerformReset</OPERATION-REF>
+                                          
+                                          <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                                          
+                                      </SERVER-COM-SPEC>
+                                      <SERVER-COM-SPEC>
+                                          <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">WdgM_GlobalSupervision/SetMode</OPERATION-REF>
+                                          
+                                          <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                                          
+                                      </SERVER-COM-SPEC>
+                                  </PROVIDED-COM-SPECS>                            
+                                  <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">WdgM_GlobalSupervision</PROVIDED-INTERFACE-TREF>
+                                </P-PORT-PROTOTYPE>
+
+                                <!-- Port: mode_WdgM_SE1 -->
+                                <P-PORT-PROTOTYPE>
+                                  <SHORT-NAME>mode_WdgM_SE1</SHORT-NAME>
+                                  <PROVIDED-COM-SPECS>
+                                    <MODE-SWITCH-SENDER-COM-SPEC>
+                                      <MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">WdgM_LocalMode/currentMode</MODE-GROUP-REF>
+                                      <MODE-SWITCHED-ACK>
+                                        <TIMEOUT>1.0</TIMEOUT>
+                                      </MODE-SWITCHED-ACK>
+                                      
+                                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                                      
+                                    </MODE-SWITCH-SENDER-COM-SPEC>
+                                  </PROVIDED-COM-SPECS>
+                                  <PROVIDED-INTERFACE-TREF DEST="MODE-SWITCH-INTERFACE">WdgM_LocalMode</PROVIDED-INTERFACE-TREF>
+                                </P-PORT-PROTOTYPE>
+
+                                <!-- Port: globalMode -->
+                                <P-PORT-PROTOTYPE>
+                                  <SHORT-NAME>globalMode</SHORT-NAME>
+                                  <PROVIDED-COM-SPECS>
+                                    <MODE-SWITCH-SENDER-COM-SPEC>
+                                      <MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">WdgM_GlobalMode/currentMode</MODE-GROUP-REF>
+                                      <MODE-SWITCHED-ACK>
+                                        <TIMEOUT>1.0</TIMEOUT>
+                                      </MODE-SWITCHED-ACK>
+                                      
+                                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                                      
+                                    </MODE-SWITCH-SENDER-COM-SPEC>
+                                  </PROVIDED-COM-SPECS>
+                                  <PROVIDED-INTERFACE-TREF DEST="MODE-SWITCH-INTERFACE">WdgM_GlobalMode</PROVIDED-INTERFACE-TREF>
+                                </P-PORT-PROTOTYPE>
+
+                              </PORTS>
+
+                              <INTERNAL-BEHAVIORS>
+                                <SWC-INTERNAL-BEHAVIOR>
+                                  <SHORT-NAME>WdgM_InternalBehaviour</SHORT-NAME>
+                                  <DATA-TYPE-MAPPING-REFS>
+                                    <DATA-TYPE-MAPPING-REF DEST="DATA-TYPE-MAPPING-SET">WdgM_Type_Map</DATA-TYPE-MAPPING-REF>
+                                  </DATA-TYPE-MAPPING-REFS>
+                                  <EVENTS>
+                                    <OPERATION-INVOKED-EVENT>
+                                      <SHORT-NAME>OIE_CheckpointReached_WdgM_SE1_WdgM_SE1_Alive_CP</SHORT-NAME>
+                                      <DISABLED-MODE-IREFS></DISABLED-MODE-IREFS>
+                                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">WdgM/WdgM_InternalBehaviour/CheckpointReached</START-ON-EVENT-REF>
+                                      <OPERATION-IREF>
+                                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">WdgM/localSupervision_WdgM_SE1_WdgM_SE1_Alive_CP</CONTEXT-P-PORT-REF>
+                                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">WdgM_LocalSupervision/CheckpointReached</TARGET-PROVIDED-OPERATION-REF>
+                                      </OPERATION-IREF>
+                                    </OPERATION-INVOKED-EVENT>
+                                    <OPERATION-INVOKED-EVENT>
+                                      <SHORT-NAME>OIE_CheckpointReached_WdgM_SE1_WdgM_SE1_Deadline_CP_0</SHORT-NAME>
+                                      <DISABLED-MODE-IREFS></DISABLED-MODE-IREFS>
+                                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">WdgM/WdgM_InternalBehaviour/CheckpointReached</START-ON-EVENT-REF>
+                                      <OPERATION-IREF>
+                                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">WdgM/localSupervision_WdgM_SE1_WdgM_SE1_Deadline_CP_0</CONTEXT-P-PORT-REF>
+                                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">WdgM_LocalSupervision/CheckpointReached</TARGET-PROVIDED-OPERATION-REF>
+                                      </OPERATION-IREF>
+                                    </OPERATION-INVOKED-EVENT>
+                                    <OPERATION-INVOKED-EVENT>
+                                      <SHORT-NAME>OIE_CheckpointReached_WdgM_SE1_WdgM_SE1_Deadline_CP_1</SHORT-NAME>
+                                      <DISABLED-MODE-IREFS></DISABLED-MODE-IREFS>
+                                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">WdgM/WdgM_InternalBehaviour/CheckpointReached</START-ON-EVENT-REF>
+                                      <OPERATION-IREF>
+                                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">WdgM/localSupervision_WdgM_SE1_WdgM_SE1_Deadline_CP_1</CONTEXT-P-PORT-REF>
+                                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">WdgM_LocalSupervision/CheckpointReached</TARGET-PROVIDED-OPERATION-REF>
+                                      </OPERATION-IREF>
+                                    </OPERATION-INVOKED-EVENT>
+                                    <OPERATION-INVOKED-EVENT>
+                                      <SHORT-NAME>OIE_CheckpointReached_WdgM_SE1_WdgM_SE1_PFM_CP_0</SHORT-NAME>
+                                      <DISABLED-MODE-IREFS></DISABLED-MODE-IREFS>
+                                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">WdgM/WdgM_InternalBehaviour/CheckpointReached</START-ON-EVENT-REF>
+                                      <OPERATION-IREF>
+                                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">WdgM/localSupervision_WdgM_SE1_WdgM_SE1_PFM_CP_0</CONTEXT-P-PORT-REF>
+                                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">WdgM_LocalSupervision/CheckpointReached</TARGET-PROVIDED-OPERATION-REF>
+                                      </OPERATION-IREF>
+                                    </OPERATION-INVOKED-EVENT>
+                                    <OPERATION-INVOKED-EVENT>
+                                      <SHORT-NAME>OIE_CheckpointReached_WdgM_SE1_WdgM_SE1_PFM_CP_1</SHORT-NAME>
+                                      <DISABLED-MODE-IREFS></DISABLED-MODE-IREFS>
+                                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">WdgM/WdgM_InternalBehaviour/CheckpointReached</START-ON-EVENT-REF>
+                                      <OPERATION-IREF>
+                                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">WdgM/localSupervision_WdgM_SE1_WdgM_SE1_PFM_CP_1</CONTEXT-P-PORT-REF>
+                                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">WdgM_LocalSupervision/CheckpointReached</TARGET-PROVIDED-OPERATION-REF>
+                                      </OPERATION-IREF>
+                                    </OPERATION-INVOKED-EVENT>
+
+
+
+                                    <OPERATION-INVOKED-EVENT>
+                                      <SHORT-NAME>OIE_GetLocalStatus_WdgM_SE1</SHORT-NAME>
+                                      <DISABLED-MODE-IREFS></DISABLED-MODE-IREFS>
+                                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">WdgM/WdgM_InternalBehaviour/GetLocalStatus</START-ON-EVENT-REF>
+                                      <OPERATION-IREF>
+                                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">WdgM/localSupervisionStatus_WdgM_SE1</CONTEXT-P-PORT-REF>
+                                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">WdgM_LocalSupervisionStatus/GetLocalStatus</TARGET-PROVIDED-OPERATION-REF>
+                                      </OPERATION-IREF>
+                                    </OPERATION-INVOKED-EVENT>
+
+
+                                    <OPERATION-INVOKED-EVENT>
+                                      <SHORT-NAME>OIE_GetFirstExpiredSEID</SHORT-NAME>
+                                      <DISABLED-MODE-IREFS></DISABLED-MODE-IREFS>
+                                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">WdgM/WdgM_InternalBehaviour/GetFirstExpiredSEID</START-ON-EVENT-REF>
+                                      <OPERATION-IREF>
+                                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">WdgM/globalSupervision</CONTEXT-P-PORT-REF>
+                                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">WdgM_GlobalSupervision/GetFirstExpiredSEID</TARGET-PROVIDED-OPERATION-REF>
+                                      </OPERATION-IREF>
+                                    </OPERATION-INVOKED-EVENT>
+                                    
+                                    <OPERATION-INVOKED-EVENT>
+                                      <SHORT-NAME>OIE_GetGlobalStatus</SHORT-NAME>
+                                      <DISABLED-MODE-IREFS></DISABLED-MODE-IREFS>
+                                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">WdgM/WdgM_InternalBehaviour/GetGlobalStatus</START-ON-EVENT-REF>
+                                      <OPERATION-IREF>
+                                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">WdgM/globalSupervision</CONTEXT-P-PORT-REF>
+                                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">WdgM_GlobalSupervision/GetGlobalStatus</TARGET-PROVIDED-OPERATION-REF>
+                                      </OPERATION-IREF>
+                                    </OPERATION-INVOKED-EVENT>
+                                    
+                                    <OPERATION-INVOKED-EVENT>
+                                      <SHORT-NAME>OIE_GetMode</SHORT-NAME>
+                                      <DISABLED-MODE-IREFS></DISABLED-MODE-IREFS>
+                                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">WdgM/WdgM_InternalBehaviour/GetMode</START-ON-EVENT-REF>
+                                      <OPERATION-IREF>
+                                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">WdgM/globalSupervision</CONTEXT-P-PORT-REF>
+                                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">WdgM_GlobalSupervision/GetMode</TARGET-PROVIDED-OPERATION-REF>
+                                      </OPERATION-IREF>
+                                    </OPERATION-INVOKED-EVENT>
+                                    
+                                    <OPERATION-INVOKED-EVENT>
+                                      <SHORT-NAME>OIE_PerformReset</SHORT-NAME>
+                                      <DISABLED-MODE-IREFS></DISABLED-MODE-IREFS>
+                                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">WdgM/WdgM_InternalBehaviour/PerformReset</START-ON-EVENT-REF>
+                                      <OPERATION-IREF>
+                                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">WdgM/globalSupervision</CONTEXT-P-PORT-REF>
+                                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">WdgM_GlobalSupervision/PerformReset</TARGET-PROVIDED-OPERATION-REF>
+                                      </OPERATION-IREF>
+                                    </OPERATION-INVOKED-EVENT>
+                                    
+                                    <OPERATION-INVOKED-EVENT>
+                                      <SHORT-NAME>OIE_SetMode</SHORT-NAME>
+                                      <DISABLED-MODE-IREFS></DISABLED-MODE-IREFS>
+                                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">WdgM/WdgM_InternalBehaviour/SetMode</START-ON-EVENT-REF>
+                                      <OPERATION-IREF>
+                                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">WdgM/globalSupervision</CONTEXT-P-PORT-REF>
+                                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">WdgM_GlobalSupervision/SetMode</TARGET-PROVIDED-OPERATION-REF>
+                                      </OPERATION-IREF>
+                                    </OPERATION-INVOKED-EVENT>
+
+                                  </EVENTS>
+
+                                    <PORT-API-OPTIONS>
+                                    
+                                        <PORT-API-OPTION>
+                                          <ENABLE-TAKE-ADDRESS>false</ENABLE-TAKE-ADDRESS>
+                                          <INDIRECT-API>false</INDIRECT-API>
+                                          <PORT-ARG-VALUES>
+                                            <PORT-DEFINED-ARGUMENT-VALUE>
+                                              <VALUE>
+                                                <NUMERICAL-VALUE-SPECIFICATION>
+                                                  <VALUE>0</VALUE>
+                                                </NUMERICAL-VALUE-SPECIFICATION>
+                                              </VALUE>
+                                              <VALUE-TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_WdgM/ImplementationDataTypes/WdgM_SupervisedEntityIdType</VALUE-TYPE-TREF>
+                                            </PORT-DEFINED-ARGUMENT-VALUE>
+                                            <PORT-DEFINED-ARGUMENT-VALUE>
+                                              <VALUE>
+                                                <NUMERICAL-VALUE-SPECIFICATION>
+                                                  <VALUE>0</VALUE>
+                                                </NUMERICAL-VALUE-SPECIFICATION>
+                                              </VALUE>
+                                              <VALUE-TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_WdgM/ImplementationDataTypes/WdgM_CheckpointIdType</VALUE-TYPE-TREF>
+                                            </PORT-DEFINED-ARGUMENT-VALUE>                                          
+                                          </PORT-ARG-VALUES>
+                                          <PORT-REF DEST="P-PORT-PROTOTYPE">WdgM/localSupervision_WdgM_SE1_WdgM_SE1_Alive_CP</PORT-REF>
+                                        </PORT-API-OPTION>
+                                        <PORT-API-OPTION>
+                                          <ENABLE-TAKE-ADDRESS>false</ENABLE-TAKE-ADDRESS>
+                                          <INDIRECT-API>false</INDIRECT-API>
+                                          <PORT-ARG-VALUES>
+                                            <PORT-DEFINED-ARGUMENT-VALUE>
+                                              <VALUE>
+                                                <NUMERICAL-VALUE-SPECIFICATION>
+                                                  <VALUE>0</VALUE>
+                                                </NUMERICAL-VALUE-SPECIFICATION>
+                                              </VALUE>
+                                              <VALUE-TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_WdgM/ImplementationDataTypes/WdgM_SupervisedEntityIdType</VALUE-TYPE-TREF>
+                                            </PORT-DEFINED-ARGUMENT-VALUE>
+                                            <PORT-DEFINED-ARGUMENT-VALUE>
+                                              <VALUE>
+                                                <NUMERICAL-VALUE-SPECIFICATION>
+                                                  <VALUE>1</VALUE>
+                                                </NUMERICAL-VALUE-SPECIFICATION>
+                                              </VALUE>
+                                              <VALUE-TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_WdgM/ImplementationDataTypes/WdgM_CheckpointIdType</VALUE-TYPE-TREF>
+                                            </PORT-DEFINED-ARGUMENT-VALUE>                                          
+                                          </PORT-ARG-VALUES>
+                                          <PORT-REF DEST="P-PORT-PROTOTYPE">WdgM/localSupervision_WdgM_SE1_WdgM_SE1_Deadline_CP_0</PORT-REF>
+                                        </PORT-API-OPTION>
+                                        <PORT-API-OPTION>
+                                          <ENABLE-TAKE-ADDRESS>false</ENABLE-TAKE-ADDRESS>
+                                          <INDIRECT-API>false</INDIRECT-API>
+                                          <PORT-ARG-VALUES>
+                                            <PORT-DEFINED-ARGUMENT-VALUE>
+                                              <VALUE>
+                                                <NUMERICAL-VALUE-SPECIFICATION>
+                                                  <VALUE>0</VALUE>
+                                                </NUMERICAL-VALUE-SPECIFICATION>
+                                              </VALUE>
+                                              <VALUE-TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_WdgM/ImplementationDataTypes/WdgM_SupervisedEntityIdType</VALUE-TYPE-TREF>
+                                            </PORT-DEFINED-ARGUMENT-VALUE>
+                                            <PORT-DEFINED-ARGUMENT-VALUE>
+                                              <VALUE>
+                                                <NUMERICAL-VALUE-SPECIFICATION>
+                                                  <VALUE>2</VALUE>
+                                                </NUMERICAL-VALUE-SPECIFICATION>
+                                              </VALUE>
+                                              <VALUE-TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_WdgM/ImplementationDataTypes/WdgM_CheckpointIdType</VALUE-TYPE-TREF>
+                                            </PORT-DEFINED-ARGUMENT-VALUE>                                          
+                                          </PORT-ARG-VALUES>
+                                          <PORT-REF DEST="P-PORT-PROTOTYPE">WdgM/localSupervision_WdgM_SE1_WdgM_SE1_Deadline_CP_1</PORT-REF>
+                                        </PORT-API-OPTION>
+                                        <PORT-API-OPTION>
+                                          <ENABLE-TAKE-ADDRESS>false</ENABLE-TAKE-ADDRESS>
+                                          <INDIRECT-API>false</INDIRECT-API>
+                                          <PORT-ARG-VALUES>
+                                            <PORT-DEFINED-ARGUMENT-VALUE>
+                                              <VALUE>
+                                                <NUMERICAL-VALUE-SPECIFICATION>
+                                                  <VALUE>0</VALUE>
+                                                </NUMERICAL-VALUE-SPECIFICATION>
+                                              </VALUE>
+                                              <VALUE-TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_WdgM/ImplementationDataTypes/WdgM_SupervisedEntityIdType</VALUE-TYPE-TREF>
+                                            </PORT-DEFINED-ARGUMENT-VALUE>
+                                            <PORT-DEFINED-ARGUMENT-VALUE>
+                                              <VALUE>
+                                                <NUMERICAL-VALUE-SPECIFICATION>
+                                                  <VALUE>3</VALUE>
+                                                </NUMERICAL-VALUE-SPECIFICATION>
+                                              </VALUE>
+                                              <VALUE-TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_WdgM/ImplementationDataTypes/WdgM_CheckpointIdType</VALUE-TYPE-TREF>
+                                            </PORT-DEFINED-ARGUMENT-VALUE>                                          
+                                          </PORT-ARG-VALUES>
+                                          <PORT-REF DEST="P-PORT-PROTOTYPE">WdgM/localSupervision_WdgM_SE1_WdgM_SE1_PFM_CP_0</PORT-REF>
+                                        </PORT-API-OPTION>
+                                        <PORT-API-OPTION>
+                                          <ENABLE-TAKE-ADDRESS>false</ENABLE-TAKE-ADDRESS>
+                                          <INDIRECT-API>false</INDIRECT-API>
+                                          <PORT-ARG-VALUES>
+                                            <PORT-DEFINED-ARGUMENT-VALUE>
+                                              <VALUE>
+                                                <NUMERICAL-VALUE-SPECIFICATION>
+                                                  <VALUE>0</VALUE>
+                                                </NUMERICAL-VALUE-SPECIFICATION>
+                                              </VALUE>
+                                              <VALUE-TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_WdgM/ImplementationDataTypes/WdgM_SupervisedEntityIdType</VALUE-TYPE-TREF>
+                                            </PORT-DEFINED-ARGUMENT-VALUE>
+                                            <PORT-DEFINED-ARGUMENT-VALUE>
+                                              <VALUE>
+                                                <NUMERICAL-VALUE-SPECIFICATION>
+                                                  <VALUE>4</VALUE>
+                                                </NUMERICAL-VALUE-SPECIFICATION>
+                                              </VALUE>
+                                              <VALUE-TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_WdgM/ImplementationDataTypes/WdgM_CheckpointIdType</VALUE-TYPE-TREF>
+                                            </PORT-DEFINED-ARGUMENT-VALUE>                                          
+                                          </PORT-ARG-VALUES>
+                                          <PORT-REF DEST="P-PORT-PROTOTYPE">WdgM/localSupervision_WdgM_SE1_WdgM_SE1_PFM_CP_1</PORT-REF>
+                                        </PORT-API-OPTION>
+
+
+
+                                        <PORT-API-OPTION>
+                                          <ENABLE-TAKE-ADDRESS>false</ENABLE-TAKE-ADDRESS>
+                                          <INDIRECT-API>false</INDIRECT-API>
+                                          <PORT-ARG-VALUES>
+                                            <PORT-DEFINED-ARGUMENT-VALUE>
+                                              <VALUE>
+                                                <NUMERICAL-VALUE-SPECIFICATION>
+                                                  <VALUE>0</VALUE>
+                                                </NUMERICAL-VALUE-SPECIFICATION>
+                                              </VALUE>
+                                              <VALUE-TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_WdgM/ImplementationDataTypes/WdgM_SupervisedEntityIdType</VALUE-TYPE-TREF>
+                                            </PORT-DEFINED-ARGUMENT-VALUE>
+                                          </PORT-ARG-VALUES>
+                                          <PORT-REF DEST="P-PORT-PROTOTYPE">WdgM/localSupervisionStatus_WdgM_SE1</PORT-REF>
+                                        </PORT-API-OPTION>
+
+
+                                        <PORT-API-OPTION>
+                                          <ENABLE-TAKE-ADDRESS>false</ENABLE-TAKE-ADDRESS>
+                                          <INDIRECT-API>false</INDIRECT-API>
+                                          <PORT-REF DEST="P-PORT-PROTOTYPE">WdgM/globalSupervision</PORT-REF>
+                                        </PORT-API-OPTION>
+
+                                        <PORT-API-OPTION>
+                                            <INDIRECT-API>true</INDIRECT-API>
+                                            <PORT-REF DEST="P-PORT-PROTOTYPE">WdgM/mode_WdgM_SE1</PORT-REF>
+                                        </PORT-API-OPTION>
+
+                                        
+                                        <PORT-API-OPTION>
+                                            <ENABLE-TAKE-ADDRESS>true</ENABLE-TAKE-ADDRESS>
+                                            <INDIRECT-API>false</INDIRECT-API>
+                                            <PORT-REF DEST="P-PORT-PROTOTYPE">WdgM/globalMode</PORT-REF>
+                                        </PORT-API-OPTION>
+
+                                        </PORT-API-OPTIONS>
+
+                                  <RUNNABLES>
+                                    <RUNNABLE-ENTITY>
+                                      <SHORT-NAME>CheckpointReached</SHORT-NAME>
+                                      <SW-ADDR-METHOD-REF DEST="SW-ADDR-METHOD">/RB/RBA/Common/CentralElements/SwAddrMethods/CODE_FAST</SW-ADDR-METHOD-REF>
+                                      <ARGUMENTS>
+                                        <RUNNABLE-ENTITY-ARGUMENT>
+                                        <SYMBOL>SEID</SYMBOL>
+                                        </RUNNABLE-ENTITY-ARGUMENT>
+                                        <RUNNABLE-ENTITY-ARGUMENT>
+                                        <SYMBOL>CheckpointID</SYMBOL>
+                                        </RUNNABLE-ENTITY-ARGUMENT>
+                                      </ARGUMENTS>
+                                       <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                                      <SYMBOL>WdgM_CheckpointReached</SYMBOL>
+                                    </RUNNABLE-ENTITY>
+                                    
+                                    <RUNNABLE-ENTITY>
+                                      <SHORT-NAME>GetLocalStatus</SHORT-NAME>
+                                      <SW-ADDR-METHOD-REF DEST="SW-ADDR-METHOD">/RB/RBA/Common/CentralElements/SwAddrMethods/CODE_FAST</SW-ADDR-METHOD-REF>
+                                      <ARGUMENTS>
+                                        <RUNNABLE-ENTITY-ARGUMENT>
+                                        <SYMBOL>SEID</SYMBOL>
+                                        </RUNNABLE-ENTITY-ARGUMENT>
+                                        <RUNNABLE-ENTITY-ARGUMENT>
+                                        <SYMBOL>Status</SYMBOL>
+                                        </RUNNABLE-ENTITY-ARGUMENT>
+                                      </ARGUMENTS>
+                                       <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                                      <SYMBOL>WdgM_GetLocalStatus</SYMBOL>
+                                    </RUNNABLE-ENTITY>
+                                    
+                                    <RUNNABLE-ENTITY>
+                                      <SHORT-NAME>GetFirstExpiredSEID</SHORT-NAME>
+                                      <SW-ADDR-METHOD-REF DEST="SW-ADDR-METHOD">/RB/RBA/Common/CentralElements/SwAddrMethods/CODE_SLOW</SW-ADDR-METHOD-REF>
+                                      <ARGUMENTS>
+                                        <RUNNABLE-ENTITY-ARGUMENT>
+                                        <SYMBOL>SEID</SYMBOL>
+                                        </RUNNABLE-ENTITY-ARGUMENT>
+                                      </ARGUMENTS>
+                                       <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                                      <SYMBOL>WdgM_GetFirstExpiredSEID</SYMBOL>
+                                    </RUNNABLE-ENTITY>
+                                    
+                                    <RUNNABLE-ENTITY>
+                                      <SHORT-NAME>GetGlobalStatus</SHORT-NAME>
+                                      <SW-ADDR-METHOD-REF DEST="SW-ADDR-METHOD">/RB/RBA/Common/CentralElements/SwAddrMethods/CODE_FAST</SW-ADDR-METHOD-REF>
+                                      <ARGUMENTS>
+                                        <RUNNABLE-ENTITY-ARGUMENT>
+                                        <SYMBOL>Status</SYMBOL>
+                                        </RUNNABLE-ENTITY-ARGUMENT>
+                                      </ARGUMENTS>
+                                       <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                                      <SYMBOL>WdgM_GetGlobalStatus</SYMBOL>
+                                    </RUNNABLE-ENTITY>
+
+                                    <RUNNABLE-ENTITY>
+                                      <SHORT-NAME>GetMode</SHORT-NAME>
+                                      <SW-ADDR-METHOD-REF DEST="SW-ADDR-METHOD">/RB/RBA/Common/CentralElements/SwAddrMethods/CODE_FAST</SW-ADDR-METHOD-REF>
+                                      <ARGUMENTS>
+                                        <RUNNABLE-ENTITY-ARGUMENT>
+                                        <SYMBOL>Mode</SYMBOL>
+                                        </RUNNABLE-ENTITY-ARGUMENT>
+                                      </ARGUMENTS>
+                                       <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                                      <SYMBOL>WdgM_GetMode</SYMBOL>
+                                    </RUNNABLE-ENTITY>
+
+                                    <RUNNABLE-ENTITY>
+                                      <SHORT-NAME>PerformReset</SHORT-NAME>
+                                      <SW-ADDR-METHOD-REF DEST="SW-ADDR-METHOD">/RB/RBA/Common/CentralElements/SwAddrMethods/CODE_FAST</SW-ADDR-METHOD-REF>
+                                       <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                                      <SYMBOL>WdgM_PerformReset</SYMBOL>
+                                    </RUNNABLE-ENTITY>
+
+                                    <RUNNABLE-ENTITY>
+                                      <SHORT-NAME>SetMode</SHORT-NAME>
+                                      <SW-ADDR-METHOD-REF DEST="SW-ADDR-METHOD">/RB/RBA/Common/CentralElements/SwAddrMethods/CODE_FAST</SW-ADDR-METHOD-REF>
+                                      <ARGUMENTS>
+                                        <RUNNABLE-ENTITY-ARGUMENT>
+                                        <SYMBOL>Mode</SYMBOL>
+                                        </RUNNABLE-ENTITY-ARGUMENT>
+                                      </ARGUMENTS>
+                                       <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                                      <SYMBOL>WdgM_SetMode</SYMBOL>
+                                    </RUNNABLE-ENTITY>
+
+                                    <RUNNABLE-ENTITY>
+                                      <SHORT-NAME>MainFunction</SHORT-NAME>
+                                       <CAN-BE-INVOKED-CONCURRENTLY>false</CAN-BE-INVOKED-CONCURRENTLY>
+                                      <MODE-SWITCH-POINTS>
+                                        <MODE-SWITCH-POINT>
+                                          <SHORT-NAME>msp_WdgM_LocalMode_WdgM_SE1</SHORT-NAME>
+                                          <MODE-GROUP-IREF>
+                                            <CONTEXT-P-PORT-REF DEST='P-PORT-PROTOTYPE'>WdgM/mode_WdgM_SE1</CONTEXT-P-PORT-REF>
+                                            <TARGET-MODE-GROUP-REF DEST='MODE-DECLARATION-GROUP-PROTOTYPE'>WdgM_LocalMode/currentMode</TARGET-MODE-GROUP-REF>
+                                          </MODE-GROUP-IREF>
+                                        </MODE-SWITCH-POINT>
+
+                                        <MODE-SWITCH-POINT>
+                                          <SHORT-NAME>msp_WdgM_GlobalMode</SHORT-NAME>
+                                          <MODE-GROUP-IREF>
+                                            <CONTEXT-P-PORT-REF DEST='P-PORT-PROTOTYPE'>WdgM/globalMode</CONTEXT-P-PORT-REF>
+                                            <TARGET-MODE-GROUP-REF DEST='MODE-DECLARATION-GROUP-PROTOTYPE'>WdgM_GlobalMode/currentMode</TARGET-MODE-GROUP-REF>
+                                          </MODE-GROUP-IREF>
+                                        </MODE-SWITCH-POINT>
+
+                                      </MODE-SWITCH-POINTS>
+                                      <SYMBOL>WdgM_MainFunction</SYMBOL>
+                                    </RUNNABLE-ENTITY>
+
+                                  </RUNNABLES>
+
+                                </SWC-INTERNAL-BEHAVIOR>
+                              </INTERNAL-BEHAVIORS>
+
+                            </SERVICE-SW-COMPONENT-TYPE>
+
+                        <!--##################################################
+                            #                 Implementations                #
+                            ##################################################-->
+
+                        </ELEMENTS>
+        </AR-PACKAGE>
+        <AR-PACKAGE>
+          <SHORT-NAME>SwcImplementations</SHORT-NAME>
+          <ELEMENTS>
+            <SWC-IMPLEMENTATION>
+              <SHORT-NAME>WdgM</SHORT-NAME>
+              <CODE-DESCRIPTORS>
+                <CODE>
+                  <SHORT-NAME>CodeDescriptor</SHORT-NAME>
+                  <ARTIFACT-DESCRIPTORS>
+                    <AUTOSAR-ENGINEERING-OBJECT>
+                      <SHORT-LABEL>ArEngObj</SHORT-LABEL>
+                      <CATEGORY>SWSRC</CATEGORY>
+                    </AUTOSAR-ENGINEERING-OBJECT>
+                  </ARTIFACT-DESCRIPTORS>
+                </CODE>
+              </CODE-DESCRIPTORS>
+              <PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+              <SW-VERSION>8.1.0</SW-VERSION>
+              <VENDOR-ID>6</VENDOR-ID>
+              <BEHAVIOR-REF DEST="SWC-INTERNAL-BEHAVIOR">/AUTOSAR_WdgM/WdgM/WdgM_InternalBehaviour</BEHAVIOR-REF>
+            </SWC-IMPLEMENTATION>
+          </ELEMENTS>
+        </AR-PACKAGE>
+
+    </AR-PACKAGES>
+</AUTOSAR>
+

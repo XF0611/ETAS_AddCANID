@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00047.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE>
+      <SHORT-NAME>ETAS_BIP</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE>
+          <SHORT-NAME>EcucModuleConfigurationValuess</SHORT-NAME>
+          <ELEMENTS>
+            <ECUC-MODULE-CONFIGURATION-VALUES>
+              <SHORT-NAME>Linker</SHORT-NAME>
+              <DEFINITION-REF DEST="ECUC-MODULE-DEF">/ETAS_EIP/EcucModuleDefs/Linker</DEFINITION-REF>
+              <CONTAINERS>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>LinkerGeneral</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ETAS_EIP/EcucModuleDefs/Linker/LinkerGeneral</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ETAS_EIP/EcucModuleDefs/Linker/LinkerGeneral/LinkerEnable</DEFINITION-REF>
+                      <VALUE>true</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>LinkerConfigSet</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ETAS_EIP/EcucModuleDefs/Linker/LinkerConfigSet</DEFINITION-REF>
+                  <SUB-CONTAINERS>
+                    <ECUC-CONTAINER-VALUE>
+                      <SHORT-NAME>TargetStack</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ETAS_EIP/EcucModuleDefs/Linker/LinkerConfigSet/TargetStack</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ETAS_EIP/EcucModuleDefs/Linker/LinkerConfigSet/TargetStack/TargetStackGrowDown</DEFINITION-REF>
+                          <VALUE>true</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/ETAS_EIP/EcucModuleDefs/Linker/LinkerConfigSet/TargetStack/TargetNumberOfStack</DEFINITION-REF>
+                          <VALUE>1</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                      <SUB-CONTAINERS>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>SYSCORE_STACK</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ETAS_EIP/EcucModuleDefs/Linker/LinkerConfigSet/TargetStack/TargetStackConfigSet</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/ETAS_EIP/EcucModuleDefs/Linker/LinkerConfigSet/TargetStack/TargetStackConfigSet/TargetStackSize</DEFINITION-REF>
+                              <VALUE>4096</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                      </SUB-CONTAINERS>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE>
+                      <SHORT-NAME>MemMapSection</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ETAS_EIP/EcucModuleDefs/Linker/LinkerConfigSet/MemMapSection</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ETAS_EIP/EcucModuleDefs/Linker/LinkerConfigSet/MemMapSection/TargetCompiler</DEFINITION-REF>
+                          <VALUE>HIGHTEC_AURIX</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                      <SUB-CONTAINERS>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>HIGHTEC_AURIX</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ETAS_EIP/EcucModuleDefs/Linker/LinkerConfigSet/MemMapSection/HIGHTEC_AURIX</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-TEXTUAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ETAS_EIP/EcucModuleDefs/Linker/LinkerConfigSet/MemMapSection/HIGHTEC_AURIX/PragmaCodeSection</DEFINITION-REF>
+                              <VALUE>#pragma code("SectionName");</VALUE>
+                            </ECUC-TEXTUAL-PARAM-VALUE>
+                            <ECUC-TEXTUAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ETAS_EIP/EcucModuleDefs/Linker/LinkerConfigSet/MemMapSection/HIGHTEC_AURIX/LinkerCodeSection</DEFINITION-REF>
+                              <VALUE>: ALIGN(4)</VALUE>
+                            </ECUC-TEXTUAL-PARAM-VALUE>
+                            <ECUC-TEXTUAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ETAS_EIP/EcucModuleDefs/Linker/LinkerConfigSet/MemMapSection/HIGHTEC_AURIX/PragmaConstSection</DEFINITION-REF>
+                              <VALUE>#pragma code("SectionName");</VALUE>
+                            </ECUC-TEXTUAL-PARAM-VALUE>
+                            <ECUC-TEXTUAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ETAS_EIP/EcucModuleDefs/Linker/LinkerConfigSet/MemMapSection/HIGHTEC_AURIX/LinkerConstSection</DEFINITION-REF>
+                              <VALUE>: ALIGN(4)</VALUE>
+                            </ECUC-TEXTUAL-PARAM-VALUE>
+                            <ECUC-TEXTUAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ETAS_EIP/EcucModuleDefs/Linker/LinkerConfigSet/MemMapSection/HIGHTEC_AURIX/PragmaClearedDataSection</DEFINITION-REF>
+                              <VALUE>#pragma data("SectionName");</VALUE>
+                            </ECUC-TEXTUAL-PARAM-VALUE>
+                            <ECUC-TEXTUAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ETAS_EIP/EcucModuleDefs/Linker/LinkerConfigSet/MemMapSection/HIGHTEC_AURIX/LinkerClearedDataSection</DEFINITION-REF>
+                              <VALUE>: ALIGN(4)</VALUE>
+                            </ECUC-TEXTUAL-PARAM-VALUE>
+                            <ECUC-TEXTUAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ETAS_EIP/EcucModuleDefs/Linker/LinkerConfigSet/MemMapSection/HIGHTEC_AURIX/PragmaInitDataSection</DEFINITION-REF>
+                              <VALUE>#pragma data("SectionName");</VALUE>
+                            </ECUC-TEXTUAL-PARAM-VALUE>
+                            <ECUC-TEXTUAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ETAS_EIP/EcucModuleDefs/Linker/LinkerConfigSet/MemMapSection/HIGHTEC_AURIX/LinkerInitDataSection</DEFINITION-REF>
+                              <VALUE>: ALIGN(4)</VALUE>
+                            </ECUC-TEXTUAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                      </SUB-CONTAINERS>
+                    </ECUC-CONTAINER-VALUE>
+                  </SUB-CONTAINERS>
+                </ECUC-CONTAINER-VALUE>
+              </CONTAINERS>
+            </ECUC-MODULE-CONFIGURATION-VALUES>
+          </ELEMENTS>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>
+

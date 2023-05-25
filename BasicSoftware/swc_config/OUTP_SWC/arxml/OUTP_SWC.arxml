@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00047.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE>
+      <SHORT-NAME>ETAS_BIP</SHORT-NAME>
+      <ELEMENTS>
+        <APPLICATION-SW-COMPONENT-TYPE>
+          <SHORT-NAME>OUTP_SWC</SHORT-NAME>
+          <ADMIN-DATA>
+            <SDGS>
+              <SDG GID="Master">
+                <SD>true</SD>
+              </SDG>
+            </SDGS>
+          </ADMIN-DATA>
+          <PORTS>
+            <P-PORT-PROTOTYPE>
+              <SHORT-NAME>PP_ETAS04_Sig21_ComTx_0x98</SHORT-NAME>
+              <PROVIDED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/COM_Interface/SR_Interface_ETAS04_Sig21_ComTx_0x98</PROVIDED-INTERFACE-TREF>
+            </P-PORT-PROTOTYPE>
+            <P-PORT-PROTOTYPE>
+              <SHORT-NAME>PP_ETAS04_Sig24_ComTx_0x98</SHORT-NAME>
+              <PROVIDED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/COM_Interface/SR_Interface_ETAS04_Sig24_ComTx_0x98</PROVIDED-INTERFACE-TREF>
+            </P-PORT-PROTOTYPE>
+            <P-PORT-PROTOTYPE>
+              <SHORT-NAME>PP_ETAS04_Sig25_ComTx_0x98</SHORT-NAME>
+              <PROVIDED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/COM_Interface/SR_Interface_ETAS04_Sig25_ComTx_0x98</PROVIDED-INTERFACE-TREF>
+            </P-PORT-PROTOTYPE>
+            <P-PORT-PROTOTYPE>
+              <SHORT-NAME>PP_ETAS04_Sig20_ComTx_0x98</SHORT-NAME>
+              <PROVIDED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/COM_Interface/SR_Interface_ETAS04_Sig20_ComTx_0x98</PROVIDED-INTERFACE-TREF>
+            </P-PORT-PROTOTYPE>
+            <P-PORT-PROTOTYPE>
+              <SHORT-NAME>PP_ETAS04_Sig23_ComTx_0x98</SHORT-NAME>
+              <PROVIDED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/COM_Interface/SR_Interface_ETAS04_Sig23_ComTx_0x98</PROVIDED-INTERFACE-TREF>
+            </P-PORT-PROTOTYPE>
+            <P-PORT-PROTOTYPE>
+              <SHORT-NAME>PP_ETAS04_Sig22_ComTx_0x98</SHORT-NAME>
+              <PROVIDED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/COM_Interface/SR_Interface_ETAS04_Sig22_ComTx_0x98</PROVIDED-INTERFACE-TREF>
+            </P-PORT-PROTOTYPE>
+            <P-PORT-PROTOTYPE>
+              <SHORT-NAME>PP_ETAS03_Sig18_ComTx_0x55</SHORT-NAME>
+              <PROVIDED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/COM_Interface/SR_Interface_ETAS03_Sig18_ComTx_0x55</PROVIDED-INTERFACE-TREF>
+            </P-PORT-PROTOTYPE>
+            <P-PORT-PROTOTYPE>
+              <SHORT-NAME>PP_ETAS03_Sig16_ComTx_0x55</SHORT-NAME>
+              <PROVIDED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/COM_Interface/SR_Interface_ETAS03_Sig16_ComTx_0x55</PROVIDED-INTERFACE-TREF>
+            </P-PORT-PROTOTYPE>
+            <P-PORT-PROTOTYPE>
+              <SHORT-NAME>PP_ETAS03_Sig14_ComTx_0x55</SHORT-NAME>
+              <PROVIDED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/COM_Interface/SR_Interface_ETAS03_Sig14_ComTx_0x55</PROVIDED-INTERFACE-TREF>
+            </P-PORT-PROTOTYPE>
+            <P-PORT-PROTOTYPE>
+              <SHORT-NAME>PP_ETAS03_Sig19_ComTx_0x55</SHORT-NAME>
+              <PROVIDED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/COM_Interface/SR_Interface_ETAS03_Sig19_ComTx_0x55</PROVIDED-INTERFACE-TREF>
+            </P-PORT-PROTOTYPE>
+            <P-PORT-PROTOTYPE>
+              <SHORT-NAME>PP_ETAS03_Sig12_ComTx_0x55</SHORT-NAME>
+              <PROVIDED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/COM_Interface/SR_Interface_ETAS03_Sig12_ComTx_0x55</PROVIDED-INTERFACE-TREF>
+            </P-PORT-PROTOTYPE>
+            <P-PORT-PROTOTYPE>
+              <SHORT-NAME>PP_ETAS03_Sig17_ComTx_0x55</SHORT-NAME>
+              <PROVIDED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/COM_Interface/SR_Interface_ETAS03_Sig17_ComTx_0x55</PROVIDED-INTERFACE-TREF>
+            </P-PORT-PROTOTYPE>
+            <P-PORT-PROTOTYPE>
+              <SHORT-NAME>PP_ETAS03_Sig11_ComTx_0x55</SHORT-NAME>
+              <PROVIDED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/COM_Interface/SR_Interface_ETAS03_Sig11_ComTx_0x55</PROVIDED-INTERFACE-TREF>
+            </P-PORT-PROTOTYPE>
+            <P-PORT-PROTOTYPE>
+              <SHORT-NAME>PP_ETAS03_Sig13_ComTx_0x55</SHORT-NAME>
+              <PROVIDED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/COM_Interface/SR_Interface_ETAS03_Sig13_ComTx_0x55</PROVIDED-INTERFACE-TREF>
+            </P-PORT-PROTOTYPE>
+            <P-PORT-PROTOTYPE>
+              <SHORT-NAME>PP_ETAS03_Sig15_ComTx_0x55</SHORT-NAME>
+              <PROVIDED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/COM_Interface/SR_Interface_ETAS03_Sig15_ComTx_0x55</PROVIDED-INTERFACE-TREF>
+            </P-PORT-PROTOTYPE>
+            <P-PORT-PROTOTYPE>
+              <SHORT-NAME>PP_ETAS03_Sig10_ComTx_0x55</SHORT-NAME>
+              <PROVIDED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/COM_Interface/SR_Interface_ETAS03_Sig10_ComTx_0x55</PROVIDED-INTERFACE-TREF>
+            </P-PORT-PROTOTYPE>
+            <P-PORT-PROTOTYPE>
+              <SHORT-NAME>PP_ETAS05_Sig26_ComTx_0x123</SHORT-NAME>
+              <PROVIDED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/COM_Interface/SR_Interface_ETAS05_Sig26_ComTx_0x123</PROVIDED-INTERFACE-TREF>
+            </P-PORT-PROTOTYPE>
+            <P-PORT-PROTOTYPE>
+              <SHORT-NAME>PP_ETAS05_Sig27_ComTx_0x123</SHORT-NAME>
+              <PROVIDED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/COM_Interface/SR_Interface_ETAS05_Sig27_ComTx_0x123</PROVIDED-INTERFACE-TREF>
+            </P-PORT-PROTOTYPE>
+            <P-PORT-PROTOTYPE>
+              <SHORT-NAME>PP_ETAS05_Sig28_ComTx_0x123</SHORT-NAME>
+              <PROVIDED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/COM_Interface/SR_Interface_ETAS05_Sig28_ComTx_0x123</PROVIDED-INTERFACE-TREF>
+            </P-PORT-PROTOTYPE>
+            <P-PORT-PROTOTYPE>
+              <SHORT-NAME>PP_ETAS05_Sig29_ComTx_0x123</SHORT-NAME>
+              <PROVIDED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/COM_Interface/SR_Interface_ETAS05_Sig29_ComTx_0x123</PROVIDED-INTERFACE-TREF>
+            </P-PORT-PROTOTYPE>
+            <P-PORT-PROTOTYPE>
+              <SHORT-NAME>PP_ETAS05_Sig30_ComTx_0x123</SHORT-NAME>
+              <PROVIDED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/COM_Interface/SR_Interface_ETAS05_Sig30_ComTx_0x123</PROVIDED-INTERFACE-TREF>
+            </P-PORT-PROTOTYPE>
+            <P-PORT-PROTOTYPE>
+              <SHORT-NAME>PP_ETAS05_Sig31_ComTx_0x123</SHORT-NAME>
+              <PROVIDED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/COM_Interface/SR_Interface_ETAS05_Sig31_ComTx_0x123</PROVIDED-INTERFACE-TREF>
+            </P-PORT-PROTOTYPE>
+            <P-PORT-PROTOTYPE>
+              <SHORT-NAME>PP_ETAS05_Sig32_ComTx_0x123</SHORT-NAME>
+              <PROVIDED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/COM_Interface/SR_Interface_ETAS05_Sig32_ComTx_0x123</PROVIDED-INTERFACE-TREF>
+            </P-PORT-PROTOTYPE>
+            <P-PORT-PROTOTYPE>
+              <SHORT-NAME>PP_ETAS05_Sig33_ComTx_0x123</SHORT-NAME>
+              <PROVIDED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/COM_Interface/SR_Interface_ETAS05_Sig33_ComTx_0x123</PROVIDED-INTERFACE-TREF>
+            </P-PORT-PROTOTYPE>
+          </PORTS>
+          <INTERNAL-BEHAVIORS>
+            <SWC-INTERNAL-BEHAVIOR UUID="9aed822b-df16-4875-8db0-42ebfb7e3eb1">
+              <SHORT-NAME>IB_OUTP_SWC</SHORT-NAME>
+              <EVENTS>
+                <TIMING-EVENT UUID="3b8a6c9a-0b63-4e23-b84f-ccd74378c774">
+                  <SHORT-NAME>TE_OUTP_SWC_10ms</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ETAS_BIP/OUTP_SWC/IB_OUTP_SWC/RE_OUTP_SWC</START-ON-EVENT-REF>
+                  <PERIOD>0.01</PERIOD>
+                </TIMING-EVENT>
+              </EVENTS>
+              <RUNNABLES>
+                <RUNNABLE-ENTITY UUID="8b794d5b-4d8e-44a3-8476-7262ef021d5d">
+                  <SHORT-NAME>RE_OUTP_SWC</SHORT-NAME>
+                  <DATA-SEND-POINTS>
+                    <VARIABLE-ACCESS UUID="6de6573c-a253-4f88-aeea-a3a7e06f1c83">
+                      <SHORT-NAME>DSP_ETAS04_Sig21_ComTx_0x98_0</SHORT-NAME>
+                      <ACCESSED-VARIABLE>
+                        <AUTOSAR-VARIABLE-IREF>
+                          <PORT-PROTOTYPE-REF DEST="P-PORT-PROTOTYPE">/ETAS_BIP/OUTP_SWC/PP_ETAS04_Sig21_ComTx_0x98</PORT-PROTOTYPE-REF>
+                          <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/COM_Interface/SR_Interface_ETAS04_Sig21_ComTx_0x98/ETAS04_Sig21_ComTx_0x98</TARGET-DATA-PROTOTYPE-REF>
+                        </AUTOSAR-VARIABLE-IREF>
+                      </ACCESSED-VARIABLE>
+                    </VARIABLE-ACCESS>
+                    <VARIABLE-ACCESS UUID="b993e75a-1ba2-4a96-abd2-f6f34af730d3">
+                      <SHORT-NAME>DSP_ETAS04_Sig22_ComTx_0x98_0</SHORT-NAME>
+                      <ACCESSED-VARIABLE>
+                        <AUTOSAR-VARIABLE-IREF>
+                          <PORT-PROTOTYPE-REF DEST="P-PORT-PROTOTYPE">/ETAS_BIP/OUTP_SWC/PP_ETAS04_Sig22_ComTx_0x98</PORT-PROTOTYPE-REF>
+                          <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/COM_Interface/SR_Interface_ETAS04_Sig22_ComTx_0x98/ETAS04_Sig22_ComTx_0x98</TARGET-DATA-PROTOTYPE-REF>
+                        </AUTOSAR-VARIABLE-IREF>
+                      </ACCESSED-VARIABLE>
+                    </VARIABLE-ACCESS>
+                    <VARIABLE-ACCESS UUID="fd0caaf2-5cdc-47a5-9b51-d32e837ce40a">
+                      <SHORT-NAME>DSP_ETAS04_Sig25_ComTx_0x98_0</SHORT-NAME>
+                      <ACCESSED-VARIABLE>
+                        <AUTOSAR-VARIABLE-IREF>
+                          <PORT-PROTOTYPE-REF DEST="P-PORT-PROTOTYPE">/ETAS_BIP/OUTP_SWC/PP_ETAS04_Sig25_ComTx_0x98</PORT-PROTOTYPE-REF>
+                          <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/COM_Interface/SR_Interface_ETAS04_Sig25_ComTx_0x98/ETAS04_Sig25_ComTx_0x98</TARGET-DATA-PROTOTYPE-REF>
+                        </AUTOSAR-VARIABLE-IREF>
+                      </ACCESSED-VARIABLE>
+                    </VARIABLE-ACCESS>
+                    <VARIABLE-ACCESS UUID="b48a8047-bc32-44cc-9ec6-4c42e67b0443">
+                      <SHORT-NAME>DSP_ETAS04_Sig20_ComTx_0x98_0</SHORT-NAME>
+                      <ACCESSED-VARIABLE>
+                        <AUTOSAR-VARIABLE-IREF>
+                          <PORT-PROTOTYPE-REF DEST="P-PORT-PROTOTYPE">/ETAS_BIP/OUTP_SWC/PP_ETAS04_Sig20_ComTx_0x98</PORT-PROTOTYPE-REF>
+                          <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/COM_Interface/SR_Interface_ETAS04_Sig20_ComTx_0x98/ETAS04_Sig20_ComTx_0x98</TARGET-DATA-PROTOTYPE-REF>
+                        </AUTOSAR-VARIABLE-IREF>
+                      </ACCESSED-VARIABLE>
+                    </VARIABLE-ACCESS>
+                    <VARIABLE-ACCESS UUID="f8147b27-26cc-407c-b758-7106d1496b7d">
+                      <SHORT-NAME>DSP_ETAS04_Sig24_ComTx_0x98_0</SHORT-NAME>
+                      <ACCESSED-VARIABLE>
+                        <AUTOSAR-VARIABLE-IREF>
+                          <PORT-PROTOTYPE-REF DEST="P-PORT-PROTOTYPE">/ETAS_BIP/OUTP_SWC/PP_ETAS04_Sig24_ComTx_0x98</PORT-PROTOTYPE-REF>
+                          <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/COM_Interface/SR_Interface_ETAS04_Sig24_ComTx_0x98/ETAS04_Sig24_ComTx_0x98</TARGET-DATA-PROTOTYPE-REF>
+                        </AUTOSAR-VARIABLE-IREF>
+                      </ACCESSED-VARIABLE>
+                    </VARIABLE-ACCESS>
+                    <VARIABLE-ACCESS UUID="e86bfdb0-f9f2-4c39-bc8c-7a4558a3db0c">
+                      <SHORT-NAME>DSP_ETAS04_Sig23_ComTx_0x98_0</SHORT-NAME>
+                      <ACCESSED-VARIABLE>
+                        <AUTOSAR-VARIABLE-IREF>
+                          <PORT-PROTOTYPE-REF DEST="P-PORT-PROTOTYPE">/ETAS_BIP/OUTP_SWC/PP_ETAS04_Sig23_ComTx_0x98</PORT-PROTOTYPE-REF>
+                          <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/COM_Interface/SR_Interface_ETAS04_Sig23_ComTx_0x98/ETAS04_Sig23_ComTx_0x98</TARGET-DATA-PROTOTYPE-REF>
+                        </AUTOSAR-VARIABLE-IREF>
+                      </ACCESSED-VARIABLE>
+                    </VARIABLE-ACCESS>
+                    <VARIABLE-ACCESS UUID="94ac0fd4-372b-402f-96b9-7d7d361d6bfa">
+                      <SHORT-NAME>DSP_ETAS05_Sig26_ComTx_0x123_0</SHORT-NAME>
+                      <ACCESSED-VARIABLE>
+                        <AUTOSAR-VARIABLE-IREF>
+                          <PORT-PROTOTYPE-REF DEST="P-PORT-PROTOTYPE">/ETAS_BIP/OUTP_SWC/PP_ETAS05_Sig26_ComTx_0x123</PORT-PROTOTYPE-REF>
+                          <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/COM_Interface/SR_Interface_ETAS05_Sig26_ComTx_0x123/ETAS05_Sig26_ComTx_0x123</TARGET-DATA-PROTOTYPE-REF>
+                        </AUTOSAR-VARIABLE-IREF>
+                      </ACCESSED-VARIABLE>
+                    </VARIABLE-ACCESS>
+                    <VARIABLE-ACCESS UUID="0758231b-fe5e-46c6-b081-59e3651a6f85">
+                      <SHORT-NAME>DSP_ETAS05_Sig27_ComTx_0x123_0</SHORT-NAME>
+                      <ACCESSED-VARIABLE>
+                        <AUTOSAR-VARIABLE-IREF>
+                          <PORT-PROTOTYPE-REF DEST="P-PORT-PROTOTYPE">/ETAS_BIP/OUTP_SWC/PP_ETAS05_Sig27_ComTx_0x123</PORT-PROTOTYPE-REF>
+                          <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/COM_Interface/SR_Interface_ETAS05_Sig27_ComTx_0x123/ETAS05_Sig27_ComTx_0x123</TARGET-DATA-PROTOTYPE-REF>
+                        </AUTOSAR-VARIABLE-IREF>
+                      </ACCESSED-VARIABLE>
+                    </VARIABLE-ACCESS>
+                    <VARIABLE-ACCESS UUID="fc987aa6-d671-4f03-b85f-caecf273a314">
+                      <SHORT-NAME>DSP_ETAS05_Sig28_ComTx_0x123_0</SHORT-NAME>
+                      <ACCESSED-VARIABLE>
+                        <AUTOSAR-VARIABLE-IREF>
+                          <PORT-PROTOTYPE-REF DEST="P-PORT-PROTOTYPE">/ETAS_BIP/OUTP_SWC/PP_ETAS05_Sig28_ComTx_0x123</PORT-PROTOTYPE-REF>
+                          <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/COM_Interface/SR_Interface_ETAS05_Sig28_ComTx_0x123/ETAS05_Sig28_ComTx_0x123</TARGET-DATA-PROTOTYPE-REF>
+                        </AUTOSAR-VARIABLE-IREF>
+                      </ACCESSED-VARIABLE>
+                    </VARIABLE-ACCESS>
+                    <VARIABLE-ACCESS UUID="95651d35-599d-4b9f-b03f-9a068c728386">
+                      <SHORT-NAME>DSP_ETAS05_Sig29_ComTx_0x123_0</SHORT-NAME>
+                      <ACCESSED-VARIABLE>
+                        <AUTOSAR-VARIABLE-IREF>
+                          <PORT-PROTOTYPE-REF DEST="P-PORT-PROTOTYPE">/ETAS_BIP/OUTP_SWC/PP_ETAS05_Sig29_ComTx_0x123</PORT-PROTOTYPE-REF>
+                          <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/COM_Interface/SR_Interface_ETAS05_Sig29_ComTx_0x123/ETAS05_Sig29_ComTx_0x123</TARGET-DATA-PROTOTYPE-REF>
+                        </AUTOSAR-VARIABLE-IREF>
+                      </ACCESSED-VARIABLE>
+                    </VARIABLE-ACCESS>
+                    <VARIABLE-ACCESS UUID="ece9f123-63aa-4e48-b54e-160d99d4c9ad">
+                      <SHORT-NAME>DSP_ETAS05_Sig30_ComTx_0x123_0</SHORT-NAME>
+                      <ACCESSED-VARIABLE>
+                        <AUTOSAR-VARIABLE-IREF>
+                          <PORT-PROTOTYPE-REF DEST="P-PORT-PROTOTYPE">/ETAS_BIP/OUTP_SWC/PP_ETAS05_Sig30_ComTx_0x123</PORT-PROTOTYPE-REF>
+                          <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/COM_Interface/SR_Interface_ETAS05_Sig30_ComTx_0x123/ETAS05_Sig30_ComTx_0x123</TARGET-DATA-PROTOTYPE-REF>
+                        </AUTOSAR-VARIABLE-IREF>
+                      </ACCESSED-VARIABLE>
+                    </VARIABLE-ACCESS>
+                    <VARIABLE-ACCESS UUID="377767a5-fbfb-48c5-a375-6c62d75d823a">
+                      <SHORT-NAME>DSP_ETAS05_Sig31_ComTx_0x123_0</SHORT-NAME>
+                      <ACCESSED-VARIABLE>
+                        <AUTOSAR-VARIABLE-IREF>
+                          <PORT-PROTOTYPE-REF DEST="P-PORT-PROTOTYPE">/ETAS_BIP/OUTP_SWC/PP_ETAS05_Sig31_ComTx_0x123</PORT-PROTOTYPE-REF>
+                          <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/COM_Interface/SR_Interface_ETAS05_Sig31_ComTx_0x123/ETAS05_Sig31_ComTx_0x123</TARGET-DATA-PROTOTYPE-REF>
+                        </AUTOSAR-VARIABLE-IREF>
+                      </ACCESSED-VARIABLE>
+                    </VARIABLE-ACCESS>
+                    <VARIABLE-ACCESS UUID="d41db05f-2edb-482c-9aa5-6d452d865846">
+                      <SHORT-NAME>DSP_ETAS05_Sig32_ComTx_0x123_0</SHORT-NAME>
+                      <ACCESSED-VARIABLE>
+                        <AUTOSAR-VARIABLE-IREF>
+                          <PORT-PROTOTYPE-REF DEST="P-PORT-PROTOTYPE">/ETAS_BIP/OUTP_SWC/PP_ETAS05_Sig32_ComTx_0x123</PORT-PROTOTYPE-REF>
+                          <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/COM_Interface/SR_Interface_ETAS05_Sig32_ComTx_0x123/ETAS05_Sig32_ComTx_0x123</TARGET-DATA-PROTOTYPE-REF>
+                        </AUTOSAR-VARIABLE-IREF>
+                      </ACCESSED-VARIABLE>
+                    </VARIABLE-ACCESS>
+                    <VARIABLE-ACCESS UUID="c3024fe7-387b-4658-b2e0-874acbd83d28">
+                      <SHORT-NAME>DSP_ETAS05_Sig33_ComTx_0x123_0</SHORT-NAME>
+                      <ACCESSED-VARIABLE>
+                        <AUTOSAR-VARIABLE-IREF>
+                          <PORT-PROTOTYPE-REF DEST="P-PORT-PROTOTYPE">/ETAS_BIP/OUTP_SWC/PP_ETAS05_Sig33_ComTx_0x123</PORT-PROTOTYPE-REF>
+                          <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/COM_Interface/SR_Interface_ETAS05_Sig33_ComTx_0x123/ETAS05_Sig33_ComTx_0x123</TARGET-DATA-PROTOTYPE-REF>
+                        </AUTOSAR-VARIABLE-IREF>
+                      </ACCESSED-VARIABLE>
+                    </VARIABLE-ACCESS>
+                  </DATA-SEND-POINTS>
+                  <DATA-WRITE-ACCESSS>
+                    <VARIABLE-ACCESS UUID="343e21bf-aad2-4e97-bc62-7f6d228514f8">
+                      <SHORT-NAME>DWA_ETAS03_Sig10_ComTx_0x55_0</SHORT-NAME>
+                      <ACCESSED-VARIABLE>
+                        <AUTOSAR-VARIABLE-IREF>
+                          <PORT-PROTOTYPE-REF DEST="P-PORT-PROTOTYPE">/ETAS_BIP/OUTP_SWC/PP_ETAS03_Sig10_ComTx_0x55</PORT-PROTOTYPE-REF>
+                          <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/COM_Interface/SR_Interface_ETAS03_Sig10_ComTx_0x55/ETAS03_Sig10_ComTx_0x55</TARGET-DATA-PROTOTYPE-REF>
+                        </AUTOSAR-VARIABLE-IREF>
+                      </ACCESSED-VARIABLE>
+                    </VARIABLE-ACCESS>
+                    <VARIABLE-ACCESS UUID="eb09fe12-361d-4cb4-815d-8a851f0e964d">
+                      <SHORT-NAME>DWA_ETAS03_Sig18_ComTx_0x55_0</SHORT-NAME>
+                      <ACCESSED-VARIABLE>
+                        <AUTOSAR-VARIABLE-IREF>
+                          <PORT-PROTOTYPE-REF DEST="P-PORT-PROTOTYPE">/ETAS_BIP/OUTP_SWC/PP_ETAS03_Sig18_ComTx_0x55</PORT-PROTOTYPE-REF>
+                          <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/COM_Interface/SR_Interface_ETAS03_Sig18_ComTx_0x55/ETAS03_Sig18_ComTx_0x55</TARGET-DATA-PROTOTYPE-REF>
+                        </AUTOSAR-VARIABLE-IREF>
+                      </ACCESSED-VARIABLE>
+                    </VARIABLE-ACCESS>
+                    <VARIABLE-ACCESS UUID="ae30484a-abc9-4c1a-9cae-cfcaa6c64211">
+                      <SHORT-NAME>DWA_ETAS03_Sig13_ComTx_0x55_0</SHORT-NAME>
+                      <ACCESSED-VARIABLE>
+                        <AUTOSAR-VARIABLE-IREF>
+                          <PORT-PROTOTYPE-REF DEST="P-PORT-PROTOTYPE">/ETAS_BIP/OUTP_SWC/PP_ETAS03_Sig13_ComTx_0x55</PORT-PROTOTYPE-REF>
+                          <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/COM_Interface/SR_Interface_ETAS03_Sig13_ComTx_0x55/ETAS03_Sig13_ComTx_0x55</TARGET-DATA-PROTOTYPE-REF>
+                        </AUTOSAR-VARIABLE-IREF>
+                      </ACCESSED-VARIABLE>
+                    </VARIABLE-ACCESS>
+                    <VARIABLE-ACCESS UUID="2cc668e2-3c73-44ff-9b25-7d64527af3e0">
+                      <SHORT-NAME>DWA_ETAS03_Sig15_ComTx_0x55_0</SHORT-NAME>
+                      <ACCESSED-VARIABLE>
+                        <AUTOSAR-VARIABLE-IREF>
+                          <PORT-PROTOTYPE-REF DEST="P-PORT-PROTOTYPE">/ETAS_BIP/OUTP_SWC/PP_ETAS03_Sig15_ComTx_0x55</PORT-PROTOTYPE-REF>
+                          <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/COM_Interface/SR_Interface_ETAS03_Sig15_ComTx_0x55/ETAS03_Sig15_ComTx_0x55</TARGET-DATA-PROTOTYPE-REF>
+                        </AUTOSAR-VARIABLE-IREF>
+                      </ACCESSED-VARIABLE>
+                    </VARIABLE-ACCESS>
+                    <VARIABLE-ACCESS UUID="67ad8ec6-ddf9-4d39-9c34-0a33b304279e">
+                      <SHORT-NAME>DWA_ETAS03_Sig19_ComTx_0x55_0</SHORT-NAME>
+                      <ACCESSED-VARIABLE>
+                        <AUTOSAR-VARIABLE-IREF>
+                          <PORT-PROTOTYPE-REF DEST="P-PORT-PROTOTYPE">/ETAS_BIP/OUTP_SWC/PP_ETAS03_Sig19_ComTx_0x55</PORT-PROTOTYPE-REF>
+                          <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/COM_Interface/SR_Interface_ETAS03_Sig19_ComTx_0x55/ETAS03_Sig19_ComTx_0x55</TARGET-DATA-PROTOTYPE-REF>
+                        </AUTOSAR-VARIABLE-IREF>
+                      </ACCESSED-VARIABLE>
+                    </VARIABLE-ACCESS>
+                    <VARIABLE-ACCESS UUID="b02ffdf8-1031-4e88-83ab-e0dd47f5e7b0">
+                      <SHORT-NAME>DWA_ETAS03_Sig12_ComTx_0x55_0</SHORT-NAME>
+                      <ACCESSED-VARIABLE>
+                        <AUTOSAR-VARIABLE-IREF>
+                          <PORT-PROTOTYPE-REF DEST="P-PORT-PROTOTYPE">/ETAS_BIP/OUTP_SWC/PP_ETAS03_Sig12_ComTx_0x55</PORT-PROTOTYPE-REF>
+                          <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/COM_Interface/SR_Interface_ETAS03_Sig12_ComTx_0x55/ETAS03_Sig12_ComTx_0x55</TARGET-DATA-PROTOTYPE-REF>
+                        </AUTOSAR-VARIABLE-IREF>
+                      </ACCESSED-VARIABLE>
+                    </VARIABLE-ACCESS>
+                    <VARIABLE-ACCESS UUID="8aea0d77-eee6-46bc-bbc7-298e6014c870">
+                      <SHORT-NAME>DWA_ETAS03_Sig17_ComTx_0x55_0</SHORT-NAME>
+                      <ACCESSED-VARIABLE>
+                        <AUTOSAR-VARIABLE-IREF>
+                          <PORT-PROTOTYPE-REF DEST="P-PORT-PROTOTYPE">/ETAS_BIP/OUTP_SWC/PP_ETAS03_Sig17_ComTx_0x55</PORT-PROTOTYPE-REF>
+                          <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/COM_Interface/SR_Interface_ETAS03_Sig17_ComTx_0x55/ETAS03_Sig17_ComTx_0x55</TARGET-DATA-PROTOTYPE-REF>
+                        </AUTOSAR-VARIABLE-IREF>
+                      </ACCESSED-VARIABLE>
+                    </VARIABLE-ACCESS>
+                    <VARIABLE-ACCESS UUID="a3edfa05-39a4-4876-8814-0d9d0ac1ce28">
+                      <SHORT-NAME>DWA_ETAS03_Sig14_ComTx_0x55_0</SHORT-NAME>
+                      <ACCESSED-VARIABLE>
+                        <AUTOSAR-VARIABLE-IREF>
+                          <PORT-PROTOTYPE-REF DEST="P-PORT-PROTOTYPE">/ETAS_BIP/OUTP_SWC/PP_ETAS03_Sig14_ComTx_0x55</PORT-PROTOTYPE-REF>
+                          <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/COM_Interface/SR_Interface_ETAS03_Sig14_ComTx_0x55/ETAS03_Sig14_ComTx_0x55</TARGET-DATA-PROTOTYPE-REF>
+                        </AUTOSAR-VARIABLE-IREF>
+                      </ACCESSED-VARIABLE>
+                    </VARIABLE-ACCESS>
+                    <VARIABLE-ACCESS UUID="15d33df6-59ad-4084-b057-582c6259e569">
+                      <SHORT-NAME>DWA_ETAS03_Sig16_ComTx_0x55_0</SHORT-NAME>
+                      <ACCESSED-VARIABLE>
+                        <AUTOSAR-VARIABLE-IREF>
+                          <PORT-PROTOTYPE-REF DEST="P-PORT-PROTOTYPE">/ETAS_BIP/OUTP_SWC/PP_ETAS03_Sig16_ComTx_0x55</PORT-PROTOTYPE-REF>
+                          <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/COM_Interface/SR_Interface_ETAS03_Sig16_ComTx_0x55/ETAS03_Sig16_ComTx_0x55</TARGET-DATA-PROTOTYPE-REF>
+                        </AUTOSAR-VARIABLE-IREF>
+                      </ACCESSED-VARIABLE>
+                    </VARIABLE-ACCESS>
+                    <VARIABLE-ACCESS UUID="aa2ef8d2-774e-4e3a-8915-9860deba1729">
+                      <SHORT-NAME>DWA_ETAS03_Sig11_ComTx_0x55_0</SHORT-NAME>
+                      <ACCESSED-VARIABLE>
+                        <AUTOSAR-VARIABLE-IREF>
+                          <PORT-PROTOTYPE-REF DEST="P-PORT-PROTOTYPE">/ETAS_BIP/OUTP_SWC/PP_ETAS03_Sig11_ComTx_0x55</PORT-PROTOTYPE-REF>
+                          <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/COM_Interface/SR_Interface_ETAS03_Sig11_ComTx_0x55/ETAS03_Sig11_ComTx_0x55</TARGET-DATA-PROTOTYPE-REF>
+                        </AUTOSAR-VARIABLE-IREF>
+                      </ACCESSED-VARIABLE>
+                    </VARIABLE-ACCESS>
+                  </DATA-WRITE-ACCESSS>
+                  <SYMBOL>RE_OUTP_SWC</SYMBOL>
+                </RUNNABLE-ENTITY>
+              </RUNNABLES>
+            </SWC-INTERNAL-BEHAVIOR>
+          </INTERNAL-BEHAVIORS>
+        </APPLICATION-SW-COMPONENT-TYPE>
+      </ELEMENTS>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>
+

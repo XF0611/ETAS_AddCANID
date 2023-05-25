@@ -1,0 +1,5 @@
+Forward phase for module NvM
+
+Starting action "Forward".
+Action "Forward" finished.
+

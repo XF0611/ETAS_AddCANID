@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- AUTOSAR SERVICES PACKAGE -->
+<AUTOSAR xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://autosar.org/schema/r4.0"
+    xsi:schemaLocation="http://autosar.org/schema/r4.0 autosar_4-2-2.xsd">
+  <AR-PACKAGES>
+	<AR-PACKAGE>
+      <SHORT-NAME>rba_DiagLib</SHORT-NAME>
+      <AR-PACKAGES>
+	   <AR-PACKAGE>
+          <SHORT-NAME>SwComponentTypes</SHORT-NAME>
+          <ELEMENTS>
+            <SERVICE-SW-COMPONENT-TYPE>
+              <SHORT-NAME>rba_DiagLib</SHORT-NAME>
+              <INTERNAL-BEHAVIORS>
+                <SWC-INTERNAL-BEHAVIOR>
+                  <SHORT-NAME>IntBeh_rba_DiagLib</SHORT-NAME>
+				  </SWC-INTERNAL-BEHAVIOR>
+               </INTERNAL-BEHAVIORS>
+			   </SERVICE-SW-COMPONENT-TYPE>
+			   </ELEMENTS>
+        </AR-PACKAGE>
+        <AR-PACKAGE>
+          <SHORT-NAME>SwcImplementations</SHORT-NAME>
+          <ELEMENTS>
+            <SWC-IMPLEMENTATION>
+              <SHORT-NAME>Impl_rba_DiagLib</SHORT-NAME>
+              <CODE-DESCRIPTORS>
+                <CODE>
+                  <SHORT-NAME>CodeDescr_rba_DiagLib</SHORT-NAME>
+                  <ARTIFACT-DESCRIPTORS>
+                    <AUTOSAR-ENGINEERING-OBJECT>
+                      <SHORT-LABEL>Code_0</SHORT-LABEL>
+                      <CATEGORY>SWSRC</CATEGORY>
+                    </AUTOSAR-ENGINEERING-OBJECT>
+                  </ARTIFACT-DESCRIPTORS>
+                </CODE>
+              </CODE-DESCRIPTORS>
+              <PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+              <RESOURCE-CONSUMPTION>
+                <SHORT-NAME>rba_DiagLib_ResourceConsumption</SHORT-NAME>
+                <MEMORY-SECTIONS>
+                  <MEMORY-SECTION>
+                    <SHORT-NAME>RBA_DIAGLIB_CODE</SHORT-NAME>
+                    <PREFIX-REF DEST="SECTION-NAME-PREFIX">/rba_DiagLib/SwcImplementations/Impl_rba_DiagLib/rba_DiagLib_ResourceConsumption/RBA_DIAGLIB</PREFIX-REF>
+                    <SW-ADDRMETHOD-REF DEST="SW-ADDR-METHOD">/RB/RBA/Common/CentralElements/SwAddrMethods/CODE</SW-ADDRMETHOD-REF>
+                    <SYMBOL>CODE</SYMBOL>
+                  </MEMORY-SECTION>
+                  <MEMORY-SECTION>
+                    <SHORT-NAME>RBA_DIAGLIB_VAR_CLEARED</SHORT-NAME>
+                    <PREFIX-REF DEST="SECTION-NAME-PREFIX">/rba_DiagLib/SwcImplementations/Impl_rba_DiagLib/rba_DiagLib_ResourceConsumption/RBA_DIAGLIB</PREFIX-REF>
+                    <SW-ADDRMETHOD-REF DEST="SW-ADDR-METHOD">/RB/RBA/Common/CentralElements/SwAddrMethods/VAR_CLEARED</SW-ADDRMETHOD-REF>
+                    <SYMBOL>VAR_CLEARED</SYMBOL>
+                  </MEMORY-SECTION>
+                  <MEMORY-SECTION>
+                    <SHORT-NAME>RBA_DIAGLIB_VAR_INIT</SHORT-NAME>
+                    <PREFIX-REF DEST="SECTION-NAME-PREFIX">/rba_DiagLib/SwcImplementations/Impl_rba_DiagLib/rba_DiagLib_ResourceConsumption/RBA_DIAGLIB</PREFIX-REF>
+                    <SW-ADDRMETHOD-REF DEST="SW-ADDR-METHOD">/RB/RBA/Common/CentralElements/SwAddrMethods/VAR_INIT</SW-ADDRMETHOD-REF>
+                    <SYMBOL>VAR_INIT</SYMBOL>
+                  </MEMORY-SECTION>
+                  <MEMORY-SECTION>
+                    <SHORT-NAME>RBA_DIAGLIB_CONST</SHORT-NAME>
+                    <PREFIX-REF DEST="SECTION-NAME-PREFIX">/rba_DiagLib/SwcImplementations/Impl_rba_DiagLib/rba_DiagLib_ResourceConsumption/RBA_DIAGLIB</PREFIX-REF>
+                    <SW-ADDRMETHOD-REF DEST="SW-ADDR-METHOD">/RB/RBA/Common/CentralElements/SwAddrMethods/CONST</SW-ADDRMETHOD-REF>
+                    <SYMBOL>CONST</SYMBOL>
+                  </MEMORY-SECTION>
+                  <MEMORY-SECTION>
+                    <SHORT-NAME>RBA_DIAGLIB_VAR_SAVED_ZONE</SHORT-NAME>
+                    <PREFIX-REF DEST="SECTION-NAME-PREFIX">/rba_DiagLib/SwcImplementations/Impl_rba_DiagLib/rba_DiagLib_ResourceConsumption/RBA_DIAGLIB</PREFIX-REF>
+                    <SW-ADDRMETHOD-REF DEST="SW-ADDR-METHOD">/RB/RBA/Common/CentralElements/SwAddrMethods/VAR_SAVED_ZONE</SW-ADDRMETHOD-REF>
+                    <SYMBOL>VAR_SAVED_ZONE</SYMBOL>
+                  </MEMORY-SECTION> 
+                   <!-- BSW-15486 - Remove definition of rba_DiagLib_CODE -->
+                </MEMORY-SECTIONS>
+                <SECTION-NAME-PREFIXS>
+                  <SECTION-NAME-PREFIX>
+                    <SHORT-NAME>RBA_DIAGLIB</SHORT-NAME>
+                    <SYMBOL>RBA_DIAGLIB</SYMBOL>
+                  </SECTION-NAME-PREFIX>
+                  <SECTION-NAME-PREFIX>
+                    <SHORT-NAME>rba_DiagLib</SHORT-NAME>
+                    <SYMBOL>rba_DiagLib</SYMBOL>
+                  </SECTION-NAME-PREFIX>
+                </SECTION-NAME-PREFIXS>
+              </RESOURCE-CONSUMPTION>
+              <SW-VERSION>6.1.0</SW-VERSION>
+              <VENDOR-ID>6</VENDOR-ID>
+              <BEHAVIOR-REF DEST="SWC-INTERNAL-BEHAVIOR">/rba_DiagLib/SwComponentTypes/rba_DiagLib/IntBeh_rba_DiagLib</BEHAVIOR-REF>
+            </SWC-IMPLEMENTATION>
+          </ELEMENTS>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

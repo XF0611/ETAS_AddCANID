@@ -1,0 +1,47 @@
+********************************************************************************
+Build Execution started
+********************************************************************************
+Tool Version : ISOLAR-A/B 9.2.1 
+Tool Build Id :20220317_1800
+Date : Thu Nov 03 15:50:44 ICT 2022
+Project : ETAS_BIP_PT_TC387Hightec
+********************************************************************************
+
+********************************************************************************
+Project clean execution has started at 15:50:44:184 hh:mm:ss:ms 
+********************************************************************************
+C:\01_DEV\BIP\2021202323_PJ_ERS_Sgh_FreeTech_AUTOSAR\01_Draft\30_Implementation\20_Software\branch\ETAS_BIP_PT_TricoreHightec_4.9.4.1_TC387_CAR921\BasicSoftware\src\os\gen directory cleaned
+Clean action: RTA_OS 
+********************************************************************************
+Project clean execution has been completed
+Time taken to run Project Clean :: 00:00:00:013 hh:mm:ss:ms 
+********************************************************************************
+********************************************************************************
+Main build execution has started at 15:50:49:730 hh:mm:ss:ms 
+********************************************************************************
+Execute action: RTA_OS 
+********************************************************************************
+RTA-OS Code Generator 
+Version 6.2.0.32429, Copyright c ETAS 2021
+Selected target TriCoreHighTec[TC38x] V5.0.28.1582
+..............................................................................................................
+Created report 'OS Size Information.txt'
+Created report 'IOC Summary.txt'
+Created report 'Stack Usage.txt'
+Created report 'Os_BSWMD.arxml'
+Warning: ScheduleTable Rte_ScheduleTable is synchronized though the Scalability Class is not 2 or 4
+Information: ScheduleTable Rte_ScheduleTable has 100 expiry points.
+Information: Allocating SRC_GPSR00 as cross-core interrupt for core 0
+Information: Allocating SRC_GPSR01 as cross-core interrupt for core 1
+Information: Allocating SRC_GPSR02 as cross-core interrupt for core 2
+Information: Updated 'RTAOS.a'
+Errors: 0, Warnings: 1.
+Command: C:\ETAS\RTA-CAR_9.2.1\RTA-OS_6.2.0/bin/rtaosgen.exe  --ar_version:4.4.0 --output:"C:/01_DEV/BIP/2021202323_PJ_ERS_Sgh_FreeTech_AUTOSAR/01_Draft/30_Implementation/20_Software/branch/ETAS_BIP_PT_TricoreHightec_4.9.4.1_TC387_CAR921/BasicSoftware/src/os/gen" --include:"C:/01_DEV/BIP/2021202323_PJ_ERS_Sgh_FreeTech_AUTOSAR/01_Draft/30_Implementation/20_Software/branch/ETAS_BIP_PT_TricoreHightec_4.9.4.1_TC387_CAR921/BasicSoftware/integration/src/compiler" --include:"C:/01_DEV/BIP/2021202323_PJ_ERS_Sgh_FreeTech_AUTOSAR/01_Draft/30_Implementation/20_Software/branch/ETAS_BIP_PT_TricoreHightec_4.9.4.1_TC387_CAR921/BasicSoftware/integration/src/compiler/integration" --include:"C:/01_DEV/BIP/2021202323_PJ_ERS_Sgh_FreeTech_AUTOSAR/01_Draft/30_Implementation/20_Software/branch/ETAS_BIP_PT_TricoreHightec_4.9.4.1_TC387_CAR921/BasicSoftware/integration/src/rte" --include:"C:/01_DEV/BIP/2021202323_PJ_ERS_Sgh_FreeTech_AUTOSAR/01_Draft/30_Implementation/20_Software/branch/ETAS_BIP_PT_TricoreHightec_4.9.4.1_TC387_CAR921/BasicSoftware/integration/src/types" --include:"C:/01_DEV/BIP/2021202323_PJ_ERS_Sgh_FreeTech_AUTOSAR/01_Draft/30_Implementation/20_Software/branch/ETAS_BIP_PT_TricoreHightec_4.9.4.1_TC387_CAR921/BasicSoftware/src/cobra/MemMap"   "C:/01_DEV/BIP/2021202323_PJ_ERS_Sgh_FreeTech_AUTOSAR/01_Draft/30_Implementation/20_Software/branch/ETAS_BIP_PT_TricoreHightec_4.9.4.1_TC387_CAR921/BasicSoftware/ecu_config/bsw/static/Other_Modules/ETAS_EcuC_Partitions_AppCore_EcucValues.arxml"  "C:/01_DEV/BIP/2021202323_PJ_ERS_Sgh_FreeTech_AUTOSAR/01_Draft/30_Implementation/20_Software/branch/ETAS_BIP_PT_TricoreHightec_4.9.4.1_TC387_CAR921/BasicSoftware/ecu_config/bsw/static/Other_Modules/ETAS_EcuC_Partitions_ComCore_EcucValues.arxml"  "C:/01_DEV/BIP/2021202323_PJ_ERS_Sgh_FreeTech_AUTOSAR/01_Draft/30_Implementation/20_Software/branch/ETAS_BIP_PT_TricoreHightec_4.9.4.1_TC387_CAR921/BasicSoftware/ecu_config/bsw/static/Other_Modules/ETAS_EcuC_Partitions_SysCore_EcucValues.arxml"  "C:/01_DEV/BIP/2021202323_PJ_ERS_Sgh_FreeTech_AUTOSAR/01_Draft/30_Implementation/20_Software/branch/ETAS_BIP_PT_TricoreHightec_4.9.4.1_TC387_CAR921/BasicSoftware/ecu_config/os/static/ETAS_Os_Applications_AppCore_EcucValues.arxml"  "C:/01_DEV/BIP/2021202323_PJ_ERS_Sgh_FreeTech_AUTOSAR/01_Draft/30_Implementation/20_Software/branch/ETAS_BIP_PT_TricoreHightec_4.9.4.1_TC387_CAR921/BasicSoftware/ecu_config/os/static/ETAS_Os_Applications_ComCore_EcucValues.arxml"  "C:/01_DEV/BIP/2021202323_PJ_ERS_Sgh_FreeTech_AUTOSAR/01_Draft/30_Implementation/20_Software/branch/ETAS_BIP_PT_TricoreHightec_4.9.4.1_TC387_CAR921/BasicSoftware/ecu_config/os/static/ETAS_Os_Applications_SysCore_EcucValues.arxml"  "C:/01_DEV/BIP/2021202323_PJ_ERS_Sgh_FreeTech_AUTOSAR/01_Draft/30_Implementation/20_Software/branch/ETAS_BIP_PT_TricoreHightec_4.9.4.1_TC387_CAR921/BasicSoftware/ecu_config/os/static/ETAS_Os_Mcal_EcucValues.arxml"  "C:/01_DEV/BIP/2021202323_PJ_ERS_Sgh_FreeTech_AUTOSAR/01_Draft/30_Implementation/20_Software/branch/ETAS_BIP_PT_TricoreHightec_4.9.4.1_TC387_CAR921/BasicSoftware/ecu_config/os/static/ETAS_Os_Target_EcucValues.arxml"  "C:/01_DEV/BIP/2021202323_PJ_ERS_Sgh_FreeTech_AUTOSAR/01_Draft/30_Implementation/20_Software/branch/ETAS_BIP_PT_TricoreHightec_4.9.4.1_TC387_CAR921/BasicSoftware/ecu_config/os/static/ETAS_Os_VendorSpecific_EcucValues.arxml"  "C:/01_DEV/BIP/2021202323_PJ_ERS_Sgh_FreeTech_AUTOSAR/01_Draft/30_Implementation/20_Software/branch/ETAS_BIP_PT_TricoreHightec_4.9.4.1_TC387_CAR921/BasicSoftware/ecu_config/os/static/ETAS_Os_VendorSpecific_Rtm_EcucValues.arxml"  "C:/01_DEV/BIP/2021202323_PJ_ERS_Sgh_FreeTech_AUTOSAR/01_Draft/30_Implementation/20_Software/branch/ETAS_BIP_PT_TricoreHightec_4.9.4.1_TC387_CAR921/BasicSoftware/src/rte/gen/iocNeeds.arxml"  "C:/01_DEV/BIP/2021202323_PJ_ERS_Sgh_FreeTech_AUTOSAR/01_Draft/30_Implementation/20_Software/branch/ETAS_BIP_PT_TricoreHightec_4.9.4.1_TC387_CAR921/BasicSoftware/src/rte/gen/osNeeds.arxml"  --report:"OS Size Information.txt" --report:"IOC Summary.txt" --report:"Stack Usage.txt" --report:"Os_BSWMD.arxml" --include:C:/01_DEV/BIP/2021202323_PJ_ERS_Sgh_FreeTech_AUTOSAR/01_Draft/30_Implementation/20_Software/branch/ETAS_BIP_PT_TricoreHightec_4.9.4.1_TC387_CAR921/BasicSoftware/src/rte/gen
+
+Execution of action RTA_OS successfully completed
+********************************************************************************
+
+Build Summary 
+********************************************************************************
+- RTA_OS --> Success (Executed for 00:01:03:165 hh:mm:ss:ms)
+Time taken for the complete build: 00:01:04:802

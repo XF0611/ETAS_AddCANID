@@ -1,0 +1,168 @@
+
+/************************************************************************************************************************************/
+/*                                                                                                                                  */
+/*                                     ISOLAR-A : Headless EcuExtract Report                                                       */
+/*                                                                                                                                  */
+
+/************************************************************************************************************************************/
+
+[Command Line Arguments ] : [-ecuextract, --ecuinstance=ETAS, --otheropt=C:\00_Pj\00_FreeTech\01_Draft\30_Implementation\20_Software\branch\ETAS_BIP_PT_ARCMW_11.1_CAL60S244AB_CAR921\BasicSoftware\EcuExtract_CLI_Input.txt]
+
+
+/************************************************************************************************************************************/
+
+[WARNING-MESSAGE] : [EcuExtract_WARN_21] System version is not specified, default System version will be added to the extracted System
+
+[INFO-MESSAGE] : [EcuExtract_OK_02] List of *.arxml files which has been affected due to iterative development of ECU Extract are: [System_EcuExtr.arxml]
+
+
+/************************************************************************************************************************************/
+
+
+EcuExtract is generated successfully.
+
+
+Generated on 2022/12/05 10:47:40
+/******************************************************END OF REPORT*****************************************************************/
+
+/************************************************************************************************************************************/
+/*                                                                                                                                  */
+/*                                     ISOLAR-A : Headless EcuExtract Report                                                       */
+/*                                                                                                                                  */
+
+/************************************************************************************************************************************/
+
+[Command Line Arguments ] : [-ecuextract, --ecuinstance=ETAS, --otheropt=C:\00_Pj\00_FreeTech\01_Draft\30_Implementation\20_Software\branch\ETAS_BIP_PT_ARCMW_11.1_CAL60S244AB_CAR921\BasicSoftware\EcuExtract_CLI_Input.txt]
+
+
+/************************************************************************************************************************************/
+
+[WARNING-MESSAGE] : [EcuExtract_WARN_21] System version is not specified, default System version will be added to the extracted System
+
+[INFO-MESSAGE] : [EcuExtract_OK_02] List of *.arxml files which has been affected due to iterative development of ECU Extract are: [System_EcuExtr.arxml]
+
+
+/************************************************************************************************************************************/
+
+
+EcuExtract is generated successfully.
+
+
+Generated on 2022/12/05 10:51:00
+/******************************************************END OF REPORT*****************************************************************/
+
+/************************************************************************************************************************************/
+/*                                                                                                                                  */
+/*                                     ISOLAR-A : Headless EcuExtract Report                                                       */
+/*                                                                                                                                  */
+
+/************************************************************************************************************************************/
+
+[Command Line Arguments ] : [-ecuextract, --ecuinstance=ETAS, --otheropt=C:\00_Pj\00_FreeTech\01_Draft\30_Implementation\20_Software\branch\ETAS_BIP_PT_ARCMW_11.1_CAL60S244AB_CAR921\BasicSoftware\EcuExtract_CLI_Input.txt]
+
+
+/************************************************************************************************************************************/
+
+[WARNING-MESSAGE] : [EcuExtract_WARN_21] System version is not specified, default System version will be added to the extracted System
+
+[INFO-MESSAGE] : [EcuExtract_OK_02] List of *.arxml files which has been affected due to iterative development of ECU Extract are: [System_EcuExtr.arxml]
+
+
+/************************************************************************************************************************************/
+
+
+EcuExtract is generated successfully.
+
+
+Generated on 2022/12/05 10:53:13
+/******************************************************END OF REPORT*****************************************************************/
+
+/************************************************************************************************************************************/
+/*                                                                                                                                  */
+/*                                     ISOLAR-A : Headless EcuExtract Report                                                       */
+/*                                                                                                                                  */
+
+/************************************************************************************************************************************/
+
+[Command Line Arguments ] : [-ecuextract, --ecuinstance=ETAS, --otheropt=C:\00_Pj\00_FreeTech\01_Draft\30_Implementation\20_Software\branch\ETAS_BIP_PT_ARCMW_11.1_CAL60S244AB_CAR921\BasicSoftware\EcuExtract_CLI_Input.txt]
+
+
+/************************************************************************************************************************************/
+
+[WARNING-MESSAGE] : [EcuExtract_WARN_21] System version is not specified, default System version will be added to the extracted System
+
+[INFO-MESSAGE] : [EcuExtract_OK_02] List of *.arxml files which has been affected due to iterative development of ECU Extract are: [System_EcuExtr.arxml]
+
+
+/************************************************************************************************************************************/
+
+
+EcuExtract is generated successfully.
+
+
+Generated on 2022/12/05 10:54:35
+/******************************************************END OF REPORT*****************************************************************/
+
+/************************************************************************************************************************************/
+/*                                                                                                                                  */
+/*                                     ISOLAR-A : Headless EcuExtract Report                                                       */
+/*                                                                                                                                  */
+
+/************************************************************************************************************************************/
+
+[Command Line Arguments ] : [-ecuextract, --ecuinstance=ETAS, --otheropt=C:\00_Pj\00_FreeTech\01_Draft\30_Implementation\20_Software\branch\ETAS_BIP_PT_ARCMW_11.1_CAL60S244AB_CAR921\BasicSoftware\EcuExtract_CLI_Input.txt]
+
+
+/************************************************************************************************************************************/
+
+[WARNING-MESSAGE] : [EcuExtract_WARN_21] System version is not specified, default System version will be added to the extracted System
+
+[INFO-MESSAGE] : [EcuExtract_OK_02] List of *.arxml files which has been affected due to iterative development of ECU Extract are: [System_EcuExtr.arxml]
+
+
+/************************************************************************************************************************************/
+
+
+EcuExtract is generated successfully.
+
+
+Generated on 2022/12/05 11:06:48
+/******************************************************END OF REPORT*****************************************************************/
+
+/************************************************************************************************************************************/
+/*                                                                                                                                  */
+/*                                     ISOLAR-A : Headless EcuExtract Report                                                       */
+/*                                                                                                                                  */
+
+/************************************************************************************************************************************/
+
+[Command Line Arguments ] : [-ecuextract, --ecuinstance=ETAS, --otheropt=E:\ETAS\ETAS_Test\ETAS_BIP_PT_CANID_Test\BasicSoftware\EcuExtract_CLI_Input.txt]
+
+
+/************************************************************************************************************************************/
+
+[ERROR-MESSAGE] : [EcuExtract_ERR_26] DataMapping </System/System/SystemMapping/@dataMappings.0> refers to SystemSignal</SysDesc/Pkg_Signal/ETAS04_Sig23_ComTx_0x97> which does not exist.
+
+[ERROR-MESSAGE] : [EcuExtract_ERR_26] DataMapping </System/System/SystemMapping/@dataMappings.3> refers to SystemSignal</SysDesc/Pkg_Signal/ETAS04_Sig25_ComTx_0x97> which does not exist.
+
+[ERROR-MESSAGE] : [EcuExtract_ERR_26] DataMapping </System/System/SystemMapping/@dataMappings.4> refers to SystemSignal</SysDesc/Pkg_Signal/ETAS04_Sig24_ComTx_0x97> which does not exist.
+
+[ERROR-MESSAGE] : [EcuExtract_ERR_26] DataMapping </System/System/SystemMapping/@dataMappings.9> refers to SystemSignal</SysDesc/Pkg_Signal/ETAS04_Sig20_ComTx_0x97> which does not exist.
+
+[ERROR-MESSAGE] : [EcuExtract_ERR_26] DataMapping </System/System/SystemMapping/@dataMappings.20> refers to SystemSignal</SysDesc/Pkg_Signal/ETAS04_Sig22_ComTx_0x97> which does not exist.
+
+[ERROR-MESSAGE] : [EcuExtract_ERR_26] DataMapping </System/System/SystemMapping/@dataMappings.25> refers to SystemSignal</SysDesc/Pkg_Signal/ETAS04_Sig21_ComTx_0x97> which does not exist.
+
+[WARNING-MESSAGE] : [EcuExtract_WARN_21] System version is not specified, default System version will be added to the extracted System
+
+[INFO-MESSAGE] : [EcuExtract_OK_02] List of *.arxml files which has been affected due to iterative development of ECU Extract are: [System_EcuExtr.arxml]
+
+
+/************************************************************************************************************************************/
+
+
+EcuExtract is generated successfully.
+
+
+Generated on 2023/05/18 14:58:01
+/******************************************************END OF REPORT*****************************************************************/

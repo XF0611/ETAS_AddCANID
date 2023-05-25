@@ -1,0 +1,839 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-2-2.xsd">
+  <ADMIN-DATA>
+    <DOC-REVISIONS>
+      <DOC-REVISION>
+        <ISSUED-BY>RB</ISSUED-BY>
+        <DATE>2020-12-22</DATE>
+      </DOC-REVISION>
+    </DOC-REVISIONS>
+  </ADMIN-DATA>
+  <AR-PACKAGES>
+    <AR-PACKAGE>
+      <SHORT-NAME>AUTOSAR_WdgIf</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE>
+          <SHORT-NAME>EcucModuleDefs</SHORT-NAME>
+          <ELEMENTS>
+            <!-- Module Definition: WdgIf -->
+            <ECUC-MODULE-DEF>
+              <SHORT-NAME>WdgIf</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">Watchdog Interface</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">Configuration of the WdgIf (Watchdog Interface) module (with vendor specific enhancements of RB).</L-2>
+              </DESC>
+              <CATEGORY>VENDOR_SPECIFIC_MODULE_DEFINITION</CATEGORY>
+              <ADMIN-DATA>
+                <DOC-REVISIONS>
+                  <DOC-REVISION>
+                    <REVISION-LABEL>4.2.2</REVISION-LABEL>
+                    <ISSUED-BY>AUTOSAR</ISSUED-BY>
+                    <DATE>2017-01-31</DATE>
+                  </DOC-REVISION>
+                  <DOC-REVISION>
+                    <REVISION-LABEL>42.8.0.0</REVISION-LABEL>
+                    <ISSUED-BY>RB</ISSUED-BY>
+                    <DATE>2020-06-30</DATE>
+                  </DOC-REVISION>
+                </DOC-REVISIONS>
+              </ADMIN-DATA>
+              <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+              <POST-BUILD-VARIANT-SUPPORT>true</POST-BUILD-VARIANT-SUPPORT>
+              <REFINED-MODULE-DEF-REF DEST="ECUC-MODULE-DEF">/AUTOSAR/EcucDefs/WdgIf</REFINED-MODULE-DEF-REF>
+              <SUPPORTED-CONFIG-VARIANTS>
+                <SUPPORTED-CONFIG-VARIANT>VARIANT-PRE-COMPILE</SUPPORTED-CONFIG-VARIANT>
+              </SUPPORTED-CONFIG-VARIANTS>
+              <CONTAINERS>
+                <!-- Container Definition: WdgIfDevice -->
+                <ECUC-PARAM-CONF-CONTAINER-DEF>
+                  <SHORT-NAME>WdgIfDevice</SHORT-NAME>
+                  <LONG-NAME>
+                    <L-4 L="EN">Watchdog Device Selection for WdgIf</L-4>
+                  </LONG-NAME>
+                  <DESC>
+                    <L-2 L="EN">It contains the information for the selection of a particular Watchdog device in case multiple Watchdog drivers are connected.</L-2>
+                  </DESC>
+                  <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                  <UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+                  <MULTIPLICITY-CONFIG-CLASSES>
+                    <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                      <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                    </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                  </MULTIPLICITY-CONFIG-CLASSES>
+                  <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                  <PARAMETERS>
+                    <!-- PARAMETER DEFINITION: WdgIfDeviceIndex -->
+                    <ECUC-INTEGER-PARAM-DEF>
+                      <SHORT-NAME>WdgIfDeviceIndex</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Watchdog interface identifier</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Represents the watchdog interface ID so that it can be referenced by the watchdog manager. This parameter should not be configured by Integrator. Value for this parameters will be filled(forwarded) by the Id Generate Script.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <SCOPE>ECU</SCOPE>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>true</SYMBOLIC-NAME-VALUE>
+                      <WITH-AUTO>true</WITH-AUTO>
+                      <MAX>255</MAX>
+                      <MIN>0</MIN>
+                    </ECUC-INTEGER-PARAM-DEF>
+                  </PARAMETERS>
+                  <REFERENCES>
+                    <!-- Symbolic Name Reference Definition: WdgIfDriverRef -->
+                    <ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+                      <SHORT-NAME>WdgIfDriverRef</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Watchdog driver reference</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Reference to the watchdog drivers that are controlled by the watchdog interface.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <SCOPE>LOCAL</SCOPE>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Wdg/WdgGeneral</DESTINATION-REF>
+                    </ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+                  </REFERENCES>
+                </ECUC-PARAM-CONF-CONTAINER-DEF>
+                <!-- Container Definition: WdgIfGeneral -->
+                <ECUC-PARAM-CONF-CONTAINER-DEF>
+                  <SHORT-NAME>WdgIfGeneral</SHORT-NAME>
+                  <LONG-NAME>
+                    <L-4 L="EN">Watchdog interface general</L-4>
+                  </LONG-NAME>
+                  <DESC>
+                    <L-2 L="EN">This container collects all generic watchdog interface parameters.</L-2>
+                  </DESC>
+                  <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                  <PARAMETERS>
+                    <!-- PARAMETER DEFINITION: WdgIfDevErrorDetect -->
+                    <ECUC-BOOLEAN-PARAM-DEF>
+                      <SHORT-NAME>WdgIfDevErrorDetect</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Development error enable</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Switches the development error detection and notification on or off.<BR/>
+<BR/>
+true: detection and notification is enabled.<BR/>
+false: detection and notification is disabled.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <SCOPE>LOCAL</SCOPE>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                    </ECUC-BOOLEAN-PARAM-DEF>
+                    <!-- PARAMETER DEFINITION: WdgIfRbExtWdgModuleName -->
+                    <ECUC-STRING-PARAM-DEF>
+                      <SHORT-NAME>WdgIfRbExtWdgModuleName</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">External Watchdog Module name</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">This is module name of the External Watchdog Module. This parameter is to help generating the Api names to be used inside WdgIf from Io External Device controller. <BR/>
+<BR/>
+If this parameter is not configured, Vendor specific(related to Bosch specific IoExtDev module) External Watchdog interfaces will not be generated.<BR/>
+<BR/>
+ This shall be configured with exact Module name, as it should appear in the Prefix for the generated Api&apos;s.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>255</UPPER-MULTIPLICITY>
+                      <SCOPE>LOCAL</SCOPE>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <ORIGIN>RB:1.0.0:2012-09-28</ORIGIN>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <ECUC-STRING-PARAM-DEF-VARIANTS>
+                        <ECUC-STRING-PARAM-DEF-CONDITIONAL/>
+                      </ECUC-STRING-PARAM-DEF-VARIANTS>
+                    </ECUC-STRING-PARAM-DEF>
+                    <!-- PARAMETER DEFINITION: WdgIfVersionInfoApi -->
+                    <ECUC-BOOLEAN-PARAM-DEF>
+                      <SHORT-NAME>WdgIfVersionInfoApi</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Version information</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Pre-processor switch to enable / disable the service returning the version information. true: Version information service enabled false: Version information service disabled</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <SCOPE>LOCAL</SCOPE>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                    </ECUC-BOOLEAN-PARAM-DEF>
+                  </PARAMETERS>
+                  <SUB-CONTAINERS>
+                    <!-- Container Definition: WdgIfRbExtWdgApiSupport -->
+                    <ECUC-PARAM-CONF-CONTAINER-DEF>
+                      <SHORT-NAME>WdgIfRbExtWdgApiSupport</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">External Watchdog Api Support</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">This Container consists of parameters which indicate whether corresponding Api (functionality) is supported by the External watchdog module (configured at parameter "WdgIfRbExtWdgModuleName") or not.<BR/>
+<BR/>
+This container should not be configured by Integrator. Value for the parameters of this container will be filled(forwarded) by the External watchdog module (driver).<BR/>
+<BR/>
+ External watchdog module should forward &quot;External watchdog module name&quot; as shortname for this container.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>255</UPPER-MULTIPLICITY>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <PARAMETERS>
+                        <!-- PARAMETER DEFINITION: WdgIfRbExtWdgApiGetRegVdd5OvWda -->
+                        <ECUC-BOOLEAN-PARAM-DEF>
+                          <SHORT-NAME>WdgIfRbExtWdgApiGetRegVdd5OvWda</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Api GetRegVdd5OvWda Supported</L-4>
+                          </LONG-NAME>
+                          <DESC>
+                            <L-2 L="EN">Indicates whether Api to read status of VDD5OV_WDA bit is supported by External Watchdog module (driver) or not. <BR/>
+<BR/>
+True: GetRegVdd5OvWda Api is supported by the External Watchdog module.<BR/>
+False: GetRegVdd5OvWda Api is not supported by the External Watchdog module.<BR/>
+<BR/>
+ If this parameter is not configured, then it will be considered as Api not supported by the External Watchdog module (that is value &apos;False&apos;).</L-2>
+                          </DESC>
+                          <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <SCOPE>ECU</SCOPE>
+                          <MULTIPLICITY-CONFIG-CLASSES>
+                            <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          </MULTIPLICITY-CONFIG-CLASSES>
+                          <ORIGIN>RB:9.0.0:2020-11-09</ORIGIN>
+                          <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                          <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                          <VALUE-CONFIG-CLASSES>
+                            <ECUC-VALUE-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-VALUE-CONFIGURATION-CLASS>
+                          </VALUE-CONFIG-CLASSES>
+                          <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                          <WITH-AUTO>true</WITH-AUTO>
+                        </ECUC-BOOLEAN-PARAM-DEF>
+                        <!-- PARAMETER DEFINITION: WdgIfRbExtWdgApiGetSwtPosn -->
+                        <ECUC-BOOLEAN-PARAM-DEF>
+                          <SHORT-NAME>WdgIfRbExtWdgApiGetSwtPosn</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Api GetSwtPosn Supported</L-4>
+                          </LONG-NAME>
+                          <DESC>
+                            <L-2 L="EN">Indicates whether Api to Get Switch position is supported by External Watchdog module (driver) or not. <BR/>
+<BR/>
+True: GetSwtPosn Api is supported by the External Watchdog module.<BR/>
+False: GetSwtPosn Api is not supported by the External Watchdog module.<BR/>
+<BR/>
+ If this parameter is not configured, then it will be considered as Api not supported by the External Watchdog module (that is value &apos;False&apos;).</L-2>
+                          </DESC>
+                          <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <SCOPE>ECU</SCOPE>
+                          <MULTIPLICITY-CONFIG-CLASSES>
+                            <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          </MULTIPLICITY-CONFIG-CLASSES>
+                          <ORIGIN>RB:3.1.0:2018-04-06</ORIGIN>
+                          <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                          <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                          <VALUE-CONFIG-CLASSES>
+                            <ECUC-VALUE-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-VALUE-CONFIGURATION-CLASS>
+                          </VALUE-CONFIG-CLASSES>
+                          <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                          <WITH-AUTO>true</WITH-AUTO>
+                        </ECUC-BOOLEAN-PARAM-DEF>
+                        <!-- PARAMETER DEFINITION: WdgIfRbExtWdgApiGetUMonStatus -->
+                        <ECUC-BOOLEAN-PARAM-DEF>
+                          <SHORT-NAME>WdgIfRbExtWdgApiGetUMonStatus</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Api GetUMonStatus Supported</L-4>
+                          </LONG-NAME>
+                          <DESC>
+                            <L-2 L="EN">Indicates whether Api to read voltage monitoring status is supported by External Watchdog module (driver) or not.<BR/>
+<BR/>
+True: Api GetUMonStatus is supported by the External Watchdog module.<BR/>
+False: Api GetUMonStatus is not supported by the External Watchdog module.<BR/>
+<BR/>
+ If this parameter is not configured, then it will be considered as Api not supported by the External Watchdog module (that is value &apos;False&apos;).</L-2>
+                          </DESC>
+                          <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <SCOPE>ECU</SCOPE>
+                          <MULTIPLICITY-CONFIG-CLASSES>
+                            <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          </MULTIPLICITY-CONFIG-CLASSES>
+                          <ORIGIN>RB:9.0.0:2020-11-09</ORIGIN>
+                          <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                          <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                          <VALUE-CONFIG-CLASSES>
+                            <ECUC-VALUE-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-VALUE-CONFIGURATION-CLASS>
+                          </VALUE-CONFIG-CLASSES>
+                          <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                          <WITH-AUTO>true</WITH-AUTO>
+                        </ECUC-BOOLEAN-PARAM-DEF>
+                        <!-- PARAMETER DEFINITION: WdgIfRbExtWdgApiGetWdgThd -->
+                        <ECUC-BOOLEAN-PARAM-DEF>
+                          <SHORT-NAME>WdgIfRbExtWdgApiGetWdgThd</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Api GetWdgThd Supported</L-4>
+                          </LONG-NAME>
+                          <DESC>
+                            <L-2 L="EN">Indicates whether Api to Get Wda threshold is supported by External Watchdog module (driver) or not.<BR/>
+<BR/>
+True: Api GetWdgThd is supported by the External Watchdog module.<BR/>
+False: Api GetWdgThd is not supported by the External Watchdog module.<BR/>
+<BR/>
+ If this parameter is not configured, then it will be considered as Api not supported by the External Watchdog module (that is value &apos;False&apos;).</L-2>
+                          </DESC>
+                          <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <SCOPE>ECU</SCOPE>
+                          <MULTIPLICITY-CONFIG-CLASSES>
+                            <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          </MULTIPLICITY-CONFIG-CLASSES>
+                          <ORIGIN>RB:6.1.0:2019-09-25</ORIGIN>
+                          <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                          <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                          <VALUE-CONFIG-CLASSES>
+                            <ECUC-VALUE-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-VALUE-CONFIGURATION-CLASS>
+                          </VALUE-CONFIG-CLASSES>
+                          <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                          <WITH-AUTO>true</WITH-AUTO>
+                        </ECUC-BOOLEAN-PARAM-DEF>
+                        <!-- PARAMETER DEFINITION: WdgIfRbExtWdgApiGetWdgTiWin -->
+                        <ECUC-BOOLEAN-PARAM-DEF>
+                          <SHORT-NAME>WdgIfRbExtWdgApiGetWdgTiWin</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Api GetWdgTiWin Supported</L-4>
+                          </LONG-NAME>
+                          <DESC>
+                            <L-2 L="EN">Indicates whether Api to Get Time Window value is supported by External Watchdog module (driver) or not.<BR/>
+<BR/>
+True: Api GetWdgTiWin is supported by the External Watchdog module.<BR/>
+False: Api GetWdgTiWin is not supported by the External Watchdog module.<BR/>
+<BR/>
+ If this parameter is not configured, then it will be considered as Api not supported by the External Watchdog module (that is value &apos;False&apos;).</L-2>
+                          </DESC>
+                          <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <SCOPE>ECU</SCOPE>
+                          <MULTIPLICITY-CONFIG-CLASSES>
+                            <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          </MULTIPLICITY-CONFIG-CLASSES>
+                          <ORIGIN>RB:8.0.0:2020-05-21</ORIGIN>
+                          <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                          <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                          <VALUE-CONFIG-CLASSES>
+                            <ECUC-VALUE-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-VALUE-CONFIGURATION-CLASS>
+                          </VALUE-CONFIG-CLASSES>
+                          <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                          <WITH-AUTO>true</WITH-AUTO>
+                        </ECUC-BOOLEAN-PARAM-DEF>
+                        <!-- PARAMETER DEFINITION: WdgIfRbExtWdgApiReqUMonStatus -->
+                        <ECUC-BOOLEAN-PARAM-DEF>
+                          <SHORT-NAME>WdgIfRbExtWdgApiReqUMonStatus</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Api ReqUMonStatus Supported</L-4>
+                          </LONG-NAME>
+                          <DESC>
+                            <L-2 L="EN">Indicates whether Api to request voltage monitoring status is supported by External Watchdog module (driver) or not.<BR/>
+<BR/>
+True: ReqUMonStatus Api is supported by the External Watchdog module.<BR/>
+False: ReqUMonStatus Api is not supported by the External Watchdog module.<BR/>
+<BR/>
+ If this parameter is not configured, then it will be considered as Api not supported by the External Watchdog module (that is value &apos;False&apos;).</L-2>
+                          </DESC>
+                          <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <SCOPE>ECU</SCOPE>
+                          <MULTIPLICITY-CONFIG-CLASSES>
+                            <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          </MULTIPLICITY-CONFIG-CLASSES>
+                          <ORIGIN>RB:9.0.0:2020-11-09</ORIGIN>
+                          <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                          <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                          <VALUE-CONFIG-CLASSES>
+                            <ECUC-VALUE-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-VALUE-CONFIGURATION-CLASS>
+                          </VALUE-CONFIG-CLASSES>
+                          <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                          <WITH-AUTO>true</WITH-AUTO>
+                        </ECUC-BOOLEAN-PARAM-DEF>
+                        <!-- PARAMETER DEFINITION: WdgIfRbExtWdgApiSetOperMode -->
+                        <ECUC-BOOLEAN-PARAM-DEF>
+                          <SHORT-NAME>WdgIfRbExtWdgApiSetOperMode</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Api SetOperMode Supported</L-4>
+                          </LONG-NAME>
+                          <DESC>
+                            <L-2 L="EN">Indicates whether Api to Set the operating mode is supported by External Watchdog module (driver) or not.<BR/>
+<BR/>
+True: SetOperMode Api is supported by the External Watchdog module.<BR/>
+False: SetOperMode Api is not supported by the External Watchdog module.<BR/>
+<BR/>
+ If this parameter is not configured, then it will be considered as Api not supported by the External Watchdog module (that is value &apos;False&apos;).</L-2>
+                          </DESC>
+                          <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <SCOPE>ECU</SCOPE>
+                          <MULTIPLICITY-CONFIG-CLASSES>
+                            <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          </MULTIPLICITY-CONFIG-CLASSES>
+                          <ORIGIN>RB:9.0.0:2020-11-09</ORIGIN>
+                          <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                          <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                          <VALUE-CONFIG-CLASSES>
+                            <ECUC-VALUE-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-VALUE-CONFIGURATION-CLASS>
+                          </VALUE-CONFIG-CLASSES>
+                          <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                          <WITH-AUTO>true</WITH-AUTO>
+                        </ECUC-BOOLEAN-PARAM-DEF>
+                        <!-- PARAMETER DEFINITION: WdgIfRbExtWdgApiSetRegVdd5OvWda -->
+                        <ECUC-BOOLEAN-PARAM-DEF>
+                          <SHORT-NAME>WdgIfRbExtWdgApiSetRegVdd5OvWda</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Api SetRegVdd5OvWda Supported</L-4>
+                          </LONG-NAME>
+                          <DESC>
+                            <L-2 L="EN">Indicates whether Api to set status of VDD5OV_WDA bit is supported by External Watchdog module (driver) or not. <BR/>
+<BR/>
+True: SetRegVdd5OvWda Api is supported by the External Watchdog module.<BR/>
+False: SetRegVdd5OvWda Api is not supported by the External Watchdog module.<BR/>
+<BR/>
+ If this parameter is not configured, then it will be considered as Api not supported by the External Watchdog module (that is value &apos;False&apos;).</L-2>
+                          </DESC>
+                          <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <SCOPE>ECU</SCOPE>
+                          <MULTIPLICITY-CONFIG-CLASSES>
+                            <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          </MULTIPLICITY-CONFIG-CLASSES>
+                          <ORIGIN>RB:9.0.0:2020-11-09</ORIGIN>
+                          <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                          <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                          <VALUE-CONFIG-CLASSES>
+                            <ECUC-VALUE-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-VALUE-CONFIGURATION-CLASS>
+                          </VALUE-CONFIG-CLASSES>
+                          <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                          <WITH-AUTO>true</WITH-AUTO>
+                        </ECUC-BOOLEAN-PARAM-DEF>
+                        <!-- PARAMETER DEFINITION: WdgIfRbExtWdgApiSetSwtPosn -->
+                        <ECUC-BOOLEAN-PARAM-DEF>
+                          <SHORT-NAME>WdgIfRbExtWdgApiSetSwtPosn</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Api SetSwtPosn Supported</L-4>
+                          </LONG-NAME>
+                          <DESC>
+                            <L-2 L="EN">Indicates whether Api to Set Switch position is supported by External Watchdog module (driver) or not.<BR/>
+<BR/>
+True: SetSwtPosn Api is supported by the External Watchdog module.<BR/>
+False: SetSwtPosn Api is not supported by the External Watchdog module.<BR/>
+<BR/>
+ If this parameter is not configured, then it will be considered as Api not supported by the External Watchdog module (that is value &apos;False&apos;).</L-2>
+                          </DESC>
+                          <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <SCOPE>ECU</SCOPE>
+                          <MULTIPLICITY-CONFIG-CLASSES>
+                            <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          </MULTIPLICITY-CONFIG-CLASSES>
+                          <ORIGIN>RB:3.1.0:2018-04-06</ORIGIN>
+                          <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                          <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                          <VALUE-CONFIG-CLASSES>
+                            <ECUC-VALUE-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-VALUE-CONFIGURATION-CLASS>
+                          </VALUE-CONFIG-CLASSES>
+                          <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                          <WITH-AUTO>true</WITH-AUTO>
+                        </ECUC-BOOLEAN-PARAM-DEF>
+                        <!-- PARAMETER DEFINITION: WdgIfRbExtWdgApiSetWdgThd -->
+                        <ECUC-BOOLEAN-PARAM-DEF>
+                          <SHORT-NAME>WdgIfRbExtWdgApiSetWdgThd</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Api SetWdgThd Supported</L-4>
+                          </LONG-NAME>
+                          <DESC>
+                            <L-2 L="EN">Indicates whether Api to Set Wda threshold is supported by External Watchdog module (driver) or not.<BR/>
+<BR/>
+True: Api SetWdgThd is supported by the External Watchdog module.<BR/>
+False: Api SetWdgThd is not supported by the External Watchdog module.<BR/>
+<BR/>
+ If this parameter is not configured, then it will be considered as Api not supported by the External Watchdog module (that is value &apos;False&apos;).</L-2>
+                          </DESC>
+                          <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <SCOPE>ECU</SCOPE>
+                          <MULTIPLICITY-CONFIG-CLASSES>
+                            <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          </MULTIPLICITY-CONFIG-CLASSES>
+                          <ORIGIN>RB:5.1.0:2019-02-06</ORIGIN>
+                          <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                          <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                          <VALUE-CONFIG-CLASSES>
+                            <ECUC-VALUE-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-VALUE-CONFIGURATION-CLASS>
+                          </VALUE-CONFIG-CLASSES>
+                          <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                          <WITH-AUTO>true</WITH-AUTO>
+                        </ECUC-BOOLEAN-PARAM-DEF>
+                        <!-- PARAMETER DEFINITION: WdgIfRbExtWdgApiSetWdgTiWin -->
+                        <ECUC-BOOLEAN-PARAM-DEF>
+                          <SHORT-NAME>WdgIfRbExtWdgApiSetWdgTiWin</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Api SetWdgTiWin Supported</L-4>
+                          </LONG-NAME>
+                          <DESC>
+                            <L-2 L="EN">Indicates whether Api to Set Time Window value is supported by External Watchdog module (driver) or not.<BR/>
+<BR/>
+True: Api SetWdgTiWin is supported by the External Watchdog module.<BR/>
+False: Api SetWdgTiWin is not supported by the External Watchdog module.<BR/>
+<BR/>
+ If this parameter is not configured, then it will be considered as Api not supported by the External Watchdog module (that is value &apos;False&apos;).</L-2>
+                          </DESC>
+                          <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <SCOPE>ECU</SCOPE>
+                          <MULTIPLICITY-CONFIG-CLASSES>
+                            <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          </MULTIPLICITY-CONFIG-CLASSES>
+                          <ORIGIN>RB:8.0.0:2020-05-21</ORIGIN>
+                          <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                          <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                          <VALUE-CONFIG-CLASSES>
+                            <ECUC-VALUE-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-VALUE-CONFIGURATION-CLASS>
+                          </VALUE-CONFIG-CLASSES>
+                          <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                          <WITH-AUTO>true</WITH-AUTO>
+                        </ECUC-BOOLEAN-PARAM-DEF>
+                      </PARAMETERS>
+                    </ECUC-PARAM-CONF-CONTAINER-DEF>
+                  </SUB-CONTAINERS>
+                </ECUC-PARAM-CONF-CONTAINER-DEF>
+                <!-- Container Definition: WdgIfRbConfigSet -->
+                <ECUC-PARAM-CONF-CONTAINER-DEF>
+                  <SHORT-NAME>WdgIfRbConfigSet</SHORT-NAME>
+                  <LONG-NAME>
+                    <L-4 L="EN">Configuration set for WdgIf</L-4>
+                  </LONG-NAME>
+                  <DESC>
+                    <L-2 L="EN">&lt;BR&gt; 
+This Container consists of parameters that support Post-Build variation.
+
+</L-2>
+                  </DESC>
+                  <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                  <PARAMETERS>
+                    <!-- PARAMETER DEFINITION: WdgIfRbExtWdgModuleSel -->
+                    <ECUC-STRING-PARAM-DEF>
+                      <SHORT-NAME>WdgIfRbExtWdgModuleSel</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Watchdog Module Name</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">This parameter is used for the selection of the External Watchdog module Name (WdgIfRbExtWdgModuleName) for particular Post-Build variant.<BR/>
+<BR/>
+This parameter should not be configured manually. Value for this parameter will be forwarded by the External Watchdog Module.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <SCOPE>ECU</SCOPE>
+                      <ORIGIN>RB:5.1.0:2019-03-26</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <WITH-AUTO>true</WITH-AUTO>
+                      <ECUC-STRING-PARAM-DEF-VARIANTS>
+                        <ECUC-STRING-PARAM-DEF-CONDITIONAL/>
+                      </ECUC-STRING-PARAM-DEF-VARIANTS>
+                    </ECUC-STRING-PARAM-DEF>
+                  </PARAMETERS>
+                </ECUC-PARAM-CONF-CONTAINER-DEF>
+                <!-- Container Definition: WdgIfRbControllerSelection -->
+                <ECUC-PARAM-CONF-CONTAINER-DEF>
+                  <SHORT-NAME>WdgIfRbControllerSelection</SHORT-NAME>
+                  <LONG-NAME>
+                    <L-4 L="EN">Contoller Selection for WdgIf</L-4>
+                  </LONG-NAME>
+                  <DESC>
+                    <L-2 L="EN">&lt;BR&gt; This Container consists of parameter to select a controller.
+
+The container must be configured only when ST Device5 is used</L-2>
+                  </DESC>
+                  <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                  <PARAMETERS>
+                    <!-- PARAMETER DEFINITION: WdgIfRbControllerDeviceSelection -->
+                    <ECUC-ENUMERATION-PARAM-DEF>
+                      <SHORT-NAME>WdgIfRbControllerDeviceSelection</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Controller Device Selection</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Allows user to select controller device used</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <SCOPE>ECU</SCOPE>
+                      <ORIGIN>RB:9.0.0:2020-12-11</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <LITERALS>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>IFX</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">IFX</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:9.0.0:2020-12-11</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>ST5</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">ST5</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:9.0.0:2020-12-11</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                      </LITERALS>
+                    </ECUC-ENUMERATION-PARAM-DEF>
+                    <!-- PARAMETER DEFINITION: WdgIfRbCoreSelection -->
+                    <ECUC-ENUMERATION-PARAM-DEF>
+                      <SHORT-NAME>WdgIfRbCoreSelection</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Number of Cores Required</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Allows the user to select on number of cores required to configure</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <SCOPE>ECU</SCOPE>
+                      <ORIGIN>RB:9.0.0:2020-12-11</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <LITERALS>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>A</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">1</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:9.0.0:2020-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>B</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">2</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:9.0.0:2020-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>C</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">3</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:9.0.0:2020-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>D</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">4</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:9.0.0:2020-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>E</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">5</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:9.0.0:2020-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>F</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">6</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:9.0.0:2020-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                      </LITERALS>
+                    </ECUC-ENUMERATION-PARAM-DEF>
+                    <!-- PARAMETER DEFINITION: WdgIfRbInstanceSelection -->
+                    <ECUC-ENUMERATION-PARAM-DEF>
+                      <SHORT-NAME>WdgIfRbInstanceSelection</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Number of Instances Required</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Allows the user to select on number of instances required to configure</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <SCOPE>ECU</SCOPE>
+                      <ORIGIN>RB:9.0.0:2020-12-11</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <LITERALS>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>A</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">1</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:9.0.0:2020-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>B</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">2</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:9.0.0:2020-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                      </LITERALS>
+                    </ECUC-ENUMERATION-PARAM-DEF>
+                  </PARAMETERS>
+                </ECUC-PARAM-CONF-CONTAINER-DEF>
+              </CONTAINERS>
+            </ECUC-MODULE-DEF>
+          </ELEMENTS>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

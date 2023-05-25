@@ -1,0 +1,33 @@
+scons: done reading SConscript files.
+
+scons: warning: you do not seem to have the pywin32 extensions installed;
+	parallel (-j) builds may not work reliably with open Python files.
+File "F:\Python271\Scripts\scons.py", line 201, in <module>
+scons: Building targets ...
+Compiling ASW\OUTP_SWC\src\OUTP_SWC.c
+
+Linking output\dbg\D_ETAS_BIP_PT_ARCMW.elf...
+Unresolved Symbol:			Referenced from:
+------------------			----------------
+IocRead_Rte_Rx_000010                    output\objs\basicSoftware\src\rte\Rte.o
+IocRead_Rte_Rx_000011                    output\objs\basicSoftware\src\rte\Rte.o
+IocRead_Rte_Rx_000012                    output\objs\basicSoftware\src\rte\Rte.o
+IocRead_Rte_Rx_000013                    output\objs\basicSoftware\src\rte\Rte.o
+IocRead_Rte_Rx_000014                    output\objs\basicSoftware\src\rte\Rte.o
+IocRead_Rte_Rx_000015                    output\objs\basicSoftware\src\rte\Rte.o
+IocRead_Rte_Rx_000016                    output\objs\basicSoftware\src\rte\Rte.o
+IocRead_Rte_Rx_000017                    output\objs\basicSoftware\src\rte\Rte.o
+IocWrite_Rte_Rx_000010                   output\objs\basicSoftware\src\rte\Rte.o
+IocWrite_Rte_Rx_000011                   output\objs\basicSoftware\src\rte\Rte.o
+IocWrite_Rte_Rx_000012                   output\objs\basicSoftware\src\rte\Rte.o
+IocWrite_Rte_Rx_000013                   output\objs\basicSoftware\src\rte\Rte.o
+IocWrite_Rte_Rx_000014                   output\objs\basicSoftware\src\rte\Rte.o
+IocWrite_Rte_Rx_000015                   output\objs\basicSoftware\src\rte\Rte.o
+IocWrite_Rte_Rx_000016                   output\objs\basicSoftware\src\rte\Rte.o
+IocWrite_Rte_Rx_000017                   output\objs\basicSoftware\src\rte\Rte.o
+
+===================
+None
+===================
+scons: *** [output\dbg\D_ETAS_BIP_PT_ARCMW.elf] Error 1
+scons: building terminated because of errors.

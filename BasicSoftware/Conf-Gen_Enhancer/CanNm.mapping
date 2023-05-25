@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="ASCII"?>
+<MappingMetaModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns="http://www.bosch.com/autosartool/m2m/model" transformationName="Conf-Gen Enhancer">
+  <mappingStructures name="CanNm">
+    <order orderId="CanNm_1" name="CanNm">
+      <order orderId="CanNm_2" name="CanNmGlobalConfig">
+        <order orderId="CanNm_3" name="CanNmChannelConfig"/>
+      </order>
+    </order>
+  </mappingStructures>
+  <mappings mappingId="Mapping_CanNm_1" mappingType="PRIMITIVE_ATTRIBUTE" defaultValue="true">
+    <targetItem identifier="CanNmDevErrorDetect"/>
+    <orderDetails orderId="CanNm_2" order="1"/>
+  </mappings>
+  <mappings mappingId="Mapping_CanNm_2" mappingType="PRIMITIVE_ATTRIBUTE" defaultValue="true">
+    <targetItem identifier="CanNmActiveWakeupBitEnabled"/>
+    <orderDetails orderId="CanNm_3" order="1"/>
+  </mappings>
+</MappingMetaModel>

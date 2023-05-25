@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uh:UserHookRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:uh="http://etas.userhook.com/ecore">
+  <userhooks name="After_BSW_Gen" category="POST_HOOK" subcategory="RTA-BSW">
+    <type xsi:type="uh:UserHookExecutableAction" executablepath="{PROJECT_LOC}\ecu_config\cobra\Cobra_Flow_rev214\Cobra_After_BSWGen.exe" additionalcommands=""/>
+  </userhooks>
+</uh:UserHookRoot>

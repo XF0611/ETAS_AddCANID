@@ -1,0 +1,531 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00047.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE>
+      <SHORT-NAME>ServiceLayer</SHORT-NAME>
+      <ELEMENTS>
+        <APPLICATION-SW-COMPONENT-TYPE>
+          <SHORT-NAME>ExeMgrUT</SHORT-NAME>
+          <ADMIN-DATA>
+            <SDGS>
+              <SDG GID="Master">
+                <SD>true</SD>
+              </SDG>
+            </SDGS>
+          </ADMIN-DATA>
+          <PORTS>
+            <R-PORT-PROTOTYPE UUID="5642594c-6695-4b60-8055-0334e942da98">
+              <SHORT-NAME>RP_EcuM_SelectResetTarget</SHORT-NAME>
+              <REQUIRED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/AUTOSAR_EcuM/PortInterfaces/EcuM_ShutdownTarget</REQUIRED-INTERFACE-TREF>
+            </R-PORT-PROTOTYPE>
+            <P-PORT-PROTOTYPE UUID="d6706919-7929-4ce9-a578-17b238514838">
+              <SHORT-NAME>PP_BswM_APPMode</SHORT-NAME>
+              <PROVIDED-INTERFACE-TREF DEST="MODE-SWITCH-INTERFACE">/Pkg_ModeSwitchInterface/MSI_APPMode</PROVIDED-INTERFACE-TREF>
+            </P-PORT-PROTOTYPE>
+            <P-PORT-PROTOTYPE UUID="b68fb3a7-98ad-4bae-b2e1-d3ee9c2d3b87">
+              <SHORT-NAME>PP_ResetInfo</SHORT-NAME>
+              <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/Pkg_ClientServerInterface/CSI_ExeMgr_ResetInfo</PROVIDED-INTERFACE-TREF>
+            </P-PORT-PROTOTYPE>
+            <P-PORT-PROTOTYPE UUID="7d54a466-5efa-4615-abd5-a797f1d3c05c">
+              <SHORT-NAME>PP_StartupSource</SHORT-NAME>
+              <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/Pkg_ClientServerInterface/CSI_ExeMgr_StartupSource</PROVIDED-INTERFACE-TREF>
+            </P-PORT-PROTOTYPE>
+            <P-PORT-PROTOTYPE UUID="5b92badc-cfcd-4b5c-ac66-19438e0376be">
+              <SHORT-NAME>PP_RequestReset</SHORT-NAME>
+              <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/Pkg_ClientServerInterface/CSI_ExeMgr_ResetInfo</PROVIDED-INTERFACE-TREF>
+            </P-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="6fe6d908-ccd8-4866-88c6-c688acd88a43">
+              <SHORT-NAME>RP_ValidateWakeup</SHORT-NAME>
+              <REQUIRED-INTERFACE-TREF DEST="TRIGGER-INTERFACE">/Pkg_TriggerInterface/TI_ExeMgr_ValidateWakeup</REQUIRED-INTERFACE-TREF>
+            </R-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="c31d3e60-95e3-4728-b84e-04a6c347dd51">
+              <SHORT-NAME>RP_ExecuteShutdown</SHORT-NAME>
+              <REQUIRED-INTERFACE-TREF DEST="TRIGGER-INTERFACE">/Pkg_TriggerInterface/TI_ExeMgr_ExecuteShutdown</REQUIRED-INTERFACE-TREF>
+            </R-PORT-PROTOTYPE>
+          </PORTS>
+          <INTERNAL-BEHAVIORS>
+            <SWC-INTERNAL-BEHAVIOR UUID="6131a7d7-2eb4-443c-af46-b440c9e69731">
+              <SHORT-NAME>IB_ExeMgrUT</SHORT-NAME>
+              <DATA-TYPE-MAPPING-REFS>
+                <DATA-TYPE-MAPPING-REF DEST="DATA-TYPE-MAPPING-SET">/AUTOSAR_Dcm/DataTypeMappingSets/DTS_DcmEcuReset</DATA-TYPE-MAPPING-REF>
+                <DATA-TYPE-MAPPING-REF DEST="DATA-TYPE-MAPPING-SET">/AUTOSAR_BswM/ModeDeclarationGroups/ECUM_STATE_Mapping</DATA-TYPE-MAPPING-REF>
+                <DATA-TYPE-MAPPING-REF DEST="DATA-TYPE-MAPPING-SET">/AUTOSAR_ComM/DataTypeMappingSets/ComMModeMapping</DATA-TYPE-MAPPING-REF>
+              </DATA-TYPE-MAPPING-REFS>
+              <EXCLUSIVE-AREAS>
+                <EXCLUSIVE-AREA>
+                  <SHORT-NAME>ExeMgr_TriggerBswBg_EXCLUSIVE_AREA</SHORT-NAME>
+                </EXCLUSIVE-AREA>
+              </EXCLUSIVE-AREAS>
+              <EVENTS>
+                <TIMING-EVENT UUID="25d39d83-d49f-420f-a52b-6cf7091b0f63">
+                  <SHORT-NAME>TE_ExeMgr_MainFunction</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ServiceLayer/ExeMgrUT/IB_ExeMgrUT/RE_ExeMgr_MainFunction</START-ON-EVENT-REF>
+                  <PERIOD>0.01</PERIOD>
+                </TIMING-EVENT>
+                <INIT-EVENT UUID="422a289f-31ec-4c8a-85f3-37ae682a907e">
+                  <SHORT-NAME>IE_ExeMgr_EvaluateWakeup</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ServiceLayer/ExeMgrUT/IB_ExeMgrUT/RE_ExeMgr_EvaluateWakeup</START-ON-EVENT-REF>
+                </INIT-EVENT>
+                <INIT-EVENT UUID="a0c29d4d-c7a6-4dee-af60-8eea4560f3db">
+                  <SHORT-NAME>IE_ExeMgr_EvaluateReset</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ServiceLayer/ExeMgrUT/IB_ExeMgrUT/RE_ExeMgr_EvaluateReset</START-ON-EVENT-REF>
+                </INIT-EVENT>
+                <OPERATION-INVOKED-EVENT UUID="97af1a22-8c21-4d3d-9ce1-659ae6ff311a">
+                  <SHORT-NAME>OIE_ExeMgr_ExecuteReset</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ServiceLayer/ExeMgrUT/IB_ExeMgrUT/RE_ExeMgr_ExecuteReset</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ServiceLayer/ExeMgrUT/PP_RequestReset</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Pkg_ClientServerInterface/CSI_ExeMgr_ResetInfo/RequestReset</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT UUID="d2483b28-cb57-4717-b8f2-589437989c51">
+                  <SHORT-NAME>OIE_ExeMgr_GetLastStartupSource</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ServiceLayer/ExeMgrUT/IB_ExeMgrUT/RE_ExeMgr_StartupSource</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ServiceLayer/ExeMgrUT/PP_StartupSource</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Pkg_ClientServerInterface/CSI_ExeMgr_StartupSource/GetLastStartupSource</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT UUID="5bda42e2-7147-4dc6-a5ed-dfed1ce535df">
+                  <SHORT-NAME>OIE_ExeMgr_GetLastResetInfo</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ServiceLayer/ExeMgrUT/IB_ExeMgrUT/RE_ExeMgr_ResetInfo</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ServiceLayer/ExeMgrUT/PP_ResetInfo</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Pkg_ClientServerInterface/CSI_ExeMgr_ResetInfo/GetLastResetInfo</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <TIMING-EVENT UUID="43f52ade-876d-4966-9c5a-542de715a897">
+                  <SHORT-NAME>TE_ExeMgr_TriggerBswBg</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ServiceLayer/ExeMgrUT/IB_ExeMgrUT/RE_ExeMgr_TriggerBswBg</START-ON-EVENT-REF>
+                  <PERIOD>0.001</PERIOD>
+                </TIMING-EVENT>
+                <INTERNAL-TRIGGER-OCCURRED-EVENT UUID="396b324e-41c8-48b9-ae30-a3180b51cf25">
+                  <SHORT-NAME>ITE_ExeMgr_GetWakeupSource</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ServiceLayer/ExeMgrUT/IB_ExeMgrUT/RE_ExeMgr_GetWakeupSource</START-ON-EVENT-REF>
+                  <EVENT-SOURCE-REF DEST="INTERNAL-TRIGGERING-POINT">/ServiceLayer/ExeMgrUT/IB_ExeMgrUT/RE_ExeMgr_GetWakeupSource/ITP_GetWakeupSource</EVENT-SOURCE-REF>
+                </INTERNAL-TRIGGER-OCCURRED-EVENT>
+                <EXTERNAL-TRIGGER-OCCURRED-EVENT UUID="9ad1a72a-6eb3-4412-9b21-b72e81df7945">
+                  <SHORT-NAME>ETE_ExeMgr_ExecuteShutdown</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ServiceLayer/ExeMgrUT/IB_ExeMgrUT/RE_ExeMgr_ExecuteShutdown</START-ON-EVENT-REF>
+                  <TRIGGER-IREF>
+                    <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ServiceLayer/ExeMgrUT/RP_ExecuteShutdown</CONTEXT-R-PORT-REF>
+                    <TARGET-TRIGGER-REF DEST="TRIGGER">/Pkg_TriggerInterface/TI_ExeMgr_ExecuteShutdown/ExecuteShutdown</TARGET-TRIGGER-REF>
+                  </TRIGGER-IREF>
+                </EXTERNAL-TRIGGER-OCCURRED-EVENT>
+              </EVENTS>
+              <IMPLICIT-INTER-RUNNABLE-VARIABLES>
+                <VARIABLE-DATA-PROTOTYPE UUID="e5b3320c-422a-49f3-a724-622c341dcef6">
+                  <SHORT-NAME>ExeMgr_StartupSource</SHORT-NAME>
+                  <SW-DATA-DEF-PROPS />
+                  <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/ImplementationDataTypes/ExeMgr_StartupSourceType</TYPE-TREF>
+                  <INIT-VALUE>
+                    <TEXT-VALUE-SPECIFICATION>
+                      <SHORT-LABEL>STARTUP_SOURCE_NONE</SHORT-LABEL>
+                      <VALUE>STARTUP_SOURCE_NONE</VALUE>
+                    </TEXT-VALUE-SPECIFICATION>
+                  </INIT-VALUE>
+                </VARIABLE-DATA-PROTOTYPE>
+              </IMPLICIT-INTER-RUNNABLE-VARIABLES>
+              <RUNNABLES>
+                <RUNNABLE-ENTITY UUID="e753a1ae-ccc4-4f00-93be-4840ac74bfef">
+                  <SHORT-NAME>RE_ExeMgr_MainFunction</SHORT-NAME>
+                  <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                  <MODE-ACCESS-POINTS>
+                    <MODE-ACCESS-POINT>
+                      <MODE-GROUP-IREF>
+                        <P-MODE-GROUP-IN-ATOMIC-SWC-INSTANCE-REF>
+                          <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ServiceLayer/ExeMgrUT/PP_BswM_APPMode</CONTEXT-P-PORT-REF>
+                          <TARGET-MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/Pkg_ModeSwitchInterface/MSI_APPMode/MDGP_APPMode</TARGET-MODE-GROUP-REF>
+                        </P-MODE-GROUP-IN-ATOMIC-SWC-INSTANCE-REF>
+                      </MODE-GROUP-IREF>
+                    </MODE-ACCESS-POINT>
+                  </MODE-ACCESS-POINTS>
+                  <MODE-SWITCH-POINTS>
+                    <MODE-SWITCH-POINT UUID="57d057e3-3b6a-48bd-bc04-9e1d606828cb">
+                      <SHORT-NAME>MSP_AppMode</SHORT-NAME>
+                      <MODE-GROUP-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ServiceLayer/ExeMgrUT/PP_BswM_APPMode</CONTEXT-P-PORT-REF>
+                        <TARGET-MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/Pkg_ModeSwitchInterface/MSI_APPMode/MDGP_APPMode</TARGET-MODE-GROUP-REF>
+                      </MODE-GROUP-IREF>
+                    </MODE-SWITCH-POINT>
+                  </MODE-SWITCH-POINTS>
+                  <SERVER-CALL-POINTS>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="a783fccd-0c72-4cd2-9d14-631f812290a7">
+                      <SHORT-NAME>SSCP_SelectShutdownTarget</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ServiceLayer/ExeMgrUT/RP_EcuM_SelectResetTarget</CONTEXT-R-PORT-REF>
+                        <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_EcuM/PortInterfaces/EcuM_ShutdownTarget/SelectShutdownTarget</TARGET-REQUIRED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="9bc19ade-02e6-47bc-9b8d-74c50ac00821">
+                      <SHORT-NAME>SSCP_SelectShutdownCause</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ServiceLayer/ExeMgrUT/RP_EcuM_SelectResetTarget</CONTEXT-R-PORT-REF>
+                        <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_EcuM/PortInterfaces/EcuM_ShutdownTarget/SelectShutdownCause</TARGET-REQUIRED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="f7b3626e-feb1-40e1-8763-a336e9c00f8d">
+                      <SHORT-NAME>SSCP_GetShutdownTarget</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ServiceLayer/ExeMgrUT/RP_EcuM_SelectResetTarget</CONTEXT-R-PORT-REF>
+                        <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_EcuM/PortInterfaces/EcuM_ShutdownTarget/GetShutdownTarget</TARGET-REQUIRED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                  </SERVER-CALL-POINTS>
+                  <SYMBOL>RE_ExeMgr_MainFunction</SYMBOL>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="efb4b1be-c705-4a8c-8339-91f2dc4851b2">
+                  <SHORT-NAME>RE_ExeMgr_GetWakeupSource</SHORT-NAME>
+                  <INTERNAL-TRIGGERING-POINTS>
+                    <INTERNAL-TRIGGERING-POINT UUID="68ffb0c2-9d91-4c2b-884a-2a86021a4959">
+                      <SHORT-NAME>ITP_GetWakeupSource</SHORT-NAME>
+                      <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                    </INTERNAL-TRIGGERING-POINT>
+                  </INTERNAL-TRIGGERING-POINTS>
+                  <SYMBOL>RE_ExeMgr_GetWakeupSource</SYMBOL>
+                  <WRITTEN-LOCAL-VARIABLES>
+                    <VARIABLE-ACCESS>
+                      <SHORT-NAME>WLV_StartupSource</SHORT-NAME>
+                      <ACCESSED-VARIABLE>
+                        <LOCAL-VARIABLE-REF DEST="VARIABLE-DATA-PROTOTYPE">/ServiceLayer/ExeMgrUT/IB_ExeMgrUT/ExeMgr_StartupSource</LOCAL-VARIABLE-REF>
+                      </ACCESSED-VARIABLE>
+                    </VARIABLE-ACCESS>
+                  </WRITTEN-LOCAL-VARIABLES>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="b48012a8-dab1-49f0-876a-fec7f85e4875">
+                  <SHORT-NAME>RE_ExeMgr_EvaluateWakeup</SHORT-NAME>
+                  <MODE-ACCESS-POINTS>
+                    <MODE-ACCESS-POINT>
+                      <MODE-GROUP-IREF>
+                        <P-MODE-GROUP-IN-ATOMIC-SWC-INSTANCE-REF>
+                          <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ServiceLayer/ExeMgrUT/PP_BswM_APPMode</CONTEXT-P-PORT-REF>
+                          <TARGET-MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/Pkg_ModeSwitchInterface/MSI_APPMode/MDGP_APPMode</TARGET-MODE-GROUP-REF>
+                        </P-MODE-GROUP-IN-ATOMIC-SWC-INSTANCE-REF>
+                      </MODE-GROUP-IREF>
+                    </MODE-ACCESS-POINT>
+                  </MODE-ACCESS-POINTS>
+                  <MODE-SWITCH-POINTS>
+                    <MODE-SWITCH-POINT UUID="803d139d-cef5-41e8-a823-e6e7c232359d">
+                      <SHORT-NAME>MSP_AppMode</SHORT-NAME>
+                      <MODE-GROUP-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ServiceLayer/ExeMgrUT/PP_BswM_APPMode</CONTEXT-P-PORT-REF>
+                        <TARGET-MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/Pkg_ModeSwitchInterface/MSI_APPMode/MDGP_APPMode</TARGET-MODE-GROUP-REF>
+                      </MODE-GROUP-IREF>
+                    </MODE-SWITCH-POINT>
+                  </MODE-SWITCH-POINTS>
+                  <READ-LOCAL-VARIABLES>
+                    <VARIABLE-ACCESS>
+                      <SHORT-NAME>RLV_StartupSource</SHORT-NAME>
+                      <ACCESSED-VARIABLE>
+                        <LOCAL-VARIABLE-REF DEST="VARIABLE-DATA-PROTOTYPE">/ServiceLayer/ExeMgrUT/IB_ExeMgrUT/ExeMgr_StartupSource</LOCAL-VARIABLE-REF>
+                      </ACCESSED-VARIABLE>
+                    </VARIABLE-ACCESS>
+                  </READ-LOCAL-VARIABLES>
+                  <SERVER-CALL-POINTS>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="f0823f6c-3981-4da0-8868-5380aa0bf8cf">
+                      <SHORT-NAME>SSCP_SelectShutdownTarget</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ServiceLayer/ExeMgrUT/RP_EcuM_SelectResetTarget</CONTEXT-R-PORT-REF>
+                        <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_EcuM/PortInterfaces/EcuM_ShutdownTarget/SelectShutdownTarget</TARGET-REQUIRED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="10fb2d08-20d6-4005-9773-70d2ae9ceaaf">
+                      <SHORT-NAME>SSCP_SelectShutdownCause</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ServiceLayer/ExeMgrUT/RP_EcuM_SelectResetTarget</CONTEXT-R-PORT-REF>
+                        <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_EcuM/PortInterfaces/EcuM_ShutdownTarget/SelectShutdownCause</TARGET-REQUIRED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                  </SERVER-CALL-POINTS>
+                  <SYMBOL>RE_ExeMgr_EvaluateWakeup</SYMBOL>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="1b501fbd-89b0-44bc-9a5a-e9ff74858adc">
+                  <SHORT-NAME>RE_ExeMgr_ValidateWakeup</SHORT-NAME>
+                  <INTERNAL-TRIGGERING-POINTS>
+                    <INTERNAL-TRIGGERING-POINT UUID="2d981558-159c-4646-a001-1bf10f9631ad">
+                      <SHORT-NAME>ITP_ValidateWakeupSource</SHORT-NAME>
+                      <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                    </INTERNAL-TRIGGERING-POINT>
+                  </INTERNAL-TRIGGERING-POINTS>
+                  <READ-LOCAL-VARIABLES>
+                    <VARIABLE-ACCESS>
+                      <SHORT-NAME>RLV_StartupSource</SHORT-NAME>
+                      <ACCESSED-VARIABLE>
+                        <LOCAL-VARIABLE-REF DEST="VARIABLE-DATA-PROTOTYPE">/ServiceLayer/ExeMgrUT/IB_ExeMgrUT/ExeMgr_StartupSource</LOCAL-VARIABLE-REF>
+                      </ACCESSED-VARIABLE>
+                    </VARIABLE-ACCESS>
+                  </READ-LOCAL-VARIABLES>
+                  <SYMBOL>RE_ExeMgr_ValidateWakeup</SYMBOL>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="79462e0d-a2b8-4d76-bf6c-b9afe2438623">
+                  <SHORT-NAME>RE_ExeMgr_ExecuteShutdown</SHORT-NAME>
+                  <SYMBOL>RE_ExeMgr_ExecuteShutdown</SYMBOL>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="6c945db5-b555-45ab-92b9-adbda5020773">
+                  <SHORT-NAME>RE_ExeMgr_ExecuteReset</SHORT-NAME>
+                  <MODE-SWITCH-POINTS>
+                    <MODE-SWITCH-POINT UUID="a2b13671-ddd0-44da-b6c9-aa21ad4831e5">
+                      <SHORT-NAME>ModeSwitchPoint_0</SHORT-NAME>
+                      <MODE-GROUP-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ServiceLayer/ExeMgrUT/PP_BswM_APPMode</CONTEXT-P-PORT-REF>
+                        <TARGET-MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/Pkg_ModeSwitchInterface/MSI_APPMode/MDGP_APPMode</TARGET-MODE-GROUP-REF>
+                      </MODE-GROUP-IREF>
+                    </MODE-SWITCH-POINT>
+                  </MODE-SWITCH-POINTS>
+                  <SERVER-CALL-POINTS>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="193aa91d-f228-4e41-b3be-019862c00c3e">
+                      <SHORT-NAME>SSCP_SelectShutdownTarget</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ServiceLayer/ExeMgrUT/RP_EcuM_SelectResetTarget</CONTEXT-R-PORT-REF>
+                        <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_EcuM/PortInterfaces/EcuM_ShutdownTarget/SelectShutdownTarget</TARGET-REQUIRED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="9859d904-772f-45f7-88cc-870096586683">
+                      <SHORT-NAME>SSCP_SelectShutdownCause</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ServiceLayer/ExeMgrUT/RP_EcuM_SelectResetTarget</CONTEXT-R-PORT-REF>
+                        <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_EcuM/PortInterfaces/EcuM_ShutdownTarget/SelectShutdownCause</TARGET-REQUIRED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                  </SERVER-CALL-POINTS>
+                  <SYMBOL>RE_ExeMgr_ExecuteReset</SYMBOL>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="c8a528f7-3dac-41ad-b9ee-4ed76cd4cf33">
+                  <SHORT-NAME>RE_ExeMgr_EvaluateReset</SHORT-NAME>
+                  <SERVER-CALL-POINTS>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="9d986653-5779-4f32-94c6-c0b8168588eb">
+                      <SHORT-NAME>SSCP_GetLastShutdownTarget</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ServiceLayer/ExeMgrUT/RP_EcuM_SelectResetTarget</CONTEXT-R-PORT-REF>
+                        <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_EcuM/PortInterfaces/EcuM_ShutdownTarget/GetLastShutdownTarget</TARGET-REQUIRED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                  </SERVER-CALL-POINTS>
+                  <SYMBOL>RE_ExeMgr_EvaluateReset</SYMBOL>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="39803e87-67a7-4a10-99b6-513dc5d21f17">
+                  <SHORT-NAME>RE_ExeMgr_ResetInfo</SHORT-NAME>
+                  <SERVER-CALL-POINTS>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="49ab97c3-215b-40b2-8fed-dd329afe158e">
+                      <SHORT-NAME>SSCP_GetLastShutdownTarger</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ServiceLayer/ExeMgrUT/RP_EcuM_SelectResetTarget</CONTEXT-R-PORT-REF>
+                        <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_EcuM/PortInterfaces/EcuM_ShutdownTarget/GetLastShutdownTarget</TARGET-REQUIRED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="091fe803-736e-4a96-85a8-5659d1698def">
+                      <SHORT-NAME>SSCP_GettShutdownCause</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ServiceLayer/ExeMgrUT/RP_EcuM_SelectResetTarget</CONTEXT-R-PORT-REF>
+                        <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_EcuM/PortInterfaces/EcuM_ShutdownTarget/GetShutdownCause</TARGET-REQUIRED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                  </SERVER-CALL-POINTS>
+                  <SYMBOL>RE_ExeMgr_ResetInfo</SYMBOL>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="6c5bd5a5-1870-4e0f-bd25-9e3d73870dde">
+                  <SHORT-NAME>RE_ExeMgr_StartupSource</SHORT-NAME>
+                  <READ-LOCAL-VARIABLES>
+                    <VARIABLE-ACCESS>
+                      <SHORT-NAME>RLV_StartupSource</SHORT-NAME>
+                      <ACCESSED-VARIABLE>
+                        <LOCAL-VARIABLE-REF DEST="VARIABLE-DATA-PROTOTYPE">/ServiceLayer/ExeMgrUT/IB_ExeMgrUT/ExeMgr_StartupSource</LOCAL-VARIABLE-REF>
+                      </ACCESSED-VARIABLE>
+                    </VARIABLE-ACCESS>
+                  </READ-LOCAL-VARIABLES>
+                  <SYMBOL>RE_ExeMgr_StartupSource</SYMBOL>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="bf777c3e-641f-4e8e-a95b-0018b5577bfc">
+                  <SHORT-NAME>RE_ExeMgr_TriggerBswBg</SHORT-NAME>
+                  <CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                    <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/ServiceLayer/ExeMgrUT/IB_ExeMgrUT/ExeMgr_TriggerBswBg_EXCLUSIVE_AREA</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                  </CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                  <REENTRANCY-LEVEL>SINGLE-CORE-REENTRANT</REENTRANCY-LEVEL>
+                  <RUNS-INSIDE-EXCLUSIVE-AREA-REFS>
+                    <RUNS-INSIDE-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/ServiceLayer/ExeMgrUT/IB_ExeMgrUT/ExeMgr_TriggerBswBg_EXCLUSIVE_AREA</RUNS-INSIDE-EXCLUSIVE-AREA-REF>
+                  </RUNS-INSIDE-EXCLUSIVE-AREA-REFS>
+                  <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                  <SYMBOL>RE_ExeMgr_TriggerBswBg</SYMBOL>
+                </RUNNABLE-ENTITY>
+              </RUNNABLES>
+            </SWC-INTERNAL-BEHAVIOR>
+          </INTERNAL-BEHAVIORS>
+        </APPLICATION-SW-COMPONENT-TYPE>
+      </ELEMENTS>
+    </AR-PACKAGE>
+    <AR-PACKAGE>
+      <SHORT-NAME>Pkg_ClientServerInterface</SHORT-NAME>
+      <ELEMENTS>
+        <CLIENT-SERVER-INTERFACE>
+          <SHORT-NAME>CSI_ExeMgr_ResetInfo</SHORT-NAME>
+          <IS-SERVICE>true</IS-SERVICE>
+          <OPERATIONS>
+            <CLIENT-SERVER-OPERATION>
+              <SHORT-NAME>GetLastResetInfo</SHORT-NAME>
+              <ARGUMENTS>
+                <ARGUMENT-DATA-PROTOTYPE>
+                  <SHORT-NAME>resetReason</SHORT-NAME>
+                  <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_EcuM/ImplementationDataTypes/EcuM_ShutdownCauseType</TYPE-TREF>
+                  <DIRECTION>OUT</DIRECTION>
+                  <SERVER-ARGUMENT-IMPL-POLICY>USE-ARGUMENT-TYPE</SERVER-ARGUMENT-IMPL-POLICY>
+                </ARGUMENT-DATA-PROTOTYPE>
+                <ARGUMENT-DATA-PROTOTYPE>
+                  <SHORT-NAME>resetGroup</SHORT-NAME>
+                  <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_EcuM/ImplementationDataTypes/EcuM_ShutdownModeType</TYPE-TREF>
+                  <DIRECTION>OUT</DIRECTION>
+                  <SERVER-ARGUMENT-IMPL-POLICY>USE-ARGUMENT-TYPE</SERVER-ARGUMENT-IMPL-POLICY>
+                </ARGUMENT-DATA-PROTOTYPE>
+              </ARGUMENTS>
+            </CLIENT-SERVER-OPERATION>
+            <CLIENT-SERVER-OPERATION>
+              <SHORT-NAME>RequestReset</SHORT-NAME>
+              <ARGUMENTS>
+                <ARGUMENT-DATA-PROTOTYPE>
+                  <SHORT-NAME>resetReason</SHORT-NAME>
+                  <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_EcuM/ImplementationDataTypes/EcuM_ShutdownCauseType</TYPE-TREF>
+                  <DIRECTION>IN</DIRECTION>
+                  <SERVER-ARGUMENT-IMPL-POLICY>USE-ARGUMENT-TYPE</SERVER-ARGUMENT-IMPL-POLICY>
+                </ARGUMENT-DATA-PROTOTYPE>
+                <ARGUMENT-DATA-PROTOTYPE>
+                  <SHORT-NAME>resetGroup</SHORT-NAME>
+                  <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_EcuM/ImplementationDataTypes/EcuM_ShutdownModeType</TYPE-TREF>
+                  <DIRECTION>IN</DIRECTION>
+                  <SERVER-ARGUMENT-IMPL-POLICY>USE-ARGUMENT-TYPE</SERVER-ARGUMENT-IMPL-POLICY>
+                </ARGUMENT-DATA-PROTOTYPE>
+              </ARGUMENTS>
+            </CLIENT-SERVER-OPERATION>
+          </OPERATIONS>
+        </CLIENT-SERVER-INTERFACE>
+        <CLIENT-SERVER-INTERFACE>
+          <SHORT-NAME>CSI_ExeMgr_StartupSource</SHORT-NAME>
+          <IS-SERVICE>true</IS-SERVICE>
+          <OPERATIONS>
+            <CLIENT-SERVER-OPERATION>
+              <SHORT-NAME>GetLastStartupSource</SHORT-NAME>
+              <ARGUMENTS>
+                <ARGUMENT-DATA-PROTOTYPE>
+                  <SHORT-NAME>startupSource</SHORT-NAME>
+                  <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/ImplementationDataTypes/ExeMgr_StartupSourceType</TYPE-TREF>
+                  <DIRECTION>OUT</DIRECTION>
+                  <SERVER-ARGUMENT-IMPL-POLICY>USE-ARGUMENT-TYPE</SERVER-ARGUMENT-IMPL-POLICY>
+                </ARGUMENT-DATA-PROTOTYPE>
+              </ARGUMENTS>
+            </CLIENT-SERVER-OPERATION>
+          </OPERATIONS>
+        </CLIENT-SERVER-INTERFACE>
+      </ELEMENTS>
+    </AR-PACKAGE>
+    <AR-PACKAGE>
+      <SHORT-NAME>ImplementationDataTypes</SHORT-NAME>
+      <ELEMENTS>
+        <IMPLEMENTATION-DATA-TYPE>
+          <SHORT-NAME>ExeMgr_StartupSourceType</SHORT-NAME>
+          <CATEGORY>TYPE_REFERENCE</CATEGORY>
+          <SW-DATA-DEF-PROPS>
+            <SW-DATA-DEF-PROPS-VARIANTS>
+              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                <COMPU-METHOD-REF DEST="COMPU-METHOD">/CompuMethods/ExeMgr_StartupSourceType</COMPU-METHOD-REF>
+                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+              </SW-DATA-DEF-PROPS-CONDITIONAL>
+            </SW-DATA-DEF-PROPS-VARIANTS>
+          </SW-DATA-DEF-PROPS>
+          <TYPE-EMITTER>RTE</TYPE-EMITTER>
+        </IMPLEMENTATION-DATA-TYPE>
+      </ELEMENTS>
+    </AR-PACKAGE>
+    <AR-PACKAGE>
+      <SHORT-NAME>CompuMethods</SHORT-NAME>
+      <ELEMENTS>
+        <COMPU-METHOD>
+          <SHORT-NAME>ExeMgr_StartupSourceType</SHORT-NAME>
+          <CATEGORY>TEXTTABLE</CATEGORY>
+          <COMPU-INTERNAL-TO-PHYS>
+            <COMPU-SCALES>
+              <COMPU-SCALE>
+                <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                <COMPU-CONST>
+                  <VT>STARTUP_SOURCE_NONE</VT>
+                </COMPU-CONST>
+              </COMPU-SCALE>
+              <COMPU-SCALE>
+                <LOWER-LIMIT INTERVAL-TYPE="CLOSED">1</LOWER-LIMIT>
+                <UPPER-LIMIT INTERVAL-TYPE="CLOSED">1</UPPER-LIMIT>
+                <COMPU-CONST>
+                  <VT>STARTUP_SOURCE_KL15</VT>
+                </COMPU-CONST>
+              </COMPU-SCALE>
+              <COMPU-SCALE>
+                <LOWER-LIMIT INTERVAL-TYPE="CLOSED">2</LOWER-LIMIT>
+                <UPPER-LIMIT INTERVAL-TYPE="CLOSED">2</UPPER-LIMIT>
+                <COMPU-CONST>
+                  <VT>STARTUP_SOURCE_SWITCH</VT>
+                </COMPU-CONST>
+              </COMPU-SCALE>
+              <COMPU-SCALE>
+                <LOWER-LIMIT INTERVAL-TYPE="CLOSED">4</LOWER-LIMIT>
+                <UPPER-LIMIT INTERVAL-TYPE="CLOSED">4</UPPER-LIMIT>
+                <COMPU-CONST>
+                  <VT>STARTUP_SOURCE_SLOWCHARGESWITCH</VT>
+                </COMPU-CONST>
+              </COMPU-SCALE>
+              <COMPU-SCALE>
+                <LOWER-LIMIT INTERVAL-TYPE="CLOSED">8</LOWER-LIMIT>
+                <UPPER-LIMIT INTERVAL-TYPE="CLOSED">8</UPPER-LIMIT>
+                <COMPU-CONST>
+                  <VT>STARTUP_SOURCE_SLOWCHARGECP</VT>
+                </COMPU-CONST>
+              </COMPU-SCALE>
+              <COMPU-SCALE>
+                <LOWER-LIMIT INTERVAL-TYPE="CLOSED">16</LOWER-LIMIT>
+                <UPPER-LIMIT INTERVAL-TYPE="CLOSED">16</UPPER-LIMIT>
+                <COMPU-CONST>
+                  <VT>STARTUP_SOURCE_REQ4</VT>
+                </COMPU-CONST>
+              </COMPU-SCALE>
+              <COMPU-SCALE>
+                <LOWER-LIMIT INTERVAL-TYPE="CLOSED">32</LOWER-LIMIT>
+                <UPPER-LIMIT INTERVAL-TYPE="CLOSED">32</UPPER-LIMIT>
+                <COMPU-CONST>
+                  <VT>STARTUP_SOURCE_APLUS</VT>
+                </COMPU-CONST>
+              </COMPU-SCALE>
+              <COMPU-SCALE>
+                <LOWER-LIMIT INTERVAL-TYPE="CLOSED">64</LOWER-LIMIT>
+                <UPPER-LIMIT INTERVAL-TYPE="CLOSED">64</UPPER-LIMIT>
+                <COMPU-CONST>
+                  <VT>STARTUP_SOURCE_CCWAKE</VT>
+                </COMPU-CONST>
+              </COMPU-SCALE>
+            </COMPU-SCALES>
+          </COMPU-INTERNAL-TO-PHYS>
+        </COMPU-METHOD>
+      </ELEMENTS>
+    </AR-PACKAGE>
+    <AR-PACKAGE>
+      <SHORT-NAME>Pkg_TriggerInterface</SHORT-NAME>
+      <ELEMENTS>
+        <TRIGGER-INTERFACE>
+          <SHORT-NAME>TI_ExeMgr_ValidateWakeup</SHORT-NAME>
+          <IS-SERVICE>true</IS-SERVICE>
+          <TRIGGERS>
+            <TRIGGER>
+              <SHORT-NAME>ValidateWakeup</SHORT-NAME>
+              <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+            </TRIGGER>
+          </TRIGGERS>
+        </TRIGGER-INTERFACE>
+        <TRIGGER-INTERFACE>
+          <SHORT-NAME>TI_ExeMgr_ExecuteShutdown</SHORT-NAME>
+          <IS-SERVICE>true</IS-SERVICE>
+          <TRIGGERS>
+            <TRIGGER>
+              <SHORT-NAME>ExecuteShutdown</SHORT-NAME>
+              <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+            </TRIGGER>
+          </TRIGGERS>
+        </TRIGGER-INTERFACE>
+      </ELEMENTS>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

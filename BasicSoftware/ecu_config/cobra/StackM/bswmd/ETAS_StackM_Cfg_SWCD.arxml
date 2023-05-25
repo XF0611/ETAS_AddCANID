@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-2-2.xsd">
+  <!-- AUTOSAR SERVICES PACKAGE -->
+  <AR-PACKAGES>
+    <AR-PACKAGE>
+      <SHORT-NAME>ETAS_BIP_STACKM</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE>
+          <SHORT-NAME>SwComponentTypes</SHORT-NAME>
+          <ELEMENTS>
+            <COMPLEX-DEVICE-DRIVER-SW-COMPONENT-TYPE>
+              <SHORT-NAME>StackM</SHORT-NAME>
+              <PORTS>
+                <P-PORT-PROTOTYPE>
+                  <SHORT-NAME>GetStackInfo</SHORT-NAME>
+                  <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/ETAS_BIP/PortInterfaces/StackMService</PROVIDED-INTERFACE-TREF>
+                </P-PORT-PROTOTYPE>
+              </PORTS>
+              <INTERNAL-BEHAVIORS>
+                <SWC-INTERNAL-BEHAVIOR>
+                  <SHORT-NAME>IntBeh_StackM</SHORT-NAME>
+                  <EVENTS>
+                    <OPERATION-INVOKED-EVENT>
+                      <SHORT-NAME>OIE_GetStackInfo</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ETAS_BIP_STACKM/SwComponentTypes/StackM/IntBeh_StackM/StackM_GetStackInfo</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ETAS_BIP_STACKM/SwComponentTypes/StackM/GetStackInfo</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/ETAS_BIP/PortInterfaces/StackMService/GetStackInfo</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                  </EVENTS>
+                  <RUNNABLES>
+                    <RUNNABLE-ENTITY>
+                      <SHORT-NAME>StackM_ScanAllStacks</SHORT-NAME>
+                      <CAN-BE-INVOKED-CONCURRENTLY>false</CAN-BE-INVOKED-CONCURRENTLY>
+                      <SYMBOL>StackM_ScanAllStacks</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY>
+                      <SHORT-NAME>StackM_GetStackInfo</SHORT-NAME>
+                      <CAN-BE-INVOKED-CONCURRENTLY>false</CAN-BE-INVOKED-CONCURRENTLY>
+                      <SYMBOL>StackM_GetStackInfo</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                  </RUNNABLES>
+                  <SUPPORTS-MULTIPLE-INSTANTIATION>false</SUPPORTS-MULTIPLE-INSTANTIATION>
+                </SWC-INTERNAL-BEHAVIOR>
+              </INTERNAL-BEHAVIORS>
+            </COMPLEX-DEVICE-DRIVER-SW-COMPONENT-TYPE>
+          </ELEMENTS>
+        </AR-PACKAGE>
+        <AR-PACKAGE>
+          <SHORT-NAME>SwcImplementations</SHORT-NAME>
+          <ELEMENTS>
+            <SWC-IMPLEMENTATION>
+              <SHORT-NAME>Impl_StackM</SHORT-NAME>
+              <CODE-DESCRIPTORS>
+                <CODE>
+                  <SHORT-NAME>CodeDescr_Rtm</SHORT-NAME>
+                  <ARTIFACT-DESCRIPTORS>
+                    <AUTOSAR-ENGINEERING-OBJECT>
+                      <SHORT-LABEL>Code_0</SHORT-LABEL>
+                      <CATEGORY>SWSRC</CATEGORY>
+                    </AUTOSAR-ENGINEERING-OBJECT>
+                  </ARTIFACT-DESCRIPTORS>
+                </CODE>
+              </CODE-DESCRIPTORS>
+              <PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+              <SW-VERSION>2.0.0</SW-VERSION>
+              <SWC-BSW-MAPPING-REF DEST="SWC-BSW-MAPPING">/ETAS_BIP_STACKM/SwcBswMappings/SwcBswMapping</SWC-BSW-MAPPING-REF>
+              <VENDOR-ID>11</VENDOR-ID>
+              <BEHAVIOR-REF DEST="SWC-INTERNAL-BEHAVIOR">/ETAS_BIP_STACKM/SwComponentTypes/StackM/IntBeh_StackM</BEHAVIOR-REF>
+            </SWC-IMPLEMENTATION>
+          </ELEMENTS>
+        </AR-PACKAGE>
+        <AR-PACKAGE>
+          <SHORT-NAME>SwcBswMappings</SHORT-NAME>
+          <ELEMENTS>
+            <SWC-BSW-MAPPING>
+              <SHORT-NAME>SwcBswMapping</SHORT-NAME>
+              <BSW-BEHAVIOR-REF DEST="BSW-INTERNAL-BEHAVIOR">/ETAS_BIP/BswModuleDescriptions/StackM/BswInternalBehavior</BSW-BEHAVIOR-REF>
+              <RUNNABLE-MAPPINGS>
+                <SWC-BSW-RUNNABLE-MAPPING>
+                  <BSW-ENTITY-REF DEST="BSW-SCHEDULABLE-ENTITY">/ETAS_BIP/BswModuleDescriptions/StackM/BswInternalBehavior/StackM_ScanAllStacks</BSW-ENTITY-REF>
+                  <SWC-RUNNABLE-REF DEST="RUNNABLE-ENTITY">/ETAS_BIP_STACKM/SwComponentTypes/StackM/IntBeh_StackM/StackM_ScanAllStacks</SWC-RUNNABLE-REF>
+                </SWC-BSW-RUNNABLE-MAPPING>
+                <SWC-BSW-RUNNABLE-MAPPING>
+                  <BSW-ENTITY-REF DEST="BSW-CALLED-ENTITY">/ETAS_BIP/BswModuleDescriptions/StackM/BswInternalBehavior/StackM_GetStackInfo</BSW-ENTITY-REF>
+                  <SWC-RUNNABLE-REF DEST="RUNNABLE-ENTITY">/ETAS_BIP_STACKM/SwComponentTypes/StackM/IntBeh_StackM/StackM_GetStackInfo</SWC-RUNNABLE-REF>
+                </SWC-BSW-RUNNABLE-MAPPING>
+              </RUNNABLE-MAPPINGS>
+              <SWC-BEHAVIOR-REF DEST="SWC-INTERNAL-BEHAVIOR">/ETAS_BIP_STACKM/SwComponentTypes/StackM/IntBeh_StackM</SWC-BEHAVIOR-REF>
+            </SWC-BSW-MAPPING>
+          </ELEMENTS>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>
+

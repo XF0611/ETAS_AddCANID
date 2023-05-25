@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="ASCII"?>
+<MappingMetaModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns="http://www.bosch.com/autosartool/m2m/model" transformationName="Conf-Gen Enhancer">
+  <mappingStructures name="Com">
+    <order orderId="Com_1" name="Com">
+      <order orderId="Com_2" name="ComConfig">
+        <order orderId="Com_3" name="ComSignal"/>
+      </order>
+    </order>
+  </mappingStructures>
+  <mappings mappingId="Mapping_Com_1" mappingType="PRIMITIVE_ATTRIBUTE" defaultValue="-1" condition="ref($this.ComUpdateBitPosition)&lt;-1">
+    <targetItem identifier="ComUpdateBitPosition"/>
+    <orderDetails orderId="Com_3" order="1"/>
+  </mappings>
+  <mappings mappingId="Mapping_Com_2" mappingType="PRIMITIVE_ATTRIBUTE" condition="ref($this.ShortName).contains('NM_Tx')">
+    <targetItem identifier="ComBitPosition" expression="ref($this.ComBitPosition)+16"/>
+    <orderDetails orderId="Com_3" order="2"/>
+  </mappings>
+</MappingMetaModel>

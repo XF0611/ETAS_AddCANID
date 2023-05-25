@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--This file was create with a tool from NIO-Ep-EAC-->
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-2-2.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE>
+      <SHORT-NAME>ETAS_BIP</SHORT-NAME>
+      <ELEMENTS>
+        <APPLICATION-SW-COMPONENT-TYPE>
+          <SHORT-NAME>NvMUT</SHORT-NAME>
+          <ADMIN-DATA>
+            <SDGS>
+              <SDG GID="Master">
+                <SD>true</SD>
+              </SDG>
+            </SDGS>
+          </ADMIN-DATA>
+          <PORTS>
+            <PR-PORT-PROTOTYPE UUID="68991d40-cbcf-45c3-bf40-fd502e3cacef">
+              <SHORT-NAME>PRP_CyclicNvBlock</SHORT-NAME>
+              <PROVIDED-REQUIRED-INTERFACE-TREF DEST="NV-DATA-INTERFACE">/PortInterfaces/SRI_CyclicNvBlock_ArrayU8_1024</PROVIDED-REQUIRED-INTERFACE-TREF>
+            </PR-PORT-PROTOTYPE>
+            <PR-PORT-PROTOTYPE UUID="1422337f-a5bb-4eae-b742-a2dfddebdd57">
+              <SHORT-NAME>PRP_ShutdownNvBlock</SHORT-NAME>
+              <PROVIDED-REQUIRED-INTERFACE-TREF DEST="NV-DATA-INTERFACE">/PortInterfaces/SRI_ShutDownNvBlock_ArrayBoolean_96</PROVIDED-REQUIRED-INTERFACE-TREF>
+            </PR-PORT-PROTOTYPE>
+            <P-PORT-PROTOTYPE UUID="8ececb04-4b27-46f8-af19-50837727cf74">
+              <SHORT-NAME>PP_CyclicBlock_JobFinished</SHORT-NAME>
+              <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/AUTOSAR_NvBlockSwComponentType/PortInterfaces/NvMNotifyJobFinished</PROVIDED-INTERFACE-TREF>
+            </P-PORT-PROTOTYPE>
+            <P-PORT-PROTOTYPE UUID="de9e56fb-75c3-4ba4-b4c6-899308a6aeca">
+              <SHORT-NAME>PP_ImmediateBlock_JobFinished</SHORT-NAME>
+              <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/AUTOSAR_NvBlockSwComponentType/PortInterfaces/NvMNotifyJobFinished</PROVIDED-INTERFACE-TREF>
+            </P-PORT-PROTOTYPE>
+            <P-PORT-PROTOTYPE UUID="d2c3cf62-1f01-463a-827e-0a9b9ca0d78e">
+              <SHORT-NAME>PP_ShutdownBlock_JobFinished</SHORT-NAME>
+              <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/AUTOSAR_NvBlockSwComponentType/PortInterfaces/NvMNotifyJobFinished</PROVIDED-INTERFACE-TREF>
+            </P-PORT-PROTOTYPE>
+            <PR-PORT-PROTOTYPE UUID="81918116-b750-43d3-9a23-da4ae3f6b6ad">
+              <SHORT-NAME>PRP_ImmediateNvBlock</SHORT-NAME>
+              <PROVIDED-REQUIRED-INTERFACE-TREF DEST="NV-DATA-INTERFACE">/PortInterfaces/SRI_ImmediateNvBlock_ArrayU32_96</PROVIDED-REQUIRED-INTERFACE-TREF>
+            </PR-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="dc028e79-5688-45a3-9bdb-7e02ed08d307">
+              <SHORT-NAME>RP_RequestReset</SHORT-NAME>
+              <REQUIRED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/Pkg_ClientServerInterface/CSI_ExeMgr_ResetInfo</REQUIRED-INTERFACE-TREF>
+            </R-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="9b8601b3-9670-41ae-99ef-81a210798460">
+              <SHORT-NAME>RP_ResetInfo</SHORT-NAME>
+              <REQUIRED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/Pkg_ClientServerInterface/CSI_ExeMgr_ResetInfo</REQUIRED-INTERFACE-TREF>
+            </R-PORT-PROTOTYPE>
+            <PR-PORT-PROTOTYPE UUID="51517437-8175-4c2f-8984-f69b5d857a3b">
+              <SHORT-NAME>PRP_Fast_ImmediateNvBlock</SHORT-NAME>
+              <PROVIDED-REQUIRED-INTERFACE-TREF DEST="NV-DATA-INTERFACE">/PortInterfaces/SRI_ImmediateNvBlock_ArrayU32_96</PROVIDED-REQUIRED-INTERFACE-TREF>
+            </PR-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="cfc38238-e257-4dc7-bd1a-bdb155f8b80d">
+              <SHORT-NAME>RP_Startup_Source</SHORT-NAME>
+              <REQUIRED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/Pkg_ClientServerInterface/CSI_ExeMgr_StartupSource</REQUIRED-INTERFACE-TREF>
+            </R-PORT-PROTOTYPE>
+          </PORTS>
+          <INTERNAL-BEHAVIORS>
+            <SWC-INTERNAL-BEHAVIOR>
+              <SHORT-NAME>IB_NvMUT</SHORT-NAME>
+              <DATA-TYPE-MAPPING-REFS>
+                <DATA-TYPE-MAPPING-REF DEST="DATA-TYPE-MAPPING-SET">/DataTypeMappingSets/DTMS_NvBlockDirtyFlag</DATA-TYPE-MAPPING-REF>
+              </DATA-TYPE-MAPPING-REFS>
+              <EVENTS>
+                <TIMING-EVENT>
+                  <SHORT-NAME>TE_NvMUT_100ms</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ETAS_BIP/NvMUT/IB_NvMUT/RE_NvMUT_100ms</START-ON-EVENT-REF>
+                  <PERIOD>0.1</PERIOD>
+                </TIMING-EVENT>
+                <OPERATION-INVOKED-EVENT UUID="e1ff8284-8947-454c-a726-39a13af24b6b">
+                  <SHORT-NAME>OIE_ImmediateBlock_JobFinished</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ETAS_BIP/NvMUT/IB_NvMUT/RE_ImmdiateBlock_JobFinished</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ETAS_BIP/NvMUT/PP_ImmediateBlock_JobFinished</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_NvBlockSwComponentType/PortInterfaces/NvMNotifyJobFinished/JobFinished</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT UUID="789d40b8-23fa-48c9-b06d-0f824bf1e587">
+                  <SHORT-NAME>OIE_ShutdownBlock_JobFinished</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ETAS_BIP/NvMUT/IB_NvMUT/RE_ShutdownBlock_JobFinished</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ETAS_BIP/NvMUT/PP_ShutdownBlock_JobFinished</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_NvBlockSwComponentType/PortInterfaces/NvMNotifyJobFinished/JobFinished</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT UUID="2bc9eae6-1a93-4772-9d77-0299441ec954">
+                  <SHORT-NAME>OIE_CyclicBlock_JobFinished</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ETAS_BIP/NvMUT/IB_NvMUT/RE_CyclicBlock_JobFinished</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ETAS_BIP/NvMUT/PP_CyclicBlock_JobFinished</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_NvBlockSwComponentType/PortInterfaces/NvMNotifyJobFinished/JobFinished</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <TIMING-EVENT UUID="be385865-2cd1-44e4-90db-e9813f91262b">
+                  <SHORT-NAME>TE_NvFW_10ms</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ETAS_BIP/NvMUT/IB_NvMUT/RE_NvMUT_FastWrite_10ms</START-ON-EVENT-REF>
+                  <PERIOD>0.01</PERIOD>
+                </TIMING-EVENT>
+              </EVENTS>
+              <RUNNABLES>
+                <RUNNABLE-ENTITY>
+                  <SHORT-NAME>RE_NvMUT_100ms</SHORT-NAME>
+                  <DATA-RECEIVE-POINT-BY-ARGUMENTS>
+                    <VARIABLE-ACCESS UUID="8f0d2b61-f1bf-471a-89f3-18dd13781e15">
+                      <SHORT-NAME>DRPA_CyclicNvBlock_0</SHORT-NAME>
+                      <ACCESSED-VARIABLE>
+                        <AUTOSAR-VARIABLE-IREF>
+                          <PORT-PROTOTYPE-REF DEST="PR-PORT-PROTOTYPE">/ETAS_BIP/NvMUT/PRP_CyclicNvBlock</PORT-PROTOTYPE-REF>
+                          <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/SRI_CyclicNvBlock_ArrayU8_1024/CyclicNvBlock</TARGET-DATA-PROTOTYPE-REF>
+                        </AUTOSAR-VARIABLE-IREF>
+                      </ACCESSED-VARIABLE>
+                    </VARIABLE-ACCESS>
+                    <VARIABLE-ACCESS UUID="52dcd787-f7ef-4b37-913d-5bebcafd4a5e">
+                      <SHORT-NAME>DRPA_ShutDownNvBlock_0</SHORT-NAME>
+                      <ACCESSED-VARIABLE>
+                        <AUTOSAR-VARIABLE-IREF>
+                          <PORT-PROTOTYPE-REF DEST="PR-PORT-PROTOTYPE">/ETAS_BIP/NvMUT/PRP_ShutdownNvBlock</PORT-PROTOTYPE-REF>
+                          <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/SRI_ShutDownNvBlock_ArrayBoolean_96/ShutDownNvBlock</TARGET-DATA-PROTOTYPE-REF>
+                        </AUTOSAR-VARIABLE-IREF>
+                      </ACCESSED-VARIABLE>
+                    </VARIABLE-ACCESS>
+                    <VARIABLE-ACCESS UUID="73093893-aaeb-4da2-b9a7-f622b1f0c3ac">
+                      <SHORT-NAME>DRPA_ImmediateNvBlock_0</SHORT-NAME>
+                      <ACCESSED-VARIABLE>
+                        <AUTOSAR-VARIABLE-IREF>
+                          <PORT-PROTOTYPE-REF DEST="PR-PORT-PROTOTYPE">/ETAS_BIP/NvMUT/PRP_ImmediateNvBlock</PORT-PROTOTYPE-REF>
+                          <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/SRI_ImmediateNvBlock_ArrayU32_96/ImmediateNvBlock</TARGET-DATA-PROTOTYPE-REF>
+                        </AUTOSAR-VARIABLE-IREF>
+                      </ACCESSED-VARIABLE>
+                    </VARIABLE-ACCESS>
+                  </DATA-RECEIVE-POINT-BY-ARGUMENTS>
+                  <DATA-SEND-POINTS>
+                    <VARIABLE-ACCESS UUID="36242e16-6006-43b9-8f95-68a0df42e08b">
+                      <SHORT-NAME>DSP_ShutDownNvBlock_0</SHORT-NAME>
+                      <ACCESSED-VARIABLE>
+                        <AUTOSAR-VARIABLE-IREF>
+                          <PORT-PROTOTYPE-REF DEST="PR-PORT-PROTOTYPE">/ETAS_BIP/NvMUT/PRP_ShutdownNvBlock</PORT-PROTOTYPE-REF>
+                          <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/SRI_ShutDownNvBlock_ArrayBoolean_96/ShutDownNvBlock</TARGET-DATA-PROTOTYPE-REF>
+                        </AUTOSAR-VARIABLE-IREF>
+                      </ACCESSED-VARIABLE>
+                    </VARIABLE-ACCESS>
+                    <VARIABLE-ACCESS UUID="c9e72b99-45f4-4244-acf0-cf42a7d751e8">
+                      <SHORT-NAME>DSP_CyclicNvBlock_0</SHORT-NAME>
+                      <ACCESSED-VARIABLE>
+                        <AUTOSAR-VARIABLE-IREF>
+                          <PORT-PROTOTYPE-REF DEST="PR-PORT-PROTOTYPE">/ETAS_BIP/NvMUT/PRP_CyclicNvBlock</PORT-PROTOTYPE-REF>
+                          <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/SRI_CyclicNvBlock_ArrayU8_1024/CyclicNvBlock</TARGET-DATA-PROTOTYPE-REF>
+                        </AUTOSAR-VARIABLE-IREF>
+                      </ACCESSED-VARIABLE>
+                    </VARIABLE-ACCESS>
+                    <VARIABLE-ACCESS UUID="941a9c2f-d515-4e3a-b587-5884ff1be5fe">
+                      <SHORT-NAME>DSP_ImmediateNvBlock_0</SHORT-NAME>
+                      <ACCESSED-VARIABLE>
+                        <AUTOSAR-VARIABLE-IREF>
+                          <PORT-PROTOTYPE-REF DEST="PR-PORT-PROTOTYPE">/ETAS_BIP/NvMUT/PRP_ImmediateNvBlock</PORT-PROTOTYPE-REF>
+                          <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/SRI_ImmediateNvBlock_ArrayU32_96/ImmediateNvBlock</TARGET-DATA-PROTOTYPE-REF>
+                        </AUTOSAR-VARIABLE-IREF>
+                      </ACCESSED-VARIABLE>
+                    </VARIABLE-ACCESS>
+                  </DATA-SEND-POINTS>
+                  <SERVER-CALL-POINTS>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="f84590c3-60e7-466e-9d70-4228e10dc980">
+                      <SHORT-NAME>SynchronousServerCallPoint_0</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ETAS_BIP/NvMUT/RP_RequestReset</CONTEXT-R-PORT-REF>
+                        <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Pkg_ClientServerInterface/CSI_ExeMgr_ResetInfo/RequestReset</TARGET-REQUIRED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="8f1a59ee-1347-4b59-a334-575fa55f98f6">
+                      <SHORT-NAME>SynchronousServerCallPoint_1</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ETAS_BIP/NvMUT/RP_ResetInfo</CONTEXT-R-PORT-REF>
+                        <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Pkg_ClientServerInterface/CSI_ExeMgr_ResetInfo/GetLastResetInfo</TARGET-REQUIRED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="7cea7d39-a6b2-4fb3-8062-9e14932cc49e">
+                      <SHORT-NAME>SynchronousServerCallPoint</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ETAS_BIP/NvMUT/RP_Startup_Source</CONTEXT-R-PORT-REF>
+                        <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Pkg_ClientServerInterface/CSI_ExeMgr_StartupSource/GetLastStartupSource</TARGET-REQUIRED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                  </SERVER-CALL-POINTS>
+                  <SYMBOL>RE_NvMUT_100ms</SYMBOL>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="3e1d2864-0abe-4463-bce5-0f0f8f37093d">
+                  <SHORT-NAME>RE_CyclicBlock_JobFinished</SHORT-NAME>
+                  <SYMBOL>RE_CyclicBlock_JobFinished</SYMBOL>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="f6bb9334-3df0-401a-94e8-0c2099783b73">
+                  <SHORT-NAME>RE_ImmdiateBlock_JobFinished</SHORT-NAME>
+                  <SYMBOL>RE_ImmdiateBlock_JobFinished</SYMBOL>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="e9fc9319-4dd4-48b2-9acc-75f5b45d574b">
+                  <SHORT-NAME>RE_ShutdownBlock_JobFinished</SHORT-NAME>
+                  <SYMBOL>RE_ShutdownBlock_JobFinished</SYMBOL>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="81efe1a8-cb28-43a3-bedc-7d3d941c4906">
+                  <SHORT-NAME>RE_NvMUT_FastWrite_10ms</SHORT-NAME>
+                  <SYMBOL>RE_NvMUT_FastWrite_10ms</SYMBOL>
+                </RUNNABLE-ENTITY>
+              </RUNNABLES>
+            </SWC-INTERNAL-BEHAVIOR>
+          </INTERNAL-BEHAVIORS>
+        </APPLICATION-SW-COMPONENT-TYPE>
+      </ELEMENTS>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>
+

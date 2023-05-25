@@ -1,0 +1,1249 @@
+scons: done reading SConscript files.
+
+scons: warning: you do not seem to have the pywin32 extensions installed;
+	parallel (-j) builds may not work reliably with open Python files.
+File "F:\Python271\Scripts\scons.py", line 201, in <module>
+scons: Building targets ...
+Compiling ASW\CalUT\src\CalUT.c
+Compiling ASW\DiagUT\src\DiagUT.c
+In file included from ASW\CalUT\src\CalUT.c:25:
+In file included from output\inc\Rte_CalUT.h:1:
+In file included from output\inc/..\..\basicSoftware\src\rte\gen\Rte_CalUT.h:27:
+In file included from output\inc/..\..\basicSoftware\src\rte\gen/Rte.h:18:
+In file included from output\inc\Rte_UserCfg.h:1:
+In file included from output\inc/..\..\basicSoftware\integration\src\rte\Rte_UserCfg.h:27:
+In file included from output\inc\Std_Types.h:1:
+output\inc/..\..\basicSoftware\src\bsw\integration\Std_Types.h:17:2: error: The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+#error The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+ ^
+In file included from ASW\CalUT\src\CalUT.c:25:
+In file included from output\inc\Rte_CalUT.h:1:
+In file included from output\inc/..\..\basicSoftware\src\rte\gen\Rte_CalUT.h:27:
+In file included from output\inc/..\..\basicSoftware\src\rte\gen/Rte.h:18:
+In file included from output\inc\Rte_UserCfg.h:1:
+In file included from output\inc/..\..\basicSoftware\integration\src\rte\Rte_UserCfg.h:27:
+In file included from output\inc\Std_Types.h:1:
+In file included from output\inc/..\..\basicSoftware\src\bsw\integration\Std_Types.h:36:
+output\inc/..\..\basicSoftware\src\bsw\integration/Platform_Types.h:17:2: error: The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+#error The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+ ^
+In file included from ASW\CalUT\src\CalUT.c:25:
+In file included from output\inc\Rte_CalUT.h:1:
+In file included from output\inc/..\..\basicSoftware\src\rte\gen\Rte_CalUT.h:27:
+In file included from output\inc/..\..\basicSoftware\src\rte\gen/Rte.h:18:
+In file included from output\inc\Rte_UserCfg.h:1:
+In file included from output\inc/..\..\basicSoftware\integration\src\rte\Rte_UserCfg.h:27:
+In file included from output\inc\Std_Types.h:1:
+In file included from output\inc/..\..\basicSoftware\src\bsw\integration\Std_Types.h:36:
+In file included from output\inc/..\..\basicSoftware\src\bsw\integration/Platform_Types.h:28:
+output\inc/..\..\basicSoftware\src\bsw\integration/Platform_Types_Cfg.h:17:2: error: The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+#error The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+ ^
+In file included from ASW\CalUT\src\CalUT.c:25:
+In file included from output\inc\Rte_CalUT.h:1:
+In file included from output\inc/..\..\basicSoftware\src\rte\gen\Rte_CalUT.h:27:
+In file included from output\inc/..\..\basicSoftware\src\rte\gen/Rte.h:24:
+In file included from output\inc\Std_Types.h:1:
+output\inc/..\..\basicSoftware\src\bsw\integration\Std_Types.h:17:2: error: The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+#error The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+ ^
+In file included from ASW\CalUT\src\CalUT.c:25:
+In file included from output\inc\Rte_CalUT.h:1:
+In file included from output\inc/..\..\basicSoftware\src\rte\gen\Rte_CalUT.h:28:
+In file included from output\inc/..\..\basicSoftware\src\rte\gen/Rte_Intl.h:24:
+In file included from output\inc\Os.h:1:
+In file included from output\inc/..\..\basicSoftware\src\os\gen\Os.h:33:
+In file included from output\inc\Std_Types.h:1:
+output\inc/..\..\basicSoftware\src\bsw\integration\Std_Types.h:17:2: error: The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+#error The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+ ^
+In file included from ASW\CalUT\src\CalUT.c:25:
+In file included from output\inc\Rte_CalUT.h:1:
+In file included from output\inc/..\..\basicSoftware\src\rte\gen\Rte_CalUT.h:29:
+In file included from output\inc/..\..\basicSoftware\src\rte\gen/Rte_CalUT_Type.h:14:
+In file included from output\inc/..\..\basicSoftware\src\rte\gen/Rte_Type.h:15:
+In file included from output\inc/..\..\basicSoftware\src\rte\gen/Rte_Cfg.h:12:
+In file included from output\inc\Std_Types.h:1:
+output\inc/..\..\basicSoftware\src\bsw\integration\Std_Types.h:17:2: error: The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+#error The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+ ^
+6 errors generated.
+
+===================
+None
+===================
+In file included from ASW\DiagUT\src\DiagUT.c:25:
+In file included from output\inc\Rte_DiagUT.h:1:
+In file included from output\inc/..\..\basicSoftware\src\rte\gen\Rte_DiagUT.h:27:
+In file included from output\inc/..\..\basicSoftware\src\rte\gen/Rte.h:18:
+In file included from output\inc\Rte_UserCfg.h:1:
+In file included from output\inc/..\..\basicSoftware\integration\src\rte\Rte_UserCfg.h:27:
+In file included from output\inc\Std_Types.h:1:
+output\inc/..\..\basicSoftware\src\bsw\integration\Std_Types.h:17:2: error: The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+#error The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+ ^
+In file included from ASW\DiagUT\src\DiagUT.c:25:
+In file included from output\inc\Rte_DiagUT.h:1:
+In file included from output\inc/..\..\basicSoftware\src\rte\gen\Rte_DiagUT.h:27:
+In file included from output\inc/..\..\basicSoftware\src\rte\gen/Rte.h:18:
+In file included from output\inc\Rte_UserCfg.h:1:
+In file included from output\inc/..\..\basicSoftware\integration\src\rte\Rte_UserCfg.h:27:
+In file included from output\inc\Std_Types.h:1:
+In file included from output\inc/..\..\basicSoftware\src\bsw\integration\Std_Types.h:36:
+output\inc/..\..\basicSoftware\src\bsw\integration/Platform_Types.h:17:2: error: The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+#error The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+ ^
+In file included from ASW\DiagUT\src\DiagUT.c:25:
+In file included from output\inc\Rte_DiagUT.h:1:
+In file included from output\inc/..\..\basicSoftware\src\rte\gen\Rte_DiagUT.h:27:
+In file included from output\inc/..\..\basicSoftware\src\rte\gen/Rte.h:18:
+In file included from output\inc\Rte_UserCfg.h:1:
+In file included from output\inc/..\..\basicSoftware\integration\src\rte\Rte_UserCfg.h:27:
+In file included from output\inc\Std_Types.h:1:
+In file included from output\inc/..\..\basicSoftware\src\bsw\integration\Std_Types.h:36:
+In file included from output\inc/..\..\basicSoftware\src\bsw\integration/Platform_Types.h:28:
+output\inc/..\..\basicSoftware\src\bsw\integration/Platform_Types_Cfg.h:17:2: error: The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+#error The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+ ^
+In file included from ASW\DiagUT\src\DiagUT.c:25:
+In file included from output\inc\Rte_DiagUT.h:1:
+In file included from output\inc/..\..\basicSoftware\src\rte\gen\Rte_DiagUT.h:27:
+In file included from output\inc/..\..\basicSoftware\src\rte\gen/Rte.h:24:
+In file included from output\inc\Std_Types.h:1:
+output\inc/..\..\basicSoftware\src\bsw\integration\Std_Types.h:17:2: error: The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+#error The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+ ^
+In file included from ASW\DiagUT\src\DiagUT.c:25:
+In file included from output\inc\Rte_DiagUT.h:1:
+In file included from output\inc/..\..\basicSoftware\src\rte\gen\Rte_DiagUT.h:28:
+In file included from output\inc/..\..\basicSoftware\src\rte\gen/Rte_Intl.h:24:
+In file included from output\inc\Os.h:1:
+In file included from output\inc/..\..\basicSoftware\src\os\gen\Os.h:33:
+In file included from output\inc\Std_Types.h:1:
+output\inc/..\..\basicSoftware\src\bsw\integration\Std_Types.h:17:2: error: The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+#error The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+ ^
+In file included from ASW\DiagUT\src\DiagUT.c:25:
+In file included from output\inc\Rte_DiagUT.h:1:
+In file included from output\inc/..\..\basicSoftware\src\rte\gen\Rte_DiagUT.h:29:
+In file included from output\inc/..\..\basicSoftware\src\rte\gen/Rte_DiagUT_Type.h:14:
+In file included from output\inc/..\..\basicSoftware\src\rte\gen/Rte_Type.h:15:
+In file included from output\inc/..\..\basicSoftware\src\rte\gen/Rte_Cfg.h:12:
+In file included from output\inc\Std_Types.h:1:
+output\inc/..\..\basicSoftware\src\bsw\integration\Std_Types.h:17:2: error: The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+#error The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+ ^
+In file included from ASW\DiagUT\src\DiagUT.c:25:
+In file included from output\inc\Rte_DiagUT.h:1:
+In file included from output\inc/..\..\basicSoftware\src\rte\gen\Rte_DiagUT.h:204:
+In file included from output\inc\Dcm_MemMap.h:1:
+output\inc/..\..\basicSoftware\src\bsw\Dcm\integration\Dcm_MemMap.h:11:2: error: The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+#error The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+ ^
+In file included from ASW\DiagUT\src\DiagUT.c:25:
+In file included from output\inc\Rte_DiagUT.h:1:
+In file included from output\inc/..\..\basicSoftware\src\rte\gen\Rte_DiagUT.h:204:
+In file included from output\inc\Dcm_MemMap.h:1:
+In file included from output\inc/..\..\basicSoftware\src\bsw\Dcm\integration\Dcm_MemMap.h:20:
+output\inc/..\..\basicSoftware\src\bsw\Dcm\integration/Dcm_Cfg_MemMap.h:11:2: error: The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+#error The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+ ^
+In file included from ASW\DiagUT\src\DiagUT.c:25:
+In file included from output\inc\Rte_DiagUT.h:1:
+In file included from output\inc/..\..\basicSoftware\src\rte\gen\Rte_DiagUT.h:216:
+In file included from output\inc\Dcm_MemMap.h:1:
+output\inc/..\..\basicSoftware\src\bsw\Dcm\integration\Dcm_MemMap.h:11:2: error: The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+#error The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+ ^
+In file included from ASW\DiagUT\src\DiagUT.c:25:
+In file included from output\inc\Rte_DiagUT.h:1:
+In file included from output\inc/..\..\basicSoftware\src\rte\gen\Rte_DiagUT.h:216:
+In file included from output\inc\Dcm_MemMap.h:1:
+In file included from output\inc/..\..\basicSoftware\src\bsw\Dcm\integration\Dcm_MemMap.h:20:
+output\inc/..\..\basicSoftware\src\bsw\Dcm\integration/Dcm_Cfg_MemMap.h:11:2: error: The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+#error The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+ ^
+In file included from ASW\DiagUT\src\DiagUT.c:25:
+In file included from output\inc\Rte_DiagUT.h:1:
+In file included from output\inc/..\..\basicSoftware\src\rte\gen\Rte_DiagUT.h:218:
+In file included from output\inc\Dem_MemMap.h:1:
+output\inc/..\..\basicSoftware\src\bsw\Dem\integration\Dem_MemMap.h:11:2: error: The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+#error The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+ ^
+In file included from ASW\DiagUT\src\DiagUT.c:25:
+In file included from output\inc\Rte_DiagUT.h:1:
+In file included from output\inc/..\..\basicSoftware\src\rte\gen\Rte_DiagUT.h:218:
+In file included from output\inc\Dem_MemMap.h:1:
+In file included from output\inc/..\..\basicSoftware\src\bsw\Dem\integration\Dem_MemMap.h:30:
+output\inc/..\..\basicSoftware\src\bsw\Dem\integration/Dem_Cfg_MemMap.h:11:2: error: The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+#error The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+ ^
+In file included from ASW\DiagUT\src\DiagUT.c:25:
+In file included from output\inc\Rte_DiagUT.h:1:
+In file included from output\inc/..\..\basicSoftware\src\rte\gen\Rte_DiagUT.h:342:
+In file included from output\inc\Dem_MemMap.h:1:
+output\inc/..\..\basicSoftware\src\bsw\Dem\integration\Dem_MemMap.h:11:2: error: The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+#error The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+ ^
+In file included from ASW\DiagUT\src\DiagUT.c:25:
+In file included from output\inc\Rte_DiagUT.h:1:
+In file included from output\inc/..\..\basicSoftware\src\rte\gen\Rte_DiagUT.h:342:
+In file included from output\inc\Dem_MemMap.h:1:
+In file included from output\inc/..\..\basicSoftware\src\bsw\Dem\integration\Dem_MemMap.h:30:
+output\inc/..\..\basicSoftware\src\bsw\Dem\integration/Dem_Cfg_MemMap.h:11:2: error: The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+#error The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+ ^
+14 errors generated.
+
+===================
+None
+===================
+Compiling ASW\ExeMgrUT\src\ExeMgrUT.c
+Compiling ASW\INP_SWC\src\INP_SWC.c
+Compiling ASW\NmUT\src\NmUT.c
+Compiling ASW\NvMUT\src\NvMUT.c
+Compiling ASW\OUTP_SWC\src\OUTP_SWC.c
+scons: *** [output\objs\asw\CalUT\CalUT.o] Error 1
+scons: *** [output\objs\asw\DiagUT\DiagUT.o] Error 1
+Compiling ASW\WdgMUT\src\WdgMUT.c
+In file included from ASW\INP_SWC\src\INP_SWC.c:25:
+In file included from output\inc\Rte_INP_SWC.h:1:
+In file included from output\inc/..\..\basicSoftware\src\rte\gen\Rte_INP_SWC.h:27:
+In file included from output\inc/..\..\basicSoftware\src\rte\gen/Rte.h:18:
+In file included from output\inc\Rte_UserCfg.h:1:
+In file included from output\inc/..\..\basicSoftware\integration\src\rte\Rte_UserCfg.h:27:
+In file included from output\inc\Std_Types.h:1:
+output\inc/..\..\basicSoftware\src\bsw\integration\Std_Types.h:17:2: error: The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+#error The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+ ^
+In file included from ASW\INP_SWC\src\INP_SWC.c:25:
+In file included from output\inc\Rte_INP_SWC.h:1:
+In file included from output\inc/..\..\basicSoftware\src\rte\gen\Rte_INP_SWC.h:27:
+In file included from output\inc/..\..\basicSoftware\src\rte\gen/Rte.h:18:
+In file included from output\inc\Rte_UserCfg.h:1:
+In file included from output\inc/..\..\basicSoftware\integration\src\rte\Rte_UserCfg.h:27:
+In file included from output\inc\Std_Types.h:1:
+In file included from output\inc/..\..\basicSoftware\src\bsw\integration\Std_Types.h:36:
+output\inc/..\..\basicSoftware\src\bsw\integration/Platform_Types.h:17:2: error: The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+#error The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+ ^
+In file included from ASW\INP_SWC\src\INP_SWC.c:25:
+In file included from output\inc\Rte_INP_SWC.h:1:
+In file included from output\inc/..\..\basicSoftware\src\rte\gen\Rte_INP_SWC.h:27:
+In file included from output\inc/..\..\basicSoftware\src\rte\gen/Rte.h:18:
+In file included from output\inc\Rte_UserCfg.h:1:
+In file included from output\inc/..\..\basicSoftware\integration\src\rte\Rte_UserCfg.h:27:
+In file included from output\inc\Std_Types.h:1:
+In file included from output\inc/..\..\basicSoftware\src\bsw\integration\Std_Types.h:36:
+In file included from output\inc/..\..\basicSoftware\src\bsw\integration/Platform_Types.h:28:
+output\inc/..\..\basicSoftware\src\bsw\integration/Platform_Types_Cfg.h:17:2: error: The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+#error The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+ ^
+In file included from ASW\INP_SWC\src\INP_SWC.c:25:
+In file included from output\inc\Rte_INP_SWC.h:1:
+In file included from output\inc/..\..\basicSoftware\src\rte\gen\Rte_INP_SWC.h:27:
+In file included from output\inc/..\..\basicSoftware\src\rte\gen/Rte.h:24:
+In file included from output\inc\Std_Types.h:1:
+output\inc/..\..\basicSoftware\src\bsw\integration\Std_Types.h:17:2: error: The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+#error The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+ ^
+In file included from ASW\INP_SWC\src\INP_SWC.c:25:
+In file included from output\inc\Rte_INP_SWC.h:1:
+In file included from output\inc/..\..\basicSoftware\src\rte\gen\Rte_INP_SWC.h:28:
+In file included from output\inc/..\..\basicSoftware\src\rte\gen/Rte_Intl.h:24:
+In file included from output\inc\Os.h:1:
+In file included from output\inc/..\..\basicSoftware\src\os\gen\Os.h:33:
+In file included from output\inc\Std_Types.h:1:
+output\inc/..\..\basicSoftware\src\bsw\integration\Std_Types.h:17:2: error: The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+#error The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+ ^
+In file included from ASW\INP_SWC\src\INP_SWC.c:25:
+In file included from output\inc\Rte_INP_SWC.h:1:
+In file included from output\inc/..\..\basicSoftware\src\rte\gen\Rte_INP_SWC.h:29:
+In file included from output\inc/..\..\basicSoftware\src\rte\gen/Rte_INP_SWC_Type.h:14:
+In file included from output\inc/..\..\basicSoftware\src\rte\gen/Rte_Type.h:15:
+In file included from output\inc/..\..\basicSoftware\src\rte\gen/Rte_Cfg.h:12:
+In file included from output\inc\Std_Types.h:1:
+output\inc/..\..\basicSoftware\src\bsw\integration\Std_Types.h:17:2: error: The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+#error The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+ ^
+6 errors generated.
+
+===================
+None
+===================
+scons: *** [output\objs\asw\INP_SWC\INP_SWC.o] Error 1
+In file included from ASW\NmUT\src\NmUT.c:25:
+In file included from output\inc\Rte_NmUT.h:1:
+In file included from output\inc/..\..\basicSoftware\src\rte\gen\Rte_NmUT.h:27:
+In file included from output\inc/..\..\basicSoftware\src\rte\gen/Rte.h:18:
+In file included from output\inc\Rte_UserCfg.h:1:
+In file included from output\inc/..\..\basicSoftware\integration\src\rte\Rte_UserCfg.h:27:
+In file included from output\inc\Std_Types.h:1:
+output\inc/..\..\basicSoftware\src\bsw\integration\Std_Types.h:17:2: error: The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+#error The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+ ^
+In file included from ASW\NmUT\src\NmUT.c:25:
+In file included from output\inc\Rte_NmUT.h:1:
+In file included from output\inc/..\..\basicSoftware\src\rte\gen\Rte_NmUT.h:27:
+In file included from output\inc/..\..\basicSoftware\src\rte\gen/Rte.h:18:
+In file included from output\inc\Rte_UserCfg.h:1:
+In file included from output\inc/..\..\basicSoftware\integration\src\rte\Rte_UserCfg.h:27:
+In file included from output\inc\Std_Types.h:1:
+In file included from output\inc/..\..\basicSoftware\src\bsw\integration\Std_Types.h:36:
+output\inc/..\..\basicSoftware\src\bsw\integration/Platform_Types.h:17:2: error: The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+#error The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+ ^
+In file included from ASW\NmUT\src\NmUT.c:25:
+In file included from output\inc\Rte_NmUT.h:1:
+In file included from output\inc/..\..\basicSoftware\src\rte\gen\Rte_NmUT.h:27:
+In file included from output\inc/..\..\basicSoftware\src\rte\gen/Rte.h:18:
+In file included from output\inc\Rte_UserCfg.h:1:
+In file included from output\inc/..\..\basicSoftware\integration\src\rte\Rte_UserCfg.h:27:
+In file included from output\inc\Std_Types.h:1:
+In file included from output\inc/..\..\basicSoftware\src\bsw\integration\Std_Types.h:36:
+In file included from output\inc/..\..\basicSoftware\src\bsw\integration/Platform_Types.h:28:
+output\inc/..\..\basicSoftware\src\bsw\integration/Platform_Types_Cfg.h:17:2: error: The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+#error The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+ ^
+In file included from ASW\NmUT\src\NmUT.c:25:
+In file included from output\inc\Rte_NmUT.h:1:
+In file included from output\inc/..\..\basicSoftware\src\rte\gen\Rte_NmUT.h:27:
+In file included from output\inc/..\..\basicSoftware\src\rte\gen/Rte.h:24:
+In file included from output\inc\Std_Types.h:1:
+output\inc/..\..\basicSoftware\src\bsw\integration\Std_Types.h:17:2: error: The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+#error The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+ ^
+In file included from ASW\NmUT\src\NmUT.c:25:
+In file included from output\inc\Rte_NmUT.h:1:
+In file included from output\inc/..\..\basicSoftware\src\rte\gen\Rte_NmUT.h:28:
+In file included from output\inc/..\..\basicSoftware\src\rte\gen/Rte_Intl.h:24:
+In file included from output\inc\Os.h:1:
+In file included from output\inc/..\..\basicSoftware\src\os\gen\Os.h:33:
+In file included from output\inc\Std_Types.h:1:
+output\inc/..\..\basicSoftware\src\bsw\integration\Std_Types.h:17:2: error: The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+#error The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+ ^
+In file included from ASW\NmUT\src\NmUT.c:25:
+In file included from output\inc\Rte_NmUT.h:1:
+In file included from output\inc/..\..\basicSoftware\src\rte\gen\Rte_NmUT.h:29:
+In file included from output\inc/..\..\basicSoftware\src\rte\gen/Rte_NmUT_Type.h:14:
+In file included from output\inc/..\..\basicSoftware\src\rte\gen/Rte_Type.h:15:
+In file included from output\inc/..\..\basicSoftware\src\rte\gen/Rte_Cfg.h:12:
+In file included from output\inc\Std_Types.h:1:
+output\inc/..\..\basicSoftware\src\bsw\integration\Std_Types.h:17:2: error: The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+#error The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+ ^
+In file included from ASW\NmUT\src\NmUT.c:25:
+In file included from output\inc\Rte_NmUT.h:1:
+In file included from output\inc/..\..\basicSoftware\src\rte\gen\Rte_NmUT.h:105:
+In file included from output\inc\ComM_MemMap.h:1:
+output\inc/..\..\basicSoftware\src\bsw\ComM\integration\ComM_MemMap.h:11:2: error: The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+#error The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+ ^
+In file included from ASW\NmUT\src\NmUT.c:25:
+In file included from output\inc\Rte_NmUT.h:1:
+In file included from output\inc/..\..\basicSoftware\src\rte\gen\Rte_NmUT.h:105:
+In file included from output\inc\ComM_MemMap.h:1:
+In file included from output\inc/..\..\basicSoftware\src\bsw\ComM\integration\ComM_MemMap.h:21:
+In file included from output\inc\ComM_Cfg.h:1:
+In file included from output\inc/..\..\basicSoftware\src\bsw\ComM\ComM_Cfg.h:22:
+In file included from output\inc\ComM_Types.h:1:
+In file included from output\inc/..\..\basicSoftware\src\bsw\ComM\api\ComM_Types.h:9:
+In file included from output\inc\ComStack_Types.h:1:
+In file included from output\inc/..\..\basicSoftware\src\bsw\ComStack\api\ComStack_Types.h:19:
+In file included from output\inc\Std_Types.h:1:
+output\inc/..\..\basicSoftware\src\bsw\integration\Std_Types.h:17:2: error: The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+#error The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+ ^
+In file included from ASW\NmUT\src\NmUT.c:25:
+In file included from output\inc\Rte_NmUT.h:1:
+In file included from output\inc/..\..\basicSoftware\src\rte\gen\Rte_NmUT.h:121:
+In file included from output\inc\ComM_MemMap.h:1:
+output\inc/..\..\basicSoftware\src\bsw\ComM\integration\ComM_MemMap.h:11:2: error: The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+#error The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+ ^
+In file included from ASW\NmUT\src\NmUT.c:31:
+In file included from output\inc\Nm.h:1:
+In file included from output\inc/..\..\basicSoftware\src\bsw\Nm\api\Nm.h:29:
+In file included from output\inc\Nm_Cfg.h:1:
+In file included from output\inc/..\..\basicSoftware\src\bsw\Nm\Nm_Cfg.h:95:
+In file included from output\inc\CanNm.h:1:
+In file included from output\inc/..\..\basicSoftware\src\bsw\CanNm\api\CanNm.h:64:
+In file included from output\inc\CanNm_MemMap.h:1:
+output\inc/..\..\basicSoftware\src\bsw\CanNm\integration\CanNm_MemMap.h:11:2: error: The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+#error The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+ ^
+In file included from ASW\NmUT\src\NmUT.c:31:
+In file included from output\inc\Nm.h:1:
+In file included from output\inc/..\..\basicSoftware\src\bsw\Nm\api\Nm.h:29:
+In file included from output\inc\Nm_Cfg.h:1:
+In file included from output\inc/..\..\basicSoftware\src\bsw\Nm\Nm_Cfg.h:95:
+In file included from output\inc\CanNm.h:1:
+In file included from output\inc/..\..\basicSoftware\src\bsw\CanNm\api\CanNm.h:69:
+In file included from output\inc\CanNm_MemMap.h:1:
+output\inc/..\..\basicSoftware\src\bsw\CanNm\integration\CanNm_MemMap.h:11:2: error: The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+#error The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+ ^
+In file included from ASW\NmUT\src\NmUT.c:31:
+In file included from output\inc\Nm.h:1:
+In file included from output\inc/..\..\basicSoftware\src\bsw\Nm\api\Nm.h:29:
+In file included from output\inc\Nm_Cfg.h:1:
+In file included from output\inc/..\..\basicSoftware\src\bsw\Nm\Nm_Cfg.h:95:
+In file included from output\inc\CanNm.h:1:
+In file included from output\inc/..\..\basicSoftware\src\bsw\CanNm\api\CanNm.h:73:
+In file included from output\inc\CanNm_MemMap.h:1:
+output\inc/..\..\basicSoftware\src\bsw\CanNm\integration\CanNm_MemMap.h:11:2: error: The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+#error The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+ ^
+In file included from ASW\NmUT\src\NmUT.c:31:
+In file included from output\inc\Nm.h:1:
+In file included from output\inc/..\..\basicSoftware\src\bsw\Nm\api\Nm.h:29:
+In file included from output\inc\Nm_Cfg.h:1:
+In file included from output\inc/..\..\basicSoftware\src\bsw\Nm\Nm_Cfg.h:95:
+In file included from output\inc\CanNm.h:1:
+In file included from output\inc/..\..\basicSoftware\src\bsw\CanNm\api\CanNm.h:78:
+In file included from output\inc\CanNm_MemMap.h:1:
+output\inc/..\..\basicSoftware\src\bsw\CanNm\integration\CanNm_MemMap.h:11:2: error: The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+#error The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+ ^
+In file included from ASW\NmUT\src\NmUT.c:31:
+In file included from output\inc\Nm.h:1:
+In file included from output\inc/..\..\basicSoftware\src\bsw\Nm\api\Nm.h:29:
+In file included from output\inc\Nm_Cfg.h:1:
+In file included from output\inc/..\..\basicSoftware\src\bsw\Nm\Nm_Cfg.h:95:
+In file included from output\inc\CanNm.h:1:
+In file included from output\inc/..\..\basicSoftware\src\bsw\CanNm\api\CanNm.h:82:
+In file included from output\inc\CanNm_MemMap.h:1:
+output\inc/..\..\basicSoftware\src\bsw\CanNm\integration\CanNm_MemMap.h:11:2: error: The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+#error The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+ ^
+In file included from ASW\NmUT\src\NmUT.c:31:
+In file included from output\inc\Nm.h:1:
+In file included from output\inc/..\..\basicSoftware\src\bsw\Nm\api\Nm.h:29:
+In file included from output\inc\Nm_Cfg.h:1:
+In file included from output\inc/..\..\basicSoftware\src\bsw\Nm\Nm_Cfg.h:95:
+In file included from output\inc\CanNm.h:1:
+In file included from output\inc/..\..\basicSoftware\src\bsw\CanNm\api\CanNm.h:87:
+In file included from output\inc\CanNm_MemMap.h:1:
+output\inc/..\..\basicSoftware\src\bsw\CanNm\integration\CanNm_MemMap.h:11:2: error: The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+#error The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+ ^
+In file included from ASW\NmUT\src\NmUT.c:31:
+In file included from output\inc\Nm.h:1:
+In file included from output\inc/..\..\basicSoftware\src\bsw\Nm\api\Nm.h:29:
+In file included from output\inc\Nm_Cfg.h:1:
+In file included from output\inc/..\..\basicSoftware\src\bsw\Nm\Nm_Cfg.h:95:
+In file included from output\inc\CanNm.h:1:
+In file included from output\inc/..\..\basicSoftware\src\bsw\CanNm\api\CanNm.h:91:
+In file included from output\inc\CanNm_MemMap.h:1:
+output\inc/..\..\basicSoftware\src\bsw\CanNm\integration\CanNm_MemMap.h:11:2: error: The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+#error The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+ ^
+In file included from ASW\NmUT\src\NmUT.c:31:
+In file included from output\inc\Nm.h:1:
+In file included from output\inc/..\..\basicSoftware\src\bsw\Nm\api\Nm.h:29:
+In file included from output\inc\Nm_Cfg.h:1:
+In file included from output\inc/..\..\basicSoftware\src\bsw\Nm\Nm_Cfg.h:95:
+In file included from output\inc\CanNm.h:1:
+In file included from output\inc/..\..\basicSoftware\src\bsw\CanNm\api\CanNm.h:96:
+In file included from output\inc\CanNm_MemMap.h:1:
+output\inc/..\..\basicSoftware\src\bsw\CanNm\integration\CanNm_MemMap.h:11:2: error: The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+#error The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+ ^
+In file included from ASW\NmUT\src\NmUT.c:31:
+In file included from output\inc\Nm.h:1:
+In file included from output\inc/..\..\basicSoftware\src\bsw\Nm\api\Nm.h:29:
+In file included from output\inc\Nm_Cfg.h:1:
+In file included from output\inc/..\..\basicSoftware\src\bsw\Nm\Nm_Cfg.h:95:
+In file included from output\inc\CanNm.h:1:
+In file included from output\inc/..\..\basicSoftware\src\bsw\CanNm\api\CanNm.h:99:
+In file included from output\inc\CanNm_MemMap.h:1:
+output\inc/..\..\basicSoftware\src\bsw\CanNm\integration\CanNm_MemMap.h:11:2: error: The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+#error The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+ ^
+In file included from ASW\NmUT\src\NmUT.c:31:
+In file included from output\inc\Nm.h:1:
+In file included from output\inc/..\..\basicSoftware\src\bsw\Nm\api\Nm.h:29:
+In file included from output\inc\Nm_Cfg.h:1:
+In file included from output\inc/..\..\basicSoftware\src\bsw\Nm\Nm_Cfg.h:95:
+In file included from output\inc\CanNm.h:1:
+In file included from output\inc/..\..\basicSoftware\src\bsw\CanNm\api\CanNm.h:104:
+In file included from output\inc\CanNm_MemMap.h:1:
+output\inc/..\..\basicSoftware\src\bsw\CanNm\integration\CanNm_MemMap.h:11:2: error: The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+#error The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+ ^
+In file included from ASW\NmUT\src\NmUT.c:31:
+In file included from output\inc\Nm.h:1:
+In file included from output\inc/..\..\basicSoftware\src\bsw\Nm\api\Nm.h:29:
+In file included from output\inc\Nm_Cfg.h:1:
+In file included from output\inc/..\..\basicSoftware\src\bsw\Nm\Nm_Cfg.h:95:
+In file included from output\inc\CanNm.h:1:
+In file included from output\inc/..\..\basicSoftware\src\bsw\CanNm\api\CanNm.h:107:
+In file included from output\inc\CanNm_MemMap.h:1:
+output\inc/..\..\basicSoftware\src\bsw\CanNm\integration\CanNm_MemMap.h:11:2: error: The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+#error The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+ ^
+fatal error: too many errors emitted, stopping now [-ferror-limit=]
+21 errors generated.
+
+===================
+None
+===================
+scons: *** [output\objs\asw\NmUT\NmUT.o] Error 1
+In file included from ASW\NvMUT\src\NvMUT.c:28:
+In file included from output\inc\Rte_NvMUT.h:1:
+In file included from output\inc/..\..\basicSoftware\src\rte\gen\Rte_NvMUT.h:27:
+In file included from output\inc/..\..\basicSoftware\src\rte\gen/Rte.h:18:
+In file included from output\inc\Rte_UserCfg.h:1:
+In file included from output\inc/..\..\basicSoftware\integration\src\rte\Rte_UserCfg.h:27:
+In file included from output\inc\Std_Types.h:1:
+output\inc/..\..\basicSoftware\src\bsw\integration\Std_Types.h:17:2: error: The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+#error The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+ ^
+In file included from ASW\NvMUT\src\NvMUT.c:28:
+In file included from output\inc\Rte_NvMUT.h:1:
+In file included from output\inc/..\..\basicSoftware\src\rte\gen\Rte_NvMUT.h:27:
+In file included from output\inc/..\..\basicSoftware\src\rte\gen/Rte.h:18:
+In file included from output\inc\Rte_UserCfg.h:1:
+In file included from output\inc/..\..\basicSoftware\integration\src\rte\Rte_UserCfg.h:27:
+In file included from output\inc\Std_Types.h:1:
+In file included from output\inc/..\..\basicSoftware\src\bsw\integration\Std_Types.h:36:
+output\inc/..\..\basicSoftware\src\bsw\integration/Platform_Types.h:17:2: error: The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+#error The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+ ^
+In file included from ASW\NvMUT\src\NvMUT.c:28:
+In file included from output\inc\Rte_NvMUT.h:1:
+In file included from output\inc/..\..\basicSoftware\src\rte\gen\Rte_NvMUT.h:27:
+In file included from output\inc/..\..\basicSoftware\src\rte\gen/Rte.h:18:
+In file included from output\inc\Rte_UserCfg.h:1:
+In file included from output\inc/..\..\basicSoftware\integration\src\rte\Rte_UserCfg.h:27:
+In file included from output\inc\Std_Types.h:1:
+In file included from output\inc/..\..\basicSoftware\src\bsw\integration\Std_Types.h:36:
+In file included from output\inc/..\..\basicSoftware\src\bsw\integration/Platform_Types.h:28:
+output\inc/..\..\basicSoftware\src\bsw\integration/Platform_Types_Cfg.h:17:2: error: The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+#error The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+ ^
+In file included from ASW\NvMUT\src\NvMUT.c:28:
+In file included from output\inc\Rte_NvMUT.h:1:
+In file included from output\inc/..\..\basicSoftware\src\rte\gen\Rte_NvMUT.h:27:
+In file included from output\inc/..\..\basicSoftware\src\rte\gen/Rte.h:24:
+In file included from output\inc\Std_Types.h:1:
+output\inc/..\..\basicSoftware\src\bsw\integration\Std_Types.h:17:2: error: The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+#error The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+ ^
+In file included from ASW\NvMUT\src\NvMUT.c:28:
+In file included from output\inc\Rte_NvMUT.h:1:
+In file included from output\inc/..\..\basicSoftware\src\rte\gen\Rte_NvMUT.h:28:
+In file included from output\inc/..\..\basicSoftware\src\rte\gen/Rte_Intl.h:24:
+In file included from output\inc\Os.h:1:
+In file included from output\inc/..\..\basicSoftware\src\os\gen\Os.h:33:
+In file included from output\inc\Std_Types.h:1:
+output\inc/..\..\basicSoftware\src\bsw\integration\Std_Types.h:17:2: error: The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+#error The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+ ^
+In file included from ASW\NvMUT\src\NvMUT.c:28:
+In file included from output\inc\Rte_NvMUT.h:1:
+In file included from output\inc/..\..\basicSoftware\src\rte\gen\Rte_NvMUT.h:29:
+In file included from output\inc/..\..\basicSoftware\src\rte\gen/Rte_NvMUT_Type.h:14:
+In file included from output\inc/..\..\basicSoftware\src\rte\gen/Rte_Type.h:15:
+In file included from output\inc/..\..\basicSoftware\src\rte\gen/Rte_Cfg.h:12:
+In file included from output\inc\Std_Types.h:1:
+output\inc/..\..\basicSoftware\src\bsw\integration\Std_Types.h:17:2: error: The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+#error The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+ ^
+In file included from ASW\NvMUT\src\NvMUT.c:31:
+In file included from output\inc\Rtm.h:1:
+In file included from output\inc/..\..\basicSoftware\src\cobra\Rtm\api\Rtm.h:36:
+In file included from output\inc/..\..\basicSoftware\src\cobra\Rtm\api/Rtm_Types.h:35:
+In file included from output\inc\Std_Types.h:1:
+output\inc/..\..\basicSoftware\src\bsw\integration\Std_Types.h:17:2: error: The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+#error The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+ ^
+In file included from ASW\NvMUT\src\NvMUT.c:32:
+In file included from output\inc\rba_BswSrv.h:1:
+In file included from output\inc/..\..\basicSoftware\integration\src\bsw\integration\rba_BswSrv\api\rba_BswSrv.h:21:
+In file included from output\inc\Std_Types.h:1:
+output\inc/..\..\basicSoftware\src\bsw\integration\Std_Types.h:17:2: error: The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+#error The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+ ^
+In file included from ASW\NvMUT\src\NvMUT.c:32:
+In file included from output\inc\rba_BswSrv.h:1:
+In file included from output\inc/..\..\basicSoftware\integration\src\bsw\integration\rba_BswSrv\api\rba_BswSrv.h:27:
+In file included from output\inc\Target.h:1:
+In file included from output\inc/..\..\basicSoftware\integration\src\target\api\Target.h:30:
+In file included from output\inc\StackM.h:1:
+In file included from output\inc/..\..\basicSoftware\src\cobra\StackM\api\StackM.h:35:
+In file included from output\inc\StackM_Cfg.h:1:
+In file included from output\inc/..\..\basicSoftware\src\cobra\StackM\StackM_Cfg.h:39:
+In file included from output\inc\StackM_Types.h:1:
+In file included from output\inc/..\..\basicSoftware\src\cobra\StackM\api\StackM_Types.h:35:
+In file included from output\inc\Std_Types.h:1:
+output\inc/..\..\basicSoftware\src\bsw\integration\Std_Types.h:17:2: error: The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+#error The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+ ^
+In file included from ASW\NvMUT\src\NvMUT.c:32:
+In file included from output\inc\rba_BswSrv.h:1:
+In file included from output\inc/..\..\basicSoftware\integration\src\bsw\integration\rba_BswSrv\api\rba_BswSrv.h:28:
+In file included from output\inc\MCAL_Integration.h:1:
+In file included from output\inc/..\..\basicSoftware\integration\mcal\src\integration\api\Mcal_Integration.h:28:
+In file included from output\inc/..\..\basicSoftware\integration\mcal\src\integration\api/Mcu_Integration.h:27:
+In file included from output\inc\Mcu.h:1:
+In file included from output\inc/..\..\basicSoftware\integration\mcal\src\modules\inc\Mcu.h:35:
+In file included from output\inc\Std_Types.h:1:
+output\inc/..\..\basicSoftware\src\bsw\integration\Std_Types.h:17:2: error: The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+#error The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+ ^
+In file included from ASW\NvMUT\src\NvMUT.c:32:
+In file included from output\inc\rba_BswSrv.h:1:
+In file included from output\inc/..\..\basicSoftware\integration\src\bsw\integration\rba_BswSrv\api\rba_BswSrv.h:28:
+In file included from output\inc\MCAL_Integration.h:1:
+In file included from output\inc/..\..\basicSoftware\integration\mcal\src\integration\api\Mcal_Integration.h:29:
+In file included from output\inc/..\..\basicSoftware\integration\mcal\src\integration\api/Port_Integration.h:28:
+In file included from output\inc\Port.h:1:
+In file included from output\inc/..\..\basicSoftware\integration\mcal\src\modules\inc\Port.h:20:
+In file included from output\inc\Std_Types.h:1:
+output\inc/..\..\basicSoftware\src\bsw\integration\Std_Types.h:17:2: error: The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+#error The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+ ^
+In file included from ASW\NvMUT\src\NvMUT.c:32:
+In file included from output\inc\rba_BswSrv.h:1:
+In file included from output\inc/..\..\basicSoftware\integration\src\bsw\integration\rba_BswSrv\api\rba_BswSrv.h:28:
+In file included from output\inc\MCAL_Integration.h:1:
+In file included from output\inc/..\..\basicSoftware\integration\mcal\src\integration\api\Mcal_Integration.h:30:
+In file included from output\inc/..\..\basicSoftware\integration\mcal\src\integration\api/Dio_Integration.h:28:
+In file included from output\inc\Dio.h:1:
+In file included from output\inc/..\..\basicSoftware\integration\mcal\src\modules\inc\Dio.h:18:
+In file included from output\inc\Std_Types.h:1:
+output\inc/..\..\basicSoftware\src\bsw\integration\Std_Types.h:17:2: error: The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+#error The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+ ^
+In file included from ASW\NvMUT\src\NvMUT.c:32:
+In file included from output\inc\rba_BswSrv.h:1:
+In file included from output\inc/..\..\basicSoftware\integration\src\bsw\integration\rba_BswSrv\api\rba_BswSrv.h:28:
+In file included from output\inc\MCAL_Integration.h:1:
+In file included from output\inc/..\..\basicSoftware\integration\mcal\src\integration\api\Mcal_Integration.h:31:
+In file included from output\inc/..\..\basicSoftware\integration\mcal\src\integration\api/Gpt_Integration.h:28:
+In file included from output\inc\Gpt.h:1:
+In file included from output\inc/..\..\basicSoftware\integration\mcal\src\modules\inc\Gpt.h:11:
+In file included from output\inc\Std_Types.h:1:
+output\inc/..\..\basicSoftware\src\bsw\integration\Std_Types.h:17:2: error: The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+#error The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+ ^
+In file included from ASW\NvMUT\src\NvMUT.c:32:
+In file included from output\inc\rba_BswSrv.h:1:
+In file included from output\inc/..\..\basicSoftware\integration\src\bsw\integration\rba_BswSrv\api\rba_BswSrv.h:28:
+In file included from output\inc\MCAL_Integration.h:1:
+In file included from output\inc/..\..\basicSoftware\integration\mcal\src\integration\api\Mcal_Integration.h:32:
+In file included from output\inc/..\..\basicSoftware\integration\mcal\src\integration\api/Fls_Integration.h:28:
+In file included from output\inc\Fls.h:1:
+In file included from output\inc/..\..\basicSoftware\integration\mcal\src\modules\inc\Fls.h:39:
+In file included from output\inc\Std_Types.h:1:
+output\inc/..\..\basicSoftware\src\bsw\integration\Std_Types.h:17:2: error: The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+#error The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+ ^
+In file included from ASW\NvMUT\src\NvMUT.c:32:
+In file included from output\inc\rba_BswSrv.h:1:
+In file included from output\inc/..\..\basicSoftware\integration\src\bsw\integration\rba_BswSrv\api\rba_BswSrv.h:28:
+In file included from output\inc\MCAL_Integration.h:1:
+In file included from output\inc/..\..\basicSoftware\integration\mcal\src\integration\api\Mcal_Integration.h:33:
+In file included from output\inc/..\..\basicSoftware\integration\mcal\src\integration\api/Can_Integration.h:28:
+In file included from output\inc\Can.h:1:
+In file included from output\inc/..\..\basicSoftware\integration\mcal\src\modules\inc\Can.h:8:
+In file included from output\inc\Platform_Types.h:1:
+output\inc/..\..\basicSoftware\src\bsw\integration\Platform_Types.h:17:2: error: The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+#error The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+ ^
+In file included from ASW\NvMUT\src\NvMUT.c:32:
+In file included from output\inc\rba_BswSrv.h:1:
+In file included from output\inc/..\..\basicSoftware\integration\src\bsw\integration\rba_BswSrv\api\rba_BswSrv.h:28:
+In file included from output\inc\MCAL_Integration.h:1:
+In file included from output\inc/..\..\basicSoftware\integration\mcal\src\integration\api\Mcal_Integration.h:33:
+In file included from output\inc/..\..\basicSoftware\integration\mcal\src\integration\api/Can_Integration.h:28:
+In file included from output\inc\Can.h:1:
+In file included from output\inc/..\..\basicSoftware\integration\mcal\src\modules\inc\Can.h:9:
+In file included from output\inc\ComStack_Types.h:1:
+In file included from output\inc/..\..\basicSoftware\src\bsw\ComStack\api\ComStack_Types.h:19:
+In file included from output\inc\Std_Types.h:1:
+output\inc/..\..\basicSoftware\src\bsw\integration\Std_Types.h:17:2: error: The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+#error The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+ ^
+In file included from ASW\NvMUT\src\NvMUT.c:32:
+In file included from output\inc\rba_BswSrv.h:1:
+In file included from output\inc/..\..\basicSoftware\integration\src\bsw\integration\rba_BswSrv\api\rba_BswSrv.h:28:
+In file included from output\inc\MCAL_Integration.h:1:
+In file included from output\inc/..\..\basicSoftware\integration\mcal\src\integration\api\Mcal_Integration.h:33:
+In file included from output\inc/..\..\basicSoftware\integration\mcal\src\integration\api/Can_Integration.h:28:
+In file included from output\inc\Can.h:1:
+In file included from output\inc/..\..\basicSoftware\integration\mcal\src\modules\inc\Can.h:10:
+In file included from output\inc\Can_GeneralTypes.h:1:
+output\inc/..\..\basicSoftware\src\bsw\CanIf\integration\Can_GeneralTypes.h:11:2: error: The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+#error The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+ ^
+In file included from ASW\NvMUT\src\NvMUT.c:32:
+In file included from output\inc\rba_BswSrv.h:1:
+In file included from output\inc/..\..\basicSoftware\integration\src\bsw\integration\rba_BswSrv\api\rba_BswSrv.h:28:
+In file included from output\inc\MCAL_Integration.h:1:
+In file included from output\inc/..\..\basicSoftware\integration\mcal\src\integration\api\Mcal_Integration.h:33:
+In file included from output\inc/..\..\basicSoftware\integration\mcal\src\integration\api/Can_Integration.h:28:
+In file included from output\inc\Can.h:1:
+In file included from output\inc/..\..\basicSoftware\integration\mcal\src\modules\inc\Can.h:11:
+In file included from output\inc\Std_Types.h:1:
+output\inc/..\..\basicSoftware\src\bsw\integration\Std_Types.h:17:2: error: The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+#error The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+ ^
+In file included from ASW\NvMUT\src\NvMUT.c:32:
+In file included from output\inc\rba_BswSrv.h:1:
+In file included from output\inc/..\..\basicSoftware\integration\src\bsw\integration\rba_BswSrv\api\rba_BswSrv.h:28:
+In file included from output\inc\MCAL_Integration.h:1:
+In file included from output\inc/..\..\basicSoftware\integration\mcal\src\integration\api\Mcal_Integration.h:33:
+In file included from output\inc/..\..\basicSoftware\integration\mcal\src\integration\api/Can_Integration.h:28:
+In file included from output\inc\Can.h:1:
+output\inc/..\..\basicSoftware\integration\mcal\src\modules\inc\Can.h:307:2: error: unknown type name 'Can_ControllerStateType'
+        Can_ControllerStateType State; /* Represents Canif_ControllerStateType states*/
+        ^
+output\inc/..\..\basicSoftware\integration\mcal\src\modules\inc\Can.h:313:5: error: unknown type name 'Can_ControllerStateType'
+    Can_ControllerStateType transition;
+    ^
+fatal error: too many errors emitted, stopping now [-ferror-limit=]
+21 errors generated.
+
+===================
+None
+===================
+scons: *** [output\objs\asw\NvMUT\NvMUT.o] Error 1
+In file included from ASW\ExeMgrUT\src\ExeMgrUT.c:30:
+In file included from output\inc\Rte_ExeMgrUT.h:1:
+In file included from output\inc/..\..\basicSoftware\src\rte\gen\Rte_ExeMgrUT.h:27:
+In file included from output\inc/..\..\basicSoftware\src\rte\gen/Rte.h:18:
+In file included from output\inc\Rte_UserCfg.h:1:
+In file included from output\inc/..\..\basicSoftware\integration\src\rte\Rte_UserCfg.h:27:
+In file included from output\inc\Std_Types.h:1:
+output\inc/..\..\basicSoftware\src\bsw\integration\Std_Types.h:17:2: error: The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+#error The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+ ^
+In file included from ASW\ExeMgrUT\src\ExeMgrUT.c:30:
+In file included from output\inc\Rte_ExeMgrUT.h:1:
+In file included from output\inc/..\..\basicSoftware\src\rte\gen\Rte_ExeMgrUT.h:27:
+In file included from output\inc/..\..\basicSoftware\src\rte\gen/Rte.h:18:
+In file included from output\inc\Rte_UserCfg.h:1:
+In file included from output\inc/..\..\basicSoftware\integration\src\rte\Rte_UserCfg.h:27:
+In file included from output\inc\Std_Types.h:1:
+In file included from output\inc/..\..\basicSoftware\src\bsw\integration\Std_Types.h:36:
+output\inc/..\..\basicSoftware\src\bsw\integration/Platform_Types.h:17:2: error: The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+#error The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+ ^
+In file included from ASW\ExeMgrUT\src\ExeMgrUT.c:30:
+In file included from output\inc\Rte_ExeMgrUT.h:1:
+In file included from output\inc/..\..\basicSoftware\src\rte\gen\Rte_ExeMgrUT.h:27:
+In file included from output\inc/..\..\basicSoftware\src\rte\gen/Rte.h:18:
+In file included from output\inc\Rte_UserCfg.h:1:
+In file included from output\inc/..\..\basicSoftware\integration\src\rte\Rte_UserCfg.h:27:
+In file included from output\inc\Std_Types.h:1:
+In file included from output\inc/..\..\basicSoftware\src\bsw\integration\Std_Types.h:36:
+In file included from output\inc/..\..\basicSoftware\src\bsw\integration/Platform_Types.h:28:
+output\inc/..\..\basicSoftware\src\bsw\integration/Platform_Types_Cfg.h:17:2: error: The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+#error The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+ ^
+In file included from ASW\ExeMgrUT\src\ExeMgrUT.c:30:
+In file included from output\inc\Rte_ExeMgrUT.h:1:
+In file included from output\inc/..\..\basicSoftware\src\rte\gen\Rte_ExeMgrUT.h:27:
+In file included from output\inc/..\..\basicSoftware\src\rte\gen/Rte.h:24:
+In file included from output\inc\Std_Types.h:1:
+output\inc/..\..\basicSoftware\src\bsw\integration\Std_Types.h:17:2: error: The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+#error The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+ ^
+In file included from ASW\ExeMgrUT\src\ExeMgrUT.c:30:
+In file included from output\inc\Rte_ExeMgrUT.h:1:
+In file included from output\inc/..\..\basicSoftware\src\rte\gen\Rte_ExeMgrUT.h:28:
+In file included from output\inc/..\..\basicSoftware\src\rte\gen/Rte_Intl.h:24:
+In file included from output\inc\Os.h:1:
+In file included from output\inc/..\..\basicSoftware\src\os\gen\Os.h:33:
+In file included from output\inc\Std_Types.h:1:
+output\inc/..\..\basicSoftware\src\bsw\integration\Std_Types.h:17:2: error: The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+#error The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+ ^
+In file included from ASW\ExeMgrUT\src\ExeMgrUT.c:30:
+In file included from output\inc\Rte_ExeMgrUT.h:1:
+In file included from output\inc/..\..\basicSoftware\src\rte\gen\Rte_ExeMgrUT.h:29:
+In file included from output\inc/..\..\basicSoftware\src\rte\gen/Rte_ExeMgrUT_Type.h:14:
+In file included from output\inc/..\..\basicSoftware\src\rte\gen/Rte_Type.h:15:
+In file included from output\inc/..\..\basicSoftware\src\rte\gen/Rte_Cfg.h:12:
+In file included from output\inc\Std_Types.h:1:
+output\inc/..\..\basicSoftware\src\bsw\integration\Std_Types.h:17:2: error: The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+#error The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+ ^
+In file included from ASW\ExeMgrUT\src\ExeMgrUT.c:30:
+In file included from output\inc\Rte_ExeMgrUT.h:1:
+In file included from output\inc/..\..\basicSoftware\src\rte\gen\Rte_ExeMgrUT.h:118:
+In file included from output\inc\EcuM_MemMap.h:1:
+output\inc/..\..\basicSoftware\src\bsw\EcuM\integration\EcuM_MemMap.h:11:2: error: The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+#error The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+ ^
+In file included from ASW\ExeMgrUT\src\ExeMgrUT.c:30:
+In file included from output\inc\Rte_ExeMgrUT.h:1:
+In file included from output\inc/..\..\basicSoftware\src\rte\gen\Rte_ExeMgrUT.h:118:
+In file included from output\inc\EcuM_MemMap.h:1:
+In file included from output\inc/..\..\basicSoftware\src\bsw\EcuM\integration\EcuM_MemMap.h:25:
+output\inc/..\..\basicSoftware\src\bsw\EcuM\integration/EcuM_Cfg_MemMap.h:11:2: error: The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+#error The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+ ^
+In file included from ASW\ExeMgrUT\src\ExeMgrUT.c:30:
+In file included from output\inc\Rte_ExeMgrUT.h:1:
+In file included from output\inc/..\..\basicSoftware\src\rte\gen\Rte_ExeMgrUT.h:133:
+In file included from output\inc\EcuM_MemMap.h:1:
+output\inc/..\..\basicSoftware\src\bsw\EcuM\integration\EcuM_MemMap.h:11:2: error: The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+#error The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+ ^
+In file included from ASW\ExeMgrUT\src\ExeMgrUT.c:30:
+In file included from output\inc\Rte_ExeMgrUT.h:1:
+In file included from output\inc/..\..\basicSoftware\src\rte\gen\Rte_ExeMgrUT.h:133:
+In file included from output\inc\EcuM_MemMap.h:1:
+In file included from output\inc/..\..\basicSoftware\src\bsw\EcuM\integration\EcuM_MemMap.h:25:
+output\inc/..\..\basicSoftware\src\bsw\EcuM\integration/EcuM_Cfg_MemMap.h:11:2: error: The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+#error The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+ ^
+In file included from ASW\ExeMgrUT\src\ExeMgrUT.c:32:
+In file included from output\inc\BswM_Integration.h:1:
+In file included from output\inc/..\..\basicSoftware\integration\src\bsw\BswM\user\BswM_Integration.h:25:
+In file included from output\inc\Std_Types.h:1:
+output\inc/..\..\basicSoftware\src\bsw\integration\Std_Types.h:17:2: error: The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+#error The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+ ^
+In file included from ASW\ExeMgrUT\src\ExeMgrUT.c:32:
+In file included from output\inc\BswM_Integration.h:1:
+In file included from output\inc/..\..\basicSoftware\integration\src\bsw\BswM\user\BswM_Integration.h:26:
+In file included from output\inc\BswM.h:1:
+In file included from output\inc/..\..\basicSoftware\src\bsw\BswM\api\BswM.h:10:
+In file included from output\inc\Std_Types.h:1:
+output\inc/..\..\basicSoftware\src\bsw\integration\Std_Types.h:17:2: error: The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+#error The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+ ^
+In file included from ASW\ExeMgrUT\src\ExeMgrUT.c:32:
+In file included from output\inc\BswM_Integration.h:1:
+In file included from output\inc/..\..\basicSoftware\integration\src\bsw\BswM\user\BswM_Integration.h:26:
+In file included from output\inc\BswM.h:1:
+In file included from output\inc/..\..\basicSoftware\src\bsw\BswM\api\BswM.h:11:
+In file included from output\inc\ComStack_Types.h:1:
+In file included from output\inc/..\..\basicSoftware\src\bsw\ComStack\api\ComStack_Types.h:19:
+In file included from output\inc\Std_Types.h:1:
+output\inc/..\..\basicSoftware\src\bsw\integration\Std_Types.h:17:2: error: The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+#error The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+ ^
+In file included from ASW\ExeMgrUT\src\ExeMgrUT.c:32:
+In file included from output\inc\BswM_Integration.h:1:
+In file included from output\inc/..\..\basicSoftware\integration\src\bsw\BswM\user\BswM_Integration.h:26:
+In file included from output\inc\BswM.h:1:
+In file included from output\inc/..\..\basicSoftware\src\bsw\BswM\api\BswM.h:14:
+In file included from output\inc/..\..\basicSoftware\src\bsw\BswM\api/BswM_Types.h:10:
+In file included from output\inc\Std_Types.h:1:
+output\inc/..\..\basicSoftware\src\bsw\integration\Std_Types.h:17:2: error: The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+#error The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+ ^
+In file included from ASW\ExeMgrUT\src\ExeMgrUT.c:32:
+In file included from output\inc\BswM_Integration.h:1:
+In file included from output\inc/..\..\basicSoftware\integration\src\bsw\BswM\user\BswM_Integration.h:26:
+In file included from output\inc\BswM.h:1:
+In file included from output\inc/..\..\basicSoftware\src\bsw\BswM\api\BswM.h:16:
+In file included from output\inc\BswM_PBcfg.h:1:
+In file included from output\inc/..\..\basicSoftware\src\bsw\BswM_PreCompile_and_PB_Variant\BswM_PBcfg.h:9:
+In file included from output\inc\Std_Types.h:1:
+output\inc/..\..\basicSoftware\src\bsw\integration\Std_Types.h:17:2: error: The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+#error The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+ ^
+In file included from ASW\ExeMgrUT\src\ExeMgrUT.c:32:
+In file included from output\inc\BswM_Integration.h:1:
+In file included from output\inc/..\..\basicSoftware\integration\src\bsw\BswM\user\BswM_Integration.h:26:
+In file included from output\inc\BswM.h:1:
+In file included from output\inc/..\..\basicSoftware\src\bsw\BswM\api\BswM.h:16:
+In file included from output\inc\BswM_PBcfg.h:1:
+In file included from output\inc/..\..\basicSoftware\src\bsw\BswM_PreCompile_and_PB_Variant\BswM_PBcfg.h:14:
+In file included from output\inc\CanSM_BswM.h:1:
+In file included from output\inc/..\..\basicSoftware\src\bsw\CanSM\api\CanSM_BswM.h:11:
+In file included from output\inc\CanSM_Cfg.h:1:
+In file included from output\inc/..\..\basicSoftware\src\bsw\CanSM\CanSM_Cfg.h:81:
+In file included from output\inc\Dem.h:1:
+In file included from output\inc/..\..\basicSoftware\src\bsw\Dem\api\Dem.h:14:
+In file included from output\inc/..\..\basicSoftware\src\bsw\Dem\api/Dem_Types.h:8:
+In file included from output\inc\Std_Types.h:1:
+output\inc/..\..\basicSoftware\src\bsw\integration\Std_Types.h:17:2: error: The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+#error The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+ ^
+In file included from ASW\ExeMgrUT\src\ExeMgrUT.c:32:
+In file included from output\inc\BswM_Integration.h:1:
+In file included from output\inc/..\..\basicSoftware\integration\src\bsw\BswM\user\BswM_Integration.h:26:
+In file included from output\inc\BswM.h:1:
+In file included from output\inc/..\..\basicSoftware\src\bsw\BswM\api\BswM.h:16:
+In file included from output\inc\BswM_PBcfg.h:1:
+In file included from output\inc/..\..\basicSoftware\src\bsw\BswM_PreCompile_and_PB_Variant\BswM_PBcfg.h:14:
+In file included from output\inc\CanSM_BswM.h:1:
+In file included from output\inc/..\..\basicSoftware\src\bsw\CanSM\api\CanSM_BswM.h:11:
+In file included from output\inc\CanSM_Cfg.h:1:
+In file included from output\inc/..\..\basicSoftware\src\bsw\CanSM\CanSM_Cfg.h:81:
+In file included from output\inc\Dem.h:1:
+In file included from output\inc/..\..\basicSoftware\src\bsw\Dem\api\Dem.h:14:
+In file included from output\inc/..\..\basicSoftware\src\bsw\Dem\api/Dem_Types.h:10:
+In file included from output\inc\Dem_Cfg_Client.h:1:
+In file included from output\inc/..\..\basicSoftware\src\bsw\Dem\Dem_Cfg_Client.h:11:
+In file included from output\inc\Std_Types.h:1:
+output\inc/..\..\basicSoftware\src\bsw\integration\Std_Types.h:17:2: error: The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+#error The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+ ^
+In file included from ASW\ExeMgrUT\src\ExeMgrUT.c:32:
+In file included from output\inc\BswM_Integration.h:1:
+In file included from output\inc/..\..\basicSoftware\integration\src\bsw\BswM\user\BswM_Integration.h:26:
+In file included from output\inc\BswM.h:1:
+In file included from output\inc/..\..\basicSoftware\src\bsw\BswM\api\BswM.h:16:
+In file included from output\inc\BswM_PBcfg.h:1:
+In file included from output\inc/..\..\basicSoftware\src\bsw\BswM_PreCompile_and_PB_Variant\BswM_PBcfg.h:14:
+In file included from output\inc\CanSM_BswM.h:1:
+In file included from output\inc/..\..\basicSoftware\src\bsw\CanSM\api\CanSM_BswM.h:11:
+In file included from output\inc\CanSM_Cfg.h:1:
+In file included from output\inc/..\..\basicSoftware\src\bsw\CanSM\CanSM_Cfg.h:81:
+In file included from output\inc\Dem.h:1:
+In file included from output\inc/..\..\basicSoftware\src\bsw\Dem\api\Dem.h:14:
+In file included from output\inc/..\..\basicSoftware\src\bsw\Dem\api\Dem_Types.h:11:
+In file included from output\inc\Dem_Cfg_NodeId.h:1:
+In file included from output\inc/..\..\basicSoftware\src\bsw\Dem\Dem_Cfg_NodeId.h:10:
+In file included from output\inc\Std_Types.h:1:
+output\inc/..\..\basicSoftware\src\bsw\integration\Std_Types.h:17:2: error: The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+#error The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+ ^
+In file included from ASW\ExeMgrUT\src\ExeMgrUT.c:32:
+In file included from output\inc\BswM_Integration.h:1:
+In file included from output\inc/..\..\basicSoftware\integration\src\bsw\BswM\user\BswM_Integration.h:26:
+In file included from output\inc\BswM.h:1:
+In file included from output\inc/..\..\basicSoftware\src\bsw\BswM\api\BswM.h:16:
+In file included from output\inc\BswM_PBcfg.h:1:
+In file included from output\inc/..\..\basicSoftware\src\bsw\BswM_PreCompile_and_PB_Variant\BswM_PBcfg.h:14:
+In file included from output\inc\CanSM_BswM.h:1:
+In file included from output\inc/..\..\basicSoftware\src\bsw\CanSM\api\CanSM_BswM.h:11:
+In file included from output\inc\CanSM_Cfg.h:1:
+In file included from output\inc/..\..\basicSoftware\src\bsw\CanSM\CanSM_Cfg.h:81:
+In file included from output\inc\Dem.h:1:
+In file included from output\inc/..\..\basicSoftware\src\bsw\Dem\api\Dem.h:20:
+In file included from output\inc\Dem_Cfg_Main.h:1:
+In file included from output\inc/..\..\basicSoftware\src\bsw\Dem\Dem_Cfg_Main.h:10:
+In file included from output\inc\Std_Types.h:1:
+output\inc/..\..\basicSoftware\src\bsw\integration\Std_Types.h:17:2: error: The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+#error The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+ ^
+In file included from ASW\ExeMgrUT\src\ExeMgrUT.c:32:
+In file included from output\inc\BswM_Integration.h:1:
+In file included from output\inc/..\..\basicSoftware\integration\src\bsw\BswM\user\BswM_Integration.h:26:
+In file included from output\inc\BswM.h:1:
+In file included from output\inc/..\..\basicSoftware\src\bsw\BswM\api\BswM.h:16:
+In file included from output\inc\BswM_PBcfg.h:1:
+In file included from output\inc/..\..\basicSoftware\src\bsw\BswM_PreCompile_and_PB_Variant\BswM_PBcfg.h:14:
+In file included from output\inc\CanSM_BswM.h:1:
+In file included from output\inc/..\..\basicSoftware\src\bsw\CanSM\api\CanSM_BswM.h:11:
+In file included from output\inc\CanSM_Cfg.h:1:
+In file included from output\inc/..\..\basicSoftware\src\bsw\CanSM\CanSM_Cfg.h:81:
+In file included from output\inc\Dem.h:1:
+In file included from output\inc/..\..\basicSoftware\src\bsw\Dem\api\Dem.h:21:
+In file included from output\inc\Dem_Cfg_Deb.h:1:
+In file included from output\inc/..\..\basicSoftware\src\bsw\Dem\Dem_Cfg_Deb.h:10:
+In file included from output\inc\Std_Types.h:1:
+output\inc/..\..\basicSoftware\src\bsw\integration\Std_Types.h:17:2: error: The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+#error The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+ ^
+fatal error: too many errors emitted, stopping now [-ferror-limit=]
+21 errors generated.
+
+===================
+None
+===================
+scons: *** [output\objs\asw\ExeMgrUT\ExeMgrUT.o] Error 1
+In file included from ASW\OUTP_SWC\src\OUTP_SWC.c:25:
+In file included from output\inc\Rte_OUTP_SWC.h:1:
+In file included from output\inc/..\..\basicSoftware\src\rte\gen\Rte_OUTP_SWC.h:27:
+In file included from output\inc/..\..\basicSoftware\src\rte\gen/Rte.h:18:
+In file included from output\inc\Rte_UserCfg.h:1:
+In file included from output\inc/..\..\basicSoftware\integration\src\rte\Rte_UserCfg.h:27:
+In file included from output\inc\Std_Types.h:1:
+output\inc/..\..\basicSoftware\src\bsw\integration\Std_Types.h:17:2: error: The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+#error The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+ ^
+In file included from ASW\OUTP_SWC\src\OUTP_SWC.c:25:
+In file included from output\inc\Rte_OUTP_SWC.h:1:
+In file included from output\inc/..\..\basicSoftware\src\rte\gen\Rte_OUTP_SWC.h:27:
+In file included from output\inc/..\..\basicSoftware\src\rte\gen/Rte.h:18:
+In file included from output\inc\Rte_UserCfg.h:1:
+In file included from output\inc/..\..\basicSoftware\integration\src\rte\Rte_UserCfg.h:27:
+In file included from output\inc\Std_Types.h:1:
+In file included from output\inc/..\..\basicSoftware\src\bsw\integration\Std_Types.h:36:
+output\inc/..\..\basicSoftware\src\bsw\integration/Platform_Types.h:17:2: error: The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+#error The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+ ^
+In file included from ASW\OUTP_SWC\src\OUTP_SWC.c:25:
+In file included from output\inc\Rte_OUTP_SWC.h:1:
+In file included from output\inc/..\..\basicSoftware\src\rte\gen\Rte_OUTP_SWC.h:27:
+In file included from output\inc/..\..\basicSoftware\src\rte\gen/Rte.h:18:
+In file included from output\inc\Rte_UserCfg.h:1:
+In file included from output\inc/..\..\basicSoftware\integration\src\rte\Rte_UserCfg.h:27:
+In file included from output\inc\Std_Types.h:1:
+In file included from output\inc/..\..\basicSoftware\src\bsw\integration\Std_Types.h:36:
+In file included from output\inc/..\..\basicSoftware\src\bsw\integration/Platform_Types.h:28:
+output\inc/..\..\basicSoftware\src\bsw\integration/Platform_Types_Cfg.h:17:2: error: The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+#error The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+ ^
+In file included from ASW\OUTP_SWC\src\OUTP_SWC.c:25:
+In file included from output\inc\Rte_OUTP_SWC.h:1:
+In file included from output\inc/..\..\basicSoftware\src\rte\gen\Rte_OUTP_SWC.h:27:
+In file included from output\inc/..\..\basicSoftware\src\rte\gen/Rte.h:24:
+In file included from output\inc\Std_Types.h:1:
+output\inc/..\..\basicSoftware\src\bsw\integration\Std_Types.h:17:2: error: The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+#error The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+ ^
+In file included from ASW\OUTP_SWC\src\OUTP_SWC.c:25:
+In file included from output\inc\Rte_OUTP_SWC.h:1:
+In file included from output\inc/..\..\basicSoftware\src\rte\gen\Rte_OUTP_SWC.h:28:
+In file included from output\inc/..\..\basicSoftware\src\rte\gen/Rte_Intl.h:24:
+In file included from output\inc\Os.h:1:
+In file included from output\inc/..\..\basicSoftware\src\os\gen\Os.h:33:
+In file included from output\inc\Std_Types.h:1:
+output\inc/..\..\basicSoftware\src\bsw\integration\Std_Types.h:17:2: error: The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+#error The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+ ^
+In file included from ASW\OUTP_SWC\src\OUTP_SWC.c:25:
+In file included from output\inc\Rte_OUTP_SWC.h:1:
+In file included from output\inc/..\..\basicSoftware\src\rte\gen\Rte_OUTP_SWC.h:29:
+In file included from output\inc/..\..\basicSoftware\src\rte\gen/Rte_OUTP_SWC_Type.h:14:
+In file included from output\inc/..\..\basicSoftware\src\rte\gen/Rte_Type.h:15:
+In file included from output\inc/..\..\basicSoftware\src\rte\gen/Rte_Cfg.h:12:
+In file included from output\inc\Std_Types.h:1:
+output\inc/..\..\basicSoftware\src\bsw\integration\Std_Types.h:17:2: error: The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+#error The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+ ^
+6 errors generated.
+
+===================
+None
+===================
+scons: *** [output\objs\asw\OUTP_SWC\OUTP_SWC.o] Error 1
+In file included from ASW\WdgMUT\src\WdgMUT.c:30:
+In file included from output\inc\Rte_WdgMUT.h:1:
+In file included from output\inc/..\..\basicSoftware\src\rte\gen\Rte_WdgMUT.h:27:
+In file included from output\inc/..\..\basicSoftware\src\rte\gen/Rte.h:18:
+In file included from output\inc\Rte_UserCfg.h:1:
+In file included from output\inc/..\..\basicSoftware\integration\src\rte\Rte_UserCfg.h:27:
+In file included from output\inc\Std_Types.h:1:
+output\inc/..\..\basicSoftware\src\bsw\integration\Std_Types.h:17:2: error: The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+#error The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+ ^
+In file included from ASW\WdgMUT\src\WdgMUT.c:30:
+In file included from output\inc\Rte_WdgMUT.h:1:
+In file included from output\inc/..\..\basicSoftware\src\rte\gen\Rte_WdgMUT.h:27:
+In file included from output\inc/..\..\basicSoftware\src\rte\gen/Rte.h:18:
+In file included from output\inc\Rte_UserCfg.h:1:
+In file included from output\inc/..\..\basicSoftware\integration\src\rte\Rte_UserCfg.h:27:
+In file included from output\inc\Std_Types.h:1:
+In file included from output\inc/..\..\basicSoftware\src\bsw\integration\Std_Types.h:36:
+output\inc/..\..\basicSoftware\src\bsw\integration/Platform_Types.h:17:2: error: The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+#error The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+ ^
+In file included from ASW\WdgMUT\src\WdgMUT.c:30:
+In file included from output\inc\Rte_WdgMUT.h:1:
+In file included from output\inc/..\..\basicSoftware\src\rte\gen\Rte_WdgMUT.h:27:
+In file included from output\inc/..\..\basicSoftware\src\rte\gen/Rte.h:18:
+In file included from output\inc\Rte_UserCfg.h:1:
+In file included from output\inc/..\..\basicSoftware\integration\src\rte\Rte_UserCfg.h:27:
+In file included from output\inc\Std_Types.h:1:
+In file included from output\inc/..\..\basicSoftware\src\bsw\integration\Std_Types.h:36:
+In file included from output\inc/..\..\basicSoftware\src\bsw\integration/Platform_Types.h:28:
+output\inc/..\..\basicSoftware\src\bsw\integration/Platform_Types_Cfg.h:17:2: error: The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+#error The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+ ^
+In file included from ASW\WdgMUT\src\WdgMUT.c:30:
+In file included from output\inc\Rte_WdgMUT.h:1:
+In file included from output\inc/..\..\basicSoftware\src\rte\gen\Rte_WdgMUT.h:27:
+In file included from output\inc/..\..\basicSoftware\src\rte\gen/Rte.h:24:
+In file included from output\inc\Std_Types.h:1:
+output\inc/..\..\basicSoftware\src\bsw\integration\Std_Types.h:17:2: error: The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+#error The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+ ^
+In file included from ASW\WdgMUT\src\WdgMUT.c:30:
+In file included from output\inc\Rte_WdgMUT.h:1:
+In file included from output\inc/..\..\basicSoftware\src\rte\gen\Rte_WdgMUT.h:28:
+In file included from output\inc/..\..\basicSoftware\src\rte\gen/Rte_Intl.h:24:
+In file included from output\inc\Os.h:1:
+In file included from output\inc/..\..\basicSoftware\src\os\gen\Os.h:33:
+In file included from output\inc\Std_Types.h:1:
+output\inc/..\..\basicSoftware\src\bsw\integration\Std_Types.h:17:2: error: The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+#error The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+ ^
+In file included from ASW\WdgMUT\src\WdgMUT.c:30:
+In file included from output\inc\Rte_WdgMUT.h:1:
+In file included from output\inc/..\..\basicSoftware\src\rte\gen\Rte_WdgMUT.h:29:
+In file included from output\inc/..\..\basicSoftware\src\rte\gen/Rte_WdgMUT_Type.h:14:
+In file included from output\inc/..\..\basicSoftware\src\rte\gen/Rte_Type.h:15:
+In file included from output\inc/..\..\basicSoftware\src\rte\gen/Rte_Cfg.h:12:
+In file included from output\inc\Std_Types.h:1:
+output\inc/..\..\basicSoftware\src\bsw\integration\Std_Types.h:17:2: error: The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+#error The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+ ^
+In file included from ASW\WdgMUT\src\WdgMUT.c:30:
+In file included from output\inc\Rte_WdgMUT.h:1:
+In file included from output\inc/..\..\basicSoftware\src\rte\gen\Rte_WdgMUT.h:117:
+In file included from output\inc\WdgM_MemMap.h:1:
+output\inc/..\..\basicSoftware\src\bsw\WdgM\integration\WdgM_MemMap.h:11:2: error: The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+#error The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+ ^
+In file included from ASW\WdgMUT\src\WdgMUT.c:30:
+In file included from output\inc\Rte_WdgMUT.h:1:
+In file included from output\inc/..\..\basicSoftware\src\rte\gen\Rte_WdgMUT.h:133:
+In file included from output\inc\WdgM_MemMap.h:1:
+output\inc/..\..\basicSoftware\src\bsw\WdgM\integration\WdgM_MemMap.h:11:2: error: The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+#error The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+ ^
+In file included from ASW\WdgMUT\src\WdgMUT.c:30:
+In file included from output\inc\Rte_WdgMUT.h:1:
+In file included from output\inc/..\..\basicSoftware\src\rte\gen\Rte_WdgMUT.h:135:
+In file included from output\inc\WdgM_MemMap.h:1:
+output\inc/..\..\basicSoftware\src\bsw\WdgM\integration\WdgM_MemMap.h:11:2: error: The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+#error The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+ ^
+In file included from ASW\WdgMUT\src\WdgMUT.c:30:
+In file included from output\inc\Rte_WdgMUT.h:1:
+In file included from output\inc/..\..\basicSoftware\src\rte\gen\Rte_WdgMUT.h:139:
+In file included from output\inc\WdgM_MemMap.h:1:
+output\inc/..\..\basicSoftware\src\bsw\WdgM\integration\WdgM_MemMap.h:11:2: error: The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+#error The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+ ^
+In file included from ASW\WdgMUT\src\WdgMUT.c:31:
+In file included from output\inc\WdgM.h:1:
+In file included from output\inc/..\..\basicSoftware\src\bsw\WdgM\api\WdgM.h:14:
+In file included from output\inc\WdgM_Cfg.h:1:
+In file included from output\inc/..\..\basicSoftware\src\bsw\WdgM\WdgM_Cfg.h:24:
+In file included from output\inc\Std_Types.h:1:
+output\inc/..\..\basicSoftware\src\bsw\integration\Std_Types.h:17:2: error: The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+#error The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+ ^
+In file included from ASW\WdgMUT\src\WdgMUT.c:31:
+In file included from output\inc\WdgM.h:1:
+In file included from output\inc/..\..\basicSoftware\src\bsw\WdgM\api\WdgM.h:14:
+In file included from output\inc\WdgM_Cfg.h:1:
+In file included from output\inc/..\..\basicSoftware\src\bsw\WdgM\WdgM_Cfg.h:35:
+In file included from output\inc\Det.h:1:
+In file included from output\inc/..\..\basicSoftware\src\bsw\Det\api\Det.h:27:
+In file included from output\inc/..\..\basicSoftware\src\bsw\Det\api/Det_Types.h:16:
+In file included from output\inc\Std_Types.h:1:
+output\inc/..\..\basicSoftware\src\bsw\integration\Std_Types.h:17:2: error: The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+#error The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+ ^
+In file included from ASW\WdgMUT\src\WdgMUT.c:31:
+In file included from output\inc\WdgM.h:1:
+In file included from output\inc/..\..\basicSoftware\src\bsw\WdgM\api\WdgM.h:14:
+In file included from output\inc\WdgM_Cfg.h:1:
+In file included from output\inc/..\..\basicSoftware\src\bsw\WdgM\WdgM_Cfg.h:35:
+In file included from output\inc\Det.h:1:
+In file included from output\inc/..\..\basicSoftware\src\bsw\Det\api\Det.h:28:
+In file included from output\inc\Det_Cfg.h:1:
+In file included from output\inc/..\..\basicSoftware\src\bsw\Det\Det_Cfg.h:50:
+In file included from output\inc\Det_MemMap.h:1:
+output\inc/..\..\basicSoftware\src\bsw\Det\integration\Det_MemMap.h:11:2: error: The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+#error The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+ ^
+In file included from ASW\WdgMUT\src\WdgMUT.c:31:
+In file included from output\inc\WdgM.h:1:
+In file included from output\inc/..\..\basicSoftware\src\bsw\WdgM\api\WdgM.h:14:
+In file included from output\inc\WdgM_Cfg.h:1:
+In file included from output\inc/..\..\basicSoftware\src\bsw\WdgM\WdgM_Cfg.h:35:
+In file included from output\inc\Det.h:1:
+In file included from output\inc/..\..\basicSoftware\src\bsw\Det\api\Det.h:28:
+In file included from output\inc\Det_Cfg.h:1:
+In file included from output\inc/..\..\basicSoftware\src\bsw\Det\Det_Cfg.h:53:
+In file included from output\inc\Det_MemMap.h:1:
+output\inc/..\..\basicSoftware\src\bsw\Det\integration\Det_MemMap.h:11:2: error: The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+#error The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+ ^
+In file included from ASW\WdgMUT\src\WdgMUT.c:31:
+In file included from output\inc\WdgM.h:1:
+In file included from output\inc/..\..\basicSoftware\src\bsw\WdgM\api\WdgM.h:14:
+In file included from output\inc\WdgM_Cfg.h:1:
+In file included from output\inc/..\..\basicSoftware\src\bsw\WdgM\WdgM_Cfg.h:35:
+In file included from output\inc\Det.h:1:
+In file included from output\inc/..\..\basicSoftware\src\bsw\Det\api\Det.h:36:
+In file included from output\inc\Det_MemMap.h:1:
+output\inc/..\..\basicSoftware\src\bsw\Det\integration\Det_MemMap.h:11:2: error: The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+#error The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+ ^
+In file included from ASW\WdgMUT\src\WdgMUT.c:31:
+In file included from output\inc\WdgM.h:1:
+In file included from output\inc/..\..\basicSoftware\src\bsw\WdgM\api\WdgM.h:14:
+In file included from output\inc\WdgM_Cfg.h:1:
+In file included from output\inc/..\..\basicSoftware\src\bsw\WdgM\WdgM_Cfg.h:35:
+In file included from output\inc\Det.h:1:
+In file included from output\inc/..\..\basicSoftware\src\bsw\Det\api\Det.h:146:
+In file included from output\inc\Det_MemMap.h:1:
+output\inc/..\..\basicSoftware\src\bsw\Det\integration\Det_MemMap.h:11:2: error: The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+#error The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+ ^
+In file included from ASW\WdgMUT\src\WdgMUT.c:31:
+In file included from output\inc\WdgM.h:1:
+In file included from output\inc/..\..\basicSoftware\src\bsw\WdgM\api\WdgM.h:14:
+In file included from output\inc\WdgM_Cfg.h:1:
+In file included from output\inc/..\..\basicSoftware\src\bsw\WdgM\WdgM_Cfg.h:48:
+In file included from output\inc\WdgIf.h:1:
+In file included from output\inc/..\..\basicSoftware\src\bsw\WdgIf\api\WdgIf.h:37:
+In file included from output\inc\Std_Types.h:1:
+output\inc/..\..\basicSoftware\src\bsw\integration\Std_Types.h:17:2: error: The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+#error The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+ ^
+In file included from ASW\WdgMUT\src\WdgMUT.c:31:
+In file included from output\inc\WdgM.h:1:
+In file included from output\inc/..\..\basicSoftware\src\bsw\WdgM\api\WdgM.h:14:
+In file included from output\inc\WdgM_Cfg.h:1:
+In file included from output\inc/..\..\basicSoftware\src\bsw\WdgM\WdgM_Cfg.h:48:
+In file included from output\inc\WdgIf.h:1:
+In file included from output\inc/..\..\basicSoftware\src\bsw\WdgIf\api\WdgIf.h:50:
+In file included from output\inc\WdgIf_Cfg.h:1:
+In file included from output\inc/..\..\basicSoftware\src\bsw\WdgIf\WdgIf_Cfg.h:14:
+In file included from output\inc\ExtWdg.h:1:
+In file included from output\inc/..\..\cdd\ExtWdg\api\ExtWdg.h:25:
+In file included from output\inc\Std_Types.h:1:
+output\inc/..\..\basicSoftware\src\bsw\integration\Std_Types.h:17:2: error: The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+#error The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+ ^
+In file included from ASW\WdgMUT\src\WdgMUT.c:31:
+In file included from output\inc\WdgM.h:1:
+In file included from output\inc/..\..\basicSoftware\src\bsw\WdgM\api\WdgM.h:14:
+In file included from output\inc\WdgM_Cfg.h:1:
+In file included from output\inc/..\..\basicSoftware\src\bsw\WdgM\WdgM_Cfg.h:48:
+In file included from output\inc\WdgIf.h:1:
+In file included from output\inc/..\..\basicSoftware\src\bsw\WdgIf\api\WdgIf.h:50:
+In file included from output\inc\WdgIf_Cfg.h:1:
+In file included from output\inc/..\..\basicSoftware\src\bsw\WdgIf\WdgIf_Cfg.h:14:
+In file included from output\inc\ExtWdg.h:1:
+In file included from output\inc/..\..\cdd\ExtWdg\api\ExtWdg.h:26:
+In file included from output\inc\WdgIf_Types.h:1:
+In file included from output\inc/..\..\basicSoftware\src\bsw\WdgIf\api\WdgIf_Types.h:11:
+In file included from output\inc\Std_Types.h:1:
+output\inc/..\..\basicSoftware\src\bsw\integration\Std_Types.h:17:2: error: The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+#error The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+ ^
+In file included from ASW\WdgMUT\src\WdgMUT.c:31:
+In file included from output\inc\WdgM.h:1:
+In file included from output\inc/..\..\basicSoftware\src\bsw\WdgM\api\WdgM.h:14:
+In file included from output\inc\WdgM_Cfg.h:1:
+In file included from output\inc/..\..\basicSoftware\src\bsw\WdgM\WdgM_Cfg.h:48:
+In file included from output\inc\WdgIf.h:1:
+In file included from output\inc/..\..\basicSoftware\src\bsw\WdgIf\api\WdgIf.h:50:
+In file included from output\inc\WdgIf_Cfg.h:1:
+In file included from output\inc/..\..\basicSoftware\src\bsw\WdgIf\WdgIf_Cfg.h:14:
+In file included from output\inc\ExtWdg.h:1:
+In file included from output\inc/..\..\cdd\ExtWdg\api\ExtWdg.h:27:
+In file included from output\inc\rba_BswSrv.h:1:
+In file included from output\inc/..\..\basicSoftware\integration\src\bsw\integration\rba_BswSrv\api\rba_BswSrv.h:21:
+In file included from output\inc\Std_Types.h:1:
+output\inc/..\..\basicSoftware\src\bsw\integration\Std_Types.h:17:2: error: The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+#error The content of this file is a template which provides empty stubs. The content of this file must be completed by the integrator accordingly to project specific requirements
+ ^
+fatal error: too many errors emitted, stopping now [-ferror-limit=]
+21 errors generated.
+
+===================
+None
+===================
+scons: *** [output\objs\asw\WdgMUT\WdgMUT.o] Error 1
+scons: building terminated because of errors.

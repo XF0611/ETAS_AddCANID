@@ -1,0 +1,2343 @@
+<?xml version='1.0'?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00044.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE>
+      <SHORT-NAME>BaseBand</SHORT-NAME>
+      <ELEMENTS>
+        <ECUC-MODULE-CONFIGURATION-VALUES>
+          <SHORT-NAME>BaseBand</SHORT-NAME>
+          <DEFINITION-REF DEST="ECUC-MODULE-DEF">/BaseBandPackage/BaseBand</DEFINITION-REF>
+          <IMPLEMENTATION-CONFIG-VARIANT>VARIANT-PRE-COMPILE</IMPLEMENTATION-CONFIG-VARIANT>
+          <CONTAINERS>
+            <ECUC-CONTAINER-VALUE>
+              <SHORT-NAME>BaseBandConfigSet_0</SHORT-NAME>
+              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/BaseBandPackage/BaseBand/BaseBandConfig</DEFINITION-REF>
+              <SUB-CONTAINERS>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>ADC_CONFIG_PARAMS</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/ADC_CONFIG_PARAMS</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/ADC_CONFIG_PARAMS/adc_comp_en</DEFINITION-REF>
+                      <VALUE>0</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/ADC_CONFIG_PARAMS/adc_sample_end</DEFINITION-REF>
+                      <VALUE>27.6</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/ADC_CONFIG_PARAMS/adc_sample_start</DEFINITION-REF>
+                      <VALUE>2.0</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/ADC_CONFIG_PARAMS/dec_factor</DEFINITION-REF>
+                      <VALUE>1</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>AGC_CONFIG_PARAMS</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/AGC_CONFIG_PARAMS</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/AGC_CONFIG_PARAMS/agc_align_en</DEFINITION-REF>
+                      <VALUE>0</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                  <SUB-CONTAINERS>
+                    <ECUC-CONTAINER-VALUE>
+                      <SHORT-NAME>agc_code</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/AGC_CONFIG_PARAMS/agc_code</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/AGC_CONFIG_PARAMS/agc_code/agc_code0</DEFINITION-REF>
+                          <VALUE>211</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/AGC_CONFIG_PARAMS/agc_code/agc_code1</DEFINITION-REF>
+                          <VALUE>211</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/AGC_CONFIG_PARAMS/agc_code/agc_code10</DEFINITION-REF>
+                          <VALUE>211</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/AGC_CONFIG_PARAMS/agc_code/agc_code11</DEFINITION-REF>
+                          <VALUE>211</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/AGC_CONFIG_PARAMS/agc_code/agc_code12</DEFINITION-REF>
+                          <VALUE>211</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/AGC_CONFIG_PARAMS/agc_code/agc_code2</DEFINITION-REF>
+                          <VALUE>211</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/AGC_CONFIG_PARAMS/agc_code/agc_code3</DEFINITION-REF>
+                          <VALUE>211</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/AGC_CONFIG_PARAMS/agc_code/agc_code4</DEFINITION-REF>
+                          <VALUE>211</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/AGC_CONFIG_PARAMS/agc_code/agc_code5</DEFINITION-REF>
+                          <VALUE>211</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/AGC_CONFIG_PARAMS/agc_code/agc_code6</DEFINITION-REF>
+                          <VALUE>211</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/AGC_CONFIG_PARAMS/agc_code/agc_code7</DEFINITION-REF>
+                          <VALUE>211</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/AGC_CONFIG_PARAMS/agc_code/agc_code8</DEFINITION-REF>
+                          <VALUE>211</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/AGC_CONFIG_PARAMS/agc_code/agc_code9</DEFINITION-REF>
+                          <VALUE>211</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                  </SUB-CONTAINERS>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>ANT_CONFIG_PARAMS</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/ANT_CONFIG_PARAMS</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/ANT_CONFIG_PARAMS/ant_info_flash_addr</DEFINITION-REF>
+                      <VALUE>65536</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/ANT_CONFIG_PARAMS/ant_info_from_flash</DEFINITION-REF>
+                      <VALUE>1</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                  <SUB-CONTAINERS>
+                    <ECUC-CONTAINER-VALUE>
+                      <SHORT-NAME>ant_comps</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/ANT_CONFIG_PARAMS/ant_comps</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/ANT_CONFIG_PARAMS/ant_comps/ant_comps0</DEFINITION-REF>
+                          <VALUE>0.0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/ANT_CONFIG_PARAMS/ant_comps/ant_comps1</DEFINITION-REF>
+                          <VALUE>0.0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/ANT_CONFIG_PARAMS/ant_comps/ant_comps10</DEFINITION-REF>
+                          <VALUE>0.0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/ANT_CONFIG_PARAMS/ant_comps/ant_comps11</DEFINITION-REF>
+                          <VALUE>0.0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/ANT_CONFIG_PARAMS/ant_comps/ant_comps12</DEFINITION-REF>
+                          <VALUE>0.0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/ANT_CONFIG_PARAMS/ant_comps/ant_comps13</DEFINITION-REF>
+                          <VALUE>0.0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/ANT_CONFIG_PARAMS/ant_comps/ant_comps14</DEFINITION-REF>
+                          <VALUE>0.0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/ANT_CONFIG_PARAMS/ant_comps/ant_comps15</DEFINITION-REF>
+                          <VALUE>0.0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/ANT_CONFIG_PARAMS/ant_comps/ant_comps2</DEFINITION-REF>
+                          <VALUE>0.0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/ANT_CONFIG_PARAMS/ant_comps/ant_comps3</DEFINITION-REF>
+                          <VALUE>0.0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/ANT_CONFIG_PARAMS/ant_comps/ant_comps4</DEFINITION-REF>
+                          <VALUE>0.0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/ANT_CONFIG_PARAMS/ant_comps/ant_comps5</DEFINITION-REF>
+                          <VALUE>0.0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/ANT_CONFIG_PARAMS/ant_comps/ant_comps6</DEFINITION-REF>
+                          <VALUE>0.0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/ANT_CONFIG_PARAMS/ant_comps/ant_comps7</DEFINITION-REF>
+                          <VALUE>0.0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/ANT_CONFIG_PARAMS/ant_comps/ant_comps8</DEFINITION-REF>
+                          <VALUE>0.0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/ANT_CONFIG_PARAMS/ant_comps/ant_comps9</DEFINITION-REF>
+                          <VALUE>0.0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE>
+                      <SHORT-NAME>ant_pos</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/ANT_CONFIG_PARAMS/ant_pos</DEFINITION-REF>
+                      <SUB-CONTAINERS>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>ant_pos0</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/ANT_CONFIG_PARAMS/ant_pos/ant_pos0</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/ANT_CONFIG_PARAMS/ant_pos/ant_pos0/ant_pos_x</DEFINITION-REF>
+                              <VALUE>0.0</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/ANT_CONFIG_PARAMS/ant_pos/ant_pos0/ant_pos_y</DEFINITION-REF>
+                              <VALUE>0.0</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>ant_pos1</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/ANT_CONFIG_PARAMS/ant_pos/ant_pos1</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/ANT_CONFIG_PARAMS/ant_pos/ant_pos1/ant_pos_x</DEFINITION-REF>
+                              <VALUE>0.612</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/ANT_CONFIG_PARAMS/ant_pos/ant_pos1/ant_pos_y</DEFINITION-REF>
+                              <VALUE>0.0</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>ant_pos10</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/ANT_CONFIG_PARAMS/ant_pos/ant_pos10</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/ANT_CONFIG_PARAMS/ant_pos/ant_pos10/ant_pos_x</DEFINITION-REF>
+                              <VALUE>3.672</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/ANT_CONFIG_PARAMS/ant_pos/ant_pos10/ant_pos_y</DEFINITION-REF>
+                              <VALUE>0.0</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>ant_pos11</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/ANT_CONFIG_PARAMS/ant_pos/ant_pos11</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/ANT_CONFIG_PARAMS/ant_pos/ant_pos11/ant_pos_x</DEFINITION-REF>
+                              <VALUE>4.284</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/ANT_CONFIG_PARAMS/ant_pos/ant_pos11/ant_pos_y</DEFINITION-REF>
+                              <VALUE>0.0</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>ant_pos12</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/ANT_CONFIG_PARAMS/ant_pos/ant_pos12</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/ANT_CONFIG_PARAMS/ant_pos/ant_pos12/ant_pos_x</DEFINITION-REF>
+                              <VALUE>4.896</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/ANT_CONFIG_PARAMS/ant_pos/ant_pos12/ant_pos_y</DEFINITION-REF>
+                              <VALUE>0.0</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>ant_pos13</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/ANT_CONFIG_PARAMS/ant_pos/ant_pos13</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/ANT_CONFIG_PARAMS/ant_pos/ant_pos13/ant_pos_x</DEFINITION-REF>
+                              <VALUE>5.508</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/ANT_CONFIG_PARAMS/ant_pos/ant_pos13/ant_pos_y</DEFINITION-REF>
+                              <VALUE>0.0</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>ant_pos14</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/ANT_CONFIG_PARAMS/ant_pos/ant_pos14</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/ANT_CONFIG_PARAMS/ant_pos/ant_pos14/ant_pos_x</DEFINITION-REF>
+                              <VALUE>6.12</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/ANT_CONFIG_PARAMS/ant_pos/ant_pos14/ant_pos_y</DEFINITION-REF>
+                              <VALUE>0.0</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>ant_pos15</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/ANT_CONFIG_PARAMS/ant_pos/ant_pos15</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/ANT_CONFIG_PARAMS/ant_pos/ant_pos15/ant_pos_x</DEFINITION-REF>
+                              <VALUE>6.732</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/ANT_CONFIG_PARAMS/ant_pos/ant_pos15/ant_pos_y</DEFINITION-REF>
+                              <VALUE>0.0</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>ant_pos2</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/ANT_CONFIG_PARAMS/ant_pos/ant_pos2</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/ANT_CONFIG_PARAMS/ant_pos/ant_pos2/ant_pos_x</DEFINITION-REF>
+                              <VALUE>1.224</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/ANT_CONFIG_PARAMS/ant_pos/ant_pos2/ant_pos_y</DEFINITION-REF>
+                              <VALUE>0.0</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>ant_pos3</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/ANT_CONFIG_PARAMS/ant_pos/ant_pos3</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/ANT_CONFIG_PARAMS/ant_pos/ant_pos3/ant_pos_x</DEFINITION-REF>
+                              <VALUE>1.836</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/ANT_CONFIG_PARAMS/ant_pos/ant_pos3/ant_pos_y</DEFINITION-REF>
+                              <VALUE>0.0</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>ant_pos4</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/ANT_CONFIG_PARAMS/ant_pos/ant_pos4</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/ANT_CONFIG_PARAMS/ant_pos/ant_pos4/ant_pos_x</DEFINITION-REF>
+                              <VALUE>1.224</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/ANT_CONFIG_PARAMS/ant_pos/ant_pos4/ant_pos_y</DEFINITION-REF>
+                              <VALUE>2.142</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>ant_pos5</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/ANT_CONFIG_PARAMS/ant_pos/ant_pos5</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/ANT_CONFIG_PARAMS/ant_pos/ant_pos5/ant_pos_x</DEFINITION-REF>
+                              <VALUE>1.836</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/ANT_CONFIG_PARAMS/ant_pos/ant_pos5/ant_pos_y</DEFINITION-REF>
+                              <VALUE>2.142</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>ant_pos6</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/ANT_CONFIG_PARAMS/ant_pos/ant_pos6</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/ANT_CONFIG_PARAMS/ant_pos/ant_pos6/ant_pos_x</DEFINITION-REF>
+                              <VALUE>2.448</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/ANT_CONFIG_PARAMS/ant_pos/ant_pos6/ant_pos_y</DEFINITION-REF>
+                              <VALUE>2.142</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>ant_pos7</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/ANT_CONFIG_PARAMS/ant_pos/ant_pos7</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/ANT_CONFIG_PARAMS/ant_pos/ant_pos7/ant_pos_x</DEFINITION-REF>
+                              <VALUE>3.06</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/ANT_CONFIG_PARAMS/ant_pos/ant_pos7/ant_pos_y</DEFINITION-REF>
+                              <VALUE>2.142</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>ant_pos8</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/ANT_CONFIG_PARAMS/ant_pos/ant_pos8</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/ANT_CONFIG_PARAMS/ant_pos/ant_pos8/ant_pos_x</DEFINITION-REF>
+                              <VALUE>2.448</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/ANT_CONFIG_PARAMS/ant_pos/ant_pos8/ant_pos_y</DEFINITION-REF>
+                              <VALUE>0.0</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>ant_pos9</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/ANT_CONFIG_PARAMS/ant_pos/ant_pos9</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/ANT_CONFIG_PARAMS/ant_pos/ant_pos9/ant_pos_x</DEFINITION-REF>
+                              <VALUE>3.06</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/ANT_CONFIG_PARAMS/ant_pos/ant_pos9/ant_pos_y</DEFINITION-REF>
+                              <VALUE>0.0</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                      </SUB-CONTAINERS>
+                    </ECUC-CONTAINER-VALUE>
+                  </SUB-CONTAINERS>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>CFAR_CONFIG_PARAMS</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_combine_dirs</DEFINITION-REF>
+                      <VALUE>0</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_crswin_rng_size</DEFINITION-REF>
+                      <VALUE>5</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_crswin_rng_skip</DEFINITION-REF>
+                      <VALUE>1</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_crswin_vel_size</DEFINITION-REF>
+                      <VALUE>5</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_crswin_vel_skip</DEFINITION-REF>
+                      <VALUE>1</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_mimo_win</DEFINITION-REF>
+                      <VALUE>cheb</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_noise_type</DEFINITION-REF>
+                      <VALUE>255</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_pk_en</DEFINITION-REF>
+                      <VALUE>255</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_recwin_decimate</DEFINITION-REF>
+                      <VALUE>0</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_region_algo_type</DEFINITION-REF>
+                      <VALUE>0</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_sliding_win</DEFINITION-REF>
+                      <VALUE>0</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                  <SUB-CONTAINERS>
+                    <ECUC-CONTAINER-VALUE>
+                      <SHORT-NAME>cfar_ca_alpha</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_ca_alpha</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_ca_alpha/cfar_ca_alpha0</DEFINITION-REF>
+                          <VALUE>15.0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_ca_alpha/cfar_ca_alpha1</DEFINITION-REF>
+                          <VALUE>15.0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_ca_alpha/cfar_ca_alpha2</DEFINITION-REF>
+                          <VALUE>15.0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_ca_alpha/cfar_ca_alpha3</DEFINITION-REF>
+                          <VALUE>15.0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_ca_alpha/cfar_ca_alpha4</DEFINITION-REF>
+                          <VALUE>15.0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_ca_alpha/cfar_ca_alpha5</DEFINITION-REF>
+                          <VALUE>15.0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_ca_alpha/cfar_ca_alpha6</DEFINITION-REF>
+                          <VALUE>15.0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_ca_alpha/cfar_ca_alpha7</DEFINITION-REF>
+                          <VALUE>15.0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE>
+                      <SHORT-NAME>cfar_ca_n</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_ca_n</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_ca_n/cfar_ca_n0</DEFINITION-REF>
+                          <VALUE>2</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_ca_n/cfar_ca_n1</DEFINITION-REF>
+                          <VALUE>2</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_ca_n/cfar_ca_n2</DEFINITION-REF>
+                          <VALUE>2</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_ca_n/cfar_ca_n3</DEFINITION-REF>
+                          <VALUE>2</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_ca_n/cfar_ca_n4</DEFINITION-REF>
+                          <VALUE>2</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_ca_n/cfar_ca_n5</DEFINITION-REF>
+                          <VALUE>2</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_ca_n/cfar_ca_n6</DEFINITION-REF>
+                          <VALUE>2</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_ca_n/cfar_ca_n7</DEFINITION-REF>
+                          <VALUE>2</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE>
+                      <SHORT-NAME>cfar_combine_phis</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_combine_phis</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_combine_phis/cfar_combine_phis0</DEFINITION-REF>
+                          <VALUE>0.0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_combine_phis/cfar_combine_phis1</DEFINITION-REF>
+                          <VALUE>0.0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_combine_phis/cfar_combine_phis10</DEFINITION-REF>
+                          <VALUE>0.0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_combine_phis/cfar_combine_phis11</DEFINITION-REF>
+                          <VALUE>0.0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_combine_phis/cfar_combine_phis12</DEFINITION-REF>
+                          <VALUE>0.0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_combine_phis/cfar_combine_phis13</DEFINITION-REF>
+                          <VALUE>0.0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_combine_phis/cfar_combine_phis14</DEFINITION-REF>
+                          <VALUE>0.0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_combine_phis/cfar_combine_phis15</DEFINITION-REF>
+                          <VALUE>0.0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_combine_phis/cfar_combine_phis2</DEFINITION-REF>
+                          <VALUE>0.0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_combine_phis/cfar_combine_phis3</DEFINITION-REF>
+                          <VALUE>0.0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_combine_phis/cfar_combine_phis4</DEFINITION-REF>
+                          <VALUE>0.0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_combine_phis/cfar_combine_phis5</DEFINITION-REF>
+                          <VALUE>0.0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_combine_phis/cfar_combine_phis6</DEFINITION-REF>
+                          <VALUE>0.0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_combine_phis/cfar_combine_phis7</DEFINITION-REF>
+                          <VALUE>0.0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_combine_phis/cfar_combine_phis8</DEFINITION-REF>
+                          <VALUE>0.0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_combine_phis/cfar_combine_phis9</DEFINITION-REF>
+                          <VALUE>0.0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE>
+                      <SHORT-NAME>cfar_combine_thetas</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_combine_thetas</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_combine_thetas/cfar_combine_thetas0</DEFINITION-REF>
+                          <VALUE>0.0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_combine_thetas/cfar_combine_thetas1</DEFINITION-REF>
+                          <VALUE>5.0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_combine_thetas/cfar_combine_thetas10</DEFINITION-REF>
+                          <VALUE>-25.0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_combine_thetas/cfar_combine_thetas11</DEFINITION-REF>
+                          <VALUE>40.0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_combine_thetas/cfar_combine_thetas12</DEFINITION-REF>
+                          <VALUE>-40.0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_combine_thetas/cfar_combine_thetas13</DEFINITION-REF>
+                          <VALUE>0.0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_combine_thetas/cfar_combine_thetas14</DEFINITION-REF>
+                          <VALUE>0.0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_combine_thetas/cfar_combine_thetas15</DEFINITION-REF>
+                          <VALUE>0.0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_combine_thetas/cfar_combine_thetas2</DEFINITION-REF>
+                          <VALUE>-5.0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_combine_thetas/cfar_combine_thetas3</DEFINITION-REF>
+                          <VALUE>10.0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_combine_thetas/cfar_combine_thetas4</DEFINITION-REF>
+                          <VALUE>-10.0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_combine_thetas/cfar_combine_thetas5</DEFINITION-REF>
+                          <VALUE>15.0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_combine_thetas/cfar_combine_thetas6</DEFINITION-REF>
+                          <VALUE>-15.0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_combine_thetas/cfar_combine_thetas7</DEFINITION-REF>
+                          <VALUE>20.0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_combine_thetas/cfar_combine_thetas8</DEFINITION-REF>
+                          <VALUE>-20.0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_combine_thetas/cfar_combine_thetas9</DEFINITION-REF>
+                          <VALUE>25.0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE>
+                      <SHORT-NAME>cfar_mimo_win_params</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_mimo_win_params</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_mimo_win_params/cfar_mimo_win_params0</DEFINITION-REF>
+                          <VALUE>30.0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_mimo_win_params/cfar_mimo_win_params1</DEFINITION-REF>
+                          <VALUE>0.0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_mimo_win_params/cfar_mimo_win_params2</DEFINITION-REF>
+                          <VALUE>0.0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE>
+                      <SHORT-NAME>cfar_nr_alpha</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_nr_alpha</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_nr_alpha/cfar_nr_alpha0</DEFINITION-REF>
+                          <VALUE>10.0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_nr_alpha/cfar_nr_alpha1</DEFINITION-REF>
+                          <VALUE>10.0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_nr_alpha/cfar_nr_alpha2</DEFINITION-REF>
+                          <VALUE>10.0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_nr_alpha/cfar_nr_alpha3</DEFINITION-REF>
+                          <VALUE>10.0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_nr_alpha/cfar_nr_alpha4</DEFINITION-REF>
+                          <VALUE>10.0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_nr_alpha/cfar_nr_alpha5</DEFINITION-REF>
+                          <VALUE>10.0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_nr_alpha/cfar_nr_alpha6</DEFINITION-REF>
+                          <VALUE>10.0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_nr_alpha/cfar_nr_alpha7</DEFINITION-REF>
+                          <VALUE>10.0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE>
+                      <SHORT-NAME>cfar_nr_beta1</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_nr_beta1</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_nr_beta1/cfar_nr_beta1-0</DEFINITION-REF>
+                          <VALUE>0.25</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_nr_beta1/cfar_nr_beta1-1</DEFINITION-REF>
+                          <VALUE>0.25</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_nr_beta1/cfar_nr_beta1-2</DEFINITION-REF>
+                          <VALUE>0.25</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_nr_beta1/cfar_nr_beta1-3</DEFINITION-REF>
+                          <VALUE>0.25</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_nr_beta1/cfar_nr_beta1-4</DEFINITION-REF>
+                          <VALUE>0.25</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_nr_beta1/cfar_nr_beta1-5</DEFINITION-REF>
+                          <VALUE>0.25</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_nr_beta1/cfar_nr_beta1-6</DEFINITION-REF>
+                          <VALUE>0.25</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_nr_beta1/cfar_nr_beta1-7</DEFINITION-REF>
+                          <VALUE>0.25</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE>
+                      <SHORT-NAME>cfar_nr_beta2</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_nr_beta2</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_nr_beta2/cfar_nr_beta2-0</DEFINITION-REF>
+                          <VALUE>4.0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_nr_beta2/cfar_nr_beta2-1</DEFINITION-REF>
+                          <VALUE>4.0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_nr_beta2/cfar_nr_beta2-2</DEFINITION-REF>
+                          <VALUE>4.0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_nr_beta2/cfar_nr_beta2-3</DEFINITION-REF>
+                          <VALUE>4.0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_nr_beta2/cfar_nr_beta2-4</DEFINITION-REF>
+                          <VALUE>4.0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_nr_beta2/cfar_nr_beta2-5</DEFINITION-REF>
+                          <VALUE>4.0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_nr_beta2/cfar_nr_beta2-6</DEFINITION-REF>
+                          <VALUE>4.0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_nr_beta2/cfar_nr_beta2-7</DEFINITION-REF>
+                          <VALUE>4.0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE>
+                      <SHORT-NAME>cfar_nr_rnk_ratio</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_nr_rnk_ratio</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_nr_rnk_ratio/cfar_nr_rnk_ratio0</DEFINITION-REF>
+                          <VALUE>0.25</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_nr_rnk_ratio/cfar_nr_rnk_ratio1</DEFINITION-REF>
+                          <VALUE>0.25</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_nr_rnk_ratio/cfar_nr_rnk_ratio2</DEFINITION-REF>
+                          <VALUE>0.25</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_nr_rnk_ratio/cfar_nr_rnk_ratio3</DEFINITION-REF>
+                          <VALUE>0.25</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_nr_rnk_ratio/cfar_nr_rnk_ratio4</DEFINITION-REF>
+                          <VALUE>0.25</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_nr_rnk_ratio/cfar_nr_rnk_ratio5</DEFINITION-REF>
+                          <VALUE>0.25</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_nr_rnk_ratio/cfar_nr_rnk_ratio6</DEFINITION-REF>
+                          <VALUE>0.25</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_nr_rnk_ratio/cfar_nr_rnk_ratio7</DEFINITION-REF>
+                          <VALUE>0.25</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE>
+                      <SHORT-NAME>cfar_nr_rnk_sel</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_nr_rnk_sel</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_nr_rnk_sel/cfar_nr_rnk_sel0</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_nr_rnk_sel/cfar_nr_rnk_sel1</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_nr_rnk_sel/cfar_nr_rnk_sel2</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_nr_rnk_sel/cfar_nr_rnk_sel3</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_nr_rnk_sel/cfar_nr_rnk_sel4</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_nr_rnk_sel/cfar_nr_rnk_sel5</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_nr_rnk_sel/cfar_nr_rnk_sel6</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_nr_rnk_sel/cfar_nr_rnk_sel7</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE>
+                      <SHORT-NAME>cfar_nr_scheme_sel</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_nr_scheme_sel</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_nr_scheme_sel/cfar_nr_scheme_sel0</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_nr_scheme_sel/cfar_nr_scheme_sel1</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_nr_scheme_sel/cfar_nr_scheme_sel2</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_nr_scheme_sel/cfar_nr_scheme_sel3</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_nr_scheme_sel/cfar_nr_scheme_sel4</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_nr_scheme_sel/cfar_nr_scheme_sel5</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_nr_scheme_sel/cfar_nr_scheme_sel6</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_nr_scheme_sel/cfar_nr_scheme_sel7</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE>
+                      <SHORT-NAME>cfar_nr_tdec</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_nr_tdec</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_nr_tdec/cfar_nr_tdec0</DEFINITION-REF>
+                          <VALUE>4</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_nr_tdec/cfar_nr_tdec1</DEFINITION-REF>
+                          <VALUE>4</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_nr_tdec/cfar_nr_tdec2</DEFINITION-REF>
+                          <VALUE>4</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_nr_tdec/cfar_nr_tdec3</DEFINITION-REF>
+                          <VALUE>4</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_nr_tdec/cfar_nr_tdec4</DEFINITION-REF>
+                          <VALUE>4</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_nr_tdec/cfar_nr_tdec5</DEFINITION-REF>
+                          <VALUE>4</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_nr_tdec/cfar_nr_tdec6</DEFINITION-REF>
+                          <VALUE>4</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_nr_tdec/cfar_nr_tdec7</DEFINITION-REF>
+                          <VALUE>4</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE>
+                      <SHORT-NAME>cfar_os_alpha</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_os_alpha</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_os_alpha/cfar_os_alpha0</DEFINITION-REF>
+                          <VALUE>4.22</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_os_alpha/cfar_os_alpha1</DEFINITION-REF>
+                          <VALUE>4.22</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_os_alpha/cfar_os_alpha2</DEFINITION-REF>
+                          <VALUE>4.22</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_os_alpha/cfar_os_alpha3</DEFINITION-REF>
+                          <VALUE>4.22</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_os_alpha/cfar_os_alpha4</DEFINITION-REF>
+                          <VALUE>4.22</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_os_alpha/cfar_os_alpha5</DEFINITION-REF>
+                          <VALUE>4.22</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_os_alpha/cfar_os_alpha6</DEFINITION-REF>
+                          <VALUE>4.22</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_os_alpha/cfar_os_alpha7</DEFINITION-REF>
+                          <VALUE>4.22</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE>
+                      <SHORT-NAME>cfar_os_rnk_ratio</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_os_rnk_ratio</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_os_rnk_ratio/cfar_os_rnk_ratio0</DEFINITION-REF>
+                          <VALUE>0.4444</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_os_rnk_ratio/cfar_os_rnk_ratio1</DEFINITION-REF>
+                          <VALUE>0.4444</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_os_rnk_ratio/cfar_os_rnk_ratio2</DEFINITION-REF>
+                          <VALUE>0.4444</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_os_rnk_ratio/cfar_os_rnk_ratio3</DEFINITION-REF>
+                          <VALUE>0.4444</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_os_rnk_ratio/cfar_os_rnk_ratio4</DEFINITION-REF>
+                          <VALUE>0.4444</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_os_rnk_ratio/cfar_os_rnk_ratio5</DEFINITION-REF>
+                          <VALUE>0.4444</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_os_rnk_ratio/cfar_os_rnk_ratio6</DEFINITION-REF>
+                          <VALUE>0.4444</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_os_rnk_ratio/cfar_os_rnk_ratio7</DEFINITION-REF>
+                          <VALUE>0.4444</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE>
+                      <SHORT-NAME>cfar_os_rnk_sel</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_os_rnk_sel</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_os_rnk_sel/cfar_os_rnk_sel0</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_os_rnk_sel/cfar_os_rnk_sel1</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_os_rnk_sel/cfar_os_rnk_sel2</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_os_rnk_sel/cfar_os_rnk_sel3</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_os_rnk_sel/cfar_os_rnk_sel4</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_os_rnk_sel/cfar_os_rnk_sel5</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_os_rnk_sel/cfar_os_rnk_sel6</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_os_rnk_sel/cfar_os_rnk_sel7</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE>
+                      <SHORT-NAME>cfar_os_tdec</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_os_tdec</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_os_tdec/cfar_os_tdec0</DEFINITION-REF>
+                          <VALUE>4</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_os_tdec/cfar_os_tdec1</DEFINITION-REF>
+                          <VALUE>4</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_os_tdec/cfar_os_tdec2</DEFINITION-REF>
+                          <VALUE>4</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_os_tdec/cfar_os_tdec3</DEFINITION-REF>
+                          <VALUE>4</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_os_tdec/cfar_os_tdec4</DEFINITION-REF>
+                          <VALUE>4</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_os_tdec/cfar_os_tdec5</DEFINITION-REF>
+                          <VALUE>4</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_os_tdec/cfar_os_tdec6</DEFINITION-REF>
+                          <VALUE>4</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_os_tdec/cfar_os_tdec7</DEFINITION-REF>
+                          <VALUE>4</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE>
+                      <SHORT-NAME>cfar_pk_threshold</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_pk_threshold</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_pk_threshold/cfar_pk_threshold0</DEFINITION-REF>
+                          <VALUE>31</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_pk_threshold/cfar_pk_threshold1</DEFINITION-REF>
+                          <VALUE>31</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_pk_threshold/cfar_pk_threshold2</DEFINITION-REF>
+                          <VALUE>31</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_pk_threshold/cfar_pk_threshold3</DEFINITION-REF>
+                          <VALUE>31</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_pk_threshold/cfar_pk_threshold4</DEFINITION-REF>
+                          <VALUE>31</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_pk_threshold/cfar_pk_threshold5</DEFINITION-REF>
+                          <VALUE>31</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_pk_threshold/cfar_pk_threshold6</DEFINITION-REF>
+                          <VALUE>31</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_pk_threshold/cfar_pk_threshold7</DEFINITION-REF>
+                          <VALUE>31</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE>
+                      <SHORT-NAME>cfar_pk_win_size1</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_pk_win_size1</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_pk_win_size1/cfar_pk_win_size1-0</DEFINITION-REF>
+                          <VALUE>3</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_pk_win_size1/cfar_pk_win_size1-1</DEFINITION-REF>
+                          <VALUE>3</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_pk_win_size1/cfar_pk_win_size1-2</DEFINITION-REF>
+                          <VALUE>3</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_pk_win_size1/cfar_pk_win_size1-3</DEFINITION-REF>
+                          <VALUE>3</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_pk_win_size1/cfar_pk_win_size1-4</DEFINITION-REF>
+                          <VALUE>3</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_pk_win_size1/cfar_pk_win_size1-5</DEFINITION-REF>
+                          <VALUE>3</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_pk_win_size1/cfar_pk_win_size1-6</DEFINITION-REF>
+                          <VALUE>3</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_pk_win_size1/cfar_pk_win_size1-7</DEFINITION-REF>
+                          <VALUE>3</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE>
+                      <SHORT-NAME>cfar_pk_win_size2</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_pk_win_size2</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_pk_win_size2/cfar_pk_win_size2-0</DEFINITION-REF>
+                          <VALUE>3</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_pk_win_size2/cfar_pk_win_size2-1</DEFINITION-REF>
+                          <VALUE>3</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_pk_win_size2/cfar_pk_win_size2-2</DEFINITION-REF>
+                          <VALUE>3</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_pk_win_size2/cfar_pk_win_size2-3</DEFINITION-REF>
+                          <VALUE>3</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_pk_win_size2/cfar_pk_win_size2-4</DEFINITION-REF>
+                          <VALUE>3</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_pk_win_size2/cfar_pk_win_size2-5</DEFINITION-REF>
+                          <VALUE>3</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_pk_win_size2/cfar_pk_win_size2-6</DEFINITION-REF>
+                          <VALUE>3</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_pk_win_size2/cfar_pk_win_size2-7</DEFINITION-REF>
+                          <VALUE>3</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE>
+                      <SHORT-NAME>cfar_recwin_msk</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_recwin_msk</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_recwin_msk/cfar_recwin_msk0</DEFINITION-REF>
+                          <VALUE>2047</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_recwin_msk/cfar_recwin_msk1</DEFINITION-REF>
+                          <VALUE>1025</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_recwin_msk/cfar_recwin_msk10</DEFINITION-REF>
+                          <VALUE>2047</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_recwin_msk/cfar_recwin_msk11</DEFINITION-REF>
+                          <VALUE>2047</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_recwin_msk/cfar_recwin_msk12</DEFINITION-REF>
+                          <VALUE>2047</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_recwin_msk/cfar_recwin_msk13</DEFINITION-REF>
+                          <VALUE>2047</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_recwin_msk/cfar_recwin_msk14</DEFINITION-REF>
+                          <VALUE>2047</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_recwin_msk/cfar_recwin_msk15</DEFINITION-REF>
+                          <VALUE>2047</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_recwin_msk/cfar_recwin_msk16</DEFINITION-REF>
+                          <VALUE>2047</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_recwin_msk/cfar_recwin_msk17</DEFINITION-REF>
+                          <VALUE>2047</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_recwin_msk/cfar_recwin_msk18</DEFINITION-REF>
+                          <VALUE>2047</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_recwin_msk/cfar_recwin_msk19</DEFINITION-REF>
+                          <VALUE>2047</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_recwin_msk/cfar_recwin_msk2</DEFINITION-REF>
+                          <VALUE>1025</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_recwin_msk/cfar_recwin_msk20</DEFINITION-REF>
+                          <VALUE>2047</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_recwin_msk/cfar_recwin_msk21</DEFINITION-REF>
+                          <VALUE>2047</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_recwin_msk/cfar_recwin_msk22</DEFINITION-REF>
+                          <VALUE>1022</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_recwin_msk/cfar_recwin_msk23</DEFINITION-REF>
+                          <VALUE>514</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_recwin_msk/cfar_recwin_msk24</DEFINITION-REF>
+                          <VALUE>514</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_recwin_msk/cfar_recwin_msk25</DEFINITION-REF>
+                          <VALUE>514</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_recwin_msk/cfar_recwin_msk26</DEFINITION-REF>
+                          <VALUE>514</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_recwin_msk/cfar_recwin_msk27</DEFINITION-REF>
+                          <VALUE>514</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_recwin_msk/cfar_recwin_msk28</DEFINITION-REF>
+                          <VALUE>514</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_recwin_msk/cfar_recwin_msk29</DEFINITION-REF>
+                          <VALUE>514</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_recwin_msk/cfar_recwin_msk3</DEFINITION-REF>
+                          <VALUE>1025</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_recwin_msk/cfar_recwin_msk30</DEFINITION-REF>
+                          <VALUE>514</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_recwin_msk/cfar_recwin_msk31</DEFINITION-REF>
+                          <VALUE>514</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_recwin_msk/cfar_recwin_msk32</DEFINITION-REF>
+                          <VALUE>1022</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_recwin_msk/cfar_recwin_msk33</DEFINITION-REF>
+                          <VALUE>1022</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_recwin_msk/cfar_recwin_msk34</DEFINITION-REF>
+                          <VALUE>1022</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_recwin_msk/cfar_recwin_msk35</DEFINITION-REF>
+                          <VALUE>1022</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_recwin_msk/cfar_recwin_msk36</DEFINITION-REF>
+                          <VALUE>1022</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_recwin_msk/cfar_recwin_msk37</DEFINITION-REF>
+                          <VALUE>1022</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_recwin_msk/cfar_recwin_msk38</DEFINITION-REF>
+                          <VALUE>1022</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_recwin_msk/cfar_recwin_msk39</DEFINITION-REF>
+                          <VALUE>1022</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_recwin_msk/cfar_recwin_msk4</DEFINITION-REF>
+                          <VALUE>1025</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_recwin_msk/cfar_recwin_msk40</DEFINITION-REF>
+                          <VALUE>1022</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_recwin_msk/cfar_recwin_msk41</DEFINITION-REF>
+                          <VALUE>1022</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_recwin_msk/cfar_recwin_msk42</DEFINITION-REF>
+                          <VALUE>1022</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_recwin_msk/cfar_recwin_msk43</DEFINITION-REF>
+                          <VALUE>1022</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_recwin_msk/cfar_recwin_msk44</DEFINITION-REF>
+                          <VALUE>508</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_recwin_msk/cfar_recwin_msk45</DEFINITION-REF>
+                          <VALUE>260</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_recwin_msk/cfar_recwin_msk46</DEFINITION-REF>
+                          <VALUE>260</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_recwin_msk/cfar_recwin_msk47</DEFINITION-REF>
+                          <VALUE>260</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_recwin_msk/cfar_recwin_msk48</DEFINITION-REF>
+                          <VALUE>260</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_recwin_msk/cfar_recwin_msk49</DEFINITION-REF>
+                          <VALUE>260</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_recwin_msk/cfar_recwin_msk5</DEFINITION-REF>
+                          <VALUE>1025</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_recwin_msk/cfar_recwin_msk50</DEFINITION-REF>
+                          <VALUE>260</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_recwin_msk/cfar_recwin_msk51</DEFINITION-REF>
+                          <VALUE>260</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_recwin_msk/cfar_recwin_msk52</DEFINITION-REF>
+                          <VALUE>260</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_recwin_msk/cfar_recwin_msk53</DEFINITION-REF>
+                          <VALUE>260</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_recwin_msk/cfar_recwin_msk54</DEFINITION-REF>
+                          <VALUE>260</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_recwin_msk/cfar_recwin_msk55</DEFINITION-REF>
+                          <VALUE>508</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_recwin_msk/cfar_recwin_msk56</DEFINITION-REF>
+                          <VALUE>508</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_recwin_msk/cfar_recwin_msk57</DEFINITION-REF>
+                          <VALUE>508</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_recwin_msk/cfar_recwin_msk58</DEFINITION-REF>
+                          <VALUE>508</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_recwin_msk/cfar_recwin_msk59</DEFINITION-REF>
+                          <VALUE>508</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_recwin_msk/cfar_recwin_msk6</DEFINITION-REF>
+                          <VALUE>1025</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_recwin_msk/cfar_recwin_msk60</DEFINITION-REF>
+                          <VALUE>508</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_recwin_msk/cfar_recwin_msk61</DEFINITION-REF>
+                          <VALUE>508</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_recwin_msk/cfar_recwin_msk62</DEFINITION-REF>
+                          <VALUE>508</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_recwin_msk/cfar_recwin_msk63</DEFINITION-REF>
+                          <VALUE>508</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_recwin_msk/cfar_recwin_msk64</DEFINITION-REF>
+                          <VALUE>508</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_recwin_msk/cfar_recwin_msk65</DEFINITION-REF>
+                          <VALUE>508</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_recwin_msk/cfar_recwin_msk66</DEFINITION-REF>
+                          <VALUE>2047</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_recwin_msk/cfar_recwin_msk67</DEFINITION-REF>
+                          <VALUE>514</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_recwin_msk/cfar_recwin_msk68</DEFINITION-REF>
+                          <VALUE>514</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_recwin_msk/cfar_recwin_msk69</DEFINITION-REF>
+                          <VALUE>514</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_recwin_msk/cfar_recwin_msk7</DEFINITION-REF>
+                          <VALUE>1025</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_recwin_msk/cfar_recwin_msk70</DEFINITION-REF>
+                          <VALUE>514</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_recwin_msk/cfar_recwin_msk71</DEFINITION-REF>
+                          <VALUE>514</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_recwin_msk/cfar_recwin_msk72</DEFINITION-REF>
+                          <VALUE>514</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_recwin_msk/cfar_recwin_msk73</DEFINITION-REF>
+                          <VALUE>514</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_recwin_msk/cfar_recwin_msk74</DEFINITION-REF>
+                          <VALUE>514</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_recwin_msk/cfar_recwin_msk75</DEFINITION-REF>
+                          <VALUE>514</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_recwin_msk/cfar_recwin_msk76</DEFINITION-REF>
+                          <VALUE>2047</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_recwin_msk/cfar_recwin_msk77</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_recwin_msk/cfar_recwin_msk78</DEFINITION-REF>
+                          <VALUE>1022</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_recwin_msk/cfar_recwin_msk79</DEFINITION-REF>
+                          <VALUE>514</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_recwin_msk/cfar_recwin_msk8</DEFINITION-REF>
+                          <VALUE>1025</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_recwin_msk/cfar_recwin_msk80</DEFINITION-REF>
+                          <VALUE>514</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_recwin_msk/cfar_recwin_msk81</DEFINITION-REF>
+                          <VALUE>514</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_recwin_msk/cfar_recwin_msk82</DEFINITION-REF>
+                          <VALUE>514</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_recwin_msk/cfar_recwin_msk83</DEFINITION-REF>
+                          <VALUE>514</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_recwin_msk/cfar_recwin_msk84</DEFINITION-REF>
+                          <VALUE>514</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_recwin_msk/cfar_recwin_msk85</DEFINITION-REF>
+                          <VALUE>514</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_recwin_msk/cfar_recwin_msk86</DEFINITION-REF>
+                          <VALUE>1022</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_recwin_msk/cfar_recwin_msk87</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_recwin_msk/cfar_recwin_msk9</DEFINITION-REF>
+                          <VALUE>1025</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE>
+                      <SHORT-NAME>cfar_region_sep_rng</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_region_sep_rng</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_region_sep_rng/cfar_region_sep_rng0</DEFINITION-REF>
+                          <VALUE>1023</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_region_sep_rng/cfar_region_sep_rng1</DEFINITION-REF>
+                          <VALUE>1023</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_region_sep_rng/cfar_region_sep_rng2</DEFINITION-REF>
+                          <VALUE>1023</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE>
+                      <SHORT-NAME>cfar_region_sep_vel</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_region_sep_vel</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_region_sep_vel/cfar_region_sep_vel0</DEFINITION-REF>
+                          <VALUE>1023</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_region_sep_vel/cfar_region_sep_vel1</DEFINITION-REF>
+                          <VALUE>1023</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_region_sep_vel/cfar_region_sep_vel2</DEFINITION-REF>
+                          <VALUE>1023</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_region_sep_vel/cfar_region_sep_vel3</DEFINITION-REF>
+                          <VALUE>1023</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_region_sep_vel/cfar_region_sep_vel4</DEFINITION-REF>
+                          <VALUE>1023</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_region_sep_vel/cfar_region_sep_vel5</DEFINITION-REF>
+                          <VALUE>1023</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_region_sep_vel/cfar_region_sep_vel6</DEFINITION-REF>
+                          <VALUE>1023</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_region_sep_vel/cfar_region_sep_vel7</DEFINITION-REF>
+                          <VALUE>1023</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE>
+                      <SHORT-NAME>cfar_sogo_alpha</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_sogo_alpha</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_sogo_alpha/cfar_sogo_alpha0</DEFINITION-REF>
+                          <VALUE>15.0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_sogo_alpha/cfar_sogo_alpha1</DEFINITION-REF>
+                          <VALUE>15.0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_sogo_alpha/cfar_sogo_alpha2</DEFINITION-REF>
+                          <VALUE>15.0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_sogo_alpha/cfar_sogo_alpha3</DEFINITION-REF>
+                          <VALUE>15.0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_sogo_alpha/cfar_sogo_alpha4</DEFINITION-REF>
+                          <VALUE>15.0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_sogo_alpha/cfar_sogo_alpha5</DEFINITION-REF>
+                          <VALUE>15.0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_sogo_alpha/cfar_sogo_alpha6</DEFINITION-REF>
+                          <VALUE>15.0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_sogo_alpha/cfar_sogo_alpha7</DEFINITION-REF>
+                          <VALUE>15.0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE>
+                      <SHORT-NAME>cfar_sogo_i</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_sogo_i</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_sogo_i/cfar_sogo_i0</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_sogo_i/cfar_sogo_i1</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_sogo_i/cfar_sogo_i2</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_sogo_i/cfar_sogo_i3</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_sogo_i/cfar_sogo_i4</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_sogo_i/cfar_sogo_i5</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_sogo_i/cfar_sogo_i6</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_sogo_i/cfar_sogo_i7</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE>
+                      <SHORT-NAME>cfar_sogo_mask</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_sogo_mask</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_sogo_mask/cfar_sogo_mask0</DEFINITION-REF>
+                          <VALUE>15</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_sogo_mask/cfar_sogo_mask1</DEFINITION-REF>
+                          <VALUE>15</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_sogo_mask/cfar_sogo_mask2</DEFINITION-REF>
+                          <VALUE>15</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_sogo_mask/cfar_sogo_mask3</DEFINITION-REF>
+                          <VALUE>15</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_sogo_mask/cfar_sogo_mask4</DEFINITION-REF>
+                          <VALUE>15</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_sogo_mask/cfar_sogo_mask5</DEFINITION-REF>
+                          <VALUE>15</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_sogo_mask/cfar_sogo_mask6</DEFINITION-REF>
+                          <VALUE>15</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/CFAR_CONFIG_PARAMS/cfar_sogo_mask/cfar_sogo_mask7</DEFINITION-REF>
+                          <VALUE>15</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                  </SUB-CONTAINERS>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>DoA_CONFIG_PARAMS</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/DoA_CONFIG_PARAMS</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/DoA_CONFIG_PARAMS/bfm_az_left</DEFINITION-REF>
+                      <VALUE>-60.0</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/DoA_CONFIG_PARAMS/bfm_az_right</DEFINITION-REF>
+                      <VALUE>60.0</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/DoA_CONFIG_PARAMS/bfm_ev_down</DEFINITION-REF>
+                      <VALUE>-10.0</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/DoA_CONFIG_PARAMS/bfm_ev_up</DEFINITION-REF>
+                      <VALUE>10.0</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/DoA_CONFIG_PARAMS/bfm_fine_search_range</DEFINITION-REF>
+                      <VALUE>20</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/DoA_CONFIG_PARAMS/bfm_group_idx</DEFINITION-REF>
+                      <VALUE>0</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/DoA_CONFIG_PARAMS/bfm_iter_search</DEFINITION-REF>
+                      <VALUE>0</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/DoA_CONFIG_PARAMS/bfm_mode</DEFINITION-REF>
+                      <VALUE>0</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/DoA_CONFIG_PARAMS/bfm_raw_search_step</DEFINITION-REF>
+                      <VALUE>1</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/DoA_CONFIG_PARAMS/doa_method</DEFINITION-REF>
+                      <VALUE>0</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/DoA_CONFIG_PARAMS/doa_mode</DEFINITION-REF>
+                      <VALUE>0</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/DoA_CONFIG_PARAMS/doa_num_groups</DEFINITION-REF>
+                      <VALUE>2</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/DoA_CONFIG_PARAMS/doa_samp_space</DEFINITION-REF>
+                      <VALUE>\t</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/DoA_CONFIG_PARAMS/doa_win</DEFINITION-REF>
+                      <VALUE>cheb</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/DoA_CONFIG_PARAMS/sv_read_from_flash</DEFINITION-REF>
+                      <VALUE>0</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                  <SUB-CONTAINERS>
+                    <ECUC-CONTAINER-VALUE>
+                      <SHORT-NAME>bfm_noise_level_scalar</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/DoA_CONFIG_PARAMS/bfm_noise_level_scalar</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/DoA_CONFIG_PARAMS/bfm_noise_level_scalar/bfm_noise_level_scalar0</DEFINITION-REF>
+                          <VALUE>30</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/DoA_CONFIG_PARAMS/bfm_noise_level_scalar/bfm_noise_level_scalar1</DEFINITION-REF>
+                          <VALUE>30</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/DoA_CONFIG_PARAMS/bfm_noise_level_scalar/bfm_noise_level_scalar2</DEFINITION-REF>
+                          <VALUE>30</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE>
+                      <SHORT-NAME>bfm_peak_scalar</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/DoA_CONFIG_PARAMS/bfm_peak_scalar</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/DoA_CONFIG_PARAMS/bfm_peak_scalar/bfm_peak_scalar0</DEFINITION-REF>
+                          <VALUE>0.5</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/DoA_CONFIG_PARAMS/bfm_peak_scalar/bfm_peak_scalar1</DEFINITION-REF>
+                          <VALUE>0.1</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/DoA_CONFIG_PARAMS/bfm_peak_scalar/bfm_peak_scalar2</DEFINITION-REF>
+                          <VALUE>0.1</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE>
+                      <SHORT-NAME>bfm_snr_thres</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/DoA_CONFIG_PARAMS/bfm_snr_thres</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/DoA_CONFIG_PARAMS/bfm_snr_thres/bfm_snr_thres0</DEFINITION-REF>
+                          <VALUE>15</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/DoA_CONFIG_PARAMS/bfm_snr_thres/bfm_snr_thres1</DEFINITION-REF>
+                          <VALUE>30</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE>
+                      <SHORT-NAME>combined_doa_fft_mux</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/DoA_CONFIG_PARAMS/combined_doa_fft_mux</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/DoA_CONFIG_PARAMS/combined_doa_fft_mux/combined_doa_fft_mux0</DEFINITION-REF>
+                          <VALUE>15</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/DoA_CONFIG_PARAMS/combined_doa_fft_mux/combined_doa_fft_mux1</DEFINITION-REF>
+                          <VALUE>240</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/DoA_CONFIG_PARAMS/combined_doa_fft_mux/combined_doa_fft_mux2</DEFINITION-REF>
+                          <VALUE>3840</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/DoA_CONFIG_PARAMS/combined_doa_fft_mux/combined_doa_fft_mux3</DEFINITION-REF>
+                          <VALUE>61440</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE>
+                      <SHORT-NAME>dml_2dsch_end</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/DoA_CONFIG_PARAMS/dml_2dsch_end</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/DoA_CONFIG_PARAMS/dml_2dsch_end/dml_2dsch_end0</DEFINITION-REF>
+                          <VALUE>359</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/DoA_CONFIG_PARAMS/dml_2dsch_end/dml_2dsch_end1</DEFINITION-REF>
+                          <VALUE>359</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE>
+                      <SHORT-NAME>dml_2dsch_start</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/DoA_CONFIG_PARAMS/dml_2dsch_start</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/DoA_CONFIG_PARAMS/dml_2dsch_start/dml_2dsch_start0</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/DoA_CONFIG_PARAMS/dml_2dsch_start/dml_2dsch_start1</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE>
+                      <SHORT-NAME>dml_2dsch_step</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/DoA_CONFIG_PARAMS/dml_2dsch_step</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/DoA_CONFIG_PARAMS/dml_2dsch_step/dml_2dsch_step0</DEFINITION-REF>
+                          <VALUE>16</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/DoA_CONFIG_PARAMS/dml_2dsch_step/dml_2dsch_step1</DEFINITION-REF>
+                          <VALUE>8</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE>
+                      <SHORT-NAME>dml_extra_1d_en</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/DoA_CONFIG_PARAMS/dml_extra_1d_en</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/DoA_CONFIG_PARAMS/dml_extra_1d_en/dml_extra_1d_en0</DEFINITION-REF>
+                          <VALUE>1</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/DoA_CONFIG_PARAMS/dml_extra_1d_en/dml_extra_1d_en1</DEFINITION-REF>
+                          <VALUE>1</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE>
+                      <SHORT-NAME>dml_p1p2_en</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/DoA_CONFIG_PARAMS/dml_p1p2_en</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/DoA_CONFIG_PARAMS/dml_p1p2_en/dml_p1p2_en0</DEFINITION-REF>
+                          <VALUE>1</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/DoA_CONFIG_PARAMS/dml_p1p2_en/dml_p1p2_en1</DEFINITION-REF>
+                          <VALUE>1</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE>
+                      <SHORT-NAME>dml_respwr_coef</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/DoA_CONFIG_PARAMS/dml_respwr_coef</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/DoA_CONFIG_PARAMS/dml_respwr_coef/dml_respwr_coef0</DEFINITION-REF>
+                          <VALUE>0.0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/DoA_CONFIG_PARAMS/dml_respwr_coef/dml_respwr_coef1</DEFINITION-REF>
+                          <VALUE>0.0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/DoA_CONFIG_PARAMS/dml_respwr_coef/dml_respwr_coef2</DEFINITION-REF>
+                          <VALUE>0.1</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/DoA_CONFIG_PARAMS/dml_respwr_coef/dml_respwr_coef3</DEFINITION-REF>
+                          <VALUE>-1.0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/DoA_CONFIG_PARAMS/dml_respwr_coef/dml_respwr_coef4</DEFINITION-REF>
+                          <VALUE>0.0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/DoA_CONFIG_PARAMS/dml_respwr_coef/dml_respwr_coef5</DEFINITION-REF>
+                          <VALUE>0.0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/DoA_CONFIG_PARAMS/dml_respwr_coef/dml_respwr_coef6</DEFINITION-REF>
+                          <VALUE>0.0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/DoA_CONFIG_PARAMS/dml_respwr_coef/dml_respwr_coef7</DEFINITION-REF>
+                          <VALUE>0.1</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/DoA_CONFIG_PARAMS/dml_respwr_coef/dml_respwr_coef8</DEFINITION-REF>
+                          <VALUE>-1.0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/DoA_CONFIG_PARAMS/dml_respwr_coef/dml_respwr_coef9</DEFINITION-REF>
+                          <VALUE>0.0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE>
+                      <SHORT-NAME>doa_fft_mux</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/DoA_CONFIG_PARAMS/doa_fft_mux</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/DoA_CONFIG_PARAMS/doa_fft_mux/doa_fft_mux0</DEFINITION-REF>
+                          <VALUE>61455</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/DoA_CONFIG_PARAMS/doa_fft_mux/doa_fft_mux1</DEFINITION-REF>
+                          <VALUE>4672</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/DoA_CONFIG_PARAMS/doa_fft_mux/doa_fft_mux2</DEFINITION-REF>
+                          <VALUE>33825</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE>
+                      <SHORT-NAME>doa_max_obj_per_bin</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/DoA_CONFIG_PARAMS/doa_max_obj_per_bin</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/DoA_CONFIG_PARAMS/doa_max_obj_per_bin/doa_max_obj_per_bin0</DEFINITION-REF>
+                          <VALUE>3</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/DoA_CONFIG_PARAMS/doa_max_obj_per_bin/doa_max_obj_per_bin1</DEFINITION-REF>
+                          <VALUE>1</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/DoA_CONFIG_PARAMS/doa_max_obj_per_bin/doa_max_obj_per_bin2</DEFINITION-REF>
+                          <VALUE>1</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE>
+                      <SHORT-NAME>doa_npoint</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/DoA_CONFIG_PARAMS/doa_npoint</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/DoA_CONFIG_PARAMS/doa_npoint/doa_npoint0</DEFINITION-REF>
+                          <VALUE>360</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/DoA_CONFIG_PARAMS/doa_npoint/doa_npoint1</DEFINITION-REF>
+                          <VALUE>360</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/DoA_CONFIG_PARAMS/doa_npoint/doa_npoint2</DEFINITION-REF>
+                          <VALUE>360</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE>
+                      <SHORT-NAME>doa_win_params</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/DoA_CONFIG_PARAMS/doa_win_params</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/DoA_CONFIG_PARAMS/doa_win_params/doa_win_params0</DEFINITION-REF>
+                          <VALUE>30.0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/DoA_CONFIG_PARAMS/doa_win_params/doa_win_params1</DEFINITION-REF>
+                          <VALUE>0.0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/DoA_CONFIG_PARAMS/doa_win_params/doa_win_params2</DEFINITION-REF>
+                          <VALUE>0.0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                  </SUB-CONTAINERS>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>FFT_CONFIG_PARAMS</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/FFT_CONFIG_PARAMS</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/FFT_CONFIG_PARAMS/fft_nve_bypass</DEFINITION-REF>
+                      <VALUE>0</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/FFT_CONFIG_PARAMS/fft_nve_ch_mask</DEFINITION-REF>
+                      <VALUE>65535</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/FFT_CONFIG_PARAMS/fft_nve_default_value</DEFINITION-REF>
+                      <VALUE>1.0E-4</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/FFT_CONFIG_PARAMS/fft_nve_rangeindex_end</DEFINITION-REF>
+                      <VALUE>70</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/FFT_CONFIG_PARAMS/fft_nve_rangeindex_start</DEFINITION-REF>
+                      <VALUE>50</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/FFT_CONFIG_PARAMS/fft_nve_shift</DEFINITION-REF>
+                      <VALUE>0</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/FFT_CONFIG_PARAMS/fft_nve_threash</DEFINITION-REF>
+                      <VALUE>50.0</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/FFT_CONFIG_PARAMS/fft_nve_without_interference</DEFINITION-REF>
+                      <VALUE>1.0E-4</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/FFT_CONFIG_PARAMS/rng_fft_scalar</DEFINITION-REF>
+                      <VALUE>255</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/FFT_CONFIG_PARAMS/rng_nfft</DEFINITION-REF>
+                      <VALUE>512</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/FFT_CONFIG_PARAMS/rng_win</DEFINITION-REF>
+                      <VALUE>hanning</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/FFT_CONFIG_PARAMS/vel_fft_scalar</DEFINITION-REF>
+                      <VALUE>31</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/FFT_CONFIG_PARAMS/vel_nfft</DEFINITION-REF>
+                      <VALUE>64</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/FFT_CONFIG_PARAMS/vel_win</DEFINITION-REF>
+                      <VALUE>cheb</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                  <SUB-CONTAINERS>
+                    <ECUC-CONTAINER-VALUE>
+                      <SHORT-NAME>rng_win_params</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/FFT_CONFIG_PARAMS/rng_win_params</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/FFT_CONFIG_PARAMS/rng_win_params/rng_win_params0</DEFINITION-REF>
+                          <VALUE>80.0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/FFT_CONFIG_PARAMS/rng_win_params/rng_win_params1</DEFINITION-REF>
+                          <VALUE>0.0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/FFT_CONFIG_PARAMS/rng_win_params/rng_win_params2</DEFINITION-REF>
+                          <VALUE>0.0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE>
+                      <SHORT-NAME>vel_win_params</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/FFT_CONFIG_PARAMS/vel_win_params</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/FFT_CONFIG_PARAMS/vel_win_params/vel_win_params0</DEFINITION-REF>
+                          <VALUE>80.0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/FFT_CONFIG_PARAMS/vel_win_params/vel_win_params1</DEFINITION-REF>
+                          <VALUE>0.0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/FFT_CONFIG_PARAMS/vel_win_params/vel_win_params2</DEFINITION-REF>
+                          <VALUE>0.0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                  </SUB-CONTAINERS>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>OTHER_CONFIG_PARAMS</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/OTHER_CONFIG_PARAMS</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/OTHER_CONFIG_PARAMS/acc_angle_hw</DEFINITION-REF>
+                      <VALUE>0</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/OTHER_CONFIG_PARAMS/acc_rng_hw</DEFINITION-REF>
+                      <VALUE>0</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/OTHER_CONFIG_PARAMS/acc_vel_hw</DEFINITION-REF>
+                      <VALUE>0</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/OTHER_CONFIG_PARAMS/cas_obj_merg_typ</DEFINITION-REF>
+                      <VALUE>2</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/OTHER_CONFIG_PARAMS/fsm_on</DEFINITION-REF>
+                      <VALUE>0</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/OTHER_CONFIG_PARAMS/zero_doppler_cancel</DEFINITION-REF>
+                      <VALUE>0</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>SPK_CONFIG_PARAMS</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/SPK_CONFIG_PARAMS</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/SPK_CONFIG_PARAMS/spk_buf_len</DEFINITION-REF>
+                      <VALUE>4</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/SPK_CONFIG_PARAMS/spk_en</DEFINITION-REF>
+                      <VALUE>0</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/SPK_CONFIG_PARAMS/spk_min_max_sel</DEFINITION-REF>
+                      <VALUE>0</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/SPK_CONFIG_PARAMS/spk_ovr_num</DEFINITION-REF>
+                      <VALUE>0</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/SPK_CONFIG_PARAMS/spk_set_zero</DEFINITION-REF>
+                      <VALUE>0</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/SPK_CONFIG_PARAMS/spk_thres_dbl</DEFINITION-REF>
+                      <VALUE>0</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>TRACK_CONFIG_PARAMS</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/TRACK_CONFIG_PARAMS</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/TRACK_CONFIG_PARAMS/track_capture_delay</DEFINITION-REF>
+                      <VALUE>0.15</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/TRACK_CONFIG_PARAMS/track_drop_delay</DEFINITION-REF>
+                      <VALUE>0.5</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/TRACK_CONFIG_PARAMS/track_fov_az_left</DEFINITION-REF>
+                      <VALUE>-80.0</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/TRACK_CONFIG_PARAMS/track_fov_az_right</DEFINITION-REF>
+                      <VALUE>80.0</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/TRACK_CONFIG_PARAMS/track_fov_ev_down</DEFINITION-REF>
+                      <VALUE>-80.0</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/TRACK_CONFIG_PARAMS/track_fov_ev_up</DEFINITION-REF>
+                      <VALUE>80.0</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/TRACK_CONFIG_PARAMS/track_fps</DEFINITION-REF>
+                      <VALUE>20</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/TRACK_CONFIG_PARAMS/track_near_field_thres</DEFINITION-REF>
+                      <VALUE>10.0</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/TRACK_CONFIG_PARAMS/track_obj_snr_sel</DEFINITION-REF>
+                      <VALUE>0</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/TRACK_CONFIG_PARAMS/track_vel_pos_ind_portion</DEFINITION-REF>
+                      <VALUE>0.5</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>VEL_CONFIG_PARAMS</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/VEL_CONFIG_PARAMS</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/VEL_CONFIG_PARAMS/anti_velamb_qmin</DEFINITION-REF>
+                      <VALUE>-3</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/VEL_CONFIG_PARAMS/de_vel_amb</DEFINITION-REF>
+                      <VALUE>0</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/VEL_CONFIG_PARAMS/high_vel_comp_en</DEFINITION-REF>
+                      <VALUE>1</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/VEL_CONFIG_PARAMS/high_vel_comp_method</DEFINITION-REF>
+                      <VALUE>0</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/VEL_CONFIG_PARAMS/rng_comp_usr</DEFINITION-REF>
+                      <VALUE>0.0</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/BaseBandPackage/BaseBand/BaseBandConfig/VEL_CONFIG_PARAMS/vel_comp_usr</DEFINITION-REF>
+                      <VALUE>0.0</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+              </SUB-CONTAINERS>
+            </ECUC-CONTAINER-VALUE>
+          </CONTAINERS>
+        </ECUC-MODULE-CONFIGURATION-VALUES>
+      </ELEMENTS>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

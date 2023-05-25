@@ -1,0 +1,244 @@
+*******************************************************************************
+*                                                                             *
+*                    ECU EXTRACT COMMAND-LINE INPUT FILE                      *
+*                                                                             *
+*******************************************************************************
+
+
+
+#ECUINSTANCE_NAME=""
+
+#
+# Section on flat instance descriptors 
+#
+
+# To customize short names of flat instance descriptors, specify a complete 
+# file path (*.ext) 
+OAW_FLATINS_FILE = ""
+
+
+# To generate flat instance descriptors for R-Ports also, set this to TRUE
+# Possible values: TRUE, FALSE
+# Note: If this is set to FALSE, then flat instance descriptor will not be generated for all the R-Ports
+#       If this is set to TRUE,  then flat instance descriptor will be generated for all the R-Ports
+CONSIDER_RPORT = FALSE
+
+# To ignore generation of flat instance descriptor for R-Port involved in N:1 communication pattern, set this to TRUE
+# Possible values: TRUE, FALSE
+# Note: For N:1 communication pattern,
+#   If this is set to FALSE, then flat instance descriptor will be generated for "1" R-Port only
+#   If this is set to TRUE,  then flat instance descriptor will be generated for "N" P-Port
+IGNORE_NTO1_CONNECTION = FALSE
+
+# To ignore generation of FlatInstance descriptor for open Rport, set this to TRUE
+# Possible values: TRUE, FALSE
+IGNORE_OPEN_RPORT = FALSE
+
+
+# To enable generation of SwRefreshTiming under FlatInstance descriptor, set this to TRUE
+# Possible values: TRUE, FALSE
+CREATE_SW_REFRESH_TIMING = TRUE
+
+
+# To enable generation of FlatInstance descriptor for open RPort with DataMapping, set this to TRUE
+# Possible values: TRUE, FALSE
+CONSIDER_ALL_DATAMAPPED_RPORTS = FALSE
+
+# To enable generation of FlatInstance descriptor for RAM Block available under NvBlockDescriptor of NvBlockSwComponent, set this to TRUE
+# Possible values: TRUE, FALSE
+CONSIDER_RAM_BLOCKS =FALSE
+
+# To enable generation of FlatInstance descriptor for ROM Block available under NvBlockDescriptor of NvBlockSwComponent, set this to TRUE
+# Possible values: TRUE, FALSE
+CONSIDER_ROM_BLOCKS = FALSE
+
+# To enable generation of FlatInstance descriptor for ClientServer Ports involved in Inter-ECU communication, set this to TRUE
+# Possible values: TRUE, FALSE
+CONSIDER_CLIENT_SERVER = TRUE
+
+# To enable generation of FlatInstance descriptor for ClientServer Ports involved in Intra-ECU communication, set this to TRUE
+# Possible values: TRUE, FALSE
+CONSIDER_INTRA_ECU_CLIENT_SERVER = FALSE
+
+# To consider Variable Access and Events during generation of FlatInstance descriptor, set this to TRUE. 
+# Possible values: TRUE, FALSE
+CONSIDER_ACCESS_VARIABLE_AND_EVENTS_FID_GEN = TRUE
+
+# To generate flat instance descriptors for Argument Data Prototypes (of 
+# client server operations) also, set this to TRUE
+# Possible values: TRUE, FALSE
+ARGUMENT_DATA_PROTOTYPE = FALSE
+
+
+# To generate (not generate) fibex elements under ECU extract system, set this to TRUE (FALSE)
+# Note: 
+#       If this is set to TRUE, then during iterative development all the fibex elements are generated in new 
+#          ECU Extracted system. All the fibex elements present in existing ECUExtracted System are removed
+#       If this is set to FALSE, then fibex elements are neither generated nor removed in EcuExtract system
+# Possible values: TRUE, FALSE
+GENERATE_FIBEX_ELEMENTS = TRUE
+
+
+# To sort connectors and ports, set this to TRUE (FALSE)
+# Note: 
+#       If this is set to TRUE, then all the connectors and ports that are sorted in flatview composition 
+#       If this is set to FALSE, then all the connectors and ports will be arranged as per the loading order of input SystemExtract top level composition
+#
+# IMPPORTANT NOTE : This option is provided for backward compatibility, and will be removed in the future versions(Sorting will be done by default in future)
+#                   Recommended to use this option as enabled(TRUE)
+# Possible values: TRUE, FALSE
+SORT_CONNECTORS = TRUE
+
+
+# To continue ECUExtract execution if Variation point is configured that may/may not break M:N Communication pattern, set this to TRUE (FALSE)
+# Note: 
+#       If this is set to TRUE, then ECUExtract will not abort the execution if M:N communication pattern is found with Variation points configured.
+#       If this is set to FALSE, then ECUExtract will abort the execution if M:N communication pattern is found with/without Variation points configured.
+#
+# Possible values: TRUE, FALSE
+DO_NOT_ABORT_M_ISTO_N = FALSE
+
+
+
+# To extract data mappings configured on other ECU Component Ports, set this to TRUE
+# Note: 
+#       If this is set to TRUE, then ECUExtract will copy all the DataMapping beloning to other ECU Component ports which are communicating to ECU being extracted.
+#       If this is set to FALSE, then ECUExtract will ignore all the DataMapping beloning to other ECU Component ports which are communicating to ECU being extracted.
+#
+# Possible values: TRUE, FALSE
+EXTRACT_OTHER_ECU_MAPPINGS = TRUE
+
+# To specify short names for flat instance descriptors of Variable Data 
+# Prototypes and Parameter Data Prototypes, use either
+# the short name of VDPs/PDPs ("CONSIDER_VDP_PDP"), or 
+# the AUTOSAR naming for MCD demands ("CONSIDER_MEASUREMENT_SPEC")
+FLAT_INSTANCE_DESCRIPTOR_NAMING = "CONSIDER_VDP_PDP"
+
+
+# For files containing the ECU Extract, specify the relative files paths
+# For example "/foldername1/foldername2/filename.arxml"
+# Note: New file will be generated if not exists
+FLATMAP_ARXML_FILE      = "<ECUInstance-ShortName>_FlatMap.arxml"
+FLATVIEW_ARXML_FILE     = "<ECUInstance-ShortName>_FlatView_SWCD.arxml"
+SYSTEM_ARXML_FILE       = "<System-ShortName>_EcuExtr.arxml"
+# MCSupport Data and Functions  shall be created in below files. 
+# NOTE McSupportData will be generated only if GENERATE_MCSUPPORT_DATA is set to TRUE
+MCFUNCTION_ARXML_FILE   = "ISolar_McSupportData_McFunctions.arxml"
+MCDATA_ARXML_FILE       = "ISolar_McSupportData_McDataInstances.arxml"
+
+# Specify the package paths of AUTOSAR elements in the ECU Extract files: 
+# Note: the last attribute (of package paths) is used as short name of the element except SwAddrMethod. 
+FLATMAP_PACKAGE_PATH    = "/<ECUInstance-ShortName>_FlatView/<ECUInstance-ShortName>_FlatMap/"
+FLATVIEW_PACKAGE_PATH   = "/<ECUInstance-ShortName>_FlatView/SwComponentTypes/<ECUInstance-ShortName>_FlatView/"
+SYSTEM_PACKAGE_PATH     = "/<System-ShortName>_EcuExtract/EXTR_<ECUInstance-ShortName>/"
+#SwAddrMethod package shall be created in FlatMap file 
+SW_ADDR_METHOD_PKG      ="/<ECUInstance-ShortName>_FlatView/<ECUInstance-ShortName>_SwAddrMethods/"
+ 
+
+#
+# Section on Variation point handling
+#
+
+# Specify the AUTOSAR element types to be aggregated from variation points 
+# of connectors (along SWCs, ports, any connectors)
+# Note: when updating an existing ECU EXTRACT, variant aggregations will be 
+# added (deleted) in the flat view, if set to TRUE (FALSE), respectively
+# Possible values: TRUE, FALSE
+SWCOMPONENTTYPE = TRUE
+SW_CONNECTOR = TRUE
+SW_COMPONENT_PROTOTYPE = TRUE
+PORT_PROTOTYPE = TRUE
+
+# To simplify the variation point expression, set this to TRUE
+# Possible values: TRUE, FALSE
+# Note: If this is set to FALSE, then variation point expression will be retained as generated from ECUExtract
+#       If this is set to TRUE,  then variation point expression will be reduced/simplified to a valid expression
+SIMPLIFY_VARIATION_POINT = FALSE
+
+# For systems containing alternative variants, set this to FALSE (no ECU Extract generation)
+# (cf. Release Notes document).
+# If set to TRUE, then an ECU Extract will be generated with one alternative per variant only.
+# Note: the ECU Extract feature does not currently support to process alternative variants.
+# Possible values: TRUE, FALSE
+ALLOW_ALTERNATE = FALSE
+
+#
+# Section on other ECU Extract settings
+#
+
+# To generate ECU EXTRACT with self-contained port interface mapping set, set this to TRUE.
+ALLOW_SELFCONTAINED_PIMS = FALSE
+
+
+# To update (replace) an existing ECU Extract by a new one, set this to TRUE (FALSE), respectively.
+# Possible values: TRUE, FALSE
+UPDATE_EXISTING_ECU_EXTRACT = TRUE
+
+
+# To back-up the original version of a modified ECU Extract files, set this to TRUE. 
+# Note: back-up files will use the file extension ".bkup" 
+# Possible values: TRUE, FALSE
+BACKUP = FALSE
+
+# To update the version of ECUExtract generated, specify the value here.
+# Note: if no version is specified, default value is updated. 
+#       During iterative, version of existing system will be considered
+#ECUEXTRACT_VERSION = "123"
+
+# To resolve variation point configured, set this to TRUE.
+# Note: if no value is specified, by default this is set to FALSE
+# Possible values: TRUE, FALSE
+RESOLVE_VARIATION_POINT = FALSE
+
+# To resolve variation point with specified binding time, set the value from possible values.
+# Note: if no value is specified, by default this is set to SYSTEM-DESIGN-TIME
+# Possible values: SYSTEM-DESIGN-TIME, CODE-GENERATION-TIME, PRE-COMPILE-TIME
+BINDING_TIME_TO_RESOLVE_VARIANTS=SYSTEM-DESIGN-TIME
+
+# If service ports configured on a Sw Compositions should be considered during ECUExtract generation then set this to TRUE. 
+# Note: This option is provided as a work around to enable Service Port on Sw Composition type. (Not allowed by Autosar as per 'constr_1174') 
+# Possible values: TRUE, FALSE
+ALLOW_SERVICE_PORT= FALSE
+
+
+# To generate SwAddrMethod for FlatInstanceDescriptor, choose option other than DO_NOT_GEN_SW_ADDR_METHOD. GEN_SW_ADDR_METHOD_COMP - generates SwAddrMethod per Component, GEN_SW_ADDR_METHOD_ECUPARTITION- Generates SwAddrmethod per EcuPartition
+# The SwAddrMethod for FlatInstanceDescriptor is generated based on existing SwAddrMethod configuration fetched via AutosatDataTypes(VDP/PDP).If existing configuration is not found then, SwAddrMethod per SwComponent/EcuPartition will be generated. 
+# Note: if no value is specified, by default this is set to DO_NOT_GEN_SW_ADDR_METHOD
+# Possible values: GEN_SW_ADDR_METHOD_COMP,GEN_SW_ADDR_METHOD_ECUPARTITION
+GEN_SW_ADDR_METHOD=DO_NOT_GEN_SW_ADDR_METHOD
+
+# Include the list of error ids for which ECUExtract should abort
+# Multiple error ids can be included with comma ',' separated
+# For example: EcuExtract_ERR_01,EcuExtract_ERR_02
+BREAK_BUILD=""
+
+# If MCSupport Data such as MCDataInstance and McFunctios needs to be generated then set this to TRUE. 
+# Note: MC Support data will be generated for FlatInstanceDescriptors which has targetDataprotype with SwCalibrationAccess set to ReadOnly or ReadWrite
+# Possible values: TRUE, FALSE
+GENERATE_MCSUPPORT_DATA = FALSE
+
+# Include the list of error ids for which ECUExtract should not abort
+# Multiple error ids can be included with comma ',' separated
+# For example: EcuExtract_ERR_29
+IGNORE_ERROR_ID="EcuExtract_ERR_29"
+
+# If Naming convention has be to applied to SwConnectors(AssemblySwConnector and DelegationSwConnector) then set the flag to true.
+# Default naming covention followed:
+#           AssemblySwConnector - "ASC_"+AssemblySwConnector.provider.contextComponent.shortName+"_"+AssemblySwConnector.provider.targetPPort.shortName+"_"+AssemblySwConnector.requester.contextComponent.shortName+"_"+AssemblySwConnector.requester.targetRPort.shortName
+#           DelegationSwConnector- "DSC_"+DelegationSwConnector.innerPort.contextComponent.shortName+"_"+DelegationSwConnector.innerPort.portPrototype.shortName+"_"+DelegationSwConnector.outerPort.shortName
+# Possible values: TRUE, FALSE
+APPLY_NAMING_CONVENTION_RULE= TRUE
+
+
+#To customize naming rules, provide rule as value to key.
+#Key format: NAMING_CONVENTION_<AR_Element_type>
+#Rule format: NAMING_CONVENTION_<AR Element type>= <Pattern> , <Package>
+# <Package>: Naming convention will be applied only to the elements under this package, if provided. (This not mandatory and can be left empty)
+
+NAMING_CONVENTION_AssemblySwConnector = "ASC_"+AssemblySwConnector.provider.contextComponent.shortName+"_"+AssemblySwConnector.provider.targetPPort.shortName+"_"+AssemblySwConnector.requester.contextComponent.shortName+"_"+AssemblySwConnector.requester.targetRPort.shortName
+NAMING_CONVENTION_DelegationSwConnector = "DSC_"+DelegationSwConnector.innerPort.contextComponent.shortName+"_"+DelegationSwConnector.innerPort.portPrototype.shortName+"_"+DelegationSwConnector.outerPort.shortName
+
+#To ignore Com spec conflicts in Sw connectors,set this to true.This shall be logged as warnings.
+#Setting this to false will abort ECU extract with error messages.
+# Possible values: TRUE, FALSE
+IGNORE_COMSPEC_CONFLICTS= TRUE

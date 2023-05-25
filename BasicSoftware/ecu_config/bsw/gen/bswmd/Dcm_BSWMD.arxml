@@ -1,0 +1,1439 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 autosar_4-2-2.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE>
+      <SHORT-NAME>AUTOSAR_Dcm</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE>
+          <SHORT-NAME>ModeDeclarationGroups</SHORT-NAME>
+          <ELEMENTS>
+            <MODE-DECLARATION-GROUP>
+              <SHORT-NAME>DcmDiagnosticSessionControl</SHORT-NAME>
+              <CATEGORY>ALPHABETIC_ORDER</CATEGORY>
+              <INITIAL-MODE-REF DEST="MODE-DECLARATION">/AUTOSAR_Dcm/ModeDeclarationGroups/DcmDiagnosticSessionControl/DEFAULT_SESSION</INITIAL-MODE-REF>
+              <MODE-DECLARATIONS>
+               <MODE-DECLARATION>
+                  <SHORT-NAME>DEFAULT_SESSION</SHORT-NAME>
+               </MODE-DECLARATION>
+               <MODE-DECLARATION>
+                  <SHORT-NAME>PROGRAMMING_SESSION</SHORT-NAME>
+               </MODE-DECLARATION>
+               <MODE-DECLARATION>
+                  <SHORT-NAME>EXTENDED_DIAGNOSTIC_SESSION</SHORT-NAME>
+               </MODE-DECLARATION>
+              </MODE-DECLARATIONS>
+            </MODE-DECLARATION-GROUP>
+            <MODE-DECLARATION-GROUP>
+              <SHORT-NAME>DcmEcuReset</SHORT-NAME>
+              <CATEGORY>ALPHABETIC_ORDER</CATEGORY>
+              <INITIAL-MODE-REF DEST="MODE-DECLARATION">/AUTOSAR_Dcm/ModeDeclarationGroups/DcmEcuReset/NONE</INITIAL-MODE-REF>
+              <MODE-DECLARATIONS>
+                <MODE-DECLARATION>
+                 <SHORT-NAME>NONE</SHORT-NAME>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION>
+                  <SHORT-NAME>HARD</SHORT-NAME>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION>
+                  <SHORT-NAME>SOFT</SHORT-NAME>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION>
+                  <SHORT-NAME>JUMPTOBOOTLOADER</SHORT-NAME>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION>
+                  <SHORT-NAME>JUMPTOSYSSUPPLIERBOOTLOADER</SHORT-NAME>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION>
+                  <SHORT-NAME>EXECUTE</SHORT-NAME>
+                </MODE-DECLARATION>
+              </MODE-DECLARATIONS>
+            </MODE-DECLARATION-GROUP>
+            <MODE-DECLARATION-GROUP>
+              <SHORT-NAME>DcmControlDTCSetting</SHORT-NAME>
+              <CATEGORY>ALPHABETIC_ORDER</CATEGORY>
+              <INITIAL-MODE-REF DEST="MODE-DECLARATION">/AUTOSAR_Dcm/ModeDeclarationGroups/DcmControlDTCSetting/ENABLEDTCSETTING</INITIAL-MODE-REF>
+              <MODE-DECLARATIONS>
+                <MODE-DECLARATION>
+                  <SHORT-NAME>ENABLEDTCSETTING</SHORT-NAME>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION>
+                  <SHORT-NAME>DISABLEDTCSETTING</SHORT-NAME>
+                </MODE-DECLARATION>
+              </MODE-DECLARATIONS>
+            </MODE-DECLARATION-GROUP>
+            <MODE-DECLARATION-GROUP>
+              <SHORT-NAME>DcmCommunicationControl_Can_Network_ETAS_Channel_Can_Network_ETAS</SHORT-NAME>
+              <CATEGORY>ALPHABETIC_ORDER</CATEGORY>
+              <INITIAL-MODE-REF DEST="MODE-DECLARATION">/AUTOSAR_Dcm/ModeDeclarationGroups/DcmCommunicationControl_Can_Network_ETAS_Channel_Can_Network_ETAS/DCM_ENABLE_RX_TX_NORM_NM</INITIAL-MODE-REF>
+              <MODE-DECLARATIONS>
+                <MODE-DECLARATION>
+                   <SHORT-NAME>DCM_ENABLE_RX_TX_NORM</SHORT-NAME>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION>
+                   <SHORT-NAME>DCM_ENABLE_RX_DISABLE_TX_NORM</SHORT-NAME>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION>
+                   <SHORT-NAME>DCM_DISABLE_RX_ENABLE_TX_NORM</SHORT-NAME>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION>
+                   <SHORT-NAME>DCM_DISABLE_RX_TX_NORM</SHORT-NAME>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION>
+                   <SHORT-NAME>DCM_ENABLE_RX_TX_NM</SHORT-NAME>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION>
+                   <SHORT-NAME>DCM_ENABLE_RX_DISABLE_TX_NM</SHORT-NAME>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION>
+                   <SHORT-NAME>DCM_DISABLE_RX_ENABLE_TX_NM</SHORT-NAME>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION>
+                   <SHORT-NAME>DCM_DISABLE_RX_TX_NM</SHORT-NAME>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION>
+                   <SHORT-NAME>DCM_ENABLE_RX_TX_NORM_NM</SHORT-NAME>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION>
+                   <SHORT-NAME>DCM_ENABLE_RX_DISABLE_TX_NORM_NM</SHORT-NAME>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION>
+                   <SHORT-NAME>DCM_DISABLE_RX_ENABLE_TX_NORM_NM</SHORT-NAME>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION>
+                   <SHORT-NAME>DCM_DISABLE_RX_TX_NORM_NM</SHORT-NAME>
+                </MODE-DECLARATION>
+              </MODE-DECLARATIONS>
+            </MODE-DECLARATION-GROUP>
+          </ELEMENTS>
+        </AR-PACKAGE>
+        <AR-PACKAGE>
+          <SHORT-NAME>ImplementationDataTypes</SHORT-NAME>
+          <ELEMENTS>
+            <IMPLEMENTATION-DATA-TYPE>
+              <SHORT-NAME>Dcm_Struct_Dcm_ConfigType</SHORT-NAME>
+              <DESC>
+                <L-2 L="EN">This is Dcm implementation specific internal type, i.e. it is declared in the Dcm Library and not in the XML.</L-2>
+              </DESC>
+              <CATEGORY>STRUCTURE</CATEGORY>
+                    <SUB-ELEMENTS>
+                      <IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                        <SHORT-NAME>ConfigSetId</SHORT-NAME>
+                        <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                        <SW-DATA-DEF-PROPS>
+                          <SW-DATA-DEF-PROPS-VARIANTS>
+                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                              <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                          </SW-DATA-DEF-PROPS-VARIANTS>
+                        </SW-DATA-DEF-PROPS>
+                      </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                    </SUB-ELEMENTS>
+              <TYPE-EMITTER>HEADER_FILE</TYPE-EMITTER>
+            </IMPLEMENTATION-DATA-TYPE>
+          </ELEMENTS>
+        </AR-PACKAGE>
+        <AR-PACKAGE>
+          <SHORT-NAME>BswModuleEntrys</SHORT-NAME>
+          <ELEMENTS>
+            <BSW-MODULE-ENTRY>
+              <SHORT-NAME>Dcm_MainFunction</SHORT-NAME>
+              <SERVICE-ID>37</SERVICE-ID>
+              <IS-REENTRANT>false</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>SCHEDULED</CALL-TYPE>
+              <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+            </BSW-MODULE-ENTRY>
+            <BSW-MODULE-ENTRY>
+              <SHORT-NAME>Dcm_Init</SHORT-NAME>
+              <DESC>
+                <L-2 L="EN">This function initializes the Dcm module.</L-2>
+              </DESC>
+              <SERVICE-ID>0x01</SERVICE-ID>
+              <IS-REENTRANT>false</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>REGULAR</CALL-TYPE>
+              <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              <ARGUMENTS>
+                <SW-SERVICE-ARG>
+                  <SHORT-NAME>ConfigPtr</SHORT-NAME>
+                  <DESC>
+                   <L-2 L="EN">(In)Pointer to configuration set in Variant Post-Build. This parameter is not relevant for Pre-compile configuration. "NULL_PTR" can be passed in case of Pre-compile configuration. </L-2>
+                  </DESC>
+                  <CATEGORY>DATA_REFERENCE</CATEGORY>
+                  <DIRECTION>IN</DIRECTION>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                        <SW-POINTER-TARGET-PROPS>
+                          <TARGET-CATEGORY>STRUCTURE</TARGET-CATEGORY>
+                          <SW-DATA-DEF-PROPS>
+                            <SW-DATA-DEF-PROPS-VARIANTS>
+                              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Dcm/ImplementationDataTypes/Dcm_Struct_Dcm_ConfigType</IMPLEMENTATION-DATA-TYPE-REF>
+                                <SW-IMPL-POLICY>CONST</SW-IMPL-POLICY>
+                              </SW-DATA-DEF-PROPS-CONDITIONAL>
+                            </SW-DATA-DEF-PROPS-VARIANTS>
+                          </SW-DATA-DEF-PROPS>
+                        </SW-POINTER-TARGET-PROPS>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </SW-SERVICE-ARG>
+                </ARGUMENTS>
+            </BSW-MODULE-ENTRY>
+                
+          
+            <BSW-MODULE-ENTRY>
+              <SHORT-NAME>Dcm_GetVin</SHORT-NAME>
+              <DESC>
+                <L-2 L="EN">Function to get the VIN (as defined in SAE J1979-DA).</L-2>
+              </DESC>
+              <SERVICE-ID>0x07</SERVICE-ID>
+              <IS-REENTRANT>true</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>REGULAR</CALL-TYPE>
+              <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              <RETURN-TYPE>
+                <SHORT-NAME>ReturnValue</SHORT-NAME>
+                  <DESC>
+                    <L-2 L="EN">E_OK: The Data pointer has been filled with valid VIN E_NOT_OK: The default VIN will be used in the DoIP</L-2>
+                  </DESC>
+                <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                <DIRECTION>OUT</DIRECTION>
+                <SW-DATA-DEF-PROPS>
+                  <SW-DATA-DEF-PROPS-VARIANTS>
+                    <SW-DATA-DEF-PROPS-CONDITIONAL>
+                      <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Std/ImplementationDataTypes/Std_ReturnType</IMPLEMENTATION-DATA-TYPE-REF>
+                    </SW-DATA-DEF-PROPS-CONDITIONAL>
+                  </SW-DATA-DEF-PROPS-VARIANTS>
+                </SW-DATA-DEF-PROPS>
+              </RETURN-TYPE>
+              <ARGUMENTS>
+                  <SW-SERVICE-ARG>
+                    <SHORT-NAME>Data</SHORT-NAME>
+                    <DESC>
+                      <L-2 L="EN">Indicator as to where to store the VIN.</L-2>
+                    </DESC>
+                      <CATEGORY>DATA_REFERENCE</CATEGORY>
+                      <DIRECTION>OUT</DIRECTION>
+                      <SW-DATA-DEF-PROPS>
+                        <SW-DATA-DEF-PROPS-VARIANTS>
+                          <SW-DATA-DEF-PROPS-CONDITIONAL>
+                            <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                            <SW-POINTER-TARGET-PROPS>
+                              <TARGET-CATEGORY>VALUE</TARGET-CATEGORY>
+                              <SW-DATA-DEF-PROPS>
+                                <SW-DATA-DEF-PROPS-VARIANTS>
+                                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                    <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                                    <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                </SW-DATA-DEF-PROPS-VARIANTS>
+                              </SW-DATA-DEF-PROPS>
+                            </SW-POINTER-TARGET-PROPS>
+                          </SW-DATA-DEF-PROPS-CONDITIONAL>
+                        </SW-DATA-DEF-PROPS-VARIANTS>
+                      </SW-DATA-DEF-PROPS>
+                  </SW-SERVICE-ARG>
+                </ARGUMENTS>
+            </BSW-MODULE-ENTRY>
+            <BSW-MODULE-ENTRY>
+              <SHORT-NAME>Dcm_GetSecurityLevel</SHORT-NAME>
+              <SERVICE-ID>0x0d</SERVICE-ID>
+              <IS-REENTRANT>true</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>REGULAR</CALL-TYPE>
+              <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              <RETURN-TYPE>
+                <SHORT-NAME>ReturnValue</SHORT-NAME>
+                  <DESC>
+                    <L-2 L="EN">E_OK: This value is always returned.</L-2>
+                  </DESC>
+                <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                <DIRECTION>OUT</DIRECTION>
+                <SW-DATA-DEF-PROPS>
+                  <SW-DATA-DEF-PROPS-VARIANTS>
+                    <SW-DATA-DEF-PROPS-CONDITIONAL>
+                      <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Std/ImplementationDataTypes/Std_ReturnType</IMPLEMENTATION-DATA-TYPE-REF>
+                    </SW-DATA-DEF-PROPS-CONDITIONAL>
+                  </SW-DATA-DEF-PROPS-VARIANTS>
+                </SW-DATA-DEF-PROPS>
+              </RETURN-TYPE>
+              <ARGUMENTS>
+                  <SW-SERVICE-ARG>
+                    <SHORT-NAME>SecLevel</SHORT-NAME>
+                    <DESC>
+                      <L-2 L="EN">Active Security Level value .</L-2>
+                    </DESC>
+                      <CATEGORY>DATA_REFERENCE</CATEGORY>
+                      <DIRECTION>OUT</DIRECTION>
+                      <SW-DATA-DEF-PROPS>
+                        <SW-DATA-DEF-PROPS-VARIANTS>
+                          <SW-DATA-DEF-PROPS-CONDITIONAL>
+                            <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                            <SW-POINTER-TARGET-PROPS>
+                              <TARGET-CATEGORY>VALUE</TARGET-CATEGORY>
+                              <SW-DATA-DEF-PROPS>
+                                <SW-DATA-DEF-PROPS-VARIANTS>
+                                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                    <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Dcm/ImplementationDataTypes/Dcm_SecLevelType</IMPLEMENTATION-DATA-TYPE-REF>
+                                    <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                </SW-DATA-DEF-PROPS-VARIANTS>
+                              </SW-DATA-DEF-PROPS>
+                            </SW-POINTER-TARGET-PROPS>
+                          </SW-DATA-DEF-PROPS-CONDITIONAL>
+                        </SW-DATA-DEF-PROPS-VARIANTS>
+                      </SW-DATA-DEF-PROPS>
+                  </SW-SERVICE-ARG>
+                </ARGUMENTS>
+            </BSW-MODULE-ENTRY>
+            <BSW-MODULE-ENTRY>
+              <SHORT-NAME>Dcm_GetSesCtrlType</SHORT-NAME>
+              <DESC>
+                <L-2 L="EN">This function provides the active session control type value..</L-2>
+              </DESC>
+              <SERVICE-ID>0x06</SERVICE-ID>
+              <IS-REENTRANT>true</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>REGULAR</CALL-TYPE>
+              <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              <RETURN-TYPE>
+                <SHORT-NAME>ReturnValue</SHORT-NAME>
+                  <DESC>
+                    <L-2 L="EN">E_OK: This value is always returned.</L-2>
+                  </DESC>
+                <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                <DIRECTION>OUT</DIRECTION>
+                <SW-DATA-DEF-PROPS>
+                  <SW-DATA-DEF-PROPS-VARIANTS>
+                    <SW-DATA-DEF-PROPS-CONDITIONAL>
+                      <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Std/ImplementationDataTypes/Std_ReturnType</IMPLEMENTATION-DATA-TYPE-REF>
+                    </SW-DATA-DEF-PROPS-CONDITIONAL>
+                  </SW-DATA-DEF-PROPS-VARIANTS>
+                </SW-DATA-DEF-PROPS>
+              </RETURN-TYPE>
+              <ARGUMENTS>
+                  <SW-SERVICE-ARG>
+                    <SHORT-NAME>SesCtrlType</SHORT-NAME>
+                    <DESC>
+                      <L-2 L="EN">Active Session Control Type value.</L-2>
+                    </DESC>
+                      <CATEGORY>DATA_REFERENCE</CATEGORY>
+                      <DIRECTION>OUT</DIRECTION>
+                      <SW-DATA-DEF-PROPS>
+                        <SW-DATA-DEF-PROPS-VARIANTS>
+                          <SW-DATA-DEF-PROPS-CONDITIONAL>
+                            <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                            <SW-POINTER-TARGET-PROPS>
+                              <TARGET-CATEGORY>VALUE</TARGET-CATEGORY>
+                              <SW-DATA-DEF-PROPS>
+                                <SW-DATA-DEF-PROPS-VARIANTS>
+                                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                    <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Dcm/ImplementationDataTypes/Dcm_SesCtrlType</IMPLEMENTATION-DATA-TYPE-REF>
+                                    <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                </SW-DATA-DEF-PROPS-VARIANTS>
+                              </SW-DATA-DEF-PROPS>
+                            </SW-POINTER-TARGET-PROPS>
+                          </SW-DATA-DEF-PROPS-CONDITIONAL>
+                        </SW-DATA-DEF-PROPS-VARIANTS>
+                      </SW-DATA-DEF-PROPS>
+                  </SW-SERVICE-ARG>
+                </ARGUMENTS>
+            </BSW-MODULE-ENTRY>
+            <BSW-MODULE-ENTRY>
+              <SHORT-NAME>Dcm_GetActiveProtocol</SHORT-NAME>
+              <DESC>
+                <L-2 L="EN">This function returns the active UDS protocol details.</L-2>
+              </DESC>
+              <SERVICE-ID>0x0f</SERVICE-ID>
+              <IS-REENTRANT>true</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>REGULAR</CALL-TYPE>
+              <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              <RETURN-TYPE>
+                <SHORT-NAME>ReturnValue</SHORT-NAME>
+                  <DESC>
+                    <L-2 L="EN">E_OK: This value is always returned.</L-2>
+                  </DESC>
+                <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                <DIRECTION>OUT</DIRECTION>
+                <SW-DATA-DEF-PROPS>
+                  <SW-DATA-DEF-PROPS-VARIANTS>
+                    <SW-DATA-DEF-PROPS-CONDITIONAL>
+                      <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Std/ImplementationDataTypes/Std_ReturnType</IMPLEMENTATION-DATA-TYPE-REF>
+                    </SW-DATA-DEF-PROPS-CONDITIONAL>
+                  </SW-DATA-DEF-PROPS-VARIANTS>
+                </SW-DATA-DEF-PROPS>
+              </RETURN-TYPE>
+              <ARGUMENTS>
+                  <SW-SERVICE-ARG>
+                    <SHORT-NAME>ActiveProtocolType</SHORT-NAME>
+                    <DESC>
+                      <L-2 L="EN">Active protocol type value.</L-2>
+                    </DESC>
+                      <CATEGORY>DATA_REFERENCE</CATEGORY>
+                      <DIRECTION>OUT</DIRECTION>
+                      <SW-DATA-DEF-PROPS>
+                        <SW-DATA-DEF-PROPS-VARIANTS>
+                          <SW-DATA-DEF-PROPS-CONDITIONAL>
+                            <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                            <SW-POINTER-TARGET-PROPS>
+                              <TARGET-CATEGORY>VALUE</TARGET-CATEGORY>
+                              <SW-DATA-DEF-PROPS>
+                                <SW-DATA-DEF-PROPS-VARIANTS>
+                                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                    <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Dcm/ImplementationDataTypes/Dcm_ProtocolType</IMPLEMENTATION-DATA-TYPE-REF>
+                                    <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                </SW-DATA-DEF-PROPS-VARIANTS>
+                              </SW-DATA-DEF-PROPS>
+                            </SW-POINTER-TARGET-PROPS>
+                          </SW-DATA-DEF-PROPS-CONDITIONAL>
+                        </SW-DATA-DEF-PROPS-VARIANTS>
+                      </SW-DATA-DEF-PROPS>
+                  </SW-SERVICE-ARG>
+                  <SW-SERVICE-ARG>
+                    <SHORT-NAME>ConnectionId</SHORT-NAME>
+                    <DESC>
+                      <L-2 L="EN">Unique connection identifier.</L-2>
+                    </DESC>
+                      <CATEGORY>DATA_REFERENCE</CATEGORY>
+                      <DIRECTION>OUT</DIRECTION>
+                      <SW-DATA-DEF-PROPS>
+                        <SW-DATA-DEF-PROPS-VARIANTS>
+                          <SW-DATA-DEF-PROPS-CONDITIONAL>
+                            <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                            <SW-POINTER-TARGET-PROPS>
+                              <TARGET-CATEGORY>VALUE</TARGET-CATEGORY>
+                              <SW-DATA-DEF-PROPS>
+                                <SW-DATA-DEF-PROPS-VARIANTS>
+                                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                    <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint16</IMPLEMENTATION-DATA-TYPE-REF>
+                                    <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                </SW-DATA-DEF-PROPS-VARIANTS>
+                              </SW-DATA-DEF-PROPS>
+                            </SW-POINTER-TARGET-PROPS>
+                          </SW-DATA-DEF-PROPS-CONDITIONAL>
+                        </SW-DATA-DEF-PROPS-VARIANTS>
+                      </SW-DATA-DEF-PROPS>
+                  </SW-SERVICE-ARG>
+                  <SW-SERVICE-ARG>
+                    <SHORT-NAME>TesterSourceAddress</SHORT-NAME>
+                    <DESC>
+                      <L-2 L="EN">Source address of the tester.</L-2>
+                    </DESC>
+                      <CATEGORY>DATA_REFERENCE</CATEGORY>
+                      <DIRECTION>OUT</DIRECTION>
+                      <SW-DATA-DEF-PROPS>
+                        <SW-DATA-DEF-PROPS-VARIANTS>
+                          <SW-DATA-DEF-PROPS-CONDITIONAL>
+                            <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                            <SW-POINTER-TARGET-PROPS>
+                              <TARGET-CATEGORY>VALUE</TARGET-CATEGORY>
+                              <SW-DATA-DEF-PROPS>
+                                <SW-DATA-DEF-PROPS-VARIANTS>
+                                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                    <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint16</IMPLEMENTATION-DATA-TYPE-REF>
+                                    <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                </SW-DATA-DEF-PROPS-VARIANTS>
+                              </SW-DATA-DEF-PROPS>
+                            </SW-POINTER-TARGET-PROPS>
+                          </SW-DATA-DEF-PROPS-CONDITIONAL>
+                        </SW-DATA-DEF-PROPS-VARIANTS>
+                      </SW-DATA-DEF-PROPS>
+                  </SW-SERVICE-ARG>
+                </ARGUMENTS>
+            </BSW-MODULE-ENTRY>
+            <BSW-MODULE-ENTRY>
+              <SHORT-NAME>Dcm_ResetToDefaultSession</SHORT-NAME>
+              <DESC>
+                <L-2 L="EN">The call to this function allows the application to reset the current session to Default session.</L-2>
+              </DESC>
+              <SERVICE-ID>0x2a</SERVICE-ID>
+              <IS-REENTRANT>true</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>REGULAR</CALL-TYPE>
+              <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              <RETURN-TYPE>
+                <SHORT-NAME>ReturnValue</SHORT-NAME>
+                  <DESC>
+                    <L-2 L="EN">E_OK: This value is always returned.</L-2>
+                  </DESC>
+                <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                <DIRECTION>OUT</DIRECTION>
+                <SW-DATA-DEF-PROPS>
+                  <SW-DATA-DEF-PROPS-VARIANTS>
+                    <SW-DATA-DEF-PROPS-CONDITIONAL>
+                      <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Std/ImplementationDataTypes/Std_ReturnType</IMPLEMENTATION-DATA-TYPE-REF>
+                    </SW-DATA-DEF-PROPS-CONDITIONAL>
+                  </SW-DATA-DEF-PROPS-VARIANTS>
+                </SW-DATA-DEF-PROPS>
+              </RETURN-TYPE>            
+            </BSW-MODULE-ENTRY>
+            
+            <BSW-MODULE-ENTRY>
+              <SHORT-NAME>Dcm_SetActiveDiagnostic</SHORT-NAME>
+              <DESC>
+                <L-2 L="EN">Allows to activate and deactivate the call of ComM_DCM_ActiveDiagnostic() function.</L-2>
+              </DESC>
+              <SERVICE-ID>0x56</SERVICE-ID>
+              <IS-REENTRANT>true</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>REGULAR</CALL-TYPE>
+              <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              <RETURN-TYPE>
+                <SHORT-NAME>ReturnValue</SHORT-NAME>
+                  <DESC>
+                    <L-2 L="EN">E_OK: this value is always returned.</L-2>
+                  </DESC>
+                <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                <DIRECTION>OUT</DIRECTION>
+                <SW-DATA-DEF-PROPS>
+                  <SW-DATA-DEF-PROPS-VARIANTS>
+                    <SW-DATA-DEF-PROPS-CONDITIONAL>
+                      <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Std/ImplementationDataTypes/Std_ReturnType</IMPLEMENTATION-DATA-TYPE-REF>
+                    </SW-DATA-DEF-PROPS-CONDITIONAL>
+                  </SW-DATA-DEF-PROPS-VARIANTS>
+                </SW-DATA-DEF-PROPS>
+              </RETURN-TYPE>
+               <ARGUMENTS>              
+                <SW-SERVICE-ARG>
+                  <SHORT-NAME>active</SHORT-NAME>
+                  <DESC>
+                   <L-2 L="EN">If false Dcm shall not call ComM_DCM_ActiveDiagnostic(). If true Dcm will call ComM_DCM_ActiveDiagnostic(). </L-2>
+                  </DESC>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <DIRECTION>IN</DIRECTION>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/boolean</IMPLEMENTATION-DATA-TYPE-REF>
+                        <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </SW-SERVICE-ARG>                     
+              </ARGUMENTS>            
+            </BSW-MODULE-ENTRY>
+            
+            <BSW-MODULE-ENTRY>
+              <SHORT-NAME>Dcm_StartOfReception</SHORT-NAME>
+              <DESC>
+                <L-2 L="EN">This function is called at the start of receiving an N-SDU. The N-SDU might be fragmented into multiple N-PDUs (FF with one or more following CFs) or might consist of a single N-PDU (SF). The service shall provide the currently available maximum buffer size when invoked with TpSdu-Length equal to 0.</L-2>
+              </DESC>
+              <SERVICE-ID>0x46</SERVICE-ID>
+              <IS-REENTRANT>true</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>CALLBACK</CALL-TYPE>
+              <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              <RETURN-TYPE>
+                <SHORT-NAME>ReturnValue</SHORT-NAME>
+                  <DESC>
+                    <L-2 L="EN">BUFREQ_OK: Connection has been accepted. BUFREQ_E_NOT_OK: Connection has been rejected BUFREQ_E_OVFL: No buffer of the required length can be provided.</L-2>
+                  </DESC>
+                <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                <DIRECTION>OUT</DIRECTION>
+                <SW-DATA-DEF-PROPS>
+                  <SW-DATA-DEF-PROPS-VARIANTS>
+                    <SW-DATA-DEF-PROPS-CONDITIONAL>
+                      <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Comtype/ImplementationDataTypes/BufReq_ReturnType</IMPLEMENTATION-DATA-TYPE-REF>
+                    </SW-DATA-DEF-PROPS-CONDITIONAL>
+                  </SW-DATA-DEF-PROPS-VARIANTS>
+                </SW-DATA-DEF-PROPS>
+              </RETURN-TYPE>
+               <ARGUMENTS>                         
+                <SW-SERVICE-ARG>
+                  <SHORT-NAME>id</SHORT-NAME>
+                  <DESC>
+                   <L-2 L="EN">ID of the received I-PDU. </L-2>
+                  </DESC>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <DIRECTION>IN</DIRECTION>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                         <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Comtype/ImplementationDataTypes/PduIdType</IMPLEMENTATION-DATA-TYPE-REF>
+                        <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </SW-SERVICE-ARG>                 
+                <SW-SERVICE-ARG>
+                    <SHORT-NAME>info</SHORT-NAME>
+                    <DESC>
+                      <L-2 L="EN">Contains the length (SduLength) of the received I-PDU and a pointer to a buffer (SduDataPtr) containing the I-PDU.</L-2>
+                    </DESC>
+                    <CATEGORY>DATA_REFERENCE</CATEGORY>
+                    <DIRECTION>IN</DIRECTION>
+                      <SW-DATA-DEF-PROPS>
+                        <SW-DATA-DEF-PROPS-VARIANTS>
+                          <SW-DATA-DEF-PROPS-CONDITIONAL>
+                            <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                            <SW-POINTER-TARGET-PROPS>
+                              <TARGET-CATEGORY>STRUCTURE</TARGET-CATEGORY>
+                              <SW-DATA-DEF-PROPS>
+                                <SW-DATA-DEF-PROPS-VARIANTS>
+                                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                    <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Comtype/ImplementationDataTypes/PduInfoType</IMPLEMENTATION-DATA-TYPE-REF>
+                                    <SW-IMPL-POLICY>CONST</SW-IMPL-POLICY>
+                                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                </SW-DATA-DEF-PROPS-VARIANTS>
+                              </SW-DATA-DEF-PROPS>
+                            </SW-POINTER-TARGET-PROPS>
+                          </SW-DATA-DEF-PROPS-CONDITIONAL>
+                        </SW-DATA-DEF-PROPS-VARIANTS>
+                      </SW-DATA-DEF-PROPS>
+                  </SW-SERVICE-ARG>                  
+                  <SW-SERVICE-ARG>
+                  <SHORT-NAME>TpSduLength</SHORT-NAME>
+                  <DESC>
+                   <L-2 L="EN">Total length of the N-SDU to be received. </L-2>
+                  </DESC>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <DIRECTION>IN</DIRECTION>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                         <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Comtype/ImplementationDataTypes/PduLengthType</IMPLEMENTATION-DATA-TYPE-REF>
+                        <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </SW-SERVICE-ARG>                
+                <SW-SERVICE-ARG>
+                    <SHORT-NAME>bufferSizePtr</SHORT-NAME>
+                    <DESC>
+                      <L-2 L="EN">Available receive buffer in the receiving module.This parameter will be used to compute the Block Size (BS) in the transport protocol module.</L-2>
+                    </DESC>
+                    <CATEGORY>DATA_REFERENCE</CATEGORY>
+                    <DIRECTION>OUT</DIRECTION>
+                      <SW-DATA-DEF-PROPS>
+                        <SW-DATA-DEF-PROPS-VARIANTS>
+                          <SW-DATA-DEF-PROPS-CONDITIONAL>
+                            <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                            <SW-POINTER-TARGET-PROPS>
+                              <TARGET-CATEGORY>VALUE</TARGET-CATEGORY>
+                              <SW-DATA-DEF-PROPS>
+                                <SW-DATA-DEF-PROPS-VARIANTS>
+                                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                    <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Comtype/ImplementationDataTypes/PduLengthType</IMPLEMENTATION-DATA-TYPE-REF>
+                                    <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                </SW-DATA-DEF-PROPS-VARIANTS>
+                              </SW-DATA-DEF-PROPS>
+                            </SW-POINTER-TARGET-PROPS>
+                          </SW-DATA-DEF-PROPS-CONDITIONAL>
+                        </SW-DATA-DEF-PROPS-VARIANTS>
+                      </SW-DATA-DEF-PROPS>
+                  </SW-SERVICE-ARG>                             
+              </ARGUMENTS>            
+            </BSW-MODULE-ENTRY>    
+            <BSW-MODULE-ENTRY>
+              <SHORT-NAME>Dcm_CopyRxData</SHORT-NAME>
+              <DESC>
+                <L-2 L="EN">This function is called to provide the received data of an I-PDU segment (N-PDU) to the upper layer. Each call to this function provides the next part of the I-PDU data. The size of the remaining buffer is written to the position indicated by bufferSizePtr.</L-2>
+              </DESC>
+              <SERVICE-ID>0x44</SERVICE-ID>
+              <IS-REENTRANT>true</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>CALLBACK</CALL-TYPE>
+              <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              <RETURN-TYPE>
+                <SHORT-NAME>ReturnValue</SHORT-NAME>
+                  <DESC>
+                    <L-2 L="EN">BUFREQ_OK: Connection has been accepted. BUFREQ_E_NOT_OK: Connection has been rejected.</L-2>
+                  </DESC>
+                <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                <DIRECTION>OUT</DIRECTION>
+                <SW-DATA-DEF-PROPS>
+                  <SW-DATA-DEF-PROPS-VARIANTS>
+                    <SW-DATA-DEF-PROPS-CONDITIONAL>
+                      <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Comtype/ImplementationDataTypes/BufReq_ReturnType</IMPLEMENTATION-DATA-TYPE-REF>
+                    </SW-DATA-DEF-PROPS-CONDITIONAL>
+                  </SW-DATA-DEF-PROPS-VARIANTS>
+                </SW-DATA-DEF-PROPS>
+              </RETURN-TYPE>
+               <ARGUMENTS>                           
+                <SW-SERVICE-ARG>
+                  <SHORT-NAME>id</SHORT-NAME>
+                  <DESC>
+                   <L-2 L="EN">ID of the received I-PDU. </L-2>
+                  </DESC>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <DIRECTION>IN</DIRECTION>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                         <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Comtype/ImplementationDataTypes/PduIdType</IMPLEMENTATION-DATA-TYPE-REF>
+                        <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </SW-SERVICE-ARG>                 
+                <SW-SERVICE-ARG>
+                    <SHORT-NAME>info</SHORT-NAME>
+                    <DESC>
+                      <L-2 L="EN">Contains the length (SduLength) of the received I-PDU and a pointer to a buffer (SduDataPtr) containing the I-PDU.</L-2>
+                    </DESC>
+                    <CATEGORY>DATA_REFERENCE</CATEGORY>
+                    <DIRECTION>IN</DIRECTION>
+                      <SW-DATA-DEF-PROPS>
+                        <SW-DATA-DEF-PROPS-VARIANTS>
+                          <SW-DATA-DEF-PROPS-CONDITIONAL>
+                            <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                            <SW-POINTER-TARGET-PROPS>
+                              <TARGET-CATEGORY>STRUCTURE</TARGET-CATEGORY>
+                              <SW-DATA-DEF-PROPS>
+                                <SW-DATA-DEF-PROPS-VARIANTS>
+                                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                    <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Comtype/ImplementationDataTypes/PduInfoType</IMPLEMENTATION-DATA-TYPE-REF>
+                                    <SW-IMPL-POLICY>CONST</SW-IMPL-POLICY>
+                                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                </SW-DATA-DEF-PROPS-VARIANTS>
+                              </SW-DATA-DEF-PROPS>
+                            </SW-POINTER-TARGET-PROPS>
+                          </SW-DATA-DEF-PROPS-CONDITIONAL>
+                        </SW-DATA-DEF-PROPS-VARIANTS>
+                      </SW-DATA-DEF-PROPS>
+                  </SW-SERVICE-ARG>                        
+                  <SW-SERVICE-ARG>
+                    <SHORT-NAME>bufferSizePtr</SHORT-NAME>
+                    <DESC>
+                      <L-2 L="EN">Available receive buffer after data has been copied.</L-2>
+                    </DESC>
+                    <CATEGORY>DATA_REFERENCE</CATEGORY>
+                    <DIRECTION>OUT</DIRECTION>
+                      <SW-DATA-DEF-PROPS>
+                        <SW-DATA-DEF-PROPS-VARIANTS>
+                          <SW-DATA-DEF-PROPS-CONDITIONAL>
+                            <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                            <SW-POINTER-TARGET-PROPS>
+                              <TARGET-CATEGORY>VALUE</TARGET-CATEGORY>
+                              <SW-DATA-DEF-PROPS>
+                                <SW-DATA-DEF-PROPS-VARIANTS>
+                                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                    <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Comtype/ImplementationDataTypes/PduLengthType</IMPLEMENTATION-DATA-TYPE-REF>
+                                    <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                </SW-DATA-DEF-PROPS-VARIANTS>
+                              </SW-DATA-DEF-PROPS>
+                            </SW-POINTER-TARGET-PROPS>
+                          </SW-DATA-DEF-PROPS-CONDITIONAL>
+                        </SW-DATA-DEF-PROPS-VARIANTS>
+                      </SW-DATA-DEF-PROPS>
+                  </SW-SERVICE-ARG>                                             
+              </ARGUMENTS>            
+            </BSW-MODULE-ENTRY>            
+            <BSW-MODULE-ENTRY>
+              <SHORT-NAME>Dcm_TpRxIndication</SHORT-NAME>
+              <DESC>
+                <L-2 L="EN">Called after an I-PDU has been received via the TP API, the result indicates whether the transmission was successful or not.</L-2>
+              </DESC>
+              <SERVICE-ID>0x45</SERVICE-ID>
+              <IS-REENTRANT>true</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>CALLBACK</CALL-TYPE>
+              <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              <ARGUMENTS>                     
+                <SW-SERVICE-ARG>
+                  <SHORT-NAME>id</SHORT-NAME>
+                  <DESC>
+                   <L-2 L="EN">ID of the received I-PDU. </L-2>
+                  </DESC>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <DIRECTION>IN</DIRECTION>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                         <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Comtype/ImplementationDataTypes/PduIdType</IMPLEMENTATION-DATA-TYPE-REF>
+                        <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </SW-SERVICE-ARG>                
+                <SW-SERVICE-ARG>
+                  <SHORT-NAME>result</SHORT-NAME>
+                  <DESC>
+                   <L-2 L="EN">Result of the reception. </L-2>
+                  </DESC>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <DIRECTION>IN</DIRECTION>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                         <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Std/ImplementationDataTypes/Std_ReturnType</IMPLEMENTATION-DATA-TYPE-REF>
+                        <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </SW-SERVICE-ARG>
+              </ARGUMENTS>            
+            </BSW-MODULE-ENTRY>            
+            <BSW-MODULE-ENTRY>
+              <SHORT-NAME>Dcm_CopyTxData</SHORT-NAME>
+              <DESC>
+                <L-2 L="EN">This function is called to acquire the transmit data of an I-PDU segment (N-PDU). Each call to this function provides the next part of the I-PDU data unless retry->TpDataState is TP_DATARETRY. In this case the function restarts to copy the data beginning at the offset from the current position indicated by retry->TxTpDataCnt. The size of the remaining data is written to the position indicated by availableDataPtr.</L-2>
+              </DESC>
+              <SERVICE-ID>0x43</SERVICE-ID>
+              <IS-REENTRANT>true</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>CALLBACK</CALL-TYPE>
+              <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              <RETURN-TYPE>
+                <SHORT-NAME>ReturnValue</SHORT-NAME>
+                  <DESC>
+                    <L-2 L="EN">BUFREQ_OK: Data has been copied to the transmit buffer completely as requested. BUFREQ_E_NOT_OK: Data has not been copied. Request failed. BUFREQ_E_BUSY: Request could not be fulfilled, because the required amount of Tx data is not available.The lower layer module may retry this call later on. No data has been copied.</L-2>
+                  </DESC>
+                <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                <DIRECTION>OUT</DIRECTION>
+                <SW-DATA-DEF-PROPS>
+                  <SW-DATA-DEF-PROPS-VARIANTS>
+                    <SW-DATA-DEF-PROPS-CONDITIONAL>
+                      <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Comtype/ImplementationDataTypes/BufReq_ReturnType</IMPLEMENTATION-DATA-TYPE-REF>
+                    </SW-DATA-DEF-PROPS-CONDITIONAL>
+                  </SW-DATA-DEF-PROPS-VARIANTS>
+                </SW-DATA-DEF-PROPS>
+              </RETURN-TYPE>
+               <ARGUMENTS>                         
+                <SW-SERVICE-ARG>
+                  <SHORT-NAME>id</SHORT-NAME>
+                  <DESC>
+                   <L-2 L="EN">ID of the received I-PDU. </L-2>
+                  </DESC>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <DIRECTION>IN</DIRECTION>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                         <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Comtype/ImplementationDataTypes/PduIdType</IMPLEMENTATION-DATA-TYPE-REF>
+                        <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </SW-SERVICE-ARG>                 
+                <SW-SERVICE-ARG>
+                    <SHORT-NAME>info</SHORT-NAME>
+                    <DESC>
+                      <L-2 L="EN">Contains the length (SduLength) of the received I-PDU and a pointer to a buffer (SduDataPtr) containing the I-PDU.</L-2>
+                    </DESC>
+                    <CATEGORY>DATA_REFERENCE</CATEGORY>
+                    <DIRECTION>IN</DIRECTION>
+                      <SW-DATA-DEF-PROPS>
+                        <SW-DATA-DEF-PROPS-VARIANTS>
+                          <SW-DATA-DEF-PROPS-CONDITIONAL>
+                            <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                            <SW-POINTER-TARGET-PROPS>
+                              <TARGET-CATEGORY>STRUCTURE</TARGET-CATEGORY>
+                              <SW-DATA-DEF-PROPS>
+                                <SW-DATA-DEF-PROPS-VARIANTS>
+                                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                    <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Comtype/ImplementationDataTypes/PduInfoType</IMPLEMENTATION-DATA-TYPE-REF>
+                                    <SW-IMPL-POLICY>CONST</SW-IMPL-POLICY>
+                                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                </SW-DATA-DEF-PROPS-VARIANTS>
+                              </SW-DATA-DEF-PROPS>
+                            </SW-POINTER-TARGET-PROPS>
+                          </SW-DATA-DEF-PROPS-CONDITIONAL>
+                        </SW-DATA-DEF-PROPS-VARIANTS>
+                      </SW-DATA-DEF-PROPS>
+                  </SW-SERVICE-ARG>                  
+                  <SW-SERVICE-ARG>
+                    <SHORT-NAME>retry</SHORT-NAME>
+                    <DESC>
+                      <L-2 L="EN">This parameter is used to acknowledge transmitted data or to retransmit data after transmission problems.</L-2>
+                    </DESC>
+                    <CATEGORY>DATA_REFERENCE</CATEGORY>
+                    <DIRECTION>IN</DIRECTION>
+                      <SW-DATA-DEF-PROPS>
+                        <SW-DATA-DEF-PROPS-VARIANTS>
+                          <SW-DATA-DEF-PROPS-CONDITIONAL>
+                            <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                            <SW-POINTER-TARGET-PROPS>
+                              <TARGET-CATEGORY>STRUCTURE</TARGET-CATEGORY>
+                              <SW-DATA-DEF-PROPS>
+                                <SW-DATA-DEF-PROPS-VARIANTS>
+                                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                    <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Comtype/ImplementationDataTypes/RetryInfoType</IMPLEMENTATION-DATA-TYPE-REF>
+                                    <SW-IMPL-POLICY>CONST</SW-IMPL-POLICY>
+                                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                </SW-DATA-DEF-PROPS-VARIANTS>
+                              </SW-DATA-DEF-PROPS>
+                            </SW-POINTER-TARGET-PROPS>
+                          </SW-DATA-DEF-PROPS-CONDITIONAL>
+                        </SW-DATA-DEF-PROPS-VARIANTS>
+                      </SW-DATA-DEF-PROPS>
+                  </SW-SERVICE-ARG>                  
+                  <SW-SERVICE-ARG>
+                    <SHORT-NAME>availableDataPtr</SHORT-NAME>
+                    <DESC>
+                      <L-2 L="EN">Indicates the remaining number of bytes that are available in the upper layer modules Tx buffer.</L-2>
+                    </DESC>
+                    <CATEGORY>DATA_REFERENCE</CATEGORY>
+                    <DIRECTION>OUT</DIRECTION>
+                      <SW-DATA-DEF-PROPS>
+                        <SW-DATA-DEF-PROPS-VARIANTS>
+                          <SW-DATA-DEF-PROPS-CONDITIONAL>
+                            <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                            <SW-POINTER-TARGET-PROPS>
+                              <TARGET-CATEGORY>VALUE</TARGET-CATEGORY>
+                              <SW-DATA-DEF-PROPS>
+                                <SW-DATA-DEF-PROPS-VARIANTS>
+                                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                    <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Comtype/ImplementationDataTypes/PduLengthType</IMPLEMENTATION-DATA-TYPE-REF>
+                                    <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                </SW-DATA-DEF-PROPS-VARIANTS>
+                              </SW-DATA-DEF-PROPS>
+                            </SW-POINTER-TARGET-PROPS>
+                          </SW-DATA-DEF-PROPS-CONDITIONAL>
+                        </SW-DATA-DEF-PROPS-VARIANTS>
+                      </SW-DATA-DEF-PROPS>
+                  </SW-SERVICE-ARG>                                           
+              </ARGUMENTS>            
+            </BSW-MODULE-ENTRY>           
+            <BSW-MODULE-ENTRY>
+              <SHORT-NAME>Dcm_TpTxConfirmation</SHORT-NAME>
+              <DESC>
+                <L-2 L="EN">Called after an I-PDU has been transmitted via the TP API, the result indicates whether the transmission was successful or not.</L-2>
+              </DESC>
+              <SERVICE-ID>0x48</SERVICE-ID>
+              <IS-REENTRANT>true</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>CALLBACK</CALL-TYPE>
+              <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              <ARGUMENTS>                         
+                <SW-SERVICE-ARG>
+                  <SHORT-NAME>id</SHORT-NAME>
+                  <DESC>
+                   <L-2 L="EN">ID of the received I-PDU. </L-2>
+                  </DESC>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <DIRECTION>IN</DIRECTION>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                         <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Comtype/ImplementationDataTypes/PduIdType</IMPLEMENTATION-DATA-TYPE-REF>
+                        <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </SW-SERVICE-ARG>                
+                <SW-SERVICE-ARG>
+                  <SHORT-NAME>result</SHORT-NAME>
+                  <DESC>
+                   <L-2 L="EN">Result of the reception. </L-2>
+                  </DESC>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <DIRECTION>IN</DIRECTION>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                         <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Std/ImplementationDataTypes/Std_ReturnType</IMPLEMENTATION-DATA-TYPE-REF>
+                        <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </SW-SERVICE-ARG>
+              </ARGUMENTS>            
+            </BSW-MODULE-ENTRY>            
+            <BSW-MODULE-ENTRY>
+              <SHORT-NAME>Dcm_TxConfirmation</SHORT-NAME>
+              <DESC>
+                <L-2 L="EN">The lower layer communication interface module confirms the transmission of a PDU, or the failure to transmit a PDU.</L-2>
+              </DESC>
+              <SERVICE-ID>0x40</SERVICE-ID>
+              <IS-REENTRANT>true</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>CALLBACK</CALL-TYPE>
+              <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              <ARGUMENTS>                         
+                <SW-SERVICE-ARG>
+                  <SHORT-NAME>TxPduId</SHORT-NAME>
+                  <DESC>
+                   <L-2 L="EN">ID of the PDU that has been transmitted. </L-2>
+                  </DESC>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <DIRECTION>IN</DIRECTION>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                         <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Comtype/ImplementationDataTypes/PduIdType</IMPLEMENTATION-DATA-TYPE-REF>
+                        <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </SW-SERVICE-ARG>                
+                <SW-SERVICE-ARG>
+                  <SHORT-NAME>result</SHORT-NAME>
+                  <DESC>
+                   <L-2 L="EN">E_OK: The PDU was transmitted. E_NOT_OK: Transmission of the PDU failed. </L-2>
+                  </DESC>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <DIRECTION>IN</DIRECTION>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                         <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Std/ImplementationDataTypes/Std_ReturnType</IMPLEMENTATION-DATA-TYPE-REF>
+                        <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </SW-SERVICE-ARG>
+              </ARGUMENTS>            
+            </BSW-MODULE-ENTRY>            
+            <BSW-MODULE-ENTRY>
+              <SHORT-NAME>Dcm_ComM_NoComModeEntered</SHORT-NAME>
+              <DESC>
+                <L-2 L="EN">This call informs the Dcm module about a ComM mode change to COMM_NO_COMMUNICATION.</L-2>
+              </DESC>
+              <SERVICE-ID>0x21</SERVICE-ID>
+              <IS-REENTRANT>true</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>CALLBACK</CALL-TYPE>
+              <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              <ARGUMENTS>                         
+                <SW-SERVICE-ARG>
+                  <SHORT-NAME>NetworkId</SHORT-NAME>
+                  <DESC>
+                   <L-2 L="EN">Identifier of the network concerned by the mode change. </L-2>
+                  </DESC>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <DIRECTION>IN</DIRECTION>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                         <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                        <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </SW-SERVICE-ARG>
+              </ARGUMENTS>            
+            </BSW-MODULE-ENTRY>            
+            <BSW-MODULE-ENTRY>
+              <SHORT-NAME>Dcm_ComM_SilentComModeEntered</SHORT-NAME>
+              <DESC>
+                <L-2 L="EN">This call informs the Dcm module about a ComM mode change to COMM_SILENT_COMMUNICATION.</L-2>
+              </DESC>
+              <SERVICE-ID>0x22</SERVICE-ID>
+              <IS-REENTRANT>true</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>CALLBACK</CALL-TYPE>
+              <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              <ARGUMENTS>                         
+                <SW-SERVICE-ARG>
+                  <SHORT-NAME>NetworkId</SHORT-NAME>
+                  <DESC>
+                   <L-2 L="EN">Identifier of the network concerned by the mode change. </L-2>
+                  </DESC>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <DIRECTION>IN</DIRECTION>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                         <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                        <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </SW-SERVICE-ARG>
+              </ARGUMENTS>            
+            </BSW-MODULE-ENTRY>           
+            <BSW-MODULE-ENTRY>
+              <SHORT-NAME>Dcm_ComM_FullComModeEntered</SHORT-NAME>
+              <DESC>
+                <L-2 L="EN">This call informs the Dcm module about a ComM mode change to COMM_FULL_COMMUNICATION.</L-2>
+              </DESC>
+              <SERVICE-ID>0x23</SERVICE-ID>
+              <IS-REENTRANT>true</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>CALLBACK</CALL-TYPE>
+              <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              <ARGUMENTS>                          
+                <SW-SERVICE-ARG>
+                  <SHORT-NAME>NetworkId</SHORT-NAME>
+                  <DESC>
+                   <L-2 L="EN">Identifier of the network concerned by the mode change. </L-2>
+                  </DESC>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <DIRECTION>IN</DIRECTION>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                         <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                        <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </SW-SERVICE-ARG>
+              </ARGUMENTS>            
+            </BSW-MODULE-ENTRY>     
+          </ELEMENTS>
+        </AR-PACKAGE>
+        <AR-PACKAGE>
+          <SHORT-NAME>BswModuleDescriptions</SHORT-NAME>
+          <ELEMENTS>
+            <BSW-MODULE-DESCRIPTION>
+              <SHORT-NAME>Dcm</SHORT-NAME>
+              <CATEGORY>BSW_MODULE</CATEGORY>
+              <MODULE-ID>53</MODULE-ID>
+              <PROVIDED-ENTRYS>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Dcm/BswModuleEntrys/Dcm_MainFunction</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+              </PROVIDED-ENTRYS>
+              <PROVIDED-MODE-GROUPS>
+                <MODE-DECLARATION-GROUP-PROTOTYPE>
+                  <SHORT-NAME>DcmDiagnosticSessionControl</SHORT-NAME>
+                  <TYPE-TREF DEST="MODE-DECLARATION-GROUP">/AUTOSAR_Dcm/ModeDeclarationGroups/DcmDiagnosticSessionControl</TYPE-TREF>
+                </MODE-DECLARATION-GROUP-PROTOTYPE>
+                <MODE-DECLARATION-GROUP-PROTOTYPE>
+                  <SHORT-NAME>DcmEcuReset</SHORT-NAME>
+                  <TYPE-TREF DEST="MODE-DECLARATION-GROUP">/AUTOSAR_Dcm/ModeDeclarationGroups/DcmEcuReset</TYPE-TREF>
+                </MODE-DECLARATION-GROUP-PROTOTYPE>
+                <MODE-DECLARATION-GROUP-PROTOTYPE>
+                  <SHORT-NAME>DcmControlDTCSetting</SHORT-NAME>
+                  <TYPE-TREF DEST="MODE-DECLARATION-GROUP">/AUTOSAR_Dcm/ModeDeclarationGroups/DcmControlDTCSetting</TYPE-TREF>
+                </MODE-DECLARATION-GROUP-PROTOTYPE>
+                <MODE-DECLARATION-GROUP-PROTOTYPE>
+                  <SHORT-NAME>DcmCommunicationControl_Can_Network_ETAS_Channel_Can_Network_ETAS</SHORT-NAME>
+                  <TYPE-TREF DEST="MODE-DECLARATION-GROUP">/AUTOSAR_Dcm/ModeDeclarationGroups/DcmCommunicationControl_Can_Network_ETAS_Channel_Can_Network_ETAS</TYPE-TREF>
+                </MODE-DECLARATION-GROUP-PROTOTYPE>
+              </PROVIDED-MODE-GROUPS>
+              <REQUIRED-MODE-GROUPS>
+                <MODE-DECLARATION-GROUP-PROTOTYPE>
+                  <SHORT-NAME>R_DcmCommunicationControl_Can_Network_ETAS_Channel_Can_Network_ETAS</SHORT-NAME>
+                  <TYPE-TREF DEST="MODE-DECLARATION-GROUP">/AUTOSAR_Dcm/ModeDeclarationGroups/DcmCommunicationControl_Can_Network_ETAS_Channel_Can_Network_ETAS</TYPE-TREF>
+                </MODE-DECLARATION-GROUP-PROTOTYPE>
+              </REQUIRED-MODE-GROUPS>
+              <INTERNAL-BEHAVIORS>
+                <BSW-INTERNAL-BEHAVIOR>
+                  <SHORT-NAME>BswInternalBehavior</SHORT-NAME>
+                  <DATA-TYPE-MAPPING-REFS>
+                    <DATA-TYPE-MAPPING-REF DEST="DATA-TYPE-MAPPING-SET">/AUTOSAR_Dcm/DataTypeMappingSets/DTS_DcmDiagnosticSessionControl</DATA-TYPE-MAPPING-REF>
+                    <DATA-TYPE-MAPPING-REF DEST="DATA-TYPE-MAPPING-SET">/AUTOSAR_Dcm/DataTypeMappingSets/DTS_DcmEcuReset</DATA-TYPE-MAPPING-REF>
+                    <DATA-TYPE-MAPPING-REF DEST="DATA-TYPE-MAPPING-SET">/AUTOSAR_Dcm/DataTypeMappingSets/DTS_DcmControlDTCSetting</DATA-TYPE-MAPPING-REF>
+                    <DATA-TYPE-MAPPING-REF DEST="DATA-TYPE-MAPPING-SET">/AUTOSAR_Dcm/DataTypeMappingSets/DTS_DcmCommunicationControl_Can_Network_ETAS_Channel_Can_Network_ETAS</DATA-TYPE-MAPPING-REF>
+                  </DATA-TYPE-MAPPING-REFS>
+                  <ENTITYS>
+                     <BSW-CALLED-ENTITY>
+                      <SHORT-NAME>CE_Dcm_Init</SHORT-NAME>
+                      <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Dcm/BswModuleEntrys/Dcm_Init</IMPLEMENTED-ENTRY-REF>
+                     </BSW-CALLED-ENTITY>
+                     <BSW-CALLED-ENTITY>
+                      <SHORT-NAME>CE_Dcm_GetVin</SHORT-NAME>
+                      <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Dcm/BswModuleEntrys/Dcm_GetVin</IMPLEMENTED-ENTRY-REF>
+                     </BSW-CALLED-ENTITY>
+                     <BSW-CALLED-ENTITY>
+                      <SHORT-NAME>CE_Dcm_GetSecurityLevel</SHORT-NAME>
+                      <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Dcm/BswModuleEntrys/Dcm_GetSecurityLevel</IMPLEMENTED-ENTRY-REF>
+                     </BSW-CALLED-ENTITY>
+                     <BSW-CALLED-ENTITY>
+                      <SHORT-NAME>CE_Dcm_GetSesCtrlType</SHORT-NAME>
+                      <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Dcm/BswModuleEntrys/Dcm_GetSesCtrlType</IMPLEMENTED-ENTRY-REF>
+                     </BSW-CALLED-ENTITY>
+                     <BSW-CALLED-ENTITY>
+                      <SHORT-NAME>CE_Dcm_GetActiveProtocol</SHORT-NAME>
+                      <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Dcm/BswModuleEntrys/Dcm_GetActiveProtocol</IMPLEMENTED-ENTRY-REF>
+                     </BSW-CALLED-ENTITY>
+                     <BSW-CALLED-ENTITY>
+                      <SHORT-NAME>CE_Dcm_ResetToDefaultSession</SHORT-NAME>
+                      <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Dcm/BswModuleEntrys/Dcm_ResetToDefaultSession</IMPLEMENTED-ENTRY-REF>
+                     </BSW-CALLED-ENTITY>
+                     <BSW-CALLED-ENTITY>
+                      <SHORT-NAME>CE_Dcm_SetActiveDiagnostic</SHORT-NAME>
+                      <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Dcm/BswModuleEntrys/Dcm_SetActiveDiagnostic</IMPLEMENTED-ENTRY-REF>
+                     </BSW-CALLED-ENTITY>                     
+                     <BSW-CALLED-ENTITY>
+                      <SHORT-NAME>CE_Dcm_StartOfReception</SHORT-NAME>
+                      <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Dcm/BswModuleEntrys/Dcm_StartOfReception</IMPLEMENTED-ENTRY-REF>
+                     </BSW-CALLED-ENTITY>                     
+                     <BSW-CALLED-ENTITY>
+                      <SHORT-NAME>CE_Dcm_CopyRxData</SHORT-NAME>
+                      <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Dcm/BswModuleEntrys/Dcm_CopyRxData</IMPLEMENTED-ENTRY-REF>
+                     </BSW-CALLED-ENTITY>                     
+                     <BSW-CALLED-ENTITY>
+                      <SHORT-NAME>CE_Dcm_TpRxIndication</SHORT-NAME>
+                      <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Dcm/BswModuleEntrys/Dcm_TpRxIndication</IMPLEMENTED-ENTRY-REF>
+                     </BSW-CALLED-ENTITY>                     
+                     <BSW-CALLED-ENTITY>
+                      <SHORT-NAME>CE_Dcm_CopyTxData</SHORT-NAME>
+                      <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Dcm/BswModuleEntrys/Dcm_CopyTxData</IMPLEMENTED-ENTRY-REF>
+                     </BSW-CALLED-ENTITY>                     
+                     <BSW-CALLED-ENTITY>
+                      <SHORT-NAME>CE_Dcm_TxConfirmation</SHORT-NAME>
+                      <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Dcm/BswModuleEntrys/Dcm_TxConfirmation</IMPLEMENTED-ENTRY-REF>
+                     </BSW-CALLED-ENTITY>                     
+                     <BSW-CALLED-ENTITY>
+                      <SHORT-NAME>CE_Dcm_TpTxConfirmation</SHORT-NAME>
+                      <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Dcm/BswModuleEntrys/Dcm_TpTxConfirmation</IMPLEMENTED-ENTRY-REF>
+                     </BSW-CALLED-ENTITY>                     
+                     <BSW-CALLED-ENTITY>
+                      <SHORT-NAME>CE_Dcm_ComM_NoComModeEntered</SHORT-NAME>
+                      <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Dcm/BswModuleEntrys/Dcm_ComM_NoComModeEntered</IMPLEMENTED-ENTRY-REF>
+                     </BSW-CALLED-ENTITY>                     
+                     <BSW-CALLED-ENTITY>
+                      <SHORT-NAME>CE_Dcm_ComM_SilentComModeEntered</SHORT-NAME>
+                      <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Dcm/BswModuleEntrys/Dcm_ComM_SilentComModeEntered</IMPLEMENTED-ENTRY-REF>
+                     </BSW-CALLED-ENTITY>                     
+                     <BSW-CALLED-ENTITY>
+                      <SHORT-NAME>CE_Dcm_ComM_FullComModeEntered</SHORT-NAME>
+                      <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Dcm/BswModuleEntrys/Dcm_ComM_FullComModeEntered</IMPLEMENTED-ENTRY-REF>
+                     </BSW-CALLED-ENTITY>                     
+                     <BSW-SCHEDULABLE-ENTITY>
+	                      <SHORT-NAME>BSWSE_DcmMainFunction</SHORT-NAME>
+	                      <ACCESSED-MODE-GROUPS>
+	                        <MODE-DECLARATION-GROUP-PROTOTYPE-REF-CONDITIONAL>
+	                          <MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/AUTOSAR_Dcm/BswModuleDescriptions/Dcm/R_DcmCommunicationControl_Can_Network_ETAS_Channel_Can_Network_ETAS</MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+	                        </MODE-DECLARATION-GROUP-PROTOTYPE-REF-CONDITIONAL>
+	                      </ACCESSED-MODE-GROUPS>
+	                                            <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Dcm/BswModuleEntrys/Dcm_MainFunction</IMPLEMENTED-ENTRY-REF>
+	                      <MANAGED-MODE-GROUPS>
+	                        <MODE-DECLARATION-GROUP-PROTOTYPE-REF-CONDITIONAL>
+	                          <MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/AUTOSAR_Dcm/BswModuleDescriptions/Dcm/DcmDiagnosticSessionControl</MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+	                        </MODE-DECLARATION-GROUP-PROTOTYPE-REF-CONDITIONAL>
+	                        <MODE-DECLARATION-GROUP-PROTOTYPE-REF-CONDITIONAL>
+	                         <MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/AUTOSAR_Dcm/BswModuleDescriptions/Dcm/DcmEcuReset</MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+	                        </MODE-DECLARATION-GROUP-PROTOTYPE-REF-CONDITIONAL>
+	                        <MODE-DECLARATION-GROUP-PROTOTYPE-REF-CONDITIONAL>
+	                         <MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/AUTOSAR_Dcm/BswModuleDescriptions/Dcm/DcmControlDTCSetting</MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+	                        </MODE-DECLARATION-GROUP-PROTOTYPE-REF-CONDITIONAL>
+	                         <MODE-DECLARATION-GROUP-PROTOTYPE-REF-CONDITIONAL>
+	                         <MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/AUTOSAR_Dcm/BswModuleDescriptions/Dcm/DcmCommunicationControl_Can_Network_ETAS_Channel_Can_Network_ETAS</MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+	                        </MODE-DECLARATION-GROUP-PROTOTYPE-REF-CONDITIONAL>
+	                      </MANAGED-MODE-GROUPS>
+	                    </BSW-SCHEDULABLE-ENTITY>
+                  </ENTITYS>
+                  <MODE-SENDER-POLICYS>
+                    <BSW-MODE-SENDER-POLICY>
+                      <PROVIDED-MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/AUTOSAR_Dcm/BswModuleDescriptions/Dcm/DcmDiagnosticSessionControl</PROVIDED-MODE-GROUP-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </BSW-MODE-SENDER-POLICY>
+                    <BSW-MODE-SENDER-POLICY>
+                     <PROVIDED-MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/AUTOSAR_Dcm/BswModuleDescriptions/Dcm/DcmEcuReset</PROVIDED-MODE-GROUP-REF>
+                     <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </BSW-MODE-SENDER-POLICY>
+                    <BSW-MODE-SENDER-POLICY>
+                     <PROVIDED-MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/AUTOSAR_Dcm/BswModuleDescriptions/Dcm/DcmControlDTCSetting</PROVIDED-MODE-GROUP-REF>
+                     <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </BSW-MODE-SENDER-POLICY>
+                    <BSW-MODE-SENDER-POLICY>
+                     <PROVIDED-MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/AUTOSAR_Dcm/BswModuleDescriptions/Dcm/DcmCommunicationControl_Can_Network_ETAS_Channel_Can_Network_ETAS</PROVIDED-MODE-GROUP-REF>
+                     <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </BSW-MODE-SENDER-POLICY>
+                  </MODE-SENDER-POLICYS>
+                </BSW-INTERNAL-BEHAVIOR>
+              </INTERNAL-BEHAVIORS>
+            </BSW-MODULE-DESCRIPTION>
+          </ELEMENTS>
+        </AR-PACKAGE>
+        <AR-PACKAGE>
+          <SHORT-NAME>BswImplementations</SHORT-NAME>
+          <ELEMENTS>
+            <BSW-IMPLEMENTATION>
+              <SHORT-NAME>Dcm</SHORT-NAME>
+              <CODE-DESCRIPTORS>
+                <CODE>
+                  <SHORT-NAME>CodeDescriptor</SHORT-NAME>
+                  <ARTIFACT-DESCRIPTORS>
+                    <AUTOSAR-ENGINEERING-OBJECT>
+                      <SHORT-LABEL>ArEngObject</SHORT-LABEL>
+                      <CATEGORY>SWSRC</CATEGORY>
+                    </AUTOSAR-ENGINEERING-OBJECT>
+                  </ARTIFACT-DESCRIPTORS>
+                </CODE>
+              </CODE-DESCRIPTORS>
+              <PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+              <RESOURCE-CONSUMPTION>
+                <SHORT-NAME>Dcm_ResourceConsumption</SHORT-NAME>
+                <MEMORY-SECTIONS>
+                    <MEMORY-SECTION>
+                    <SHORT-NAME>DCM_CODE</SHORT-NAME>
+                    <PREFIX-REF  DEST="SECTION-NAME-PREFIX">/AUTOSAR_Dcm/BswImplementations/Dcm/Dcm_ResourceConsumption/DCM</PREFIX-REF>
+                    <SW-ADDRMETHOD-REF DEST="SW-ADDR-METHOD">/RB/RBA/Common/CentralElements/SwAddrMethods/CODE</SW-ADDRMETHOD-REF>
+                    <SYMBOL>CODE</SYMBOL>
+                    </MEMORY-SECTION>
+                    
+                    <MEMORY-SECTION>
+                    <SHORT-NAME>DCM_CONST_UNSPECIFIED</SHORT-NAME>
+                    <PREFIX-REF  DEST="SECTION-NAME-PREFIX">/AUTOSAR_Dcm/BswImplementations/Dcm/Dcm_ResourceConsumption/DCM</PREFIX-REF>
+                    <SW-ADDRMETHOD-REF DEST="SW-ADDR-METHOD">/RB/RBA/Common/CentralElements/SwAddrMethods/CONST</SW-ADDRMETHOD-REF>
+                    <SYMBOL>CONST_UNSPECIFIED</SYMBOL>
+                    </MEMORY-SECTION>
+                    
+                    <MEMORY-SECTION>
+                    <SHORT-NAME>DCM_CONST_8</SHORT-NAME>
+                    <PREFIX-REF  DEST="SECTION-NAME-PREFIX">/AUTOSAR_Dcm/BswImplementations/Dcm/Dcm_ResourceConsumption/DCM</PREFIX-REF>
+                    <SW-ADDRMETHOD-REF DEST="SW-ADDR-METHOD">/RB/RBA/Common/CentralElements/SwAddrMethods/CONST</SW-ADDRMETHOD-REF>
+                    <SYMBOL>CONST_8</SYMBOL>
+                    </MEMORY-SECTION>
+                    
+                    <MEMORY-SECTION>
+                    <SHORT-NAME>DCM_CONST_16</SHORT-NAME>
+                    <PREFIX-REF  DEST="SECTION-NAME-PREFIX">/AUTOSAR_Dcm/BswImplementations/Dcm/Dcm_ResourceConsumption/DCM</PREFIX-REF>
+                    <SW-ADDRMETHOD-REF DEST="SW-ADDR-METHOD">/RB/RBA/Common/CentralElements/SwAddrMethods/CONST</SW-ADDRMETHOD-REF>
+                    <SYMBOL>CONST_16</SYMBOL>
+                    </MEMORY-SECTION>
+                    
+                    <MEMORY-SECTION>
+                    <SHORT-NAME>DCM_CONST_32</SHORT-NAME>
+                    <PREFIX-REF  DEST="SECTION-NAME-PREFIX">/AUTOSAR_Dcm/BswImplementations/Dcm/Dcm_ResourceConsumption/DCM</PREFIX-REF>
+                    <SW-ADDRMETHOD-REF DEST="SW-ADDR-METHOD">/RB/RBA/Common/CentralElements/SwAddrMethods/CONST</SW-ADDRMETHOD-REF>
+                    <SYMBOL>CONST_32</SYMBOL>
+                    </MEMORY-SECTION>
+                    
+                    <MEMORY-SECTION>
+                    <SHORT-NAME>DCM_VAR_INIT_8</SHORT-NAME>
+                    <PREFIX-REF  DEST="SECTION-NAME-PREFIX">/AUTOSAR_Dcm/BswImplementations/Dcm/Dcm_ResourceConsumption/DCM</PREFIX-REF>
+                    <SW-ADDRMETHOD-REF DEST="SW-ADDR-METHOD">/RB/RBA/Common/CentralElements/SwAddrMethods/VAR_INIT</SW-ADDRMETHOD-REF>
+                    <SYMBOL>VAR_INIT_8</SYMBOL>
+                    </MEMORY-SECTION>
+                    
+                    <MEMORY-SECTION>
+                    <SHORT-NAME>DCM_VAR_INIT_16</SHORT-NAME>
+                    <PREFIX-REF  DEST="SECTION-NAME-PREFIX">/AUTOSAR_Dcm/BswImplementations/Dcm/Dcm_ResourceConsumption/DCM</PREFIX-REF>
+                    <SW-ADDRMETHOD-REF DEST="SW-ADDR-METHOD">/RB/RBA/Common/CentralElements/SwAddrMethods/VAR_INIT</SW-ADDRMETHOD-REF>
+                    <SYMBOL>VAR_INIT_16</SYMBOL>
+                    </MEMORY-SECTION>
+                    
+                    <MEMORY-SECTION>
+                    <SHORT-NAME>DCM_VAR_INIT_32</SHORT-NAME>
+                    <PREFIX-REF  DEST="SECTION-NAME-PREFIX">/AUTOSAR_Dcm/BswImplementations/Dcm/Dcm_ResourceConsumption/DCM</PREFIX-REF>
+                    <SW-ADDRMETHOD-REF DEST="SW-ADDR-METHOD">/RB/RBA/Common/CentralElements/SwAddrMethods/VAR_INIT</SW-ADDRMETHOD-REF>
+                    <SYMBOL>VAR_INIT_32</SYMBOL>
+                    </MEMORY-SECTION>
+                    
+                    <MEMORY-SECTION>
+                    <SHORT-NAME>DCM_VAR_INIT_BOOLEAN</SHORT-NAME>
+                    <PREFIX-REF  DEST="SECTION-NAME-PREFIX">/AUTOSAR_Dcm/BswImplementations/Dcm/Dcm_ResourceConsumption/DCM</PREFIX-REF>
+                    <SW-ADDRMETHOD-REF DEST="SW-ADDR-METHOD">/RB/RBA/Common/CentralElements/SwAddrMethods/VAR_INIT</SW-ADDRMETHOD-REF>
+                    <SYMBOL>VAR_INIT_BOOLEAN</SYMBOL>
+                    </MEMORY-SECTION>
+                    
+                    <MEMORY-SECTION>
+                    <SHORT-NAME>DCM_VAR_CLEARED_UNSPECIFIED</SHORT-NAME>
+                    <PREFIX-REF  DEST="SECTION-NAME-PREFIX">/AUTOSAR_Dcm/BswImplementations/Dcm/Dcm_ResourceConsumption/DCM</PREFIX-REF>
+                    <SW-ADDRMETHOD-REF DEST="SW-ADDR-METHOD">/RB/RBA/Common/CentralElements/SwAddrMethods/VAR_CLEARED</SW-ADDRMETHOD-REF>
+                    <SYMBOL>VAR_CLEARED_UNSPECIFIED</SYMBOL>
+                    </MEMORY-SECTION>
+
+                    <MEMORY-SECTION>
+                    <SHORT-NAME>DCM_VAR_CLEARED_BOOLEAN</SHORT-NAME>
+                    <PREFIX-REF  DEST="SECTION-NAME-PREFIX">/AUTOSAR_Dcm/BswImplementations/Dcm/Dcm_ResourceConsumption/DCM</PREFIX-REF>
+                    <SW-ADDRMETHOD-REF DEST="SW-ADDR-METHOD">/RB/RBA/Common/CentralElements/SwAddrMethods/VAR_CLEARED</SW-ADDRMETHOD-REF>
+                    <SYMBOL>VAR_CLEARED_BOOLEAN</SYMBOL>
+                    </MEMORY-SECTION>
+                    
+                    <MEMORY-SECTION>
+                    <SHORT-NAME>DCM_VAR_CLEARED_8</SHORT-NAME>
+                    <PREFIX-REF  DEST="SECTION-NAME-PREFIX">/AUTOSAR_Dcm/BswImplementations/Dcm/Dcm_ResourceConsumption/DCM</PREFIX-REF>
+                    <SW-ADDRMETHOD-REF DEST="SW-ADDR-METHOD">/RB/RBA/Common/CentralElements/SwAddrMethods/VAR_CLEARED</SW-ADDRMETHOD-REF>
+                    <SYMBOL>VAR_CLEARED_8</SYMBOL>
+                    </MEMORY-SECTION>
+                    
+                    <MEMORY-SECTION>
+                    <SHORT-NAME>DCM_VAR_CLEARED_16</SHORT-NAME>
+                    <PREFIX-REF  DEST="SECTION-NAME-PREFIX">/AUTOSAR_Dcm/BswImplementations/Dcm/Dcm_ResourceConsumption/DCM</PREFIX-REF>
+                    <SW-ADDRMETHOD-REF DEST="SW-ADDR-METHOD">/RB/RBA/Common/CentralElements/SwAddrMethods/VAR_CLEARED</SW-ADDRMETHOD-REF>
+                    <SYMBOL>VAR_CLEARED_16</SYMBOL>
+                    </MEMORY-SECTION>
+                    
+                    <MEMORY-SECTION>
+                    <SHORT-NAME>DCM_VAR_CLEARED_32</SHORT-NAME>
+                    <PREFIX-REF  DEST="SECTION-NAME-PREFIX">/AUTOSAR_Dcm/BswImplementations/Dcm/Dcm_ResourceConsumption/DCM</PREFIX-REF>
+                    <SW-ADDRMETHOD-REF DEST="SW-ADDR-METHOD">/RB/RBA/Common/CentralElements/SwAddrMethods/VAR_CLEARED</SW-ADDRMETHOD-REF>
+                    <SYMBOL>VAR_CLEARED_32</SYMBOL>
+                    </MEMORY-SECTION>
+                    
+                    <MEMORY-SECTION>
+                    <SHORT-NAME>DCM_VAR_POWER_ON_CLEARED_UNSPECIFIED</SHORT-NAME>
+                    <PREFIX-REF  DEST="SECTION-NAME-PREFIX">/AUTOSAR_Dcm/BswImplementations/Dcm/Dcm_ResourceConsumption/DCM</PREFIX-REF>
+                    <SW-ADDRMETHOD-REF DEST="SW-ADDR-METHOD">/RB/RBA/Common/CentralElements/SwAddrMethods/VAR_POWER_ON_CLEARED</SW-ADDRMETHOD-REF>
+                    <SYMBOL>VAR_POWER_ON_CLEARED_UNSPECIFIED</SYMBOL>
+                    </MEMORY-SECTION>
+                    
+                    <MEMORY-SECTION>
+                    <SHORT-NAME>DCM_VAR_POWER_ON_CLEARED_BOOLEAN</SHORT-NAME>
+                    <PREFIX-REF  DEST="SECTION-NAME-PREFIX">/AUTOSAR_Dcm/BswImplementations/Dcm/Dcm_ResourceConsumption/DCM</PREFIX-REF>
+                    <SW-ADDRMETHOD-REF DEST="SW-ADDR-METHOD">/RB/RBA/Common/CentralElements/SwAddrMethods/VAR_POWER_ON_CLEARED</SW-ADDRMETHOD-REF>
+                    <SYMBOL>VAR_POWER_ON_CLEARED_BOOLEAN</SYMBOL>
+                    </MEMORY-SECTION>
+                    
+                    <MEMORY-SECTION>
+                    <SHORT-NAME>DCM_VAR_POWER_ON_CLEARED_8</SHORT-NAME>
+                    <PREFIX-REF  DEST="SECTION-NAME-PREFIX">/AUTOSAR_Dcm/BswImplementations/Dcm/Dcm_ResourceConsumption/DCM</PREFIX-REF>
+                    <SW-ADDRMETHOD-REF DEST="SW-ADDR-METHOD">/RB/RBA/Common/CentralElements/SwAddrMethods/VAR_POWER_ON_CLEARED</SW-ADDRMETHOD-REF>
+                    <SYMBOL>VAR_POWER_ON_CLEARED_8</SYMBOL>
+                    </MEMORY-SECTION>
+                    
+                    <MEMORY-SECTION>
+                    <SHORT-NAME>DCM_VAR_POWER_ON_CLEARED_16</SHORT-NAME>
+                    <PREFIX-REF  DEST="SECTION-NAME-PREFIX">/AUTOSAR_Dcm/BswImplementations/Dcm/Dcm_ResourceConsumption/DCM</PREFIX-REF>
+                    <SW-ADDRMETHOD-REF DEST="SW-ADDR-METHOD">/RB/RBA/Common/CentralElements/SwAddrMethods/VAR_POWER_ON_CLEARED</SW-ADDRMETHOD-REF>
+                    <SYMBOL>VAR_POWER_ON_CLEARED_16</SYMBOL>
+                    </MEMORY-SECTION>
+                    
+                    <MEMORY-SECTION>
+                    <SHORT-NAME>DCM_VAR_POWER_ON_CLEARED_32</SHORT-NAME>
+                    <PREFIX-REF  DEST="SECTION-NAME-PREFIX">/AUTOSAR_Dcm/BswImplementations/Dcm/Dcm_ResourceConsumption/DCM</PREFIX-REF>
+                    <SW-ADDRMETHOD-REF DEST="SW-ADDR-METHOD">/RB/RBA/Common/CentralElements/SwAddrMethods/VAR_POWER_ON_CLEARED</SW-ADDRMETHOD-REF>
+                    <SYMBOL>VAR_POWER_ON_CLEARED_32</SYMBOL>
+                    </MEMORY-SECTION>
+                    
+                    <MEMORY-SECTION>
+                    <SHORT-NAME>DCM_VAR_INIT_UNSPECIFIED</SHORT-NAME>
+                    <PREFIX-REF  DEST="SECTION-NAME-PREFIX">/AUTOSAR_Dcm/BswImplementations/Dcm/Dcm_ResourceConsumption/DCM</PREFIX-REF>
+                    <SW-ADDRMETHOD-REF DEST="SW-ADDR-METHOD">/RB/RBA/Common/CentralElements/SwAddrMethods/VAR_INIT</SW-ADDRMETHOD-REF>
+                    <SYMBOL>VAR_INIT_UNSPECIFIED</SYMBOL>
+                    </MEMORY-SECTION>
+                    
+                    <MEMORY-SECTION>
+                    <SHORT-NAME>Dcm_CODE</SHORT-NAME>
+                    <PREFIX-REF  DEST="SECTION-NAME-PREFIX">/AUTOSAR_Dcm/BswImplementations/Dcm/Dcm_ResourceConsumption/Dcm</PREFIX-REF>
+                    <SW-ADDRMETHOD-REF DEST="SW-ADDR-METHOD">/RB/RBA/Common/CentralElements/SwAddrMethods/CODE</SW-ADDRMETHOD-REF>
+                    <SYMBOL>CODE</SYMBOL>
+                    </MEMORY-SECTION> 
+                </MEMORY-SECTIONS>
+                <SECTION-NAME-PREFIXS>
+                 <SECTION-NAME-PREFIX>
+                  <SHORT-NAME>DCM</SHORT-NAME>
+                  <SYMBOL>DCM</SYMBOL>
+                 </SECTION-NAME-PREFIX>
+                 <SECTION-NAME-PREFIX>
+                  <SHORT-NAME>Dcm</SHORT-NAME>
+                  <SYMBOL>Dcm</SYMBOL>
+                 </SECTION-NAME-PREFIX>
+                </SECTION-NAME-PREFIXS>
+              </RESOURCE-CONSUMPTION>
+              <SWC-BSW-MAPPING-REF DEST="SWC-BSW-MAPPING">/AUTOSAR_Dcm/SwcBswMappings/SwcBswMappings</SWC-BSW-MAPPING-REF>
+              <AR-RELEASE-VERSION>4.2.2</AR-RELEASE-VERSION>
+              <BEHAVIOR-REF DEST="BSW-INTERNAL-BEHAVIOR">/AUTOSAR_Dcm/BswModuleDescriptions/Dcm/BswInternalBehavior</BEHAVIOR-REF>
+            </BSW-IMPLEMENTATION>
+          </ELEMENTS>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

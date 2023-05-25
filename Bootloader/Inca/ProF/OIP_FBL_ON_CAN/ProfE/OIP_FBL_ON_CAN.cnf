@@ -1,0 +1,113 @@
+;-------------------------------------------------------------------------------------------
+; FBL: OIP_FBL_ON_CAN
+; author: VGG1HC
+;-------------------------------------------------------------------------------------------
+
+;-------------------------------------------------------------------------------------------
+; GENERAL
+;-------------------------------------------------------------------------------------------
+ECU_ADDR:,              0xE4;                              ; address of ECU
+PROJECT_NAME:,          OIP_FBL_ON_CAN;               ; project
+PROG_ST_ADDR:,          0xF1;
+;-------------------------------------------------------------------------------------------
+
+;-------------------------------------------------------------------------------------------
+; PROTOCOL
+;-------------------------------------------------------------------------------------------
+;KWP2000_TP:,        <Index>,<p1Max>, <p2Min>, <p2Max>, <p3Min>, <p3Max>, <p4Min>;
+;KWP2000_TP:,           1,     0x0000, 0x0000,  0x03E8,  0x0000,  0x1388,  0x0000;
+KWP2000_TP:,           1,     0x0014, 0x0000,  0xFA00,  0x0003,  0x1388,  0x0000;
+;-------------------------------------------------------------------------------------------
+
+;-------------------------------------------------------------------------------------------
+; SECURITY ACCESSES
+;-------------------------------------------------------------------------------------------
+; SECURITY_ACCESS_MODE:, <Index>, <count>, <servicePara1[, <servicePara2>, ...];
+SECURITY_ACCESS_MODE:,   1,       1,       0x11;  ; security access mode application
+;-------------------------------------------------------------------------------------------
+
+;-------------------------------------------------------------------------------------------
+; ROUTINE
+;-------------------------------------------------------------------------------------------
+;                           Routine no.     Code for RNC    Result flag+
+LOC_ROUTINE_CHK:,           0x0202,         0x23,           0x01;       ;Check routine
+LOC_ROUTINE_ERASE:,         0xFF00,         0x23,           0x01;       ;Erase routine
+;-------------------------------------------------------------------------------------------
+;-------------------------------------------------------------------------------------------
+; ECU_IDENT
+;-------------------------------------------------------------------------------------------
+;                 <Index>,<count>,<ident_len>,<ident>,<id_fmt_1>
+ECU_IDENT_FORMAT:, 1,     5,      0x05,       0x99,   0x44,     0x64,   0x4c;
+;-------------------------------------------------------------------------------------------
+; MEMORY LAYOUT
+;-------------------------------------------------------------------------------------------
+;                   index   memory   transfer       start           end
+;                   Type    Type     Address        Address         Address
+;-------------------------------------------------------------------------------------------
+ERASE_MEM_AREA:,    1,      0x00,   0x00,           0x0000C000L,    0x0000FFFFL;        ;0x4000    Calibration size
+ERASE_MEM_AREA:,    2,      0x00,   0x00,           0x00080000L,    0x000E5FFFL;        ;408KB     Application size
+;ERASE_MEM_AREA:,    3,      0x00,   0x00,           0x00100000L,    0x001FFFFFL;        ;0x100000  Application1 size
+;ERASE_MEM_AREA:,    4,      0x00,   0x00,           0x00200000L,    0x002FFFFFL;        ;0x100000  Application2 size
+;ERASE_MEM_AREA:,    5,      0x00,   0x00,           0x00300000L,    0x003FFFFFL;        ;0x100000  Application3 size
+
+;-------------------------------------------------------------------------------------------
+DEST_MEM_AREA:,     1,      0x00,   0x00,           0x007B0000L,    0x007B7FFFL;        ;0x8000    Flash Loader (SBL) size
+DEST_MEM_AREA:,     2,      0x00,   0x00,           0x00080000L,    0x000E5FFFL;        ;408KB     Program memory
+DEST_MEM_AREA:,     3,      0x00,   0x00,           0x0000C000L,    0x0000FFFFL;        ;0x4000    Calibration memory
+;DEST_MEM_AREA:,     4,      0x00,   0x00,           0x00100000L,    0x001FFFFFL;        ;1,0M      Program memory
+;DEST_MEM_AREA:,     5,      0x00,   0x00,           0x00200000L,    0x002FFFFFL;        ;1,0M      Program memory
+;DEST_MEM_AREA:,     6,      0x00,   0x00,           0x00300000L,    0x003FFFFFL;        ;1,0M      Program memory
+
+;-------------------------------------------------------------------------------------------
+SOURCE_MEM_AREA:,   1,      0x00,   0x00,           0x00000000L,       0x7FFFL;           ;SBL
+SOURCE_MEM_AREA:,   2,      0x00,   0x00,           0x00000000L,       0x65FFFL;          ;Application
+SOURCE_MEM_AREA:,   3,      0x00,   0x00,           0x00000000L,       0x3FFFL;           ;Calibration
+;SOURCE_MEM_AREA:,   4,      0x00,   0x00,           0x00000000L,       0xF3FFFL;          ;Application
+;SOURCE_MEM_AREA:,   5,      0x00,   0x00,           0x00000000L,       0xEFFFFL;          ;Application
+;SOURCE_MEM_AREA:,   6,      0x00,   0x00,           0x00000000L,       0xBFFFFL;          ;Application
+
+;-------------------------------------------------------------------------------------------
+
+;-------------------------------------------------------------------------------------------
+; CAN ID
+;-------------------------------------------------------------------------------------------
+ECU_TO_INCA_CAN_ID:,   0x748;
+INCA_TO_ECU_CAN_ID:,   0x740;
+
+;-------------------------------------------------------------------------------------------
+
+;-------------------------------------------------------------------------------------------
+; TIMING
+;-------------------------------------------------------------------------------------------
+; KWP_CAN_BUS_TIMING:,<baudrate>,<samplePoint>,<samplesPerBit>,<bitCycles>,<sjw>,<syncEdge>;
+KWP_CAN_BUS_TIMING:,  500000,    50,           1,              10,         2,    0;
+;-------------------------------------------------------------------------------------------
+; KWP_CAN_TL_TIMING:  index  As       B1       B2      C       D1       D2
+KWP_CAN_TL_TIMING:,   1,     0x2000,  0x200,   0x200,   0x200,  0x200,   0x200;
+
+OVERRULED_ST_MIN:, 0x00; ;set ST_MIN to 2ms
+;-------------------------------------------------------------------------------------------
+
+;-------------------------------------------------------------------------------------------
+; OPTIONS
+;-------------------------------------------------------------------------------------------
+ADDRESS_AND_LENGTH_FORMAT_IDENTIFIER:,  0x44;   ; general setting
+                                                ; high nibble: no of used bytes for size info
+                                                ; low nibble: no of used bytes for address info
+
+AALFI_FOR_CHECKSUM_CALCULATION:,        0x44;   ; specific setting for checksum calculation
+AALFI_FOR_WRITE_MEMORY_BY_ADDR:,        0x44;   ; specific setting for write memory by address
+AALFI_FOR_READ_MEMORY_BY_ADDR:,         0x44;   ; specific setting for read memory by address
+AALFI_FOR_DYNAMICALLY_DEFINE_DATA_ID:,  0x44;   ; specific setting for dynamically define data id
+AALFI_FOR_REQUEST_DOWNLOAD:,            0x44;   ; specific setting for request download
+OVERRULED_ST_MIN:,                      0x00;   ; overruled STmin value to achieve maximum speed
+DATA_FORMAT_IDENTIFIER:,                0x00;   ; used by request download
+                                                ; high nibble: compressing method
+                                                ; low nibble: encrypting method
+
+AALFI_FOR_ERASE_MEMORY                  0x44;   ; specific setting for erase
+CHECKSUM_RESULT_INVERSION:,             0x01;   ; inverted result
+VERIFY_METHOD:,                         0x02;   ; CRC32
+;-------------------------------------------------------------------------------------------
+
+KWP2000_END;                            ;end of data set

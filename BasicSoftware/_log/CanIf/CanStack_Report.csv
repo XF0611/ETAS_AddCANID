@@ -1,0 +1,157 @@
+
+
+
+/*<VersionHead>
+ * This Configuration File is generated using versions (automatically filled in) as listed below.
+ *
+ * $Generator__: CanIf / AR42.10.0.0                Module Package Version
+ * $Editor_____: ISOLAR-A/B 9.2.1_9.2.1                Tool Version
+ * $Model______: 2.0.2.1                ECU Parameter Definition Version
+ *
+
+ </VersionHead>*/
+
+
+*****************************************************************************************************************************************************************************************
+                                               CANSTACK CONFIGURATION REPORT
+
+*****************************************************************************************************************************************************************************************
+Section1:
+                                              CAN DRIVER CONFIGURATION REPORT
+******************************************************************************************************************************************************************************************
+
+
+"CAN driver does not support the report generation for the driver configuration parameters"
+
+
+
+
+*****************************************************************************************************************************************************************************************
+Section2:
+                                                CANIF CONFIGURATION REPORT
+*****************************************************************************************************************************************************************************************
+CanIf Variant configured:                                       ,PRE-COMPILE
+
+Development error detection support:                            ,ENABLED
+
+Partial Networking support:                                     ,DISABLED
+
+Controller WakeUp support:                                      ,DISABLED
+
+Transceiver WakeUp support:                                     ,DISABLED
+
+Set Baudrate support:                                           ,DISABLED
+(This feature will be used only when CAN FD is supported.
+This is currently supported only for IFX and JDP targets)
+
+Direct Hw wite access support for XCP:                          ,DISABLED
+(This feature is available only for JDP targets)
+
+CanIf XCore feature support                                     ,DISABLED
+*******************************************************************************************************************************************************************************************
+LIST OF UPPER LAYERS SUPPORTED:
+***********************************************
+[PDUR, CAN_NM, XCP, CAN_TP]
+
+EVENTS AND UPPER LAYERS TO BE INDICATED:
+************************************************
+EVENT                          , UPPER LAYER
+Controller BusOff              ,CAN_SM
+Controller Mode Indication     ,CAN_SM
+Transceiver Mode Indication    ,NONE
+****************************************************************************************************************************************************************************************
+CAN TRANSCEIVER INFORMATION:
+********************************************
+
+Can Transceiver not configured.
+
+************************************************************************************************************************************************************************************
+CanIf ConfigSet Information
+*************************************************************************************************************************************************************************************
+Number of CanIf Configsets peresent in the project:  ,1
+1) Configuration information for __KW_COMMON
+
+   Name of the Variant: ,__KW_COMMON
+
+   Number of FULL TxPdus: ,6
+
+   Number of BASIC TxPdus: ,0
+
+   Number of FULL RxPdus:  ,7
+
+   Number of BASIC RxPdus:  ,0
+
+   Total size of the transmit buffers: , 10 
+
+,
+,
+,
+,
+,
+,
+
+************************************************************************************************************************************************************************************
+CAN CONTROLLER INFORMATION:
+*******************************************
+Number of CAN controllers configured: ,1
+
+   S.No    ,CanIfCtrlDrvCfg name      ,CanHardwareNode       ,CanHardwareNodeId       ,Can Transceiver Reference
+1.,ETAS_CAN   ,ETAS_CAN   ,0   ,NONE
+**************************************************************************************************************************************************************************************
+
+****************************************************************************************************************************************************************************************
+DETAILS OF TXPDU:
+*************************
+
+S.No   ,TxPdu Name   ,CanId   ,DLC value   ,CanId Type   ,CanIfTxPdu Type   ,Can Handle Type   ,HTH Reference   ,CanHardwareNodeId   ,Target TxPduId   ,Upper Layer   ,Cbk Name   ,Pdu Reference   ,Read Notification Status
+1.,ComTx_0x55_ETAS_CAN_OUT    ,0x55    ,10
+    ,STANDARD_CAN    ,STATIC    ,FULL    ,ETAS_CAN_Tx_Std_MailBox_2    ,ETAS_CAN    ,11
+    ,PDUR    ,&PduR_CanIfTxConfirmation    ,ComTx_0x55_PduR2CanIf_Can_Network_ETAS_Channel_CAN   ,DISABLED
+2.,NM_Tx_0x600_ETAS_CAN_OUT    ,0x600    ,10
+    ,STANDARD_CAN    ,STATIC    ,FULL    ,ETAS_CAN_Tx_Std_MailBox_4    ,ETAS_CAN    ,11
+    ,CAN_NM    ,&CanNm_TxConfirmation    ,NM_Tx_0x600_CanNm2CanIf_Can_Network_ETAS_Channel_CAN   ,DISABLED
+3.,XcpTx_0x333_ETAS_CAN_OUT    ,0x333    ,10
+    ,STANDARD_CAN    ,STATIC    ,FULL    ,ETAS_CAN_Tx_Std_MailBox_6    ,ETAS_CAN    ,11
+    ,XCP    ,&Xcp_CanIfTxConfirmation    ,XcpTx_0x333_Xcp2CanIf_Can_Network_ETAS_Channel_CAN   ,DISABLED
+4.,NPdu_UdsTxPhy_ETAS_CAN_OUT    ,0x748    ,10
+    ,STANDARD_CAN    ,STATIC    ,FULL    ,ETAS_CAN_Tx_Std_MailBox_5    ,ETAS_CAN    ,11
+    ,CAN_TP    ,&CanTp_TxConfirmation    ,NPdu_UdsTxPhy_CanTp2CanIf_Can_Network_ETAS_Channel_CAN   ,DISABLED
+5.,ComTx_0x123_ETAS_CAN_OUT    ,0x123    ,10
+    ,STANDARD_CAN    ,STATIC    ,FULL    ,ETAS_CAN_Tx_Std_MailBox_1    ,ETAS_CAN    ,11
+    ,PDUR    ,&PduR_CanIfTxConfirmation    ,ComTx_0x123_PduR2CanIf_Can_Network_ETAS_Channel_CAN   ,DISABLED
+6.,ComTx_0x98_ETAS_CAN_OUT    ,0x98    ,10
+    ,STANDARD_CAN    ,STATIC    ,FULL    ,ETAS_CAN_Tx_Std_MailBox_3    ,ETAS_CAN    ,11
+    ,PDUR    ,&PduR_CanIfTxConfirmation    ,ComTx_0x98_PduR2CanIf_Can_Network_ETAS_Channel_CAN   ,DISABLED
+****************************************************************************************************************************************************************************************
+
+*****************************************************************************************************************************************************************************************
+
+*******************************************************************************************************************************************************************************************
+DETAILS OF RXPDU:
+*************************
+
+S.No ,RxPdu Name ,CanId ,DLC value ,CanId Type ,HRH Reference ,CanHardwareNodeId ,Upper Layer ,Cbk Name ,Pdu Reference ,Read Notification Status ,RxPdu Buffering ,CanIfRxPduType
+1.,ComRx_0x261_ETAS_CAN_IN    ,0x261    ,1    ,STANDARD_CAN    ,ETAS_CAN_Rx_Std_MailBox_1    ,ETAS_CAN    ,PDUR    ,&PduR_CanIfRxIndication    ,ComRx_0x261_CanIf2PduR_Can_Network_ETAS_Channel_CAN    ,ENABLED    ,DISABLED    
+    ,STATIC    
+
+2.,ComRx_0x81_ETAS_CAN_IN    ,0x81    ,8    ,STANDARD_CAN    ,ETAS_CAN_Rx_Std_MailBox_2    ,ETAS_CAN    ,PDUR    ,&PduR_CanIfRxIndication    ,ComRx_0x81_CanIf2PduR_Can_Network_ETAS_Channel_CAN    ,ENABLED    ,DISABLED    
+    ,STATIC    
+
+3.,NM_Rx_0x677_ETAS_CAN_IN    ,0x677    ,8    ,STANDARD_CAN    ,ETAS_CAN_Rx_Std_MailBox_3    ,ETAS_CAN    ,CAN_NM    ,&CanNm_RxIndication    ,NM_Rx_0x677_CanIf2CanNm_Can_Network_ETAS_Channel_CAN    ,ENABLED    ,DISABLED    
+    ,STATIC    
+
+4.,XcpRx_0x332_ETAS_CAN_IN    ,0x332    ,0    ,STANDARD_NO_FD_CAN    ,ETAS_CAN_Rx_Std_MailBox_4    ,ETAS_CAN    ,XCP    ,&Xcp_CanIfRxIndication    ,XcpRx_0x332_CanIf2Xcp_Can_Network_ETAS_Channel_CAN    ,ENABLED    ,DISABLED    
+    ,STATIC    
+
+5.,NPdu_UdsRxFnc_ETAS_CAN_IN    ,0x7DF    ,0    ,STANDARD_CAN    ,ETAS_CAN_Rx_Std_MailBox_5    ,ETAS_CAN    ,CAN_TP    ,&CanTp_RxIndication    ,NPdu_UdsRxFnc_CanIf2CanTp_Can_Network_ETAS_Channel_CAN    ,ENABLED    ,DISABLED    
+    ,STATIC    
+
+6.,NPdu_UdsRxPhy_ETAS_CAN_IN    ,0x740    ,0    ,STANDARD_CAN    ,ETAS_CAN_Rx_Std_MailBox_6    ,ETAS_CAN    ,CAN_TP    ,&CanTp_RxIndication    ,NPdu_UdsRxPhy_CanIf2CanTp_Can_Network_ETAS_Channel_CAN    ,ENABLED    ,DISABLED    
+    ,STATIC    
+
+7.,ComRx_0x456_ETAS_CAN_IN    ,0x456    ,8    ,STANDARD_CAN    ,ETAS_CAN_Rx_Std_MailBox_7    ,ETAS_CAN    ,PDUR    ,&PduR_CanIfRxIndication    ,ComRx_0x456_CanIf2PduR_Can_Network_ETAS_Channel_CAN    ,ENABLED    ,DISABLED    
+    ,STATIC    
+
+*********************************************************************************************************************************************************************************************
+
+

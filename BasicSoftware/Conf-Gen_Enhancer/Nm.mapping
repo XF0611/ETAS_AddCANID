@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="ASCII"?>
+<MappingMetaModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns="http://www.bosch.com/autosartool/m2m/model" transformationName="Conf-Gen Enhancer">
+  <mappingStructures name="Nm">
+    <order orderId="Nm_1" name="Nm">
+      <order orderId="Nm_2" name="NmGlobalConfig">
+        <order orderId="Nm_3" name="NmGlobalProperties"/>
+        <order orderId="Nm_4" name="NmGlobalConstants"/>
+        <order orderId="Nm_5" name="NmGlobalFeatures"/>
+      </order>
+    </order>
+  </mappingStructures>
+  <mappings mappingId="Mapping_Nm_1" mappingType="PRIMITIVE_ATTRIBUTE" defaultValue="true">
+    <targetItem identifier="NmDevErrorDetect"/>
+    <orderDetails orderId="Nm_3" order="1"/>
+  </mappings>
+  <mappings mappingId="Mapping_Nm_2" mappingType="PRIMITIVE_ATTRIBUTE" defaultValue="Nm_RxIndicationCallback">
+    <targetItem identifier="NmRxIndicationCallback"/>
+    <orderDetails orderId="Nm_4" order="1"/>
+  </mappings>
+  <mappings mappingId="Mapping_Nm_3" mappingType="PRIMITIVE_ATTRIBUTE" defaultValue="Nm_StateChangeIndication">
+    <targetItem identifier="NmStateChangeIndCallback"/>
+    <orderDetails orderId="Nm_4" order="2"/>
+  </mappings>
+  <mappings mappingId="Mapping_Nm_4" mappingType="PRIMITIVE_ATTRIBUTE" defaultValue="false">
+    <targetItem identifier="NmCoordinatorSupportEnabled"/>
+    <orderDetails orderId="Nm_5" order="1"/>
+  </mappings>
+</MappingMetaModel>

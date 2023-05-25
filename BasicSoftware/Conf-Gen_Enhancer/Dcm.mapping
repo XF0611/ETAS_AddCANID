@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="ASCII"?>
+<MappingMetaModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns="http://www.bosch.com/autosartool/m2m/model" transformationName="Conf-Gen Enhancer">
+  <mappingStructures name="Dcm">
+    <order orderId="Dcm_1" name="Dcm">
+      <order orderId="Dcm_2" name="DcmConfigSet">
+        <order orderId="Dcm_3" name="DcmDsp"/>
+      </order>
+      <order orderId="Dcm_4" name="DcmGeneral"/>
+    </order>
+  </mappingStructures>
+  <mappings mappingId="Mapping_Dcm_1" mappingType="PRIMITIVE_ATTRIBUTE" defaultValue="OPAQUE">
+    <targetItem identifier="DcmDspDataDefaultEndianness"/>
+    <orderDetails orderId="Dcm_3" order="1"/>
+  </mappings>
+  <mappings mappingId="Mapping_Dcm_2" mappingType="PRIMITIVE_ATTRIBUTE" defaultValue="true">
+    <targetItem identifier="DcmDevErrorDetect"/>
+    <orderDetails orderId="Dcm_4" order="1"/>
+  </mappings>
+</MappingMetaModel>

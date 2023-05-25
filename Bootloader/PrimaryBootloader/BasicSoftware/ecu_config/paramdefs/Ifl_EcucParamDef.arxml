@@ -1,0 +1,520 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 autosar_4-2-2.xsd">
+  <ADMIN-DATA>
+    <DOC-REVISIONS>
+      <DOC-REVISION>
+        <REVISION-LABEL>10.0.0</REVISION-LABEL>
+        <ISSUED-BY>RB</ISSUED-BY>
+        <DATE>2015-07-09</DATE>
+      </DOC-REVISION>
+    </DOC-REVISIONS>
+  </ADMIN-DATA>
+  <AR-PACKAGES>
+    <AR-PACKAGE>
+      <SHORT-NAME>AUTOSAR_Ifl</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE>
+          <SHORT-NAME>EcucModuleDefs</SHORT-NAME>
+          <ELEMENTS>
+            <ECUC-MODULE-DEF>
+              <SHORT-NAME>Ifl</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">Floating Point Interpolation Library</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">Floating Point Interpolation Library</L-2>
+              </DESC>
+              <CATEGORY>VENDOR_SPECIFIC_MODULE_DEFINITION</CATEGORY>
+              <ADMIN-DATA>
+                <DOC-REVISIONS>
+                  <DOC-REVISION>
+                    <REVISION-LABEL>4.1.2</REVISION-LABEL>
+                    <ISSUED-BY>AUTOSAR</ISSUED-BY>
+                    <DATE>2013-10-31</DATE>
+                  </DOC-REVISION>
+                  <DOC-REVISION>
+                    <REVISION-LABEL>40.9.1.0</REVISION-LABEL>
+                    <ISSUED-BY>RB</ISSUED-BY>
+                    <DATE>2015-04-30</DATE>
+                  </DOC-REVISION>
+                </DOC-REVISIONS>
+              </ADMIN-DATA>
+              <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+              <POST-BUILD-VARIANT-SUPPORT>false</POST-BUILD-VARIANT-SUPPORT>
+              <REFINED-MODULE-DEF-REF DEST="ECUC-MODULE-DEF">/AUTOSAR/EcucDefs/Ifl</REFINED-MODULE-DEF-REF>
+              <SUPPORTED-CONFIG-VARIANTS>
+                <SUPPORTED-CONFIG-VARIANT>VARIANT-PRE-COMPILE</SUPPORTED-CONFIG-VARIANT>
+              </SUPPORTED-CONFIG-VARIANTS>
+              <CONTAINERS>
+                <ECUC-PARAM-CONF-CONTAINER-DEF>
+                  <SHORT-NAME>IflGeneral</SHORT-NAME>
+                  <LONG-NAME>
+                    <L-4 L="EN">General settings for Ifl</L-4>
+                  </LONG-NAME>
+                  <DESC>
+                    <L-2 L="EN">General settings for Ifl with selections for used controller and activation of GetVersionInfo interface</L-2>
+                  </DESC>
+                  <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                  <PARAMETERS>
+                    <ECUC-ENUMERATION-PARAM-DEF>
+                      <SHORT-NAME>IflRbMemCopy</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Select whether to use 64-bit memory copy function from rba_BswSrv or Ifl</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">If IflRbMemCopy is chosen as &quot;BswSrv_MemCopy&quot;, then the memory copy function from rba_BswSrv.h will be used which will support for compilers other than Hightec.If IflRbbswsrv is chosen as &quot;Ifl_MemCopy&quot;, then the memory copy function from Ifl will be used which will support Hightec compiler only</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <ORIGIN>RB:10.0.0:2015-07-09</ORIGIN>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <DEFAULT-VALUE>Ifl_MemCopy</DEFAULT-VALUE>
+                      <LITERALS>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>Ifl_MemCopy</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Use memcopy function from Ifl for Atomic Read/Write</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:10.0.0:2015-07-09</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>BswSrv_MemCopy</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Use memcopy function from rba_bswsrv for Atomic Read/Write</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:10.0.0:2015-07-09</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                      </LITERALS>
+                    </ECUC-ENUMERATION-PARAM-DEF>
+                    <ECUC-ENUMERATION-PARAM-DEF>
+                      <SHORT-NAME>IflRbOptimization</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Select for which controller optimized implementations shall be used</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Select for which controller optimized implementations shall be used</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <ORIGIN>RB:1.0.0:2010-12-15</ORIGIN>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <LITERALS>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>TC17xx</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Tricore TC17xx controller</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-15</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>TC27xx</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Tricore TC27xx controller</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:5.0.0:2012-12-15</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>MPC57xx</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">JDP MPC57xx controller</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:5.0.0:2012-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>MPCCut2</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">JDP MPC Cut2 controller</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:5.0.0:2012-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>NO_OPTIMIZATION</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">No optimization, standard C implementations shall be used</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-15</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                      </LITERALS>
+                    </ECUC-ENUMERATION-PARAM-DEF>					
+                    <ECUC-BOOLEAN-PARAM-DEF>
+                      <SHORT-NAME>IflRbOptimizationMcuExtract</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Select whether to fetch machine type from MCU and configure for controller optimized implementation</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">If IflRbOptimizationMcuExtract is chosen as &quot;True&quot;, then the controller information will be extracted from MCU.Based on this, optimized implementations will be selected.Hence the user should not configure &quot;IflRbOptimization&quot;.If IflRbOptimizationMcuExtract is chosen as &quot;False&quot;, the controller information will not be extracted from MCU and so the user needs to configure &quot;IflRbOptimization&quot; manually.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <ORIGIN>RB:10.0.0:2015-06-18</ORIGIN>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <DEFAULT-VALUE>false</DEFAULT-VALUE>
+                    </ECUC-BOOLEAN-PARAM-DEF>
+                    <ECUC-ENUMERATION-PARAM-DEF>
+                      <SHORT-NAME>Ifl_VersionInfoAPI</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Configuration parameter for activation of Ifl_GetVersionInfo function.</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">If IflVersionInfoAPI is set to &quot;ON&quot;, the function IflGetVersionInfo shall return the version information of the Ifl library. If IflVersionInfoAPI is set to &quot;OFF&quot;, the Ifl library shall not provide the function Ifl_GetVersionInfo</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <ORIGIN>RB:1.0.0:2010-12-15</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <LITERALS>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>ON</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Activate IflGetVersionInfo function.</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-15</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>OFF</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Deactivate IflGetVersionInfo function.</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-15</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                      </LITERALS>
+                    </ECUC-ENUMERATION-PARAM-DEF>
+                  </PARAMETERS>
+                </ECUC-PARAM-CONF-CONTAINER-DEF>
+                <ECUC-PARAM-CONF-CONTAINER-DEF>
+                  <SHORT-NAME>IflRbMemoryLocations</SHORT-NAME>
+                  <LONG-NAME>
+                    <L-4 L="EN">Memory locations</L-4>
+                  </LONG-NAME>
+                  <DESC>
+                    <L-2 L="EN">Choose memory location settings for each single service</L-2>
+                  </DESC>
+                  <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                  <PARAMETERS>
+                    <ECUC-ENUMERATION-PARAM-DEF>
+                      <SHORT-NAME>iflRbMemLocDPSearchf32</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Ifl_DPSearch_f32</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Select one of following values: NORMAL for location in normal flash, FAST for location in fast flash, SLOW for location in slow flash</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <LITERALS>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>NORMAL</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in normal flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>FAST</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in fast flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>SLOW</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in slow flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                      </LITERALS>
+                    </ECUC-ENUMERATION-PARAM-DEF>
+                    <ECUC-ENUMERATION-PARAM-DEF>
+                      <SHORT-NAME>iflRbMemLocIntIpoCurf32f32</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Ifl_IntIpoCur_f32_f32</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Select one of following values: NORMAL for location in normal flash, FAST for location in fast flash, SLOW for location in slow flash</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <LITERALS>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>NORMAL</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in normal flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>FAST</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in fast flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>SLOW</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in slow flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                      </LITERALS>
+                    </ECUC-ENUMERATION-PARAM-DEF>
+                    <ECUC-ENUMERATION-PARAM-DEF>
+                      <SHORT-NAME>iflRbMemLocIntIpoMapf32f32f32</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Ifl_IntIpoMap_f32f32_f32</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Select one of following values: NORMAL for location in normal flash, FAST for location in fast flash, SLOW for location in slow flash</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <LITERALS>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>NORMAL</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in normal flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>FAST</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in fast flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>SLOW</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in slow flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                      </LITERALS>
+                    </ECUC-ENUMERATION-PARAM-DEF>					
+                    <ECUC-ENUMERATION-PARAM-DEF>
+                      <SHORT-NAME>iflRbMemLocInterpolatef32</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Ifl_Interpolate_f32</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Select one of following values: NORMAL for location in normal flash, FAST for location in fast flash, SLOW for location in slow flash, INLINE for inlining of the service</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <ORIGIN>RB:2.0.0:2011-06-30</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <LITERALS>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>NORMAL</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in normal flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:2.0.0:2011-06-30</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>FAST</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in fast flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:2.0.0:2011-06-30</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>SLOW</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in slow flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:2.0.0:2011-06-30</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>INLINE</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Service is inlined</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:2.0.0:2011-06-30</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                      </LITERALS>
+                    </ECUC-ENUMERATION-PARAM-DEF>
+                    <ECUC-ENUMERATION-PARAM-DEF>
+                      <SHORT-NAME>iflRbMemLocIpoCurf32</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Ifl_IpoCur_f32</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Select one of following values: NORMAL for location in normal flash, FAST for location in fast flash, SLOW for location in slow flash</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <LITERALS>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>NORMAL</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in normal flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>FAST</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in fast flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>SLOW</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in slow flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                      </LITERALS>
+                    </ECUC-ENUMERATION-PARAM-DEF>
+                    <ECUC-ENUMERATION-PARAM-DEF>
+                      <SHORT-NAME>iflRbMemLocIpoMapf32</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Ifl_IpoMap_f32</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Select one of following values: NORMAL for location in normal flash, FAST for location in fast flash, SLOW for location in slow flash</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <LITERALS>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>NORMAL</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in normal flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>FAST</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in fast flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>SLOW</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in slow flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                      </LITERALS>
+                    </ECUC-ENUMERATION-PARAM-DEF>
+                  </PARAMETERS>
+                </ECUC-PARAM-CONF-CONTAINER-DEF>
+              </CONTAINERS>
+            </ECUC-MODULE-DEF>
+          </ELEMENTS>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

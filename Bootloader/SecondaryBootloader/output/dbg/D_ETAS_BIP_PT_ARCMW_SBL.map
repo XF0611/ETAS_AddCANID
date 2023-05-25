@@ -1,0 +1,2000 @@
+MetaWare Linker (ELF/ARCompact2) S-2021.12 (build 003) (Alps Rhine/Pro)
+(c) Copyright 1995-2021, Synopsys, Inc.
+
+
+Command line: C:/compiler/ARC/MetaWare/arc/bin/ldac.exe\
+		 -U.vectors\
+		 C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/crt1.o\
+		 C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/crti.o\
+		 -e _start -q -Cglobals -Cfunctions -Csections -Csize\
+		 -Cunmangle output\objs\Sbl\Det.o\
+		 output\objs\Sbl\SBL_Flash.o\
+		 output\objs\basicSoftware\integration\src\target\arc_startup.o\
+		 output\objs\basicSoftware\integration\mcal\src\gen\Fls_PBCfg.o\
+		 output\objs\basicSoftware\integration\mcal\src\gen\Mcu_PBCfg.o\
+		 output\objs\basicSoftware\integration\mcal\src\gen\Spi_PBCfg.o\
+		 output\objs\basicSoftware\integration\mcal\src\integration\Fls_Integration.o\
+		 output\objs\basicSoftware\integration\mcal\src\modules\Fls.o\
+		 output\objs\basicSoftware\integration\mcal\src\modules\Fls_Alps.o\
+		 output\objs\basicSoftware\integration\mcal\src\modules\Mcu.o\
+		 output\objs\basicSoftware\integration\mcal\src\modules\Mcu_Alps.o\
+		 output\objs\basicSoftware\integration\mcal\src\modules\Spi.o\
+		 output\objs\basicSoftware\integration\mcal\src\modules\Spi_Alps.o\
+		 .\BasicSoftware\integration\linker\ETAS_BIP_PT_ARCMW_SBL.ld\
+		 -Coutput=output\dbg\D_ETAS_BIP_PT_ARCMW_SBL.map\
+		 -Bpc_width=24\
+		 -LC:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6\
+		 -lc++ -lct -lhlt -lmw -zgnu -o\
+		 output\dbg\D_ETAS_BIP_PT_ARCMW_SBL.elf
+
+Arguments after expansion:
+	 -U.vectors C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/crt1.o \
+	C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/crti.o \
+	-e _start -q -Cglobals -Cfunctions -Csections -Csize \
+	-Cunmangle output\objs\Sbl\Det.o output\objs\Sbl\SBL_Flash.o \
+	output\objs\basicSoftware\integration\src\target\arc_startup.o \
+	output\objs\basicSoftware\integration\mcal\src\gen\Fls_PBCfg.o \
+	output\objs\basicSoftware\integration\mcal\src\gen\Mcu_PBCfg.o \
+	output\objs\basicSoftware\integration\mcal\src\gen\Spi_PBCfg.o \
+	output\objs\basicSoftware\integration\mcal\src\integration\Fls_Integration.o \
+	output\objs\basicSoftware\integration\mcal\src\modules\Fls.o \
+	output\objs\basicSoftware\integration\mcal\src\modules\Fls_Alps.o \
+	output\objs\basicSoftware\integration\mcal\src\modules\Mcu.o \
+	output\objs\basicSoftware\integration\mcal\src\modules\Mcu_Alps.o \
+	output\objs\basicSoftware\integration\mcal\src\modules\Spi.o \
+	output\objs\basicSoftware\integration\mcal\src\modules\Spi_Alps.o \
+	-Coutput=output\dbg\D_ETAS_BIP_PT_ARCMW_SBL.map -Bpc_width=24 \
+	-LC:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6 \
+	C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libct.a(arc_main.o) \
+	C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libct.a(vectors.o) \
+	C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libct.a(xcheck.o) \
+	C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libct.a(atexit.o) \
+	C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libct.a(exit.o) \
+	C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libct.a(initcopy.o) \
+	C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libct.a(memcpy.o) \
+	C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libct.a(_a5_strlen.o) \
+	C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libct.a(f_memset.o) \
+	C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libct.a(strcpy.o) \
+	C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libct.a(invcache.o) \
+	C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libct.a(_cleanup.o) \
+	C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libct.a(memchr.o) \
+	C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libct.a(_fclosfp.o) \
+	C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libhlt.a(_exit.o) \
+	C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libhlt.a(argv.o) \
+	C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libhlt.a(hl_bios.o) \
+	C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libhlt.a(hl_data.o) \
+	C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libhlt.a(hl_lock.o) \
+	C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libhlt.a(hostcom.o) \
+	C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libmw.a(ac_chkstk.o) \
+	C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libmw.a(ac_mc_va.o) \
+	C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libmw.a(errnog.o) \
+	C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libmw.a(mutexg.o) \
+	C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libmw.a(tlsctorg.o) \
+	C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libmw.a(mwhalt.o) \
+	C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libmw.a(_vdmemcpy.o) \
+	C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libmw.a(_vsmemcpy.o) \
+	C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libmw.a(startk.o) \
+	C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libmw.a(init.o) \
+	C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libmw.a(fini.o) \
+	C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libmw.a(mwdctor.o) \
+	-zgnu -o output\dbg\D_ETAS_BIP_PT_ARCMW_SBL.elf 
+
+Command file ".\BasicSoftware\integration\linker\ETAS_BIP_PT_ARCMW_SBL.ld":
+    #===============================================
+    #     Linker Settings: ETAS_BIP_PT_ARCMW       #  
+    #===============================================
+
+    MEMORY
+    {
+      /*================================ ICCM ===============================*/
+      /*----------------  Instruction Close Coupled Memory ------------------*/
+      ICCM                                  : ORIGIN = 0x00100000, LENGTH = 32K        /* ETAS BIP not used */
+      
+      /*================================ DCCM ===============================*/
+      /*---------------------  Data Close Coupled Memory --------------------*/
+      DCCM                                  : ORIGIN = 0x00A00000, LENGTH = 32K        /* ETAS BIP not used */
+
+      /*=============================== SRAM ===============================*/
+      /*---------------------------- Bootloader ----------------------------*/
+      BOOT_CODE                             : ORIGIN = 0x00770000, LENGTH = 256K
+      /*----------------------------- SBL Field -----------------------------*/
+      SBL_CODE                              : ORIGIN = 0x007B0000, LENGTH = 32K
+      /*-------------------------- Application Data -------------------------*/
+      APPL_DATA                             : ORIGIN = 0x007B8000, LENGTH = 260K
+      /*---------------------------- NVRAM Field ----------------------------*/
+      APPL_NVRAM                            : ORIGIN = 0x007F9000, LENGTH = 4K
+      /*------------------------- Calibration Field -------------------------*/
+      Memlay_CALIB_EcucPartition_SysCore    : ORIGIN = 0x007FA000, LENGTH = 4K
+      Memlay_CALIB_EcucPartition_ComCore    : ORIGIN = 0x007FB000, LENGTH = 4K
+      Memlay_CALIB_EcucPartition_AppCore    : ORIGIN = 0x007FC000, LENGTH = 4K
+      Memlay_CALIB_shared                   : ORIGIN = 0x007FD000, LENGTH = 4K
+      /*------------------------- Stack Heap Field --------------------------*/
+      APPL_HEAP                             : ORIGIN = 0x007FE000, LENGTH = 4K         /* ETAS BIP not used */
+      APPL_STACK                            : ORIGIN = 0x007FF000, LENGTH = 4K
+
+      /*======================= Baseband Shared Memory ======================*/
+      /*-------------------------- Application Code -------------------------*/
+      APPL_CODE                             : ORIGIN = 0x00800000, LENGTH = 1024K
+      RADAR_AD_SPD_RAM                      : ORIGIN = 0x00900000, LENGTH = 1024K    /* Radar Algorithm Signal Processing Data - ETAS BIP not used */
+    }
+
+    ENTRY(FlashHeader)
+
+    SECTIONS
+    {
+        GROUP : 
+        {
+            .rodata ALIGN(4): 
+            {
+                *(.sbl_const_flash_routine_header)
+            }
+
+            .text ALIGN(4): 
+            {
+                _f_text = .;
+                *(TYPE text)
+                _e_text = .;
+            }
+
+            .rodata ALIGN(4): 
+            {
+                _f_rodata = .;
+
+                _fctors = .;
+                *(.ctors*)
+                _ectors = .;
+                _fdtors = .;
+                *(.dtors*)
+                _edtors = .;
+                _feh_frame = .;
+                *(.eh_frame*)
+                _eeh_frame = .;
+
+                *(TYPE lit)
+
+                _e_rodata = .;
+            }
+        } > SBL_CODE
+
+        GROUP : 
+        {
+            .data ALIGN(4): 
+            {
+                _f_data = .;
+                _f_sdata = .;
+                *(.sdata)
+                _e_sdata = .;
+                *(TYPE data)
+            }
+
+            .tls ALIGN(8): 
+            {
+                *(.tls*)
+                _e_data = .;
+            }
+        } > SBL_CODE
+
+        GROUP (NOLOAD) : 
+        {
+            .bss ALIGN(8): 
+            {
+                _f_bss = .;
+                *(TYPE bss)
+                _e_bss = .;
+            }
+        } > SBL_CODE
+
+        GROUP (NOLOAD) : 
+        {
+            .heap? ALIGN(4) SIZE(4096): {}
+        } > APPL_HEAP
+
+        GROUP (NOLOAD) : 
+        {
+            .stack ALIGN(4) SIZE(4096): {}
+        } > APPL_STACK
+
+        _f_stack = ADDR(.stack);
+        _e_stack = ADDR(.stack) + SIZEOF(.stack);
+        _f_heap = ADDR(.heap);
+        _e_heap = ADDR(.heap) + SIZEOF(.heap);
+
+        _load_addr_text = LOADADDR(.text);
+        _load_addr_rodata = LOADADDR(.rodata);
+        _load_addr_data = LOADADDR(.data);
+
+        __SYSCORE_STACK_START = _e_stack;
+        __SYSCORE_STACK_END   = _f_stack;
+    }
+
+OUTPUT MODULE NAME:	output\dbg\D_ETAS_BIP_PT_ARCMW_SBL.elf
+OUTPUT MODULE FORMAT:	Absolute Executable
+_____________________________
+
+
+SIZE SUMMARY
+------------
+
+   Writable/Executable data          = 15744 (15.38KB)
+   Read only data (lit)              =     0 ( 0.00KB)
+   Writable/Non-executable data      =  2796 ( 2.73KB)
+   BSS(zero fill)                    = 20028 (19.56KB)
+   Unallocated (e.g., Debug)         = 97211 (94.93KB)
+
+   Total read only portion (code + lit)   =     0 ( 0.00KB)
+   Total read/write portion (data + bss)  = 38568 (37.66KB)
+   Total non-BSS size (code+lit+data)     = 18540 (18.11KB)
+
+SECTION SUMMARY
+_______________
+
+OUTPUT/  TYPE   START     END
+ INPUT SECTION  ADDRESS   ADDRESS   LENGTH
+
+.rodata  data   007b0000  007b0013  00000014
+.text    text   007b0020  007b3d6b  00003d4c
+.rodata  data   007b3d6c  007b3d7f  00000014
+.data    data   007b3e00  007b48e3  00000ae4
+.tls     data   007b48e8  007b48eb  00000004
+.bss     bss    007b48f0  007b772b  00002e3c
+.heap    bss    007fe000  007fefff  00001000
+.stack   bss    007ff000  007fffff  00001000
+
+
+SECTION DETAILS
+_______________
+
+OUTPUT/  TYPE   START     END
+ INPUT SECTION  ADDRESS   ADDRESS   LENGTH   MODULE NAME
+
+.rodata  data   007b0000  007b0013  00000014
+
+    .sbl_const_flash_routine_header
+                007b0000  007b0013  00000014  output\objs\Sbl\SBL_Flash.o
+                007b0000   FlashHeader
+
+.text    text   007b0020  007b3d6b  00003d4c
+
+    .fini       007b0020  007b0021  00000002  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/crti.o
+                007b0020   _fini
+    .fini       007b0022  007b0029  00000008  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libmw.a(fini.o)
+                007b0022   __DTORS_INIT
+    .fini$999999
+                007b002a  007b002d  00000004  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/crti.o
+    <padding>   007b002e  007b002f  00000002
+    .init       007b0030  007b0031  00000002  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/crti.o
+                007b0030   _init
+    .init       007b0032  007b0039  00000008  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libmw.a(init.o)
+                007b0032   __CTORS_INIT
+    .init$999999
+                007b003a  007b003d  00000004  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/crti.o
+    <padding>   007b003e  007b003f  00000002
+    .text       007b0040  007b00ed  000000ae  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/crt1.o
+                007b0040   _start
+                007b00e4   _exit_halt
+    <padding>   007b00ee  007b00ef  00000002
+    .text       007b00f0  007b0111  00000022  output\objs\Sbl\Det.o
+                007b00f0   Det_ReportError
+                007b00fc   Det_ReportRuntimeError
+    <padding>   007b0112  007b0113  00000002
+    .text       007b0114  007b02cd  000001ba  output\objs\Sbl\SBL_Flash.o
+                007b0114   SBL_FlashInit
+                007b0138   SBL_FlashDeinit
+                007b0150   SBL_FlashErase
+                007b01f8   SBL_FlashWrite
+                007b0274   SBL_FlashRead
+                007b02cc   main
+    <padding>   007b02ce  007b02cf  00000002
+    .text       007b02d0  007b03ab  000000dc  output\objs\basicSoftware\integration\src\target\arc_startup.o
+                007b02d4   _arc_reset_stage3
+    .text       007b03ac  007b03b1  00000006  output\objs\basicSoftware\integration\mcal\src\integration\Fls_Integration.o
+                007b03ac   Fee_JobEndNotification
+                007b03b0   Fee_JobErrorNotification
+    <padding>   007b03b2  007b03b3  00000002
+    .text       007b03b4  007b057f  000001cc  output\objs\basicSoftware\integration\mcal\src\modules\Fls.o
+                007b03b4   Fls_Init
+                007b03ec   Fls_Erase
+                007b03f8   Fls_Write
+                007b0430   Fls_GetStatus
+                007b043c   Fls_GetJobResult
+                007b0468   Fls_Read
+                007b04a0   Fls_Compare
+                007b04f8   Fls_GetVersionInfo
+                007b0530   Fls_BlankCheck
+                007b055c   Fls_MainFunction
+    .text       007b0580  007b1177  00000bf8  output\objs\basicSoftware\integration\mcal\src\modules\Fls_Alps.o
+                007b0670   Fls_Hal_Init
+                007b0710   Fls_Hal_Erase
+                007b07d8   Fls_Hal_Write
+                007b0870   Fls_Hal_GetStatus
+                007b087c   Fls_Hal_GetJobResult
+                007b0888   Fls_Hal_Read
+                007b0914   Fls_Hal_Compare
+                007b09a0   Fls_Hal_SetMode
+                007b09e8   Fls_Hal_BlankCheck
+                007b1120   Fls_Hal_MainFunction_Handling
+                007b1158   Fls_lclParamCheck
+    .text       007b1178  007b13b1  0000023a  output\objs\basicSoftware\integration\mcal\src\modules\Mcu.o
+                007b1188   Mcu_Init
+                007b11bc   Mcu_InitRamSection
+                007b1204   Mcu_InitClock
+                007b1254   Mcu_DistributePllClock
+                007b129c   Mcu_GetPllStatus
+                007b12d0   Mcu_GetResetReason
+                007b1304   Mcu_GetResetRawValue
+                007b1334   Mcu_PerformReset
+                007b1364   Mcu_SetMode
+                007b1368   Mcu_GetVersionInfo
+                007b13a0   Mcu_GetPeripheralClkFreq
+    <padding>   007b13b2  007b13b3  00000002
+    .text       007b13b4  007b199f  000005ec  output\objs\basicSoftware\integration\mcal\src\modules\Mcu_Alps.o
+                007b13b4   Mcu_Hal_Init
+                007b13c8   Mcu_Hal_InitRamSection
+                007b1574   Mcu_Hal_InitClock
+                007b1598   Mcu_Hal_DistributePllClock
+                007b15c4   Mcu_Hal_GetPllStatus
+                007b15dc   Mcu_Hal_GetResetReason
+                007b15e8   Mcu_Hal_GetResetRawValue
+                007b15f4   Mcu_Hal_PerformReset
+                007b18d8   Mcu_Hal_GetPeripheralClkFreq
+    .text       007b19a0  007b1d19  0000037a  output\objs\basicSoftware\integration\mcal\src\modules\Spi.o
+                007b19a0   Spi_Init
+                007b19e4   Spi_DeInit
+                007b1a24   Spi_WriteIB
+                007b1a70   Spi_ReadIB
+                007b1acc   Spi_SetupEB
+                007b1b20   Spi_SyncTransmit
+                007b1b68   Spi_AsyncTransmit
+                007b1bb0   Spi_GetStatus
+                007b1bd0   Spi_GetJobResult
+                007b1c18   Spi_GetSequenceResult
+                007b1c60   Spi_Cancel
+                007b1ca0   Spi_SetAsyncMode
+                007b1cd8   Spi_GetVersionInfo
+                007b1d10   Spi_MainFunction_Handling
+    <padding>   007b1d1a  007b1d1b  00000002
+    .text       007b1d1c  007b2f7f  00001264  output\objs\basicSoftware\integration\mcal\src\modules\Spi_Alps.o
+                007b1d1c   Spi_Hal_Init
+                007b1e48   Spi_Hal_GetStatus
+                007b1e6c   Spi_Hal_DeInit
+                007b1f10   Spi_Hal_GetJobResult
+                007b1f1c   Spi_Hal_GetSeqResult
+                007b1f2c   Spi_lclParamCheck
+                007b1f3c   Spi_Hal_SetupEB
+                007b1fa4   Spi_Hal_ReadIB
+                007b202c   Spi_Hal_WriteIB
+                007b2984   Spi_Hal_SyncTransmit
+                007b2c80   Spi_Hal_MainFunction_Handling
+                007b2da8   Spi_Hal_AsyncTransmit
+                007b2efc   Spi_Hal_Cancel
+                007b2f7c   Spi_Hal_SetAsyncMode
+    .text       007b2f80  007b3075  000000f6  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libct.a(arc_main.o)
+                007b2f80   _mwrtl_init
+                007b2f98   _mwcall_main
+                007b3018   __arc_main
+    <padding>   007b3076  007b3077  00000002
+    .text       007b3078  007b3083  0000000c  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libct.a(vectors.o)
+    .text       007b3084  007b3101  0000007e  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libct.a(atexit.o)
+                007b3094   atexit
+    <padding>   007b3102  007b3103  00000002
+    .text       007b3104  007b311f  0000001c  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libct.a(exit.o)
+                007b3104   exit
+    .text       007b3120  007b31b7  00000098  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libct.a(initcopy.o)
+                007b3120   _initcopy_exit
+                007b3124   _initcopy
+    <padding>   007b31b8  007b31bf  00000008
+    .text       007b31c0  007b326f  000000b0  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libct.a(memcpy.o)
+                007b31c0   memcpy
+                007b31c0   _initcopy_memcpy
+    .text       007b3270  007b32ff  00000090  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libct.a(_a5_strlen.o)
+                007b3270   _a5_strlen
+                007b3270   strlen
+    .text       007b3300  007b3365  00000066  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libct.a(f_memset.o)
+                007b3300   memset
+                007b3300   _initcopy_memset
+    <padding>   007b3366  007b3367  00000002
+    .text       007b3368  007b338b  00000024  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libct.a(strcpy.o)
+                007b3368   strcpy
+    .text       007b338c  007b33e1  00000056  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libct.a(invcache.o)
+                007b338c   _invalidate_icache
+                007b33b8   _invalidate_dcache
+    <padding>   007b33e2  007b33e3  00000002
+    .text       007b33e4  007b3409  00000026  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libct.a(_cleanup.o)
+                007b33e4   __cleanup
+                007b3404   _cexit
+                007b3408   _c_exit
+    <padding>   007b340a  007b340b  00000002
+    .text       007b340c  007b342b  00000020  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libct.a(memchr.o)
+                007b340c   memchr
+    .text       007b342c  007b3463  00000038  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libhlt.a(_exit.o)
+                007b342c   _exit
+                007b342c   _Exit
+    .text       007b3464  007b3509  000000a6  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libhlt.a(argv.o)
+                007b3464   __argc
+                007b34a4   __argv
+    <padding>   007b350a  007b350b  00000002
+    .text       007b350c  007b35ab  000000a0  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libhlt.a(hl_bios.o)
+                007b350c   _hl_payload
+                007b3514   _hl_send
+                007b3578   _hl_blockedPeek
+                007b35a0   _hl_delete
+    .text       007b35ac  007b35b1  00000006  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libhlt.a(hl_data.o)
+                007b35ac   _hl_buffer_size
+    <padding>   007b35b2  007b35b3  00000002
+    .text       007b35b4  007b35d3  00000020  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libhlt.a(hl_lock.o)
+    .text       007b35d4  007b388d  000002ba  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libhlt.a(hostcom.o)
+                007b35d4   _hl_packChar
+                007b35f0   _hl_unPackChar
+                007b3610   _hl_packShort
+                007b3624   _hl_unPackShort
+                007b3644   _hl_packInt
+                007b3654   _hl_unPackInt
+                007b3674   _hl_packInt64
+                007b3688   _hl_unPackInt64
+                007b36b4   _hl_packString
+                007b36d0   _hl_unPackString
+                007b3704   _hl_unPackStringLen
+                007b3718   _hl_packStringZ
+                007b3730   _hl_unPackStringZ
+                007b384c   _hl_message
+                007b3868   _user_hostlink
+    <padding>   007b388e  007b388f  00000002
+    .text       007b3890  007b38b1  00000022  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libmw.a(ac_chkstk.o)
+                007b3890   _stkchk
+    <padding>   007b38b2  007b38b3  00000002
+    .text       007b38b4  007b38d3  00000020  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libmw.a(ac_mc_va.o)
+                007b38b4   __ac_mc_va
+    .text       007b38d4  007b38e3  00000010  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libmw.a(errnog.o)
+                007b38d4   ___errno
+    .text       007b38e4  007b38e9  00000006  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libmw.a(tlsctorg.o)
+                007b38e4   executable_requires_.tls_section
+    <padding>   007b38ea  007b38eb  00000002
+    .text       007b38ec  007b38f3  00000008  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libmw.a(mwhalt.o)
+                007b38ec   _mwhalt_cpu
+    <padding>   007b38f4  007b38ff  0000000c
+    .text       007b3900  007b39af  000000b0  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libmw.a(_vdmemcpy.o)
+                007b3900   _vdmemcpy
+    .text       007b39b0  007b3a5f  000000b0  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libmw.a(_vsmemcpy.o)
+                007b39b0   _vsmemcpy
+    .text       007b3a60  007b3a61  00000002  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libmw.a(startk.o)
+                007b3a60   __start_kernel
+    <padding>   007b3a62  007b3a63  00000002
+    .text       007b3a64  007b3a8d  0000002a  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libmw.a(init.o)
+                007b3a64   __do_global_ctors_aux
+    <padding>   007b3a8e  007b3a8f  00000002
+    .text       007b3a90  007b3ab9  0000002a  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libmw.a(fini.o)
+                007b3a90   __do_global_dtors_aux
+    <padding>   007b3aba  007b3abb  00000002
+    .text       007b3abc  007b3bd9  0000011e  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libmw.a(mwdctor.o)
+                007b3af8   __mw_register_ctor
+                007b3b08   __mw_register_dtor
+                007b3b1c   __mw_run_tls_ctor
+                007b3b58   __mw_run_tls_dtor
+                007b3b94   __mw_cpp_exit
+                007b3bc0   __mw_cpp_init
+    <padding>   007b3bda  007b3bdb  00000002
+    .text$_xcheckaa
+                007b3bdc  007b3bdb  00000000  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libct.a(xcheck.o)
+                007b3bdc   __xcheck
+    .text$_xcheckbarrel_shifter_bs3_to_any
+                007b3bdc  007b3bf3  00000018  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libct.a(xcheck.o)
+                007b3bdc   __Xbarrel_shifter_bs_check3_to_any
+    .text$_xcheckbarrel_shifter_sa3_to_any
+                007b3bf4  007b3c0b  00000018  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libct.a(xcheck.o)
+                007b3bf4   __Xbarrel_shifter_sa_check3_to_any
+    .text$_xcheckcode_density2_to_any
+                007b3c0c  007b3c2d  00000022  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libct.a(xcheck.o)
+                007b3c0c   __Xcode_density_check2_to_any
+    <padding>   007b3c2e  007b3c2f  00000002
+    .text$_xcheckdiv1_to_any
+                007b3c30  007b3c51  00000022  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libct.a(xcheck.o)
+                007b3c30   __Xdiv_check1_to_any
+    <padding>   007b3c52  007b3c53  00000002
+    .text$_xcheckfpus_div1_to_any
+                007b3c54  007b3c6f  0000001c  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libct.a(xcheck.o)
+                007b3c54   __Xfpus_div_check1_to_any
+    .text$_xcheckfpus_mac1_to_any
+                007b3c70  007b3c89  0000001a  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libct.a(xcheck.o)
+                007b3c70   __Xfpus_mac_check1_to_any
+    <padding>   007b3c8a  007b3c8b  00000002
+    .text$_xcheckmpy162_to_any
+                007b3c8c  007b3ca7  0000001c  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libct.a(xcheck.o)
+                007b3c8c   __Xmpy16_check2_to_any
+    .text$_xcheckmpy6_to_any
+                007b3ca8  007b3cb9  00000012  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libct.a(xcheck.o)
+                007b3ca8   __Xmpy_check6_to_any
+    <padding>   007b3cba  007b3cbb  00000002
+    .text$_xchecknorm3_to_any
+                007b3cbc  007b3ccd  00000012  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libct.a(xcheck.o)
+                007b3cbc   __Xnorm_check3_to_any
+    <padding>   007b3cce  007b3ccf  00000002
+    .text$_xcheckswap3_to_any
+                007b3cd0  007b3ce1  00000012  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libct.a(xcheck.o)
+                007b3cd0   __Xswap_check3_to_any
+    <padding>   007b3ce2  007b3ce3  00000002
+    .text$_xcheckzz
+                007b3ce4  007b3ce5  00000002  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libct.a(xcheck.o)
+                007b3ce4   __xend
+    <padding>   007b3ce6  007b3ce7  00000002
+    .text._mwget_tls
+                007b3ce8  007b3d17  00000030  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libmw.a(tlsctorg.o)
+                007b3ce8   _mwget_tls
+    .text._mwmutex_create
+                007b3d18  007b3d19  00000002  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libmw.a(mutexg.o)
+                007b3d18   _mwmutex_create
+    <padding>   007b3d1a  007b3d1b  00000002
+    .text._mwmutex_delete
+                007b3d1c  007b3d1d  00000002  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libmw.a(mutexg.o)
+                007b3d1c   _mwmutex_delete
+    <padding>   007b3d1e  007b3d1f  00000002
+    .text._mwmutex_lock
+                007b3d20  007b3d21  00000002  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libmw.a(mutexg.o)
+                007b3d20   _mwmutex_lock
+    <padding>   007b3d22  007b3d23  00000002
+    .text._mwmutex_unlock
+                007b3d24  007b3d25  00000002  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libmw.a(mutexg.o)
+                007b3d24   _mwmutex_unlock
+    <padding>   007b3d26  007b3d27  00000002
+    .text._timer_default_reset
+                007b3d28  007b3d29  00000002  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libct.a(arc_main.o)
+                007b3d28   _timer_default_reset
+    <padding>   007b3d2a  007b3d2b  00000002
+    .vectors    007b3d2c  007b3d6b  00000040  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libct.a(vectors.o)
+
+.rodata  data   007b3d6c  007b3d7f  00000014
+
+    .ctors.65410
+                007b3d6c  007b3d6f  00000004  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libhlt.a(hl_lock.o)
+    .ctors.65414
+                007b3d70  007b3d73  00000004  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libct.a(atexit.o)
+    .ctors.zzzzzzz
+                007b3d74  007b3d77  00000004  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libmw.a(init.o)
+                007b3d74   __CTORS_END
+    .dtors.65410
+                007b3d78  007b3d7b  00000004  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libhlt.a(hl_lock.o)
+    .eh_frame.zzzzzzz
+                007b3d7c  007b3d7f  00000004  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libmw.a(init.o)
+                007b3d7c   __EH_FRAME_END
+
+.data    data   007b3e00  007b48e3  00000ae4
+
+    .data       007b3e00  007b3e07  00000008  output\objs\Sbl\Det.o
+                007b3e00   errId
+                007b3e04   cnt
+    .data       007b3e08  007b3f07  00000100  output\objs\basicSoftware\integration\mcal\src\gen\Fls_PBCfg.o
+                007b3e08   Sector
+                007b3f08   FlsSpiReference
+    .data       007b3f08  007b4153  0000024c  output\objs\basicSoftware\integration\mcal\src\gen\Spi_PBCfg.o
+                007b3f08   SpiExternalConfigData
+                007b3f58   SpiJob_0_Channel_link
+                007b3f5a   SpiJob_1_Channel_link
+                007b3f5c   SpiJob_2_Channel_link
+                007b3f5e   SpiJob_3_Channel_link
+                007b3f60   SpiJob_4_Channel_link
+                007b3f62   SpiJob_7_Channel_link
+                007b3f64   SpiJob_8_Channel_link
+                007b3f66   SpiJob_Read_Ads_Channel_link
+                007b3f68   SpiJob_erase_Channel_link
+                007b3f6a   SpiJob_read_Channel_link
+                007b3f6c   SpiJob_write_Channel_link
+                007b3f70   SpiSequence_ErasePage_Job_link
+                007b3f74   SpiSequence_ReadAds_Job_link
+                007b3f78   SpiSequence_ReadCfg_Job_link
+                007b3f7c   SpiSequence_ReadData_Job_link
+                007b3f80   SpiSequence_ReadStatusReg_Job_link
+                007b3f84   SpiSequence_WriteCfg_Job_link
+                007b3f88   SpiSequence_WriteData_Job_link
+                007b3f8c   SpiSequence_WriteEnableCfg_Job_link
+                007b3f90   SpiSequence_WriteEnableData_Job_link
+                007b3f94   SpiSequence_ReadIDBuf_Job_link
+                007b3f9c   SpiJobConfigData
+    .data       007b4154  007b4154  00000001  output\objs\basicSoftware\integration\mcal\src\modules\Fls.o
+    <padding>   007b4155  007b4157  00000003
+    .data       007b4158  007b416c  00000015  output\objs\basicSoftware\integration\mcal\src\modules\Fls_Alps.o
+    .data       007b416d  007b416e  00000002  output\objs\basicSoftware\integration\mcal\src\modules\Mcu.o
+    <padding>   007b416f  007b416f  00000001
+    .data       007b4170  007b4173  00000004  output\objs\basicSoftware\integration\mcal\src\modules\Mcu_Alps.o
+    .data       007b4174  007b4174  00000001  output\objs\basicSoftware\integration\mcal\src\modules\Spi.o
+    <padding>   007b4175  007b4177  00000003
+    .data       007b4178  007b4186  0000000f  output\objs\basicSoftware\integration\mcal\src\modules\Spi_Alps.o
+    <padding>   007b4187  007b4187  00000001
+    .data       007b4188  007b418f  00000008  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libct.a(arc_main.o)
+                007b4188   __INITBSS__
+                007b418c   __main_at
+    .data       007b4190  007b419b  0000000c  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libct.a(atexit.o)
+    .data       007b419c  007b419f  00000004  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libct.a(exit.o)
+    .data       007b41a0  007b41a3  00000004  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libct.a(_cleanup.o)
+                007b41a0   _exitv
+    .data       007b41a4  007b41a7  00000004  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libct.a(_fclosfp.o)
+                007b41a4   _fclose_exit_p
+    .data       007b41a8  007b41a8  00000001  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libhlt.a(hl_bios.o)
+    <padding>   007b41a9  007b41ff  00000057
+    .data       007b4200  007b46ff  00000500  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libhlt.a(hl_data.o)
+                007b4200   __HOSTLINK__
+    .data       007b4700  007b4703  00000004  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libhlt.a(hl_lock.o)
+                007b4700   _mwhl_lock
+    .data       007b4704  007b4707  00000004  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libmw.a(tlsctorg.o)
+    .data       007b4708  007b470b  00000004  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libmw.a(mwdctor.o)
+    .rodata_in_data
+                007b470c  007b473f  00000034  output\objs\basicSoftware\integration\mcal\src\gen\Fls_PBCfg.o
+                007b470c   Fls_Config
+    .rodata_in_data
+                007b4740  007b4773  00000034  output\objs\basicSoftware\integration\mcal\src\gen\Mcu_PBCfg.o
+                007b4740   McuCanClockSourceConfigData
+                007b4748   McuRamSectionConfigData
+                007b4754   McuClockSettingConfigData
+                007b4764   McuConfigData
+    .rodata_in_data
+                007b4774  007b48cb  00000158  output\objs\basicSoftware\integration\mcal\src\gen\Spi_PBCfg.o
+                007b4774   SpiChannelConfigData
+                007b4814   SpiSequenceConfigData
+                007b48b4   SpiConfigData
+    .rodata_in_data
+                007b48cc  007b48d7  0000000c  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libct.a(arc_main.o)
+    .rodata_in_data
+                007b48d8  007b48d9  00000002  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libhlt.a(_exit.o)
+    .rodata_in_data
+                007b48da  007b48de  00000005  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libhlt.a(argv.o)
+    <padding>   007b48df  007b48df  00000001
+    .rodata_in_data
+                007b48e0  007b48e3  00000004  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libmw.a(fini.o)
+                007b48e0   __DTORS_END
+
+.tls     data   007b48e8  007b48eb  00000004
+
+    .tls        007b48e8  007b48eb  00000004  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libmw.a(errnog.o)
+                007b48e8   errno
+
+.bss     bss    007b48f0  007b772b  00002e3c
+
+    .bss        007b48f0  007b50ef  00000800  output\objs\Sbl\SBL_Flash.o
+    .bss        007b50f0  007b514f  00000060  output\objs\basicSoftware\integration\mcal\src\modules\Fls_Alps.o
+    .bss        007b5150  007b515b  0000000c  output\objs\basicSoftware\integration\mcal\src\modules\Mcu_Alps.o
+    .bss        007b515c  007b7589  0000242e  output\objs\basicSoftware\integration\mcal\src\modules\Spi_Alps.o
+    <padding>   007b758a  007b758b  00000002
+    .bss        007b758c  007b761b  00000090  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libct.a(atexit.o)
+    .bss        007b761c  007b771b  00000100  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libhlt.a(argv.o)
+    .bss        007b771c  007b772b  00000010  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libmw.a(mwdctor.o)
+
+.heap    bss    007fe000  007fefff  00001000
+
+
+.stack   bss    007ff000  007fffff  00001000
+
+
+.arcextmap
+         info   00000000  000002fe  000002ff
+
+    .arcextmap.aux.256
+                00000000  0000000e  0000000f  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/crt1.o
+    .arcextmap.aux.257
+                0000000f  0000001f  00000011  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/crt1.o
+    .arcextmap.aux.258
+                00000020  0000002e  0000000f  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/crt1.o
+    .arcextmap.aux.33
+                0000002f  0000003d  0000000f  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/crt1.o
+    .arcextmap.aux.34
+                0000003e  0000004e  00000011  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/crt1.o
+    .arcextmap.aux.35
+                0000004f  0000005d  0000000f  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/crt1.o
+    .arcextmap.aux.768
+                0000005e  0000006c  0000000f  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/crt1.o
+    .arcextmap.aux.769
+                0000006d  0000007d  00000011  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/crt1.o
+    .arcextmap.aux.770
+                0000007e  00000087  0000000a  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/crt1.o
+    .arcextmap.aux.771
+                00000088  00000091  0000000a  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/crt1.o
+    .arcextmap.aux.772
+                00000092  0000009b  0000000a  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/crt1.o
+    .arcextmap.aux.773
+                0000009c  000000a5  0000000a  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/crt1.o
+    .arcextmap.core.58
+                000000a6  000000ad  00000008  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/crt1.o
+    .arcextmap.core.59
+                000000ae  000000b5  00000008  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/crt1.o
+    .arcextmap.inst.2.5.0
+                000000b6  000000bf  0000000a  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/crt1.o
+    .arcextmap.inst.2.5.1
+                000000c0  000000c9  0000000a  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/crt1.o
+    .arcextmap.inst.2.5.10
+                000000ca  000000d4  0000000b  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/crt1.o
+    .arcextmap.inst.2.5.11
+                000000d5  000000df  0000000b  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/crt1.o
+    .arcextmap.inst.2.5.12
+                000000e0  000000ea  0000000b  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/crt1.o
+    .arcextmap.inst.2.5.13
+                000000eb  000000f4  0000000a  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/crt1.o
+    .arcextmap.inst.2.5.14
+                000000f5  000000fe  0000000a  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/crt1.o
+    .arcextmap.inst.2.5.15
+                000000ff  00000108  0000000a  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/crt1.o
+    .arcextmap.inst.2.5.16
+                00000109  00000112  0000000a  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/crt1.o
+    .arcextmap.inst.2.5.17
+                00000113  0000011c  0000000a  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/crt1.o
+    .arcextmap.inst.2.5.8
+                0000011d  00000127  0000000b  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/crt1.o
+    .arcextmap.inst.2.5.9
+                00000128  00000132  0000000b  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/crt1.o
+    .arcextmap.inst.2.6.0
+                00000133  0000013e  0000000c  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/crt1.o
+    .arcextmap.inst.3.4.30
+                0000013f  00000148  0000000a  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/crt1.o
+    .arcextmap.inst.3.4.31
+                00000149  00000153  0000000b  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/crt1.o
+    .arcextmap.inst.3.5.0
+                00000154  0000015c  00000009  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/crt1.o
+    .arcextmap.inst.3.5.1
+                0000015d  00000165  00000009  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/crt1.o
+    .arcextmap.inst.3.5.2
+                00000166  0000016e  00000009  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/crt1.o
+    .arcextmap.inst.3.5.3
+                0000016f  00000177  00000009  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/crt1.o
+    .arcextmap.inst.3.6.0
+                00000178  00000182  0000000b  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/crt1.o
+    .arcextmap.inst.3.6.1
+                00000183  0000018d  0000000b  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/crt1.o
+    .arcextmap.inst.3.6.2
+                0000018e  00000198  0000000b  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/crt1.o
+    .arcextmap.inst.3.6.3f
+                00000199  000001c7  0000002f  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/crt1.o
+    .arcextmap.inst.3.6.48
+                000001c8  000001d4  0000000d  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/crt1.o
+    .arcextmap.inst.3.6.49
+                000001d5  000001e1  0000000d  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/crt1.o
+    .arcextmap.inst.3.6.4f
+                000001e2  00000211  00000030  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/crt1.o
+    .arcextmap.inst.3.6.5
+                00000212  0000021d  0000000c  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/crt1.o
+    .arcextmap.inst.3.6.50
+                0000021e  0000022a  0000000d  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/crt1.o
+    .arcextmap.inst.3.6.51
+                0000022b  00000237  0000000d  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/crt1.o
+    .arcextmap.inst.3.6.52
+                00000238  00000244  0000000d  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/crt1.o
+    .arcextmap.inst.3.6.53
+                00000245  00000251  0000000d  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/crt1.o
+    .arcextmap.inst.3.6.54
+                00000252  0000025e  0000000d  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/crt1.o
+    .arcextmap.inst.3.6.55
+                0000025f  0000026b  0000000d  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/crt1.o
+    .arcextmap.inst.3.6.56
+                0000026c  00000278  0000000d  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/crt1.o
+    .arcextmap.inst.3.6.57
+                00000279  00000285  0000000d  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/crt1.o
+    .arcextmap.inst.3.6.58
+                00000286  00000292  0000000d  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/crt1.o
+    .arcextmap.inst.3.6.59
+                00000293  0000029f  0000000d  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/crt1.o
+    .arcextmap.inst.3.6.6
+                000002a0  000002ab  0000000c  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/crt1.o
+    .arcextmap.inst.3.6.60
+                000002ac  000002b7  0000000c  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/crt1.o
+    .arcextmap.inst.3.6.61
+                000002b8  000002c3  0000000c  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/crt1.o
+    .arcextmap.inst.3.6.7
+                000002c4  000002ce  0000000b  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/crt1.o
+    .arcextmap.inst.3.6.8
+                000002cf  000002fe  00000030  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/crt1.o
+
+.comment info   00000000  000012f9  000012fa
+
+    .comment    00000000  00000038  00000039  <Linker Defined>
+    .comment    00000039  0000018d  00000155  output\objs\Sbl\Det.o
+    .comment    0000018e  000002e2  00000155  output\objs\Sbl\SBL_Flash.o
+    .comment    000002e3  00000437  00000155  output\objs\basicSoftware\integration\mcal\src\gen\Fls_PBCfg.o
+    .comment    00000438  0000058c  00000155  output\objs\basicSoftware\integration\mcal\src\gen\Mcu_PBCfg.o
+    .comment    0000058d  000006e1  00000155  output\objs\basicSoftware\integration\mcal\src\gen\Spi_PBCfg.o
+    .comment    000006e2  00000836  00000155  output\objs\basicSoftware\integration\mcal\src\integration\Fls_Integration.o
+    .comment    00000837  0000098b  00000155  output\objs\basicSoftware\integration\mcal\src\modules\Fls.o
+    .comment    0000098c  00000ae0  00000155  output\objs\basicSoftware\integration\mcal\src\modules\Fls_Alps.o
+    .comment    00000ae1  00000c35  00000155  output\objs\basicSoftware\integration\mcal\src\modules\Mcu.o
+    .comment    00000c36  00000d8a  00000155  output\objs\basicSoftware\integration\mcal\src\modules\Mcu_Alps.o
+    .comment    00000d8b  00000edf  00000155  output\objs\basicSoftware\integration\mcal\src\modules\Spi.o
+    .comment    00000ee0  00001034  00000155  output\objs\basicSoftware\integration\mcal\src\modules\Spi_Alps.o
+    .comment    00001035  00001197  00000163  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libct.a(arc_main.o)
+    .comment    00001198  000012f9  00000162  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libct.a(f_memset.o)
+
+.debug_abbrev
+         info   00000000  00000d22  00000d23
+
+    .debug_abbrev
+                00000000  00000094  00000095  output\objs\Sbl\Det.o
+    .debug_abbrev
+                00000095  000001ca  00000136  output\objs\Sbl\SBL_Flash.o
+    .debug_abbrev
+                000001cb  000001f6  0000002c  output\objs\basicSoftware\integration\src\target\arc_startup.o
+    .debug_abbrev
+                000001f7  0000028f  00000099  output\objs\basicSoftware\integration\mcal\src\gen\Fls_PBCfg.o
+    .debug_abbrev
+                00000290  0000030b  0000007c  output\objs\basicSoftware\integration\mcal\src\gen\Mcu_PBCfg.o
+    .debug_abbrev
+                0000030c  000003cf  000000c4  output\objs\basicSoftware\integration\mcal\src\gen\Spi_PBCfg.o
+    .debug_abbrev
+                000003d0  000003f8  00000029  output\objs\basicSoftware\integration\mcal\src\integration\Fls_Integration.o
+    .debug_abbrev
+                000003f9  00000544  0000014c  output\objs\basicSoftware\integration\mcal\src\modules\Fls.o
+    .debug_abbrev
+                00000545  0000071c  000001d8  output\objs\basicSoftware\integration\mcal\src\modules\Fls_Alps.o
+    .debug_abbrev
+                0000071d  0000087b  0000015f  output\objs\basicSoftware\integration\mcal\src\modules\Mcu.o
+    .debug_abbrev
+                0000087c  000009ed  00000172  output\objs\basicSoftware\integration\mcal\src\modules\Mcu_Alps.o
+    .debug_abbrev
+                000009ee  00000b44  00000157  output\objs\basicSoftware\integration\mcal\src\modules\Spi.o
+    .debug_abbrev
+                00000b45  00000d22  000001de  output\objs\basicSoftware\integration\mcal\src\modules\Spi_Alps.o
+
+.debug_aranges
+         info   00000000  0000020f  00000210
+
+    .debug_aranges
+                00000000  00000027  00000028  output\objs\Sbl\Det.o
+    .debug_aranges
+                00000028  00000057  00000030  output\objs\Sbl\SBL_Flash.o
+    .debug_aranges
+                00000058  00000077  00000020  output\objs\basicSoftware\integration\src\target\arc_startup.o
+    .debug_aranges
+                00000078  0000009f  00000028  output\objs\basicSoftware\integration\mcal\src\gen\Fls_PBCfg.o
+    .debug_aranges
+                000000a0  000000bf  00000020  output\objs\basicSoftware\integration\mcal\src\gen\Mcu_PBCfg.o
+    .debug_aranges
+                000000c0  000000e7  00000028  output\objs\basicSoftware\integration\mcal\src\gen\Spi_PBCfg.o
+    .debug_aranges
+                000000e8  00000107  00000020  output\objs\basicSoftware\integration\mcal\src\integration\Fls_Integration.o
+    .debug_aranges
+                00000108  0000012f  00000028  output\objs\basicSoftware\integration\mcal\src\modules\Fls.o
+    .debug_aranges
+                00000130  0000015f  00000030  output\objs\basicSoftware\integration\mcal\src\modules\Fls_Alps.o
+    .debug_aranges
+                00000160  00000187  00000028  output\objs\basicSoftware\integration\mcal\src\modules\Mcu.o
+    .debug_aranges
+                00000188  000001b7  00000030  output\objs\basicSoftware\integration\mcal\src\modules\Mcu_Alps.o
+    .debug_aranges
+                000001b8  000001df  00000028  output\objs\basicSoftware\integration\mcal\src\modules\Spi.o
+    .debug_aranges
+                000001e0  0000020f  00000030  output\objs\basicSoftware\integration\mcal\src\modules\Spi_Alps.o
+
+.debug_frame
+         info   00000000  00002913  00002914
+
+    .debug_frame
+                00000000  00000073  00000074  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/crt1.o
+    .debug_frame
+                00000074  000000ff  0000008c  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/crti.o
+    .debug_frame
+                00000100  000001a7  000000a8  output\objs\Sbl\Det.o
+    .debug_frame
+                000001a8  00000307  00000160  output\objs\Sbl\SBL_Flash.o
+    .debug_frame
+                00000308  000003ab  000000a4  output\objs\basicSoftware\integration\mcal\src\integration\Fls_Integration.o
+    .debug_frame
+                000003ac  0000059f  000001f4  output\objs\basicSoftware\integration\mcal\src\modules\Fls.o
+    .debug_frame
+                000005a0  00000a97  000004f8  output\objs\basicSoftware\integration\mcal\src\modules\Fls_Alps.o
+    .debug_frame
+                00000a98  00000c77  000001e0  output\objs\basicSoftware\integration\mcal\src\modules\Mcu.o
+    .debug_frame
+                00000c78  00000e9b  00000224  output\objs\basicSoftware\integration\mcal\src\modules\Mcu_Alps.o
+    .debug_frame
+                00000e9c  0000118b  000002f0  output\objs\basicSoftware\integration\mcal\src\modules\Spi.o
+    .debug_frame
+                0000118c  0000174b  000005c0  output\objs\basicSoftware\integration\mcal\src\modules\Spi_Alps.o
+    .debug_frame
+                0000174c  00001803  000000b8  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libct.a(arc_main.o)
+    .debug_frame
+                00001804  000018b3  000000b0  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libct.a(atexit.o)
+    .debug_frame
+                000018b4  0000191b  00000068  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libct.a(exit.o)
+    .debug_frame
+                0000191c  000019ff  000000e4  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libct.a(initcopy.o)
+    .debug_frame
+                00001a00  00001a5f  00000060  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libct.a(memcpy.o)
+    .debug_frame
+                00001a60  00001abf  00000060  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libct.a(_a5_strlen.o)
+    .debug_frame
+                00001ac0  00001b33  00000074  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libct.a(f_memset.o)
+    .debug_frame
+                00001b34  00001ba7  00000074  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libct.a(strcpy.o)
+    .debug_frame
+                00001ba8  00001c1b  00000074  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libct.a(invcache.o)
+    .debug_frame
+                00001c1c  00001cc7  000000ac  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libct.a(_cleanup.o)
+    .debug_frame
+                00001cc8  00001d37  00000070  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libct.a(memchr.o)
+    .debug_frame
+                00001d38  00001da3  0000006c  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libhlt.a(_exit.o)
+    .debug_frame
+                00001da4  00001e3b  00000098  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libhlt.a(argv.o)
+    .debug_frame
+                00001e3c  00001f1f  000000e4  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libhlt.a(hl_bios.o)
+    .debug_frame
+                00001f20  00001f93  00000074  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libhlt.a(hl_data.o)
+    .debug_frame
+                00001f94  00002013  00000080  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libhlt.a(hl_lock.o)
+    .debug_frame
+                00002014  000022ff  000002ec  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libhlt.a(hostcom.o)
+    .debug_frame
+                00002300  00002367  00000068  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libmw.a(ac_chkstk.o)
+    .debug_frame
+                00002368  000023cf  00000068  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libmw.a(errnog.o)
+    .debug_frame
+                000023d0  0000241b  0000004c  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libmw.a(mutexg.o)
+    .debug_frame
+                0000241c  0000247b  00000060  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libmw.a(tlsctorg.o)
+    .debug_frame
+                0000247c  000024db  00000060  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libmw.a(_vdmemcpy.o)
+    .debug_frame
+                000024dc  0000253b  00000060  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libmw.a(_vsmemcpy.o)
+    .debug_frame
+                0000253c  000025b3  00000078  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libmw.a(startk.o)
+    .debug_frame
+                000025b4  00002627  00000074  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libmw.a(init.o)
+    .debug_frame
+                00002628  0000269b  00000074  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libmw.a(fini.o)
+    .debug_frame
+                0000269c  0000280f  00000174  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libmw.a(mwdctor.o)
+    .debug_frame$5FDE_0
+                00002810  0000283b  0000002c  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libct.a(arc_main.o)
+    .debug_frame$5FDE_0
+                0000283c  00002867  0000002c  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libmw.a(mutexg.o)
+    .debug_frame$5FDE_0
+                00002868  0000288f  00000028  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libmw.a(tlsctorg.o)
+    .debug_frame$5FDE_1
+                00002890  000028bb  0000002c  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libmw.a(mutexg.o)
+    .debug_frame$5FDE_2
+                000028bc  000028e7  0000002c  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libmw.a(mutexg.o)
+    .debug_frame$5FDE_3
+                000028e8  00002913  0000002c  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libmw.a(mutexg.o)
+
+.debug_info
+         info   00000000  0000530f  00005310
+
+    .debug_info 00000000  00000100  00000101  output\objs\Sbl\Det.o
+    .debug_info 00000101  000004aa  000003aa  output\objs\Sbl\SBL_Flash.o
+    .debug_info 000004ab  0000067b  000001d1  output\objs\basicSoftware\integration\src\target\arc_startup.o
+    .debug_info 0000067c  00000873  000001f8  output\objs\basicSoftware\integration\mcal\src\gen\Fls_PBCfg.o
+    .debug_info 00000874  00000a87  00000214  output\objs\basicSoftware\integration\mcal\src\gen\Mcu_PBCfg.o
+    .debug_info 00000a88  000011aa  00000723  output\objs\basicSoftware\integration\mcal\src\gen\Spi_PBCfg.o
+    .debug_info 000011ab  000011f7  0000004d  output\objs\basicSoftware\integration\mcal\src\integration\Fls_Integration.o
+    .debug_info 000011f8  000016ed  000004f6  output\objs\basicSoftware\integration\mcal\src\modules\Fls.o
+    .debug_info 000016ee  00002313  00000c26  output\objs\basicSoftware\integration\mcal\src\modules\Fls_Alps.o
+    .debug_info 00002314  00002888  00000575  output\objs\basicSoftware\integration\mcal\src\modules\Mcu.o
+    .debug_info 00002889  000031f9  00000971  output\objs\basicSoftware\integration\mcal\src\modules\Mcu_Alps.o
+    .debug_info 000031fa  00003b18  0000091f  output\objs\basicSoftware\integration\mcal\src\modules\Spi.o
+    .debug_info 00003b19  0000530f  000017f7  output\objs\basicSoftware\integration\mcal\src\modules\Spi_Alps.o
+
+.debug_line
+         info   00000000  000030e8  000030e9
+
+    .debug_line 00000000  000000a9  000000aa  output\objs\Sbl\Det.o
+    .debug_line 000000aa  0000036a  000002c1  output\objs\Sbl\SBL_Flash.o
+    .debug_line 0000036b  0000047c  00000112  output\objs\basicSoftware\integration\src\target\arc_startup.o
+    .debug_line 0000047d  000005aa  0000012e  output\objs\basicSoftware\integration\mcal\src\gen\Fls_PBCfg.o
+    .debug_line 000005ab  00000696  000000ec  output\objs\basicSoftware\integration\mcal\src\gen\Mcu_PBCfg.o
+    .debug_line 00000697  00000782  000000ec  output\objs\basicSoftware\integration\mcal\src\gen\Spi_PBCfg.o
+    .debug_line 00000783  0000080b  00000089  output\objs\basicSoftware\integration\mcal\src\integration\Fls_Integration.o
+    .debug_line 0000080c  00000ab0  000002a5  output\objs\basicSoftware\integration\mcal\src\modules\Fls.o
+    .debug_line 00000ab1  00001435  00000985  output\objs\basicSoftware\integration\mcal\src\modules\Fls_Alps.o
+    .debug_line 00001436  00001698  00000263  output\objs\basicSoftware\integration\mcal\src\modules\Mcu.o
+    .debug_line 00001699  00001d37  0000069f  output\objs\basicSoftware\integration\mcal\src\modules\Mcu_Alps.o
+    .debug_line 00001d38  00002055  0000031e  output\objs\basicSoftware\integration\mcal\src\modules\Spi.o
+    .debug_line 00002056  000030e8  00001093  output\objs\basicSoftware\integration\mcal\src\modules\Spi_Alps.o
+
+.debug_loc
+         info   00000000  00003e53  00003e54
+
+    .debug_loc  00000000  00000012  00000013  output\objs\Sbl\Det.o
+    .debug_loc  00000013  000002f2  000002e0  output\objs\Sbl\SBL_Flash.o
+    .debug_loc  000002f3  00000525  00000233  output\objs\basicSoftware\integration\mcal\src\modules\Fls.o
+    .debug_loc  00000526  0000179f  0000127a  output\objs\basicSoftware\integration\mcal\src\modules\Fls_Alps.o
+    .debug_loc  000017a0  000018ca  0000012b  output\objs\basicSoftware\integration\mcal\src\modules\Mcu.o
+    .debug_loc  000018cb  00001e91  000005c7  output\objs\basicSoftware\integration\mcal\src\modules\Mcu_Alps.o
+    .debug_loc  00001e92  000020d1  00000240  output\objs\basicSoftware\integration\mcal\src\modules\Spi.o
+    .debug_loc  000020d2  00003e53  00001d82  output\objs\basicSoftware\integration\mcal\src\modules\Spi_Alps.o
+
+.debug_pubnames
+         info   00000000  00000027  00000028
+
+    .debug_pubnames
+                00000000  00000027  00000028  output\objs\basicSoftware\integration\src\target\arc_startup.o
+
+.debug_ranges
+         info   00000000  0000007f  00000080
+
+    .debug_ranges
+                00000000  0000002f  00000030  output\objs\basicSoftware\integration\mcal\src\modules\Fls_Alps.o
+    .debug_ranges
+                00000030  0000007f  00000050  output\objs\basicSoftware\integration\mcal\src\modules\Spi_Alps.o
+
+.debug_str
+         info   00000000  00002e53  00002e54
+
+    .debug_str  00000000  00000188  00000189  output\objs\Sbl\Det.o
+    .debug_str  00000000  0000025b  0000025c  output\objs\Sbl\SBL_Flash.o
+    .debug_str  00000000  000001f9  000001fa  output\objs\basicSoftware\integration\mcal\src\gen\Fls_PBCfg.o
+    .debug_str  00000000  0000024c  0000024d  output\objs\basicSoftware\integration\mcal\src\gen\Mcu_PBCfg.o
+    .debug_str  00000000  00000921  00000922  output\objs\basicSoftware\integration\mcal\src\gen\Spi_PBCfg.o
+    .debug_str  00000000  00000074  00000075  output\objs\basicSoftware\integration\mcal\src\integration\Fls_Integration.o
+    .debug_str  00000000  000001e2  000001e3  output\objs\basicSoftware\integration\mcal\src\modules\Fls.o
+    .debug_str  00000000  000004e3  000004e4  output\objs\basicSoftware\integration\mcal\src\modules\Fls_Alps.o
+    .debug_str  00000000  0000031f  00000320  output\objs\basicSoftware\integration\mcal\src\modules\Mcu.o
+    .debug_str  00000000  000007d7  000007d8  output\objs\basicSoftware\integration\mcal\src\modules\Mcu_Alps.o
+    .debug_str  00000000  0000028e  0000028f  output\objs\basicSoftware\integration\mcal\src\modules\Spi.o
+    .debug_str  00000000  00000842  00000843  output\objs\basicSoftware\integration\mcal\src\modules\Spi_Alps.o
+
+.strtab  info   00000000  000019c1  000019c2
+
+    .strtab     00000000  000019c1  000019c2  output\dbg\D_ETAS_BIP_PT_ARCMW_SBL.elf
+
+.symtab  info   00000000  0000213f  00002140
+
+    .symtab     00000000  0000213f  00002140  output\dbg\D_ETAS_BIP_PT_ARCMW_SBL.elf
+
+.shstrtab
+         info   00000000  000000df  000000e0
+
+    .shstrtab   00000000  000000df  000000e0  output\dbg\D_ETAS_BIP_PT_ARCMW_SBL.elf
+
+.ARC.attributes
+         info   00000000  0000004f  00000050
+
+    .ARC.attributes
+                00000000  0000004f  00000050  output\dbg\D_ETAS_BIP_PT_ARCMW_SBL.elf
+
+SYMBOLS REFERENCED FROM FUNCTIONS
+---------------------------------
+
+FUNCTION                OFFSET  SYMBOL REFERENCED
+
+Det_ReportError         +0x4    errId
+FlashHeader             +0x0    SBL_FlashInit
+                        +0x4    SBL_FlashDeinit
+                        +0x8    SBL_FlashErase
+                        +0xc    SBL_FlashWrite
+                        +0x10   SBL_FlashRead
+Fls_BlankCheck          +0x4    FlsInitialized@output\objs\basicSoftware\integration\mcal\src\modules\Fls.o 
+                        +0x16   Det_ReportError
+                        +0x1e   Fls_Hal_BlankCheck
+Fls_CallBackFun@output\objs\basicSoftware\integration\mcal\src\modules\Fls_Alps.o 
+                        +0x4    FlsModuleState@output\objs\basicSoftware\integration\mcal\src\modules\Fls_Alps.o 
+                        +0x10   FlsModuleState@output\objs\basicSoftware\integration\mcal\src\modules\Fls_Alps.o 
+Fls_Compare             +0x10   FlsInitialized@output\objs\basicSoftware\integration\mcal\src\modules\Fls.o 
+                        +0x22   Det_ReportError
+                        +0x38   Fls_lclParamCheck
+                        +0x48   Fls_Hal_Compare
+Fls_Config              +0x10   Fee_JobEndNotification
+                        +0x14   Fee_JobErrorNotification
+                        +0x30   Sector
+Fls_EnableWrite@output\objs\basicSoftware\integration\mcal\src\modules\Fls_Alps.o 
+                        +0x6    Spi_WriteIB
+                        +0xc    Spi_SyncTransmit
+Fls_Erase               +0x2    Fls_Hal_Erase
+Fls_ErasedCheck@output\objs\basicSoftware\integration\mcal\src\modules\Fls_Alps.o 
+                        +0x14   memset
+                        +0x4e   SpiConfigData
+                        +0x68   Spi_SetupEB
+                        +0x72   Spi_SyncTransmit
+Fls_GetJobResult        +0x4    FlsInitialized@output\objs\basicSoftware\integration\mcal\src\modules\Fls.o 
+                        +0x16   Det_ReportError
+                        +0x1e   Fls_Hal_GetJobResult
+Fls_GetSPIStatusRegister@output\objs\basicSoftware\integration\mcal\src\modules\Fls_Alps.o 
+                        +0x8    Spi_WriteIB
+                        +0x10   Spi_SyncTransmit
+                        +0x1a   Spi_ReadIB
+Fls_GetStatus           +0x2    Fls_Hal_GetStatus
+Fls_GetVersionInfo      +0x16   Fls_lclParamCheck
+Fls_Hal_BlankCheck      +0x4    FlsModuleState@output\objs\basicSoftware\integration\mcal\src\modules\Fls_Alps.o 
+                        +0x16   Det_ReportError
+                        +0x32   Det_ReportError
+                        +0x4a   Det_ReportError
+                        +0x64   Det_ReportError
+                        +0x6e   Fls_BlankCheck_Job@output\objs\basicSoftware\integration\mcal\src\modules\Fls_Alps.o 
+Fls_Hal_Compare         +0x4    FlsModuleState@output\objs\basicSoftware\integration\mcal\src\modules\Fls_Alps.o 
+                        +0x16   Det_ReportError
+                        +0x32   Det_ReportError
+                        +0x4a   Det_ReportError
+                        +0x64   Det_ReportError
+                        +0x6e   Fls_Compare_Job@output\objs\basicSoftware\integration\mcal\src\modules\Fls_Alps.o 
+Fls_Hal_Erase           +0x4    Fls_Region@output\objs\basicSoftware\integration\mcal\src\modules\Fls_Alps.o 
+                        +0xe    FlsModuleState@output\objs\basicSoftware\integration\mcal\src\modules\Fls_Alps.o 
+                        +0x36   Det_ReportError
+                        +0x52   Det_ReportError
+                        +0x74   Det_ReportError
+                        +0x9a   Det_ReportError
+                        +0xa2   Fls_Erase_Job@output\objs\basicSoftware\integration\mcal\src\modules\Fls_Alps.o 
+Fls_Hal_GetJobResult    +0x2    Fls_JobResult@output\objs\basicSoftware\integration\mcal\src\modules\Fls_Alps.o 
+Fls_Hal_GetStatus       +0x2    FlsModuleState@output\objs\basicSoftware\integration\mcal\src\modules\Fls_Alps.o 
+Fls_Hal_Init            +0x1e   FlsModuleState@output\objs\basicSoftware\integration\mcal\src\modules\Fls_Alps.o 
+                        +0x3c   Det_ReportError
+                        +0x44   SpiConfigData
+                        +0x48   Spi_Init
+                        +0x50   Spi_WriteIB
+                        +0x5e   Spi_SetupEB
+                        +0x66   Spi_SyncTransmit
+                        +0x72   Spi_ReadIB
+                        +0x96   Det_ReportError
+Fls_Hal_MainFunction_Handling
+                        +0x4    Fls_Compare_Job@output\objs\basicSoftware\integration\mcal\src\modules\Fls_Alps.o 
+                        +0x12   Fls_Read_Job@output\objs\basicSoftware\integration\mcal\src\modules\Fls_Alps.o 
+Fls_Hal_MainFunction_Handling_BlankCheck@output\objs\basicSoftware\integration\mcal\src\modules\Fls_Alps.o 
+                        +0x10   memset
+                        +0x16   Fls_BlankCheck_Job@output\objs\basicSoftware\integration\mcal\src\modules\Fls_Alps.o 
+                        +0x52   SpiConfigData
+                        +0x6e   Spi_SetupEB
+                        +0x78   Spi_SyncTransmit
+                        +0x8c   FlsModuleState@output\objs\basicSoftware\integration\mcal\src\modules\Fls_Alps.o 
+                        +0xe8   Det_ReportRuntimeError
+Fls_Hal_MainFunction_Handling_Compare@output\objs\basicSoftware\integration\mcal\src\modules\Fls_Alps.o 
+                        +0xe    Fls_Compare_Job@output\objs\basicSoftware\integration\mcal\src\modules\Fls_Alps.o 
+                        +0x14   FlsModuleState@output\objs\basicSoftware\integration\mcal\src\modules\Fls_Alps.o 
+                        +0x2a   SpiConfigData
+                        +0x44   Spi_SetupEB
+                        +0x4c   Spi_SyncTransmit
+                        +0x74   Det_ReportRuntimeError
+Fls_Hal_MainFunction_Handling_Erase@output\objs\basicSoftware\integration\mcal\src\modules\Fls_Alps.o 
+                        +0x16   FlsModuleState@output\objs\basicSoftware\integration\mcal\src\modules\Fls_Alps.o 
+                        +0x1c   Fls_Erase_Job@output\objs\basicSoftware\integration\mcal\src\modules\Fls_Alps.o 
+                        +0x36   SpiConfigData
+                        +0x92   Spi_WriteIB
+                        +0x98   Spi_SyncTransmit
+                        +0xd0   Det_ReportRuntimeError
+                        +0x100  Det_ReportRuntimeError
+                        +0x11c  Det_ReportRuntimeError
+Fls_Hal_MainFunction_Handling_Read@output\objs\basicSoftware\integration\mcal\src\modules\Fls_Alps.o 
+                        +0x4    Fls_Read_Job@output\objs\basicSoftware\integration\mcal\src\modules\Fls_Alps.o 
+                        +0x4a   SpiConfigData
+                        +0x64   Spi_SetupEB
+                        +0x6e   Spi_SyncTransmit
+                        +0x84   FlsModuleState@output\objs\basicSoftware\integration\mcal\src\modules\Fls_Alps.o 
+                        +0x9a   Det_ReportRuntimeError
+Fls_Hal_MainFunction_Handling_Write@output\objs\basicSoftware\integration\mcal\src\modules\Fls_Alps.o 
+                        +0x10   Fls_Write_Job@output\objs\basicSoftware\integration\mcal\src\modules\Fls_Alps.o 
+                        +0x1e   FlsModuleState@output\objs\basicSoftware\integration\mcal\src\modules\Fls_Alps.o 
+                        +0x54   SpiConfigData
+                        +0x98   Spi_SetupEB
+                        +0xa2   Spi_SyncTransmit
+                        +0x138  Spi_SetupEB
+                        +0x142  Spi_SyncTransmit
+                        +0x188  Det_ReportRuntimeError
+                        +0x1a0  Det_ReportRuntimeError
+                        +0x1b2  Det_ReportRuntimeError
+                        +0x1c4  Det_ReportRuntimeError
+Fls_Hal_Read            +0x4    FlsModuleState@output\objs\basicSoftware\integration\mcal\src\modules\Fls_Alps.o 
+                        +0x16   Det_ReportError
+                        +0x32   Det_ReportError
+                        +0x4a   Det_ReportError
+                        +0x64   Det_ReportError
+                        +0x6e   Fls_Read_Job@output\objs\basicSoftware\integration\mcal\src\modules\Fls_Alps.o 
+Fls_Hal_SetMode         +0x4    FlsModuleState@output\objs\basicSoftware\integration\mcal\src\modules\Fls_Alps.o 
+                        +0x1c   Det_ReportError
+Fls_Hal_Write           +0x4    FlsModuleState@output\objs\basicSoftware\integration\mcal\src\modules\Fls_Alps.o 
+                        +0x16   Det_ReportError
+                        +0x32   Det_ReportError
+                        +0x50   Det_ReportError
+                        +0x72   Det_ReportError
+                        +0x7c   Fls_Write_Job@output\objs\basicSoftware\integration\mcal\src\modules\Fls_Alps.o 
+Fls_ID_Check@output\objs\basicSoftware\integration\mcal\src\modules\Fls_Alps.o 
+                        +0xe    Fls_Region@output\objs\basicSoftware\integration\mcal\src\modules\Fls_Alps.o 
+                        +0x3c   Fls_Region@output\objs\basicSoftware\integration\mcal\src\modules\Fls_Alps.o 
+                        +0x62   Fls_Region@output\objs\basicSoftware\integration\mcal\src\modules\Fls_Alps.o 
+                        +0x88   Fls_Region@output\objs\basicSoftware\integration\mcal\src\modules\Fls_Alps.o 
+                        +0xae   Fls_Region@output\objs\basicSoftware\integration\mcal\src\modules\Fls_Alps.o 
+                        +0xd4   Fls_Region@output\objs\basicSoftware\integration\mcal\src\modules\Fls_Alps.o 
+Fls_Init                +0x16   Fls_lclParamCheck
+                        +0x22   FlsInitialized@output\objs\basicSoftware\integration\mcal\src\modules\Fls.o 
+                        +0x2e   Fls_Hal_Init
+Fls_MainFunction        +0x4    FlsInitialized@output\objs\basicSoftware\integration\mcal\src\modules\Fls.o 
+                        +0x16   Det_ReportError
+                        +0x1c   Fls_Hal_MainFunction_Handling
+Fls_Read                +0x1a   Fls_lclParamCheck
+                        +0x2a   Fls_Hal_Read
+Fls_Write               +0x1a   Fls_lclParamCheck
+                        +0x2a   Fls_Hal_Write
+Fls_lclParamCheck       +0x16   Det_ReportError
+McuClockSettingConfigData
+                        +0xc    McuCanClockSourceConfigData
+McuConfigData           +0x8    McuRamSectionConfigData
+                        +0xc    McuClockSettingConfigData
+Mcu_DistributePllClock  +0xa    McuInitialized@output\objs\basicSoftware\integration\mcal\src\modules\Mcu.o 
+                        +0x1e   Mcu_Hal_GetPllStatus
+                        +0x36   Mcu_Hal_DistributePllClock
+Mcu_GetPeripheralClkFreq
+                        +0xa    Mcu_Hal_GetPeripheralClkFreq
+Mcu_GetPllStatus        +0xa    McuInitialized@output\objs\basicSoftware\integration\mcal\src\modules\Mcu.o 
+                        +0x26   Mcu_Hal_GetPllStatus
+Mcu_GetResetRawValue    +0xa    McuInitialized@output\objs\basicSoftware\integration\mcal\src\modules\Mcu.o 
+                        +0x26   Mcu_Hal_GetResetRawValue
+Mcu_GetResetReason      +0xa    McuInitialized@output\objs\basicSoftware\integration\mcal\src\modules\Mcu.o 
+                        +0x26   Mcu_Hal_GetResetReason
+Mcu_Hal_DistributePllClock
+                        +0x2    Mcu_ClkGen_Reg@output\objs\basicSoftware\integration\mcal\src\modules\Mcu_Alps.o 
+Mcu_Hal_GetPeripheralClkFreq
+                        +0x4    McuGlobal@output\objs\basicSoftware\integration\mcal\src\modules\Mcu_Alps.o 
+                        +0x1a   Mcu_ClkGen_Reg@output\objs\basicSoftware\integration\mcal\src\modules\Mcu_Alps.o 
+Mcu_Hal_GetPllStatus    +0x2    Mcu_ClkGen_Reg@output\objs\basicSoftware\integration\mcal\src\modules\Mcu_Alps.o 
+Mcu_Hal_GetResetRawValue
+                        +0x2    McuGlobal@output\objs\basicSoftware\integration\mcal\src\modules\Mcu_Alps.o 
+Mcu_Hal_GetResetReason  +0x2    McuGlobal@output\objs\basicSoftware\integration\mcal\src\modules\Mcu_Alps.o 
+Mcu_Hal_Init            +0x2    McuGlobal@output\objs\basicSoftware\integration\mcal\src\modules\Mcu_Alps.o 
+Mcu_Hal_InitClock       +0x4    McuGlobal@output\objs\basicSoftware\integration\mcal\src\modules\Mcu_Alps.o 
+Mcu_Hal_InitRamSection  +0x4    McuGlobal@output\objs\basicSoftware\integration\mcal\src\modules\Mcu_Alps.o 
+                        +0x18   memset
+Mcu_Hal_PerformReset    +0x2    McuGlobal@output\objs\basicSoftware\integration\mcal\src\modules\Mcu_Alps.o 
+                        +0x12   Mcu_ClkGen_Reg@output\objs\basicSoftware\integration\mcal\src\modules\Mcu_Alps.o 
+Mcu_Init                +0x20   Mcu_Hal_Init
+                        +0x26   McuInitialized@output\objs\basicSoftware\integration\mcal\src\modules\Mcu.o 
+Mcu_InitClock           +0xc    McuInitialized@output\objs\basicSoftware\integration\mcal\src\modules\Mcu.o 
+                        +0x36   Mcu_Hal_InitClock
+Mcu_InitRamSection      +0xc    McuInitialized@output\objs\basicSoftware\integration\mcal\src\modules\Mcu.o 
+                        +0x36   Mcu_Hal_InitRamSection
+Mcu_PerformReset        +0xa    McuInitialized@output\objs\basicSoftware\integration\mcal\src\modules\Mcu.o 
+                        +0x24   Mcu_Hal_PerformReset
+Mcu_lclCanClkSourceSelect@output\objs\basicSoftware\integration\mcal\src\modules\Mcu_Alps.o 
+                        +0x8    Mcu_ClkGen_Reg@output\objs\basicSoftware\integration\mcal\src\modules\Mcu_Alps.o 
+Mcu_lclInitDiv@output\objs\basicSoftware\integration\mcal\src\modules\Mcu_Alps.o 
+                        +0x4    Mcu_ClkGen_Reg@output\objs\basicSoftware\integration\mcal\src\modules\Mcu_Alps.o 
+Mcu_lclInitPeripheralClks@output\objs\basicSoftware\integration\mcal\src\modules\Mcu_Alps.o 
+                        +0x8    Mcu_ClkGen_Reg@output\objs\basicSoftware\integration\mcal\src\modules\Mcu_Alps.o 
+Qspi_lclTransmit@output\objs\basicSoftware\integration\mcal\src\modules\Spi_Alps.o 
+                        +0x4    SpiGlobal@output\objs\basicSoftware\integration\mcal\src\modules\Spi_Alps.o 
+                        +0x2a   Spi_Hw_Reg@output\objs\basicSoftware\integration\mcal\src\modules\Spi_Alps.o 
+                        +0x42   Spi_Hw_Reg@output\objs\basicSoftware\integration\mcal\src\modules\Spi_Alps.o 
+                        +0xb6   SpiGlobal@output\objs\basicSoftware\integration\mcal\src\modules\Spi_Alps.o 
+                        +0x10e  SpiGlobal@output\objs\basicSoftware\integration\mcal\src\modules\Spi_Alps.o 
+                        +0x12e  SpiGlobal@output\objs\basicSoftware\integration\mcal\src\modules\Spi_Alps.o 
+                        +0x168  SpiGlobal@output\objs\basicSoftware\integration\mcal\src\modules\Spi_Alps.o 
+                        +0x17a  SpiGlobal@output\objs\basicSoftware\integration\mcal\src\modules\Spi_Alps.o 
+                        +0x1f4  Spi_Hw_Reg@output\objs\basicSoftware\integration\mcal\src\modules\Spi_Alps.o 
+                        +0x23c  SpiGlobal@output\objs\basicSoftware\integration\mcal\src\modules\Spi_Alps.o 
+                        +0x270  SpiGlobal@output\objs\basicSoftware\integration\mcal\src\modules\Spi_Alps.o 
+                        +0x2da  Spi_Hw_Reg@output\objs\basicSoftware\integration\mcal\src\modules\Spi_Alps.o 
+                        +0x380  SpiGlobal@output\objs\basicSoftware\integration\mcal\src\modules\Spi_Alps.o 
+SBL_FlashErase          +0x12   Fls_Erase
+                        +0x1a   Fls_MainFunction
+                        +0x1e   Fls_GetJobResult
+SBL_FlashInit           +0x4    _arc_reset_stage3
+                        +0x10   Fls_Config
+                        +0x14   Fls_Init
+SBL_FlashRead           +0x20   Fls_Read
+                        +0x28   Fls_MainFunction
+                        +0x2c   Fls_GetJobResult
+SBL_FlashWrite          +0x2e   SBL_WriteBuffer@output\objs\Sbl\SBL_Flash.o 
+                        +0x3e   Fls_Write
+                        +0x46   Fls_MainFunction
+                        +0x4a   Fls_GetJobResult
+SpiConfigData           +0x8    SpiChannelConfigData
+                        +0xc    SpiExternalConfigData
+                        +0x10   SpiJobConfigData
+                        +0x14   SpiSequenceConfigData
+SpiJobConfigData        +0x20   SpiJob_0_Channel_link
+                        +0x24   SpiExternalConfigData
+                        +0x48   SpiJob_1_Channel_link
+                        +0x4c   SpiExternalConfigData
+                        +0x70   SpiJob_2_Channel_link
+                        +0x74   SpiExternalConfigData
+                        +0x98   SpiJob_3_Channel_link
+                        +0x9c   SpiExternalConfigData
+                        +0xc0   SpiJob_4_Channel_link
+                        +0xc4   SpiExternalConfigData
+                        +0xe8   SpiJob_write_Channel_link
+                        +0xec   SpiExternalConfigData
+                        +0x110  SpiJob_read_Channel_link
+                        +0x114  SpiExternalConfigData
+                        +0x138  SpiJob_7_Channel_link
+                        +0x13c  SpiExternalConfigData
+                        +0x160  SpiJob_8_Channel_link
+                        +0x164  SpiExternalConfigData
+                        +0x188  SpiJob_erase_Channel_link
+                        +0x18c  SpiExternalConfigData
+                        +0x1b0  SpiJob_Read_Ads_Channel_link
+                        +0x1b4  SpiExternalConfigData
+SpiSequenceConfigData   +0xc    SpiSequence_ReadIDBuf_Job_link
+                        +0x1c   SpiSequence_WriteCfg_Job_link
+                        +0x2c   SpiSequence_WriteData_Job_link
+                        +0x3c   SpiSequence_ReadData_Job_link
+                        +0x4c   SpiSequence_ReadCfg_Job_link
+                        +0x5c   SpiSequence_WriteEnableCfg_Job_link
+                        +0x6c   SpiSequence_WriteEnableData_Job_link
+                        +0x7c   SpiSequence_ReadStatusReg_Job_link
+                        +0x8c   SpiSequence_ErasePage_Job_link
+                        +0x9c   SpiSequence_ReadAds_Job_link
+Spi_AsyncTransmit       +0xc    SpiInitialized@output\objs\basicSoftware\integration\mcal\src\modules\Spi.o 
+                        +0x1e   Spi_lclParamCheck
+                        +0x2e   Spi_lclParamCheck
+                        +0x3a   Spi_Hal_AsyncTransmit
+Spi_Cancel              +0xc    SpiInitialized@output\objs\basicSoftware\integration\mcal\src\modules\Spi.o 
+                        +0x1e   Spi_lclParamCheck
+                        +0x2e   Spi_lclParamCheck
+                        +0x3a   Spi_Hal_Cancel
+Spi_DeInit              +0xa    SpiInitialized@output\objs\basicSoftware\integration\mcal\src\modules\Spi.o 
+                        +0x1c   Spi_lclParamCheck
+                        +0x26   Spi_Hal_DeInit
+Spi_GetJobResult        +0xc    SpiInitialized@output\objs\basicSoftware\integration\mcal\src\modules\Spi.o 
+                        +0x1e   Spi_lclParamCheck
+                        +0x2e   Spi_lclParamCheck
+                        +0x3c   Spi_Hal_GetJobResult
+Spi_GetSequenceResult   +0xc    SpiInitialized@output\objs\basicSoftware\integration\mcal\src\modules\Spi.o 
+                        +0x1e   Spi_lclParamCheck
+                        +0x2e   Spi_lclParamCheck
+                        +0x3c   Spi_Hal_GetSeqResult
+Spi_GetStatus           +0x4    SpiInitialized@output\objs\basicSoftware\integration\mcal\src\modules\Spi.o 
+                        +0x12   Spi_Hal_GetStatus
+Spi_GetVersionInfo      +0x16   Spi_lclParamCheck
+Spi_Hal_AsyncTransmit   +0x24   SpiGlobal@output\objs\basicSoftware\integration\mcal\src\modules\Spi_Alps.o 
+                        +0xbe   Spi_Hw_Reg@output\objs\basicSoftware\integration\mcal\src\modules\Spi_Alps.o 
+                        +0x144  SpiGlobal@output\objs\basicSoftware\integration\mcal\src\modules\Spi_Alps.o 
+Spi_Hal_Cancel          +0x6    SpiGlobal@output\objs\basicSoftware\integration\mcal\src\modules\Spi_Alps.o 
+                        +0x16   CancelStatus@output\objs\basicSoftware\integration\mcal\src\modules\Spi_Alps.o 
+Spi_Hal_DeInit          +0x10   SpiGlobal@output\objs\basicSoftware\integration\mcal\src\modules\Spi_Alps.o 
+                        +0x16   Spi_Hw_Reg@output\objs\basicSoftware\integration\mcal\src\modules\Spi_Alps.o 
+                        +0x7c   SpiGlobal@output\objs\basicSoftware\integration\mcal\src\modules\Spi_Alps.o 
+                        +0x94   SpiGlobal@output\objs\basicSoftware\integration\mcal\src\modules\Spi_Alps.o 
+Spi_Hal_GetJobResult    +0x4    SpiGlobal@output\objs\basicSoftware\integration\mcal\src\modules\Spi_Alps.o 
+Spi_Hal_GetSeqResult    +0x8    SpiGlobal@output\objs\basicSoftware\integration\mcal\src\modules\Spi_Alps.o 
+Spi_Hal_GetStatus       +0x14   SpiGlobal@output\objs\basicSoftware\integration\mcal\src\modules\Spi_Alps.o 
+Spi_Hal_Init            +0x6    Mcu_GetPeripheralClkFreq
+                        +0x10   SpiGlobal@output\objs\basicSoftware\integration\mcal\src\modules\Spi_Alps.o 
+                        +0x18   SpiGlobal@output\objs\basicSoftware\integration\mcal\src\modules\Spi_Alps.o 
+                        +0x22   SpiGlobal@output\objs\basicSoftware\integration\mcal\src\modules\Spi_Alps.o 
+                        +0x104  SpiGlobal@output\objs\basicSoftware\integration\mcal\src\modules\Spi_Alps.o 
+Spi_Hal_MainFunction_Handling
+                        +0x4    Spi_Hw_Reg@output\objs\basicSoftware\integration\mcal\src\modules\Spi_Alps.o 
+                        +0x24   SpiGlobal@output\objs\basicSoftware\integration\mcal\src\modules\Spi_Alps.o 
+                        +0x32   SpiGlobal@output\objs\basicSoftware\integration\mcal\src\modules\Spi_Alps.o 
+Spi_Hal_ReadIB          +0x4    SpiGlobal@output\objs\basicSoftware\integration\mcal\src\modules\Spi_Alps.o 
+Spi_Hal_SetupEB         +0x12   SpiGlobal@output\objs\basicSoftware\integration\mcal\src\modules\Spi_Alps.o 
+Spi_Hal_SyncTransmit    +0x16   Spi_Hw_Reg@output\objs\basicSoftware\integration\mcal\src\modules\Spi_Alps.o 
+                        +0x36   SpiGlobal@output\objs\basicSoftware\integration\mcal\src\modules\Spi_Alps.o 
+Spi_Hal_WriteIB         +0x8    SpiGlobal@output\objs\basicSoftware\integration\mcal\src\modules\Spi_Alps.o 
+Spi_Init                +0x16   Spi_lclParamCheck
+                        +0x1c   SpiInitialized@output\objs\basicSoftware\integration\mcal\src\modules\Spi.o 
+                        +0x2e   Spi_lclParamCheck
+                        +0x3a   Spi_Hal_Init
+Spi_MainFunction_Handling
+                        +0x2    Spi_Hal_MainFunction_Handling
+Spi_ReadIB              +0xe    SpiInitialized@output\objs\basicSoftware\integration\mcal\src\modules\Spi.o 
+                        +0x20   Spi_lclParamCheck
+                        +0x30   Spi_lclParamCheck
+                        +0x40   Spi_lclParamCheck
+                        +0x4e   Spi_Hal_ReadIB
+Spi_SetAsyncMode        +0xc    SpiInitialized@output\objs\basicSoftware\integration\mcal\src\modules\Spi.o 
+                        +0x1e   Spi_lclParamCheck
+                        +0x2a   Spi_Hal_SetAsyncMode
+Spi_SetupEB             +0x12   SpiInitialized@output\objs\basicSoftware\integration\mcal\src\modules\Spi.o 
+                        +0x24   Spi_lclParamCheck
+                        +0x34   Spi_lclParamCheck
+                        +0x46   Spi_Hal_SetupEB
+Spi_SyncTransmit        +0xc    SpiInitialized@output\objs\basicSoftware\integration\mcal\src\modules\Spi.o 
+                        +0x1e   Spi_lclParamCheck
+                        +0x2e   Spi_lclParamCheck
+                        +0x3a   Spi_Hal_SyncTransmit
+Spi_WriteIB             +0xe    SpiInitialized@output\objs\basicSoftware\integration\mcal\src\modules\Spi.o 
+                        +0x20   Spi_lclParamCheck
+                        +0x30   Spi_lclParamCheck
+                        +0x3e   Spi_Hal_WriteIB
+Spi_lclCheckQueueAvailability@output\objs\basicSoftware\integration\mcal\src\modules\Spi_Alps.o 
+                        +0x2    SpiGlobal@output\objs\basicSoftware\integration\mcal\src\modules\Spi_Alps.o 
+Spi_lclGetChannelLock@output\objs\basicSoftware\integration\mcal\src\modules\Spi_Alps.o 
+                        +0x8    SpiGlobal@output\objs\basicSoftware\integration\mcal\src\modules\Spi_Alps.o 
+Spi_lclProcessJob@output\objs\basicSoftware\integration\mcal\src\modules\Spi_Alps.o 
+                        +0x6    SpiGlobal@output\objs\basicSoftware\integration\mcal\src\modules\Spi_Alps.o 
+                        +0x36   SpiGlobal@output\objs\basicSoftware\integration\mcal\src\modules\Spi_Alps.o 
+                        +0x88   Spi_Hw_Reg@output\objs\basicSoftware\integration\mcal\src\modules\Spi_Alps.o 
+Spi_lclQueueCleanUp@output\objs\basicSoftware\integration\mcal\src\modules\Spi_Alps.o 
+                        +0x4    SpiGlobal@output\objs\basicSoftware\integration\mcal\src\modules\Spi_Alps.o 
+Spi_lclQueuePush@output\objs\basicSoftware\integration\mcal\src\modules\Spi_Alps.o 
+                        +0x8    SpiGlobal@output\objs\basicSoftware\integration\mcal\src\modules\Spi_Alps.o 
+                        +0x28   SpiGlobal@output\objs\basicSoftware\integration\mcal\src\modules\Spi_Alps.o 
+Spi_lclReadRxSWBuff@output\objs\basicSoftware\integration\mcal\src\modules\Spi_Alps.o 
+                        +0x6    SpiGlobal@output\objs\basicSoftware\integration\mcal\src\modules\Spi_Alps.o 
+                        +0xa4   SpiGlobal@output\objs\basicSoftware\integration\mcal\src\modules\Spi_Alps.o 
+                        +0xb6   SpiGlobal@output\objs\basicSoftware\integration\mcal\src\modules\Spi_Alps.o 
+Spi_lclSetOrClearChannelLock@output\objs\basicSoftware\integration\mcal\src\modules\Spi_Alps.o 
+                        +0x8    SpiGlobal@output\objs\basicSoftware\integration\mcal\src\modules\Spi_Alps.o 
+Spi_lclTransmit@output\objs\basicSoftware\integration\mcal\src\modules\Spi_Alps.o 
+                        +0x8    SpiGlobal@output\objs\basicSoftware\integration\mcal\src\modules\Spi_Alps.o 
+                        +0x14   Spi_Hw_Reg@output\objs\basicSoftware\integration\mcal\src\modules\Spi_Alps.o 
+                        +0x2a   SpiGlobal@output\objs\basicSoftware\integration\mcal\src\modules\Spi_Alps.o 
+                        +0x56   SpiGlobal@output\objs\basicSoftware\integration\mcal\src\modules\Spi_Alps.o 
+                        +0x6c   Spi_Hw_Reg@output\objs\basicSoftware\integration\mcal\src\modules\Spi_Alps.o 
+                        +0x82   SpiGlobal@output\objs\basicSoftware\integration\mcal\src\modules\Spi_Alps.o 
+Spi_lclUpdateTxSWBuff@output\objs\basicSoftware\integration\mcal\src\modules\Spi_Alps.o 
+                        +0x6    SpiGlobal@output\objs\basicSoftware\integration\mcal\src\modules\Spi_Alps.o 
+                        +0x12c  SpiGlobal@output\objs\basicSoftware\integration\mcal\src\modules\Spi_Alps.o 
+_Exit                   +0x4    _mwhl_lock
+                        +0xe    _mwmutex_lock
+                        +0x1c   _hl_message
+                        +0x24   _hl_delete
+                        +0x2c   _mwmutex_unlock
+                        +0x34   _exit_halt
+___errno                +0x2    _mwget_tls
+                        +0x8    errno
+__arc_main              +0x4    __safe_stack_runtime
+                        +0xa    __safe_stack_runtime
+                        +0x10   __PICTABLE__
+                        +0x16   _initcopy
+                        +0x1e   __INITBSS__
+                        +0x26   _fbss
+                        +0x2c   _ebss
+                        +0x32   memset
+                        +0x3a   _fsbss
+                        +0x42   _esbss
+                        +0x48   memset
+                        +0x4e   _invalidate_dcache
+                        +0x52   _timer_default_reset
+                        +0x56   __start_kernel
+__argc                  +0x8    _mwhl_lock
+                        +0xe    _mwmutex_lock
+                        +0x1e   _hl_message
+                        +0x26   _hl_delete
+                        +0x2e   _mwhl_lock
+                        +0x34   _mwmutex_unlock
+__argv                  +0x4    _mwhl_lock
+                        +0xe    _mwmutex_lock
+                        +0x1c   _hl_message
+                        +0x28   _hl_unPackStringLen
+                        +0x34   __argv.buf@C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libhlt.a(argv.o) 
+                        +0x3c   _hl_unPackStringZ
+                        +0x4a   ___errno
+                        +0x56   _hl_delete
+                        +0x5e   _mwmutex_unlock
+__cleanup               +0x4    _exitv
+                        +0x12   _fclose_exit_p
+__do_global_ctors_aux   +0x4    _ectors
+                        +0xa    _fctors
+__do_global_dtors_aux   +0x4    _edtors
+                        +0xa    _fdtors
+__mw_cpp_exit           +0x4    __mw_cpp_exit.called@C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libmw.a(mwdctor.o) 
+                        +0xe    cdtor@C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libmw.a(mwdctor.o) 
+__mw_cpp_init           +0x4    cdtor@C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libmw.a(mwdctor.o) 
+__mw_run_tls_ctor       +0x4    cdtor@C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libmw.a(mwdctor.o) 
+                        +0x16   _etlsctors
+                        +0x1c   _ftlsctors
+__mw_run_tls_dtor       +0x4    cdtor@C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libmw.a(mwdctor.o) 
+                        +0x16   _etlsdtors
+                        +0x1c   _ftlsdtors
+__pragma_exit_function_2@C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libhlt.a(hl_lock.o) 
+                        +0x4    _mwhl_lock
+                        +0x8    _mwmutex_delete
+__pragma_startup_function_1@C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libct.a(atexit.o) 
+                        +0x0    __xcheck
+                        +0x0    __xcheck
+                        +0x0    __xcheck
+                        +0x0    __xcheck
+                        +0x0    __xcheck
+                        +0x0    __xcheck
+                        +0x0    __xcheck
+                        +0x0    __xcheck
+                        +0x0    __xcheck
+                        +0x0    __xcheck
+                        +0x0    __xcheck
+                        +0x0    __xcheck
+                        +0x0    __xcheck
+                        +0x0    __xcheck
+                        +0x0    __xcheck
+                        +0x0    __xcheck
+                        +0x0    __xcheck
+                        +0x0    __xcheck
+                        +0x0    __xcheck
+                        +0x0    __xcheck
+                        +0x0    __xcheck
+                        +0x0    __xcheck
+                        +0x0    __xcheck
+                        +0x0    __xcheck
+                        +0x0    __xcheck
+                        +0x0    __xcheck
+                        +0x0    __xcheck
+                        +0x0    __xcheck
+                        +0x0    __xcheck
+                        +0x0    __xcheck
+                        +0x0    __xcheck
+                        +0x0    __xcheck
+                        +0x0    __xcheck
+                        +0x0    __xcheck
+                        +0x0    __xcheck
+                        +0x0    __xcheck
+                        +0x0    __xcheck
+                        +0x0    __xcheck
+                        +0x0    __xcheck
+                        +0x0    __xcheck
+                        +0x0    __xcheck
+                        +0x0    __xcheck
+                        +0x0    __xcheck
+                        +0x0    __xcheck
+                        +0x0    __xcheck
+                        +0x0    __xcheck
+                        +0x0    __xcheck
+                        +0x0    __xcheck
+                        +0x0    __xcheck
+                        +0x0    __xcheck
+                        +0x0    __xcheck
+                        +0x0    __xcheck
+                        +0x0    __xcheck
+                        +0x0    __xcheck
+                        +0x0    __xcheck
+                        +0x0    __xcheck
+                        +0x0    __xcheck
+                        +0x0    __xcheck
+                        +0x0    __xcheck
+                        +0x0    __xcheck
+                        +0x0    __xcheck
+                        +0x0    __xcheck
+                        +0x0    __xcheck
+                        +0x0    __xcheck
+                        +0x0    __xcheck
+                        +0x0    __xcheck
+                        +0x0    __xcheck
+                        +0x0    __xcheck
+                        +0x0    __xcheck
+                        +0x0    __xcheck
+                        +0x0    __xcheck
+                        +0x0    __xcheck
+                        +0x0    __xcheck
+                        +0x0    __xcheck
+                        +0x0    __xcheck
+                        +0x0    __xcheck
+                        +0x0    __xcheck
+                        +0x0    __xcheck
+                        +0x0    __xcheck
+                        +0x0    __xcheck
+                        +0x0    __xcheck
+                        +0x0    __xcheck
+                        +0x0    __xcheck
+                        +0x0    __xcheck
+                        +0x2    _lockInitialized@C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libct.a(atexit.o) 
+                        +0x6    _mwmutex_create
+__pragma_startup_function_1@C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libhlt.a(hl_lock.o) 
+                        +0x2    _mwhl_lock
+                        +0x6    _mwmutex_create
+_exit                   +0x4    _mwhl_lock
+                        +0xe    _mwmutex_lock
+                        +0x1c   _hl_message
+                        +0x24   _hl_delete
+                        +0x2c   _mwmutex_unlock
+                        +0x34   _exit_halt
+_hl_blockedPeek         +0x4    __HOSTLINK__
+_hl_delete              +0x2    __HOSTLINK__
+_hl_message             +0x2    __ac_mc_va
+_hl_message_ap@C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libhlt.a(hostcom.o) 
+                        +0x8    _hl_payload
+                        +0xa6   _hl_send
+                        +0xaa   _hl_blockedPeek
+_hl_packString          +0xc    _vdmemcpy
+_hl_packStringZ         +0x6    strlen
+_hl_payload             +0x2    __HOSTLINK__
+_hl_send                +0x4    __HOSTLINK__
+                        +0x2c   _hl_buffer_size
+                        +0x3a   _hl_send.first@C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libhlt.a(hl_bios.o) 
+_hl_unPackString        +0x16   _vsmemcpy
+_initcopy               +0x6    _einitdat
+                        +0x12   _initdat
+                        +0x42   _initdatCopy@C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libct.a(initcopy.o) 
+                        +0x52   _initcopy_memset
+_initdatCopy@C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libct.a(initcopy.o) 
+                        +0xa    _initcopy_memcpy
+_mwcall_main            +0x2    __argc
+                        +0x14   _stkchk
+                        +0x2c   __argv
+                        +0x38   strlen
+                        +0x48   _stkchk
+                        +0x50   strcpy
+                        +0x6a   __main_at
+                        +0x74   main
+                        +0x7a   exit
+_mwget_tls              +0xa    _mwget_tls.first@C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libmw.a(tlsctorg.o) 
+                        +0x12   _ftls
+                        +0x1a   executable_requires_.tls_section
+                        +0x22   __mw_run_tls_ctor
+_mwrtl_init             +0x4    _fini
+                        +0x8    atexit
+                        +0x10   _init
+_user_hostlink          +0x2    __ac_mc_va
+atexit                  +0x4    _lockInitialized@C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libct.a(atexit.o) 
+                        +0x12   _mwmutex_lock
+                        +0x22   _exitv
+                        +0x2a   doexit@C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libct.a(atexit.o) 
+                        +0x34   _atexit_list@C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libct.a(atexit.o) 
+                        +0x46   _mwmutex_unlock
+doexit@C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libct.a(atexit.o) 
+                        +0x4    _atexit_count@C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libct.a(atexit.o) 
+                        +0x10   _atexit_list@C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libct.a(atexit.o) 
+executable_requires_.tls_section
+                        +0x0    _mwhalt_cpu
+exit                    +0x4    exit.called@C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libct.a(exit.o) 
+                        +0xe    __cleanup
+                        +0x16   _exit
+priority_enq@C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libmw.a(mwdctor.o) 
+                        +0x8    cdtor@C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libmw.a(mwdctor.o) 
+strcpy                  +0xe    memchr
+                        +0x1a   memcpy
+
+GLOBAL SYMBOLS SUMMARY (sorted by name)
+_______________
+
+SYMBOL         BINDING SECTION   VALUE     MODULE
+
+.CC_I          global  (ABSOLUTE) 00000000  output\objs\Sbl\Det.o
+Det_ReportError
+               global  .text      007b00f0  output\objs\Sbl\Det.o
+Det_ReportRuntimeError
+               global  .text      007b00fc  output\objs\Sbl\Det.o
+Fee_JobEndNotification
+               global  .text      007b03ac  output\objs\basicSoftware\integration\mcal\src\integration\Fls_Integration.o
+Fee_JobErrorNotification
+               global  .text      007b03b0  output\objs\basicSoftware\integration\mcal\src\integration\Fls_Integration.o
+FlashHeader    global  .rodata    007b0000  output\objs\Sbl\SBL_Flash.o
+FlsSpiReference
+               global  .data      007b3f08  output\objs\basicSoftware\integration\mcal\src\gen\Fls_PBCfg.o
+Fls_BlankCheck global  .text      007b0530  output\objs\basicSoftware\integration\mcal\src\modules\Fls.o
+Fls_Compare    global  .text      007b04a0  output\objs\basicSoftware\integration\mcal\src\modules\Fls.o
+Fls_Config     global  .data      007b470c  output\objs\basicSoftware\integration\mcal\src\gen\Fls_PBCfg.o
+Fls_Erase      global  .text      007b03ec  output\objs\basicSoftware\integration\mcal\src\modules\Fls.o
+Fls_GetJobResult
+               global  .text      007b043c  output\objs\basicSoftware\integration\mcal\src\modules\Fls.o
+Fls_GetStatus  global  .text      007b0430  output\objs\basicSoftware\integration\mcal\src\modules\Fls.o
+Fls_GetVersionInfo
+               global  .text      007b04f8  output\objs\basicSoftware\integration\mcal\src\modules\Fls.o
+Fls_Hal_BlankCheck
+               global  .text      007b09e8  output\objs\basicSoftware\integration\mcal\src\modules\Fls_Alps.o
+Fls_Hal_Compare
+               global  .text      007b0914  output\objs\basicSoftware\integration\mcal\src\modules\Fls_Alps.o
+Fls_Hal_Erase  global  .text      007b0710  output\objs\basicSoftware\integration\mcal\src\modules\Fls_Alps.o
+Fls_Hal_GetJobResult
+               global  .text      007b087c  output\objs\basicSoftware\integration\mcal\src\modules\Fls_Alps.o
+Fls_Hal_GetStatus
+               global  .text      007b0870  output\objs\basicSoftware\integration\mcal\src\modules\Fls_Alps.o
+Fls_Hal_Init   global  .text      007b0670  output\objs\basicSoftware\integration\mcal\src\modules\Fls_Alps.o
+Fls_Hal_MainFunction_Handling
+               global  .text      007b1120  output\objs\basicSoftware\integration\mcal\src\modules\Fls_Alps.o
+Fls_Hal_Read   global  .text      007b0888  output\objs\basicSoftware\integration\mcal\src\modules\Fls_Alps.o
+Fls_Hal_SetMode
+               global  .text      007b09a0  output\objs\basicSoftware\integration\mcal\src\modules\Fls_Alps.o
+Fls_Hal_Write  global  .text      007b07d8  output\objs\basicSoftware\integration\mcal\src\modules\Fls_Alps.o
+Fls_Init       global  .text      007b03b4  output\objs\basicSoftware\integration\mcal\src\modules\Fls.o
+Fls_MainFunction
+               global  .text      007b055c  output\objs\basicSoftware\integration\mcal\src\modules\Fls.o
+Fls_Read       global  .text      007b0468  output\objs\basicSoftware\integration\mcal\src\modules\Fls.o
+Fls_Write      global  .text      007b03f8  output\objs\basicSoftware\integration\mcal\src\modules\Fls.o
+Fls_lclParamCheck
+               global  .text      007b1158  output\objs\basicSoftware\integration\mcal\src\modules\Fls_Alps.o
+McuCanClockSourceConfigData
+               global  .data      007b4740  output\objs\basicSoftware\integration\mcal\src\gen\Mcu_PBCfg.o
+McuClockSettingConfigData
+               global  .data      007b4754  output\objs\basicSoftware\integration\mcal\src\gen\Mcu_PBCfg.o
+McuConfigData  global  .data      007b4764  output\objs\basicSoftware\integration\mcal\src\gen\Mcu_PBCfg.o
+McuRamSectionConfigData
+               global  .data      007b4748  output\objs\basicSoftware\integration\mcal\src\gen\Mcu_PBCfg.o
+Mcu_DistributePllClock
+               global  .text      007b1254  output\objs\basicSoftware\integration\mcal\src\modules\Mcu.o
+Mcu_GetPeripheralClkFreq
+               global  .text      007b13a0  output\objs\basicSoftware\integration\mcal\src\modules\Mcu.o
+Mcu_GetPllStatus
+               global  .text      007b129c  output\objs\basicSoftware\integration\mcal\src\modules\Mcu.o
+Mcu_GetResetRawValue
+               global  .text      007b1304  output\objs\basicSoftware\integration\mcal\src\modules\Mcu.o
+Mcu_GetResetReason
+               global  .text      007b12d0  output\objs\basicSoftware\integration\mcal\src\modules\Mcu.o
+Mcu_GetVersionInfo
+               global  .text      007b1368  output\objs\basicSoftware\integration\mcal\src\modules\Mcu.o
+Mcu_Hal_DistributePllClock
+               global  .text      007b1598  output\objs\basicSoftware\integration\mcal\src\modules\Mcu_Alps.o
+Mcu_Hal_GetPeripheralClkFreq
+               global  .text      007b18d8  output\objs\basicSoftware\integration\mcal\src\modules\Mcu_Alps.o
+Mcu_Hal_GetPllStatus
+               global  .text      007b15c4  output\objs\basicSoftware\integration\mcal\src\modules\Mcu_Alps.o
+Mcu_Hal_GetResetRawValue
+               global  .text      007b15e8  output\objs\basicSoftware\integration\mcal\src\modules\Mcu_Alps.o
+Mcu_Hal_GetResetReason
+               global  .text      007b15dc  output\objs\basicSoftware\integration\mcal\src\modules\Mcu_Alps.o
+Mcu_Hal_Init   global  .text      007b13b4  output\objs\basicSoftware\integration\mcal\src\modules\Mcu_Alps.o
+Mcu_Hal_InitClock
+               global  .text      007b1574  output\objs\basicSoftware\integration\mcal\src\modules\Mcu_Alps.o
+Mcu_Hal_InitRamSection
+               global  .text      007b13c8  output\objs\basicSoftware\integration\mcal\src\modules\Mcu_Alps.o
+Mcu_Hal_PerformReset
+               global  .text      007b15f4  output\objs\basicSoftware\integration\mcal\src\modules\Mcu_Alps.o
+Mcu_Init       global  .text      007b1188  output\objs\basicSoftware\integration\mcal\src\modules\Mcu.o
+Mcu_InitClock  global  .text      007b1204  output\objs\basicSoftware\integration\mcal\src\modules\Mcu.o
+Mcu_InitRamSection
+               global  .text      007b11bc  output\objs\basicSoftware\integration\mcal\src\modules\Mcu.o
+Mcu_PerformReset
+               global  .text      007b1334  output\objs\basicSoftware\integration\mcal\src\modules\Mcu.o
+Mcu_SetMode    global  .text      007b1364  output\objs\basicSoftware\integration\mcal\src\modules\Mcu.o
+SBL_FlashDeinit
+               global  .text      007b0138  output\objs\Sbl\SBL_Flash.o
+SBL_FlashErase global  .text      007b0150  output\objs\Sbl\SBL_Flash.o
+SBL_FlashInit  global  .text      007b0114  output\objs\Sbl\SBL_Flash.o
+SBL_FlashRead  global  .text      007b0274  output\objs\Sbl\SBL_Flash.o
+SBL_FlashWrite global  .text      007b01f8  output\objs\Sbl\SBL_Flash.o
+Sector         global  .data      007b3e08  output\objs\basicSoftware\integration\mcal\src\gen\Fls_PBCfg.o
+SpiChannelConfigData
+               global  .data      007b4774  output\objs\basicSoftware\integration\mcal\src\gen\Spi_PBCfg.o
+SpiConfigData  global  .data      007b48b4  output\objs\basicSoftware\integration\mcal\src\gen\Spi_PBCfg.o
+SpiExternalConfigData
+               global  .data      007b3f08  output\objs\basicSoftware\integration\mcal\src\gen\Spi_PBCfg.o
+SpiJobConfigData
+               global  .data      007b3f9c  output\objs\basicSoftware\integration\mcal\src\gen\Spi_PBCfg.o
+SpiJob_0_Channel_link
+               global  .data      007b3f58  output\objs\basicSoftware\integration\mcal\src\gen\Spi_PBCfg.o
+SpiJob_1_Channel_link
+               global  .data      007b3f5a  output\objs\basicSoftware\integration\mcal\src\gen\Spi_PBCfg.o
+SpiJob_2_Channel_link
+               global  .data      007b3f5c  output\objs\basicSoftware\integration\mcal\src\gen\Spi_PBCfg.o
+SpiJob_3_Channel_link
+               global  .data      007b3f5e  output\objs\basicSoftware\integration\mcal\src\gen\Spi_PBCfg.o
+SpiJob_4_Channel_link
+               global  .data      007b3f60  output\objs\basicSoftware\integration\mcal\src\gen\Spi_PBCfg.o
+SpiJob_7_Channel_link
+               global  .data      007b3f62  output\objs\basicSoftware\integration\mcal\src\gen\Spi_PBCfg.o
+SpiJob_8_Channel_link
+               global  .data      007b3f64  output\objs\basicSoftware\integration\mcal\src\gen\Spi_PBCfg.o
+SpiJob_Read_Ads_Channel_link
+               global  .data      007b3f66  output\objs\basicSoftware\integration\mcal\src\gen\Spi_PBCfg.o
+SpiJob_erase_Channel_link
+               global  .data      007b3f68  output\objs\basicSoftware\integration\mcal\src\gen\Spi_PBCfg.o
+SpiJob_read_Channel_link
+               global  .data      007b3f6a  output\objs\basicSoftware\integration\mcal\src\gen\Spi_PBCfg.o
+SpiJob_write_Channel_link
+               global  .data      007b3f6c  output\objs\basicSoftware\integration\mcal\src\gen\Spi_PBCfg.o
+SpiSequenceConfigData
+               global  .data      007b4814  output\objs\basicSoftware\integration\mcal\src\gen\Spi_PBCfg.o
+SpiSequence_ErasePage_Job_link
+               global  .data      007b3f70  output\objs\basicSoftware\integration\mcal\src\gen\Spi_PBCfg.o
+SpiSequence_ReadAds_Job_link
+               global  .data      007b3f74  output\objs\basicSoftware\integration\mcal\src\gen\Spi_PBCfg.o
+SpiSequence_ReadCfg_Job_link
+               global  .data      007b3f78  output\objs\basicSoftware\integration\mcal\src\gen\Spi_PBCfg.o
+SpiSequence_ReadData_Job_link
+               global  .data      007b3f7c  output\objs\basicSoftware\integration\mcal\src\gen\Spi_PBCfg.o
+SpiSequence_ReadIDBuf_Job_link
+               global  .data      007b3f94  output\objs\basicSoftware\integration\mcal\src\gen\Spi_PBCfg.o
+SpiSequence_ReadStatusReg_Job_link
+               global  .data      007b3f80  output\objs\basicSoftware\integration\mcal\src\gen\Spi_PBCfg.o
+SpiSequence_WriteCfg_Job_link
+               global  .data      007b3f84  output\objs\basicSoftware\integration\mcal\src\gen\Spi_PBCfg.o
+SpiSequence_WriteData_Job_link
+               global  .data      007b3f88  output\objs\basicSoftware\integration\mcal\src\gen\Spi_PBCfg.o
+SpiSequence_WriteEnableCfg_Job_link
+               global  .data      007b3f8c  output\objs\basicSoftware\integration\mcal\src\gen\Spi_PBCfg.o
+SpiSequence_WriteEnableData_Job_link
+               global  .data      007b3f90  output\objs\basicSoftware\integration\mcal\src\gen\Spi_PBCfg.o
+Spi_AsyncTransmit
+               global  .text      007b1b68  output\objs\basicSoftware\integration\mcal\src\modules\Spi.o
+Spi_Cancel     global  .text      007b1c60  output\objs\basicSoftware\integration\mcal\src\modules\Spi.o
+Spi_DeInit     global  .text      007b19e4  output\objs\basicSoftware\integration\mcal\src\modules\Spi.o
+Spi_GetJobResult
+               global  .text      007b1bd0  output\objs\basicSoftware\integration\mcal\src\modules\Spi.o
+Spi_GetSequenceResult
+               global  .text      007b1c18  output\objs\basicSoftware\integration\mcal\src\modules\Spi.o
+Spi_GetStatus  global  .text      007b1bb0  output\objs\basicSoftware\integration\mcal\src\modules\Spi.o
+Spi_GetVersionInfo
+               global  .text      007b1cd8  output\objs\basicSoftware\integration\mcal\src\modules\Spi.o
+Spi_Hal_AsyncTransmit
+               global  .text      007b2da8  output\objs\basicSoftware\integration\mcal\src\modules\Spi_Alps.o
+Spi_Hal_Cancel global  .text      007b2efc  output\objs\basicSoftware\integration\mcal\src\modules\Spi_Alps.o
+Spi_Hal_DeInit global  .text      007b1e6c  output\objs\basicSoftware\integration\mcal\src\modules\Spi_Alps.o
+Spi_Hal_GetJobResult
+               global  .text      007b1f10  output\objs\basicSoftware\integration\mcal\src\modules\Spi_Alps.o
+Spi_Hal_GetSeqResult
+               global  .text      007b1f1c  output\objs\basicSoftware\integration\mcal\src\modules\Spi_Alps.o
+Spi_Hal_GetStatus
+               global  .text      007b1e48  output\objs\basicSoftware\integration\mcal\src\modules\Spi_Alps.o
+Spi_Hal_Init   global  .text      007b1d1c  output\objs\basicSoftware\integration\mcal\src\modules\Spi_Alps.o
+Spi_Hal_MainFunction_Handling
+               global  .text      007b2c80  output\objs\basicSoftware\integration\mcal\src\modules\Spi_Alps.o
+Spi_Hal_ReadIB global  .text      007b1fa4  output\objs\basicSoftware\integration\mcal\src\modules\Spi_Alps.o
+Spi_Hal_SetAsyncMode
+               global  .text      007b2f7c  output\objs\basicSoftware\integration\mcal\src\modules\Spi_Alps.o
+Spi_Hal_SetupEB
+               global  .text      007b1f3c  output\objs\basicSoftware\integration\mcal\src\modules\Spi_Alps.o
+Spi_Hal_SyncTransmit
+               global  .text      007b2984  output\objs\basicSoftware\integration\mcal\src\modules\Spi_Alps.o
+Spi_Hal_WriteIB
+               global  .text      007b202c  output\objs\basicSoftware\integration\mcal\src\modules\Spi_Alps.o
+Spi_Init       global  .text      007b19a0  output\objs\basicSoftware\integration\mcal\src\modules\Spi.o
+Spi_MainFunction_Handling
+               global  .text      007b1d10  output\objs\basicSoftware\integration\mcal\src\modules\Spi.o
+Spi_ReadIB     global  .text      007b1a70  output\objs\basicSoftware\integration\mcal\src\modules\Spi.o
+Spi_SetAsyncMode
+               global  .text      007b1ca0  output\objs\basicSoftware\integration\mcal\src\modules\Spi.o
+Spi_SetupEB    global  .text      007b1acc  output\objs\basicSoftware\integration\mcal\src\modules\Spi.o
+Spi_SyncTransmit
+               global  .text      007b1b20  output\objs\basicSoftware\integration\mcal\src\modules\Spi.o
+Spi_WriteIB    global  .text      007b1a24  output\objs\basicSoftware\integration\mcal\src\modules\Spi.o
+Spi_lclParamCheck
+               global  .text      007b1f2c  output\objs\basicSoftware\integration\mcal\src\modules\Spi_Alps.o
+_Exit          global  .text      007b342c  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libhlt.a(_exit.o)
+_SDA_BASE_     global  .data      007b3f00  <linker defined>
+__CTORS_END    global  .rodata    007b3d74  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libmw.a(init.o)
+__CTORS_INIT   global  .text      007b0032  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libmw.a(init.o)
+__DTORS_END    global  .data      007b48e0  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libmw.a(fini.o)
+__DTORS_INIT   global  .text      007b0022  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libmw.a(fini.o)
+__EH_FRAME_END global  .rodata    007b3d7c  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libmw.a(init.o)
+__HOSTLINK__   global  .data      007b4200  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libhlt.a(hl_data.o)
+__INITBSS__    global  .data      007b4188  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libct.a(arc_main.o)
+__PICTABLE__   weak    (UNDEFINED)          C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libct.a(arc_main.o)
+__SYSCORE_STACK_END
+               global  .stack     007ff000  .\BasicSoftware\integration\linker\ETAS_BIP_PT_ARCMW_SBL.ld
+__SYSCORE_STACK_START
+               global  .stack     00800000  .\BasicSoftware\integration\linker\ETAS_BIP_PT_ARCMW_SBL.ld
+__Xbarrel_shifter_bs_check3_to_any
+               global  .text      007b3bdc  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libct.a(xcheck.o)
+__Xbarrel_shifter_sa_check3_to_any
+               global  .text      007b3bf4  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libct.a(xcheck.o)
+__Xcode_density_check2_to_any
+               global  .text      007b3c0c  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libct.a(xcheck.o)
+__Xdiv_check1_to_any
+               global  .text      007b3c30  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libct.a(xcheck.o)
+__Xfpus_div_check1_to_any
+               global  .text      007b3c54  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libct.a(xcheck.o)
+__Xfpus_mac_check1_to_any
+               global  .text      007b3c70  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libct.a(xcheck.o)
+__Xmpy16_check2_to_any
+               global  .text      007b3c8c  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libct.a(xcheck.o)
+__Xmpy_check6_to_any
+               global  .text      007b3ca8  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libct.a(xcheck.o)
+__Xnorm_check3_to_any
+               global  .text      007b3cbc  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libct.a(xcheck.o)
+__Xswap_check3_to_any
+               global  .text      007b3cd0  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libct.a(xcheck.o)
+___errno       global  .text      007b38d4  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libmw.a(errnog.o)
+__ac_mc_va     global  .text      007b38b4  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libmw.a(ac_mc_va.o)
+__arc_main     global  .text      007b3018  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libct.a(arc_main.o)
+__argc         global  .text      007b3464  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libhlt.a(argv.o)
+__argv         global  .text      007b34a4  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libhlt.a(argv.o)
+__cleanup      global  .text      007b33e4  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libct.a(_cleanup.o)
+__crt_initstack
+               weak    (UNDEFINED)          C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/crt1.o
+__do_global_ctors_aux
+               global  .text      007b3a64  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libmw.a(init.o)
+__do_global_dtors_aux
+               global  .text      007b3a90  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libmw.a(fini.o)
+__executable_entry_point
+               global  .rodata    007b0000  <linker defined>
+__main_at      global  .data      007b418c  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libct.a(arc_main.o)
+__mw_cpp_exit  global  .text      007b3b94  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libmw.a(mwdctor.o)
+__mw_cpp_init  global  .text      007b3bc0  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libmw.a(mwdctor.o)
+__mw_register_ctor
+               global  .text      007b3af8  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libmw.a(mwdctor.o)
+__mw_register_dtor
+               global  .text      007b3b08  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libmw.a(mwdctor.o)
+__mw_run_tls_ctor
+               global  .text      007b3b1c  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libmw.a(mwdctor.o)
+__mw_run_tls_dtor
+               global  .text      007b3b58  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libmw.a(mwdctor.o)
+__safe_stack_runtime
+               weak    (UNDEFINED)          C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libct.a(arc_main.o)
+__start_kernel global  .text      007b3a60  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libmw.a(startk.o)
+__xcheck       global  .text      007b3bdc  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libct.a(xcheck.o)
+__xend         global  .text      007b3ce4  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libct.a(xcheck.o)
+_a5_strlen     global  .text      007b3270  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libct.a(_a5_strlen.o)
+_arc_reset_stage3
+               global  .text      007b02d4  output\objs\basicSoftware\integration\src\target\arc_startup.o
+_c_exit        global  .text      007b3408  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libct.a(_cleanup.o)
+_cexit         global  .text      007b3404  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libct.a(_cleanup.o)
+_e_bss         global  .bss       007b772c  .\BasicSoftware\integration\linker\ETAS_BIP_PT_ARCMW_SBL.ld
+_e_data        global  .tls       007b48ec  .\BasicSoftware\integration\linker\ETAS_BIP_PT_ARCMW_SBL.ld
+_e_heap        global  .heap      007ff000  .\BasicSoftware\integration\linker\ETAS_BIP_PT_ARCMW_SBL.ld
+_e_rodata      global  .rodata    007b3d80  .\BasicSoftware\integration\linker\ETAS_BIP_PT_ARCMW_SBL.ld
+_e_sdata       global  .data      007b3e00  .\BasicSoftware\integration\linker\ETAS_BIP_PT_ARCMW_SBL.ld
+_e_stack       global  .stack     00800000  .\BasicSoftware\integration\linker\ETAS_BIP_PT_ARCMW_SBL.ld
+_e_text        global  .text      007b3d6c  .\BasicSoftware\integration\linker\ETAS_BIP_PT_ARCMW_SBL.ld
+_ebss          weak    .bss       007b772c  output\dbg\D_ETAS_BIP_PT_ARCMW_SBL.elf
+_ectors        global  .rodata    007b3d78  .\BasicSoftware\integration\linker\ETAS_BIP_PT_ARCMW_SBL.ld
+_edtors        global  .rodata    007b3d7c  .\BasicSoftware\integration\linker\ETAS_BIP_PT_ARCMW_SBL.ld
+_eeh_frame     global  .rodata    007b3d80  .\BasicSoftware\integration\linker\ETAS_BIP_PT_ARCMW_SBL.ld
+_eheap         weak    .heap      007ff000  output\dbg\D_ETAS_BIP_PT_ARCMW_SBL.elf
+_einitdat      weak    (UNDEFINED)          C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libct.a(initcopy.o)
+_esbss         weak    (ABSOLUTE) 00000000  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/crt1.o
+_estack        global  .stack     00800000  output\dbg\D_ETAS_BIP_PT_ARCMW_SBL.elf
+_etlsctors     weak    (UNDEFINED)          C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libmw.a(mwdctor.o)
+_etlsdtors     weak    (UNDEFINED)          C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libmw.a(mwdctor.o)
+_exit          global  .text      007b342c  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libhlt.a(_exit.o)
+_exit_halt     global  .text      007b00e4  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/crt1.o
+_exitv         global  .data      007b41a0  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libct.a(_cleanup.o)
+_f_bss         global  .bss       007b48f0  .\BasicSoftware\integration\linker\ETAS_BIP_PT_ARCMW_SBL.ld
+_f_data        global  .data      007b3e00  .\BasicSoftware\integration\linker\ETAS_BIP_PT_ARCMW_SBL.ld
+_f_heap        global  .heap      007fe000  .\BasicSoftware\integration\linker\ETAS_BIP_PT_ARCMW_SBL.ld
+_f_rodata      global  .rodata    007b3d6c  .\BasicSoftware\integration\linker\ETAS_BIP_PT_ARCMW_SBL.ld
+_f_sdata       global  .data      007b3e00  .\BasicSoftware\integration\linker\ETAS_BIP_PT_ARCMW_SBL.ld
+_f_stack       global  .stack     007ff000  .\BasicSoftware\integration\linker\ETAS_BIP_PT_ARCMW_SBL.ld
+_f_text        global  .text      007b0020  .\BasicSoftware\integration\linker\ETAS_BIP_PT_ARCMW_SBL.ld
+_fbss          weak    .bss       007b48f0  output\dbg\D_ETAS_BIP_PT_ARCMW_SBL.elf
+_fclose_exit_p global  .data      007b41a4  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libct.a(_fclosfp.o)
+_fctors        global  .rodata    007b3d6c  .\BasicSoftware\integration\linker\ETAS_BIP_PT_ARCMW_SBL.ld
+_fdtors        global  .rodata    007b3d78  .\BasicSoftware\integration\linker\ETAS_BIP_PT_ARCMW_SBL.ld
+_feh_frame     global  .rodata    007b3d7c  .\BasicSoftware\integration\linker\ETAS_BIP_PT_ARCMW_SBL.ld
+_fheap         weak    .heap      007fe000  output\dbg\D_ETAS_BIP_PT_ARCMW_SBL.elf
+_fini          global  .text      007b0020  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/crti.o
+_fsbss         weak    (ABSOLUTE) 00000000  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/crt1.o
+_fstack        weak    .stack     007ff000  output\dbg\D_ETAS_BIP_PT_ARCMW_SBL.elf
+_ftls          weak    .tls       007b48e8  output\dbg\D_ETAS_BIP_PT_ARCMW_SBL.elf
+_ftlsctors     weak    (UNDEFINED)          C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libmw.a(mwdctor.o)
+_ftlsdtors     weak    (UNDEFINED)          C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libmw.a(mwdctor.o)
+_hl_blockedPeek
+               global  .text      007b3578  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libhlt.a(hl_bios.o)
+_hl_buffer_size
+               global  .text      007b35ac  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libhlt.a(hl_data.o)
+_hl_delete     global  .text      007b35a0  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libhlt.a(hl_bios.o)
+_hl_message    global  .text      007b384c  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libhlt.a(hostcom.o)
+_hl_packChar   global  .text      007b35d4  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libhlt.a(hostcom.o)
+_hl_packInt    global  .text      007b3644  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libhlt.a(hostcom.o)
+_hl_packInt64  global  .text      007b3674  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libhlt.a(hostcom.o)
+_hl_packShort  global  .text      007b3610  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libhlt.a(hostcom.o)
+_hl_packString global  .text      007b36b4  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libhlt.a(hostcom.o)
+_hl_packStringZ
+               global  .text      007b3718  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libhlt.a(hostcom.o)
+_hl_payload    global  .text      007b350c  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libhlt.a(hl_bios.o)
+_hl_send       global  .text      007b3514  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libhlt.a(hl_bios.o)
+_hl_unPackChar global  .text      007b35f0  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libhlt.a(hostcom.o)
+_hl_unPackInt  global  .text      007b3654  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libhlt.a(hostcom.o)
+_hl_unPackInt64
+               global  .text      007b3688  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libhlt.a(hostcom.o)
+_hl_unPackShort
+               global  .text      007b3624  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libhlt.a(hostcom.o)
+_hl_unPackString
+               global  .text      007b36d0  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libhlt.a(hostcom.o)
+_hl_unPackStringLen
+               global  .text      007b3704  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libhlt.a(hostcom.o)
+_hl_unPackStringZ
+               global  .text      007b3730  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libhlt.a(hostcom.o)
+_init          global  .text      007b0030  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/crti.o
+_init_ad       weak    (UNDEFINED)          C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/crt1.o
+_init_ei       weak    (UNDEFINED)          C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/crt1.o
+_init_jli      weak    (UNDEFINED)          C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/crt1.o
+_init_ldi      weak    (UNDEFINED)          C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/crt1.o
+_init_sjli     weak    (UNDEFINED)          C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/crt1.o
+_initcopy      global  .text      007b3124  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libct.a(initcopy.o)
+_initcopy_exit global  .text      007b3120  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libct.a(initcopy.o)
+_initcopy_memcpy
+               weak    .text      007b31c0  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libct.a(memcpy.o)
+_initcopy_memset
+               weak    .text      007b3300  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libct.a(f_memset.o)
+_initdat       weak    (UNDEFINED)          C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libct.a(initcopy.o)
+_invalidate_dcache
+               global  .text      007b33b8  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libct.a(invcache.o)
+_invalidate_icache
+               global  .text      007b338c  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libct.a(invcache.o)
+_load_addr_data
+               global  (ABSOLUTE) 007b3e00  .\BasicSoftware\integration\linker\ETAS_BIP_PT_ARCMW_SBL.ld
+_load_addr_rodata
+               global  (ABSOLUTE) 007b3d6c  .\BasicSoftware\integration\linker\ETAS_BIP_PT_ARCMW_SBL.ld
+_load_addr_text
+               global  (ABSOLUTE) 007b0020  .\BasicSoftware\integration\linker\ETAS_BIP_PT_ARCMW_SBL.ld
+_mwcall_main   global  .text      007b2f98  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libct.a(arc_main.o)
+_mwget_tls     weak    .text      007b3ce8  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libmw.a(tlsctorg.o)
+_mwhalt_cpu    global  .text      007b38ec  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libmw.a(mwhalt.o)
+_mwhl_lock     global  .data      007b4700  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libhlt.a(hl_lock.o)
+_mwmutex_create
+               weak    .text      007b3d18  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libmw.a(mutexg.o)
+_mwmutex_delete
+               weak    .text      007b3d1c  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libmw.a(mutexg.o)
+_mwmutex_lock  weak    .text      007b3d20  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libmw.a(mutexg.o)
+_mwmutex_unlock
+               weak    .text      007b3d24  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libmw.a(mutexg.o)
+_mwrtl_init    global  .text      007b2f80  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libct.a(arc_main.o)
+_start         global  .text      007b0040  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/crt1.o
+_stkchk        weak    .text      007b3890  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libmw.a(ac_chkstk.o)
+_timer_default_reset
+               weak    .text      007b3d28  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libct.a(arc_main.o)
+_user_hostlink global  .text      007b3868  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libhlt.a(hostcom.o)
+_vdmemcpy      global  .text      007b3900  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libmw.a(_vdmemcpy.o)
+_vsmemcpy      global  .text      007b39b0  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libmw.a(_vsmemcpy.o)
+atexit         global  .text      007b3094  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libct.a(atexit.o)
+cnt            global  .data      007b3e04  output\objs\Sbl\Det.o
+errId          global  .data      007b3e00  output\objs\Sbl\Det.o
+errno          global  .tls       007b48e8  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libmw.a(errnog.o)
+executable_requires_.tls_section
+               global  .text      007b38e4  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libmw.a(tlsctorg.o)
+exit           global  .text      007b3104  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libct.a(exit.o)
+main           global  .text      007b02cc  output\objs\Sbl\SBL_Flash.o
+memchr         global  .text      007b340c  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libct.a(memchr.o)
+memcpy         global  .text      007b31c0  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libct.a(memcpy.o)
+memset         global  .text      007b3300  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libct.a(f_memset.o)
+strcpy         global  .text      007b3368  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libct.a(strcpy.o)
+strlen         global  .text      007b3270  C:/compiler/ARC/MetaWare/arc/lib/buildlib/AlpsRhineEM6/libct.a(_a5_strlen.o)
+
+
+START ADDRESS:	007B0000

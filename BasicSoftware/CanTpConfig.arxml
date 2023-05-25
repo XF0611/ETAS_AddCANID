@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00047.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE>
+      <SHORT-NAME>TpConfigs</SHORT-NAME>
+      <ELEMENTS>
+        <CAN-TP-CONFIG>
+          <SHORT-NAME>CanTpConfig</SHORT-NAME>
+          <COMMUNICATION-CLUSTER-REF DEST="CAN-CLUSTER">/SysDesc/Pkg_Cluster/Can_Network_ETAS</COMMUNICATION-CLUSTER-REF>
+          <TP-ADDRESSS>
+            <CAN-TP-ADDRESS>
+              <SHORT-NAME>TA_0x0000</SHORT-NAME>
+              <TP-ADDRESS>0</TP-ADDRESS>
+            </CAN-TP-ADDRESS>
+            <CAN-TP-ADDRESS>
+              <SHORT-NAME>TA_0x0001</SHORT-NAME>
+              <TP-ADDRESS>1</TP-ADDRESS>
+            </CAN-TP-ADDRESS>
+            <CAN-TP-ADDRESS>
+              <SHORT-NAME>TA_0x00E0</SHORT-NAME>
+              <TP-ADDRESS>224</TP-ADDRESS>
+            </CAN-TP-ADDRESS>
+          </TP-ADDRESSS>
+          <TP-CHANNELS>
+            <CAN-TP-CHANNEL>
+              <SHORT-NAME>CanTpChannel</SHORT-NAME>
+              <CHANNEL-ID>0</CHANNEL-ID>
+              <CHANNEL-MODE>FULL-DUPLEX-MODE</CHANNEL-MODE>
+            </CAN-TP-CHANNEL>
+          </TP-CHANNELS>
+          <TP-CONNECTIONS>
+            <CAN-TP-CONNECTION>
+              <IDENT>
+                <SHORT-NAME>UdsRxFnc_oTN_0x00E0_Tester</SHORT-NAME>
+              </IDENT>
+              <ADDRESSING-FORMAT>STANDARD</ADDRESSING-FORMAT>
+              <CAN-TP-CHANNEL-REF DEST="CAN-TP-CHANNEL">/TpConfigs/CanTpConfig/CanTpChannel</CAN-TP-CHANNEL-REF>
+              <DATA-PDU-REF DEST="N-PDU">/SysDesc/Pkg_Pdus/NPdu_UdsRxFnc</DATA-PDU-REF>
+              <MAX-BLOCK-SIZE>8</MAX-BLOCK-SIZE>
+              <MULTICAST-REF DEST="CAN-TP-ADDRESS">/TpConfigs/CanTpConfig/TA_0x0000</MULTICAST-REF>
+              <PADDING-ACTIVATION>true</PADDING-ACTIVATION>
+              <RECEIVER-REFS>
+                <RECEIVER-REF DEST="CAN-TP-NODE">/TpConfigs/CanTpConfig/TN_MyECU</RECEIVER-REF>
+              </RECEIVER-REFS>
+              <TA-TYPE>FUNCTIONAL</TA-TYPE>
+              <TIMEOUT-BR>0.0</TIMEOUT-BR>
+              <TIMEOUT-CR>1.0</TIMEOUT-CR>
+              <TP-SDU-REF DEST="DCM-I-PDU">/SysDesc/Pkg_Pdus/UdsRxFnc</TP-SDU-REF>
+              <TRANSMITTER-REF DEST="CAN-TP-NODE">/TpConfigs/CanTpConfig/TN_0x00E0_Tester</TRANSMITTER-REF>
+            </CAN-TP-CONNECTION>
+            <CAN-TP-CONNECTION>
+              <IDENT>
+                <SHORT-NAME>UdsRxPhy_MyECU_oTN_0x0001_MyECU</SHORT-NAME>
+              </IDENT>
+              <ADDRESSING-FORMAT>STANDARD</ADDRESSING-FORMAT>
+              <CAN-TP-CHANNEL-REF DEST="CAN-TP-CHANNEL">/TpConfigs/CanTpConfig/CanTpChannel</CAN-TP-CHANNEL-REF>
+              <DATA-PDU-REF DEST="N-PDU">/SysDesc/Pkg_Pdus/NPdu_UdsRxPhy</DATA-PDU-REF>
+              <FLOW-CONTROL-PDU-REF DEST="N-PDU">/SysDesc/Pkg_Pdus/NPdu_UdsTxPhy</FLOW-CONTROL-PDU-REF>
+              <MAX-BLOCK-SIZE>8</MAX-BLOCK-SIZE>
+              <PADDING-ACTIVATION>true</PADDING-ACTIVATION>
+              <RECEIVER-REFS>
+                <RECEIVER-REF DEST="CAN-TP-NODE">/TpConfigs/CanTpConfig/TN_0x0001_MyECU</RECEIVER-REF>
+              </RECEIVER-REFS>
+              <TA-TYPE>PHYSICAL</TA-TYPE>
+              <TIMEOUT-BR>0.0</TIMEOUT-BR>
+              <TIMEOUT-CR>1.0</TIMEOUT-CR>
+              <TP-SDU-REF DEST="DCM-I-PDU">/SysDesc/Pkg_Pdus/UdsRxPhy</TP-SDU-REF>
+              <TRANSMITTER-REF DEST="CAN-TP-NODE">/TpConfigs/CanTpConfig/TN_0x00E0_Tester</TRANSMITTER-REF>
+            </CAN-TP-CONNECTION>
+            <CAN-TP-CONNECTION>
+              <IDENT>
+                <SHORT-NAME>UdsTxPhy_0x748_MyECU_oTN_0x0001_MyECU</SHORT-NAME>
+              </IDENT>
+              <ADDRESSING-FORMAT>STANDARD</ADDRESSING-FORMAT>
+              <CAN-TP-CHANNEL-REF DEST="CAN-TP-CHANNEL">/TpConfigs/CanTpConfig/CanTpChannel</CAN-TP-CHANNEL-REF>
+              <CANCELLATION>true</CANCELLATION>
+              <DATA-PDU-REF DEST="N-PDU">/SysDesc/Pkg_Pdus/NPdu_UdsTxPhy</DATA-PDU-REF>
+              <FLOW-CONTROL-PDU-REF DEST="N-PDU">/SysDesc/Pkg_Pdus/NPdu_UdsRxPhy</FLOW-CONTROL-PDU-REF>
+              <PADDING-ACTIVATION>true</PADDING-ACTIVATION>
+              <RECEIVER-REFS>
+                <RECEIVER-REF DEST="CAN-TP-NODE">/TpConfigs/CanTpConfig/TN_0x00E0_Tester</RECEIVER-REF>
+              </RECEIVER-REFS>
+              <TA-TYPE>PHYSICAL</TA-TYPE>
+              <TIMEOUT-BS>1.0</TIMEOUT-BS>
+              <TIMEOUT-CS>0.002</TIMEOUT-CS>
+              <TP-SDU-REF DEST="DCM-I-PDU">/SysDesc/Pkg_Pdus/UdsTxPhy</TP-SDU-REF>
+              <TRANSMIT-CANCELLATION>true</TRANSMIT-CANCELLATION>
+              <TRANSMITTER-REF DEST="CAN-TP-NODE">/TpConfigs/CanTpConfig/TN_0x0001_MyECU</TRANSMITTER-REF>
+            </CAN-TP-CONNECTION>
+          </TP-CONNECTIONS>
+          <TP-ECUS>
+            <CAN-TP-ECU>
+              <CYCLE-TIME-MAIN-FUNCTION>0.001</CYCLE-TIME-MAIN-FUNCTION>
+              <ECU-INSTANCE-REF DEST="ECU-INSTANCE">/SysDesc/Pkg_Ecu/ETAS</ECU-INSTANCE-REF>
+            </CAN-TP-ECU>
+          </TP-ECUS>
+          <TP-NODES>
+            <CAN-TP-NODE>
+              <SHORT-NAME>TN_0x0001_MyECU</SHORT-NAME>
+              <CONNECTOR-REF DEST="CAN-COMMUNICATION-CONNECTOR">/SysDesc/Pkg_Ecu/ETAS/Conn_ETAS_CAN_ETAS</CONNECTOR-REF>
+              <ST-MIN>0.002</ST-MIN>
+              <TIMEOUT-AR>1.0</TIMEOUT-AR>
+              <TIMEOUT-AS>1.0</TIMEOUT-AS>
+              <TP-ADDRESS-REF DEST="CAN-TP-ADDRESS">/TpConfigs/CanTpConfig/TA_0x0001</TP-ADDRESS-REF>
+            </CAN-TP-NODE>
+            <CAN-TP-NODE>
+              <SHORT-NAME>TN_0x00E0_Tester</SHORT-NAME>
+              <ST-MIN>0.002</ST-MIN>
+              <TP-ADDRESS-REF DEST="CAN-TP-ADDRESS">/TpConfigs/CanTpConfig/TA_0x00E0</TP-ADDRESS-REF>
+            </CAN-TP-NODE>
+            <CAN-TP-NODE>
+              <SHORT-NAME>TN_MyECU</SHORT-NAME>
+              <CONNECTOR-REF DEST="CAN-COMMUNICATION-CONNECTOR">/SysDesc/Pkg_Ecu/ETAS/Conn_ETAS_CAN_ETAS</CONNECTOR-REF>
+              <ST-MIN>0.002</ST-MIN>
+              <TIMEOUT-AR>1.0</TIMEOUT-AR>
+            </CAN-TP-NODE>
+          </TP-NODES>
+        </CAN-TP-CONFIG>
+      </ELEMENTS>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>
+

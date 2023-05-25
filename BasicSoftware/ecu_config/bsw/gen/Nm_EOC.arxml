@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://autosar.org/schema/r4.0"
+    xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-2-2.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE>
+      <SHORT-NAME>AUTOSAR_Nm</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE>
+          <SHORT-NAME>TimingExtensions</SHORT-NAME>
+          <ELEMENTS>
+            <BSW-MODULE-TIMING>
+              <SHORT-NAME>Nm_BswModuleTiming</SHORT-NAME>
+              <TIMING-REQUIREMENTS>
+                <EXECUTION-ORDER-CONSTRAINT>
+                  <SHORT-NAME>EOC_EcuM_Init</SHORT-NAME>
+                  <EXECUTION-ORDER-CONSTRAINT-TYPE>ORDINARY-EOC</EXECUTION-ORDER-CONSTRAINT-TYPE>
+                  <IS-EVENT>false</IS-EVENT>
+                  <ORDERED-ELEMENTS>
+                    <!-- Successor view -->
+                    <EOC-EXECUTABLE-ENTITY-REF>
+                      <SHORT-NAME>EOCEERef_CE_Nm_Init</SHORT-NAME>
+                      <BSW-MODULE-INSTANCE-REF DEST="BSW-IMPLEMENTATION">/AUTOSAR_Nm/BswImplementations/Nm</BSW-MODULE-INSTANCE-REF>
+                      <EXECUTABLE-REF DEST="BSW-CALLED-ENTITY">/AUTOSAR_Nm/BswModuleDescriptions/Nm/BswInternalBehavior/CE_Init</EXECUTABLE-REF>
+                      <SUCCESSOR-REFS>
+                        <SUCCESSOR-REF DEST="EOC-EXECUTABLE-ENTITY-REF">/AUTOSAR_Nm/TimingExtensions/Nm_BswModuleTiming/EOC_EcuM_Init/EOCEERef_CE_ComM_Init</SUCCESSOR-REF>
+                      </SUCCESSOR-REFS>
+                    </EOC-EXECUTABLE-ENTITY-REF>
+                    <EOC-EXECUTABLE-ENTITY-REF>
+                      <SHORT-NAME>EOCEERef_CE_ComM_Init</SHORT-NAME>
+                      <BSW-MODULE-INSTANCE-REF DEST="BSW-IMPLEMENTATION">/AUTOSAR_ComM/BswImplementations/ComM</BSW-MODULE-INSTANCE-REF>
+                      <EXECUTABLE-REF DEST="BSW-CALLED-ENTITY">/AUTOSAR_ComM/BswModuleDescriptions/ComM/BswInternalBehavior/CE_Init</EXECUTABLE-REF>
+                    </EOC-EXECUTABLE-ENTITY-REF>
+                  </ORDERED-ELEMENTS>
+                  <PERMIT-MULTIPLE-REFERENCES-TO-EE>false</PERMIT-MULTIPLE-REFERENCES-TO-EE>
+                </EXECUTION-ORDER-CONSTRAINT>
+              </TIMING-REQUIREMENTS>
+              <BEHAVIOR-REF DEST="BSW-INTERNAL-BEHAVIOR">/AUTOSAR_Nm/BswModuleDescriptions/Nm/BswInternalBehavior</BEHAVIOR-REF>
+            </BSW-MODULE-TIMING>
+          </ELEMENTS>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

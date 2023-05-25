@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 autosar_4-2-2.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE>
+      <SHORT-NAME>AUTOSAR_Xcp</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE>
+          <SHORT-NAME>TimingExtensions</SHORT-NAME>
+          <ELEMENTS>
+           <BSW-MODULE-TIMING>
+               <SHORT-NAME>Xcp_BswModuleTiming</SHORT-NAME>
+               <TIMING-REQUIREMENTS>
+				<EXECUTION-ORDER-CONSTRAINT>
+				  <SHORT-NAME>EOC_EcuM_Init</SHORT-NAME>
+				  <EXECUTION-ORDER-CONSTRAINT-TYPE>ORDINARY-EOC</EXECUTION-ORDER-CONSTRAINT-TYPE>
+				  <IS-EVENT>false</IS-EVENT>
+				  <ORDERED-ELEMENTS>
+                    <EOC-EXECUTABLE-ENTITY-REF>
+                      <SHORT-NAME>EOCEERef_CE_CanIf_Init</SHORT-NAME>
+                      <BSW-MODULE-INSTANCE-REF DEST="BSW-IMPLEMENTATION">/AUTOSAR_CanIf/BswImplementations/CanIf</BSW-MODULE-INSTANCE-REF>
+                      <EXECUTABLE-REF DEST="BSW-CALLED-ENTITY">/AUTOSAR_CanIf/BswModuleDescriptions/CanIf/BswInternalBehavior/CE_Init</EXECUTABLE-REF>
+                      <SUCCESSOR-REFS>
+                        <SUCCESSOR-REF DEST="EOC-EXECUTABLE-ENTITY-REF">/AUTOSAR_Xcp/TimingExtensions/Xcp_BswModuleTiming/EOC_EcuM_Init/EOCEERef_CE_Xcp_Init</SUCCESSOR-REF>
+                       </SUCCESSOR-REFS>
+                    </EOC-EXECUTABLE-ENTITY-REF> 
+                    <!-- Predecessor view --> 				    
+				    <EOC-EXECUTABLE-ENTITY-REF>
+				      <SHORT-NAME>EOCEERef_CE_Xcp_Init</SHORT-NAME>
+				      <BSW-MODULE-INSTANCE-REF DEST="BSW-IMPLEMENTATION">/AUTOSAR_Xcp/BswImplementations/Xcp</BSW-MODULE-INSTANCE-REF>
+				      <EXECUTABLE-REF DEST="BSW-CALLED-ENTITY">/AUTOSAR_Xcp/BswModuleDescriptions/Xcp/BswInternalBehavior/CE_Init</EXECUTABLE-REF>
+				    </EOC-EXECUTABLE-ENTITY-REF>         
+				  </ORDERED-ELEMENTS>
+				  <PERMIT-MULTIPLE-REFERENCES-TO-EE>false</PERMIT-MULTIPLE-REFERENCES-TO-EE>
+				</EXECUTION-ORDER-CONSTRAINT>
+               </TIMING-REQUIREMENTS>
+               <BEHAVIOR-REF DEST="BSW-INTERNAL-BEHAVIOR">/AUTOSAR_Xcp/BswModuleDescriptions/Xcp/BswInternalBehavior</BEHAVIOR-REF>
+           </BSW-MODULE-TIMING>
+          </ELEMENTS>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>               
+</AUTOSAR>

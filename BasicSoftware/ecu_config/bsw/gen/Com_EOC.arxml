@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://autosar.org/schema/r4.0"
+    xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-2-2.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE>
+      <SHORT-NAME>AUTOSAR_Com</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE>
+          <SHORT-NAME>TimingExtensions</SHORT-NAME>
+          <ELEMENTS>
+            <BSW-MODULE-TIMING>
+              <SHORT-NAME>Com_BswModuleTiming</SHORT-NAME>
+              <TIMING-REQUIREMENTS>
+                <EXECUTION-ORDER-CONSTRAINT>
+                  <SHORT-NAME>EOC_EcuM_Init</SHORT-NAME>
+                  <EXECUTION-ORDER-CONSTRAINT-TYPE>ORDINARY-EOC</EXECUTION-ORDER-CONSTRAINT-TYPE>
+                  <IS-EVENT>false</IS-EVENT>
+                  <ORDERED-ELEMENTS>
+                    <EOC-EXECUTABLE-ENTITY-REF>
+                      <SHORT-NAME>EOCEERef_CE_Com_Init</SHORT-NAME>
+                      <BSW-MODULE-INSTANCE-REF DEST="BSW-IMPLEMENTATION">/AUTOSAR_Com/BswImplementations/Com</BSW-MODULE-INSTANCE-REF>
+                      <EXECUTABLE-REF DEST="BSW-CALLED-ENTITY">/AUTOSAR_Com/BswModuleDescriptions/Com/BswInternalBehavior/CE_Init</EXECUTABLE-REF>
+                    </EOC-EXECUTABLE-ENTITY-REF>
+                  </ORDERED-ELEMENTS>
+                  <PERMIT-MULTIPLE-REFERENCES-TO-EE>false</PERMIT-MULTIPLE-REFERENCES-TO-EE>
+                </EXECUTION-ORDER-CONSTRAINT>
+                <EXECUTION-ORDER-CONSTRAINT>
+                  <SHORT-NAME>EOC_T_xxms</SHORT-NAME>
+                  <EXECUTION-ORDER-CONSTRAINT-TYPE>ORDINARY-EOC</EXECUTION-ORDER-CONSTRAINT-TYPE>
+                  <IS-EVENT>true</IS-EVENT>
+                  <ORDERED-ELEMENTS>
+                    <EOC-EVENT-REF>
+                      <SHORT-NAME>EOCEventRef_Com_0</SHORT-NAME>
+                      <BSW-MODULE-INSTANCE-REF DEST="BSW-IMPLEMENTATION">/AUTOSAR_Com/BswImplementations/Com</BSW-MODULE-INSTANCE-REF>
+                      <EVENT-REF DEST="BSW-TIMING-EVENT">/AUTOSAR_Com/BswModuleDescriptions/Com/BswInternalBehavior/EV_SE_MainFunctionRx</EVENT-REF>
+                      <SUCCESSOR-REFS>
+                        <SUCCESSOR-REF DEST="EOC-EVENT-REF">/AUTOSAR_Com/TimingExtensions/Com_BswModuleTiming/EOC_T_xxms/EOCEventRef_Com_1</SUCCESSOR-REF>
+                      </SUCCESSOR-REFS>
+                    </EOC-EVENT-REF>
+                    <EOC-EVENT-REF>
+                      <SHORT-NAME>EOCEventRef_Com_1</SHORT-NAME>
+                      <BSW-MODULE-INSTANCE-REF DEST="BSW-IMPLEMENTATION">/AUTOSAR_Com/BswImplementations/Com</BSW-MODULE-INSTANCE-REF>
+                      <EVENT-REF DEST="BSW-TIMING-EVENT">/AUTOSAR_Com/BswModuleDescriptions/Com/BswInternalBehavior/EV_SE_MainFunctionTx</EVENT-REF>
+                    </EOC-EVENT-REF>
+                  </ORDERED-ELEMENTS>
+                </EXECUTION-ORDER-CONSTRAINT>
+              </TIMING-REQUIREMENTS>
+              <BEHAVIOR-REF DEST="BSW-INTERNAL-BEHAVIOR">/AUTOSAR_Com/BswModuleDescriptions/Com/BswInternalBehavior</BEHAVIOR-REF>
+            </BSW-MODULE-TIMING>
+          </ELEMENTS>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

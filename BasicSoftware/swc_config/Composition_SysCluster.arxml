@@ -1,0 +1,1886 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00047.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE>
+      <SHORT-NAME>Composition</SHORT-NAME>
+      <ELEMENTS>
+        <COMPOSITION-SW-COMPONENT-TYPE>
+          <SHORT-NAME>Composition_SysCluster</SHORT-NAME>
+          <COMPONENTS>
+            <SW-COMPONENT-PROTOTYPE UUID="5d3925f3-5dae-4a38-a0a0-e4046fcb1874">
+              <SHORT-NAME>CPT_BswM</SHORT-NAME>
+              <TYPE-TREF DEST="SERVICE-SW-COMPONENT-TYPE">/AUTOSAR_BswM/SwComponentTypes/BswM</TYPE-TREF>
+            </SW-COMPONENT-PROTOTYPE>
+            <SW-COMPONENT-PROTOTYPE UUID="0f4b6315-143c-4144-9873-d15a974050b6">
+              <SHORT-NAME>CPT_EcuM</SHORT-NAME>
+              <TYPE-TREF DEST="SERVICE-SW-COMPONENT-TYPE">/AUTOSAR_EcuM/SwComponentTypes/EcuM</TYPE-TREF>
+            </SW-COMPONENT-PROTOTYPE>
+            <SW-COMPONENT-PROTOTYPE UUID="cae88204-f863-44c5-9ac7-55f54f544e12">
+              <SHORT-NAME>CPT_ComM</SHORT-NAME>
+              <TYPE-TREF DEST="SERVICE-SW-COMPONENT-TYPE">/AUTOSAR_ComM/SwComponentTypes/ComM</TYPE-TREF>
+            </SW-COMPONENT-PROTOTYPE>
+            <SW-COMPONENT-PROTOTYPE UUID="f2e49d2d-91af-4f27-a1d0-1e9d1437e891">
+              <SHORT-NAME>CPT_Det</SHORT-NAME>
+              <TYPE-TREF DEST="SERVICE-SW-COMPONENT-TYPE">/AUTOSAR_Det/SwComponentTypes/Det</TYPE-TREF>
+            </SW-COMPONENT-PROTOTYPE>
+            <SW-COMPONENT-PROTOTYPE UUID="d2ae3375-63c7-4b62-8e4f-e5ff1111c538">
+              <SHORT-NAME>CPT_NmUT</SHORT-NAME>
+              <TYPE-TREF DEST="APPLICATION-SW-COMPONENT-TYPE">/ETAS_BIP/NmUT</TYPE-TREF>
+            </SW-COMPONENT-PROTOTYPE>
+            <SW-COMPONENT-PROTOTYPE UUID="a230ac04-0c28-41eb-967b-494133090bd5">
+              <SHORT-NAME>CPT_FiM</SHORT-NAME>
+              <TYPE-TREF DEST="SERVICE-SW-COMPONENT-TYPE">/AUTOSAR_FiM/SwComponentTypes/FiM</TYPE-TREF>
+            </SW-COMPONENT-PROTOTYPE>
+            <SW-COMPONENT-PROTOTYPE UUID="ed41a864-edd6-4920-aed0-4d3df7c1035d">
+              <SHORT-NAME>CPT_ExeMgrUT</SHORT-NAME>
+              <TYPE-TREF DEST="APPLICATION-SW-COMPONENT-TYPE">/ServiceLayer/ExeMgrUT</TYPE-TREF>
+            </SW-COMPONENT-PROTOTYPE>
+            <SW-COMPONENT-PROTOTYPE UUID="497dd21b-69da-4a7a-a18b-5a5c74f41498">
+              <SHORT-NAME>CPT_NvMUT</SHORT-NAME>
+              <TYPE-TREF DEST="APPLICATION-SW-COMPONENT-TYPE">/ETAS_BIP/NvMUT</TYPE-TREF>
+            </SW-COMPONENT-PROTOTYPE>
+            <SW-COMPONENT-PROTOTYPE UUID="3b835e7b-e311-4e2b-bf0b-4df1a25e7070">
+              <SHORT-NAME>CPT_NvBlock</SHORT-NAME>
+              <TYPE-TREF DEST="NV-BLOCK-SW-COMPONENT-TYPE">/ETAS_BIP/NvBlock</TYPE-TREF>
+            </SW-COMPONENT-PROTOTYPE>
+            <SW-COMPONENT-PROTOTYPE UUID="3072f3e6-2db6-45ad-8257-f4d6799b1f20">
+              <SHORT-NAME>CPT_NvM</SHORT-NAME>
+              <TYPE-TREF DEST="SERVICE-SW-COMPONENT-TYPE">/AUTOSAR_NvM/SwComponentTypes/NvM</TYPE-TREF>
+            </SW-COMPONENT-PROTOTYPE>
+            <SW-COMPONENT-PROTOTYPE UUID="f8b0a5c4-821e-4587-aa09-add0bc420ba5">
+              <SHORT-NAME>CPT_WdgM</SHORT-NAME>
+              <TYPE-TREF DEST="SERVICE-SW-COMPONENT-TYPE">/AUTOSAR_WdgM/WdgM</TYPE-TREF>
+            </SW-COMPONENT-PROTOTYPE>
+            <SW-COMPONENT-PROTOTYPE UUID="cf0d2d7e-3e13-4296-8e9f-c484d4d6f58e">
+              <SHORT-NAME>CPT_WdgMUT</SHORT-NAME>
+              <TYPE-TREF DEST="APPLICATION-SW-COMPONENT-TYPE">/ETAS_BIP/WdgMUT</TYPE-TREF>
+            </SW-COMPONENT-PROTOTYPE>
+            <SW-COMPONENT-PROTOTYPE UUID="d040a1fd-d748-4864-ad16-48c0b6cdb46d">
+              <SHORT-NAME>CPT_rba_DiagLib</SHORT-NAME>
+              <TYPE-TREF DEST="SERVICE-SW-COMPONENT-TYPE">/rba_DiagLib/SwComponentTypes/rba_DiagLib</TYPE-TREF>
+            </SW-COMPONENT-PROTOTYPE>
+            <SW-COMPONENT-PROTOTYPE UUID="8bc9efb6-1337-4429-a29d-327647454336">
+              <SHORT-NAME>CPT_Dcm</SHORT-NAME>
+              <TYPE-TREF DEST="SERVICE-SW-COMPONENT-TYPE">/AUTOSAR_Dcm/SwComponentTypes/Dcm</TYPE-TREF>
+            </SW-COMPONENT-PROTOTYPE>
+            <SW-COMPONENT-PROTOTYPE UUID="6e57d682-66bb-45c4-b5b8-034efff586b1">
+              <SHORT-NAME>CPT_Dem</SHORT-NAME>
+              <TYPE-TREF DEST="SERVICE-SW-COMPONENT-TYPE">/AUTOSAR_Dem/SwComponentTypes/Dem</TYPE-TREF>
+            </SW-COMPONENT-PROTOTYPE>
+            <SW-COMPONENT-PROTOTYPE UUID="01f35c87-c340-430f-8c25-ac368bf14b70">
+              <SHORT-NAME>CPT_TstM</SHORT-NAME>
+              <TYPE-TREF DEST="COMPLEX-DEVICE-DRIVER-SW-COMPONENT-TYPE">/ETAS_BIP_TSTM/SwComponentTypes/TstM</TYPE-TREF>
+            </SW-COMPONENT-PROTOTYPE>
+            <SW-COMPONENT-PROTOTYPE UUID="7b871582-98f2-42ff-8987-fbdda8e0016e">
+              <SHORT-NAME>CPT_Rtm</SHORT-NAME>
+              <TYPE-TREF DEST="COMPLEX-DEVICE-DRIVER-SW-COMPONENT-TYPE">/ETAS_BIP_RTM/SwComponentTypes/Rtm</TYPE-TREF>
+            </SW-COMPONENT-PROTOTYPE>
+            <SW-COMPONENT-PROTOTYPE UUID="da49a7e3-5cbc-4745-968a-b6e83e8e9a9d">
+              <SHORT-NAME>CPT_StackM</SHORT-NAME>
+              <TYPE-TREF DEST="COMPLEX-DEVICE-DRIVER-SW-COMPONENT-TYPE">/ETAS_BIP_STACKM/SwComponentTypes/StackM</TYPE-TREF>
+            </SW-COMPONENT-PROTOTYPE>
+            <SW-COMPONENT-PROTOTYPE UUID="f426367e-a1d9-4941-80d0-03c78594afd2">
+              <SHORT-NAME>CPT_DiagUT</SHORT-NAME>
+              <TYPE-TREF DEST="APPLICATION-SW-COMPONENT-TYPE">/Composition/DiagUT/SwComponentTypes/DiagUT</TYPE-TREF>
+            </SW-COMPONENT-PROTOTYPE>
+          </COMPONENTS>
+          <CONNECTORS>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_ComM_modeLimitation_CPT_NmUT_modeLimitation</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_ComM</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AUTOSAR_ComM/SwComponentTypes/ComM/modeLimitation</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_NmUT</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ETAS_BIP/NmUT/modeLimitation</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_ComM_UR_ComMUser_Can_Network_ETAS_Channel_CPT_NmUT_UR_ComMUser_Can_Network_ETAS_Channel</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_ComM</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AUTOSAR_ComM/SwComponentTypes/ComM/UR_ComMUser_Can_Network_ETAS_Channel_Can_Network_ETAS</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_NmUT</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ETAS_BIP/NmUT/UR_ComMUser_Can_Network_ETAS_Channel</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_EcuM_shutdownTarget_CPT_ExeMgrUT_RP_EcuM_SelectResetTarget</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_EcuM</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AUTOSAR_EcuM/SwComponentTypes/EcuM/shutdownTarget</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_ExeMgrUT</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ServiceLayer/ExeMgrUT/RP_EcuM_SelectResetTarget</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_ExeMgrUT_PP_BswM_APPMode_CPT_BswM_RP_BswM_MRP_SWC_AppMode</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_ExeMgrUT</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ServiceLayer/ExeMgrUT/PP_BswM_APPMode</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_BswM</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AUTOSAR_BswM/SwComponentTypes/BswM/RP_BswM_MRP_SWC_AppMode</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_WdgM_globalMode_CPT_WdgMUT_RP_WdgM_GlobalMode</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_WdgM</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AUTOSAR_WdgM/WdgM/globalMode</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_WdgMUT</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ETAS_BIP/WdgMUT/RP_WdgM_GlobalMode</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_WdgM_localSupervision_WdgM_SE1_WdgM_SE1_Alive_CP_CPT_WdgMUT_RP_AliveSupervision_ASW_10ms</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_WdgM</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AUTOSAR_WdgM/WdgM/localSupervision_WdgM_SE1_WdgM_SE1_Alive_CP</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_WdgMUT</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ETAS_BIP/WdgMUT/RP_AliveSupervision_ASW_10ms</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_WdgM_localSupervision_WdgM_SE1_WdgM_SE1_Deadline_CP_0_CPT_WdgMUT_RP_Deadline_Start_ASW_10ms</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_WdgM</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AUTOSAR_WdgM/WdgM/localSupervision_WdgM_SE1_WdgM_SE1_Deadline_CP_0</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_WdgMUT</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ETAS_BIP/WdgMUT/RP_Deadline_Start_ASW_10ms</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_WdgM_localSupervision_WdgM_SE1_WdgM_SE1_Deadline_CP_1_CPT_WdgMUT_RP_Deadline_Stop_ASW_10ms</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_WdgM</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AUTOSAR_WdgM/WdgM/localSupervision_WdgM_SE1_WdgM_SE1_Deadline_CP_1</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_WdgMUT</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ETAS_BIP/WdgMUT/RP_Deadline_Stop_ASW_10ms</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_WdgM_localSupervision_WdgM_SE1_WdgM_SE1_PFM_CP_0_CPT_WdgMUT_RP_PFM_CP0_ASW_10ms</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_WdgM</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AUTOSAR_WdgM/WdgM/localSupervision_WdgM_SE1_WdgM_SE1_PFM_CP_0</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_WdgMUT</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ETAS_BIP/WdgMUT/RP_PFM_CP0_ASW_10ms</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_WdgM_localSupervision_WdgM_SE1_WdgM_SE1_PFM_CP_1_CPT_WdgMUT_RP_PFM_CP1_ASW_10ms</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_WdgM</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AUTOSAR_WdgM/WdgM/localSupervision_WdgM_SE1_WdgM_SE1_PFM_CP_1</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_WdgMUT</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ETAS_BIP/WdgMUT/RP_PFM_CP1_ASW_10ms</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_NvMUT_PP_CyclicBlock_JobFinished_CPT_NvBlock_RP_StoreCyclicBlock</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_NvMUT</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ETAS_BIP/NvMUT/PP_CyclicBlock_JobFinished</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_NvBlock</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ETAS_BIP/NvBlock/RP_StoreCyclicBlock</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_NvMUT_PP_ImmediateBlock_JobFinished_CPT_NvBlock_RP_StoreImmediateBlock</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_NvMUT</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ETAS_BIP/NvMUT/PP_ImmediateBlock_JobFinished</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_NvBlock</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ETAS_BIP/NvBlock/RP_StoreImmediateBlock</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_NvMUT_PP_ShutdownBlock_JobFinished_CPT_NvBlock_RP_StoreAtShutdownBlock</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_NvMUT</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ETAS_BIP/NvMUT/PP_ShutdownBlock_JobFinished</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_NvBlock</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ETAS_BIP/NvBlock/RP_StoreAtShutdownBlock</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_NvBlock_PRP_StoreCyclicBlock_CPT_NvMUT_PRP_CyclicNvBlock</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_NvBlock</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="PR-PORT-PROTOTYPE">/ETAS_BIP/NvBlock/PRP_StoreCyclicBlock</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_NvMUT</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="PR-PORT-PROTOTYPE">/ETAS_BIP/NvMUT/PRP_CyclicNvBlock</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_NvBlock_PRP_StoreImmediateBlock_CPT_NvMUT_PRP_ImmediateNvBlock</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_NvBlock</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="PR-PORT-PROTOTYPE">/ETAS_BIP/NvBlock/PRP_StoreImmediateBlock</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_NvMUT</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="PR-PORT-PROTOTYPE">/ETAS_BIP/NvMUT/PRP_ImmediateNvBlock</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_NvBlock_PRP_StoreAtShutdownBlock_CPT_NvMUT_PRP_ShutdownNvBlock</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_NvBlock</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="PR-PORT-PROTOTYPE">/ETAS_BIP/NvBlock/PRP_StoreAtShutdownBlock</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_NvMUT</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="PR-PORT-PROTOTYPE">/ETAS_BIP/NvMUT/PRP_ShutdownNvBlock</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_ExeMgrUT_PP_RequestReset_CPT_NvMUT_RP_RequestReset</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_ExeMgrUT</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ServiceLayer/ExeMgrUT/PP_RequestReset</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_NvMUT</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ETAS_BIP/NvMUT/RP_RequestReset</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_ExeMgrUT_PP_ResetInfo_CPT_NvMUT_RP_ResetInfo</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_ExeMgrUT</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ServiceLayer/ExeMgrUT/PP_ResetInfo</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_NvMUT</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ETAS_BIP/NvMUT/RP_ResetInfo</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_WdgM_globalSupervision_CPT_WdgMUT_RP_WdgM_GlobalSupervision</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_WdgM</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AUTOSAR_WdgM/WdgM/globalSupervision</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_WdgMUT</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ETAS_BIP/WdgMUT/RP_WdgM_GlobalSupervision</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_WdgM_localSupervisionStatus_WdgM_SE1_CPT_WdgMUT_RP_WdgM_LocalSupervisionStatus</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_WdgM</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AUTOSAR_WdgM/WdgM/localSupervisionStatus_WdgM_SE1</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_WdgMUT</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ETAS_BIP/WdgMUT/RP_WdgM_LocalSupervisionStatus</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_Dcm_DCMServices_CPT_DiagUT_0_DCMServices</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_Dcm</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AUTOSAR_Dcm/SwComponentTypes/Dcm/DCMServices</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_DiagUT</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/Composition/DiagUT/SwComponentTypes/DiagUT/DCMServices</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_Dcm_IOControlRequest_DID_0xD901_New_Data_Object_CPT_DiagUT_0_IOControlRequest_DID_0xD901_New_Data_Object</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_Dcm</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AUTOSAR_Dcm/SwComponentTypes/Dcm/IOControlRequest_DID_0xD901_New_Data_Object</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_DiagUT</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/Composition/DiagUT/SwComponentTypes/DiagUT/IOControlRequest_DID_0xD901_New_Data_Object</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_Dcm_IOControlRequest_DID_0xE900_New_Data_Object_CPT_DiagUT_0_IOControlRequest_DID_0xE900_New_Data_Object</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_Dcm</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AUTOSAR_Dcm/SwComponentTypes/Dcm/IOControlRequest_DID_0xE900_New_Data_Object</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_DiagUT</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/Composition/DiagUT/SwComponentTypes/DiagUT/IOControlRequest_DID_0xE900_New_Data_Object</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_DiagUT_0_IOControlResponse_DID_0xD901_New_Data_Object_CPT_Dcm_IOControlResponse_DID_0xD901_New_Data_Object</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_DiagUT</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Composition/DiagUT/SwComponentTypes/DiagUT/IOControlResponse_DID_0xD901_New_Data_Object</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_Dcm</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AUTOSAR_Dcm/SwComponentTypes/Dcm/IOControlResponse_DID_0xD901_New_Data_Object</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_DiagUT_0_IOControlResponse_DID_0xE900_New_Data_Object_CPT_Dcm_IOControlResponse_DID_0xE900_New_Data_Object</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_DiagUT</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Composition/DiagUT/SwComponentTypes/DiagUT/IOControlResponse_DID_0xE900_New_Data_Object</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_Dcm</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AUTOSAR_Dcm/SwComponentTypes/Dcm/IOControlResponse_DID_0xE900_New_Data_Object</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_Dcm_P_DataServices_DID_0x0100_New_Data_Object_CPT_DiagUT_0_R_DataServices_DID_0x0100_New_Data_Object</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_Dcm</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AUTOSAR_Dcm/SwComponentTypes/Dcm/P_DataServices_DID_0x0100_New_Data_Object</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_DiagUT</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/Composition/DiagUT/SwComponentTypes/DiagUT/R_DataServices_DID_0x0100_New_Data_Object</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_Dcm_P_DataServices_DID_0xF110_New_Data_Object_CPT_DiagUT_0_R_DataServices_DID_0xF110_New_Data_Object</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_Dcm</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AUTOSAR_Dcm/SwComponentTypes/Dcm/P_DataServices_DID_0xF110_New_Data_Object</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_DiagUT</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/Composition/DiagUT/SwComponentTypes/DiagUT/R_DataServices_DID_0xF110_New_Data_Object</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_Dcm_P_DataServices_DID_0xF115_New_Data_Object_CPT_DiagUT_0_R_DataServices_DID_0xF115_New_Data_Object</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_Dcm</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AUTOSAR_Dcm/SwComponentTypes/Dcm/P_DataServices_DID_0xF115_New_Data_Object</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_DiagUT</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/Composition/DiagUT/SwComponentTypes/DiagUT/R_DataServices_DID_0xF115_New_Data_Object</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_Dcm_P_DataServices_DID_0xF121_New_Data_Object_CPT_DiagUT_0_R_DataServices_DID_0xF121_New_Data_Object</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_Dcm</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AUTOSAR_Dcm/SwComponentTypes/Dcm/P_DataServices_DID_0xF121_New_Data_Object</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_DiagUT</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/Composition/DiagUT/SwComponentTypes/DiagUT/R_DataServices_DID_0xF121_New_Data_Object</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_Dcm_P_DataServices_DID_0xF187_New_Data_Object_CPT_DiagUT_0_R_DataServices_DID_0xF187_New_Data_Object</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_Dcm</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AUTOSAR_Dcm/SwComponentTypes/Dcm/P_DataServices_DID_0xF187_New_Data_Object</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_DiagUT</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/Composition/DiagUT/SwComponentTypes/DiagUT/R_DataServices_DID_0xF187_New_Data_Object</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_Dcm_P_DataServices_DID_0xF18B_New_Data_Object_CPT_DiagUT_0_R_DataServices_DID_0xF18B_New_Data_Object</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_Dcm</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AUTOSAR_Dcm/SwComponentTypes/Dcm/P_DataServices_DID_0xF18B_New_Data_Object</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_DiagUT</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/Composition/DiagUT/SwComponentTypes/DiagUT/R_DataServices_DID_0xF18B_New_Data_Object</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_Dcm_P_DataServices_DID_0xF18C_New_Data_Object_CPT_DiagUT_0_R_DataServices_DID_0xF18C_New_Data_Object</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_Dcm</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AUTOSAR_Dcm/SwComponentTypes/Dcm/P_DataServices_DID_0xF18C_New_Data_Object</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_DiagUT</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/Composition/DiagUT/SwComponentTypes/DiagUT/R_DataServices_DID_0xF18C_New_Data_Object</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_Dcm_P_DataServices_DID_0xF190_New_Data_Object_CPT_DiagUT_0_R_DataServices_DID_0xF190_New_Data_Object</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_Dcm</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AUTOSAR_Dcm/SwComponentTypes/Dcm/P_DataServices_DID_0xF190_New_Data_Object</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_DiagUT</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/Composition/DiagUT/SwComponentTypes/DiagUT/R_DataServices_DID_0xF190_New_Data_Object</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_Dcm_P_DataServices_DID_0xF198_New_Data_Object_CPT_DiagUT_0_R_DataServices_DID_0xF198_New_Data_Object</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_Dcm</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AUTOSAR_Dcm/SwComponentTypes/Dcm/P_DataServices_DID_0xF198_New_Data_Object</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_DiagUT</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/Composition/DiagUT/SwComponentTypes/DiagUT/R_DataServices_DID_0xF198_New_Data_Object</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_Dcm_P_DataServices_DID_0xF198_New_Data_Object_5_CPT_DiagUT_0_R_DataServices_DID_0xF198_New_Data_Object_5</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_Dcm</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AUTOSAR_Dcm/SwComponentTypes/Dcm/P_DataServices_DID_0xF198_New_Data_Object_5</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_DiagUT</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/Composition/DiagUT/SwComponentTypes/DiagUT/R_DataServices_DID_0xF198_New_Data_Object_5</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_Dcm_P_DataServices_DID_0xF1A8_New_Data_Object_CPT_DiagUT_0_R_DataServices_DID_0xF1A8_New_Data_Object</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_Dcm</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AUTOSAR_Dcm/SwComponentTypes/Dcm/P_DataServices_DID_0xF1A8_New_Data_Object</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_DiagUT</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/Composition/DiagUT/SwComponentTypes/DiagUT/R_DataServices_DID_0xF1A8_New_Data_Object</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_Dcm_P_DataServices_DID_0xF1A9_New_Data_Object_CPT_DiagUT_0_R_DataServices_DID_0xF1A9_New_Data_Object</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_Dcm</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AUTOSAR_Dcm/SwComponentTypes/Dcm/P_DataServices_DID_0xF1A9_New_Data_Object</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_DiagUT</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/Composition/DiagUT/SwComponentTypes/DiagUT/R_DataServices_DID_0xF1A9_New_Data_Object</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_Dcm_P_DataServices_DID_0xF1AA_New_Data_Object_CPT_DiagUT_0_R_DataServices_DID_0xF1AA_New_Data_Object</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_Dcm</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AUTOSAR_Dcm/SwComponentTypes/Dcm/P_DataServices_DID_0xF1AA_New_Data_Object</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_DiagUT</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/Composition/DiagUT/SwComponentTypes/DiagUT/R_DataServices_DID_0xF1AA_New_Data_Object</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_Dcm_Pp_DcmControlDTCSetting_CPT_DiagUT_0_RR_DcmControlDTCSetting</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_Dcm</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AUTOSAR_Dcm/SwComponentTypes/Dcm/Pp_DcmControlDTCSetting</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_DiagUT</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/Composition/DiagUT/SwComponentTypes/DiagUT/RR_DcmControlDTCSetting</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_Dcm_Pp_DcmDiagnosticSessionControl_CPT_DiagUT_0_RR_DcmDiagnosticSessionControl</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_Dcm</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AUTOSAR_Dcm/SwComponentTypes/Dcm/Pp_DcmDiagnosticSessionControl</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_DiagUT</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/Composition/DiagUT/SwComponentTypes/DiagUT/RR_DcmDiagnosticSessionControl</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_Dcm_Pp_DcmEcuReset_CPT_DiagUT_0_RR_DcmEcuReset</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_Dcm</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AUTOSAR_Dcm/SwComponentTypes/Dcm/Pp_DcmEcuReset</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_DiagUT</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/Composition/DiagUT/SwComponentTypes/DiagUT/RR_DcmEcuReset</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_DiagUT_0_P_DataServices_DID_0x0100_New_Data_Object_CPT_Dcm_R_DataServices_DID_0x0100_New_Data_Object</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_DiagUT</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Composition/DiagUT/SwComponentTypes/DiagUT/P_DataServices_DID_0x0100_New_Data_Object</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_Dcm</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AUTOSAR_Dcm/SwComponentTypes/Dcm/R_DataServices_DID_0x0100_New_Data_Object</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_DiagUT_0_P_DataServices_DID_0x010B_Day_CPT_Dcm_R_DataServices_DID_0x010B_Day</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_DiagUT</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Composition/DiagUT/SwComponentTypes/DiagUT/P_DataServices_DID_0x010B_Day</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_Dcm</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AUTOSAR_Dcm/SwComponentTypes/Dcm/R_DataServices_DID_0x010B_Day</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_DiagUT_0_P_DataServices_DID_0x010B_Hour_CPT_Dcm_R_DataServices_DID_0x010B_Hour</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_DiagUT</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Composition/DiagUT/SwComponentTypes/DiagUT/P_DataServices_DID_0x010B_Hour</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_Dcm</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AUTOSAR_Dcm/SwComponentTypes/Dcm/R_DataServices_DID_0x010B_Hour</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_DiagUT_0_P_DataServices_DID_0x010B_Minute_CPT_Dcm_R_DataServices_DID_0x010B_Minute</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_DiagUT</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Composition/DiagUT/SwComponentTypes/DiagUT/P_DataServices_DID_0x010B_Minute</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_Dcm</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AUTOSAR_Dcm/SwComponentTypes/Dcm/R_DataServices_DID_0x010B_Minute</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_DiagUT_0_P_DataServices_DID_0x010B_Month_CPT_Dcm_R_DataServices_DID_0x010B_Month</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_DiagUT</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Composition/DiagUT/SwComponentTypes/DiagUT/P_DataServices_DID_0x010B_Month</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_Dcm</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AUTOSAR_Dcm/SwComponentTypes/Dcm/R_DataServices_DID_0x010B_Month</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_DiagUT_0_P_DataServices_DID_0x010B_Second_CPT_Dcm_R_DataServices_DID_0x010B_Second</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_DiagUT</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Composition/DiagUT/SwComponentTypes/DiagUT/P_DataServices_DID_0x010B_Second</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_Dcm</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AUTOSAR_Dcm/SwComponentTypes/Dcm/R_DataServices_DID_0x010B_Second</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_DiagUT_0_P_DataServices_DID_0x010B_Year_CPT_Dcm_R_DataServices_DID_0x010B_Year</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_DiagUT</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Composition/DiagUT/SwComponentTypes/DiagUT/P_DataServices_DID_0x010B_Year</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_Dcm</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AUTOSAR_Dcm/SwComponentTypes/Dcm/R_DataServices_DID_0x010B_Year</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_DiagUT_0_P_DataServices_DID_0x0112_New_Data_Object_CPT_Dcm_R_DataServices_DID_0x0112_New_Data_Object</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_DiagUT</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Composition/DiagUT/SwComponentTypes/DiagUT/P_DataServices_DID_0x0112_New_Data_Object</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_Dcm</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AUTOSAR_Dcm/SwComponentTypes/Dcm/R_DataServices_DID_0x0112_New_Data_Object</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_DiagUT_0_P_DataServices_DID_0xB950_New_Data_Object_CPT_Dcm_R_DataServices_DID_0xB950_New_Data_Object</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_DiagUT</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Composition/DiagUT/SwComponentTypes/DiagUT/P_DataServices_DID_0xB950_New_Data_Object</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_Dcm</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AUTOSAR_Dcm/SwComponentTypes/Dcm/R_DataServices_DID_0xB950_New_Data_Object</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_DiagUT_0_P_DataServices_DID_0xD001_New_Data_Object_CPT_Dcm_R_DataServices_DID_0xD001_New_Data_Object</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_DiagUT</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Composition/DiagUT/SwComponentTypes/DiagUT/P_DataServices_DID_0xD001_New_Data_Object</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_Dcm</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AUTOSAR_Dcm/SwComponentTypes/Dcm/R_DataServices_DID_0xD001_New_Data_Object</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_DiagUT_0_P_DataServices_DID_0xD901_New_Data_Object_CPT_Dcm_R_DataServices_DID_0xD901_New_Data_Object</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_DiagUT</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Composition/DiagUT/SwComponentTypes/DiagUT/P_DataServices_DID_0xD901_New_Data_Object</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_Dcm</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AUTOSAR_Dcm/SwComponentTypes/Dcm/R_DataServices_DID_0xD901_New_Data_Object</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_DiagUT_0_P_DataServices_DID_0xE101_New_Data_Object_CPT_Dcm_R_DataServices_DID_0xE101_New_Data_Object</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_DiagUT</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Composition/DiagUT/SwComponentTypes/DiagUT/P_DataServices_DID_0xE101_New_Data_Object</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_Dcm</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AUTOSAR_Dcm/SwComponentTypes/Dcm/R_DataServices_DID_0xE101_New_Data_Object</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_DiagUT_0_P_DataServices_DID_0xE900_New_Data_Object_CPT_Dcm_R_DataServices_DID_0xE900_New_Data_Object</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_DiagUT</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Composition/DiagUT/SwComponentTypes/DiagUT/P_DataServices_DID_0xE900_New_Data_Object</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_Dcm</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AUTOSAR_Dcm/SwComponentTypes/Dcm/R_DataServices_DID_0xE900_New_Data_Object</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_DiagUT_0_P_DataServices_DID_0xF100_New_Data_Object_CPT_Dcm_R_DataServices_DID_0xF100_New_Data_Object</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_DiagUT</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Composition/DiagUT/SwComponentTypes/DiagUT/P_DataServices_DID_0xF100_New_Data_Object</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_Dcm</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AUTOSAR_Dcm/SwComponentTypes/Dcm/R_DataServices_DID_0xF100_New_Data_Object</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_DiagUT_0_P_DataServices_DID_0xF100_New_Data_Object_1_CPT_Dcm_R_DataServices_DID_0xF100_New_Data_Object_1</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_DiagUT</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Composition/DiagUT/SwComponentTypes/DiagUT/P_DataServices_DID_0xF100_New_Data_Object_1</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_Dcm</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AUTOSAR_Dcm/SwComponentTypes/Dcm/R_DataServices_DID_0xF100_New_Data_Object_1</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_DiagUT_0_P_DataServices_DID_0xF110_New_Data_Object_CPT_Dcm_R_DataServices_DID_0xF110_New_Data_Object</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_DiagUT</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Composition/DiagUT/SwComponentTypes/DiagUT/P_DataServices_DID_0xF110_New_Data_Object</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_Dcm</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AUTOSAR_Dcm/SwComponentTypes/Dcm/R_DataServices_DID_0xF110_New_Data_Object</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_DiagUT_0_P_DataServices_DID_0xF111_New_Data_Object_CPT_Dcm_R_DataServices_DID_0xF111_New_Data_Object</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_DiagUT</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Composition/DiagUT/SwComponentTypes/DiagUT/P_DataServices_DID_0xF111_New_Data_Object</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_Dcm</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AUTOSAR_Dcm/SwComponentTypes/Dcm/R_DataServices_DID_0xF111_New_Data_Object</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_DiagUT_0_P_DataServices_DID_0xF112_New_Data_Object_CPT_Dcm_R_DataServices_DID_0xF112_New_Data_Object</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_DiagUT</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Composition/DiagUT/SwComponentTypes/DiagUT/P_DataServices_DID_0xF112_New_Data_Object</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_Dcm</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AUTOSAR_Dcm/SwComponentTypes/Dcm/R_DataServices_DID_0xF112_New_Data_Object</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_DiagUT_0_P_DataServices_DID_0xF113_New_Data_Object_CPT_Dcm_R_DataServices_DID_0xF113_New_Data_Object</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_DiagUT</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Composition/DiagUT/SwComponentTypes/DiagUT/P_DataServices_DID_0xF113_New_Data_Object</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_Dcm</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AUTOSAR_Dcm/SwComponentTypes/Dcm/R_DataServices_DID_0xF113_New_Data_Object</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_DiagUT_0_P_DataServices_DID_0xF114_New_Data_Object_CPT_Dcm_R_DataServices_DID_0xF114_New_Data_Object</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_DiagUT</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Composition/DiagUT/SwComponentTypes/DiagUT/P_DataServices_DID_0xF114_New_Data_Object</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_Dcm</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AUTOSAR_Dcm/SwComponentTypes/Dcm/R_DataServices_DID_0xF114_New_Data_Object</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_DiagUT_0_P_DataServices_DID_0xF115_New_Data_Object_CPT_Dcm_R_DataServices_DID_0xF115_New_Data_Object</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_DiagUT</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Composition/DiagUT/SwComponentTypes/DiagUT/P_DataServices_DID_0xF115_New_Data_Object</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_Dcm</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AUTOSAR_Dcm/SwComponentTypes/Dcm/R_DataServices_DID_0xF115_New_Data_Object</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_DiagUT_0_P_DataServices_DID_0xF116_New_Data_Object_CPT_Dcm_R_DataServices_DID_0xF116_New_Data_Object</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_DiagUT</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Composition/DiagUT/SwComponentTypes/DiagUT/P_DataServices_DID_0xF116_New_Data_Object</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_Dcm</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AUTOSAR_Dcm/SwComponentTypes/Dcm/R_DataServices_DID_0xF116_New_Data_Object</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_DiagUT_0_P_DataServices_DID_0xF117_New_Data_Object_CPT_Dcm_R_DataServices_DID_0xF117_New_Data_Object</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_DiagUT</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Composition/DiagUT/SwComponentTypes/DiagUT/P_DataServices_DID_0xF117_New_Data_Object</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_Dcm</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AUTOSAR_Dcm/SwComponentTypes/Dcm/R_DataServices_DID_0xF117_New_Data_Object</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_DiagUT_0_P_DataServices_DID_0xF118_New_Data_Object_CPT_Dcm_R_DataServices_DID_0xF118_New_Data_Object</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_DiagUT</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Composition/DiagUT/SwComponentTypes/DiagUT/P_DataServices_DID_0xF118_New_Data_Object</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_Dcm</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AUTOSAR_Dcm/SwComponentTypes/Dcm/R_DataServices_DID_0xF118_New_Data_Object</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_DiagUT_0_P_DataServices_DID_0xF119_New_Data_Object_CPT_Dcm_R_DataServices_DID_0xF119_New_Data_Object</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_DiagUT</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Composition/DiagUT/SwComponentTypes/DiagUT/P_DataServices_DID_0xF119_New_Data_Object</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_Dcm</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AUTOSAR_Dcm/SwComponentTypes/Dcm/R_DataServices_DID_0xF119_New_Data_Object</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_DiagUT_0_P_DataServices_DID_0xF11A_New_Data_Object_CPT_Dcm_R_DataServices_DID_0xF11A_New_Data_Object</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_DiagUT</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Composition/DiagUT/SwComponentTypes/DiagUT/P_DataServices_DID_0xF11A_New_Data_Object</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_Dcm</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AUTOSAR_Dcm/SwComponentTypes/Dcm/R_DataServices_DID_0xF11A_New_Data_Object</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_DiagUT_0_P_DataServices_DID_0xF11B_New_Data_Object_CPT_Dcm_R_DataServices_DID_0xF11B_New_Data_Object</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_DiagUT</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Composition/DiagUT/SwComponentTypes/DiagUT/P_DataServices_DID_0xF11B_New_Data_Object</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_Dcm</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AUTOSAR_Dcm/SwComponentTypes/Dcm/R_DataServices_DID_0xF11B_New_Data_Object</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_DiagUT_0_P_DataServices_DID_0xF11C_New_Data_Object_CPT_Dcm_R_DataServices_DID_0xF11C_New_Data_Object</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_DiagUT</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Composition/DiagUT/SwComponentTypes/DiagUT/P_DataServices_DID_0xF11C_New_Data_Object</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_Dcm</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AUTOSAR_Dcm/SwComponentTypes/Dcm/R_DataServices_DID_0xF11C_New_Data_Object</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_DiagUT_0_P_DataServices_DID_0xF11D_New_Data_Object_CPT_Dcm_R_DataServices_DID_0xF11D_New_Data_Object</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_DiagUT</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Composition/DiagUT/SwComponentTypes/DiagUT/P_DataServices_DID_0xF11D_New_Data_Object</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_Dcm</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AUTOSAR_Dcm/SwComponentTypes/Dcm/R_DataServices_DID_0xF11D_New_Data_Object</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_DiagUT_0_P_DataServices_DID_0xF11E_New_Data_Object_CPT_Dcm_R_DataServices_DID_0xF11E_New_Data_Object</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_DiagUT</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Composition/DiagUT/SwComponentTypes/DiagUT/P_DataServices_DID_0xF11E_New_Data_Object</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_Dcm</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AUTOSAR_Dcm/SwComponentTypes/Dcm/R_DataServices_DID_0xF11E_New_Data_Object</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_DiagUT_0_P_DataServices_DID_0xF11F_New_Data_Object_CPT_Dcm_R_DataServices_DID_0xF11F_New_Data_Object</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_DiagUT</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Composition/DiagUT/SwComponentTypes/DiagUT/P_DataServices_DID_0xF11F_New_Data_Object</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_Dcm</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AUTOSAR_Dcm/SwComponentTypes/Dcm/R_DataServices_DID_0xF11F_New_Data_Object</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_DiagUT_0_P_DataServices_DID_0xF120_New_Data_Object_CPT_Dcm_R_DataServices_DID_0xF120_New_Data_Object</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_DiagUT</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Composition/DiagUT/SwComponentTypes/DiagUT/P_DataServices_DID_0xF120_New_Data_Object</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_Dcm</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AUTOSAR_Dcm/SwComponentTypes/Dcm/R_DataServices_DID_0xF120_New_Data_Object</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_DiagUT_0_P_DataServices_DID_0xF121_New_Data_Object_CPT_Dcm_R_DataServices_DID_0xF121_New_Data_Object</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_DiagUT</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Composition/DiagUT/SwComponentTypes/DiagUT/P_DataServices_DID_0xF121_New_Data_Object</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_Dcm</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AUTOSAR_Dcm/SwComponentTypes/Dcm/R_DataServices_DID_0xF121_New_Data_Object</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_DiagUT_0_P_DataServices_DID_0xF122_New_Data_Object_CPT_Dcm_R_DataServices_DID_0xF122_New_Data_Object</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_DiagUT</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Composition/DiagUT/SwComponentTypes/DiagUT/P_DataServices_DID_0xF122_New_Data_Object</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_Dcm</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AUTOSAR_Dcm/SwComponentTypes/Dcm/R_DataServices_DID_0xF122_New_Data_Object</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_DiagUT_0_P_DataServices_DID_0xF122_New_Data_Object_2_CPT_Dcm_R_DataServices_DID_0xF122_New_Data_Object_2</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_DiagUT</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Composition/DiagUT/SwComponentTypes/DiagUT/P_DataServices_DID_0xF122_New_Data_Object_2</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_Dcm</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AUTOSAR_Dcm/SwComponentTypes/Dcm/R_DataServices_DID_0xF122_New_Data_Object_2</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_DiagUT_0_P_DataServices_DID_0xF187_New_Data_Object_CPT_Dcm_R_DataServices_DID_0xF187_New_Data_Object</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_DiagUT</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Composition/DiagUT/SwComponentTypes/DiagUT/P_DataServices_DID_0xF187_New_Data_Object</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_Dcm</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AUTOSAR_Dcm/SwComponentTypes/Dcm/R_DataServices_DID_0xF187_New_Data_Object</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_DiagUT_0_P_DataServices_DID_0xF18A_New_Data_Object_CPT_Dcm_R_DataServices_DID_0xF18A_New_Data_Object</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_DiagUT</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Composition/DiagUT/SwComponentTypes/DiagUT/P_DataServices_DID_0xF18A_New_Data_Object</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_Dcm</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AUTOSAR_Dcm/SwComponentTypes/Dcm/R_DataServices_DID_0xF18A_New_Data_Object</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_DiagUT_0_P_DataServices_DID_0xF18B_New_Data_Object_CPT_Dcm_R_DataServices_DID_0xF18B_New_Data_Object</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_DiagUT</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Composition/DiagUT/SwComponentTypes/DiagUT/P_DataServices_DID_0xF18B_New_Data_Object</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_Dcm</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AUTOSAR_Dcm/SwComponentTypes/Dcm/R_DataServices_DID_0xF18B_New_Data_Object</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_DiagUT_0_P_DataServices_DID_0xF18C_New_Data_Object_CPT_Dcm_R_DataServices_DID_0xF18C_New_Data_Object</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_DiagUT</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Composition/DiagUT/SwComponentTypes/DiagUT/P_DataServices_DID_0xF18C_New_Data_Object</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_Dcm</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AUTOSAR_Dcm/SwComponentTypes/Dcm/R_DataServices_DID_0xF18C_New_Data_Object</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_DiagUT_0_P_DataServices_DID_0xF190_New_Data_Object_CPT_Dcm_R_DataServices_DID_0xF190_New_Data_Object</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_DiagUT</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Composition/DiagUT/SwComponentTypes/DiagUT/P_DataServices_DID_0xF190_New_Data_Object</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_Dcm</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AUTOSAR_Dcm/SwComponentTypes/Dcm/R_DataServices_DID_0xF190_New_Data_Object</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_DiagUT_0_P_DataServices_DID_0xF192_New_Data_Object_CPT_Dcm_R_DataServices_DID_0xF192_New_Data_Object</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_DiagUT</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Composition/DiagUT/SwComponentTypes/DiagUT/P_DataServices_DID_0xF192_New_Data_Object</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_Dcm</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AUTOSAR_Dcm/SwComponentTypes/Dcm/R_DataServices_DID_0xF192_New_Data_Object</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_DiagUT_0_P_DataServices_DID_0xF192_New_Data_Object_3_CPT_Dcm_R_DataServices_DID_0xF192_New_Data_Object_3</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_DiagUT</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Composition/DiagUT/SwComponentTypes/DiagUT/P_DataServices_DID_0xF192_New_Data_Object_3</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_Dcm</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AUTOSAR_Dcm/SwComponentTypes/Dcm/R_DataServices_DID_0xF192_New_Data_Object_3</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_DiagUT_0_P_DataServices_DID_0xF194_New_Data_Object_CPT_Dcm_R_DataServices_DID_0xF194_New_Data_Object</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_DiagUT</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Composition/DiagUT/SwComponentTypes/DiagUT/P_DataServices_DID_0xF194_New_Data_Object</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_Dcm</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AUTOSAR_Dcm/SwComponentTypes/Dcm/R_DataServices_DID_0xF194_New_Data_Object</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_DiagUT_0_P_DataServices_DID_0xF194_New_Data_Object_4_CPT_Dcm_R_DataServices_DID_0xF194_New_Data_Object_4</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_DiagUT</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Composition/DiagUT/SwComponentTypes/DiagUT/P_DataServices_DID_0xF194_New_Data_Object_4</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_Dcm</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AUTOSAR_Dcm/SwComponentTypes/Dcm/R_DataServices_DID_0xF194_New_Data_Object_4</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_DiagUT_0_P_DataServices_DID_0xF198_New_Data_Object_CPT_Dcm_R_DataServices_DID_0xF198_New_Data_Object</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_DiagUT</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Composition/DiagUT/SwComponentTypes/DiagUT/P_DataServices_DID_0xF198_New_Data_Object</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_Dcm</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AUTOSAR_Dcm/SwComponentTypes/Dcm/R_DataServices_DID_0xF198_New_Data_Object</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_DiagUT_0_P_DataServices_DID_0xF198_New_Data_Object_5_CPT_Dcm_R_DataServices_DID_0xF198_New_Data_Object_5</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_DiagUT</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Composition/DiagUT/SwComponentTypes/DiagUT/P_DataServices_DID_0xF198_New_Data_Object_5</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_Dcm</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AUTOSAR_Dcm/SwComponentTypes/Dcm/R_DataServices_DID_0xF198_New_Data_Object_5</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_DiagUT_0_P_DataServices_DID_0xF1A0_New_Data_Object_CPT_Dcm_R_DataServices_DID_0xF1A0_New_Data_Object</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_DiagUT</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Composition/DiagUT/SwComponentTypes/DiagUT/P_DataServices_DID_0xF1A0_New_Data_Object</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_Dcm</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AUTOSAR_Dcm/SwComponentTypes/Dcm/R_DataServices_DID_0xF1A0_New_Data_Object</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_DiagUT_0_P_DataServices_DID_0xF1A1_New_Data_Object_CPT_Dcm_R_DataServices_DID_0xF1A1_New_Data_Object</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_DiagUT</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Composition/DiagUT/SwComponentTypes/DiagUT/P_DataServices_DID_0xF1A1_New_Data_Object</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_Dcm</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AUTOSAR_Dcm/SwComponentTypes/Dcm/R_DataServices_DID_0xF1A1_New_Data_Object</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_DiagUT_0_P_DataServices_DID_0xF1A2_New_Data_Object_CPT_Dcm_R_DataServices_DID_0xF1A2_New_Data_Object</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_DiagUT</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Composition/DiagUT/SwComponentTypes/DiagUT/P_DataServices_DID_0xF1A2_New_Data_Object</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_Dcm</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AUTOSAR_Dcm/SwComponentTypes/Dcm/R_DataServices_DID_0xF1A2_New_Data_Object</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_DiagUT_0_P_DataServices_DID_0xF1A5_New_Data_Object_CPT_Dcm_R_DataServices_DID_0xF1A5_New_Data_Object</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_DiagUT</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Composition/DiagUT/SwComponentTypes/DiagUT/P_DataServices_DID_0xF1A5_New_Data_Object</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_Dcm</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AUTOSAR_Dcm/SwComponentTypes/Dcm/R_DataServices_DID_0xF1A5_New_Data_Object</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_DiagUT_0_P_DataServices_DID_0xF1A8_New_Data_Object_CPT_Dcm_R_DataServices_DID_0xF1A8_New_Data_Object</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_DiagUT</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Composition/DiagUT/SwComponentTypes/DiagUT/P_DataServices_DID_0xF1A8_New_Data_Object</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_Dcm</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AUTOSAR_Dcm/SwComponentTypes/Dcm/R_DataServices_DID_0xF1A8_New_Data_Object</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_DiagUT_0_P_DataServices_DID_0xF1A9_New_Data_Object_CPT_Dcm_R_DataServices_DID_0xF1A9_New_Data_Object</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_DiagUT</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Composition/DiagUT/SwComponentTypes/DiagUT/P_DataServices_DID_0xF1A9_New_Data_Object</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_Dcm</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AUTOSAR_Dcm/SwComponentTypes/Dcm/R_DataServices_DID_0xF1A9_New_Data_Object</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_DiagUT_0_P_DataServices_DID_0xF1AA_New_Data_Object_CPT_Dcm_R_DataServices_DID_0xF1AA_New_Data_Object</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_DiagUT</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Composition/DiagUT/SwComponentTypes/DiagUT/P_DataServices_DID_0xF1AA_New_Data_Object</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_Dcm</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AUTOSAR_Dcm/SwComponentTypes/Dcm/R_DataServices_DID_0xF1AA_New_Data_Object</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_DiagUT_0_SecurityAccess_Unlocked_L3_CPT_Dcm_SecurityAccess_Unlocked_L3</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_DiagUT</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Composition/DiagUT/SwComponentTypes/DiagUT/SecurityAccess_Unlocked_L3</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_Dcm</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AUTOSAR_Dcm/SwComponentTypes/Dcm/SecurityAccess_Unlocked_L3</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_DiagUT_0_SecurityAccess_UnlockedL1_CPT_Dcm_SecurityAccess_UnlockedL1</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_DiagUT</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Composition/DiagUT/SwComponentTypes/DiagUT/SecurityAccess_UnlockedL1</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_Dcm</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AUTOSAR_Dcm/SwComponentTypes/Dcm/SecurityAccess_UnlockedL1</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_Dem_OpCycle_DemOpCycle_DEM_POWER_CPT_DiagUT_0_OpCycle_DemOpCycle_DEM_POWER</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_Dem</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AUTOSAR_Dem/SwComponentTypes/Dem/OpCycle_DemOpCycle_DEM_POWER</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_DiagUT</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/Composition/DiagUT/SwComponentTypes/DiagUT/OpCycle_DemOpCycle_DEM_POWER</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_StackM_GetStackInfo_CPT_TstM_GetStackInfo</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_StackM</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ETAS_BIP_STACKM/SwComponentTypes/StackM/GetStackInfo</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_TstM</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ETAS_BIP_TSTM/SwComponentTypes/TstM/GetStackInfo</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_DiagUT_CBClrEvt_EventParameter_DTC_0x000001_Event_CPT_Dem_CBClrEvt_DTC_0x000001_Event</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_DiagUT</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Composition/DiagUT/SwComponentTypes/DiagUT/CBClrEvt_EventParameter_DTC_0x000001_Event</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_Dem</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AUTOSAR_Dem/SwComponentTypes/Dem/CBClrEvt_DTC_0x000001_Event</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_DiagUT_CBClrEvt_EventParameter_DTC_0x0d0400_CAN_Network_ETAS_BusOff_Event_CPT_Dem_CBClrEvt_DTC_0x0d0400_CAN_Network_ETAS</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_DiagUT</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Composition/DiagUT/SwComponentTypes/DiagUT/CBClrEvt_EventParameter_DTC_0x0d0400_CAN_Network_ETAS_BusOff_Event</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_Dem</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AUTOSAR_Dem/SwComponentTypes/Dem/CBClrEvt_DTC_0x0d0400_CAN_Network_ETAS_BusOff_Event</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_DiagUT_CBClrEvt_EventParameter_DTC_0xc12687_Event_CPT_Dem_CBClrEvt_DTC_0xc12687_Event</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_DiagUT</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Composition/DiagUT/SwComponentTypes/DiagUT/CBClrEvt_EventParameter_DTC_0xc12687_Event</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_Dem</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AUTOSAR_Dem/SwComponentTypes/Dem/CBClrEvt_DTC_0xc12687_Event</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_DiagUT_CBClrEvt_EventParameter_DTC_0xc14587_Event_CPT_Dem_CBClrEvt_DTC_0xc14587_Event</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_DiagUT</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Composition/DiagUT/SwComponentTypes/DiagUT/CBClrEvt_EventParameter_DTC_0xc14587_Event</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_Dem</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AUTOSAR_Dem/SwComponentTypes/Dem/CBClrEvt_DTC_0xc14587_Event</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_DiagUT_CBClrEvt_EventParameter_DTC_0xc22a87_Event_CPT_Dem_CBClrEvt_DTC_0xc22a87_Event</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_DiagUT</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Composition/DiagUT/SwComponentTypes/DiagUT/CBClrEvt_EventParameter_DTC_0xc22a87_Event</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_Dem</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AUTOSAR_Dem/SwComponentTypes/Dem/CBClrEvt_DTC_0xc22a87_Event</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_DiagUT_CBClrEvt_EventParameter_DTC_0xc41487_Event_CPT_Dem_CBClrEvt_DTC_0xc41487_Event</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_DiagUT</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Composition/DiagUT/SwComponentTypes/DiagUT/CBClrEvt_EventParameter_DTC_0xc41487_Event</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_Dem</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AUTOSAR_Dem/SwComponentTypes/Dem/CBClrEvt_DTC_0xc41487_Event</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_DiagUT_CBClrEvt_EventParameter_DTC_0xd56217_Event_CPT_Dem_CBClrEvt_DTC_0xd56217_Event</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_DiagUT</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Composition/DiagUT/SwComponentTypes/DiagUT/CBClrEvt_EventParameter_DTC_0xd56217_Event</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_Dem</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AUTOSAR_Dem/SwComponentTypes/Dem/CBClrEvt_DTC_0xd56217_Event</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_DiagUT_CBClrEvt_EventParameter_DTC_0xd56316_Event_CPT_Dem_CBClrEvt_DTC_0xd56316_Event</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_DiagUT</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Composition/DiagUT/SwComponentTypes/DiagUT/CBClrEvt_EventParameter_DTC_0xd56316_Event</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_Dem</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AUTOSAR_Dem/SwComponentTypes/Dem/CBClrEvt_DTC_0xd56316_Event</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_DiagUT_CBClrEvt_EventParameter_DTC_0xe00141_Event_CPT_Dem_CBClrEvt_DTC_0xe00141_Event</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_DiagUT</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Composition/DiagUT/SwComponentTypes/DiagUT/CBClrEvt_EventParameter_DTC_0xe00141_Event</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_Dem</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AUTOSAR_Dem/SwComponentTypes/Dem/CBClrEvt_DTC_0xe00141_Event</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_DiagUT_CBClrEvt_EventParameter_DTC_0xe00142_Event_CPT_Dem_CBClrEvt_DTC_0xe00142_Event</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_DiagUT</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Composition/DiagUT/SwComponentTypes/DiagUT/CBClrEvt_EventParameter_DTC_0xe00142_Event</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_Dem</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AUTOSAR_Dem/SwComponentTypes/Dem/CBClrEvt_DTC_0xe00142_Event</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_DiagUT_CBClrEvt_EventParameter_DTC_0xe26200_Event_CPT_Dem_CBClrEvt_DTC_0xe26200_Event</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_DiagUT</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Composition/DiagUT/SwComponentTypes/DiagUT/CBClrEvt_EventParameter_DTC_0xe26200_Event</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_Dem</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AUTOSAR_Dem/SwComponentTypes/Dem/CBClrEvt_DTC_0xe26200_Event</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_Dem_ControlEventAvailable_DTC_0xc12687_Event_CPT_DiagUT_ControlEventAvailable_EventParameter_DTC_0xc12687_Event</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_Dem</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AUTOSAR_Dem/SwComponentTypes/Dem/ControlEventAvailable_DTC_0xc12687_Event</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_DiagUT</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/Composition/DiagUT/SwComponentTypes/DiagUT/ControlEventAvailable_EventParameter_DTC_0xc12687_Event</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_Dem_ControlEventAvailable_DTC_0xc14587_Event_CPT_DiagUT_ControlEventAvailable_EventParameter_DTC_0xc14587_Event</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_Dem</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AUTOSAR_Dem/SwComponentTypes/Dem/ControlEventAvailable_DTC_0xc14587_Event</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_DiagUT</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/Composition/DiagUT/SwComponentTypes/DiagUT/ControlEventAvailable_EventParameter_DTC_0xc14587_Event</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_Dem_ControlEventAvailable_DTC_0xc22a87_Event_CPT_DiagUT_ControlEventAvailable_EventParameter_DTC_0xc22a87_Event</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_Dem</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AUTOSAR_Dem/SwComponentTypes/Dem/ControlEventAvailable_DTC_0xc22a87_Event</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_DiagUT</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/Composition/DiagUT/SwComponentTypes/DiagUT/ControlEventAvailable_EventParameter_DTC_0xc22a87_Event</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_Dem_ControlEventAvailable_DTC_0xc41487_Event_CPT_DiagUT_ControlEventAvailable_EventParameter_DTC_0xc41487_Event</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_Dem</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AUTOSAR_Dem/SwComponentTypes/Dem/ControlEventAvailable_DTC_0xc41487_Event</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_DiagUT</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/Composition/DiagUT/SwComponentTypes/DiagUT/ControlEventAvailable_EventParameter_DTC_0xc41487_Event</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_Dem_ControlEventAvailable_DTC_0xd56217_Event_CPT_DiagUT_ControlEventAvailable_EventParameter_DTC_0xd56217_Event</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_Dem</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AUTOSAR_Dem/SwComponentTypes/Dem/ControlEventAvailable_DTC_0xd56217_Event</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_DiagUT</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/Composition/DiagUT/SwComponentTypes/DiagUT/ControlEventAvailable_EventParameter_DTC_0xd56217_Event</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_Dem_ControlEventAvailable_DTC_0xd56316_Event_CPT_DiagUT_ControlEventAvailable_EventParameter_DTC_0xd56316_Event</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_Dem</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AUTOSAR_Dem/SwComponentTypes/Dem/ControlEventAvailable_DTC_0xd56316_Event</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_DiagUT</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/Composition/DiagUT/SwComponentTypes/DiagUT/ControlEventAvailable_EventParameter_DTC_0xd56316_Event</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_Dem_ControlEventAvailable_DTC_0xe00141_Event_CPT_DiagUT_ControlEventAvailable_EventParameter_DTC_0xe00141_Event</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_Dem</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AUTOSAR_Dem/SwComponentTypes/Dem/ControlEventAvailable_DTC_0xe00141_Event</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_DiagUT</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/Composition/DiagUT/SwComponentTypes/DiagUT/ControlEventAvailable_EventParameter_DTC_0xe00141_Event</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_Dem_ControlEventAvailable_DTC_0xe00142_Event_CPT_DiagUT_ControlEventAvailable_EventParameter_DTC_0xe00142_Event</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_Dem</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AUTOSAR_Dem/SwComponentTypes/Dem/ControlEventAvailable_DTC_0xe00142_Event</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_DiagUT</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/Composition/DiagUT/SwComponentTypes/DiagUT/ControlEventAvailable_EventParameter_DTC_0xe00142_Event</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_Dem_ControlEventAvailable_DTC_0xe26200_Event_CPT_DiagUT_ControlEventAvailable_EventParameter_DTC_0xe26200_Event</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_Dem</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AUTOSAR_Dem/SwComponentTypes/Dem/ControlEventAvailable_DTC_0xe26200_Event</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_DiagUT</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/Composition/DiagUT/SwComponentTypes/DiagUT/ControlEventAvailable_EventParameter_DTC_0xe26200_Event</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_Dem_Event_DTC_0x000001_Event_CPT_DiagUT_Event_EventParameter_DTC_0x000001_Event</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_Dem</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AUTOSAR_Dem/SwComponentTypes/Dem/Event_DTC_0x000001_Event</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_DiagUT</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/Composition/DiagUT/SwComponentTypes/DiagUT/Event_EventParameter_DTC_0x000001_Event</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_Dem_Event_DTC_0xc07388_Event_CPT_DiagUT_Event_EventParameter_DTC_0xc07388_Event</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_Dem</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AUTOSAR_Dem/SwComponentTypes/Dem/Event_DTC_0xc07388_Event</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_DiagUT</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/Composition/DiagUT/SwComponentTypes/DiagUT/Event_EventParameter_DTC_0xc07388_Event</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_Dem_Event_DTC_0xc12687_Event_CPT_DiagUT_Event_EventParameter_DTC_0xc12687_Event</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_Dem</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AUTOSAR_Dem/SwComponentTypes/Dem/Event_DTC_0xc12687_Event</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_DiagUT</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/Composition/DiagUT/SwComponentTypes/DiagUT/Event_EventParameter_DTC_0xc12687_Event</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_Dem_Event_DTC_0xc14587_Event_CPT_DiagUT_Event_EventParameter_DTC_0xc14587_Event</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_Dem</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AUTOSAR_Dem/SwComponentTypes/Dem/Event_DTC_0xc14587_Event</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_DiagUT</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/Composition/DiagUT/SwComponentTypes/DiagUT/Event_EventParameter_DTC_0xc14587_Event</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_Dem_Event_DTC_0xc22a87_Event_CPT_DiagUT_Event_EventParameter_DTC_0xc22a87_Event</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_Dem</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AUTOSAR_Dem/SwComponentTypes/Dem/Event_DTC_0xc22a87_Event</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_DiagUT</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/Composition/DiagUT/SwComponentTypes/DiagUT/Event_EventParameter_DTC_0xc22a87_Event</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_Dem_Event_DTC_0xc41487_Event_CPT_DiagUT_Event_EventParameter_DTC_0xc41487_Event</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_Dem</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AUTOSAR_Dem/SwComponentTypes/Dem/Event_DTC_0xc41487_Event</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_DiagUT</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/Composition/DiagUT/SwComponentTypes/DiagUT/Event_EventParameter_DTC_0xc41487_Event</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_Dem_Event_DTC_0xd56217_Event_CPT_DiagUT_Event_EventParameter_DTC_0xd56217_Event</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_Dem</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AUTOSAR_Dem/SwComponentTypes/Dem/Event_DTC_0xd56217_Event</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_DiagUT</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/Composition/DiagUT/SwComponentTypes/DiagUT/Event_EventParameter_DTC_0xd56217_Event</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_Dem_Event_DTC_0xd56316_Event_CPT_DiagUT_Event_EventParameter_DTC_0xd56316_Event</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_Dem</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AUTOSAR_Dem/SwComponentTypes/Dem/Event_DTC_0xd56316_Event</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_DiagUT</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/Composition/DiagUT/SwComponentTypes/DiagUT/Event_EventParameter_DTC_0xd56316_Event</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_Dem_Event_DTC_0xe00141_Event_CPT_DiagUT_Event_EventParameter_DTC_0xe00141_Event</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_Dem</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AUTOSAR_Dem/SwComponentTypes/Dem/Event_DTC_0xe00141_Event</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_DiagUT</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/Composition/DiagUT/SwComponentTypes/DiagUT/Event_EventParameter_DTC_0xe00141_Event</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_Dem_Event_DTC_0xe00142_Event_CPT_DiagUT_Event_EventParameter_DTC_0xe00142_Event</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_Dem</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AUTOSAR_Dem/SwComponentTypes/Dem/Event_DTC_0xe00142_Event</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_DiagUT</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/Composition/DiagUT/SwComponentTypes/DiagUT/Event_EventParameter_DTC_0xe00142_Event</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_Dem_Event_DTC_0xe26200_Event_CPT_DiagUT_Event_EventParameter_DTC_0xe26200_Event</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_Dem</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AUTOSAR_Dem/SwComponentTypes/Dem/Event_DTC_0xe26200_Event</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_DiagUT</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/Composition/DiagUT/SwComponentTypes/DiagUT/Event_EventParameter_DTC_0xe26200_Event</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_Dem_EventStatus_DTC_0x000001_Event_CPT_DiagUT_EventStatus_EventParameter_DTC_0x000001_Event</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_Dem</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AUTOSAR_Dem/SwComponentTypes/Dem/EventStatus_DTC_0x000001_Event</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_DiagUT</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/Composition/DiagUT/SwComponentTypes/DiagUT/EventStatus_EventParameter_DTC_0x000001_Event</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_Dem_EventStatus_DTC_0xc07388_Event_CPT_DiagUT_EventStatus_EventParameter_DTC_0xc07388_Event</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_Dem</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AUTOSAR_Dem/SwComponentTypes/Dem/EventStatus_DTC_0xc07388_Event</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_DiagUT</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/Composition/DiagUT/SwComponentTypes/DiagUT/EventStatus_EventParameter_DTC_0xc07388_Event</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_Dem_EventStatus_DTC_0xc12687_Event_CPT_DiagUT_EventStatus_EventParameter_DTC_0xc12687_Event</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_Dem</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AUTOSAR_Dem/SwComponentTypes/Dem/EventStatus_DTC_0xc12687_Event</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_DiagUT</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/Composition/DiagUT/SwComponentTypes/DiagUT/EventStatus_EventParameter_DTC_0xc12687_Event</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_Dem_EventStatus_DTC_0xc14587_Event_CPT_DiagUT_EventStatus_EventParameter_DTC_0xc14587_Event</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_Dem</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AUTOSAR_Dem/SwComponentTypes/Dem/EventStatus_DTC_0xc14587_Event</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_DiagUT</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/Composition/DiagUT/SwComponentTypes/DiagUT/EventStatus_EventParameter_DTC_0xc14587_Event</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_Dem_EventStatus_DTC_0xc22a87_Event_CPT_DiagUT_EventStatus_EventParameter_DTC_0xc22a87_Event</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_Dem</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AUTOSAR_Dem/SwComponentTypes/Dem/EventStatus_DTC_0xc22a87_Event</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_DiagUT</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/Composition/DiagUT/SwComponentTypes/DiagUT/EventStatus_EventParameter_DTC_0xc22a87_Event</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_Dem_EventStatus_DTC_0xc41487_Event_CPT_DiagUT_EventStatus_EventParameter_DTC_0xc41487_Event</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_Dem</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AUTOSAR_Dem/SwComponentTypes/Dem/EventStatus_DTC_0xc41487_Event</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_DiagUT</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/Composition/DiagUT/SwComponentTypes/DiagUT/EventStatus_EventParameter_DTC_0xc41487_Event</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_Dem_EventStatus_DTC_0xd56217_Event_CPT_DiagUT_EventStatus_EventParameter_DTC_0xd56217_Event</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_Dem</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AUTOSAR_Dem/SwComponentTypes/Dem/EventStatus_DTC_0xd56217_Event</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_DiagUT</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/Composition/DiagUT/SwComponentTypes/DiagUT/EventStatus_EventParameter_DTC_0xd56217_Event</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_Dem_EventStatus_DTC_0xd56316_Event_CPT_DiagUT_EventStatus_EventParameter_DTC_0xd56316_Event</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_Dem</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AUTOSAR_Dem/SwComponentTypes/Dem/EventStatus_DTC_0xd56316_Event</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_DiagUT</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/Composition/DiagUT/SwComponentTypes/DiagUT/EventStatus_EventParameter_DTC_0xd56316_Event</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_Dem_EventStatus_DTC_0xe00141_Event_CPT_DiagUT_EventStatus_EventParameter_DTC_0xe00141_Event</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_Dem</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AUTOSAR_Dem/SwComponentTypes/Dem/EventStatus_DTC_0xe00141_Event</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_DiagUT</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/Composition/DiagUT/SwComponentTypes/DiagUT/EventStatus_EventParameter_DTC_0xe00141_Event</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_Dem_EventStatus_DTC_0xe00142_Event_CPT_DiagUT_EventStatus_EventParameter_DTC_0xe00142_Event</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_Dem</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AUTOSAR_Dem/SwComponentTypes/Dem/EventStatus_DTC_0xe00142_Event</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_DiagUT</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/Composition/DiagUT/SwComponentTypes/DiagUT/EventStatus_EventParameter_DTC_0xe00142_Event</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_Dem_EventStatus_DTC_0xe26200_Event_CPT_DiagUT_EventStatus_EventParameter_DTC_0xe26200_Event</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_Dem</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AUTOSAR_Dem/SwComponentTypes/Dem/EventStatus_DTC_0xe26200_Event</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_DiagUT</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/Composition/DiagUT/SwComponentTypes/DiagUT/EventStatus_EventParameter_DTC_0xe26200_Event</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_Dem_EvtInfo_DTC_0x000001_Event_CPT_DiagUT_EvtInfo_EventParameter_DTC_0x000001_Event</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_Dem</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AUTOSAR_Dem/SwComponentTypes/Dem/EvtInfo_DTC_0x000001_Event</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_DiagUT</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/Composition/DiagUT/SwComponentTypes/DiagUT/EvtInfo_EventParameter_DTC_0x000001_Event</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_Dem_EvtInfo_DTC_0x0d0400_CAN_Network_ETAS_BusOff_Event_CPT_DiagUT_EvtInfo_EventParameter_DTC_0x0d0400_CAN_Network_ETAS_B</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_Dem</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AUTOSAR_Dem/SwComponentTypes/Dem/EvtInfo_DTC_0x0d0400_CAN_Network_ETAS_BusOff_Event</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_DiagUT</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/Composition/DiagUT/SwComponentTypes/DiagUT/EvtInfo_EventParameter_DTC_0x0d0400_CAN_Network_ETAS_BusOff_Event</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_Dem_EvtInfo_DTC_0xc07388_Event_CPT_DiagUT_EvtInfo_EventParameter_DTC_0xc07388_Event</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_Dem</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AUTOSAR_Dem/SwComponentTypes/Dem/EvtInfo_DTC_0xc07388_Event</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_DiagUT</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/Composition/DiagUT/SwComponentTypes/DiagUT/EvtInfo_EventParameter_DTC_0xc07388_Event</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_Dem_EvtInfo_DTC_0xc12687_Event_CPT_DiagUT_EvtInfo_EventParameter_DTC_0xc12687_Event</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_Dem</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AUTOSAR_Dem/SwComponentTypes/Dem/EvtInfo_DTC_0xc12687_Event</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_DiagUT</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/Composition/DiagUT/SwComponentTypes/DiagUT/EvtInfo_EventParameter_DTC_0xc12687_Event</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_Dem_EvtInfo_DTC_0xc14587_Event_CPT_DiagUT_EvtInfo_EventParameter_DTC_0xc14587_Event</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_Dem</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AUTOSAR_Dem/SwComponentTypes/Dem/EvtInfo_DTC_0xc14587_Event</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_DiagUT</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/Composition/DiagUT/SwComponentTypes/DiagUT/EvtInfo_EventParameter_DTC_0xc14587_Event</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_Dem_EvtInfo_DTC_0xc22a87_Event_CPT_DiagUT_EvtInfo_EventParameter_DTC_0xc22a87_Event</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_Dem</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AUTOSAR_Dem/SwComponentTypes/Dem/EvtInfo_DTC_0xc22a87_Event</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_DiagUT</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/Composition/DiagUT/SwComponentTypes/DiagUT/EvtInfo_EventParameter_DTC_0xc22a87_Event</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_Dem_EvtInfo_DTC_0xc41487_Event_CPT_DiagUT_EvtInfo_EventParameter_DTC_0xc41487_Event</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_Dem</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AUTOSAR_Dem/SwComponentTypes/Dem/EvtInfo_DTC_0xc41487_Event</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_DiagUT</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/Composition/DiagUT/SwComponentTypes/DiagUT/EvtInfo_EventParameter_DTC_0xc41487_Event</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_Dem_EvtInfo_DTC_0xd56217_Event_CPT_DiagUT_EvtInfo_EventParameter_DTC_0xd56217_Event</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_Dem</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AUTOSAR_Dem/SwComponentTypes/Dem/EvtInfo_DTC_0xd56217_Event</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_DiagUT</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/Composition/DiagUT/SwComponentTypes/DiagUT/EvtInfo_EventParameter_DTC_0xd56217_Event</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_Dem_EvtInfo_DTC_0xd56316_Event_CPT_DiagUT_EvtInfo_EventParameter_DTC_0xd56316_Event</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_Dem</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AUTOSAR_Dem/SwComponentTypes/Dem/EvtInfo_DTC_0xd56316_Event</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_DiagUT</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/Composition/DiagUT/SwComponentTypes/DiagUT/EvtInfo_EventParameter_DTC_0xd56316_Event</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_Dem_EvtInfo_DTC_0xe00141_Event_CPT_DiagUT_EvtInfo_EventParameter_DTC_0xe00141_Event</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_Dem</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AUTOSAR_Dem/SwComponentTypes/Dem/EvtInfo_DTC_0xe00141_Event</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_DiagUT</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/Composition/DiagUT/SwComponentTypes/DiagUT/EvtInfo_EventParameter_DTC_0xe00141_Event</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_Dem_EvtInfo_DTC_0xe00142_Event_CPT_DiagUT_EvtInfo_EventParameter_DTC_0xe00142_Event</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_Dem</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AUTOSAR_Dem/SwComponentTypes/Dem/EvtInfo_DTC_0xe00142_Event</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_DiagUT</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/Composition/DiagUT/SwComponentTypes/DiagUT/EvtInfo_EventParameter_DTC_0xe00142_Event</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_Dem_EvtInfo_DTC_0xe26200_Event_CPT_DiagUT_EvtInfo_EventParameter_DTC_0xe26200_Event</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_Dem</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AUTOSAR_Dem/SwComponentTypes/Dem/EvtInfo_DTC_0xe26200_Event</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_DiagUT</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/Composition/DiagUT/SwComponentTypes/DiagUT/EvtInfo_EventParameter_DTC_0xe26200_Event</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_Dem_StorageCond_DemStorageCondition_CPT_DiagUT_StorageCond_DemStorageCondition_0</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_Dem</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AUTOSAR_Dem/SwComponentTypes/Dem/StorageCond_DemStorageCondition</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_DiagUT</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/Composition/DiagUT/SwComponentTypes/DiagUT/StorageCond_DemStorageCondition_0</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_Dem_ControlEventAvailable_DTC_0x000001_Event_CPT_DiagUT_ControlEventAvailable_EventParameter_DTC_0x000001_Event</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_Dem</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AUTOSAR_Dem/SwComponentTypes/Dem/ControlEventAvailable_DTC_0x000001_Event</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_DiagUT</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/Composition/DiagUT/SwComponentTypes/DiagUT/ControlEventAvailable_EventParameter_DTC_0x000001_Event</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_Dem_ControlEventAvailable_DTC_0xc07388_Event_CPT_DiagUT_ControlEventAvailable_EventParameter_DTC_0xc07388_Event</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_Dem</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AUTOSAR_Dem/SwComponentTypes/Dem/ControlEventAvailable_DTC_0xc07388_Event</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_DiagUT</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/Composition/DiagUT/SwComponentTypes/DiagUT/ControlEventAvailable_EventParameter_DTC_0xc07388_Event</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_DiagUT_RoutineServices_DcmDspRoutine_Routine_Control_203_CPT_Dcm_RoutineServices_Routine_Control_203</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_DiagUT</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Composition/DiagUT/SwComponentTypes/DiagUT/RoutineServices_DcmDspRoutine_Routine_Control_203</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_Dcm</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AUTOSAR_Dcm/SwComponentTypes/Dcm/RoutineServices_Routine_Control_203</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_DiagUT_RoutineServices_DcmDspRoutine_Routine_Control_ABFF_CPT_Dcm_RoutineServices_Routine_Control_ABFF</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_DiagUT</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Composition/DiagUT/SwComponentTypes/DiagUT/RoutineServices_DcmDspRoutine_Routine_Control_ABFF</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_Dcm</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AUTOSAR_Dcm/SwComponentTypes/Dcm/RoutineServices_Routine_Control_ABFF</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_DiagUT_RoutineServices_DcmDspRoutine_X_Routine_Control_ABFE_CPT_Dcm_RoutineServices_X_Routine_Control_ABFE</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_DiagUT</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Composition/DiagUT/SwComponentTypes/DiagUT/RoutineServices_DcmDspRoutine_X_Routine_Control_ABFE</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_Dcm</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AUTOSAR_Dcm/SwComponentTypes/Dcm/RoutineServices_X_Routine_Control_ABFE</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_Dcm_Pp_DcmCommunicationControl_Can_Network_ETAS_Channel_Can_Network_ETAS_CPT_DiagUT_RR_DcmCommunicationControl_ComMChann</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_Dcm</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AUTOSAR_Dcm/SwComponentTypes/Dcm/Pp_DcmCommunicationControl_Can_Network_ETAS_Channel_Can_Network_ETAS</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_DiagUT</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/Composition/DiagUT/SwComponentTypes/DiagUT/RR_DcmCommunicationControl_ComMChannel_Can_Network_ETAS_Channel</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_Dem_GeneralEvtInfo_CPT_DiagUT_GeneralEvtInfo</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_Dem</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AUTOSAR_Dem/SwComponentTypes/Dem/GeneralEvtInfo</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_DiagUT</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/Composition/DiagUT/SwComponentTypes/DiagUT/GeneralEvtInfo</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_DiagUT_CBClrEvt_EventParameter_DTC_0xc07388_Event_CPT_Dem_CBClrEvt_DTC_0xc07388_Event</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_DiagUT</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Composition/DiagUT/SwComponentTypes/DiagUT/CBClrEvt_EventParameter_DTC_0xc07388_Event</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_Dem</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AUTOSAR_Dem/SwComponentTypes/Dem/CBClrEvt_DTC_0xc07388_Event</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_WdgM_mode_WdgM_SE1_CPT_WdgMUT_RP_WdgM_WdgM_SE1_Mode</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_WdgM</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AUTOSAR_WdgM/WdgM/mode_WdgM_SE1</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Composition/Composition_SysCluster/CPT_WdgMUT</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ETAS_BIP/WdgMUT/RP_WdgM_WdgM_SE1_Mode</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+          </CONNECTORS>
+        </COMPOSITION-SW-COMPONENT-TYPE>
+      </ELEMENTS>
+      <AR-PACKAGES>
+        <AR-PACKAGE UUID="02fb22e7-04f6-4c4d-b586-9ed08e37f31c">
+          <SHORT-NAME>PortInterfaceMappingSets</SHORT-NAME>
+          <ELEMENTS>
+            <PORT-INTERFACE-MAPPING-SET UUID="3a9fa3e2-da87-4dfc-a2d0-f6a31498fc8e">
+              <SHORT-NAME>PIMSet_Composition</SHORT-NAME>
+            </PORT-INTERFACE-MAPPING-SET>
+          </ELEMENTS>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>
+

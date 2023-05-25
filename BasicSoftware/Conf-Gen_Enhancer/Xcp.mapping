@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="ASCII"?>
+<MappingMetaModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns="http://www.bosch.com/autosartool/m2m/model" transformationName="Conf-Gen Enhancer">
+  <mappingStructures name="Xcp">
+    <order orderId="Xcp_1" name="Xcp">
+      <order orderId="Xcp_2" name="XcpGeneral"/>
+      <order orderId="Xcp_3" name="XcpConfig">
+        <order orderId="Xcp_4" name="XcpTransportLayer"/>
+      </order>
+    </order>
+  </mappingStructures>
+  <mappings mappingId="Mapping_Xcp_1" mappingType="PRIMITIVE_ATTRIBUTE" defaultValue="0.01">
+    <targetItem identifier="XcpEthMainFunctionPeriod"/>
+    <orderDetails orderId="Xcp_2" order="1"/>
+  </mappings>
+  <mappings mappingId="Mapping_Xcp_2" mappingType="PRIMITIVE_ATTRIBUTE" defaultValue="0.01">
+    <targetItem identifier="XcpMainFunctionPeriod"/>
+    <orderDetails orderId="Xcp_2" order="2"/>
+  </mappings>
+  <mappings mappingId="Mapping_Xcp_3" mappingType="PRIMITIVE_ATTRIBUTE" defaultValue="true">
+    <targetItem identifier="XcpDevErrorDetect"/>
+    <orderDetails orderId="Xcp_2" order="3"/>
+  </mappings>
+  <mappings mappingId="Mapping_Xcp_4" mappingType="PRIMITIVE_ATTRIBUTE" defaultValue="true">
+    <targetItem identifier="XcpBlockTransferDownload"/>
+    <orderDetails orderId="Xcp_2" order="4"/>
+  </mappings>
+  <mappings mappingId="Mapping_Xcp_5" mappingType="PRIMITIVE_ATTRIBUTE" defaultValue="true">
+    <targetItem identifier="XcpBlockTransferUpload"/>
+    <orderDetails orderId="Xcp_2" order="5"/>
+  </mappings>
+  <mappings mappingId="Mapping_Xcp_6" mappingType="PRIMITIVE_ATTRIBUTE" defaultValue="true">
+    <targetItem identifier="XcpCalibrationCal"/>
+    <orderDetails orderId="Xcp_2" order="6"/>
+  </mappings>
+  <mappings mappingId="Mapping_Xcp_7" mappingType="PRIMITIVE_ATTRIBUTE" defaultValue="true">
+    <targetItem identifier="XcpCommandChecksum"/>
+    <orderDetails orderId="Xcp_2" order="7"/>
+  </mappings>
+  <mappings mappingId="Mapping_Xcp_8" mappingType="PRIMITIVE_ATTRIBUTE" defaultValue="true">
+    <targetItem identifier="XcpCommandReadDaq"/>
+    <orderDetails orderId="Xcp_2" order="8"/>
+  </mappings>
+  <mappings mappingId="Mapping_Xcp_9" mappingType="PRIMITIVE_ATTRIBUTE" defaultValue="true">
+    <targetItem identifier="XcpCommandsGetDaqInfo"/>
+    <orderDetails orderId="Xcp_2" order="9"/>
+  </mappings>
+  <mappings mappingId="Mapping_Xcp_10" mappingType="PRIMITIVE_ATTRIBUTE" defaultValue="1024">
+    <targetItem identifier="XcpDaqMemoryLimit"/>
+    <orderDetails orderId="Xcp_2" order="10"/>
+  </mappings>
+  <mappings mappingId="Mapping_Xcp_11" mappingType="PRIMITIVE_ATTRIBUTE" defaultValue="true">
+    <targetItem identifier="XcpEventChannelScheduling"/>
+    <orderDetails orderId="Xcp_2" order="11"/>
+  </mappings>
+  <mappings mappingId="Mapping_Xcp_12" mappingType="PRIMITIVE_ATTRIBUTE" defaultValue="CSMOSAR">
+    <targetItem identifier="XcpProductLine"/>
+    <orderDetails orderId="Xcp_2" order="12"/>
+  </mappings>
+  <mappings mappingId="Mapping_Xcp_13" mappingType="PRIMITIVE_ATTRIBUTE" defaultValue="true">
+    <targetItem identifier="XcpSeedAndKey"/>
+    <orderDetails orderId="Xcp_2" order="13"/>
+  </mappings>
+  <mappings mappingId="Mapping_Xcp_14" mappingType="PRIMITIVE_ATTRIBUTE" defaultValue="XcpSeedNKey.dll">
+    <targetItem identifier="XcpSeedAndKeyExternalFunction"/>
+    <orderDetails orderId="Xcp_2" order="14"/>
+  </mappings>
+  <mappings mappingId="Mapping_Xcp_15" mappingType="PRIMITIVE_ATTRIBUTE" defaultValue="true">
+    <targetItem identifier="XcpSynchronousDataAcquisitionDaq"/>
+    <orderDetails orderId="Xcp_2" order="15"/>
+  </mappings>
+  <mappings mappingId="Mapping_Xcp_16" mappingType="PRIMITIVE_ATTRIBUTE" defaultValue="1">
+    <targetItem identifier="XcpTimestampTicks"/>
+    <orderDetails orderId="Xcp_2" order="16"/>
+  </mappings>
+  <mappings mappingId="Mapping_Xcp_17" mappingType="PRIMITIVE_ATTRIBUTE" defaultValue="TIMESTAMP_UNIT_1MS">
+    <targetItem identifier="XcpTimestampUnit"/>
+    <orderDetails orderId="Xcp_2" order="17"/>
+  </mappings>
+  <mappings mappingId="Mapping_Xcp_18" mappingType="PRIMITIVE_ATTRIBUTE" defaultValue="true">
+    <targetItem identifier="XcpUploadDownloadMemoryAccessByAppl"/>
+    <orderDetails orderId="Xcp_2" order="18"/>
+  </mappings>
+  <mappings mappingId="Mapping_Xcp_19" mappingType="PRIMITIVE_ATTRIBUTE" defaultValue="VERSION_1_2">
+    <targetItem identifier="XcpVersion"/>
+    <orderDetails orderId="Xcp_2" order="19"/>
+  </mappings>
+  <mappings mappingId="Mapping_Xcp_20" mappingType="PRIMITIVE_ATTRIBUTE" defaultValue="255" condition="ref($this.XcpTransportLayerType).equals('ETHERNET_UDP')">
+    <targetItem identifier="XcpMaxDto"/>
+    <orderDetails orderId="Xcp_4" order="1"/>
+  </mappings>
+  <mappings mappingId="Mapping_Xcp_21" mappingType="PRIMITIVE_ATTRIBUTE" defaultValue="OVERLOAD_INDICATION_EVENT">
+    <targetItem identifier="XcpDaqOverloadIndication"/>
+    <orderDetails orderId="Xcp_4" order="2"/>
+  </mappings>
+  <mappings mappingId="Mapping_Xcp_22" mappingType="PRIMITIVE_ATTRIBUTE" defaultValue="TWO_BYTE">
+    <targetItem identifier="XcpTimestampType"/>
+    <orderDetails orderId="Xcp_4" order="3"/>
+  </mappings>
+  <mappings mappingId="Mapping_Xcp_23" mappingType="PRIMITIVE_ATTRIBUTE" defaultValue="ABSOLUTE">
+    <targetItem identifier="XcpIdentificationFieldType"/>
+    <orderDetails orderId="Xcp_4" order="4"/>
+  </mappings>
+  <mappings mappingId="Mapping_Xcp_24" mappingType="PRIMITIVE_ATTRIBUTE" defaultValue="255" condition="ref($this.XcpTransportLayerType).equals('ETHERNET_UDP')">
+    <targetItem identifier="XcpMaxCto"/>
+    <orderDetails orderId="Xcp_4" order="5"/>
+  </mappings>
+  <mappings mappingId="Mapping_Xcp_25" mappingType="PRIMITIVE_ATTRIBUTE" condition="ref($this.XcpTransportLayerType).equals('ETHERNET_TCP')">
+    <targetItem identifier="XcpMaxDto"/>
+    <orderDetails orderId="Xcp_4" order="6"/>
+  </mappings>
+  <mappings mappingId="Mapping_Xcp_26" mappingType="PRIMITIVE_ATTRIBUTE" condition="ref($this.XcpTransportLayerType).equals('ETHERNET_TCP')">
+    <targetItem identifier="XcpMaxCto"/>
+    <orderDetails orderId="Xcp_4" order="7"/>
+  </mappings>
+  <mappings mappingId="Mapping_Xcp_27" mappingType="PRIMITIVE_ATTRIBUTE" defaultValue="true">
+    <targetItem identifier="XcpPageSwitchingPag"/>
+    <orderDetails orderId="Xcp_2" order="20"/>
+  </mappings>
+</MappingMetaModel>

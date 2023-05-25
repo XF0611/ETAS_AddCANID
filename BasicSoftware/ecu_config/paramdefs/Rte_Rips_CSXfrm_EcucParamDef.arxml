@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00044.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE>
+      <SHORT-NAME>AUTOSAR_Rte_Rips_CSXfrm</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE>
+          <SHORT-NAME>EcucModuleDefs</SHORT-NAME>
+          <ELEMENTS>
+            <ECUC-MODULE-DEF>
+              <SHORT-NAME>Rte_Rips_CSXfrm</SHORT-NAME>
+              <DESC>
+                <L-2 L="EN">Configuration of the RIPS module to support Inter-ECU C/S Communication with Transformers.</L-2>
+              </DESC>
+              <CATEGORY>VENDOR_SPECIFIC_MODULE_DEFINITION</CATEGORY>
+              <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+              <POST-BUILD-VARIANT-SUPPORT>false</POST-BUILD-VARIANT-SUPPORT>
+              <SUPPORTED-CONFIG-VARIANTS>
+                <SUPPORTED-CONFIG-VARIANT>VARIANT-PRE-COMPILE</SUPPORTED-CONFIG-VARIANT>
+              </SUPPORTED-CONFIG-VARIANTS>
+              <CONTAINERS>
+                <ECUC-PARAM-CONF-CONTAINER-DEF>
+                  <SHORT-NAME>RteRipsPluginProps</SHORT-NAME>
+                  <DESC>
+                    <L-2 L="EN">This container defines the identity of the Rte Implementation Plug-in and provides the RTE relevant parameters of the Rte Implementation Plug-in.</L-2>
+                  </DESC>
+                  <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                  <DESTINATION-URI-REFS>
+                    <DESTINATION-URI-REF DEST="ECUC-DESTINATION-URI-DEF">/AUTOSAR/EcucDestinationUriDefSets/RteRipsUriDefSet/RteRipsPlugin</DESTINATION-URI-REF>
+                  </DESTINATION-URI-REFS>
+                  <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                  <PARAMETERS>
+                    <ECUC-BOOLEAN-PARAM-DEF UUID="ECUC:cf86cf97-8cda-40c8-b23e-8d57afcc1b1a">
+                       <SHORT-NAME>RtePluginSupportsIReadIWrite</SHORT-NAME>
+                       <DESC>
+                         <L-2 L="EN">Denotes if or if not the plug-in supports the Rte_Rips_IRead/IWrite macros for primitive/complex data.</L-2>
+                       </DESC>
+                       <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_Rte_79002</RELATED-TRACE-ITEM-REF>
+                       <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                       <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                       <SCOPE>LOCAL</SCOPE>
+                       <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                       <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                       <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                       <DEFAULT-VALUE>false</DEFAULT-VALUE>
+                     </ECUC-BOOLEAN-PARAM-DEF>
+                     <ECUC-ENUMERATION-PARAM-DEF UUID="ECUC:36dd9691-7575-449b-91c5-9cc966eb3f77">
+                       <SHORT-NAME>RteRipsGlobalCopyInstantiationPolicy</SHORT-NAME>
+                       <DESC>
+                         <L-2 L="EN">Globally enables or disables the support for Rte Implementation Plug-Ins (RIPS)</L-2>
+                         <L-2 L="EN">Tags: atp.Status=draft</L-2>
+                       </DESC>
+                       <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_Rte_79001</RELATED-TRACE-ITEM-REF>
+                       <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                       <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                       <SCOPE>LOCAL</SCOPE>
+                       <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                       <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                       <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                       <DEFAULT-VALUE>RTE_RIPS_INSTANTIATION_BY_RTE</DEFAULT-VALUE>
+                       <LITERALS>
+                         <ECUC-ENUMERATION-LITERAL-DEF UUID="ECUC:0c11e729-cd9e-84ea-4c6c-7821d4e46513">
+                           <SHORT-NAME>RTE_RIPS_INSTANTIATION_BY_PLUGIN</SHORT-NAME>
+                           <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                         </ECUC-ENUMERATION-LITERAL-DEF>
+                         <ECUC-ENUMERATION-LITERAL-DEF UUID="ECUC:3bafee16-2876-8b5d-3c19-3bf2f1cfcb2c">
+                           <SHORT-NAME>RTE_RIPS_INSTANTIATION_BY_RTE</SHORT-NAME>
+                           <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                         </ECUC-ENUMERATION-LITERAL-DEF>
+                       </LITERALS>
+                     </ECUC-ENUMERATION-PARAM-DEF>
+                    <ECUC-BOOLEAN-PARAM-DEF>
+                      <SHORT-NAME>RtePluginSupportsInvokeReturnResult</SHORT-NAME>
+                      <DESC>
+                        <L-2 L="EN">Denotes if or if not the plug-in supports the Rte_Rips_Invoke/ReturnResult APIs for (a)synchronous C/S Communication.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <SCOPE>LOCAL</SCOPE>
+                      <ORIGIN>RB</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <DEFAULT-VALUE>false</DEFAULT-VALUE>
+                    </ECUC-BOOLEAN-PARAM-DEF>
+                    <ECUC-BOOLEAN-PARAM-DEF>
+                      <SHORT-NAME>RtePluginSupportsTimoutHandling</SHORT-NAME>
+                      <DESC>
+                        <L-2 L="EN">Denotes if or if not the plug-in supports the (a)synchronous C/S Data Transformation via LDCOM_TP.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <SCOPE>LOCAL</SCOPE>
+                      <ORIGIN>RB</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <DEFAULT-VALUE>false</DEFAULT-VALUE>
+                    </ECUC-BOOLEAN-PARAM-DEF>
+                    <ECUC-BOOLEAN-PARAM-DEF>
+                      <SHORT-NAME>RtePluginSupportsLdComTP</SHORT-NAME>
+                      <DESC>
+                        <L-2 L="EN">Denotes if or if not the plug-in supports the (a)synchronous C/S Data Transformation via LDCOM_TP.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <SCOPE>LOCAL</SCOPE>
+                      <ORIGIN>RB</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <DEFAULT-VALUE>false</DEFAULT-VALUE>
+                    </ECUC-BOOLEAN-PARAM-DEF>
+                    <ECUC-BOOLEAN-PARAM-DEF>
+                      <SHORT-NAME>RtePluginSupportsLdComIF</SHORT-NAME>
+                      <DESC>
+                        <L-2 L="EN">Denotes if or if not the plug-in supports the (a)synchronous C/S Data Transformation via LDCOM_IF.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <SCOPE>LOCAL</SCOPE>
+                      <ORIGIN>RB</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <DEFAULT-VALUE>false</DEFAULT-VALUE>
+                    </ECUC-BOOLEAN-PARAM-DEF>
+                    <ECUC-ENUMERATION-PARAM-DEF UUID="ECUC:36dd9691-7575-449b-91c5-9cc966eb3f77">
+                       <SHORT-NAME>RtePluginCallbackMemMapPolicy</SHORT-NAME>
+                       <DESC>
+                         <L-2 L="EN">Globally enables or disables the support for Rte Implementation Plug-Ins (RIPS)</L-2>
+                       </DESC>
+                       <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_Rte_79001</RELATED-TRACE-ITEM-REF>
+                       <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                       <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                       <SCOPE>LOCAL</SCOPE>
+                       <ORIGIN>RB</ORIGIN>
+                       <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                       <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                       <DEFAULT-VALUE>RTE_RIPS_SIGNAL_BASED_MEMMAP_ENABLED</DEFAULT-VALUE>
+                       <LITERALS>
+                         <ECUC-ENUMERATION-LITERAL-DEF>
+                           <SHORT-NAME>RTE_RIPS_SIGNAL_BASED_MEMMAP_ENABLED</SHORT-NAME>
+                           <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                         </ECUC-ENUMERATION-LITERAL-DEF>
+                         <ECUC-ENUMERATION-LITERAL-DEF>
+                           <SHORT-NAME>RTE_RIPS_SIGNAL_BASED_MEMMAP_DISABLED</SHORT-NAME>
+                           <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                         </ECUC-ENUMERATION-LITERAL-DEF>
+                       </LITERALS>
+                     </ECUC-ENUMERATION-PARAM-DEF>
+                  </PARAMETERS>
+                </ECUC-PARAM-CONF-CONTAINER-DEF>
+                <ECUC-PARAM-CONF-CONTAINER-DEF>
+                  <SHORT-NAME>RteRipsPluginFillFlushRoutine</SHORT-NAME>
+                  <DESTINATION-URI-REFS>
+                    <DESTINATION-URI-REF DEST="ECUC-DESTINATION-URI-DEF">/AUTOSAR/EcucDestinationUriDefSets/RteRipsUriDefSet/RteRipsPluginFillFlushRoutine</DESTINATION-URI-REF>
+                  </DESTINATION-URI-REFS>
+		<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                <UPPER-MULTIPLICITY>*</UPPER-MULTIPLICITY>
+                  <PARAMETERS>
+                          <ECUC-ENUMERATION-PARAM-DEF UUID="ECUC:a603e53b-750c-44d9-9a4e-1dde1cfcf212">
+                            <SHORT-NAME>RteRipsModeDisablingHandling</SHORT-NAME>
+                            <DESC>
+                              <L-2 L="EN">This parameter configures whether mode disabling dependencies are considered for the invocation of Rte_Rips_FillFlushRoutines.</L-2>
+                            </DESC>
+                            <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_Rte_79004</RELATED-TRACE-ITEM-REF>
+                            <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                            <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                            <SCOPE>LOCAL</SCOPE>
+                            <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                            <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                            <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                            <LITERALS>
+                              <ECUC-ENUMERATION-LITERAL-DEF UUID="ECUC:37effb69-0aba-908f-4a2a-70f8b557b791">
+                                <SHORT-NAME>RTE_RIPS_CONSIDER_MODE_DISABLINGS</SHORT-NAME>
+                                <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                              </ECUC-ENUMERATION-LITERAL-DEF>
+                              <ECUC-ENUMERATION-LITERAL-DEF UUID="ECUC:b85b3d32-4206-90c4-365c-2bde3dea8e96">
+                                <SHORT-NAME>RTE_RIPS_IGNORE_MODE_DISABLINGS</SHORT-NAME>
+                                <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                              </ECUC-ENUMERATION-LITERAL-DEF>
+                            </LITERALS>
+                          </ECUC-ENUMERATION-PARAM-DEF>
+                          <ECUC-ENUMERATION-PARAM-DEF UUID="ECUC:fc058c69-870b-4a9d-bf00-7983619badff">
+                            <SHORT-NAME>RteRipsOsSchedulePoint</SHORT-NAME>
+                            <DESC>
+                              <L-2 L="EN">Introduce a schedule point by explicitly calling Os Schedule service after the execution of the Rte_Rips_FillFlushRoutine.</L-2>
+                            </DESC>
+                            <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_Rte_79006</RELATED-TRACE-ITEM-REF>
+                            <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                            <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                            <SCOPE>LOCAL</SCOPE>
+                            <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                            <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                            <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                            <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                            <LITERALS>
+                              <ECUC-ENUMERATION-LITERAL-DEF UUID="ECUC:2cf33dfa-534a-85d8-4494-db37834e1850">
+                                <SHORT-NAME>NONE</SHORT-NAME>
+                                <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                              </ECUC-ENUMERATION-LITERAL-DEF>
+                              <ECUC-ENUMERATION-LITERAL-DEF UUID="ECUC:7f949930-ea43-84fa-696c-347e24aefd2b">
+                                <SHORT-NAME>UNCONDITIONAL</SHORT-NAME>
+                                <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                              </ECUC-ENUMERATION-LITERAL-DEF>
+                            </LITERALS>
+                          </ECUC-ENUMERATION-PARAM-DEF>
+                          <!-- <ECUC-FUNCTION-NAME-DEF UUID="ECUC:67622bde-c28a-4493-9594-97906b9b7f88">
+                            <SHORT-NAME>RteRipsPluginFillFlushRoutineFncSymbol</SHORT-NAME>
+                            <DESC>
+                              <L-2 L="EN">C-Symbol of the Rte_Rips_FillFlushRoutine function.</L-2>
+                            </DESC>
+                            <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_Rte_79005</RELATED-TRACE-ITEM-REF>
+                            <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                            <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                            <SCOPE>LOCAL</SCOPE>
+                            <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                            <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                            <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                            <ECUC-FUNCTION-NAME-DEF-VARIANTS>
+                              <ECUC-FUNCTION-NAME-DEF-CONDITIONAL />
+                            </ECUC-FUNCTION-NAME-DEF-VARIANTS>
+                          </ECUC-FUNCTION-NAME-DEF> -->
+                          <ECUC-FUNCTION-NAME-DEF UUID="ECUC:67622bde-c28a-4493-9594-97906b9b7f88">
+                            <SHORT-NAME>RteRipsPluginFillFlushRoutineSymbol</SHORT-NAME>
+                            <DESC>
+                              <L-2 L="EN">C-Symbol of the Rte_Rips_FillFlushRoutine function.</L-2>
+                            </DESC>
+                            <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_Rte_79005</RELATED-TRACE-ITEM-REF>
+                            <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                            <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                            <SCOPE>LOCAL</SCOPE>
+                            <ORIGIN>RB</ORIGIN>
+                            <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                            <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                            <ECUC-FUNCTION-NAME-DEF-VARIANTS>
+                              <ECUC-FUNCTION-NAME-DEF-CONDITIONAL />
+                            </ECUC-FUNCTION-NAME-DEF-VARIANTS>
+                          </ECUC-FUNCTION-NAME-DEF>
+                        </PARAMETERS>
+                </ECUC-PARAM-CONF-CONTAINER-DEF>
+                <ECUC-PARAM-CONF-CONTAINER-DEF>
+                  <SHORT-NAME>RteRipsInvocationHandler</SHORT-NAME>
+                  <DESTINATION-URI-REFS>
+                    <DESTINATION-URI-REF DEST="ECUC-DESTINATION-URI-DEF">/AUTOSAR/EcucDestinationUriDefSets/RteRipsUriDefSet/RteRipsInvocationHandler</DESTINATION-URI-REF>
+                  </DESTINATION-URI-REFS>
+                  <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                  <UPPER-MULTIPLICITY>*</UPPER-MULTIPLICITY>
+                  <SUB-CONTAINERS>
+                    <ECUC-PARAM-CONF-CONTAINER-DEF>
+                      <SHORT-NAME>RteRipsInvocationHandlerFnc</SHORT-NAME>
+                      <DESC>
+                        <L-2 L="EN">This container describes an invocation handler function implemented by an RTE Implementation Plug-In to handle the invocation of server runnables.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+                      <PARAMETERS>
+                        <ECUC-FUNCTION-NAME-DEF>
+                          <SHORT-NAME>RteRipsInvocationHandlerFncSymbol</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="EN">C-Symbol of the Rte_Rips_InvocationHandler function.</L-2>
+                          </DESC>
+                          <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_Rte_79008</RELATED-TRACE-ITEM-REF>
+                            <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                            <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <SCOPE>LOCAL</SCOPE>
+                          <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                          <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                          <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                          <ECUC-FUNCTION-NAME-DEF-VARIANTS>
+                            <ECUC-FUNCTION-NAME-DEF-CONDITIONAL />
+                          </ECUC-FUNCTION-NAME-DEF-VARIANTS>
+                        </ECUC-FUNCTION-NAME-DEF>
+                      </PARAMETERS>
+                    </ECUC-PARAM-CONF-CONTAINER-DEF>
+                  </SUB-CONTAINERS>
+                </ECUC-PARAM-CONF-CONTAINER-DEF>
+              </CONTAINERS>
+            </ECUC-MODULE-DEF>
+          </ELEMENTS>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>
+

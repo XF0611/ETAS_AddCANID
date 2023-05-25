@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<MEASURABLE-INFO xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="measurement.xsd">
+  <MEASURABLE-DATA>
+    <MEASURABLE-DATUM>
+      <SHORT-NAME>CPT_NvBlock_PRP_StoreAtShutdownBlock_ShutDownNvBlock</SHORT-NAME>
+      <INSTANCE-DATUM>
+        <SOFTWARE-COMPOSITION-REF>/ETAS_FlatView/SwComponentTypes/ETAS_FlatView</SOFTWARE-COMPOSITION-REF>
+        <TARGET-COMPONENT-PROTOTYPE-REF>/ETAS_FlatView/SwComponentTypes/ETAS_FlatView/CPT_NvBlock</TARGET-COMPONENT-PROTOTYPE-REF>
+        <PORT-PROTOTYPE-REF>/ETAS_BIP/NvBlock/PRP_StoreAtShutdownBlock</PORT-PROTOTYPE-REF>
+        <DATA-ELEMENT-PROTOTYPE-REF>/PortInterfaces/SRI_ShutDownNvBlock_ArrayBoolean_96/ShutDownNvBlock</DATA-ELEMENT-PROTOTYPE-REF>
+      </INSTANCE-DATUM>
+      <SYMBOL>
+        <NAME>Rte_RamBlk_NvBlock_NvBlockDescriptor_StoreAtShutdownBlock_ShutdownRamBlock</NAME>
+        <TYPE>VAR(Type_ArrayBoolean_96, RTE_DATA)</TYPE>
+      </SYMBOL>
+    </MEASURABLE-DATUM>
+    <MEASURABLE-DATUM>
+      <SHORT-NAME>CPT_NvBlock_PRP_StoreCyclicBlock_CyclicNvBlock</SHORT-NAME>
+      <INSTANCE-DATUM>
+        <SOFTWARE-COMPOSITION-REF>/ETAS_FlatView/SwComponentTypes/ETAS_FlatView</SOFTWARE-COMPOSITION-REF>
+        <TARGET-COMPONENT-PROTOTYPE-REF>/ETAS_FlatView/SwComponentTypes/ETAS_FlatView/CPT_NvBlock</TARGET-COMPONENT-PROTOTYPE-REF>
+        <PORT-PROTOTYPE-REF>/ETAS_BIP/NvBlock/PRP_StoreCyclicBlock</PORT-PROTOTYPE-REF>
+        <DATA-ELEMENT-PROTOTYPE-REF>/PortInterfaces/SRI_CyclicNvBlock_ArrayU8_1024/CyclicNvBlock</DATA-ELEMENT-PROTOTYPE-REF>
+      </INSTANCE-DATUM>
+      <SYMBOL>
+        <NAME>Rte_RamBlk_NvBlock_NvBlockDescriptor_StoreCyclicBlock_CyclicRamBlock</NAME>
+        <TYPE>VAR(Type_ArrayU8_1024, RTE_DATA)</TYPE>
+      </SYMBOL>
+    </MEASURABLE-DATUM>
+    <MEASURABLE-DATUM>
+      <SHORT-NAME>CPT_NvBlock_PRP_StoreImmediateBlock_ImmediateNvBlock</SHORT-NAME>
+      <INSTANCE-DATUM>
+        <SOFTWARE-COMPOSITION-REF>/ETAS_FlatView/SwComponentTypes/ETAS_FlatView</SOFTWARE-COMPOSITION-REF>
+        <TARGET-COMPONENT-PROTOTYPE-REF>/ETAS_FlatView/SwComponentTypes/ETAS_FlatView/CPT_NvBlock</TARGET-COMPONENT-PROTOTYPE-REF>
+        <PORT-PROTOTYPE-REF>/ETAS_BIP/NvBlock/PRP_StoreImmediateBlock</PORT-PROTOTYPE-REF>
+        <DATA-ELEMENT-PROTOTYPE-REF>/PortInterfaces/SRI_ImmediateNvBlock_ArrayU32_96/ImmediateNvBlock</DATA-ELEMENT-PROTOTYPE-REF>
+      </INSTANCE-DATUM>
+      <SYMBOL>
+        <NAME>Rte_RamBlk_NvBlock_NvBlockDescriptor_StoreImmediateBlock_ImmediateRamBlock</NAME>
+        <TYPE>VAR(Type_ArrayU32_96, RTE_DATA)</TYPE>
+      </SYMBOL>
+    </MEASURABLE-DATUM>
+    <MEASURABLE-DATUM>
+      <SHORT-NAME>CPT_NvMUT_PRP_CyclicNvBlock_CyclicNvBlock</SHORT-NAME>
+      <INSTANCE-DATUM>
+        <SOFTWARE-COMPOSITION-REF>/ETAS_FlatView/SwComponentTypes/ETAS_FlatView</SOFTWARE-COMPOSITION-REF>
+        <TARGET-COMPONENT-PROTOTYPE-REF>/ETAS_FlatView/SwComponentTypes/ETAS_FlatView/CPT_NvMUT</TARGET-COMPONENT-PROTOTYPE-REF>
+        <PORT-PROTOTYPE-REF>/ETAS_BIP/NvMUT/PRP_CyclicNvBlock</PORT-PROTOTYPE-REF>
+        <DATA-ELEMENT-PROTOTYPE-REF>/PortInterfaces/SRI_CyclicNvBlock_ArrayU8_1024/CyclicNvBlock</DATA-ELEMENT-PROTOTYPE-REF>
+      </INSTANCE-DATUM>
+      <SYMBOL>
+        <NAME>Rte_RamBlk_NvBlock_NvBlockDescriptor_StoreCyclicBlock_CyclicRamBlock</NAME>
+        <TYPE>VAR(Type_ArrayU8_1024, RTE_DATA)</TYPE>
+      </SYMBOL>
+    </MEASURABLE-DATUM>
+    <MEASURABLE-DATUM>
+      <SHORT-NAME>CPT_NvMUT_PRP_ImmediateNvBlock_ImmediateNvBlock</SHORT-NAME>
+      <INSTANCE-DATUM>
+        <SOFTWARE-COMPOSITION-REF>/ETAS_FlatView/SwComponentTypes/ETAS_FlatView</SOFTWARE-COMPOSITION-REF>
+        <TARGET-COMPONENT-PROTOTYPE-REF>/ETAS_FlatView/SwComponentTypes/ETAS_FlatView/CPT_NvMUT</TARGET-COMPONENT-PROTOTYPE-REF>
+        <PORT-PROTOTYPE-REF>/ETAS_BIP/NvMUT/PRP_ImmediateNvBlock</PORT-PROTOTYPE-REF>
+        <DATA-ELEMENT-PROTOTYPE-REF>/PortInterfaces/SRI_ImmediateNvBlock_ArrayU32_96/ImmediateNvBlock</DATA-ELEMENT-PROTOTYPE-REF>
+      </INSTANCE-DATUM>
+      <SYMBOL>
+        <NAME>Rte_RamBlk_NvBlock_NvBlockDescriptor_StoreImmediateBlock_ImmediateRamBlock</NAME>
+        <TYPE>VAR(Type_ArrayU32_96, RTE_DATA)</TYPE>
+      </SYMBOL>
+    </MEASURABLE-DATUM>
+    <MEASURABLE-DATUM>
+      <SHORT-NAME>CPT_NvMUT_PRP_ShutdownNvBlock_ShutDownNvBlock</SHORT-NAME>
+      <INSTANCE-DATUM>
+        <SOFTWARE-COMPOSITION-REF>/ETAS_FlatView/SwComponentTypes/ETAS_FlatView</SOFTWARE-COMPOSITION-REF>
+        <TARGET-COMPONENT-PROTOTYPE-REF>/ETAS_FlatView/SwComponentTypes/ETAS_FlatView/CPT_NvMUT</TARGET-COMPONENT-PROTOTYPE-REF>
+        <PORT-PROTOTYPE-REF>/ETAS_BIP/NvMUT/PRP_ShutdownNvBlock</PORT-PROTOTYPE-REF>
+        <DATA-ELEMENT-PROTOTYPE-REF>/PortInterfaces/SRI_ShutDownNvBlock_ArrayBoolean_96/ShutDownNvBlock</DATA-ELEMENT-PROTOTYPE-REF>
+      </INSTANCE-DATUM>
+      <SYMBOL>
+        <NAME>Rte_RamBlk_NvBlock_NvBlockDescriptor_StoreAtShutdownBlock_ShutdownRamBlock</NAME>
+        <TYPE>VAR(Type_ArrayBoolean_96, RTE_DATA)</TYPE>
+      </SYMBOL>
+    </MEASURABLE-DATUM>
+  </MEASURABLE-DATA>
+  <MEASURABLE-ARGS>
+    <MEASURABLE-ARG>
+      <SHORT-NAME>CPT_NmUT_modeLimitation_CounterValue</SHORT-NAME>
+      <INSTANCE-ARG>
+        <SOFTWARE-COMPOSITION-REF>/ETAS_FlatView/SwComponentTypes/ETAS_FlatView</SOFTWARE-COMPOSITION-REF>
+        <TARGET-COMPONENT-PROTOTYPE-REF>/ETAS_FlatView/SwComponentTypes/ETAS_FlatView/CPT_NmUT</TARGET-COMPONENT-PROTOTYPE-REF>
+        <PORT-PROTOTYPE-REF>/ETAS_BIP/NmUT/modeLimitation</PORT-PROTOTYPE-REF>
+        <ARGUMENT-REF>/AUTOSAR_ComM/PortInterfaces/ComM_ECUModeLimitation/ReadInhibitCounter/CounterValue</ARGUMENT-REF>
+      </INSTANCE-ARG>
+      <SYMBOL>
+        <NAME>Rte_Ms_000001</NAME>
+        <TYPE>VAR(uint16, RTE_DATA)</TYPE>
+      </SYMBOL>
+    </MEASURABLE-ARG>
+    <MEASURABLE-ARG>
+      <SHORT-NAME>CPT_NmUT_modeLimitation_Status</SHORT-NAME>
+      <INSTANCE-ARG>
+        <SOFTWARE-COMPOSITION-REF>/ETAS_FlatView/SwComponentTypes/ETAS_FlatView</SOFTWARE-COMPOSITION-REF>
+        <TARGET-COMPONENT-PROTOTYPE-REF>/ETAS_FlatView/SwComponentTypes/ETAS_FlatView/CPT_NmUT</TARGET-COMPONENT-PROTOTYPE-REF>
+        <PORT-PROTOTYPE-REF>/ETAS_BIP/NmUT/modeLimitation</PORT-PROTOTYPE-REF>
+        <ARGUMENT-REF>/AUTOSAR_ComM/PortInterfaces/ComM_ECUModeLimitation/SetECUGroupClassification/Status</ARGUMENT-REF>
+      </INSTANCE-ARG>
+      <SYMBOL>
+        <NAME>Rte_Ms_000002</NAME>
+        <TYPE>VAR(ComM_InhibitionStatusType, RTE_DATA)</TYPE>
+      </SYMBOL>
+    </MEASURABLE-ARG>
+    <MEASURABLE-ARG>
+      <SHORT-NAME>CPT_TstM_GetStackInfo_StackId</SHORT-NAME>
+      <INSTANCE-ARG>
+        <SOFTWARE-COMPOSITION-REF>/ETAS_FlatView/SwComponentTypes/ETAS_FlatView</SOFTWARE-COMPOSITION-REF>
+        <TARGET-COMPONENT-PROTOTYPE-REF>/ETAS_FlatView/SwComponentTypes/ETAS_FlatView/CPT_TstM</TARGET-COMPONENT-PROTOTYPE-REF>
+        <PORT-PROTOTYPE-REF>/ETAS_BIP_TSTM/SwComponentTypes/TstM/GetStackInfo</PORT-PROTOTYPE-REF>
+        <ARGUMENT-REF>/ETAS_BIP/PortInterfaces/StackMService/GetStackInfo/StackId</ARGUMENT-REF>
+      </INSTANCE-ARG>
+      <SYMBOL>
+        <NAME>Rte_Ms_000004</NAME>
+        <TYPE>VAR(uint8, RTE_DATA)</TYPE>
+      </SYMBOL>
+    </MEASURABLE-ARG>
+    <MEASURABLE-ARG>
+      <SHORT-NAME>CPT_TstM_GetStackInfo_coreId</SHORT-NAME>
+      <INSTANCE-ARG>
+        <SOFTWARE-COMPOSITION-REF>/ETAS_FlatView/SwComponentTypes/ETAS_FlatView</SOFTWARE-COMPOSITION-REF>
+        <TARGET-COMPONENT-PROTOTYPE-REF>/ETAS_FlatView/SwComponentTypes/ETAS_FlatView/CPT_TstM</TARGET-COMPONENT-PROTOTYPE-REF>
+        <PORT-PROTOTYPE-REF>/ETAS_BIP_TSTM/SwComponentTypes/TstM/GetStackInfo</PORT-PROTOTYPE-REF>
+        <ARGUMENT-REF>/ETAS_BIP/PortInterfaces/StackMService/GetStackInfo/coreId</ARGUMENT-REF>
+      </INSTANCE-ARG>
+      <SYMBOL>
+        <NAME>Rte_Ms_000003</NAME>
+        <TYPE>VAR(uint32, RTE_DATA)</TYPE>
+      </SYMBOL>
+    </MEASURABLE-ARG>
+    <MEASURABLE-ARG>
+      <SHORT-NAME>CPT_TstM_GetStackInfo_pStackInfo</SHORT-NAME>
+      <INSTANCE-ARG>
+        <SOFTWARE-COMPOSITION-REF>/ETAS_FlatView/SwComponentTypes/ETAS_FlatView</SOFTWARE-COMPOSITION-REF>
+        <TARGET-COMPONENT-PROTOTYPE-REF>/ETAS_FlatView/SwComponentTypes/ETAS_FlatView/CPT_TstM</TARGET-COMPONENT-PROTOTYPE-REF>
+        <PORT-PROTOTYPE-REF>/ETAS_BIP_TSTM/SwComponentTypes/TstM/GetStackInfo</PORT-PROTOTYPE-REF>
+        <ARGUMENT-REF>/ETAS_BIP/PortInterfaces/StackMService/GetStackInfo/pStackInfo</ARGUMENT-REF>
+      </INSTANCE-ARG>
+      <SYMBOL>
+        <NAME>Rte_Ms_000005</NAME>
+        <TYPE>VAR(StackM_StackMeasureType, RTE_DATA)</TYPE>
+      </SYMBOL>
+    </MEASURABLE-ARG>
+  </MEASURABLE-ARGS>
+  <MEASURABLE-IRVS/>
+  <MEASURABLE-PIMS>
+    <MEASURABLE-PIM>
+      <SHORT-NAME>CPT_CalUT_ArTypedPIM_1</SHORT-NAME>
+      <INSTANCE-PIM>
+        <SOFTWARE-COMPOSITION-REF>/ETAS_FlatView/SwComponentTypes/ETAS_FlatView</SOFTWARE-COMPOSITION-REF>
+        <TARGET-COMPONENT-PROTOTYPE-REF>/ETAS_FlatView/SwComponentTypes/ETAS_FlatView/CPT_CalUT</TARGET-COMPONENT-PROTOTYPE-REF>
+        <PER-INSTANCE-MEMORY-REF>/ETAS_BIP/CalUT/IB_CalUT/ArTypedPIM_1</PER-INSTANCE-MEMORY-REF>
+      </INSTANCE-PIM>
+      <SYMBOL>
+        <NAME>Rte_ArPim_CalUT_ArTypedPIM_1</NAME>
+        <TYPE>VAR(uint32, RTE_DATA)</TYPE>
+      </SYMBOL>
+    </MEASURABLE-PIM>
+  </MEASURABLE-PIMS>
+</MEASURABLE-INFO>

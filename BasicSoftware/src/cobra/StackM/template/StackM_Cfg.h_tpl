@@ -1,0 +1,256 @@
+/*
+**********************************************************************************************************************
+*
+* COPYRIGHT RESERVED, ETAS GmbH, 2021. All rights reserved.
+* The reproduction, distribution and utilization of this document as well as the communication of its contents to
+* others without explicit authorization is prohibited. Offenders will be held liable for the payment of damages.
+* All rights reserved in the event of the grant of a patent, utility model or design.
+*
+**********************************************************************************************************************
+ ************************************************************************************************
+ * Component : StackM_Cfg.h
+ * Date      : May 20, 2021
+ * Version   : 1.0
+ * Description  : This module implements Stack monitor functions.
+ *                Note: This file contains sample implementation only. It is not part of the
+ *                      production deliverables. 
+ ***********************************************************************************************
+*/
+
+#ifndef STACKM_CFG_H
+#define STACKM_CFG_H
+
+/*! \file
+ *
+ * \brief Stack Monitor configurations.
+ *
+ * This file contains the configuration definition and macros for the component.
+ * Currently, AUTOSAR single core and Multicore CPUs stack are supported. Non-AR CPU stacks are not monitored.
+ * 
+ * Stacks of different Target architeutre, e.g. PowerPC, AURIX, ARM may have different stacks.
+ */
+
+/*
+ ***********************************************************************************************************************
+ * Includes
+ ***********************************************************************************************************************
+ */
+#include "StackM_Types.h"
+#include "Rte_StackM_Type.h"
+#include "Os.h"
+#include "Linker_Cfg.h"
+
+
+/*
+ ***********************************************************************************************************************
+ * Confiugration Definitions - General
+ ***********************************************************************************************************************
+ */
+#define STACKM_DEV_ERROR_DETECT    STD_ON
+	
+/* Set to STD_ON if this feature has to be enabled, otherwise set STD_OFF */
+#define STACKM_CFG_ENABLE          STD_ON    /* Enable StackM component. */
+#define STACKM_CFG_ENABLETRACE     STD_ON    /* Enable Stack utilization tracing feature. */
+#define STACKM_CFG_PATTERNINIT     STD_ON    /* Enable Stack filling for tracing feature. */
+
+#define STACKM_CFG_DEFAULTFILLUPVALUE ((uint32)0x4C4C4946)  /* "FILL" */
+#define STACKM_CFG_LIMITHIGH          ((uint32)0x3179656B)  /* "key1" */
+#define STACKM_CFG_LIMITLOW           ((uint32)0x3279656B)  /* "key2" */
+
+#define STACKM_STACKPOINT_LOWEST      ((uint32*)0xFFFFFFFFUL)
+
+
+/*
+ ***********************************************************************************************************************
+ * Confiugration Definitions - Target
+ ***********************************************************************************************************************
+ */
+/********** Stack0 parameters **********
+***************************************/
+extern uint32 __USTACK0;
+extern uint32 __USTACK0_END;
+#define Stack0_StackId     (0)
+#if (OS_NUM_OS_CORES > 1U)
+    #define Stack0_CoreId  ((uint32)OS_CORE_ID_0)
+#else
+    /* For single core target, definition of Core ID in RTA-OS default as master core. */
+    #define Stack0_CoreId  ((uint32)OS_CORE_ID_MASTER)
+#endif
+#define Stack0_Start       ((uint32*)&__USTACK0 - 0x00000001)
+#define Stack0_End         ((uint32*)&__USTACK0_END  + 0x00000000)
+#define Stack0_Limit0      ((uint32*)(&__USTACK0 - (STACK_LEN_SYSCORE_STACK>>5)))  /* convert to uint32,limit boundary at 12.5% */
+#define Stack0_Limit1      ((uint32*)(&__USTACK0 - (STACK_LEN_SYSCORE_STACK>>4)))  /* convert to uint32,limit boundary at 25%   */
+#define Stack0_Limit2      ((uint32*)(&__USTACK0 - (STACK_LEN_SYSCORE_STACK>>3)))  /* convert to uint32,limit boundary at 50%   */
+/* Check whether the Address to check is out of start address of current stack OR
+ * overflow to ZERO from 0xFFFFFFFFUL. */
+LOCAL_INLINE STACKM_CBK_Stack0(currAddr) {return (((currAddr > Stack0_Start) || (currAddr == 0))? TRUE:FALSE);}
+
+
+/********** Stack1 parameters **********
+***************************************/
+extern uint32 __USTACK1;
+extern uint32 __USTACK1_END;
+#define Stack1_StackId     (1)
+#if (OS_NUM_OS_CORES > 1U)
+    #define Stack1_CoreId  ((uint32)OS_CORE_ID_0)
+#else
+    /* For single core target, definition of Core ID in RTA-OS default as master core. */
+    #define Stack1_CoreId  ((uint32)OS_CORE_ID_MASTER)
+#endif
+#define Stack1_Start       ((uint32*)&__USTACK1 - 0x00000001)
+#define Stack1_End         ((uint32*)&__USTACK1_END  + 0x00000000)
+#define Stack1_Limit0      ((uint32*)(&__USTACK1 - (STACK_LEN_COMCORE_STACK>>5)))  /* convert to uint32,limit boundary at 12.5% */
+#define Stack1_Limit1      ((uint32*)(&__USTACK1 - (STACK_LEN_COMCORE_STACK>>4)))  /* convert to uint32,limit boundary at 25%   */
+#define Stack1_Limit2      ((uint32*)(&__USTACK1 - (STACK_LEN_COMCORE_STACK>>3)))  /* convert to uint32,limit boundary at 50%   */
+/* Check whether the Address to check is out of start address of current stack OR
+ * overflow to ZERO from 0xFFFFFFFFUL. */
+LOCAL_INLINE STACKM_CBK_Stack1(currAddr) {return (((currAddr > Stack1_Start) || (currAddr == 0))? TRUE:FALSE);}
+
+
+/********** Stack2 parameters **********
+***************************************/
+extern uint32 __USTACK2;
+extern uint32 __USTACK2_END;
+#define Stack2_StackId     (2)
+#if (OS_NUM_OS_CORES > 1U)
+    #define Stack2_CoreId  ((uint32)OS_CORE_ID_0)
+#else
+    /* For single core target, definition of Core ID in RTA-OS default as master core. */
+    #define Stack2_CoreId  ((uint32)OS_CORE_ID_MASTER)
+#endif
+#define Stack2_Start       ((uint32*)&__USTACK2 - 0x00000001)
+#define Stack2_End         ((uint32*)&__USTACK2_END  + 0x00000000)
+#define Stack2_Limit0      ((uint32*)(&__USTACK2 - (STACK_LEN_APPCORE_STACK>>5)))  /* convert to uint32,limit boundary at 12.5% */
+#define Stack2_Limit1      ((uint32*)(&__USTACK2 - (STACK_LEN_APPCORE_STACK>>4)))  /* convert to uint32,limit boundary at 25%   */
+#define Stack2_Limit2      ((uint32*)(&__USTACK2 - (STACK_LEN_APPCORE_STACK>>3)))  /* convert to uint32,limit boundary at 50%   */
+/* Check whether the Address to check is out of start address of current stack OR
+ * overflow to ZERO from 0xFFFFFFFFUL. */
+LOCAL_INLINE STACKM_CBK_Stack2(currAddr) {return (((currAddr > Stack2_Start) || (currAddr == 0))? TRUE:FALSE);}
+
+
+/********** Stack3 parameters *********
+**************************************/
+extern uint32 Image$$ABT_STACK$$ZI$$Limit;
+extern uint32 Image$$ABT_STACK$$ZI$$Base;
+#define Stack3_StackId     (3)
+#if (OS_NUM_OS_CORES > 1U)
+    #define Stack3_CoreId  ((uint32)OS_CORE_ID_0)
+#else
+    /* For single core target, definition of Core ID in RTA-OS default as master core. */
+    #define Stack3_CoreId  ((uint32)OS_CORE_ID_MASTER)
+#endif
+#define Stack3_Start       ((uint32*)&Image$$ABT_STACK$$ZI$$Limit - 0x00000001)
+#define Stack3_End         ((uint32*)&Image$$ABT_STACK$$ZI$$Base  + 0x00000000)
+#define Stack3_Limit0      ((uint32*)(&Image$$ABT_STACK$$ZI$$Limit - (STACK_LEN_ABT_STACK>>5)))  /* convert to uint32,limit boundary at 12.5% */
+#define Stack3_Limit1      ((uint32*)(&Image$$ABT_STACK$$ZI$$Limit - (STACK_LEN_ABT_STACK>>4)))  /* convert to uint32,limit boundary at 25%   */
+#define Stack3_Limit2      ((uint32*)(&Image$$ABT_STACK$$ZI$$Limit - (STACK_LEN_ABT_STACK>>3)))  /* convert to uint32,limit boundary at 50%   */
+/* Check whether the Address to check is out of start address of current stack OR
+ * overflow to ZERO from 0xFFFFFFFFUL. */
+LOCAL_INLINE STACKM_CBK_Stack3(currAddr) {return (((currAddr > Stack3_Start) || (currAddr == 0))? TRUE:FALSE);}
+
+
+/********** Stack4 parameters *********
+**************************************/
+extern uint32 Image$$UND_STACK$$ZI$$Limit;
+extern uint32 Image$$UND_STACK$$ZI$$Base;
+#define Stack4_StackId     (4)
+#if (OS_NUM_OS_CORES > 1U)
+    #define Stack4_CoreId  ((uint32)OS_CORE_ID_0)
+#else
+    /* For single core target, definition of Core ID in RTA-OS default as master core. */
+    #define Stack4_CoreId  ((uint32)OS_CORE_ID_MASTER)
+#endif
+#define Stack4_Start       ((uint32*)&Image$$UND_STACK$$ZI$$Limit - 0x00000001)
+#define Stack4_End         ((uint32*)&Image$$UND_STACK$$ZI$$Base  + 0x00000000)
+#define Stack4_Limit0      ((uint32*)(&Image$$UND_STACK$$ZI$$Limit - (STACK_LEN_UND_STACK>>5)))  /* convert to uint32,limit boundary at 12.5% */
+#define Stack4_Limit1      ((uint32*)(&Image$$UND_STACK$$ZI$$Limit - (STACK_LEN_UND_STACK>>4)))  /* convert to uint32,limit boundary at 25%   */
+#define Stack4_Limit2      ((uint32*)(&Image$$UND_STACK$$ZI$$Limit - (STACK_LEN_UND_STACK>>3)))  /* convert to uint32,limit boundary at 50%   */
+/* Check whether the Address to check is out of start address of current stack OR
+ * overflow to ZERO from 0xFFFFFFFFUL. */
+LOCAL_INLINE STACKM_CBK_Stack4(currAddr) {return (((currAddr > Stack4_Start) || (currAddr == 0))? TRUE:FALSE);}
+
+
+/********** Stack5 parameters *********
+**************************************/
+extern uint32 Image$$MON_STACK$$ZI$$Limit;
+extern uint32 Image$$MON_STACK$$ZI$$Base;
+#define Stack5_StackId     (5)
+#if (OS_NUM_OS_CORES > 1U)
+    #define Stack5_CoreId  ((uint32)OS_CORE_ID_0)
+#else
+    /* For single core target, definition of Core ID in RTA-OS default as master core. */
+    #define Stack5_CoreId  ((uint32)OS_CORE_ID_MASTER)
+#endif
+#define Stack5_Start       ((uint32*)&Image$$MON_STACK$$ZI$$Limit - 0x00000001)
+#define Stack5_End         ((uint32*)&Image$$MON_STACK$$ZI$$Base  + 0x00000000)
+#define Stack5_Limit0      ((uint32*)(&Image$$MON_STACK$$ZI$$Limit - (STACK_LEN_MON_STACK>>5)))  /* convert to uint32,limit boundary at 12.5% */
+#define Stack5_Limit1      ((uint32*)(&Image$$MON_STACK$$ZI$$Limit - (STACK_LEN_MON_STACK>>4)))  /* convert to uint32,limit boundary at 25%   */
+#define Stack5_Limit2      ((uint32*)(&Image$$MON_STACK$$ZI$$Limit - (STACK_LEN_MON_STACK>>3)))  /* convert to uint32,limit boundary at 50%   */
+/* Check whether the Address to check is out of start address of current stack OR
+ * overflow to ZERO from 0xFFFFFFFFUL. */
+LOCAL_INLINE STACKM_CBK_Stack5(currAddr) {return (((currAddr > Stack5_Start) || (currAddr == 0))? TRUE:FALSE);}
+
+
+/********** Stack6 parameters *********
+**************************************/
+extern uint32 Image$$SVC_STACK$$ZI$$Limit;
+extern uint32 Image$$SVC_STACK$$ZI$$Base;
+#define Stack6_StackId     (6)
+#if (OS_NUM_OS_CORES > 1U)
+    #define Stack6_CoreId  ((uint32)OS_CORE_ID_0)
+#else
+    /* For single core target, definition of Core ID in RTA-OS default as master core. */
+    #define Stack6_CoreId  ((uint32)OS_CORE_ID_MASTER)
+#endif
+#define Stack6_Start       ((uint32*)&Image$$SVC_STACK$$ZI$$Limit - 0x00000001)
+#define Stack6_End         ((uint32*)&Image$$SVC_STACK$$ZI$$Base  + 0x00000000)
+#define Stack6_Limit0      ((uint32*)(&Image$$SVC_STACK$$ZI$$Limit - (STACK_LEN_SVC_STACK>>5)))  /* convert to uint32,limit boundary at 12.5% */
+#define Stack6_Limit1      ((uint32*)(&Image$$SVC_STACK$$ZI$$Limit - (STACK_LEN_SVC_STACK>>4)))  /* convert to uint32,limit boundary at 25%   */
+#define Stack6_Limit2      ((uint32*)(&Image$$SVC_STACK$$ZI$$Limit - (STACK_LEN_SVC_STACK>>3)))  /* convert to uint32,limit boundary at 50%   */
+/* Check whether the Address to check is out of start address of current stack OR
+ * overflow to ZERO from 0xFFFFFFFFUL. */
+LOCAL_INLINE STACKM_CBK_Stack6(currAddr) {return (((currAddr > Stack6_Start) || (currAddr == 0))? TRUE:FALSE);}
+
+
+/**
+ * @brief Stack growing direction on the target.
+ * 
+ */
+#define STACKM_GROWDOWN       LINKER_STACK_GROWDOWN
+
+/**
+ * @brief Number of Stacks available in AUTOSAR context.
+ * 
+ */
+#define STACKM_NUMBEROFSTACK       LINKER_NUMBEROFSTACK
+
+/**
+ * @brief STACKM_DEFINE_STACKTABLE:Stack properties to be monitored during runtime.
+ * 
+ * Parameter descriprion of a stack entry:
+ * - CoreId: core which accesses this stack
+ * - Start: first 32 bit word of this stack
+ * - End: last 32 bit word of this stack
+ * - Limit0, Limit1, Limit2: adress where the security level 0, 1 or 2 should be written.
+ *                           If it is equalt to STACKM_LIMIT_NOTUSED it will be not used.  
+ * - Cbk: In case user want to use the address check callback feature, callback function should be introduced by 
+ *        define the callback as the last element of STACKM_DEFINE_STACKTABLE, otherwise define as STACKM_CBK_NOTUSED.
+ * Note: the stack table must have exactly STACKM_NUMBEROFSTACK entries      
+ */
+#define STACKM_DEFINE_STACKTABLE \
+    {Stack0_CoreId, Stack0_Start, Stack0_End, Stack0_Limit0, Stack0_Limit1, Stack0_Limit2,STACKM_CBK_Stack0},\
+    {Stack1_CoreId, Stack1_Start, Stack1_End, Stack1_Limit0, Stack1_Limit1, Stack1_Limit2,STACKM_CBK_Stack1},\
+    {Stack2_CoreId, Stack2_Start, Stack2_End, Stack2_Limit0, Stack2_Limit1, Stack2_Limit2,STACKM_CBK_Stack2},\
+    {Stack3_CoreId, Stack3_Start, Stack3_End, Stack3_Limit0, Stack3_Limit1, Stack3_Limit2,STACKM_CBK_Stack3},\
+    {Stack4_CoreId, Stack4_Start, Stack4_End, Stack4_Limit0, Stack4_Limit1, Stack4_Limit2,STACKM_CBK_Stack4},\
+    {Stack5_CoreId, Stack5_Start, Stack5_End, Stack5_Limit0, Stack5_Limit1, Stack5_Limit2,STACKM_CBK_Stack5},\
+    {Stack6_CoreId, Stack6_Start, Stack6_End, Stack6_Limit0, Stack6_Limit1, Stack6_Limit2,STACKM_CBK_Stack6}
+
+
+#endif /* STACKM_CFG_H */
+
+/*
+ ***********************************************************************************************************************
+ * End of header file
+ ***********************************************************************************************************************
+*/

@@ -1,0 +1,19 @@
+scons: done reading SConscript files.
+
+scons: warning: you do not seem to have the pywin32 extensions installed;
+	parallel (-j) builds may not work reliably with open Python files.
+File "F:\Python271\Scripts\scons.py", line 201, in <module>
+scons: Building targets ...
+Compiling BasicSoftware\src\os\gen\src\Ioc.c
+
+Linking output\dbg\D_ETAS_BIP_PT_ARCMW.elf...
+
+Dumping output\dbg\D_ETAS_BIP_PT_ARCMW.elf to output\s19\D_ETAS_BIP_PT_ARCMW.s19
+Dumping output\dbg\D_ETAS_BIP_PT_ARCMW.elf to output\bin\D_ETAS_BIP_PT_ARCMW.bin
+Dumping output\dbg\D_ETAS_BIP_PT_ARCMW.elf to output\hex\D_ETAS_BIP_PT_ARCMW.hex
+C:/ARC/MetaWare/arc/bin\elf2bin.exe: ELF file output\dbg\D_ETAS_BIP_PT_ARCMW.elf to binary output\bin\D_ETAS_BIP_PT_ARCMW.bin; all segments; fill=0x00000000
+C:/ARC/MetaWare/arc/bin\elf2bin.exe: 3 segments dumped; address range: 0x770000 to 0x7fc20c; entry point: 0x770004
+
+
+
+scons: done building targets.

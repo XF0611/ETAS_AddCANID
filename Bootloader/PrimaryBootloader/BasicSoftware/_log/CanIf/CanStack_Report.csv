@@ -1,0 +1,122 @@
+
+
+
+/*<VersionHead>
+ * This Configuration File is generated using versions (automatically filled in) as listed below.
+ *
+ * $Generator__: CanIf / AR42.10.0.0                Module Package Version
+ * $Editor_____: ISOLAR-A/B 9.2.1_9.2.1                Tool Version
+ * $Model______: 2.0.2.1                ECU Parameter Definition Version
+ *
+
+ </VersionHead>*/
+
+
+*****************************************************************************************************************************************************************************************
+                                               CANSTACK CONFIGURATION REPORT
+
+*****************************************************************************************************************************************************************************************
+Section1:
+                                              CAN DRIVER CONFIGURATION REPORT
+******************************************************************************************************************************************************************************************
+
+
+"CAN driver does not support the report generation for the driver configuration parameters"
+
+
+
+
+*****************************************************************************************************************************************************************************************
+Section2:
+                                                CANIF CONFIGURATION REPORT
+*****************************************************************************************************************************************************************************************
+CanIf Variant configured:                                       ,PRE-COMPILE
+
+Development error detection support:                            ,DISABLED
+
+Partial Networking support:                                     ,DISABLED
+
+Controller WakeUp support:                                      ,DISABLED
+
+Transceiver WakeUp support:                                     ,DISABLED
+
+Set Baudrate support:                                           ,DISABLED
+(This feature will be used only when CAN FD is supported.
+This is currently supported only for IFX and JDP targets)
+
+Direct Hw wite access support for XCP:                          ,DISABLED
+(This feature is available only for JDP targets)
+
+CanIf XCore feature support                                     ,DISABLED
+*******************************************************************************************************************************************************************************************
+LIST OF UPPER LAYERS SUPPORTED:
+***********************************************
+[CAN_TP]
+
+EVENTS AND UPPER LAYERS TO BE INDICATED:
+************************************************
+EVENT                          , UPPER LAYER
+Controller BusOff              ,CAN_SM
+Controller Mode Indication     ,CAN_SM
+Transceiver Mode Indication    ,CAN_SM
+****************************************************************************************************************************************************************************************
+CAN TRANSCEIVER INFORMATION:
+********************************************
+
+Can Transceiver not configured.
+
+************************************************************************************************************************************************************************************
+CanIf ConfigSet Information
+*************************************************************************************************************************************************************************************
+Number of CanIf Configsets peresent in the project:  ,1
+1) Configuration information for __KW_COMMON
+
+   Name of the Variant: ,__KW_COMMON
+
+   Number of FULL TxPdus: ,1
+
+   Number of BASIC TxPdus: ,0
+
+   Number of FULL RxPdus:  ,2
+
+   Number of BASIC RxPdus:  ,0
+
+   Total size of the transmit buffers: , 10 
+
+,
+
+************************************************************************************************************************************************************************************
+CAN CONTROLLER INFORMATION:
+*******************************************
+Number of CAN controllers configured: ,1
+
+   S.No    ,CanIfCtrlDrvCfg name      ,CanHardwareNode       ,CanHardwareNodeId       ,Can Transceiver Reference
+1.,CANNODE_0   ,ETAS_CAN   ,0   ,NONE
+**************************************************************************************************************************************************************************************
+
+****************************************************************************************************************************************************************************************
+DETAILS OF TXPDU:
+*************************
+
+S.No   ,TxPdu Name   ,CanId   ,DLC value   ,CanId Type   ,CanIfTxPdu Type   ,Can Handle Type   ,HTH Reference   ,CanHardwareNodeId   ,Target TxPduId   ,Upper Layer   ,Cbk Name   ,Pdu Reference   ,Read Notification Status
+1.,UDS_Tx_Phys_Id_0x7B7_CANNODE_0    ,0x748    ,10
+    ,STANDARD_CAN    ,STATIC    ,FULL    ,CANNODE_0_Tx_Std_MailBox_1    ,ETAS_CAN    ,11
+    ,CAN_TP    ,NULL_PTR    ,UDS_Tx_Phys_Id_0x7B7_CANNODE_0_Phys_CanTp2CanIf   ,DISABLED
+****************************************************************************************************************************************************************************************
+
+*****************************************************************************************************************************************************************************************
+
+*******************************************************************************************************************************************************************************************
+DETAILS OF RXPDU:
+*************************
+
+S.No ,RxPdu Name ,CanId ,DLC value ,CanId Type ,HRH Reference ,CanHardwareNodeId ,Upper Layer ,Cbk Name ,Pdu Reference ,Read Notification Status ,RxPdu Buffering ,CanIfRxPduType
+1.,UDS_Rx_Phys_Id_0x737_CANNODE_0    ,0x740    ,1    ,STANDARD_CAN    ,CANNODE_0_Rx_Std_MailBox_1    ,CANNODE_0    ,CAN_TP    ,NULL_PTR    ,UDS_Rx_Phys_Id_0x737_CANNODE_0_CanIf2CanTp    ,ENABLED    ,DISABLED    
+    ,STATIC    
+
+2.,UDS_Rx_Func_Id_0x7DF_CANNODE_0    ,0x7DF    ,1    ,STANDARD_CAN    ,CANNODE_0_Rx_Std_MailBox_2    ,CANNODE_0    ,CAN_TP    ,NULL_PTR    ,UDS_Rx_Func_Id_0x7DF_CANNODE_0_CanIf2CanTp    ,ENABLED    ,DISABLED    
+    ,STATIC    
+
+*********************************************************************************************************************************************************************************************
+
+

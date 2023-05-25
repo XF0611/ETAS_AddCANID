@@ -1,0 +1,82 @@
+<!--
+ #######################################################################################################################
+ #
+ # BSW-17404
+ #
+ #######################################################################################################################
+ #
+ #                                                                                              
+ #                                                            
+ #                                                    
+ #                                                    
+ #                                                                            
+ #                                                                             
+ #            RTA-BSW/Autosar/MemStack/MemIf - Configuration Report               
+ #
+ #######################################################################################################################
+
+
+ * *********************************************************************************************************************
+ * Information regarding supplier of this software
+ * MEMIF_VENDOR_ID:   6
+ * MEMIF_MODULE_ID:   22
+ * MEMIF_INSTANCE_ID: 0
+ * 
+ * Information regarding software version of MemIf component
+ * MEMIF_SW_MAJOR_VERSION: 17
+ * MEMIF_SW_MINOR_VERSION: 0
+ * MEMIF_SW_PATCH_VERSION: 0
+ * 
+ * Information regarding supported Autosar version
+ * MEMIF_AR_RELEASE_MAJOR_VERSION:    4
+ * MEMIF_AR_RELEASE_MINOR_VERSION:    2
+ * MEMIF_AR_RELEASE_REVISION_VERSION: 2
+ * *********************************************************************************************************************
+
+ * *********************************************************************************************************************
+ * Container Name:  MemIfGeneral
+ * Description:     Container for general parameters.
+ * *********************************************************************************************************************
+ * *********************************************************************************************************************
+ * Name:            MemIfDevErrorDetect
+ * Description:     Pre-processor switch to enable and disable development error detection. 
+ *                  true: Development error detection enabled. 
+ *                  false: Development error detection disabled.
+ *
+ * Configured value TRUE
+ * *********************************************************************************************************************
+
+
+ * *********************************************************************************************************************
+ * Name:            MemIfVersionInfoApi
+ * Description:     Pre-processor switch to enable / disable the API to read out the modules version information. 
+ *                  true: Version info API enabled. 
+ *                  false: Version info API disabled.
+ *
+ * Configured value FALSE
+ * *********************************************************************************************************************
+
+ * *********************************************************************************************************************
+ * Name:            MemIfNumberOfDevices
+ * Description:     Number of supported devices, if the RTA-BSW NvM is used, this parameter
+ *                  has no effect, because this information is provided from NvM.
+ *
+ * Configured value 1
+ * *********************************************************************************************************************
+
+ * *********************************************************************************************************************
+ * Name:            MemIfRbMainFunctionScheduling
+ * Description:     Defines if MemIf_Rb_MainFunction() is beeing called in the background-task via RTE, in a scheduled 
+ *                  task via RTE or if it is not called via RTE and therefore has to be scheduled manually.
+ *
+ * Configured value MEMIF_RB_MAINFUNC_SCHEDULING_RTE_TIMED
+ * *********************************************************************************************************************
+ 
+ * *********************************************************************************************************************
+ * Name:            MemIfMainFunctionCycleTime
+ * Description:     Defines the cycle time in seconds of the periodic calling of MemIf main function. Parameter is 
+ *                  just meaningful if the parameter MemIfRbMainFunctionScheduling is set to the value 
+ *                  MEMIF_RB_MAINFUNC_SCHEDULING_RTE_TIMED. 
+ *
+ * Configured value 0.01
+ * *********************************************************************************************************************

@@ -1,0 +1,338 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: ETAS
+VAL_TABLE_ NRF_DCLINKCURRENT_SAMPLING 1 "Trouble" 0 "NoTrouble" ;
+VAL_TABLE_ LI_DCLINK_UNDERVOLTAGE 1 "Trouble" 0 "NoTrouble" ;
+VAL_TABLE_ LI_INV_OVERTEMP 1 "Trouble" 0 "NoTrouble" ;
+VAL_TABLE_ LI_MOTORTEMP_OVERTEMP 1 "Trouble" 0 "NoTrouble" ;
+VAL_TABLE_ LI_OVERSPEED 1 "Trouble" 0 "NoTrouble" ;
+VAL_TABLE_ LI_DCLINK_OVERVOLTAGE 1 "Trouble" 0 "NoTrouble" ;
+VAL_TABLE_ RF_MOTORTEMP_OVERTEMP 1 "Trouble" 0 "NoTrouble" ;
+VAL_TABLE_ RF_OVERSPEED 1 "Trouble" 0 "NoTrouble" ;
+VAL_TABLE_ RF_CAN_BUSOFF 1 "Trouble" 0 "NoTrouble" ;
+VAL_TABLE_ RF_MSGMISSING 1 "Trouble" 0 "NoTrouble" ;
+VAL_TABLE_ RF_HW_OVERCURRENT 1 "Trouble" 0 "NoTrouble" ;
+VAL_TABLE_ RF_PHASE_A_OVERCURRENT 1 "Trouble" 0 "NoTrouble" ;
+VAL_TABLE_ RF_PHASE_B_OVERCURRENT 1 "Trouble" 0 "NoTrouble" ;
+VAL_TABLE_ RF_PHASE_C_OVERCURRENT 1 "Trouble" 0 "NoTrouble" ;
+VAL_TABLE_ RF_POWER12V_SUPPLY 1 "Trouble" 0 "NoTrouble" ;
+VAL_TABLE_ RF_DCLINK_OVERCURRENT 1 "Trouble" 0 "NoTrouble" ;
+VAL_TABLE_ RF_DCLINK_OVERVOLTAGE 1 "Trouble" 0 "NoTrouble" ;
+VAL_TABLE_ RF_CONTROLTORQUE_IMP 1 "Trouble" 0 "NoTrouble" ;
+VAL_TABLE_ RF_INVTEMP_OVERTEMP 1 "Trouble" 0 "NoTrouble" ;
+VAL_TABLE_ RF_DCLINK_UNDERVOLTAGE 1 "Trouble" 0 "NoTrouble" ;
+VAL_TABLE_ RF_INTERNAL 1 "Trouble" 0 "NoTrouble" ;
+VAL_TABLE_ RF_UNBANLANCEDCURRENT 1 "Trouble" 0 "NoTrouble" ;
+VAL_TABLE_ NRF_DCLINKVOLTAGE_SAMPLING 1 "Trouble" 0 "NoTrouble" ;
+VAL_TABLE_ NRF_INVTEMP_SAMPLING 1 "Trouble" 0 "NoTrouble" ;
+VAL_TABLE_ NRF_COMMUNICATE_IMP 1 "Trouble" 0 "NoTrouble" ;
+VAL_TABLE_ NRF_SYSTEM_IMP 1 "Trouble" 0 "NoTrouble" ;
+VAL_TABLE_ NRF_GATEDESAT 1 "Trouble" 0 "NoTrouble" ;
+VAL_TABLE_ NRF_ANALOG5V_SUPPLY 1 "Trouble" 0 "NoTrouble" ;
+VAL_TABLE_ NRF_RDC 1 "Trouble" 0 "NoTrouble" ;
+VAL_TABLE_ NRF_PHASE_A_SAMPLING 1 "Trouble" 0 "NoTrouble" ;
+VAL_TABLE_ NRF_PHASE_B_SAMPLING 1 "Trouble" 0 "NoTrouble" ;
+VAL_TABLE_ NRF_PHASE_C_SAMPLING 1 "Trouble" 0 "NoTrouble" ;
+VAL_TABLE_ NRF_MOTORTEMP_SAMPLING 1 "Trouble" 0 "NoTrouble" ;
+VAL_TABLE_ MCU_Sig15 1 "forbidding getting torquecommand" 0 "allow mcu to get torque command" ;
+VAL_TABLE_ MCU_Sig13 1 "forbidding to turn on HV" 0 "allowing to turn on HV" ;
+VAL_TABLE_ MCU_Status 3 "recoverable fault" 2 "recoverable fault" 1 "warning (derating" 0 "normal" ;
+VAL_TABLE_ MCU_Sig11 3 "failed" 2 "OK" 1 "Sig16ing" 0 "default" ;
+VAL_TABLE_ MCU_Sig16 3 "failed" 2 "OK" 1 "Sig16ing" 0 "default" ;
+VAL_TABLE_ MCU_Sig17 1 "allowing" 0 "forbidding" ;
+VAL_TABLE_ ETAS_Sig10 1 "Sleep" 0 "normal" ;
+VAL_TABLE_ ETAS_Sig01 1 "allowing" 0 "forbidding" ;
+VAL_TABLE_ ETAS_Sig07 3 "reserved" 2 "speed mode" 1 "torque mode" 0 "default" ;
+VAL_TABLE_ ETAS_Sig15 1 "allowing" 0 "forbidding" ;
+VAL_TABLE_ ETAS_Sig00 3 "P" 2 "D" 1 "R" 0 "N" ;
+
+
+BO_ 1110 ComRx_0x456: 8 Vector__XXX
+ SG_ ETAS06_Sig41 : 63|8@0+ (1,0) [0|0] ""  ETAS
+ SG_ ETAS06_Sig40 : 55|8@0+ (1,0) [0|0] ""  ETAS
+ SG_ ETAS06_Sig39 : 47|8@0+ (1,0) [0|0] ""  ETAS
+ SG_ ETAS06_Sig38 : 39|8@0+ (1,0) [0|0] ""  ETAS
+ SG_ ETAS06_Sig37 : 31|8@0+ (1,0) [0|0] ""  ETAS
+ SG_ ETAS06_Sig36 : 23|8@0+ (1,0) [0|0] ""  ETAS
+ SG_ ETAS06_Sig35 : 15|8@0+ (1,0) [0|0] ""  ETAS
+ SG_ ETAS06_Sig34 : 7|8@0+ (1,0) [0|0] ""  ETAS
+
+BO_ 291 ComTx_0x123: 8 ETAS
+ SG_ ETAS05_Sig33 : 63|8@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ ETAS05_Sig32 : 55|8@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ ETAS05_Sig31 : 47|8@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ ETAS05_Sig30 : 39|8@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ ETAS05_Sig29 : 31|8@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ ETAS05_Sig28 : 23|8@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ ETAS05_Sig27 : 15|8@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ ETAS05_Sig26 : 7|8@0+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 152 ComTx_0x98: 7 ETAS
+ SG_ ETAS04_Sig21 : 47|8@0+ (1,-40) [-40|214] "deg" Vector__XXX
+ SG_ ETAS04_Sig24 : 55|8@0+ (1,-40) [-40|214] "deg" Vector__XXX
+ SG_ ETAS04_Sig25 : 19|10@0+ (1,0) [0|1022] "V" Vector__XXX
+ SG_ ETAS04_Sig20 : 25|10@0+ (1,-511) [-511|511] "A" Vector__XXX
+ SG_ ETAS04_Sig23 : 12|9@0+ (1,0) [0|510] "Nm" Vector__XXX
+ SG_ ETAS04_Sig22 : 7|11@0+ (1,0) [0|2046] "Nm" Vector__XXX
+
+BO_ 85 ComTx_0x55: 6 ETAS
+ SG_ ETAS03_Sig18 : 13|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ ETAS03_Sig16 : 14|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ ETAS03_Sig14 : 15|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ ETAS03_Sig19 : 1|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ ETAS03_Sig12 : 3|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ ETAS03_Sig17 : 12|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ ETAS03_Sig11 : 7|4@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ ETAS03_Sig13 : 39|13@0+ (0.5,-2047) [-2047|2047.5] "Nm" Vector__XXX
+ SG_ ETAS03_Sig15 : 23|16@0+ (1,-32767) [-32767|32767] "rpm" Vector__XXX
+ SG_ ETAS03_Sig10 : 10|1@0+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 609 ComRx_0x261: 1 Vector__XXX
+ SG_ ETAS02_Sig09 : 0|1@0+ (1,0) [0|1] ""  ETAS
+
+BO_ 129 ComRx_0x81: 8 Vector__XXX
+ SG_ ETAS01_Sig04 : 36|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ ETAS01_Sig02 : 63|8@0+ (1,0) [0|255] ""  ETAS
+ SG_ ETAS01_Sig03 : 51|4@0+ (1,0) [0|15] ""  ETAS
+ SG_ ETAS01_Sig01 : 37|1@0+ (1,0) [0|1] ""  ETAS
+ SG_ ETAS01_Sig06 : 39|2@0+ (1,0) [0|3] ""  ETAS
+ SG_ ETAS01_Sig05 : 24|1@0+ (1,0) [0|1] ""  ETAS
+ SG_ ETAS01_Sig07 : 23|15@0+ (1,-16384) [-16384|16383] "rpm"  ETAS
+ SG_ ETAS01_Sig00 : 9|2@0+ (1,0) [0|3] ""  ETAS
+ SG_ ETAS01_Sig08 : 7|14@0+ (0.25,-2048) [-2048|2047.75] "Nm"  ETAS
+
+
+
+CM_ SG_ 152 ETAS04_Sig21 "IGBT温度
+";
+CM_ SG_ 152 ETAS04_Sig24 "电机温度
+";
+CM_ SG_ 152 ETAS04_Sig25 "母线电压
+";
+CM_ SG_ 152 ETAS04_Sig20 "母线电流
+";
+CM_ SG_ 152 ETAS04_Sig23 "最小扭矩
+";
+CM_ SG_ 152 ETAS04_Sig22 "最大扭矩
+";
+CM_ SG_ 85 ETAS03_Sig18 "允许下电
+";
+CM_ SG_ 85 ETAS03_Sig16 "高压上电完成
+";
+CM_ SG_ 85 ETAS03_Sig14 "允许高压上电
+";
+CM_ SG_ 85 ETAS03_Sig19 "电机工作状态
+";
+CM_ SG_ 85 ETAS03_Sig12 "电机快速放电状态
+";
+CM_ SG_ 85 ETAS03_Sig17 "MCU自检
+";
+CM_ SG_ 85 ETAS03_Sig11 "报文滚码信息
+";
+CM_ SG_ 85 ETAS03_Sig13 "电机当前扭矩
+";
+CM_ SG_ 85 ETAS03_Sig15 "电机当前转速
+";
+CM_ SG_ 85 ETAS03_Sig10 "紧急下电请求
+";
+CM_ SG_ 609 ETAS02_Sig09 "ETAS低压下电
+";
+CM_ SG_ 129 ETAS01_Sig04 "MCU使能信号
+";
+CM_ SG_ 129 ETAS01_Sig02 "检查
+";
+CM_ SG_ 129 ETAS01_Sig03 "滚码信息
+";
+CM_ SG_ 129 ETAS01_Sig01 "MCU主动放电
+";
+CM_ SG_ 129 ETAS01_Sig06 "电机工作模式请求
+";
+CM_ SG_ 129 ETAS01_Sig05 "MCU使能信号
+";
+CM_ SG_ 129 ETAS01_Sig07 "需求转速
+";
+CM_ SG_ 129 ETAS01_Sig00 "当前整车档位信息
+";
+CM_ SG_ 129 ETAS01_Sig08 "ETAS对MCU扭矩请求";
+BA_DEF_ BO_  "GenMsgStartDelayTime" INT 0 65535;
+BA_DEF_ BO_  "GenMsgILSupport" ENUM  "No","Yes";
+BA_DEF_ BO_  "GenMsgCycleTimeFast" INT 0 50000;
+BA_DEF_ BO_  "GenMsgNrOfRepetition" INT 0 999999;
+BA_DEF_  "NmBaseAddress" HEX 1024 1087;
+BA_DEF_  "BusType" STRING ;
+BA_DEF_ BU_  "NmStationAddress" HEX 0 0;
+BA_DEF_  "GenNWMApBusSleep" STRING ;
+BA_DEF_  "GenNWMApCanNormal" STRING ;
+BA_DEF_  "GenNWMApCanOff" STRING ;
+BA_DEF_  "GenNWMApCanOn" STRING ;
+BA_DEF_  "GenNWMApCanSleep" STRING ;
+BA_DEF_  "GenNWMApCanWakeUp" STRING ;
+BA_DEF_  "GenNWMGotoMode_Awake" STRING ;
+BA_DEF_  "GenNWMGotoMode_BusSleep" STRING ;
+BA_DEF_  "GenNWMSleepTime" INT 0 1000000;
+BA_DEF_  "GenNWMTalkNM" STRING ;
+BA_DEF_ BU_  "GenNodSleepTime" INT 0 1000000;
+BA_DEF_ BO_  "NmMessage" ENUM  "No","Yes";
+BA_DEF_ BU_  "NmNode" ENUM  "No","Yes";
+BA_DEF_ SG_  "NWM-WakeupAllowed" ENUM  "No","Yes";
+BA_DEF_ BU_  "NodeLayerModules" STRING ;
+BA_DEF_ BO_  "GenMsgCycleTime" INT 2 50000;
+BA_DEF_ BO_  "GenMsgDelayTime" INT 1 1000;
+BA_DEF_ BO_  "GenMsgNrOfRepetitions" INT 1 999999;
+BA_DEF_ BO_  "GenMsgSendType" ENUM  "cyclic","spontaneous","cyclicIfActive","spontaneousWithDelay","cyclicAndSpontaneous","cyclicAndSpontaneousWithDelay","spontaneousWithRepetition","cyclicIfActiveAndSpontaneousWD";
+BA_DEF_ SG_  "GenSigInactiveValue" INT 0 100000;
+BA_DEF_ SG_  "GenSigSendType" ENUM  "spontaneous";
+BA_DEF_ SG_  "GenSigStartValue" FLOAT 0 1215752192;
+BA_DEF_ EV_  "GenEnvControlType" ENUM  "NoControl","SliderHoriz","SliderVert","PushButton","Edit","BitmapSwitch";
+BA_DEF_ EV_  "GenEnvMsgName" STRING ;
+BA_DEF_ EV_  "GenEnvMsgOffset" INT 0 999999999;
+BA_DEF_ EV_  "GenEnvAutoGenCtrl" ENUM  "No","Yes";
+BA_DEF_  "GenEnvVarEndingDsp" STRING ;
+BA_DEF_  "GenEnvVarEndingSnd" STRING ;
+BA_DEF_  "GenEnvVarPrefix" STRING ;
+BA_DEF_ BO_  "GenMsgAltSetting" STRING ;
+BA_DEF_ BO_  "GenMsgAutoGenDsp" ENUM  "No","Yes";
+BA_DEF_ BO_  "GenMsgAutoGenSnd" ENUM  "No","Yes";
+BA_DEF_ BO_  "GenMsgConditionalSend" STRING ;
+BA_DEF_ BO_  "GenMsgEVName" STRING ;
+BA_DEF_ BO_  "GenMsgPostIfSetting" STRING ;
+BA_DEF_ BO_  "GenMsgPostSetting" STRING ;
+BA_DEF_ BO_  "GenMsgPreIfSetting" STRING ;
+BA_DEF_ BO_  "GenMsgPreSetting" STRING ;
+BA_DEF_ BU_  "GenNodAutoGenSnd" ENUM  "No","Yes";
+BA_DEF_ SG_  "GenSigAltSetting" STRING ;
+BA_DEF_ SG_  "GenSigAssignSetting" STRING ;
+BA_DEF_ SG_  "GenSigAutoGenDsp" ENUM  "No","Yes";
+BA_DEF_ SG_  "GenSigAutoGenSnd" ENUM  "No","Yes";
+BA_DEF_ SG_  "GenSigConditionalSend" STRING ;
+BA_DEF_ SG_  "GenSigEnvVarType" ENUM  "int","float","undef";
+BA_DEF_ SG_  "GenSigEVName" STRING ;
+BA_DEF_ SG_  "GenSigPostIfSetting" STRING ;
+BA_DEF_ SG_  "GenSigPostSetting" STRING ;
+BA_DEF_ SG_  "GenSigPreIfSetting" STRING ;
+BA_DEF_ SG_  "GenSigPreSetting" STRING ;
+BA_DEF_ SG_  "GenSigReceiveSetting" STRING ;
+BA_DEF_DEF_  "GenMsgStartDelayTime" 0;
+BA_DEF_DEF_  "GenMsgILSupport" "Yes";
+BA_DEF_DEF_  "GenMsgCycleTimeFast" 0;
+BA_DEF_DEF_  "GenMsgNrOfRepetition" 0;
+BA_DEF_DEF_  "NmBaseAddress" 1024;
+BA_DEF_DEF_  "BusType" "CAN";
+BA_DEF_DEF_  "NmStationAddress" 0;
+BA_DEF_DEF_  "GenNWMApBusSleep" "apBusSleep()";
+BA_DEF_DEF_  "GenNWMApCanNormal" "apCanNormal()";
+BA_DEF_DEF_  "GenNWMApCanOff" "apCanOff()";
+BA_DEF_DEF_  "GenNWMApCanOn" "apCanOn()";
+BA_DEF_DEF_  "GenNWMApCanSleep" "apCanSleep()";
+BA_DEF_DEF_  "GenNWMApCanWakeUp" "apCanWakeUp()";
+BA_DEF_DEF_  "GenNWMGotoMode_Awake" "GotoMode_Awake()";
+BA_DEF_DEF_  "GenNWMGotoMode_BusSleep" "GotoMode_BusSleep()";
+BA_DEF_DEF_  "GenNWMSleepTime" 0;
+BA_DEF_DEF_  "GenNWMTalkNM" "TalkNM()";
+BA_DEF_DEF_  "GenNodSleepTime" 0;
+BA_DEF_DEF_  "NmMessage" "No";
+BA_DEF_DEF_  "NmNode" "No";
+BA_DEF_DEF_  "NWM-WakeupAllowed" "";
+BA_DEF_DEF_  "NodeLayerModules" "";
+BA_DEF_DEF_  "GenMsgCycleTime" 100;
+BA_DEF_DEF_  "GenMsgDelayTime" 1;
+BA_DEF_DEF_  "GenMsgNrOfRepetitions" 1;
+BA_DEF_DEF_  "GenMsgSendType" "";
+BA_DEF_DEF_  "GenSigInactiveValue" 0;
+BA_DEF_DEF_  "GenSigSendType" "";
+BA_DEF_DEF_  "GenSigStartValue" 0;
+BA_DEF_DEF_  "GenEnvControlType" "";
+BA_DEF_DEF_  "GenEnvMsgName" "";
+BA_DEF_DEF_  "GenEnvMsgOffset" 0;
+BA_DEF_DEF_  "GenEnvAutoGenCtrl" "No";
+BA_DEF_DEF_  "GenEnvVarEndingDsp" "Dsp_";
+BA_DEF_DEF_  "GenEnvVarEndingSnd" "_";
+BA_DEF_DEF_  "GenEnvVarPrefix" "Env";
+BA_DEF_DEF_  "GenMsgAltSetting" "";
+BA_DEF_DEF_  "GenMsgAutoGenDsp" "";
+BA_DEF_DEF_  "GenMsgAutoGenSnd" "";
+BA_DEF_DEF_  "GenMsgConditionalSend" "";
+BA_DEF_DEF_  "GenMsgEVName" "";
+BA_DEF_DEF_  "GenMsgPostIfSetting" "";
+BA_DEF_DEF_  "GenMsgPostSetting" "";
+BA_DEF_DEF_  "GenMsgPreIfSetting" "";
+BA_DEF_DEF_  "GenMsgPreSetting" "";
+BA_DEF_DEF_  "GenNodAutoGenSnd" "";
+BA_DEF_DEF_  "GenSigAltSetting" "";
+BA_DEF_DEF_  "GenSigAssignSetting" "";
+BA_DEF_DEF_  "GenSigAutoGenDsp" "";
+BA_DEF_DEF_  "GenSigAutoGenSnd" "";
+BA_DEF_DEF_  "GenSigConditionalSend" "";
+BA_DEF_DEF_  "GenSigEnvVarType" "undef";
+BA_DEF_DEF_  "GenSigEVName" "";
+BA_DEF_DEF_  "GenSigPostIfSetting" "";
+BA_DEF_DEF_  "GenSigPostSetting" "";
+BA_DEF_DEF_  "GenSigPreIfSetting" "";
+BA_DEF_DEF_  "GenSigPreSetting" "";
+BA_DEF_DEF_  "GenSigReceiveSetting" "";
+BA_ "NmStationAddress" BU_ ETAS 248;
+BA_ "GenMsgSendType" BO_ 1110 0;
+BA_ "GenMsgCycleTime" BO_ 1110 10;
+BA_ "GenMsgSendType" BO_ 291 0;
+BA_ "GenMsgCycleTime" BO_ 152 50;
+BA_ "GenMsgSendType" BO_ 152 0;
+BA_ "GenMsgCycleTime" BO_ 85 10;
+BA_ "GenMsgSendType" BO_ 85 0;
+BA_ "GenMsgCycleTime" BO_ 609 10;
+BA_ "GenMsgSendType" BO_ 609 0;
+BA_ "GenMsgCycleTime" BO_ 129 10;
+BA_ "GenMsgSendType" BO_ 129 0;
+BA_ "GenSigStartValue" SG_ 152 ETAS04_Sig21 40;
+BA_ "GenSigStartValue" SG_ 152 ETAS04_Sig24 40;
+BA_ "GenSigStartValue" SG_ 152 ETAS04_Sig20 511;
+BA_ "GenSigStartValue" SG_ 85 ETAS03_Sig13 4094;
+BA_ "GenSigStartValue" SG_ 85 ETAS03_Sig15 32767;
+BA_ "GenSigStartValue" SG_ 129 ETAS01_Sig07 16384;
+BA_ "GenSigStartValue" SG_ 129 ETAS01_Sig08 8192;
+VAL_ 85 ETAS03_Sig18 1 "allowing" 0 "forbidding" ;
+VAL_ 85 ETAS03_Sig16 1 "allow mcu to get torque command" 0 "forbidding getting torque cmd" ;
+VAL_ 85 ETAS03_Sig14 1 "allowing to turn on HV" 0 "forbidding to turn on HV" ;
+VAL_ 85 ETAS03_Sig19 3 "no recoverable fault" 2 "recoverable fault" 1 "warning (derating" 0 "normal" ;
+VAL_ 85 ETAS03_Sig12 3 "Reserved" 2 "Discharge Finished" 1 "Discharging" 0 "default" ;
+VAL_ 85 ETAS03_Sig17 3 "failed" 2 "OK" 1 "Sig16ing" 0 "default" ;
+VAL_ 85 ETAS03_Sig10 1 "Sig04" 0 "Normal" ;
+VAL_ 609 ETAS02_Sig09 1 "Sleep" 0 "normal" ;
+VAL_ 129 ETAS01_Sig04 1 "allowing" 0 "forbidding" ;
+VAL_ 129 ETAS01_Sig01 1 "allowing" 0 "forbidding" ;
+VAL_ 129 ETAS01_Sig06 3 "reserved" 2 "speed mode" 1 "torque mode" 0 "default" ;
+VAL_ 129 ETAS01_Sig05 1 "allowing" 0 "forbidding" ;
+VAL_ 129 ETAS01_Sig00 3 "P" 2 "D" 1 "R" 0 "N" ;
+

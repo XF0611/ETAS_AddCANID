@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="ASCII"?>
+<MappingMetaModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns="http://www.bosch.com/autosartool/m2m/model" transformationName="Conf-Gen Enhancer">
+  <mappingStructures name="Dem">
+    <order orderId="Dem_1" name="Dem">
+      <order orderId="Dem_2" name="DemConfigSet">
+        <order orderId="Dem_3" name="DemDebounceCounterBasedClass"/>
+      </order>
+      <order orderId="Dem_4" name="DemGeneral">
+        <order orderId="Dem_5" name="DemRbGeneral"/>
+        <order orderId="Dem_6" name="DemDataElementClass">
+          <order orderId="Dem_7" name="DemExternalSRDataElementClass"/>
+        </order>
+      </order>
+    </order>
+  </mappingStructures>
+  <mappings mappingId="Mapping_Dem_1" mappingType="PRIMITIVE_ATTRIBUTE" defaultValue="DEM_DEBOUNCE_FREEZE">
+    <targetItem identifier="DemDebounceBehavior"/>
+    <orderDetails orderId="Dem_3" order="1"/>
+  </mappings>
+  <mappings mappingId="Mapping_Dem_2" mappingType="PRIMITIVE_ATTRIBUTE" defaultValue="0.01">
+    <targetItem identifier="DemTaskTime"/>
+    <orderDetails orderId="Dem_4" order="1"/>
+  </mappings>
+  <mappings mappingId="Mapping_Dem_3" mappingType="PRIMITIVE_ATTRIBUTE" defaultValue="true">
+    <targetItem identifier="DemRbEnableDemNvmBlocksAutoConfiguration"/>
+    <orderDetails orderId="Dem_5" order="1"/>
+  </mappings>
+  <mappings mappingId="Mapping_Dem_4" mappingType="PRIMITIVE_ATTRIBUTE" defaultValue="DEM_EVENT_AVAILABILITY">
+    <targetItem identifier="DemAvailabilitySupport"/>
+    <orderDetails orderId="Dem_4" order="2"/>
+  </mappings>
+  <mappings mappingId="Mapping_Dem_5" mappingType="PRIMITIVE_ATTRIBUTE" defaultValue="10">
+    <targetItem identifier="DemBswErrorBufferSize"/>
+    <orderDetails orderId="Dem_4" order="3"/>
+  </mappings>
+  <mappings mappingId="Mapping_Dem_6" mappingType="PRIMITIVE_ATTRIBUTE">
+    <targetItem identifier="DemClearDTCLimitation"/>
+    <orderDetails orderId="Dem_4" order="4"/>
+  </mappings>
+  <mappings mappingId="Mapping_Dem_7" mappingType="PRIMITIVE_ATTRIBUTE" defaultValue="COUNT_UP">
+    <targetItem identifier="DemRbAgingCounterType"/>
+    <orderDetails orderId="Dem_5" order="2"/>
+  </mappings>
+  <mappings mappingId="Mapping_Dem_8" mappingType="PRIMITIVE_ATTRIBUTE" defaultValue="0.001">
+    <targetItem identifier="DemRbDebounceTimeBasedTaskTime"/>
+    <orderDetails orderId="Dem_5" order="3"/>
+  </mappings>
+  <mappings mappingId="Mapping_Dem_9" mappingType="PRIMITIVE_ATTRIBUTE" defaultValue="AUTOSAR">
+    <targetItem identifier="DemRbOccurrenceCounterType"/>
+    <orderDetails orderId="Dem_5" order="4"/>
+  </mappings>
+  <mappings mappingId="Mapping_Dem_10" mappingType="PRIMITIVE_ATTRIBUTE" defaultValue="null">
+    <targetItem identifier="DemDataElementDataSize"/>
+    <orderDetails orderId="Dem_7" order="1"/>
+  </mappings>
+  <mappings mappingId="Mapping_Dem_11" mappingType="PRIMITIVE_ATTRIBUTE" defaultValue="true">
+    <targetItem identifier="DemDevErrorDetect"/>
+    <orderDetails orderId="Dem_4" order="5"/>
+  </mappings>
+</MappingMetaModel>

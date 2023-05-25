@@ -1,0 +1,244 @@
+
+
+<!-- Configuration overview in machine readable XML format
+     *****************************************************                                                           -->
+
+<FEE>
+ <!-- ******************************************************************************************************************
+ * SWS Item:        FEE039_Conf
+ * Container Name:  FeeGeneral
+ * Description:     Container for general parameters. These parameters are not specific to a block.
+ * ***************************************************************************************************************** -->
+    <FEE_GENERAL>
+        <FEE_DEV_ERROR_DETECT>STD_OFF</FEE_DEV_ERROR_DETECT>
+        <FEE_FEEINDEX>0</FEE_FEEINDEX>
+        <FEE_NVM_JOB_END_NOTIFICATION>NULL_PTR</FEE_NVM_JOB_END_NOTIFICATION>
+        <FEE_NVM_JOB_ERROR_NOTIFICATION>NvM_JobErrorNotification</FEE_NVM_JOB_ERROR_NOTIFICATION>
+        <FEE_LL_PAGEBUFFSIZE>1024u</FEE_LL_PAGEBUFFSIZE>
+        <FEE_POLLING_MODE>STD_ON</FEE_POLLING_MODE>
+        <FEE_SET_MODE_SUPPORTED>STD_OFF</FEE_SET_MODE_SUPPORTED>
+        <FEE_VERSION_INFO_API>STD_ON</FEE_VERSION_INFO_API>
+        <FEE_VIRTUAL_PAGE_SIZE>8</FEE_VIRTUAL_PAGE_SIZE>
+        <FEE_RB_MACHINE_TYPE>MCU_RB_MANUAL_CFG</FEE_RB_MACHINE_TYPE>
+        <FEE_RB_ADDONS_CCAS>FALSE</FEE_RB_ADDONS_CCAS>
+        <FEE_RB_READ_FORCE>FALSE</FEE_RB_READ_FORCE>
+        <FEE_RB_TRIGGER_REORG>FALSE</FEE_RB_TRIGGER_REORG>
+        <FEE_RB_ENTER_STOP_MODE>FALSE</FEE_RB_ENTER_STOP_MODE>
+        <FEE_RB_ACT_SURVIVAL_EVAL>FALSE</FEE_RB_ACT_SURVIVAL_EVAL>
+        <FEE_RB_ACT_UNKNOWN_BLOCK_REORG>TRUE</FEE_RB_ACT_UNKNOWN_BLOCK_REORG>
+        <FEE_RB_ACT_UNKNOWN_BLOCK_CACHE_SIZE>1800</FEE_RB_ACT_UNKNOWN_BLOCK_CACHE_SIZE>
+        <FEE_RB_ACT_SAFETY_CHECKS>TRUE</FEE_RB_ACT_SAFETY_CHECKS>
+        <FEE_RB_ACT_ERASE_SUSPENSION>FALSE</FEE_RB_ACT_ERASE_SUSPENSION>
+        <FEE_RB_GET_FREE_SPACE>FALSE</FEE_RB_GET_FREE_SPACE>
+        <FEE_RB_USE_ROM_BLOCKTABLE>FALSE</FEE_RB_USE_ROM_BLOCKTABLE>
+        <FEE_RB_SYNC_LOOP_FLS_MAIN_HOOK>(void)0</FEE_RB_SYNC_LOOP_FLS_MAIN_HOOK>
+    </FEE_GENERAL>
+
+    <FEE_VERSION_INFO>
+        <!-- Information regarding the supplier -->
+        <FEE_VENDOR_ID>6</FEE_VENDOR_ID>
+        <FEE_MODULE_ID>21</FEE_MODULE_ID>
+        <FEE_INSTANCE_ID>0</FEE_INSTANCE_ID>
+
+        <!-- Information regarding version of Fee driver -->
+        <FEE_SW_MAJOR_VERSION>17</FEE_SW_MAJOR_VERSION>
+        <FEE_SW_MINOR_VERSION>0</FEE_SW_MINOR_VERSION>
+        <FEE_SW_PATCH_VERSION>0</FEE_SW_PATCH_VERSION>
+
+        <!-- Information regarding supported Autosar version -->
+        <FEE_AR_RELEASE_MAJOR_VERSION>4</FEE_AR_RELEASE_MAJOR_VERSION>
+        <FEE_AR_RELEASE_MINOR_VERSION>2</FEE_AR_RELEASE_MINOR_VERSION>
+        <FEE_AR_RELEASE_REVISION_VERSION>2</FEE_AR_RELEASE_REVISION_VERSION>
+    </FEE_VERSION_INFO>
+
+    <FEE_MATURITY_INFO>
+        <FEE_LIMITED_RELEASE>FALSE</FEE_LIMITED_RELEASE>
+    </FEE_MATURITY_INFO>
+
+ <!-- ******************************************************************************************************************
+ * SWS Item:        FEE043_Conf
+ * Container Name:  FeePublishedInformation
+ * Description:     Additional published parameters not covered by CommonPublishedInformation container.
+ *                  Note that these parameters do not have any configuration class setting, since they are published
+ *                  information.
+ * ***************************************************************************************************************** -->
+    <FEE_PUBLISHED_INFORMATION>
+        <FEE_BLOCK_OVERHEAD>14</FEE_BLOCK_OVERHEAD>
+        <FEE_MAXIMUM_BLOCKING_TIME>5</FEE_MAXIMUM_BLOCKING_TIME>
+        <FEE_PAGE_OVERHEAD>0</FEE_PAGE_OVERHEAD>
+    </FEE_PUBLISHED_INFORMATION>
+
+ <!-- ******************************************************************************************************************
+ * Description:     Flash properties, important for tools
+ * ***************************************************************************************************************** -->
+    <FEE_FLASH_PROP>
+        <FEE_FLASH_SECTOR>
+            <STRTADR>0x00000000</STRTADR>
+            <PAGE_SIZE_BYTE>8</PAGE_SIZE_BYTE>
+            <SEC_SIZE_BYTE>32768</SEC_SIZE_BYTE>
+            <NUM_PAGES>4096</NUM_PAGES>
+            <ERASE_PATTERN>255</ERASE_PATTERN>
+            <INV_PATTERN>0xffffff00</INV_PATTERN>
+            <ERASE_CYCLES>125000</ERASE_CYCLES>
+        </FEE_FLASH_SECTOR>
+        <FEE_FLASH_SECTOR>
+            <STRTADR>0x00008000</STRTADR>
+            <PAGE_SIZE_BYTE>8</PAGE_SIZE_BYTE>
+            <SEC_SIZE_BYTE>32768</SEC_SIZE_BYTE>
+            <NUM_PAGES>4096</NUM_PAGES>
+            <ERASE_PATTERN>255</ERASE_PATTERN>
+            <INV_PATTERN>0xffffff00</INV_PATTERN>
+            <ERASE_CYCLES>125000</ERASE_CYCLES>
+        </FEE_FLASH_SECTOR>
+    </FEE_FLASH_PROP>
+
+ <!-- ******************************************************************************************************************
+ * SWS Item:        FEE040_Conf
+ * Container Name:  FeeBlockConfiguration
+ * Description:     Configuration of block specific parameters for the Flash EEPROM Emulation module.
+ * ***************************************************************************************************************** -->
+    <FEE_BLOCKDESCRIPTOR>
+        <FEE_BLOCK_PROP>
+            <!-- Specified by Autosar -->
+            <FEE_BLOCK_SHORT_NAME>NV_ApplicationValidFlagBlock</FEE_BLOCK_SHORT_NAME>
+            <FEE_BLOCK_SIZE>4</FEE_BLOCK_SIZE>
+            <FEE_IMMEDIATE_DATA>FALSE</FEE_IMMEDIATE_DATA>
+            <FEE_NUMBER_OF_WRITE_CYCLES>1</FEE_NUMBER_OF_WRITE_CYCLES>            
+            <FEE_RB_PERSISTENT_ID>0x40B1</FEE_RB_PERSISTENT_ID>
+            <FEE_RB_CALLBACK_END>NULL_PTR</FEE_RB_CALLBACK_END>
+            <FEE_RB_CALLBACK_ERROR>NULL_PTR</FEE_RB_CALLBACK_ERROR>
+            <FEE_RB_DATAFILTERTYPE>DYNAMIC</FEE_RB_DATAFILTERTYPE>
+            <FEE_RB_DEVICE_INDEX>0</FEE_RB_DEVICE_INDEX>
+            <FEE_RB_NO_FALLBACK>FALSE</FEE_RB_NO_FALLBACK>
+            <FEE_RB_ORIGIN>NVM</FEE_RB_ORIGIN>
+            <FEE_RB_SEC_LEVEL>1</FEE_RB_SEC_LEVEL>
+            <FEE_RB_SURVIVAL>FALSE</FEE_RB_SURVIVAL>
+            <FEE_RB_ROBUSTNESS>FALSE</FEE_RB_ROBUSTNESS>
+            <FEE_RB_VAR_BLOCK_LENGTH>FALSE</FEE_RB_VAR_BLOCK_LENGTH>
+            <FEE_RB_FIRST_READ_DATA_MIGRATION>FALSE</FEE_RB_FIRST_READ_DATA_MIGRATION>
+            <FEE_RB_STATUS_FLAGS>100000000</FEE_RB_STATUS_FLAGS>
+        </FEE_BLOCK_PROP>
+        <FEE_BLOCK_PROP>
+            <!-- Specified by Autosar -->
+            <FEE_BLOCK_SHORT_NAME>NV_ApplicationDataFingerprintBlock</FEE_BLOCK_SHORT_NAME>
+            <FEE_BLOCK_SIZE>27</FEE_BLOCK_SIZE>
+            <FEE_IMMEDIATE_DATA>FALSE</FEE_IMMEDIATE_DATA>
+            <FEE_NUMBER_OF_WRITE_CYCLES>1</FEE_NUMBER_OF_WRITE_CYCLES>            
+            <FEE_RB_PERSISTENT_ID>0x6ABE</FEE_RB_PERSISTENT_ID>
+            <FEE_RB_CALLBACK_END>NULL_PTR</FEE_RB_CALLBACK_END>
+            <FEE_RB_CALLBACK_ERROR>NULL_PTR</FEE_RB_CALLBACK_ERROR>
+            <FEE_RB_DATAFILTERTYPE>DYNAMIC</FEE_RB_DATAFILTERTYPE>
+            <FEE_RB_DEVICE_INDEX>0</FEE_RB_DEVICE_INDEX>
+            <FEE_RB_NO_FALLBACK>FALSE</FEE_RB_NO_FALLBACK>
+            <FEE_RB_ORIGIN>NVM</FEE_RB_ORIGIN>
+            <FEE_RB_SEC_LEVEL>1</FEE_RB_SEC_LEVEL>
+            <FEE_RB_SURVIVAL>FALSE</FEE_RB_SURVIVAL>
+            <FEE_RB_ROBUSTNESS>FALSE</FEE_RB_ROBUSTNESS>
+            <FEE_RB_VAR_BLOCK_LENGTH>FALSE</FEE_RB_VAR_BLOCK_LENGTH>
+            <FEE_RB_FIRST_READ_DATA_MIGRATION>FALSE</FEE_RB_FIRST_READ_DATA_MIGRATION>
+            <FEE_RB_STATUS_FLAGS>100000000</FEE_RB_STATUS_FLAGS>
+        </FEE_BLOCK_PROP>
+        <FEE_BLOCK_PROP>
+            <!-- Specified by Autosar -->
+            <FEE_BLOCK_SHORT_NAME>NV_ApplicationSoftwareFingerprintBlock</FEE_BLOCK_SHORT_NAME>
+            <FEE_BLOCK_SIZE>27</FEE_BLOCK_SIZE>
+            <FEE_IMMEDIATE_DATA>FALSE</FEE_IMMEDIATE_DATA>
+            <FEE_NUMBER_OF_WRITE_CYCLES>1</FEE_NUMBER_OF_WRITE_CYCLES>            
+            <FEE_RB_PERSISTENT_ID>0x74BC</FEE_RB_PERSISTENT_ID>
+            <FEE_RB_CALLBACK_END>NULL_PTR</FEE_RB_CALLBACK_END>
+            <FEE_RB_CALLBACK_ERROR>NULL_PTR</FEE_RB_CALLBACK_ERROR>
+            <FEE_RB_DATAFILTERTYPE>DYNAMIC</FEE_RB_DATAFILTERTYPE>
+            <FEE_RB_DEVICE_INDEX>0</FEE_RB_DEVICE_INDEX>
+            <FEE_RB_NO_FALLBACK>FALSE</FEE_RB_NO_FALLBACK>
+            <FEE_RB_ORIGIN>NVM</FEE_RB_ORIGIN>
+            <FEE_RB_SEC_LEVEL>1</FEE_RB_SEC_LEVEL>
+            <FEE_RB_SURVIVAL>FALSE</FEE_RB_SURVIVAL>
+            <FEE_RB_ROBUSTNESS>FALSE</FEE_RB_ROBUSTNESS>
+            <FEE_RB_VAR_BLOCK_LENGTH>FALSE</FEE_RB_VAR_BLOCK_LENGTH>
+            <FEE_RB_FIRST_READ_DATA_MIGRATION>FALSE</FEE_RB_FIRST_READ_DATA_MIGRATION>
+            <FEE_RB_STATUS_FLAGS>100000000</FEE_RB_STATUS_FLAGS>
+        </FEE_BLOCK_PROP>
+        <FEE_BLOCK_PROP>
+            <!-- Specified by Autosar -->
+            <FEE_BLOCK_SHORT_NAME>NV_PreErasedBlock</FEE_BLOCK_SHORT_NAME>
+            <FEE_BLOCK_SIZE>3</FEE_BLOCK_SIZE>
+            <FEE_IMMEDIATE_DATA>FALSE</FEE_IMMEDIATE_DATA>
+            <FEE_NUMBER_OF_WRITE_CYCLES>1</FEE_NUMBER_OF_WRITE_CYCLES>            
+            <FEE_RB_PERSISTENT_ID>0x7605</FEE_RB_PERSISTENT_ID>
+            <FEE_RB_CALLBACK_END>NULL_PTR</FEE_RB_CALLBACK_END>
+            <FEE_RB_CALLBACK_ERROR>NULL_PTR</FEE_RB_CALLBACK_ERROR>
+            <FEE_RB_DATAFILTERTYPE>DYNAMIC</FEE_RB_DATAFILTERTYPE>
+            <FEE_RB_DEVICE_INDEX>0</FEE_RB_DEVICE_INDEX>
+            <FEE_RB_NO_FALLBACK>FALSE</FEE_RB_NO_FALLBACK>
+            <FEE_RB_ORIGIN>NVM</FEE_RB_ORIGIN>
+            <FEE_RB_SEC_LEVEL>1</FEE_RB_SEC_LEVEL>
+            <FEE_RB_SURVIVAL>FALSE</FEE_RB_SURVIVAL>
+            <FEE_RB_ROBUSTNESS>FALSE</FEE_RB_ROBUSTNESS>
+            <FEE_RB_VAR_BLOCK_LENGTH>FALSE</FEE_RB_VAR_BLOCK_LENGTH>
+            <FEE_RB_FIRST_READ_DATA_MIGRATION>FALSE</FEE_RB_FIRST_READ_DATA_MIGRATION>
+            <FEE_RB_STATUS_FLAGS>100000000</FEE_RB_STATUS_FLAGS>
+        </FEE_BLOCK_PROP>
+        <FEE_BLOCK_PROP>
+            <!-- Specified by Autosar -->
+            <FEE_BLOCK_SHORT_NAME>NV_BootSoftwareFingerprintBlock</FEE_BLOCK_SHORT_NAME>
+            <FEE_BLOCK_SIZE>27</FEE_BLOCK_SIZE>
+            <FEE_IMMEDIATE_DATA>FALSE</FEE_IMMEDIATE_DATA>
+            <FEE_NUMBER_OF_WRITE_CYCLES>1</FEE_NUMBER_OF_WRITE_CYCLES>            
+            <FEE_RB_PERSISTENT_ID>0x0CBC</FEE_RB_PERSISTENT_ID>
+            <FEE_RB_CALLBACK_END>NULL_PTR</FEE_RB_CALLBACK_END>
+            <FEE_RB_CALLBACK_ERROR>NULL_PTR</FEE_RB_CALLBACK_ERROR>
+            <FEE_RB_DATAFILTERTYPE>DYNAMIC</FEE_RB_DATAFILTERTYPE>
+            <FEE_RB_DEVICE_INDEX>0</FEE_RB_DEVICE_INDEX>
+            <FEE_RB_NO_FALLBACK>FALSE</FEE_RB_NO_FALLBACK>
+            <FEE_RB_ORIGIN>NVM</FEE_RB_ORIGIN>
+            <FEE_RB_SEC_LEVEL>1</FEE_RB_SEC_LEVEL>
+            <FEE_RB_SURVIVAL>FALSE</FEE_RB_SURVIVAL>
+            <FEE_RB_ROBUSTNESS>FALSE</FEE_RB_ROBUSTNESS>
+            <FEE_RB_VAR_BLOCK_LENGTH>FALSE</FEE_RB_VAR_BLOCK_LENGTH>
+            <FEE_RB_FIRST_READ_DATA_MIGRATION>FALSE</FEE_RB_FIRST_READ_DATA_MIGRATION>
+            <FEE_RB_STATUS_FLAGS>100000000</FEE_RB_STATUS_FLAGS>
+        </FEE_BLOCK_PROP>
+        <FEE_BLOCK_PROP>
+            <!-- Specified by Autosar -->
+            <FEE_BLOCK_SHORT_NAME>NV_ExternalReprogrammingRequestFlagBlock</FEE_BLOCK_SHORT_NAME>
+            <FEE_BLOCK_SIZE>4</FEE_BLOCK_SIZE>
+            <FEE_IMMEDIATE_DATA>FALSE</FEE_IMMEDIATE_DATA>
+            <FEE_NUMBER_OF_WRITE_CYCLES>1</FEE_NUMBER_OF_WRITE_CYCLES>            
+            <FEE_RB_PERSISTENT_ID>0x7FBB</FEE_RB_PERSISTENT_ID>
+            <FEE_RB_CALLBACK_END>NULL_PTR</FEE_RB_CALLBACK_END>
+            <FEE_RB_CALLBACK_ERROR>NULL_PTR</FEE_RB_CALLBACK_ERROR>
+            <FEE_RB_DATAFILTERTYPE>DYNAMIC</FEE_RB_DATAFILTERTYPE>
+            <FEE_RB_DEVICE_INDEX>0</FEE_RB_DEVICE_INDEX>
+            <FEE_RB_NO_FALLBACK>FALSE</FEE_RB_NO_FALLBACK>
+            <FEE_RB_ORIGIN>NVM</FEE_RB_ORIGIN>
+            <FEE_RB_SEC_LEVEL>1</FEE_RB_SEC_LEVEL>
+            <FEE_RB_SURVIVAL>FALSE</FEE_RB_SURVIVAL>
+            <FEE_RB_ROBUSTNESS>FALSE</FEE_RB_ROBUSTNESS>
+            <FEE_RB_VAR_BLOCK_LENGTH>FALSE</FEE_RB_VAR_BLOCK_LENGTH>
+            <FEE_RB_FIRST_READ_DATA_MIGRATION>FALSE</FEE_RB_FIRST_READ_DATA_MIGRATION>
+            <FEE_RB_STATUS_FLAGS>100000000</FEE_RB_STATUS_FLAGS>
+        </FEE_BLOCK_PROP>
+        <FEE_BLOCK_PROP>
+            <!-- Specified by Autosar -->
+            <FEE_BLOCK_SHORT_NAME>NV_PBLValidFlagBlock</FEE_BLOCK_SHORT_NAME>
+            <FEE_BLOCK_SIZE>4</FEE_BLOCK_SIZE>
+            <FEE_IMMEDIATE_DATA>FALSE</FEE_IMMEDIATE_DATA>
+            <FEE_NUMBER_OF_WRITE_CYCLES>1</FEE_NUMBER_OF_WRITE_CYCLES>            
+            <FEE_RB_PERSISTENT_ID>0x1214</FEE_RB_PERSISTENT_ID>
+            <FEE_RB_CALLBACK_END>NULL_PTR</FEE_RB_CALLBACK_END>
+            <FEE_RB_CALLBACK_ERROR>NULL_PTR</FEE_RB_CALLBACK_ERROR>
+            <FEE_RB_DATAFILTERTYPE>DYNAMIC</FEE_RB_DATAFILTERTYPE>
+            <FEE_RB_DEVICE_INDEX>0</FEE_RB_DEVICE_INDEX>
+            <FEE_RB_NO_FALLBACK>FALSE</FEE_RB_NO_FALLBACK>
+            <FEE_RB_ORIGIN>NVM</FEE_RB_ORIGIN>
+            <FEE_RB_SEC_LEVEL>1</FEE_RB_SEC_LEVEL>
+            <FEE_RB_SURVIVAL>FALSE</FEE_RB_SURVIVAL>
+            <FEE_RB_ROBUSTNESS>FALSE</FEE_RB_ROBUSTNESS>
+            <FEE_RB_VAR_BLOCK_LENGTH>FALSE</FEE_RB_VAR_BLOCK_LENGTH>
+            <FEE_RB_FIRST_READ_DATA_MIGRATION>FALSE</FEE_RB_FIRST_READ_DATA_MIGRATION>
+            <FEE_RB_STATUS_FLAGS>100000000</FEE_RB_STATUS_FLAGS>
+        </FEE_BLOCK_PROP>
+    </FEE_BLOCKDESCRIPTOR>
+</FEE>
+
+

@@ -1,0 +1,39 @@
+===========================================================================
+COMP: Crc  Generation Report
+===========================================================================
+
+configured Crc modes:
+Crc8     :  CRC_8_TABLE
+Crc8H2F  :  CRC_8H2F_TABLE
+Crc16    :  CRC_16_TABLE
+Crc32    :  CRC_32_TABLE
+Crc32P4  :  CRC_32P4_TABLE
+
+not configured Crc modes:
+Crc64
+
+Autosar Release Revision: 2
+
+
+
+
+
+The generation of all source and header files of COMP: Crc was successful if the error report below is empty!
+
+===========================================================================
+COMP: Crc   Error Report
+===========================================================================
+
+
+  
+
+
+
+
+
+
+
+
+
+
+

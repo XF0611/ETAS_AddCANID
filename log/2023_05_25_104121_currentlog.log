@@ -1,0 +1,31 @@
+scons: done reading SConscript files.
+
+scons: warning: you do not seem to have the pywin32 extensions installed;
+	parallel (-j) builds may not work reliably with open Python files.
+File "F:\Python271\Scripts\scons.py", line 201, in <module>
+scons: Building targets ...
+Compiling ASW\OUTP_SWC\src\OUTP_SWC.c
+
+Linking output\dbg\D_ETAS_BIP_PT_ARCMW.elf...
+Unresolved Symbol:			Referenced from:
+------------------			----------------
+Rte_Read_RP_ETAS06_Sig35_ComRx_0x456_ETAS06_Sig34_ComRx_0x456
+                                         output\objs\asw\INP_SWC\INP_SWC.o
+Rte_Read_RP_ETAS06_Sig36_ComRx_0x456_ETAS06_Sig34_ComRx_0x456
+                                         output\objs\asw\INP_SWC\INP_SWC.o
+Rte_Read_RP_ETAS06_Sig37_ComRx_0x456_ETAS06_Sig34_ComRx_0x456
+                                         output\objs\asw\INP_SWC\INP_SWC.o
+Rte_Read_RP_ETAS06_Sig38_ComRx_0x456_ETAS06_Sig34_ComRx_0x456
+                                         output\objs\asw\INP_SWC\INP_SWC.o
+Rte_Read_RP_ETAS06_Sig39_ComRx_0x456_ETAS06_Sig34_ComRx_0x456
+                                         output\objs\asw\INP_SWC\INP_SWC.o
+Rte_Read_RP_ETAS06_Sig40_ComRx_0x456_ETAS06_Sig34_ComRx_0x456
+                                         output\objs\asw\INP_SWC\INP_SWC.o
+Rte_Read_RP_ETAS06_Sig41_ComRx_0x456_ETAS06_Sig34_ComRx_0x456
+                                         output\objs\asw\INP_SWC\INP_SWC.o
+
+===================
+None
+===================
+scons: *** [output\dbg\D_ETAS_BIP_PT_ARCMW.elf] Error 1
+scons: building terminated because of errors.

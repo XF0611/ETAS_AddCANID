@@ -1,0 +1,14 @@
+Generate phase for module NvM
+
+Starting action "NvM_Generate".
+Loading template file "NvM_Static_Cfg_BSWMD.xt".
+Writing generated file "NvM_Static_Cfg_BSWMD.arxml".
+Loading template file "NvM_Cfg.ct".
+Writing generated file "NvM_Cfg.c".
+Loading template file "NvM_Cfg.ht".
+Writing generated file "NvM_Cfg.h".
+Writing generated file "NvM_Cfg_SWCD.arxml".
+Loading template file "NvM_Report.rt".
+Writing generated file "NvM_Report.txt".
+Action "NvM_Generate" finished.
+

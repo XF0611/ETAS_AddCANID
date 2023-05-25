@@ -1,0 +1,12 @@
+Generate phase for module Fee
+
+Starting action "Fee_Generate".
+Loading template file "Fee_Cfg.ct".
+Writing generated file "Fee_Cfg.c".
+Loading template file "Fee_Cfg.ht".
+Writing generated file "Fee_Cfg.h".
+Loading template file "Fee_Report.rt".
+Writing generated file "Fee_Report.txt".
+Loading template file "Fee_XmlReport.rt".
+Writing generated file "Fee_Export.xml".
+Fee_Generate finished.

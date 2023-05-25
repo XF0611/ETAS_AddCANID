@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="ASCII"?>
+<MappingMetaModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns="http://www.bosch.com/autosartool/m2m/model" transformationName="Conf-Gen Enhancer">
+  <mappingStructures name="CanTp">
+    <order orderId="CanTp_1" name="CanTp">
+      <order orderId="CanTp_2" name="CanTpGeneral"/>
+    </order>
+  </mappingStructures>
+  <mappings mappingId="Mapping_CanTp_1" mappingType="PRIMITIVE_ATTRIBUTE" defaultValue="true">
+    <targetItem identifier="CanTpDevErrorDetect"/>
+    <orderDetails orderId="CanTp_2" order="1"/>
+  </mappings>
+</MappingMetaModel>

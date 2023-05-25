@@ -1,0 +1,10 @@
+Generate phase for module MemIf
+
+Starting action "MemIf_Generate".
+Loading template file "MemIf_Cfg.ht".
+Writing generated file "MemIf_Cfg.h".
+Loading template file "MemIf_Cfg_BSWMD.xt".
+Writing generated file "MemIf_Cfg_BSWMD.arxml".
+Loading template file "MemIf_Report.rt".
+Writing generated file "MemIf_Report.txt".
+MemIf_Generate finished successfull

@@ -1,0 +1,39 @@
+#ifndef SYSTEM_CLOCK_INIT__
+#define SYSTEM_CLOCK_INIT__
+
+#include <system.h>
+
+#define ARC_TIMER_SOURCE_CLOCK		(50000000UL)
+#define ARC_TIMER_US_TICKS		(ARC_TIMER_SOURCE_CLOCK / 1000000)
+#define ARC_TIMER_MS_TICKS		(1000 * ARC_TIMER_US_TICKS)
+
+typedef struct radio_reg_description {
+	uint32_t addr;
+	uint32_t value;
+	uint32_t af_delay;
+} radio_reg_desc_t;
+
+static radio_reg_desc_t pll_clock[] = {
+	{0x00, 0x00, 0x00},
+	{0x03, 0x07, 0x00},
+	{0x05, 0xc0, 0x00},
+	{0x12, 0xc0, 0x00},
+	{0x13, 0xc0, 0x00},
+	{0x14, 0xc0, 0x00},
+	{0x15, 0xb0, 0x00},
+	{0x16, 0xb0, 0x00},
+	{0x1b, 0xeb, 0x00},
+	{0x1e, 0xc0, 0x00},
+	{0x25, 0xa0, 0x00},
+	{0x26, 0x6f, 0x00},
+	{0x7d, 0x00, 0x00},
+	{0x7d, 0x01, 0x07},
+	{0xFF, 0xFF, 0xFF}
+};
+
+static inline void radio_reg_write(uint32_t addr, uint32_t val);
+void mdelay(uint32_t ms);
+void pll_enable_stub (void);
+void system_clock_init (void);
+
+#endif

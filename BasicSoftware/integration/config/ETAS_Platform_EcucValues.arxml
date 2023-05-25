@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-2-2.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE>
+      <SHORT-NAME>ETAS_BIP</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE>
+          <SHORT-NAME>EcucModuleConfigurationValuess</SHORT-NAME>
+          <ELEMENTS>
+            <ECUC-MODULE-CONFIGURATION-VALUES>
+              <SHORT-NAME>Platform</SHORT-NAME>
+              <DEFINITION-REF DEST="ECUC-MODULE-DEF">/AUTOSAR_Platform/EcucModuleDefs/Platform</DEFINITION-REF>
+              <CONTAINERS>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>PlatformRbSettings</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_Platform/EcucModuleDefs/Platform/PlatformRbSettings</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Platform/EcucModuleDefs/Platform/PlatformRbSettings/PlatformRbCpuBitOrder</DEFINITION-REF>
+                      <VALUE>LSB_FIRST</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Platform/EcucModuleDefs/Platform/PlatformRbSettings/PlatformRbCpuByteOrder</DEFINITION-REF>
+                      <VALUE>LOW_BYTE_FIRST</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Platform/EcucModuleDefs/Platform/PlatformRbSettings/PlatformRbCpuType</DEFINITION-REF>
+                      <VALUE>CPU_TYPE_32</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Platform/EcucModuleDefs/Platform/PlatformRbSettings/PlatformRbFloatActivation</DEFINITION-REF>
+                      <VALUE>ALLOW</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/AUTOSAR_Platform/EcucModuleDefs/Platform/PlatformRbSettings/PlatformRbNativeBoolean</DEFINITION-REF>
+                      <VALUE>unsigned char</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/AUTOSAR_Platform/EcucModuleDefs/Platform/PlatformRbSettings/PlatformRbNativeFloat32</DEFINITION-REF>
+                      <VALUE>float</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/AUTOSAR_Platform/EcucModuleDefs/Platform/PlatformRbSettings/PlatformRbNativeFloat64</DEFINITION-REF>
+                      <VALUE>double</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/AUTOSAR_Platform/EcucModuleDefs/Platform/PlatformRbSettings/PlatformRbNativeSint16</DEFINITION-REF>
+                      <VALUE>signed short</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/AUTOSAR_Platform/EcucModuleDefs/Platform/PlatformRbSettings/PlatformRbNativeSint16Least</DEFINITION-REF>
+                      <VALUE>signed long</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/AUTOSAR_Platform/EcucModuleDefs/Platform/PlatformRbSettings/PlatformRbNativeSint32</DEFINITION-REF>
+                      <VALUE>signed int</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/AUTOSAR_Platform/EcucModuleDefs/Platform/PlatformRbSettings/PlatformRbNativeSint32Least</DEFINITION-REF>
+                      <VALUE>signed long</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/AUTOSAR_Platform/EcucModuleDefs/Platform/PlatformRbSettings/PlatformRbNativeSint64</DEFINITION-REF>
+                      <VALUE>signed long long</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/AUTOSAR_Platform/EcucModuleDefs/Platform/PlatformRbSettings/PlatformRbNativeSint8</DEFINITION-REF>
+                      <VALUE>signed char</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/AUTOSAR_Platform/EcucModuleDefs/Platform/PlatformRbSettings/PlatformRbNativeSint8Least</DEFINITION-REF>
+                      <VALUE>signed long</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/AUTOSAR_Platform/EcucModuleDefs/Platform/PlatformRbSettings/PlatformRbNativeUint16</DEFINITION-REF>
+                      <VALUE>unsigned short</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/AUTOSAR_Platform/EcucModuleDefs/Platform/PlatformRbSettings/PlatformRbNativeUint16Least</DEFINITION-REF>
+                      <VALUE>unsigned long</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/AUTOSAR_Platform/EcucModuleDefs/Platform/PlatformRbSettings/PlatformRbNativeUint32</DEFINITION-REF>
+                      <VALUE>unsigned int</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/AUTOSAR_Platform/EcucModuleDefs/Platform/PlatformRbSettings/PlatformRbNativeUint32Least</DEFINITION-REF>
+                      <VALUE>unsigned long</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/AUTOSAR_Platform/EcucModuleDefs/Platform/PlatformRbSettings/PlatformRbNativeUint64</DEFINITION-REF>
+                      <VALUE>unsigned long long</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/AUTOSAR_Platform/EcucModuleDefs/Platform/PlatformRbSettings/PlatformRbNativeUint8</DEFINITION-REF>
+                      <VALUE>unsigned char</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/AUTOSAR_Platform/EcucModuleDefs/Platform/PlatformRbSettings/PlatformRbNativeUint8Least</DEFINITION-REF>
+                      <VALUE>unsigned long</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Platform/EcucModuleDefs/Platform/PlatformRbSettings/PlatformRbTypeEmitter</DEFINITION-REF>
+                      <VALUE>Platform_Types</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+              </CONTAINERS>
+            </ECUC-MODULE-CONFIGURATION-VALUES>
+          </ELEMENTS>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>
+

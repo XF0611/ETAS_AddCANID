@@ -1,0 +1,14 @@
+3 1 1  "#Filename:" 1 1 1 1 1
+"*.S19;*.HEX"
+
+3 1 1  "#Filename_SBL:" 1 1 1 1 1
+"*.S19;*.HEX"
+
+2 1 1 "#Stay-In-Boot:               " 1 1 1 1 2
+"ON"      "1 "
+"OFF"     "2 "
+
+2 1 1 "#Action:               " 1 1 1 1 3
+"Flash App + Data       " "1 DUMMYPATH\OIP_FBL_ON_CAN"
+"Flash Data Only        " "2 DUMMYPATH\OIP_FBL_ON_CAN"
+"Flash App Only         " "3 DUMMYPATH\OIP_FBL_ON_CAN"

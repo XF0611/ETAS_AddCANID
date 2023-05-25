@@ -1,0 +1,381 @@
+<?xml version='1.0'?>
+<datamodel version="7.0" 
+           xmlns="http://www.tresos.de/_projects/DataModel2/16/root.xsd" 
+           xmlns:a="http://www.tresos.de/_projects/DataModel2/16/attribute.xsd" 
+           xmlns:v="http://www.tresos.de/_projects/DataModel2/06/schema.xsd" 
+           xmlns:d="http://www.tresos.de/_projects/DataModel2/06/data.xsd">
+
+  <d:ctr type="AUTOSAR" factory="autosar" 
+         xmlns:ad="http://www.tresos.de/_projects/DataModel2/08/admindata.xsd" 
+         xmlns:cd="http://www.tresos.de/_projects/DataModel2/08/customdata.xsd" 
+         xmlns:f="http://www.tresos.de/_projects/DataModel2/14/formulaexpr.xsd" 
+         xmlns:icc="http://www.tresos.de/_projects/DataModel2/08/implconfigclass.xsd" 
+         xmlns:mt="http://www.tresos.de/_projects/DataModel2/11/multitest.xsd"  
+         xmlns:variant="http://www.tresos.de/_projects/DataModel2/11/variant.xsd">
+    <d:lst type="TOP-LEVEL-PACKAGES">
+      <d:ctr name="Can" type="AR-PACKAGE">
+        <d:lst type="ELEMENTS">
+          <d:chc name="Can" type="AR-ELEMENT" value="MODULE-CONFIGURATION">
+            <d:ctr type="MODULE-CONFIGURATION">
+              <a:a name="DEF" value="ASPath:/Can_Alps/Can"/>
+              <a:a name="IMPORTER_INFO" value="ETAS_Project_Can_EcucValues"/>
+              <d:var name="IMPLEMENTATION_CONFIG_VARIANT" type="ENUMERATION" 
+                     value="VariantPreCompile">
+                <a:a name="IMPORTER_INFO" value="ETAS_Project_Can_EcucValues"/>
+              </d:var>
+              <d:lst name="CanConfigSet" type="MAP">
+                <a:a name="IMPORTER_INFO" value="ETAS_Project_Can_EcucValues"/>
+                <d:ctr name="CanConfigSet" type="IDENTIFIABLE">
+                  <a:a name="IMPORTER_INFO" value="ETAS_Project_Can_EcucValues"/>
+                  <d:lst name="CanController" type="MAP">
+                    <a:a name="IMPORTER_INFO" 
+                         value="ETAS_Project_Can_EcucValues"/>
+                    <d:ctr name="CanController_ETAS_CAN" type="IDENTIFIABLE">
+                      <d:var name="CanRxProcessing" type="ENUMERATION" 
+                             value="INTERRUPT"/>
+                      <d:var name="CanControllerId" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" 
+                             value="ETAS_Project_Can_EcucValues"/>
+                      </d:var>
+                      <d:var name="CanControllerSupportedBaudratesCount" 
+                             type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="CanWakeupProcessing" type="ENUMERATION" 
+                             value="POLLING">
+                        <a:a name="IMPORTER_INFO" 
+                             value="ETAS_Project_Can_EcucValues"/>
+                      </d:var>
+                      <d:lst name="CanControllerBaseAddress">
+                        <a:a name="IMPORTER_INFO" 
+                             value="ETAS_Project_Can_EcucValues"/>
+                        <d:var type="INTEGER" value="0">
+                          <a:a name="IMPORTER_INFO" 
+                               value="ETAS_Project_Can_EcucValues"/>
+                        </d:var>
+                      </d:lst>
+                      <d:var name="CanTxProcessing" type="ENUMERATION" 
+                             value="INTERRUPT"/>
+                      <d:var name="CanBusoffProcessing" type="ENUMERATION" 
+                             value="POLLING">
+                        <a:a name="IMPORTER_INFO" 
+                             value="ETAS_Project_Can_EcucValues"/>
+                      </d:var>
+                      <d:var name="CanControllerActivation" type="BOOLEAN" 
+                             value="true">
+                        <a:a name="IMPORTER_INFO" 
+                             value="ETAS_Project_Can_EcucValues"/>
+                      </d:var>
+                      <d:var name="CanWakeupFunctionalityAPI" type="BOOLEAN" 
+                             value="false">
+                        <a:a name="IMPORTER_INFO" 
+                             value="ETAS_Project_Can_EcucValues"/>
+                      </d:var>
+                      <d:var name="CanWakeupSupport" type="BOOLEAN" 
+                             value="false">
+                        <a:a name="IMPORTER_INFO" 
+                             value="ETAS_Project_Can_EcucValues"/>
+                      </d:var>
+                      <d:var name="AlpsStdRejectNoMatch" type="BOOLEAN" 
+                             value="true"/>
+                      <d:var name="AlpsExtRejectNoMatch" type="BOOLEAN" 
+                             value="true"/>
+                      <d:ref name="CanControllerDefaultBaudrate" 
+                             type="REFERENCE" 
+                             value="ASPath:/Can/Can/CanConfigSet/CanController_ETAS_CAN/ETAS_CAN_BR_0"/>
+                      <d:ref name="CanCpuClockRef" type="REFERENCE" 
+                             value="ASPath:/Mcu/Mcu/McuModuleConfiguration/McuClockSettingConfig_0"/>
+                      <d:lst name="CanWakeupSourceRef"/>
+                      <d:lst name="CanControllerBaudrateConfig" type="MAP">
+                        <a:a name="IMPORTER_INFO" 
+                             value="ETAS_Project_Can_EcucValues"/>
+                        <d:ctr name="ETAS_CAN_BR_0" type="IDENTIFIABLE">
+                          <a:a name="IMPORTER_INFO" 
+                               value="ETAS_Project_Can_EcucValues"/>
+                          <d:var name="CanControllerBaudRate" type="INTEGER" 
+                                 value="500">
+                            <a:a name="IMPORTER_INFO" 
+                                 value="ETAS_Project_Can_EcucValues"/>
+                          </d:var>
+                          <d:var name="CanControllerBaudRateConfigID" 
+                                 type="INTEGER" value="0"/>
+                          <d:var name="CanControllerSeg1" type="INTEGER" 
+                                 value="3"/>
+                          <d:var name="CanControllerSyncJumpWidth" 
+                                 type="INTEGER" value="1"/>
+                          <d:var name="CanControllerSeg2" type="INTEGER" 
+                                 value="3"/>
+                          <d:var name="CanControllerPropSeg" type="INTEGER" 
+                                 value="3"/>
+                          <d:lst name="CanControllerFdBaudrateConfig" 
+                                 type="MAP"/>
+                        </d:ctr>
+                      </d:lst>
+                      <d:lst name="CanHardwareObject" type="MAP"/>
+                      <d:lst name="CanTTController" type="MAP"/>
+                    </d:ctr>
+                  </d:lst>
+                  <d:lst name="CanHardwareObject" type="MAP">
+                    <d:ctr name="CanHardwareObject_CANNODE_0_Rx_Std_MailBox_1" 
+                           type="IDENTIFIABLE">
+                      <d:lst name="CanFdPaddingValue"/>
+                      <d:var name="CanHandleType" type="ENUMERATION" 
+                             value="FULL">
+                        <a:a name="IMPORTER_INFO" 
+                             value="ETAS_Project_Can_EcucValues"/>
+                      </d:var>
+                      <d:var name="CanObjectId" type="INTEGER" value="0"/>
+                      <d:var name="CanObjectType" type="ENUMERATION" 
+                             value="RECEIVE">
+                        <a:a name="IMPORTER_INFO" 
+                             value="ETAS_Project_Can_EcucValues"/>
+                      </d:var>
+                      <d:var name="CanHwObjectCount" type="INTEGER" value="1">
+                        <a:a name="IMPORTER_INFO" 
+                             value="ETAS_Project_Can_EcucValues"/>
+                      </d:var>
+                      <d:var name="CanIdType" type="ENUMERATION" 
+                             value="STANDARD">
+                        <a:a name="IMPORTER_INFO" 
+                             value="ETAS_Project_Can_EcucValues"/>
+                      </d:var>
+                      <d:lst name="CanTriggerTransmitEnable"/>
+                      <d:lst name="CanHardwareObjectUsesPolling"/>
+                      <d:ref name="CanControllerRef" type="REFERENCE" 
+                             value="ASPath:/Can/Can/CanConfigSet/CanController_ETAS_CAN"/>
+                      <d:lst name="CanMainFunctionRWPeriodRef"/>
+                      <d:ctr name="CanHwFilter" type="IDENTIFIABLE">
+                        <a:a name="IMPORTER_INFO" 
+                             value="ETAS_Project_Can_EcucValues"/>
+                        <d:var name="NumOfStdIdFilters" type="INTEGER" value="0">
+                          <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:var>
+                        <d:var name="NumofExtIdFilters" type="INTEGER" value="0">
+                          <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:var>
+                        <d:lst name="CanHwFilterMask">
+                          <a:a name="IMPORTER_INFO" 
+                               value="ETAS_Project_Can_EcucValues"/>
+                          <d:var type="INTEGER" value="2047">
+                            <a:a name="IMPORTER_INFO" 
+                                 value="ETAS_Project_Can_EcucValues"/>
+                          </d:var>
+                        </d:lst>
+                        <d:lst name="CanHwFilterCode">
+                          <a:a name="IMPORTER_INFO" 
+                               value="ETAS_Project_Can_EcucValues"/>
+                          <d:var type="INTEGER" value="1856">
+                            <a:a name="IMPORTER_INFO" 
+                                 value="ETAS_Project_Can_EcucValues"/>
+                          </d:var>
+                        </d:lst>
+                        <d:lst name="CanStdFilterElements" type="MAP">
+                          <d:ctr name="CanStdFilterElements_0" 
+                                 type="IDENTIFIABLE">
+                            <d:var name="ID0" type="INTEGER" value="1856"/>
+                            <d:var name="ID1" type="INTEGER" value="1856"/>
+                            <d:var name="FilterType" type="ENUMERATION" 
+                                   value="CAN_CLASSIC_BIT_MASK_FILTER"/>
+                          </d:ctr>
+                        </d:lst>
+                        <d:lst name="CanExtFilterElements" type="MAP"/>
+                      </d:ctr>
+                      <d:lst name="CanTTHardwareObjectTrigger" type="MAP"/>
+                    </d:ctr>
+                    <d:ctr name="CanHardwareObject_CANNODE_0_Rx_Std_MailBox_2" 
+                           type="IDENTIFIABLE">
+                      <d:lst name="CanFdPaddingValue"/>
+                      <d:var name="CanHandleType" type="ENUMERATION" 
+                             value="FULL">
+                        <a:a name="IMPORTER_INFO" 
+                             value="ETAS_Project_Can_EcucValues"/>
+                      </d:var>
+                      <d:var name="CanObjectId" type="INTEGER" value="1"/>
+                      <d:var name="CanObjectType" type="ENUMERATION" 
+                             value="RECEIVE">
+                        <a:a name="IMPORTER_INFO" 
+                             value="ETAS_Project_Can_EcucValues"/>
+                      </d:var>
+                      <d:var name="CanHwObjectCount" type="INTEGER" value="1">
+                        <a:a name="IMPORTER_INFO" 
+                             value="ETAS_Project_Can_EcucValues"/>
+                      </d:var>
+                      <d:var name="CanIdType" type="ENUMERATION" 
+                             value="STANDARD">
+                        <a:a name="IMPORTER_INFO" 
+                             value="ETAS_Project_Can_EcucValues"/>
+                      </d:var>
+                      <d:lst name="CanTriggerTransmitEnable"/>
+                      <d:lst name="CanHardwareObjectUsesPolling"/>
+                      <d:ref name="CanControllerRef" type="REFERENCE" 
+                             value="ASPath:/Can/Can/CanConfigSet/CanController_ETAS_CAN"/>
+                      <d:lst name="CanMainFunctionRWPeriodRef"/>
+                      <d:ctr name="CanHwFilter" type="IDENTIFIABLE">
+                        <a:a name="IMPORTER_INFO" 
+                             value="ETAS_Project_Can_EcucValues"/>
+                        <d:var name="NumOfStdIdFilters" type="INTEGER" value="0">
+                          <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:var>
+                        <d:var name="NumofExtIdFilters" type="INTEGER" value="0">
+                          <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:var>
+                        <d:lst name="CanHwFilterMask">
+                          <a:a name="IMPORTER_INFO" 
+                               value="ETAS_Project_Can_EcucValues"/>
+                          <d:var type="INTEGER" value="2047">
+                            <a:a name="IMPORTER_INFO" 
+                                 value="ETAS_Project_Can_EcucValues"/>
+                          </d:var>
+                        </d:lst>
+                        <d:lst name="CanHwFilterCode">
+                          <a:a name="IMPORTER_INFO" 
+                               value="ETAS_Project_Can_EcucValues"/>
+                          <d:var type="INTEGER" value="2015">
+                            <a:a name="IMPORTER_INFO" 
+                                 value="ETAS_Project_Can_EcucValues"/>
+                          </d:var>
+                        </d:lst>
+                        <d:lst name="CanStdFilterElements" type="MAP">
+                          <d:ctr name="CanStdFilterElements_0" 
+                                 type="IDENTIFIABLE">
+                            <d:var name="ID0" type="INTEGER" value="2015"/>
+                            <d:var name="ID1" type="INTEGER" value="2015"/>
+                            <d:var name="FilterType" type="ENUMERATION" 
+                                   value="CAN_CLASSIC_BIT_MASK_FILTER"/>
+                          </d:ctr>
+                        </d:lst>
+                        <d:lst name="CanExtFilterElements" type="MAP"/>
+                      </d:ctr>
+                      <d:lst name="CanTTHardwareObjectTrigger" type="MAP"/>
+                    </d:ctr>
+                    <d:ctr name="CanHardwareObject_CANNODE_0_Tx_Std_MailBox_1" 
+                           type="IDENTIFIABLE">
+                      <d:lst name="CanFdPaddingValue"/>
+                      <d:var name="CanHandleType" type="ENUMERATION" 
+                             value="FULL">
+                        <a:a name="IMPORTER_INFO" 
+                             value="ETAS_Project_Can_EcucValues"/>
+                      </d:var>
+                      <d:var name="CanObjectId" type="INTEGER" value="2"/>
+                      <d:var name="CanObjectType" type="ENUMERATION" 
+                             value="TRANSMIT">
+                        <a:a name="IMPORTER_INFO" 
+                             value="ETAS_Project_Can_EcucValues"/>
+                      </d:var>
+                      <d:var name="CanHwObjectCount" type="INTEGER" value="1">
+                        <a:a name="IMPORTER_INFO" 
+                             value="ETAS_Project_Can_EcucValues"/>
+                      </d:var>
+                      <d:var name="CanIdType" type="ENUMERATION" 
+                             value="STANDARD">
+                        <a:a name="IMPORTER_INFO" 
+                             value="ETAS_Project_Can_EcucValues"/>
+                      </d:var>
+                      <d:lst name="CanTriggerTransmitEnable"/>
+                      <d:lst name="CanHardwareObjectUsesPolling"/>
+                      <d:ref name="CanControllerRef" type="REFERENCE" 
+                             value="ASPath:/Can/Can/CanConfigSet/CanController_ETAS_CAN"/>
+                      <d:lst name="CanMainFunctionRWPeriodRef"/>
+                      <d:ctr name="CanHwFilter" type="IDENTIFIABLE">
+                        <d:var name="NumOfStdIdFilters" type="INTEGER" value="0">
+                          <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:var>
+                        <d:var name="NumofExtIdFilters" type="INTEGER" value="0">
+                          <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:var>
+                        <d:lst name="CanHwFilterCode"/>
+                        <d:lst name="CanHwFilterMask"/>
+                        <d:lst name="CanStdFilterElements" type="MAP"/>
+                        <d:lst name="CanExtFilterElements" type="MAP"/>
+                      </d:ctr>
+                      <d:lst name="CanTTHardwareObjectTrigger" type="MAP"/>
+                    </d:ctr>
+                  </d:lst>
+                  <d:lst name="CanIcom" type="MAP"/>
+                </d:ctr>
+              </d:lst>
+              <d:ctr name="CanGeneral" type="IDENTIFIABLE">
+                <a:a name="IMPORTER_INFO" value="ETAS_Project_Can_EcucValues"/>
+                <d:var name="CanDevErrorDetect" type="BOOLEAN" value="false">
+                  <a:a name="IMPORTER_INFO" value="@DEF"/>
+                </d:var>
+                <d:var name="CanIndex" type="INTEGER" value="0">
+                  <a:a name="IMPORTER_INFO" value="ETAS_Project_Can_EcucValues"/>
+                </d:var>
+                <d:var name="CanMultiplexedTransmission" type="BOOLEAN" 
+                       value="false">
+                  <a:a name="IMPORTER_INFO" value="ETAS_Project_Can_EcucValues"/>
+                </d:var>
+                <d:lst name="CanLPduReceiveCalloutFunction"/>
+                <d:lst name="CanMainFunctionModePeriod">
+                  <a:a name="IMPORTER_INFO" value="ETAS_Project_Can_EcucValues"/>
+                  <d:var type="FLOAT" value="0.001">
+                    <a:a name="IMPORTER_INFO" 
+                         value="ETAS_Project_Can_EcucValues"/>
+                  </d:var>
+                </d:lst>
+                <d:var name="CanSetBaudrateApi" type="BOOLEAN" value="true">
+                  <a:a name="IMPORTER_INFO" value="@DEF"/>
+                </d:var>
+                <d:var name="CanVersionInfoApi" type="BOOLEAN" value="false">
+                  <a:a name="IMPORTER_INFO" value="ETAS_Project_Can_EcucValues"/>
+                </d:var>
+                <d:lst name="CanMainFunctionWakeupPeriod"/>
+                <d:lst name="CanMainFunctionBusoffPeriod">
+                  <a:a name="IMPORTER_INFO" value="ETAS_Project_Can_EcucValues"/>
+                  <d:var type="FLOAT" value="0.001">
+                    <a:a name="IMPORTER_INFO" 
+                         value="ETAS_Project_Can_EcucValues"/>
+                  </d:var>
+                </d:lst>
+                <d:var name="CanPublicIcomSupport" type="BOOLEAN" value="false">
+                  <a:a name="IMPORTER_INFO" value="ETAS_Project_Can_EcucValues"/>
+                </d:var>
+                <d:var name="CanTimeoutDuration" type="FLOAT" value="1.0">
+                  <a:a name="IMPORTER_INFO" value="ETAS_Project_Can_EcucValues"/>
+                </d:var>
+                <d:var name="CanSupportStatistics" type="BOOLEAN" value="false">
+                  <a:a name="IMPORTER_INFO" value="@DEF"/>
+                </d:var>
+                <d:lst name="CanOsCounterRef"/>
+                <d:lst name="CanSupportTTCANRef"/>
+                <d:lst name="CanIcomGeneral" type="MAP"/>
+                <d:lst name="CanMainFunctionRWPeriods" type="MAP"/>
+              </d:ctr>
+              <d:ctr name="CommonPublishedInformation" type="IDENTIFIABLE">
+                <d:var name="ArMajorVersion" type="INTEGER" value="4">
+                  <a:a name="IMPORTER_INFO" value="@DEF"/>
+                </d:var>
+                <d:var name="ArMinorVersion" type="INTEGER" value="3">
+                  <a:a name="IMPORTER_INFO" value="@DEF"/>
+                </d:var>
+                <d:var name="ArPatchVersion" type="INTEGER" value="1">
+                  <a:a name="IMPORTER_INFO" value="@DEF"/>
+                </d:var>
+                <d:var name="SwMajorVersion" type="INTEGER" value="3">
+                  <a:a name="IMPORTER_INFO" value="@DEF"/>
+                </d:var>
+                <d:var name="SwMinorVersion" type="INTEGER" value="4">
+                  <a:a name="IMPORTER_INFO" value="@DEF"/>
+                </d:var>
+                <d:var name="SwPatchVersion" type="INTEGER" value="0">
+                  <a:a name="IMPORTER_INFO" value="@DEF"/>
+                </d:var>
+                <d:var name="ModuleId" type="INTEGER" value="80">
+                  <a:a name="IMPORTER_INFO" value="@DEF"/>
+                </d:var>
+                <d:var name="VendorId" type="INTEGER" value="139">
+                  <a:a name="IMPORTER_INFO" value="@DEF"/>
+                </d:var>
+                <d:var name="InstanceId" type="INTEGER" value="0">
+                  <a:a name="IMPORTER_INFO" value="@DEF"/>
+                </d:var>
+              </d:ctr>
+            </d:ctr>
+          </d:chc>
+        </d:lst>
+      </d:ctr>
+    </d:lst>
+  </d:ctr>
+
+</datamodel>

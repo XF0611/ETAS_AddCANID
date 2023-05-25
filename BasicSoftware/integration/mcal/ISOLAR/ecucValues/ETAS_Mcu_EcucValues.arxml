@@ -1,0 +1,803 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00047.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE>
+      <SHORT-NAME>ETAS_BIP</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE>
+          <SHORT-NAME>EcucModuleConfigurationValuess</SHORT-NAME>
+          <ELEMENTS>
+            <ECUC-MODULE-CONFIGURATION-VALUES UUID="8b6be3e4-37d2-4019-8fa8-82fecdc1f124">
+              <SHORT-NAME>Mcu</SHORT-NAME>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV:CfgPostBuild">
+                    <SD GID="DV:postBuildVariantSupport">false</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <DEFINITION-REF DEST="ECUC-MODULE-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu</DEFINITION-REF>
+              <IMPLEMENTATION-CONFIG-VARIANT>VARIANT-POST-BUILD-LOADABLE</IMPLEMENTATION-CONFIG-VARIANT>
+              <MODULE-DESCRIPTION-REF DEST="BSW-IMPLEMENTATION">/ETAS_BIP/BswModuleImplementation/Mcu_Implementation</MODULE-DESCRIPTION-REF>
+              <CONTAINERS>
+                <ECUC-CONTAINER-VALUE UUID="9cf36709-cb1e-4c16-b08a-612b87567031">
+                  <SHORT-NAME>McuGeneralConfiguration</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuGeneralConfiguration</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuGeneralConfiguration/McuDevErrorDetect</DEFINITION-REF>
+                      <VALUE>false</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuGeneralConfiguration/McuGetRamStateApi</DEFINITION-REF>
+                      <VALUE>true</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuGeneralConfiguration/McuInitClock</DEFINITION-REF>
+                      <VALUE>true</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuGeneralConfiguration/McuNoPll</DEFINITION-REF>
+                      <VALUE>false</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuGeneralConfiguration/McuPerformResetApi</DEFINITION-REF>
+                      <VALUE>true</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuGeneralConfiguration/McuVersionInfoApi</DEFINITION-REF>
+                      <VALUE>true</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuGeneralConfiguration/McuVersionCheckExternalModules</DEFINITION-REF>
+                      <VALUE>false</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuGeneralConfiguration/McuCriticalSectionProtection</DEFINITION-REF>
+                      <VALUE>true</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuGeneralConfiguration/McuInternalBusInterfaceCheck</DEFINITION-REF>
+                      <VALUE>true</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuGeneralConfiguration/McuConfigurationRegisterCheck</DEFINITION-REF>
+                      <VALUE>true</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuGeneralConfiguration/McuConfigurationExtraRegisterCheck</DEFINITION-REF>
+                      <VALUE>true</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuGeneralConfiguration/McuWriteVerifyCheck</DEFINITION-REF>
+                      <VALUE>true</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuGeneralConfiguration/McuExclusiveControl</DEFINITION-REF>
+                      <VALUE>false</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuGeneralConfiguration/McuExclusiveTimeout</DEFINITION-REF>
+                      <VALUE>250000</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuGeneralConfiguration/McuExclusiveSelection</DEFINITION-REF>
+                      <VALUE>MFISLCKR2</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuGeneralConfiguration/McuSwResetCallApi</DEFINITION-REF>
+                      <VALUE>false</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuGeneralConfiguration/McuDeviceName</DEFINITION-REF>
+                      <VALUE>RCar_V3M</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuGeneralConfiguration/McuConfigurationCANFDCKCRRegisterCheck</DEFINITION-REF>
+                      <VALUE>true</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuGeneralConfiguration/McuConfigurationCPGWPCRRegisterCheck</DEFINITION-REF>
+                      <VALUE>true</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuGeneralConfiguration/McuConfigurationMSOCKCRRegisterCheck</DEFINITION-REF>
+                      <VALUE>true</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuGeneralConfiguration/McuConfigurationRMSTPCR1RegisterCheck</DEFINITION-REF>
+                      <VALUE>true</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuGeneralConfiguration/McuConfigurationRMSTPCR2RegisterCheck</DEFINITION-REF>
+                      <VALUE>true</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuGeneralConfiguration/McuConfigurationRMSTPCR3RegisterCheck</DEFINITION-REF>
+                      <VALUE>true</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuGeneralConfiguration/McuConfigurationRMSTPCR4RegisterCheck</DEFINITION-REF>
+                      <VALUE>true</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuGeneralConfiguration/McuConfigurationRMSTPCR5RegisterCheck</DEFINITION-REF>
+                      <VALUE>true</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuGeneralConfiguration/McuConfigurationRMSTPCR8RegisterCheck</DEFINITION-REF>
+                      <VALUE>true</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuGeneralConfiguration/McuConfigurationRMSTPCR9RegisterCheck</DEFINITION-REF>
+                      <VALUE>true</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuGeneralConfiguration/McuRFSOConfigurationRegisterCheck</DEFINITION-REF>
+                      <VALUE>RFSO_DISABLE</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuGeneralConfiguration/McuRFSOInternalBusInterfaceCheck</DEFINITION-REF>
+                      <VALUE>RFSO_DISABLE</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuGeneralConfiguration/McuLoopCount</DEFINITION-REF>
+                      <VALUE>5</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE UUID="033495c4-3f06-4990-bfa3-e6c51871f7b1">
+                  <SHORT-NAME>McuModuleConfiguration</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuModuleConfiguration</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuModuleConfiguration/McuClockSrcFailureNotification</DEFINITION-REF>
+                      <VALUE>NOT_USED</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuModuleConfiguration/McuNumberOfMcuModes</DEFINITION-REF>
+                      <VALUE>1</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuModuleConfiguration/McuRamSectors</DEFINITION-REF>
+                      <VALUE>0</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                  <SUB-CONTAINERS>
+                    <ECUC-CONTAINER-VALUE UUID="13ae9ca3-bd94-4eb4-bff5-b60b28c1b26f">
+                      <SHORT-NAME>McuClockSettingConfig</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuModuleConfiguration/McuClockSettingConfig</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuClockSettingId</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuCpuMainSysClk</DEFINITION-REF>
+                          <VALUE>800000000</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuUnitName</DEFINITION-REF>
+                          <VALUE>CPUCLK</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                      <SUB-CONTAINERS>
+                        <ECUC-CONTAINER-VALUE UUID="2bf9cea9-4b29-4b66-9c89-e16791787c3f">
+                          <SHORT-NAME>McuClockReferencePoint</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuClockReferencePoint</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuClockReferencePoint/McuClockReferencePointFrequency</DEFINITION-REF>
+                              <VALUE>8.0E8</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE UUID="4f508930-00c5-47bf-97ac-274ac6427714">
+                          <SHORT-NAME>McuRwdtClockSetting</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuRwdtClockSetting</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuRwdtClockSetting/McuRwdtStandbyModeEnable</DEFINITION-REF>
+                              <VALUE>true</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-TEXTUAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuRwdtClockSetting/McuUnitName</DEFINITION-REF>
+                              <VALUE>RWDT</VALUE>
+                            </ECUC-TEXTUAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE UUID="87fb320a-42eb-45fb-b408-6aa4f08911ab">
+                          <SHORT-NAME>McuMsiofClockSetting</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuMsiofClockSetting</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuMsiofClockSetting/McuClockFrequencyControlDiv</DEFINITION-REF>
+                              <VALUE>19</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuMsiofClockSetting/McuMSIOF0StandbyModeEnable</DEFINITION-REF>
+                              <VALUE>false</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuMsiofClockSetting/McuMSIOF1StandbyModeEnable</DEFINITION-REF>
+                              <VALUE>false</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuMsiofClockSetting/McuMSIOF2StandbyModeEnable</DEFINITION-REF>
+                              <VALUE>false</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuMsiofClockSetting/McuMSIOF3StandbyModeEnable</DEFINITION-REF>
+                              <VALUE>false</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-TEXTUAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuMsiofClockSetting/McuUnitName</DEFINITION-REF>
+                              <VALUE>MSIOF</VALUE>
+                            </ECUC-TEXTUAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuMsiofClockSetting/McuPeripheralClock</DEFINITION-REF>
+                              <VALUE>40000000</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE UUID="9784ad74-bebe-4bb1-9900-340877cfbfc1">
+                          <SHORT-NAME>McuRCLKClockSetting</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuRCLKClockSetting</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-TEXTUAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuRCLKClockSetting/McuUnitName</DEFINITION-REF>
+                              <VALUE>RCLK</VALUE>
+                            </ECUC-TEXTUAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuRCLKClockSetting/McuPeripheralClock</DEFINITION-REF>
+                              <VALUE>32768</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE UUID="3c1a9dcb-b4ca-418d-bb98-97ede3356736">
+                          <SHORT-NAME>McuS2D2ClockSetting</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuS2D2ClockSetting</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-TEXTUAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuS2D2ClockSetting/McuUnitName</DEFINITION-REF>
+                              <VALUE>S2D2</VALUE>
+                            </ECUC-TEXTUAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuS2D2ClockSetting/McuPeripheralClock</DEFINITION-REF>
+                              <VALUE>133333333</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE UUID="58ea7e9d-b313-482a-872f-857efe6538d5">
+                          <SHORT-NAME>McuS2D4ClockSetting</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuS2D4ClockSetting</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-TEXTUAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuS2D4ClockSetting/McuUnitName</DEFINITION-REF>
+                              <VALUE>S2D4</VALUE>
+                            </ECUC-TEXTUAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuS2D4ClockSetting/McuPeripheralClock</DEFINITION-REF>
+                              <VALUE>66666666</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE UUID="2bad5643-dc45-4e2d-9ce6-4e2d8fee0419">
+                          <SHORT-NAME>McuCP0ClockSetting</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuCP0ClockSetting</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-TEXTUAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuCP0ClockSetting/McuUnitName</DEFINITION-REF>
+                              <VALUE>CP0</VALUE>
+                            </ECUC-TEXTUAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuCP0ClockSetting/McuPeripheralClock</DEFINITION-REF>
+                              <VALUE>10000000</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE UUID="6bd8c0a0-ac97-46c0-9c96-e5e1f18d4a89">
+                          <SHORT-NAME>McuCanFDClockSetting</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuCanFDClockSetting</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuCanFDClockSetting/McuClockFrequencyControlDiv</DEFINITION-REF>
+                              <VALUE>9</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuCanFDClockSetting/McuCANFDStandbyModeEnable</DEFINITION-REF>
+                              <VALUE>false</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-TEXTUAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuCanFDClockSetting/McuUnitName</DEFINITION-REF>
+                              <VALUE>CANFD</VALUE>
+                            </ECUC-TEXTUAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuCanFDClockSetting/McuPeripheralClock</DEFINITION-REF>
+                              <VALUE>80000000</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE UUID="871f2f13-6368-4a44-b787-fc9f913c9052">
+                          <SHORT-NAME>McuTMUClockSetting</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuTMUClockSetting</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuTMUClockSetting/McuTMU0StandbyModeEnable</DEFINITION-REF>
+                              <VALUE>true</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuTMUClockSetting/McuTMU1StandbyModeEnable</DEFINITION-REF>
+                              <VALUE>true</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuTMUClockSetting/McuTMU2StandbyModeEnable</DEFINITION-REF>
+                              <VALUE>true</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuTMUClockSetting/McuTMU3StandbyModeEnable</DEFINITION-REF>
+                              <VALUE>true</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuTMUClockSetting/McuTMU4StandbyModeEnable</DEFINITION-REF>
+                              <VALUE>true</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-TEXTUAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuTMUClockSetting/McuUnitName</DEFINITION-REF>
+                              <VALUE>TMU</VALUE>
+                            </ECUC-TEXTUAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE UUID="f6c5cdeb-d083-429d-8022-769bf540a0fd">
+                          <SHORT-NAME>McuGPIOClockSetting</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuGPIOClockSetting</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuGPIOClockSetting/McuGPIO0StandbyModeEnable</DEFINITION-REF>
+                              <VALUE>false</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuGPIOClockSetting/McuGPIO1StandbyModeEnable</DEFINITION-REF>
+                              <VALUE>false</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuGPIOClockSetting/McuGPIO2StandbyModeEnable</DEFINITION-REF>
+                              <VALUE>false</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuGPIOClockSetting/McuGPIO3StandbyModeEnable</DEFINITION-REF>
+                              <VALUE>false</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuGPIOClockSetting/McuGPIO4StandbyModeEnable</DEFINITION-REF>
+                              <VALUE>false</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuGPIOClockSetting/McuGPIO5StandbyModeEnable</DEFINITION-REF>
+                              <VALUE>false</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-TEXTUAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuGPIOClockSetting/McuUnitName</DEFINITION-REF>
+                              <VALUE>GPIO</VALUE>
+                            </ECUC-TEXTUAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuGPIOClockSetting/McuPeripheralClock</DEFINITION-REF>
+                              <VALUE>10000000</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE UUID="75411f65-8170-43ab-80a3-e56c2c96a9c1">
+                          <SHORT-NAME>McuEthernetClockSetting</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuEthernetClockSetting</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuEthernetClockSetting/McuEthernetStandbyModeEnable</DEFINITION-REF>
+                              <VALUE>false</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-TEXTUAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuEthernetClockSetting/McuUnitName</DEFINITION-REF>
+                              <VALUE>ETHERNET</VALUE>
+                            </ECUC-TEXTUAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuEthernetClockSetting/McuPeripheralClock</DEFINITION-REF>
+                              <VALUE>133333333</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE UUID="af70986f-482e-45ce-af24-9a08dbece9e4">
+                          <SHORT-NAME>McuADCClockSetting</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuADCClockSetting</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuADCClockSetting/McuADCStandbyModeEnable</DEFINITION-REF>
+                              <VALUE>false</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-TEXTUAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuADCClockSetting/McuUnitName</DEFINITION-REF>
+                              <VALUE>ADC</VALUE>
+                            </ECUC-TEXTUAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE UUID="98575aa2-d5f9-4538-9459-49c75555f4d5">
+                          <SHORT-NAME>McuRPCClockSetting</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuRPCClockSetting</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuRPCClockSetting/McuRPCStandbyModeEnable</DEFINITION-REF>
+                              <VALUE>false</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-TEXTUAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuRPCClockSetting/McuUnitName</DEFINITION-REF>
+                              <VALUE>RPC</VALUE>
+                            </ECUC-TEXTUAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuRPCClockSetting/McuPeripheralClock</DEFINITION-REF>
+                              <VALUE>320000000</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE UUID="8bc19ca6-0641-4ab6-bec3-e13521829586">
+                          <SHORT-NAME>McuFlexrayClockSetting</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuFlexrayClockSetting</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuFlexrayClockSetting/McuFlexrayStandbyModeEnable</DEFINITION-REF>
+                              <VALUE>false</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-TEXTUAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuFlexrayClockSetting/McuUnitName</DEFINITION-REF>
+                              <VALUE>FLEXRAY</VALUE>
+                            </ECUC-TEXTUAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuFlexrayClockSetting/McuPeripheralClock</DEFINITION-REF>
+                              <VALUE>80000000</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE UUID="35ec058a-6828-486a-a258-e2db27c80505">
+                          <SHORT-NAME>McuTHSClockSetting</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuTHSClockSetting</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuTHSClockSetting/McuTHSStandbyModeEnable</DEFINITION-REF>
+                              <VALUE>false</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-TEXTUAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuTHSClockSetting/McuUnitName</DEFINITION-REF>
+                              <VALUE>THS</VALUE>
+                            </ECUC-TEXTUAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE UUID="ebe5b260-f471-4450-826f-c06472686c91">
+                          <SHORT-NAME>McuSUCMTClockSetting</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuSUCMTClockSetting</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuSUCMTClockSetting/McuSUCMTStandbyModeEnable</DEFINITION-REF>
+                              <VALUE>false</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-TEXTUAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuSUCMTClockSetting/McuUnitName</DEFINITION-REF>
+                              <VALUE>SUCMT</VALUE>
+                            </ECUC-TEXTUAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE UUID="9bb8cfa5-9e42-4e60-a89a-1b7bf5d97e3b">
+                          <SHORT-NAME>McuS2D1ClockSetting</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuS2D1ClockSetting</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-TEXTUAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuS2D1ClockSetting/McuUnitName</DEFINITION-REF>
+                              <VALUE>S2D1</VALUE>
+                            </ECUC-TEXTUAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuS2D1ClockSetting/McuPeripheralClock</DEFINITION-REF>
+                              <VALUE>266666666</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE UUID="3fc7eb91-b504-4ca6-a52e-6d049042f1b6">
+                          <SHORT-NAME>McuMFISClockSetting</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuMFISClockSetting</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuMFISClockSetting/McuMFISStandbyModeEnable</DEFINITION-REF>
+                              <VALUE>false</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-TEXTUAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuMFISClockSetting/McuUnitName</DEFINITION-REF>
+                              <VALUE>MFIS</VALUE>
+                            </ECUC-TEXTUAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE UUID="67586d20-3c9c-427d-a194-acfadc105b4f">
+                          <SHORT-NAME>McuIICClockSetting</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuIICClockSetting</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuIICClockSetting/McuIIC0StandbyModeEnable</DEFINITION-REF>
+                              <VALUE>false</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuIICClockSetting/McuIIC1StandbyModeEnable</DEFINITION-REF>
+                              <VALUE>false</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuIICClockSetting/McuIIC2StandbyModeEnable</DEFINITION-REF>
+                              <VALUE>false</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuIICClockSetting/McuIIC3StandbyModeEnable</DEFINITION-REF>
+                              <VALUE>false</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuIICClockSetting/McuIIC4StandbyModeEnable</DEFINITION-REF>
+                              <VALUE>false</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-TEXTUAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuIICClockSetting/McuUnitName</DEFINITION-REF>
+                              <VALUE>IIC</VALUE>
+                            </ECUC-TEXTUAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE UUID="7cd0fce6-04d8-4906-be31-5d401111e17e">
+                          <SHORT-NAME>McuCRCClockSetting</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuCRCClockSetting</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuCRCClockSetting/McuCRC0StandbyModeEnable</DEFINITION-REF>
+                              <VALUE>false</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuCRCClockSetting/McuCRC1StandbyModeEnable</DEFINITION-REF>
+                              <VALUE>false</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuCRCClockSetting/McuCRC2StandbyModeEnable</DEFINITION-REF>
+                              <VALUE>false</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuCRCClockSetting/McuCRC3StandbyModeEnable</DEFINITION-REF>
+                              <VALUE>false</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-TEXTUAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuCRCClockSetting/McuUnitName</DEFINITION-REF>
+                              <VALUE>CRC</VALUE>
+                            </ECUC-TEXTUAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE UUID="59b89c16-5a62-4eba-b1b6-2f39b4774935">
+                          <SHORT-NAME>McuRPCD2ClockSetting</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuRPCD2ClockSetting</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-TEXTUAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuRPCD2ClockSetting/McuUnitName</DEFINITION-REF>
+                              <VALUE>RPCD2</VALUE>
+                            </ECUC-TEXTUAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuRPCD2ClockSetting/McuPeripheralClock</DEFINITION-REF>
+                              <VALUE>160000000</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE UUID="ee5ecd17-2763-4519-9c55-1a23ce97a471">
+                          <SHORT-NAME>McuCMTClockSetting</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuCMTClockSetting</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuCMTClockSetting/McuCMT1StandbyModeEnable</DEFINITION-REF>
+                              <VALUE>false</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuCMTClockSetting/McuCMT2StandbyModeEnable</DEFINITION-REF>
+                              <VALUE>false</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-TEXTUAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuCMTClockSetting/McuUnitName</DEFINITION-REF>
+                              <VALUE>CMT</VALUE>
+                            </ECUC-TEXTUAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                      </SUB-CONTAINERS>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="2c1e911a-3ba1-4eeb-84c7-d8073dfb8de1">
+                      <SHORT-NAME>McuModeSettingConf_0</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuModuleConfiguration/McuModeSettingConf</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuModuleConfiguration/McuModeSettingConf/McuModeType</DEFINITION-REF>
+                          <VALUE>SLEEP_MODE</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuModuleConfiguration/McuModeSettingConf/McuMode</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuModuleConfiguration/McuModeSettingConf/McuWakeupMaskCSD</DEFINITION-REF>
+                          <VALUE>false</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuModuleConfiguration/McuModeSettingConf/McuWakeupMaskFIQ</DEFINITION-REF>
+                          <VALUE>true</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuModuleConfiguration/McuModeSettingConf/McuWakeupMaskIRQ</DEFINITION-REF>
+                          <VALUE>true</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuModuleConfiguration/McuModeSettingConf/McuStatusUpdateFIQ</DEFINITION-REF>
+                          <VALUE>false</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuModuleConfiguration/McuModeSettingConf/McuStatusUpdateIRQ</DEFINITION-REF>
+                          <VALUE>false</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuModuleConfiguration/McuModeSettingConf/McuModeTransitionReq</DEFINITION-REF>
+                          <VALUE>true</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="c0f1d400-e500-49ad-b02c-6c4d3dbafd2c">
+                      <SHORT-NAME>McuRamSectorSettingConf</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuModuleConfiguration/McuRamSectorSettingConf</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuModuleConfiguration/McuRamSectorSettingConf/McuRamDefaultValue</DEFINITION-REF>
+                          <VALUE>55</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuModuleConfiguration/McuRamSectorSettingConf/McuRamSectionBaseAddress</DEFINITION-REF>
+                          <VALUE>3861905408</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuModuleConfiguration/McuRamSectorSettingConf/McuRamSectionSize</DEFINITION-REF>
+                          <VALUE>5</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="cd0658b1-d78b-4c92-a07f-f75dcde4298d">
+                      <SHORT-NAME>McuDemEventParameterRefs</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuModuleConfiguration/McuDemEventParameterRefs</DEFINITION-REF>
+                      <REFERENCE-VALUES>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-SYMBOLIC-NAME-REFERENCE-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuModuleConfiguration/McuDemEventParameterRefs/MCU_E_CONFIGURATION_CHECK_PERMANENT_FAILURE</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ETAS_BIP/EcucModuleConfigurationValuess/Dem/DemConfigSet/MCU_E_CONFIGURATION_CHECK_PERMANENT_FAILURE</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-SYMBOLIC-NAME-REFERENCE-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuModuleConfiguration/McuDemEventParameterRefs/MCU_E_CONFIGURATION_CHECK_TRANSIENT_FAILURE</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ETAS_BIP/EcucModuleConfigurationValuess/Dem/DemConfigSet/MCU_E_CONFIGURATION_CHECK_TRANSIENT_FAILURE</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-SYMBOLIC-NAME-REFERENCE-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuModuleConfiguration/McuDemEventParameterRefs/MCU_E_GET_CONTROL_FAILURE</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ETAS_BIP/EcucModuleConfigurationValuess/Dem/DemConfigSet/MCU_E_GET_CONTROL_FAILURE</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-SYMBOLIC-NAME-REFERENCE-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuModuleConfiguration/McuDemEventParameterRefs/MCU_E_INTERNAL_BUS_FAILURE</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ETAS_BIP/EcucModuleConfigurationValuess/Dem/DemConfigSet/MCU_E_INTERNAL_BUS_FAILURE</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-SYMBOLIC-NAME-REFERENCE-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuModuleConfiguration/McuDemEventParameterRefs/MCU_E_READ_BACK_FAILURE</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ETAS_BIP/EcucModuleConfigurationValuess/Dem/DemConfigSet/MCU_E_READ_BACK_FAILURE</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-SYMBOLIC-NAME-REFERENCE-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuModuleConfiguration/McuDemEventParameterRefs/MCU_E_TIMEOUT_FAILURE</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ETAS_BIP/EcucModuleConfigurationValuess/Dem/DemConfigSet/MCU_E_TIMEOUT_FAILURE</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                      </REFERENCE-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="f0928228-c7d5-4a1e-872a-37748924bed0">
+                      <SHORT-NAME>McuConfigurationExtraRegisterConf</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuModuleConfiguration/McuConfigurationExtraRegisterConf</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuModuleConfiguration/McuConfigurationExtraRegisterConf/McuAdressRegisterCheck</DEFINITION-REF>
+                          <VALUE>3860136232</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuModuleConfiguration/McuConfigurationExtraRegisterConf/McuMaskRegisterCheck</DEFINITION-REF>
+                          <VALUE>8388616</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuModuleConfiguration/McuConfigurationExtraRegisterConf/McuExpectedRegisterCheck</DEFINITION-REF>
+                          <VALUE>8388616</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                  </SUB-CONTAINERS>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE UUID="ff604949-ffe3-4fc7-bd33-c1569cd6591f">
+                  <SHORT-NAME>McuPublishedInformation</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuPublishedInformation</DEFINITION-REF>
+                  <SUB-CONTAINERS>
+                    <ECUC-CONTAINER-VALUE UUID="8127cb9d-f814-48a1-8792-6f154733df64">
+                      <SHORT-NAME>McuResetReasonConf</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuPublishedInformation/McuResetReasonConf</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuPublishedInformation/McuResetReasonConf/McuResetReason</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="bfc202c5-2330-439c-afb0-b6762dac75f2">
+                      <SHORT-NAME>McuRstRsnConfUndefined</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuPublishedInformation/McuRstRsnConfUndefined</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuPublishedInformation/McuRstRsnConfUndefined/McuResetReason</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="d5f3c5a0-433a-485f-aac1-0accccf5ac13">
+                      <SHORT-NAME>McuRstRsnConfRwdtRst</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuPublishedInformation/McuRstRsnConfRwdtRst</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuPublishedInformation/McuRstRsnConfRwdtRst/McuResetReason</DEFINITION-REF>
+                          <VALUE>1</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="1bc28ba7-0e48-4c3f-a0a6-a1b3e6db6885">
+                      <SHORT-NAME>McuRstRsnConfSwdtRst</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuPublishedInformation/McuRstRsnConfSwdtRst</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuPublishedInformation/McuRstRsnConfSwdtRst/McuResetReason</DEFINITION-REF>
+                          <VALUE>2</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="ecaa43ff-3a51-4876-a253-d0ff3fd71a34">
+                      <SHORT-NAME>McuRstRsnConfSwRst</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuPublishedInformation/McuRstRsnConfSwRst</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuPublishedInformation/McuRstRsnConfSwRst/McuResetReason</DEFINITION-REF>
+                          <VALUE>3</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="30e268d9-ebb2-49d5-8594-c82ea72c4b76">
+                      <SHORT-NAME>McuResetReasonConf_001</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuPublishedInformation/McuResetReasonConf</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuPublishedInformation/McuResetReasonConf/McuResetReason</DEFINITION-REF>
+                          <VALUE>1</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="e6f6998b-97b0-4d80-9fdb-38f83c72e654">
+                      <SHORT-NAME>McuResetReasonConf_002</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuPublishedInformation/McuResetReasonConf</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuPublishedInformation/McuResetReasonConf/McuResetReason</DEFINITION-REF>
+                          <VALUE>2</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="6ab3d966-87a6-476b-ad63-424be020bcc1">
+                      <SHORT-NAME>McuResetReasonConf_003</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuPublishedInformation/McuResetReasonConf</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/ETAS_BIP/EcucDefs_Mcu/Mcu/McuPublishedInformation/McuResetReasonConf/McuResetReason</DEFINITION-REF>
+                          <VALUE>3</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                  </SUB-CONTAINERS>
+                </ECUC-CONTAINER-VALUE>
+              </CONTAINERS>
+            </ECUC-MODULE-CONFIGURATION-VALUES>
+          </ELEMENTS>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>
+

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="ASCII"?>
+<MappingMetaModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns="http://www.bosch.com/autosartool/m2m/model" transformationName="Conf-Gen Enhancer">
+  <mappingStructures name="ComM">
+    <order orderId="ComM_1" name="ComM">
+      <order orderId="ComM_2" name="ComMGeneral"/>
+    </order>
+  </mappingStructures>
+  <mappings mappingId="Mapping_ComM_1" mappingType="PRIMITIVE_ATTRIBUTE" defaultValue="true">
+    <targetItem identifier="ComMDevErrorDetect"/>
+    <orderDetails orderId="ComM_2" order="1"/>
+  </mappings>
+  <mappings mappingId="Mapping_ComM_2" mappingType="PRIMITIVE_ATTRIBUTE" defaultValue="true">
+    <targetItem identifier="ComMRteEnabled"/>
+    <orderDetails orderId="ComM_2" order="2"/>
+  </mappings>
+  <mappings mappingId="Mapping_ComM_3" mappingType="PRIMITIVE_ATTRIBUTE" defaultValue="true">
+    <targetItem identifier="ComMModeLimitationEnabled"/>
+    <orderDetails orderId="ComM_2" order="3"/>
+  </mappings>
+</MappingMetaModel>

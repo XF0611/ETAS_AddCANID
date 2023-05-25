@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="ASCII"?>
+<MappingMetaModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns="http://www.bosch.com/autosartool/m2m/model" transformationName="Conf-Gen Enhancer">
+  <mappingStructures name="CanIf_Ifx">
+    <order orderId="CanIf_Ifx_1" name="CanIf">
+      <order orderId="CanIf_Ifx_2" name="CanIfCtrlDrvCfg"/>
+    </order>
+  </mappingStructures>
+  <mappings mappingId="Mapping_CanIf_Ifx_1" mappingType="PRIMITIVE_ATTRIBUTE" defaultValue="CanConf">
+    <targetItem identifier="CanIfRbCtrlDrvPrefix"/>
+    <orderDetails orderId="CanIf_Ifx_2" order="1"/>
+  </mappings>
+</MappingMetaModel>

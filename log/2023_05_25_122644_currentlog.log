@@ -1,0 +1,33 @@
+scons: done reading SConscript files.
+
+scons: warning: you do not seem to have the pywin32 extensions installed;
+	parallel (-j) builds may not work reliably with open Python files.
+File "F:\Python271\Scripts\scons.py", line 201, in <module>
+scons: Building targets ...
+Compiling BasicSoftware\src\rte\gen\Rte.c
+Compiling BasicSoftware\integration\src\bsw\CanIf\integration\CanIf_Write_Integration.c
+Compiling BasicSoftware\integration\src\bsw\Com\integration\ComAppl.c
+Compiling BasicSoftware\integration\src\bsw\Com\integration\Com_Integration.c
+Compiling BasicSoftware\integration\src\bsw\ComM\integration\ComMAppl.c
+Compiling BasicSoftware\integration\src\bsw\Dcm\integration\DcmAppl_CheckEncryptionCompressionMethod.c
+Compiling BasicSoftware\integration\src\bsw\Dcm\integration\DcmAppl_ConfirmationRespPend.c
+Compiling BasicSoftware\integration\src\bsw\Dcm\integration\DcmAppl_DcmCancelPagedBufferProcessing.c
+
+Compiling BasicSoftware\integration\src\bsw\Dcm\integration\DcmAppl_DcmCheckCDTCRecord.c
+BasicSoftware\src\rte\gen\Rte.c:11356:35: error: use of undeclared identifier 'false'
+      config_selective_wake(0x399,false);
+                                  ^
+1 error generated.
+
+===================
+None
+===================
+scons: *** [output\objs\basicSoftware\src\rte\Rte.o] Error 1
+
+
+
+
+
+
+
+scons: building terminated because of errors.

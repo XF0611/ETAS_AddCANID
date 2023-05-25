@@ -1,0 +1,285 @@
+scons: done reading SConscript files.
+
+scons: warning: you do not seem to have the pywin32 extensions installed;
+	parallel (-j) builds may not work reliably with open Python files.
+File "F:\Python271\Scripts\scons.py", line 201, in <module>
+scons: Building targets ...
+Compiling BasicSoftware\src\rte\gen\Rte.c
+Compiling BasicSoftware\integration\src\bsw\Dcm\integration\DcmAppl_DcmCheckControlMaskAndState.c
+Compiling BasicSoftware\integration\src\bsw\Dcm\integration\DcmAppl_DcmCheckRdbiResponseLength.c
+Compiling BasicSoftware\integration\src\bsw\Dcm\integration\DcmAppl_DcmCheckRoutineControlOptionRecord.c
+Compiling BasicSoftware\integration\src\bsw\Dcm\integration\DcmAppl_DcmCheckSeed.c
+Compiling BasicSoftware\integration\src\bsw\Dcm\integration\DcmAppl_DcmCheckWDBIReqLen.c
+Compiling BasicSoftware\integration\src\bsw\Dcm\integration\DcmAppl_DcmClearRoeEventInformation.c
+Compiling BasicSoftware\integration\src\bsw\Dcm\integration\DcmAppl_DcmCommControlConditionCheck.c
+
+Compiling BasicSoftware\integration\src\bsw\Dcm\integration\DcmAppl_DcmComModeError.c
+
+Compiling BasicSoftware\integration\src\bsw\Dcm\integration\DcmAppl_DcmConfirmation.c
+
+Compiling BasicSoftware\integration\src\bsw\Dcm\integration\DcmAppl_DcmConfirmationRDPI.c
+
+Compiling BasicSoftware\integration\src\bsw\Dcm\integration\DcmAppl_DcmConfirmation_DcmNegResp.c
+
+Compiling BasicSoftware\integration\src\bsw\Dcm\integration\DcmAppl_DcmConfirmation_GeneralReject.c
+
+Compiling BasicSoftware\integration\src\bsw\Dcm\integration\DcmAppl_DcmControlDtcSettingEnableStatus.c
+
+Compiling BasicSoftware\integration\src\bsw\Dcm\integration\DcmAppl_DcmCopyRxData.c
+
+Compiling BasicSoftware\integration\src\bsw\Dcm\integration\DcmAppl_DcmEcuResetPreparation.c
+
+Compiling BasicSoftware\integration\src\bsw\Dcm\integration\DcmAppl_DcmGetNRCForMinLengthCheck.c
+
+Compiling BasicSoftware\integration\src\bsw\Dcm\integration\DcmAppl_DcmGetP2Timings.c
+
+Compiling BasicSoftware\integration\src\bsw\Dcm\integration\DcmAppl_DcmGetPermissionForMemoryAccess_u8.c
+
+Compiling BasicSoftware\integration\src\bsw\Dcm\integration\DcmAppl_DcmGetPermTxWarmResp.c
+
+Compiling BasicSoftware\integration\src\bsw\Dcm\integration\DcmAppl_DcmGetRemainingResponseLength.c
+
+Compiling BasicSoftware\integration\src\bsw\Dcm\integration\DcmAppl_DcmGetROEDidInfo.c
+
+Compiling BasicSoftware\integration\src\bsw\Dcm\integration\DcmAppl_DcmGetRoeDTCInfo.c
+
+Compiling BasicSoftware\integration\src\bsw\Dcm\integration\DcmAppl_DcmGetRxPermission.c
+
+Compiling BasicSoftware\integration\src\bsw\Dcm\integration\DcmAppl_DcmGetSesChgPermission.c
+
+Compiling BasicSoftware\integration\src\bsw\Dcm\integration\DcmAppl_DcmGetStoreType.c
+
+Compiling BasicSoftware\integration\src\bsw\Dcm\integration\DcmAppl_DcmGetUpdatedDelayForPowerOn.c
+
+Compiling BasicSoftware\integration\src\bsw\Dcm\integration\DcmAppl_DcmGetUpdatedDelayTime.c
+
+Compiling BasicSoftware\integration\src\bsw\Dcm\integration\DcmAppl_DcmIndicationFuncTpr.c
+
+Compiling BasicSoftware\integration\src\bsw\Dcm\integration\DcmAppl_DcmIsComModeDefault.c
+
+Compiling BasicSoftware\integration\src\bsw\Dcm\integration\DcmAppl_DcmMemSizeCheckForTransferData.c
+
+Compiling BasicSoftware\integration\src\bsw\Dcm\integration\DcmAppl_DcmModifyResponse.c
+
+Compiling BasicSoftware\integration\src\bsw\Dcm\integration\DcmAppl_DcmNotification.c
+
+Compiling BasicSoftware\integration\src\bsw\Dcm\integration\DcmAppl_DcmReadDataNRC.c
+
+Compiling BasicSoftware\integration\src\bsw\Dcm\integration\DcmAppl_DcmReadDddiFromNvM.c
+
+Compiling BasicSoftware\integration\src\bsw\Dcm\integration\DcmAppl_DcmRespWarmInit.c
+
+Compiling BasicSoftware\integration\src\bsw\Dcm\integration\DcmAppl_DcmRxIndication.c
+
+Compiling BasicSoftware\integration\src\bsw\Dcm\integration\DcmAppl_DcmSecaInvalidKey.c
+
+Compiling BasicSoftware\integration\src\bsw\Dcm\integration\DcmAppl_DcmSecaValidKey.c
+
+Compiling BasicSoftware\integration\src\bsw\Dcm\integration\DcmAppl_DcmSecurityLevelLocked.c
+
+Compiling BasicSoftware\integration\src\bsw\Dcm\integration\DcmAppl_DcmSesCtrlChangeIndication.c
+
+Compiling BasicSoftware\integration\src\bsw\Dcm\integration\DcmAppl_DcmSetUpRoeEvent.c
+
+Compiling BasicSoftware\integration\src\bsw\Dcm\integration\DcmAppl_DcmStartOfReception.c
+
+Compiling BasicSoftware\integration\src\bsw\Dcm\integration\DcmAppl_DcmStartProtocol.c
+
+Compiling BasicSoftware\integration\src\bsw\Dcm\integration\DcmAppl_DcmStopProtocol.c
+
+Compiling BasicSoftware\integration\src\bsw\Dcm\integration\DcmAppl_DcmStoreRespForJump.c
+
+Compiling BasicSoftware\integration\src\bsw\Dcm\integration\DcmAppl_DcmStoreROEcycleCounter.c
+
+Compiling BasicSoftware\integration\src\bsw\Dcm\integration\DcmAppl_DcmStoreRoeDidInfo.c
+
+Compiling BasicSoftware\integration\src\bsw\Dcm\integration\DcmAppl_DcmStoreRoeDTCInfo.c
+
+Compiling BasicSoftware\integration\src\bsw\Dcm\integration\DcmAppl_DcmSwitchCommunicationControl.c
+
+
+Compiling BasicSoftware\integration\src\bsw\Dcm\integration\DcmAppl_DcmTransferDataCheckPermission.c
+Compiling BasicSoftware\integration\src\bsw\Dcm\integration\DcmAppl_DcmUpdateRxTable.c
+
+Compiling BasicSoftware\integration\src\bsw\Dcm\integration\DcmAppl_DcmWriteOrClearDddiInNvM.c
+
+Compiling BasicSoftware\integration\src\bsw\Dcm\integration\DcmAppl_Dcm_GetProgConditions.c
+
+Compiling BasicSoftware\integration\src\bsw\Dcm\integration\DcmAppl_Dcm_ProcessRequestDownload.c
+
+Compiling BasicSoftware\integration\src\bsw\Dcm\integration\DcmAppl_Dcm_ProcessRequestTransferExit.c
+
+Compiling BasicSoftware\integration\src\bsw\Dcm\integration\DcmAppl_Dcm_ProcessRequestUpload.c
+
+Compiling BasicSoftware\integration\src\bsw\Dcm\integration\DcmAppl_Dcm_ReadMemory.c
+
+Compiling BasicSoftware\integration\src\bsw\Dcm\integration\DcmAppl_Dcm_SetProgConditions.c
+
+Compiling BasicSoftware\integration\src\bsw\Dcm\integration\DcmAppl_Dcm_WriteMemory.c
+
+Compiling BasicSoftware\integration\src\bsw\Dcm\integration\DcmAppl_DDDI_Read_Memory_Condition.c
+
+Compiling BasicSoftware\integration\src\bsw\Dcm\integration\DcmAppl_DisableDTCSetting.c
+
+Compiling BasicSoftware\integration\src\bsw\Dcm\integration\DcmAppl_EnableDTCSetting.c
+
+Compiling BasicSoftware\integration\src\bsw\Dcm\integration\DcmAppl_ManufacturerNotification.c
+
+Compiling BasicSoftware\integration\src\bsw\Dcm\integration\DcmAppl_OBD_Mode04.c
+
+Compiling BasicSoftware\integration\src\bsw\Dcm\integration\DcmAppl_P3TimeoutIndication.c
+
+Compiling BasicSoftware\integration\src\bsw\Dcm\integration\DcmAppl_Switch_DcmBootLoaderReset.c
+
+Compiling BasicSoftware\integration\src\bsw\Dcm\integration\DcmAppl_Switch_DcmDiagnosticSessionControl.c
+
+Compiling BasicSoftware\integration\src\bsw\Dcm\integration\DcmAppl_Switch_DcmDriveToDriveReset.c
+
+Compiling BasicSoftware\integration\src\bsw\Dcm\integration\DcmAppl_Switch_DcmEcuReset.c
+
+Compiling BasicSoftware\integration\src\bsw\Dcm\integration\DcmAppl_Switch_DcmExecuteDscReset.c
+
+Compiling BasicSoftware\integration\src\bsw\Dcm\integration\DcmAppl_Switch_DcmExecuteEcuReset.c
+
+Compiling BasicSoftware\integration\src\bsw\Dcm\integration\DcmAppl_Switch_DcmExecuteReset.c
+
+Compiling BasicSoftware\integration\src\bsw\Dcm\integration\DcmAppl_Switch_DcmResponseOnEvent.c
+
+Compiling BasicSoftware\integration\src\bsw\Dcm\integration\DcmAppl_Switch_DcmSysSupplierReset.c
+
+Compiling BasicSoftware\integration\src\bsw\Dcm\integration\DcmAppl_UserCommCtrlReEnableModeRuleService.c
+
+Compiling BasicSoftware\integration\src\bsw\Dcm\integration\DcmAppl_UserDIDModeRuleService.c
+
+Compiling BasicSoftware\integration\src\bsw\Dcm\integration\DcmAppl_UserDTCSettingEnableModeRuleService.c
+
+Compiling BasicSoftware\integration\src\bsw\Dcm\integration\DcmAppl_UserMemoryRangeModeRuleService.c
+
+Compiling BasicSoftware\integration\src\bsw\Dcm\integration\DcmAppl_UserRIDModeRuleService.c
+
+Compiling BasicSoftware\integration\src\bsw\Dcm\integration\DcmAppl_UserServiceModeRuleService.c
+
+Compiling BasicSoftware\integration\src\bsw\Dcm\integration\DcmAppl_UserSubServiceModeRuleService.c
+
+Compiling BasicSoftware\integration\src\bsw\Dem\integration\Dem_PrjChronoSorting.c
+
+Compiling BasicSoftware\integration\src\bsw\Dem\integration\Dem_PrjDisturbanceMemory.c
+
+Compiling BasicSoftware\integration\src\bsw\Dem\integration\Dem_PrjEnvDataElement.c
+
+Compiling BasicSoftware\integration\src\bsw\Dem\integration\Dem_PrjEvmemProjectExtension.c
+
+Compiling BasicSoftware\integration\src\bsw\Dem\integration\Dem_PrjSpecificConsistencyCheck.c
+
+Compiling BasicSoftware\integration\src\bsw\Dem\integration\Dem_PrjSpecificDebOptimization.c
+
+Compiling BasicSoftware\integration\src\bsw\Dem\integration\Dem_PrjSpecificFailureMemory.c
+
+Compiling BasicSoftware\integration\src\bsw\Dem\integration\Dem_PrjSpecificIndiHandling.c
+
+Compiling BasicSoftware\integration\src\bsw\Det\user\Det_Integration.c
+
+Compiling BasicSoftware\integration\src\bsw\EcuM\integration\EcuM_Callout_Stubs.c
+
+Compiling BasicSoftware\integration\src\bsw\integration\rba_BswSrv\src\rba_BswSrv_MemCompare.c
+
+Compiling BasicSoftware\integration\src\bsw\integration\rba_BswSrv\src\rba_BswSrv_MemCopy.c
+
+Compiling BasicSoftware\integration\src\bsw\integration\rba_BswSrv\src\rba_BswSrv_MemSet.c
+
+Compiling BasicSoftware\integration\src\bsw\NvM\user\FBL_DataMPrvCfg.c
+
+Compiling BasicSoftware\integration\src\bsw\NvM\user\NvM_Integration.c
+
+Compiling BasicSoftware\integration\src\bsw\PduR\integration\PduRAppl.c
+
+Compiling BasicSoftware\integration\src\bsw\Rba_FeeFs1\integration\rba_FeeFs1_SyncRead.c
+
+Compiling BasicSoftware\integration\src\bsw\WdgM\integration\WdgM_Bsw_User.c
+
+Compiling BasicSoftware\integration\src\bsw\Xcp\integration\Xcp_Appl_EnterDaqList.c
+
+Compiling BasicSoftware\integration\src\bsw\Xcp\integration\Xcp_Appl_Init.c
+
+Compiling BasicSoftware\integration\src\bsw\Xcp\integration\Xcp_Appl_NewSwFlashed.c
+
+Compiling BasicSoftware\integration\src\bsw\Xcp\integration\Xcp_Appl_StoreCalReq.c
+
+Compiling BasicSoftware\integration\src\bsw\Xcp\integration\Xcp_Appl_TriggerSchedule.c
+
+Compiling BasicSoftware\integration\src\bsw\Xcp\integration\Xcp_BuildChecksum.c
+
+Compiling BasicSoftware\integration\src\bsw\Xcp\integration\Xcp_CalPage.c
+
+Compiling BasicSoftware\integration\src\bsw\Xcp\integration\Xcp_CmdReceived.c
+
+Compiling BasicSoftware\integration\src\bsw\Xcp\integration\Xcp_ConnectTransportLayer.c
+
+Compiling BasicSoftware\integration\src\bsw\Xcp\integration\Xcp_GetId.c
+
+Compiling BasicSoftware\integration\src\bsw\Xcp\integration\Xcp_MemoryAccessProtection.c
+
+Compiling BasicSoftware\integration\src\bsw\Xcp\integration\Xcp_MemoryReadWrite.c
+
+Compiling BasicSoftware\integration\src\bsw\Xcp\integration\Xcp_OdtEntryReadWrite.c
+
+Compiling BasicSoftware\integration\src\bsw\Xcp\integration\Xcp_SeedAndKey.c
+
+Compiling BasicSoftware\integration\src\bsw\Xcp\integration\Xcp_StaticAddressTransformation.c
+
+Compiling BasicSoftware\integration\src\bsw\Xcp\integration\Xcp_Timestamp.c
+
+Compiling BasicSoftware\integration\src\bsw\Xcp\integration\Xcp_UserCmd.c
+
+Compiling BasicSoftware\integration\src\ecu\LogisticData\src\LogisticData.c
+
+Compiling BasicSoftware\integration\src\os\src\Os_Cbk.c
+
+
+Compiling BasicSoftware\integration\src\target\src\Target.c
+
+
+
+
+Compiling BasicSoftware\integration\mcal\src\gen\src\Fls_PBCfg.c
+Compiling BasicSoftware\integration\mcal\src\gen\src\Gpt_PBCfg.c
+Compiling BasicSoftware\integration\mcal\src\gen\src\Spi_PBCfg.c
+Compiling BasicSoftware\integration\mcal\src\integration\src\Dio.c
+
+Compiling BasicSoftware\integration\mcal\src\modules\src\Can_Alps.c
+
+Compiling BasicSoftware\integration\mcal\src\modules\src\Fls_Alps.c
+
+Compiling BasicSoftware\integration\mcal\src\modules\src\Gpt.c
+Compiling BasicSoftware\integration\mcal\src\modules\src\Gpt_Alps.c
+
+Compiling BasicSoftware\integration\mcal\src\modules\src\Spi.c
+
+Compiling BasicSoftware\integration\mcal\src\modules\src\Spi_Alps.c
+
+Compiling BasicSoftware\integration\mcal\src\modules\src\stub.c
+
+Compiling CDD\ExtWdg\src\ExtWdg.c
+
+Compiling CDD\Tcan\src\Tcan.c
+
+Compiling CDD\Tcan\src\Tcan_hal.c
+
+
+
+
+
+
+
+
+Linking output\dbg\D_ETAS_BIP_PT_ARCMW.elf...
+
+Dumping output\dbg\D_ETAS_BIP_PT_ARCMW.elf to output\hex\D_ETAS_BIP_PT_ARCMW.hex
+Dumping output\dbg\D_ETAS_BIP_PT_ARCMW.elf to output\s19\D_ETAS_BIP_PT_ARCMW.s19
+Dumping output\dbg\D_ETAS_BIP_PT_ARCMW.elf to output\bin\D_ETAS_BIP_PT_ARCMW.bin
+
+
+C:/ARC/MetaWare/arc/bin\elf2bin.exe: ELF file output\dbg\D_ETAS_BIP_PT_ARCMW.elf to binary output\bin\D_ETAS_BIP_PT_ARCMW.bin; all segments; fill=0x00000000
+C:/ARC/MetaWare/arc/bin\elf2bin.exe: 3 segments dumped; address range: 0x770000 to 0x7fc20c; entry point: 0x770004
+
+scons: done building targets.

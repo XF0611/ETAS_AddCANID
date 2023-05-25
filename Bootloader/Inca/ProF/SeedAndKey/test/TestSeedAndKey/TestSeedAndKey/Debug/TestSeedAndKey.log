@@ -1,0 +1,17 @@
+﻿  Source.cpp
+c:\users\ucn1hc\desktop\gaei_fbl_developement\gaei_fbl_vcu_ar422_1p0\project\inca_prof\seedandkey\test\testseedandkey\testseedandkey\source.cpp(31): warning C4996: 'itoa': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _itoa. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdlib.h(1316): note: see declaration of 'itoa'
+c:\users\ucn1hc\desktop\gaei_fbl_developement\gaei_fbl_vcu_ar422_1p0\project\inca_prof\seedandkey\test\testseedandkey\testseedandkey\source.cpp(40): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(119): note: see declaration of 'strcpy'
+c:\users\ucn1hc\desktop\gaei_fbl_developement\gaei_fbl_vcu_ar422_1p0\project\inca_prof\seedandkey\test\testseedandkey\testseedandkey\source.cpp(43): warning C4996: 'itoa': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _itoa. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdlib.h(1316): note: see declaration of 'itoa'
+c:\users\ucn1hc\desktop\gaei_fbl_developement\gaei_fbl_vcu_ar422_1p0\project\inca_prof\seedandkey\test\testseedandkey\testseedandkey\source.cpp(44): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(90): note: see declaration of 'strcat'
+c:\users\ucn1hc\desktop\gaei_fbl_developement\gaei_fbl_vcu_ar422_1p0\project\inca_prof\seedandkey\test\testseedandkey\testseedandkey\source.cpp(45): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(90): note: see declaration of 'strcat'
+c:\users\ucn1hc\desktop\gaei_fbl_developement\gaei_fbl_vcu_ar422_1p0\project\inca_prof\seedandkey\test\testseedandkey\testseedandkey\source.cpp(105): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\conio.h(452): note: see declaration of 'getch'
+c:\users\ucn1hc\desktop\gaei_fbl_developement\gaei_fbl_vcu_ar422_1p0\project\inca_prof\seedandkey\test\testseedandkey\testseedandkey\source.cpp(110): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\conio.h(452): note: see declaration of 'getch'
+  TestSeedAndKey.vcxproj -> C:\Users\UCN1HC\Desktop\GAEI_FBL_Developement\GAEI_FBL_VCU_AR422_1p0\project\INCA_ProF\SeedAndKey\test\TestSeedAndKey\Debug\TestSeedAndKey.exe
+  TestSeedAndKey.vcxproj -> C:\Users\UCN1HC\Desktop\GAEI_FBL_Developement\GAEI_FBL_VCU_AR422_1p0\project\INCA_ProF\SeedAndKey\test\TestSeedAndKey\Debug\TestSeedAndKey.pdb (Full PDB)

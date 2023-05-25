@@ -1,0 +1,102 @@
+scons: done reading SConscript files.
+
+scons: warning: you do not seem to have the pywin32 extensions installed;
+	parallel (-j) builds may not work reliably with open Python files.
+File "F:\Python271\Scripts\scons.py", line 201, in <module>
+scons: Building targets ...
+Compiling ASW\INP_SWC\src\INP_SWC.c
+Compiling ASW\OUTP_SWC\src\OUTP_SWC.c
+ASW\OUTP_SWC\src\OUTP_SWC.c:175:2: error: use of undeclared identifier 'write18'
+        write18 = 8;
+        ^
+ASW\OUTP_SWC\src\OUTP_SWC.c:176:78: error: use of undeclared identifier 'write18'
+        retWrite18 = Rte_Write_PP_ETAS05_Sig27_ComTx_0x123_ETAS05_Sig27_ComTx_0x123(write18);
+                                                                                    ^
+ASW\OUTP_SWC\src\OUTP_SWC.c:177:2: error: use of undeclared identifier 'write19'
+        write19 = 7;
+        ^
+ASW\OUTP_SWC\src\OUTP_SWC.c:178:78: error: use of undeclared identifier 'write19'
+        retWrite19 = Rte_Write_PP_ETAS05_Sig28_ComTx_0x123_ETAS05_Sig28_ComTx_0x123(write19);
+                                                                                    ^
+ASW\OUTP_SWC\src\OUTP_SWC.c:179:2: error: use of undeclared identifier 'write20'
+        write20 = 6;
+        ^
+ASW\OUTP_SWC\src\OUTP_SWC.c:180:78: error: use of undeclared identifier 'write20'
+        retWrite20 = Rte_Write_PP_ETAS05_Sig29_ComTx_0x123_ETAS05_Sig29_ComTx_0x123(write20);
+                                                                                    ^
+ASW\OUTP_SWC\src\OUTP_SWC.c:181:2: error: use of undeclared identifier 'write21'; did you mean 'write11'?
+        write21 = 5;
+        ^~~~~~~
+        write11
+ASW\OUTP_SWC\src\OUTP_SWC.c:71:7: note: 'write11' declared here
+uint8 write11;
+      ^
+ASW\OUTP_SWC\src\OUTP_SWC.c:182:78: error: use of undeclared identifier 'write21'; did you mean 'write11'?
+        retWrite21 = Rte_Write_PP_ETAS05_Sig30_ComTx_0x123_ETAS05_Sig30_ComTx_0x123(write21);
+                                                                                    ^~~~~~~
+                                                                                    write11
+output\inc/..\..\basicSoftware\src\rte\gen\Rte_OUTP_SWC.h:243:153: note: expanded from macro 'Rte_Write_PP_ETAS05_Sig30_ComTx_0x123_ETAS05_Sig30_ComTx_0x123'
+#define Rte_Write_PP_ETAS05_Sig30_ComTx_0x123_ETAS05_Sig30_ComTx_0x123( data ) (Rte_Write_OUTP_SWC_PP_ETAS05_Sig30_ComTx_0x123_ETAS05_Sig30_ComTx_0x123(data))
+                                                                                                                                                        ^
+ASW\OUTP_SWC\src\OUTP_SWC.c:71:7: note: 'write11' declared here
+uint8 write11;
+      ^
+ASW\OUTP_SWC\src\OUTP_SWC.c:183:2: error: use of undeclared identifier 'write22'; did you mean 'write12'?
+        write22 = 4;
+        ^~~~~~~
+        write12
+ASW\OUTP_SWC\src\OUTP_SWC.c:73:8: note: 'write12' declared here
+uint16 write12;
+       ^
+ASW\OUTP_SWC\src\OUTP_SWC.c:184:78: error: use of undeclared identifier 'write22'; did you mean 'write12'?
+        retWrite22 = Rte_Write_PP_ETAS05_Sig31_ComTx_0x123_ETAS05_Sig31_ComTx_0x123(write22);
+                                                                                    ^~~~~~~
+                                                                                    write12
+output\inc/..\..\basicSoftware\src\rte\gen\Rte_OUTP_SWC.h:246:153: note: expanded from macro 'Rte_Write_PP_ETAS05_Sig31_ComTx_0x123_ETAS05_Sig31_ComTx_0x123'
+#define Rte_Write_PP_ETAS05_Sig31_ComTx_0x123_ETAS05_Sig31_ComTx_0x123( data ) (Rte_Write_OUTP_SWC_PP_ETAS05_Sig31_ComTx_0x123_ETAS05_Sig31_ComTx_0x123(data))
+                                                                                                                                                        ^
+ASW\OUTP_SWC\src\OUTP_SWC.c:73:8: note: 'write12' declared here
+uint16 write12;
+       ^
+ASW\OUTP_SWC\src\OUTP_SWC.c:185:2: error: use of undeclared identifier 'write23'; did you mean 'write13'?
+        write23 = 3;
+        ^~~~~~~
+        write13
+ASW\OUTP_SWC\src\OUTP_SWC.c:75:8: note: 'write13' declared here
+uint16 write13;
+       ^
+ASW\OUTP_SWC\src\OUTP_SWC.c:186:78: error: use of undeclared identifier 'write23'; did you mean 'write13'?
+        retWrite23 = Rte_Write_PP_ETAS05_Sig32_ComTx_0x123_ETAS05_Sig32_ComTx_0x123(write23);
+                                                                                    ^~~~~~~
+                                                                                    write13
+output\inc/..\..\basicSoftware\src\rte\gen\Rte_OUTP_SWC.h:249:153: note: expanded from macro 'Rte_Write_PP_ETAS05_Sig32_ComTx_0x123_ETAS05_Sig32_ComTx_0x123'
+#define Rte_Write_PP_ETAS05_Sig32_ComTx_0x123_ETAS05_Sig32_ComTx_0x123( data ) (Rte_Write_OUTP_SWC_PP_ETAS05_Sig32_ComTx_0x123_ETAS05_Sig32_ComTx_0x123(data))
+                                                                                                                                                        ^
+ASW\OUTP_SWC\src\OUTP_SWC.c:75:8: note: 'write13' declared here
+uint16 write13;
+       ^
+ASW\OUTP_SWC\src\OUTP_SWC.c:187:2: error: use of undeclared identifier 'write24'; did you mean 'write14'?
+        write24 = 2;
+        ^~~~~~~
+        write14
+ASW\OUTP_SWC\src\OUTP_SWC.c:77:8: note: 'write14' declared here
+uint16 write14;
+       ^
+ASW\OUTP_SWC\src\OUTP_SWC.c:188:78: error: use of undeclared identifier 'write24'; did you mean 'write14'?
+        retWrite24 = Rte_Write_PP_ETAS05_Sig33_ComTx_0x123_ETAS05_Sig33_ComTx_0x123(write24);
+                                                                                    ^~~~~~~
+                                                                                    write14
+output\inc/..\..\basicSoftware\src\rte\gen\Rte_OUTP_SWC.h:252:153: note: expanded from macro 'Rte_Write_PP_ETAS05_Sig33_ComTx_0x123_ETAS05_Sig33_ComTx_0x123'
+#define Rte_Write_PP_ETAS05_Sig33_ComTx_0x123_ETAS05_Sig33_ComTx_0x123( data ) (Rte_Write_OUTP_SWC_PP_ETAS05_Sig33_ComTx_0x123_ETAS05_Sig33_ComTx_0x123(data))
+                                                                                                                                                        ^
+ASW\OUTP_SWC\src\OUTP_SWC.c:77:8: note: 'write14' declared here
+uint16 write14;
+       ^
+14 errors generated.
+
+===================
+None
+===================
+
+scons: *** [output\objs\asw\OUTP_SWC\OUTP_SWC.o] Error 1
+scons: building terminated because of errors.

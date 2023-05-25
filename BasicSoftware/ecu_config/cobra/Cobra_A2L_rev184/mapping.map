@@ -1,0 +1,10 @@
+0x007fc000 SpeedLimitLower
+0x007fc008 sharedCURVE
+0x007fc01c sharedMAP
+0x007fc004 SpeedLimitUpper
+0x007fc204 speedMax
+0x007fc208 speedMin
+0x007c8400 curveAxisInputVar
+0x007c8404 mapAxisXInputVar
+0x007c8408 mapAxisYInputVar
+0x007c840c Rte_ArPim_CalUT_ArTypedPIM_1

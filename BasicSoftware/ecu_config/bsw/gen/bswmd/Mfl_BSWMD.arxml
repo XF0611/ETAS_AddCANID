@@ -1,0 +1,814 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 autosar_4-1-1.xsd">
+  <ADMIN-DATA>
+    <LANGUAGE>EN</LANGUAGE>
+    <USED-LANGUAGES>
+      <L-10 L="EN" xml:space="default">English</L-10>
+    </USED-LANGUAGES>
+  </ADMIN-DATA>
+  <AR-PACKAGES>
+    <AR-PACKAGE>
+      <SHORT-NAME>AUTOSAR_Mfl</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE>
+          <SHORT-NAME>BswModuleDescriptions</SHORT-NAME>
+          <ELEMENTS>
+            <BSW-MODULE-DESCRIPTION>
+              <SHORT-NAME>Mfl</SHORT-NAME>
+              <CATEGORY>BSW_MODULE</CATEGORY>
+              <MODULE-ID>210</MODULE-ID>
+              <PROVIDED-ENTRYS />
+              <OUTGOING-CALLBACKS>
+                <!--Not yet implemented.-->
+              </OUTGOING-CALLBACKS>
+              <BSW-MODULE-DEPENDENCYS />
+              <INTERNAL-BEHAVIORS>
+                <BSW-INTERNAL-BEHAVIOR>
+                  <SHORT-NAME>BswInternalBehavior</SHORT-NAME>
+                  <SCHEDULER-NAME-PREFIXS>
+                    <BSW-SCHEDULER-NAME-PREFIX>
+                      <SHORT-NAME>Mfl</SHORT-NAME>
+                      <SYMBOL>Mfl</SYMBOL>
+                    </BSW-SCHEDULER-NAME-PREFIX>
+                  </SCHEDULER-NAME-PREFIXS>
+                </BSW-INTERNAL-BEHAVIOR>
+              </INTERNAL-BEHAVIORS>
+            </BSW-MODULE-DESCRIPTION>
+          </ELEMENTS>
+          </AR-PACKAGE>
+          <AR-PACKAGE>
+            <SHORT-NAME>BswModuleEntrys</SHORT-NAME>
+            <ELEMENTS />
+          </AR-PACKAGE>
+          <AR-PACKAGE>
+            <SHORT-NAME>CompuMethods</SHORT-NAME>
+            <!--Not yet implemented.--> 
+          </AR-PACKAGE>
+          <AR-PACKAGE>
+            <SHORT-NAME>ImplementationDataTypes</SHORT-NAME>
+            <ELEMENTS>
+            
+              <IMPLEMENTATION-DATA-TYPE>
+                <SHORT-NAME>Mfl_DeadTimeParam_Type</SHORT-NAME>
+                <LONG-NAME>
+                    <L-4 L="EN">Structure definition for Dead Time routine</L-4>
+                </LONG-NAME>
+                <DESC>
+                    <L-2 L="EN">This structure contains parameters for the Dead Time routine in Mfl Component.</L-2>
+                </DESC>
+              <CATEGORY>STRUCTURE</CATEGORY>
+              <SUB-ELEMENTS>
+              <IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                  <SHORT-NAME>dsintStatic</SHORT-NAME>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/float32</IMPLEMENTATION-DATA-TYPE-REF>
+                        <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                <IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                  <SHORT-NAME>lszStatic</SHORT-NAME>
+                  <CATEGORY>DATA_REFERENCE</CATEGORY>
+                    <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                      <SW-POINTER-TARGET-PROPS>
+                        <TARGET-CATEGORY>VALUE</TARGET-CATEGORY>
+                        <SW-DATA-DEF-PROPS>
+                        <SW-DATA-DEF-PROPS-VARIANTS>
+                        <SW-DATA-DEF-PROPS-CONDITIONAL>
+                           <BASE-TYPE-REF DEST="SW-BASE-TYPE">/AUTOSAR_Platform/BaseTypes/float32</BASE-TYPE-REF>
+                        </SW-DATA-DEF-PROPS-CONDITIONAL>
+                        </SW-DATA-DEF-PROPS-VARIANTS>
+                        </SW-DATA-DEF-PROPS>
+                      </SW-POINTER-TARGET-PROPS>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                    </SW-DATA-DEF-PROPS>
+                </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                <IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                  <SHORT-NAME>dtbufBegStatic</SHORT-NAME>
+                  <CATEGORY>DATA_REFERENCE</CATEGORY>
+                    <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                      <SW-POINTER-TARGET-PROPS>
+                        <TARGET-CATEGORY>VALUE</TARGET-CATEGORY>
+                        <SW-DATA-DEF-PROPS>
+                        <SW-DATA-DEF-PROPS-VARIANTS>
+                        <SW-DATA-DEF-PROPS-CONDITIONAL>
+                          <BASE-TYPE-REF DEST="SW-BASE-TYPE">/AUTOSAR_Platform/BaseTypes/float32</BASE-TYPE-REF>
+                        </SW-DATA-DEF-PROPS-CONDITIONAL>
+                        </SW-DATA-DEF-PROPS-VARIANTS>
+                        </SW-DATA-DEF-PROPS>
+                      </SW-POINTER-TARGET-PROPS>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                    </SW-DATA-DEF-PROPS>
+                </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                <IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                  <SHORT-NAME>dtbufEndStatic</SHORT-NAME>
+                  <CATEGORY>DATA_REFERENCE</CATEGORY>
+                    <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                      <SW-POINTER-TARGET-PROPS>
+                        <TARGET-CATEGORY>VALUE</TARGET-CATEGORY>
+                        <SW-DATA-DEF-PROPS>
+                        <SW-DATA-DEF-PROPS-VARIANTS>
+                        <SW-DATA-DEF-PROPS-CONDITIONAL>
+                          <BASE-TYPE-REF DEST="SW-BASE-TYPE">/AUTOSAR_Platform/BaseTypes/float32</BASE-TYPE-REF>
+                        </SW-DATA-DEF-PROPS-CONDITIONAL>
+                        </SW-DATA-DEF-PROPS-VARIANTS>
+                        </SW-DATA-DEF-PROPS> 
+                      </SW-POINTER-TARGET-PROPS>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                    </SW-DATA-DEF-PROPS>
+                </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                </SUB-ELEMENTS>
+              <TYPE-EMITTER>HEADER_FILE</TYPE-EMITTER>
+             </IMPLEMENTATION-DATA-TYPE>
+              
+              
+             <IMPLEMENTATION-DATA-TYPE>
+                <SHORT-NAME>Mfl_DebounceParam_Type</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">Structure definition for Debouncing parameters</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">This structure contains the parameters for Debounce routine that debounces the input signal and returns the state of the signal.</L-2>
+              </DESC>
+             <CATEGORY>STRUCTURE</CATEGORY>
+              <SUB-ELEMENTS>
+              <IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                  <SHORT-NAME>TimeHighLow</SHORT-NAME>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/float32</IMPLEMENTATION-DATA-TYPE-REF>
+                        <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+              </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+              <IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                  <SHORT-NAME>TimeLowHigh</SHORT-NAME>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/float32</IMPLEMENTATION-DATA-TYPE-REF>
+                        <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+              </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+              </SUB-ELEMENTS>
+              <TYPE-EMITTER>HEADER_FILE</TYPE-EMITTER>                            
+             </IMPLEMENTATION-DATA-TYPE>
+             
+             <IMPLEMENTATION-DATA-TYPE>
+                <SHORT-NAME>Mfl_DebounceState_Type</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">Structure definition for Debouncing state variables.</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">This structure contains state parameters for Debounce state variables in Mfl Component.</L-2>
+              </DESC>
+             <CATEGORY>STRUCTURE</CATEGORY>
+              <SUB-ELEMENTS>
+              <IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                  <SHORT-NAME>XOld</SHORT-NAME>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/boolean</IMPLEMENTATION-DATA-TYPE-REF>
+                        <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+              </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+              <IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                  <SHORT-NAME>Timer</SHORT-NAME>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/float32</IMPLEMENTATION-DATA-TYPE-REF>
+                        <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+              </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+              </SUB-ELEMENTS>
+              <TYPE-EMITTER>HEADER_FILE</TYPE-EMITTER>                            
+             </IMPLEMENTATION-DATA-TYPE>
+             
+             <IMPLEMENTATION-DATA-TYPE>
+                <SHORT-NAME>Mfl_Limits_Type</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">Controller limit value structure.</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">This structure contains  the minimum value and maximum value to limit the controller routine output..</L-2>
+              </DESC>
+             <CATEGORY>STRUCTURE</CATEGORY>
+              <SUB-ELEMENTS>
+              <IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                  <SHORT-NAME>Min_C</SHORT-NAME>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/float32</IMPLEMENTATION-DATA-TYPE-REF>
+                        <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+              </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+              <IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                  <SHORT-NAME>Max_C</SHORT-NAME>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/float32</IMPLEMENTATION-DATA-TYPE-REF>
+                        <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+              </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+              </SUB-ELEMENTS>
+              <TYPE-EMITTER>HEADER_FILE</TYPE-EMITTER>                            
+             </IMPLEMENTATION-DATA-TYPE>
+             
+             <IMPLEMENTATION-DATA-TYPE>
+                <SHORT-NAME>Mfl_ParamPD_Type</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">System and Time equivalent parameter Structure for PD controller routine</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">This structure contains System and Time equivalent parameter structure for PD controller routine in Mfl Component.</L-2>
+              </DESC>
+             <CATEGORY>STRUCTURE</CATEGORY>
+              <SUB-ELEMENTS>
+              <IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                  <SHORT-NAME>K_C</SHORT-NAME>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/float32</IMPLEMENTATION-DATA-TYPE-REF>
+                        <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+              </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+              <IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                  <SHORT-NAME>Tv_C</SHORT-NAME>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/float32</IMPLEMENTATION-DATA-TYPE-REF>
+                        <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+              </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+              </SUB-ELEMENTS>
+              <TYPE-EMITTER>HEADER_FILE</TYPE-EMITTER>                            
+             </IMPLEMENTATION-DATA-TYPE>
+             
+             <IMPLEMENTATION-DATA-TYPE>
+                <SHORT-NAME>Mfl_ParamPI_Type</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">System and Time equivalent parameter Structure for PI controller</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">This structure contains parameters for PI additive (Type 1 and Type 2) controller routine in Mfl Component.</L-2>
+              </DESC>
+             <CATEGORY>STRUCTURE</CATEGORY>
+              <SUB-ELEMENTS>
+              <IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                  <SHORT-NAME>K_C</SHORT-NAME>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/float32</IMPLEMENTATION-DATA-TYPE-REF>
+                        <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+              </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+              <IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                  <SHORT-NAME>Tnrec_C</SHORT-NAME>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/float32</IMPLEMENTATION-DATA-TYPE-REF>
+                        <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+              </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+              </SUB-ELEMENTS>
+              <TYPE-EMITTER>HEADER_FILE</TYPE-EMITTER>                            
+             </IMPLEMENTATION-DATA-TYPE>
+             
+             <IMPLEMENTATION-DATA-TYPE>
+                <SHORT-NAME>Mfl_ParamPID_Type</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">System and Time equivalent parameter Structure for PID Controller.</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">This structure contains parameters for PID additive (Type 1 and Type 2) controller routine in Mfl Component.</L-2>
+              </DESC>
+             <CATEGORY>STRUCTURE</CATEGORY>
+              <SUB-ELEMENTS>
+              <IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                  <SHORT-NAME>K_C</SHORT-NAME>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/float32</IMPLEMENTATION-DATA-TYPE-REF>
+                        <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+              </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+              <IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                  <SHORT-NAME>Tv_C</SHORT-NAME>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/float32</IMPLEMENTATION-DATA-TYPE-REF>
+                        <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+              </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+              <IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                  <SHORT-NAME>Tnrec_C</SHORT-NAME>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/float32</IMPLEMENTATION-DATA-TYPE-REF>
+                        <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+              </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+              </SUB-ELEMENTS>
+              <TYPE-EMITTER>HEADER_FILE</TYPE-EMITTER>                            
+             </IMPLEMENTATION-DATA-TYPE>
+             
+             <IMPLEMENTATION-DATA-TYPE>
+                <SHORT-NAME>Mfl_ParamRamp_Type</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">Structure definition for Ramp routine</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">This structure contains slope parameters for Ramp routine in Mfl Component.</L-2>
+              </DESC>
+             <CATEGORY>STRUCTURE</CATEGORY>
+              <SUB-ELEMENTS>
+              <IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                  <SHORT-NAME>SlopePos</SHORT-NAME>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/float32</IMPLEMENTATION-DATA-TYPE-REF>
+                        <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+              </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+              <IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                  <SHORT-NAME>SlopeNeg</SHORT-NAME>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/float32</IMPLEMENTATION-DATA-TYPE-REF>
+                        <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+              </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+              </SUB-ELEMENTS>
+              <TYPE-EMITTER>HEADER_FILE</TYPE-EMITTER>                            
+             </IMPLEMENTATION-DATA-TYPE>
+             
+             <IMPLEMENTATION-DATA-TYPE>
+                <SHORT-NAME>Mfl_StateDT1Typ1_Type</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">System State Structure for DT1-Type1 controller routine</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">This structure contains state parameters for DT1-Type1 controller routine in Mfl Component.</L-2>
+              </DESC>
+             <CATEGORY>STRUCTURE</CATEGORY>
+              <SUB-ELEMENTS>
+              <IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                  <SHORT-NAME>X1</SHORT-NAME>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/float32</IMPLEMENTATION-DATA-TYPE-REF>
+                        <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+              </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+              <IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                  <SHORT-NAME>X2</SHORT-NAME>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/float32</IMPLEMENTATION-DATA-TYPE-REF>
+                        <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+              </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+              <IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                  <SHORT-NAME>Y1</SHORT-NAME>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/float32</IMPLEMENTATION-DATA-TYPE-REF>
+                        <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+              </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+              </SUB-ELEMENTS>
+              <TYPE-EMITTER>HEADER_FILE</TYPE-EMITTER>                            
+             </IMPLEMENTATION-DATA-TYPE>
+             
+             <IMPLEMENTATION-DATA-TYPE>
+                <SHORT-NAME>Mfl_StateDT1Typ2_Type</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">System State Structure for DT1-Type2 controller routine</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">This structure contains state parameters for DT1-Type2 controller in Mfl Component.</L-2>
+              </DESC>
+             <CATEGORY>STRUCTURE</CATEGORY>
+              <SUB-ELEMENTS>
+              <IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                  <SHORT-NAME>X1</SHORT-NAME>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/float32</IMPLEMENTATION-DATA-TYPE-REF>
+                        <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+              </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+              <IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                  <SHORT-NAME>Y1</SHORT-NAME>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/float32</IMPLEMENTATION-DATA-TYPE-REF>
+                        <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+              </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+              </SUB-ELEMENTS>
+              <TYPE-EMITTER>HEADER_FILE</TYPE-EMITTER>                            
+             </IMPLEMENTATION-DATA-TYPE>
+             
+             <IMPLEMENTATION-DATA-TYPE>
+                <SHORT-NAME>Mfl_StateI_Type</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">System State Structure for I controller routine</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">This structure contains state parameters for I controller in Mfl Component.</L-2>
+              </DESC>
+             <CATEGORY>STRUCTURE</CATEGORY>
+              <SUB-ELEMENTS>
+              <IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                  <SHORT-NAME>X1</SHORT-NAME>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/float32</IMPLEMENTATION-DATA-TYPE-REF>
+                        <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+              </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+              <IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                  <SHORT-NAME>Y1</SHORT-NAME>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/float32</IMPLEMENTATION-DATA-TYPE-REF>
+                        <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+              </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+              </SUB-ELEMENTS>
+              <TYPE-EMITTER>HEADER_FILE</TYPE-EMITTER>                            
+             </IMPLEMENTATION-DATA-TYPE>
+             
+             <IMPLEMENTATION-DATA-TYPE>
+                <SHORT-NAME>Mfl_StatePD_Type</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">System State Structure for PD controller routine</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">This structure contains state parameters for PD controller in Mfl Component.</L-2>
+              </DESC>
+             <CATEGORY>STRUCTURE</CATEGORY>
+              <SUB-ELEMENTS>
+              <IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                  <SHORT-NAME>X1</SHORT-NAME>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/float32</IMPLEMENTATION-DATA-TYPE-REF>
+                        <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+              </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+              <IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                  <SHORT-NAME>Y1</SHORT-NAME>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/float32</IMPLEMENTATION-DATA-TYPE-REF>
+                        <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+              </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+              </SUB-ELEMENTS>
+              <TYPE-EMITTER>HEADER_FILE</TYPE-EMITTER>                            
+             </IMPLEMENTATION-DATA-TYPE>
+             
+             <IMPLEMENTATION-DATA-TYPE>
+                <SHORT-NAME>Mfl_StatePI_Type</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">System State Structure for PI Controller</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">This structure contains state parameters for PI controller in Mfl Component.</L-2>
+              </DESC>
+             <CATEGORY>STRUCTURE</CATEGORY>
+              <SUB-ELEMENTS>
+              <IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                  <SHORT-NAME>X1</SHORT-NAME>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/float32</IMPLEMENTATION-DATA-TYPE-REF>
+                        <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+              </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+              <IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                  <SHORT-NAME>Y1</SHORT-NAME>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/float32</IMPLEMENTATION-DATA-TYPE-REF>
+                        <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+              </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+              </SUB-ELEMENTS>
+              <TYPE-EMITTER>HEADER_FILE</TYPE-EMITTER>                            
+             </IMPLEMENTATION-DATA-TYPE>
+             
+             <IMPLEMENTATION-DATA-TYPE>
+                <SHORT-NAME>Mfl_StatePID_Type</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">System State Structure for PID Controller.</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">This structure contains state parameters for PID controller in Mfl Component.</L-2>
+              </DESC>
+             <CATEGORY>STRUCTURE</CATEGORY>
+              <SUB-ELEMENTS>
+              <IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                  <SHORT-NAME>X1</SHORT-NAME>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/float32</IMPLEMENTATION-DATA-TYPE-REF>
+                        <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+              </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+              <IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                  <SHORT-NAME>X2</SHORT-NAME>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/float32</IMPLEMENTATION-DATA-TYPE-REF>
+                        <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+              </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+              <IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                  <SHORT-NAME>Y1</SHORT-NAME>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/float32</IMPLEMENTATION-DATA-TYPE-REF>
+                        <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+              </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+              </SUB-ELEMENTS>
+              <TYPE-EMITTER>HEADER_FILE</TYPE-EMITTER>                            
+             </IMPLEMENTATION-DATA-TYPE>
+             
+             <IMPLEMENTATION-DATA-TYPE>
+                <SHORT-NAME>Mfl_StatePT1_Type</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">System State Structure for PT1 controller.</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">This structure contains state parameters for PT1 controller in Mfl Component.</L-2>
+              </DESC>
+             <CATEGORY>STRUCTURE</CATEGORY>
+              <SUB-ELEMENTS>
+              <IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                  <SHORT-NAME>X1</SHORT-NAME>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/float32</IMPLEMENTATION-DATA-TYPE-REF>
+                        <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+              </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+              <IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                  <SHORT-NAME>Y1</SHORT-NAME>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/float32</IMPLEMENTATION-DATA-TYPE-REF>
+                        <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+              </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+              </SUB-ELEMENTS>
+              <TYPE-EMITTER>HEADER_FILE</TYPE-EMITTER>                            
+             </IMPLEMENTATION-DATA-TYPE>
+             
+             <IMPLEMENTATION-DATA-TYPE>
+                <SHORT-NAME>Mfl_StateRamp_Type</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">Structure definition for Ramp routine.</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">This structure contains state parameters for Ramp routine in Mfl Component.</L-2>
+              </DESC>
+             <CATEGORY>STRUCTURE</CATEGORY>
+              <SUB-ELEMENTS>
+              <IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                  <SHORT-NAME>State</SHORT-NAME>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/float32</IMPLEMENTATION-DATA-TYPE-REF>
+                        <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+              </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+              <IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                  <SHORT-NAME>Dir</SHORT-NAME>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/sint8</IMPLEMENTATION-DATA-TYPE-REF>
+                        <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+              </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+              <IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                  <SHORT-NAME>Switch</SHORT-NAME>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/sint8</IMPLEMENTATION-DATA-TYPE-REF>
+                        <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+              </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+              </SUB-ELEMENTS>
+              <TYPE-EMITTER>HEADER_FILE</TYPE-EMITTER>                            
+             </IMPLEMENTATION-DATA-TYPE>
+            </ELEMENTS>
+          </AR-PACKAGE>
+        <AR-PACKAGE>
+          <SHORT-NAME>BswImplementations</SHORT-NAME>
+		  <ELEMENTS>
+		  <BSW-IMPLEMENTATION>
+            <SHORT-NAME>Mfl</SHORT-NAME>
+            <CODE-DESCRIPTORS>
+              <CODE>
+                <SHORT-NAME>CodeDescriptor</SHORT-NAME>
+                <ARTIFACT-DESCRIPTORS>
+                  <AUTOSAR-ENGINEERING-OBJECT>
+                    <SHORT-LABEL>ArEngObj</SHORT-LABEL>
+                    <CATEGORY>SWSRC</CATEGORY>
+                  </AUTOSAR-ENGINEERING-OBJECT>
+                </ARTIFACT-DESCRIPTORS>
+              </CODE>
+            </CODE-DESCRIPTORS>
+			<PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+			<RESOURCE-CONSUMPTION>
+              <SHORT-NAME>Mfl_ResourceConsumption</SHORT-NAME>
+		        <MEMORY-SECTIONS>
+				  <MEMORY-SECTION>
+		    	    <SHORT-NAME>MFL_CODE_SLOW</SHORT-NAME>
+		    	    <PREFIX-REF DEST="SECTION-NAME-PREFIX">/AUTOSAR_Mfl/BswImplementations/Mfl/Mfl_ResourceConsumption/MFL</PREFIX-REF>
+		    	    <SW-ADDRMETHOD-REF DEST="SW-ADDR-METHOD">/RB/RBA/Common/CentralElements/SwAddrMethods/CODE_SLOW</SW-ADDRMETHOD-REF>
+		    	    <SYMBOL>CODE_SLOW</SYMBOL>
+		    	  </MEMORY-SECTION>
+		    	
+		    	  <MEMORY-SECTION>
+		    	    <SHORT-NAME>MFL_CODE_FAST</SHORT-NAME>
+		    	    <PREFIX-REF DEST="SECTION-NAME-PREFIX">/AUTOSAR_Mfl/BswImplementations/Mfl/Mfl_ResourceConsumption/MFL</PREFIX-REF>
+		    	    <SW-ADDRMETHOD-REF DEST="SW-ADDR-METHOD">/RB/RBA/Common/CentralElements/SwAddrMethods/CODE_FAST</SW-ADDRMETHOD-REF>
+		    	    <SYMBOL>CODE_FAST</SYMBOL>
+		    	  </MEMORY-SECTION>
+		    	  
+		    	  <MEMORY-SECTION>
+		    	    <SHORT-NAME>MFL_CODE</SHORT-NAME>
+		    	    <PREFIX-REF DEST="SECTION-NAME-PREFIX">/AUTOSAR_Mfl/BswImplementations/Mfl/Mfl_ResourceConsumption/MFL</PREFIX-REF>
+		    	    <SW-ADDRMETHOD-REF DEST="SW-ADDR-METHOD">/RB/RBA/Common/CentralElements/SwAddrMethods/CODE</SW-ADDRMETHOD-REF>
+		    	    <SYMBOL>CODE</SYMBOL>
+		    	  </MEMORY-SECTION>
+				</MEMORY-SECTIONS>
+                <SECTION-NAME-PREFIXS>
+                 <SECTION-NAME-PREFIX>
+                  <SHORT-NAME>MFL</SHORT-NAME>
+                  <SYMBOL>MFL</SYMBOL>
+                 </SECTION-NAME-PREFIX>
+                </SECTION-NAME-PREFIXS>
+			</RESOURCE-CONSUMPTION>
+            <SW-VERSION>7.1.0</SW-VERSION>
+            <AR-RELEASE-VERSION>4.2.2</AR-RELEASE-VERSION>
+            <BEHAVIOR-REF DEST="BSW-INTERNAL-BEHAVIOR">/AUTOSAR_Mfl/BswModuleDescriptions/Mfl/BswInternalBehavior</BEHAVIOR-REF>
+		  </BSW-IMPLEMENTATION>
+		  </ELEMENTS>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

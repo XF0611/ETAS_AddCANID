@@ -1,0 +1,266 @@
+; --------------------------------------------------------------------------------
+; @Title: Generic MetaWare C Example for ARC
+; @Description:
+;   Simple C application for ARC targets
+;   compiled with MetaWare compiler
+;   running from SRAM
+; @Chip: ARC-A4, ARC-A5, ARC6**, ARC7**, ARC-EM**, ARC-HS**, AS2*
+; @Author: HLG
+; @Copyright: (C) 1989-2014 Lauterbach GmbH, licensed for use with TRACE32(R) only
+; --------------------------------------------------------------------------------
+; $Id: demo_sram.cmm 13872 2019-01-31 16:47:32Z hlohn $
+
+PRIVATE &param &sel &cpu &elffile
+ENTRY %LINE &param
+&param=STRing.LoWeR("&param")
+
+WinCLEAR
+AREA.CLEAR
+SYStem.RESet
+Break.RESet
+TERM.RESet
+FramePOS ,,,,Maximized
+
+IF POWERDEBUG()
+(
+	SYStem.CPU AUTO
+	SYStem.CONFIG DEBUGPORTTYPE JTAG
+	IF STRing.SCAN("&param","CJTAG",0)>=0
+	(
+		SYStem.CONFIG DEBUGPORTTYPE CJTAG
+		SYStem.CONFIG CJTAGFLAGS 0x3
+	)
+	SYStem.CONFIG Slave OFF
+	SYStem.Option Endianess AUTO
+	SYStem.JtagClock 1MHz
+	ON ERROR GOTO
+		ENDDO
+	SYStem.Mode Up
+	ON ERROR inherit
+	&sel=CORETYPE()
+	IF (&sel<800.)&&(&sel!=601.)
+		&sel=(&sel/100.)*100.
+)
+ELSE
+(
+	&sel=STRing.SPLIT("&param"," ",0)
+	ON ERROR GOTO selection
+	IF ("&sel"=="")
+		GOTO selection
+	IF (&sel<400.)||(&sel>=1000.)
+		GOTO selection
+	ON ERROR inherit
+
+	&cpu="ARC"+FORMAT.Decimal(0,&sel)
+	IF (&sel==810.)
+		&cpu="arc-em-1r0"
+	ELSE IF (&sel/100.==8)
+		&cpu="arc-em"
+	SYStem.CPU &cpu
+	SYStem.Option Endianess Little
+	IF PBI()=="ARCINT"
+	(
+		GOSUB SetupNSIM
+		SYStem.Option Endianess AUTO
+	)
+	ON ERROR GOTO
+		ON ERROR inherit
+	SYStem.Mode Up
+)
+SYStem.MemAccess CPU
+SYStem.CpuAccess Enable
+SYStem.Option IMASKASM ON
+SYStem.Option IMASKHLL ON
+
+IF POWERTRACE()&&NEXUS()
+(
+	Trace.AutoArm ON
+	Trace.AutoInit ON
+	NEXUS.STALL ON
+	Data.Set AUX:0x11 1  // flush data cache
+)
+
+IF (&sel>=900.)
+	&cpu="arc-hs"
+ELSE IF (&sel>=811.)
+	&cpu="arc-em"
+ELSE IF (&sel>=800.)
+	&cpu="arc-em-1r0"
+ELSE IF (&sel>=600.)
+	&cpu="arc"+FORMAT.Decimal(0,&sel)
+ELSE
+	&cpu="a"+FORMAT.Decimal(0,&sel/100.)
+
+&elffile="../../output/dbg/D_ETAS_BIP_PT_ARCMW_BOOT.elf"
+
+// Load Target Applicaton
+Register.Init
+Data.LOAD.Elf "&elffile"
+IF FOUND()
+(
+	AREA.view
+	PRINT %ERROR "ERROR ! Failed to download the code of the example. Please check the memory settings of your target."
+	Data.LOAD.Elf "&elffile" /ComPare /NosYmbol
+	ENDDO
+)
+
+// Init Interrupt Vector table
+Data.Set 0x00--0xff %Long 0
+
+// Optional intialization of stack
+Data.Set sYmbol.SECRANGE(".stack") 0xCC
+
+WinExt.Register /SpotLight
+
+TOOLBAR   ON
+STATUSBAR ON
+FramePOS -227.0,9.1429,,,Maximized
+WinPAGE.RESet
+
+WinPAGE.Create P000
+WinCLEAR
+
+WinPOS -239.88 5.6429 70. 19. 0. 0. W000
+we.Register /SpotLight
+
+WinPOS 9.375 5.3571 80. 24. 0. 0. W005
+TERM.GATE
+
+WinPOS 0.875 22.571 69. 19. 0. 0. W008
+PER
+
+WinPOS 74.875 0.071429 159. 50. 17. 1. W001
+WinTABS 18. 10. 30.
+List.auto
+
+WinPOS 144.0 56.214 90. 9. 17. 1. W007
+Data.dump (0x7DEA54) /DIALOG
+
+WinPOS 46.0 56.071 93. 9. 17. 1. W009
+Data.dump (0x007b45b8) /DIALOG
+
+WinPOS 74.625 56.071 63. 11. 0. 0. W002
+Var.Ref %Hex %Decimal
+
+WinPOS 0.375 23.143 68. 13. 5. 0. W003
+Frame.view /Args /Locals
+
+WinPOS 0.625 42.857 68. 22. 0. 0. W004
+Var.Watch
+
+WinPOS 0.875 45.286 73. 10. 27. 1. W006
+WinTABS 13. 0. 0. 0. 0. 0. 0. 0. 0. 18.
+Break.List
+
+VAR.ADDWATCH NvM_Test
+VAR.ADDWATCH Fls_Erase_Job
+VAR.ADDWATCH Fls_Write_Job
+VAR.ADDWATCH Fls_Read_Job
+VAR.ADDWATCH Fls_Compare_Job
+VAR.ADDWATCH Fls_BlankCheck_Job
+VAR.ADDWATCH FlsModuleState
+VAR.ADDWATCH Fls_JobResult
+VAR.ADDWATCH Fee_stMain
+VAR.ADDWATCH Fee_RdWrOrder_st.Fee_LLRdState_en
+
+WinPAGE.select P000
+
+Break.Set     _arc_reset /Program
+Break.Set     Os_Cbk_Idle /Program
+Break.Set     Fls_BlankCheck /Program
+Break.Set     Fls_Read /Program
+Break.Set     Fls_Erase /Program
+Break.Set     Fls_Write /Program
+Break.Set     NvM_Integration_ReadAll /Program
+
+Mode.Hll
+//Go.direct main
+
+
+ENDDO
+
+
+SetupNSIM:
+	SYStem.PROPertieS.ADD "nsim_isa_family" "av2em"
+	SYStem.PROPertieS.ADD "nsim_isa_core" "1"
+
+	IF (CORETYPE()/100.)==6.
+	(
+		SYStem.PROPertieS.ADD "nsim_isa_family" "a600"
+		IF CORETYPE()==601.
+			SYStem.PROPertieS.ADD "nsim_isa_family" "a601"
+		SYStem.PROPertieS.ADD "nsim_isa_core" "5"
+	)
+	ELSE IF (CORETYPE()/100.)==7.
+	(
+		SYStem.PROPertieS.ADD "nsim_isa_family" "a700"
+	)
+	ELSE IF (CORETYPE()/100.)==8.
+	(
+		SYStem.PROPertieS.ADD "nsim_isa_family" "av2em"
+		SYStem.PROPertieS.ADD "nsim_isa_core" "1"
+		SYStem.PROPertieS.ADD "nsim_isa_code_density_option" "2"
+		SYStem.PROPertieS.ADD "nsim_isa_pct_counters=32"
+		SYStem.PROPertieS.ADD "nsim_isa_smart_stack_entries=128"
+		IF CORETYPE()==810.
+		(
+			SYStem.PROPertieS.ADD "nsim_isa_core" "0"
+			SYStem.PROPertieS.ADD "nsim_isa_code_density_option" "1"
+		)
+	)
+	ELSE IF (CORETYPE()/100.)==9.
+	(
+		SYStem.PROPertieS.ADD "nsim_isa_family" "av2hs"
+	)
+	SYStem.PROPertieS.ADD "nsim_isa_shift_option" "2"
+	SYStem.PROPertieS.ADD "nsim_isa_num_actionpoints" "8"
+	SYStem.PROPertieS.ADD "nsim_isa_aps_feature" "1"
+	RETURN
+
+
+selection:
+	LOCAL &ppf &sel
+	&ppf=OS.PPF()
+	&sel="&"+"sel"
+	DIALOG.view
+	(&+
+		HEADER "Choose your core"
+		POS 1. 0.5 21. 1.
+		CPU.0x1: CHOOSEBOX "ARC Tangent-A4" ""
+		CPU.0x2: CHOOSEBOX "ARC Tangent-A5" ""
+		CPU.0x3: CHOOSEBOX "ARC600"         ""
+		CPU.0x4: CHOOSEBOX "ARC601"         ""
+		CPU.0x5: CHOOSEBOX "ARC700"         ""
+		CPU.0x6: CHOOSEBOX "ARC-EM r1.0"    ""
+		CPU.0x7: CHOOSEBOX "ARC-EM r1.1 and higher"  ""
+		CPU.0x8: CHOOSEBOX "ARC-HS"         ""
+		POS 3. 9. 16. 1.
+		DEFBUTTON "Start"
+		(
+			PRIVATE &sel
+
+			&sel=0x1
+			WHILE !DIALOG.BOOLEAN(CPU.&sel)
+				&sel=&sel+0x1
+
+			DIALOG.END
+
+			&sel=STRing.MID("400.500.600.601.700.810.811.900.",4*(&sel-1),4)
+			DO "&ppf" &sel
+			ENDDO
+		)
+	)
+	IF PBI()=="ARCINT"
+	(
+		// ARCtangent CPUs not supported by nSIM
+		DIALOG.Disable CPU.0x1
+		DIALOG.Disable CPU.0x2
+	)
+	IF PBI()=="SIMULATOR"
+	(
+		DIALOG.Disable CPU.0x6
+	)
+	DIALOG.Set CPU.0x7 "ON"
+	ENDDO
+
+
